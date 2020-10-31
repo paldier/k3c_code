@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+	<header>
+		<name>Debug Access Points</name>
+		<description>This web page displays Access Point parameters for this Radio to edit</description>
+	</header>
+	<object name="Device.WiFi.SSID.*" viewtype="form" title="Debug Access Points" >
+	<row>
+		<col>
+			<parameter  name="SSID" required="false" type="string" access="readonly"  webname="SSID" ></parameter>
+		</col>
+	</row>
+	<object name="Device.WiFi.AccessPoint.*" >
+	<row>
+		<col>
+			<parameter  name="MaxAssociatedDevices" required="false" type="number"  webname="Max STA" ></parameter>
+		</col>
+	</row>
+	</object>
+	<object name="Device.WiFi.AccessPoint.*.X_LANTIQ_COM_Vendor" >
+	<row>
+		<col>
+			<parameter  name="ReservedAssociatedDevices" required="false" type="number"  webname="No of Reserved Clients" ></parameter>
+		</col>
+		<col>
+			<parameter  name="ReliableMuticastEnable" required="false" type="toggle"  webname="Reliable Multicast" ></parameter>
+		</col>
+		<col>
+			<parameter  name="PPAEnable" required="false" type="toggle"  webname="PPA Enabled" ></parameter>
+		</col>
+	</row>
+	<row>
+		<col>
+			<parameter  name="APMaxInactivity" required="false" type="number"  webname="STA Inactivity Timeout ( in seconds)" ></parameter>
+		</col>
+		<col>
+			<parameter  name="WaveAmsduEnabled" required="false" type="toggle"  webname="AMSDU Enabled" ></parameter>
+		</col>
+	</row>
+	</object>
+	<object name="Device.WiFi.AccessPoint.*.X_LANTIQ_COM_Vendor.Security" >
+	<row>
+		<col>
+			<parameter  name="ManagementFrameProtection" required="false" type="toggle" webname="Management Frame Protection" ></parameter>
+		</col>
+		<col>
+			<parameter  name="SAQueryRetryTimeout" required="false" type="number"  webname="SA Query Retry Timeout" ></parameter>
+		</col>
+		<col>
+			<parameter  name="SAQueryMaxTimeout"   required="false" type="number" webname="SA Query Max Timeout" ></parameter>
+		</col>
+	</row>
+	</object>
+<parameter name="Modify" action="post" routeurl="Apply($event)" type="submitbutton" webname="Apply"/>
+</object>
+</view>

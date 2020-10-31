@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__SYSFRAMEWORK" kind="group">
+    <compoundname>SYSFRAMEWORK</compoundname>
+    <title>System Framework API</title>
+    <innergroup refid="group__LIBCAL">Common Adaptation Layer</innergroup>
+    <innergroup refid="group__LIBHELP">System Helper</innergroup>
+    <innergroup refid="group__SYSFRAMEWORK__POLLD">Polling</innergroup>
+    <innergroup refid="group__SYSFRAMEWORK__LOG">Logging</innergroup>
+    <briefdescription>
+<para>Provides generic implementation of the core logic. It is a logical grouping of modules that implement the bring up, configure and run operations of the system. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

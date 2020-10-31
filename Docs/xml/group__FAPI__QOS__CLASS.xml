@@ -1,0 +1,1896 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__FAPI__QOS__CLASS" kind="group">
+    <compoundname>FAPI_QOS_CLASS</compoundname>
+    <title>Classification</title>
+    <innerclass refid="structcl__param__in__ex__t" prot="public">cl_param_in_ex_t</innerclass>
+    <innerclass refid="structcl__action__vlan__t" prot="public">cl_action_vlan_t</innerclass>
+    <innerclass refid="structpolicer__action__t" prot="public">policer_action_t</innerclass>
+    <innerclass refid="structcl__action__policer__t" prot="public">cl_action_policer_t</innerclass>
+    <innerclass refid="structcl__action__policy__rt__t" prot="public">cl_action_policy_rt_t</innerclass>
+    <innerclass refid="structcl__action__t" prot="public">cl_action_t</innerclass>
+    <innerclass refid="structcl__dhcp__match__t" prot="public">cl_dhcp_match_t</innerclass>
+    <innerclass refid="structcl__ipaddr__match__t" prot="public">cl_ipaddr_match_t</innerclass>
+    <innerclass refid="structcl__port__match__t" prot="public">cl_port_match_t</innerclass>
+    <innerclass refid="structcl__ip__5tuple__match__t" prot="public">cl_ip_5tuple_match_t</innerclass>
+    <innerclass refid="structcl__macaddr__match__t" prot="public">cl_macaddr_match_t</innerclass>
+    <innerclass refid="structcl__eth__match__t" prot="public">cl_eth_match_t</innerclass>
+    <innerclass refid="structcl__ip__match__t" prot="public">cl_ip_match_t</innerclass>
+    <innerclass refid="structcl__tcp__match__t" prot="public">cl_tcp_match_t</innerclass>
+    <innerclass refid="structcl__app__match__t" prot="public">cl_app_match_t</innerclass>
+    <innerclass refid="structcl__match__filter__t" prot="public">cl_match_filter_t</innerclass>
+    <innerclass refid="structqos__class__cfg__t" prot="public">qos_class_cfg_t</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__FAPI__QOS__CLASS_1ga8cedc303de33c7b80f5f7ad0b93e360a" prot="public" static="no">
+        <name>cl_meter_type</name>
+        <enumvalue id="group__FAPI__QOS__CLASS_1gga8cedc303de33c7b80f5f7ad0b93e360aa340459b223cd6b47515d690fe34aa84b" prot="public">
+          <name>CL_METER_TOKEN_BUCKET</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Simple Token Bucket </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__CLASS_1gga8cedc303de33c7b80f5f7ad0b93e360aae660340dc4cec61c4d5b8f4943aadd23" prot="public">
+          <name>CL_METER_SR_TCM</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Single Rate Three Color Marker </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__CLASS_1gga8cedc303de33c7b80f5f7ad0b93e360aa89493bbc9c0343b2353da7098a75ff6e" prot="public">
+          <name>CL_METER_TR_TCM</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Two Rate Three Color Marker </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Policer Meter Type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="518" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="518" bodyend="522"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__FAPI__QOS__CLASS_1ga002c716c5dae6e4be5433e1f11659cdb" prot="public" static="no">
+        <name>str_match_mode_t</name>
+        <enumvalue id="group__FAPI__QOS__CLASS_1gga002c716c5dae6e4be5433e1f11659cdbab938decc748980dc815bfdc9214c8b23" prot="public">
+          <name>STR_EXACT_MATCH</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Exact match required </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__CLASS_1gga002c716c5dae6e4be5433e1f11659cdba326a87c36b59443443c5e9b8992dd7b9" prot="public">
+          <name>STR_PREFIX_MATCH</name>
+          <initializer>=2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Prefix match required </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__CLASS_1gga002c716c5dae6e4be5433e1f11659cdba3c41c7b874c32b9510a6e71f183ddf42" prot="public">
+          <name>STR_SUFFIX_MATCH</name>
+          <initializer>=3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Suffix match required </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__CLASS_1gga002c716c5dae6e4be5433e1f11659cdba837cc902e460a3cbf5cdee1d11054b99" prot="public">
+          <name>STR_SUBSTRING_MATCH</name>
+          <initializer>=4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Substring match required </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Types of String Match operation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="579" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="579" bodyend="584"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__FAPI__QOS__CLASS_1ga08b997513c0c54685f72101d922bbe55" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t ip_addr_t</definition>
+        <argsstring></argsstring>
+        <name>ip_addr_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="479" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="479" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__FAPI__QOS__CLASS_1ga320ad61e79289091e97378966fb083b3" prot="public" static="no">
+        <type>enum <ref refid="group__FAPI__QOS__CLASS_1ga8cedc303de33c7b80f5f7ad0b93e360a" kindref="member">cl_meter_type</ref></type>
+        <definition>typedef enum cl_meter_type cl_meter_type_t</definition>
+        <argsstring></argsstring>
+        <name>cl_meter_type_t</name>
+        <briefdescription>
+<para>Policer Meter Type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="522" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__FAPI__QOS__CLASS_1ga3a90a0d5b85be195a9b297281d8e1a18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_classifier_set</definition>
+        <argsstring>(int32_t order, cl_match_filter_t filter, cl_action_t action, uint32_t flags)</argsstring>
+        <name>fapi_qos_classifier_set</name>
+        <param>
+          <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+          <declname>order</declname>
+        </param>
+        <param>
+          <type><ref refid="structcl__match__filter__t" kindref="compound">cl_match_filter_t</ref></type>
+          <declname>filter</declname>
+        </param>
+        <param>
+          <type><ref refid="structcl__action__t" kindref="compound">cl_action_t</ref></type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Set QoS AL Classifier - involves adding a new classifier, modifying an existing classifier, or deleting an existing classifier. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">order</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Order number of the classifier in the list - this allows append and insert operations </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">filter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Match classifier filter definition for the filter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Match classifier action for the filter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the action to be performed by the Filter as follows: CL_FILTER_ADD CL_FILTER_MODIFY CL_FILTER_DELETE CL_FILTER_DELETE_EXACT </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if OK / -1 on ERROR </para></simplesect>
+<simplesect kind="note"><para>While deleting a classifier, if order=-1, then exact match of filter will be done. If order &gt;= 0, then exact match will only be done if CL_FILTER_DELETE_EXACT is passed </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="835" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__QOS__CLASS_1gade879fda083234b2979807784e36c779" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_classifier_get</definition>
+        <argsstring>(uint32_t order, int32_t *num_entries, cl_match_filter_t **filter, cl_action_t **action, uint32_t flags)</argsstring>
+        <name>fapi_qos_classifier_get</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>order</declname>
+        </param>
+        <param>
+          <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref> *</type>
+          <declname>num_entries</declname>
+        </param>
+        <param>
+          <type><ref refid="structcl__match__filter__t" kindref="compound">cl_match_filter_t</ref> **</type>
+          <declname>filter</declname>
+        </param>
+        <param>
+          <type><ref refid="structcl__action__t" kindref="compound">cl_action_t</ref> **</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Get QoS AL Classifier - Get one or more Classifiers at the position given by order. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">order</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Order number of the classifier in the list - this allows append and insert operations </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">num_entries</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of classifiers to return at Order number. The value is updated with the number of classifiers returned by the API </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">filter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of filters based on num_entries. Caller has to free the memory </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of actions based on num_entries. Caller has to free the memory </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reserved </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if OK / -1 on ERROR </para></simplesect>
+<simplesect kind="note"><para>The #filters and #actions are same, as each filter has a corresponing action </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="857" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__QOS__CLASS_1ga3c3697dfc41749e8d9fd841b5f1956a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_app_abs_set</definition>
+        <argsstring>(char app_name[MAX_CL_AP_NAME], cl_match_filter_t *app_filter, uint32_t flags)</argsstring>
+        <name>fapi_qos_app_abs_set</name>
+        <param>
+          <type>char</type>
+          <declname>app_name</declname>
+          <array>[MAX_CL_AP_NAME]</array>
+        </param>
+        <param>
+          <type><ref refid="structcl__match__filter__t" kindref="compound">cl_match_filter_t</ref> *</type>
+          <declname>app_filter</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Set QoS AL Interface Application Abstraction like SIP, RTSP etc. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">app_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of application </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">app_filter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Application filter fields structure </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flags are defined as follows: CL_APP_ABS_ADD : Add a match filter abstraction to Application Abstraction CL_APP_ABS_DEL : Delete a match filter abstraction from Application Abstraction </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>app_id if OK / -1 on ERROR </para></simplesect>
+<simplesect kind="note"><para>If no app_name does not exist, a new app_id will be allocated. This can be done even with null app_filter </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="878" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__QOS__CLASS_1ga77e65959565d3e5f5001e5ee57cde333" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_app_abs_get</definition>
+        <argsstring>(int32_t app_id, char *app_name, int32_t *num_entries, cl_match_filter_t *app_filters, uint32_t flags)</argsstring>
+        <name>fapi_qos_app_abs_get</name>
+        <param>
+          <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+          <declname>app_id</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>app_name</declname>
+        </param>
+        <param>
+          <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref> *</type>
+          <declname>num_entries</declname>
+        </param>
+        <param>
+          <type><ref refid="structcl__match__filter__t" kindref="compound">cl_match_filter_t</ref> *</type>
+          <declname>app_filters</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Get QoS AL Interface Application Abstraction filters for applications like SIP, RTSP, etc. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">app_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Application Id for which to retrieve filter mappings </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">app_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Application Name for which to retrieve filter mappings </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">num_entries</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of entries returned in allocated array </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">app_filters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of filter entries defining the Application currently. Caller must free the buffer returned </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flags are reserved currently </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if OK / -1 on ERROR </para></simplesect>
+<simplesect kind="note"><para>One of app_id or app_name must be specified </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="895" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__QOS__CLASS_1ga73069be0721b9571ace92579e30feea7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_if_base_set</definition>
+        <argsstring>(char *ifname, char *base_ifname, char *logical_base, uint32_t flags)</argsstring>
+        <name>fapi_qos_if_base_set</name>
+        <param>
+          <type>char *</type>
+          <declname>ifname</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>base_ifname</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>logical_base</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Set QoS AL base interface for an interface, such as, whether pppoe interface is configured above ptm0 or eth1 etc. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ifname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of interface name to add/delete </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">base_ifname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of base interface name for interface </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">logical_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of logical interface name upon which interface is created (might be same as base_ifname) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flags are defined as follows: QOS_OP_F_ADD : Add base interface for an interface QOS_OP_F_DELETE : Delete base interface for an interface </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if OK / -1 on ERROR </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="915" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__QOS__CLASS_1gab1e71b798f439d66fa747066f3a753df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_if_abs_set</definition>
+        <argsstring>(iftype_t ifgroup, char *ifname, uint32_t flags)</argsstring>
+        <name>fapi_qos_if_abs_set</name>
+        <param>
+          <type><ref refid="group__FAPI__QOS__GENERAL_1ga23c1893cfe6a7875c1a418338c6f09ad" kindref="member">iftype_t</ref></type>
+          <declname>ifgroup</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>ifname</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Set QoS AL Interface Group Abstraction like LAN, WAN, WLAN - involves adding a new interface to an interface group or deleting. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ifgroup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of interface Group name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ifname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of interface name to add each pointer, and then the array of pointers </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flags are defined as follows: QOS_OP_F_ADD : Add an interface to AL Interface Group Abstraction QOS_OP_F_DELETE : Delete an interface from an AL Interface Group </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if OK / -1 on ERROR </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="934" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__QOS__CLASS_1gaebc50747038b6379fb5f24d7079c5a17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_if_abs_get</definition>
+        <argsstring>(iftype_t ifgroup, int32_t *num_entries, char **ifname, uint32_t flags)</argsstring>
+        <name>fapi_qos_if_abs_get</name>
+        <param>
+          <type><ref refid="group__FAPI__QOS__GENERAL_1ga23c1893cfe6a7875c1a418338c6f09ad" kindref="member">iftype_t</ref></type>
+          <declname>ifgroup</declname>
+        </param>
+        <param>
+          <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref> *</type>
+          <declname>num_entries</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>ifname</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Get QoS AL Interface Group Abstraction member interfaces, such as for LAN, WAN, WLAN. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ifgroup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of interface Group name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">num_entries</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of entries returned in allocated array </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">ifname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of pointers to interface names. Caller must free each pointer, and then the array of pointers </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flags are reserved currently </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if OK / -1 on ERROR </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="949" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__QOS__CLASS_1gaac69f14d85bced25e29b3bc7e1e481ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_dhcp_abs_set</definition>
+        <argsstring>(ip_addr_t ipaddr, cl_dhcp_match_t *dhcp, uint32_t flags)</argsstring>
+        <name>fapi_qos_dhcp_abs_set</name>
+        <param>
+          <type>ip_addr_t</type>
+          <declname>ipaddr</declname>
+        </param>
+        <param>
+          <type><ref refid="structcl__dhcp__match__t" kindref="compound">cl_dhcp_match_t</ref> *</type>
+          <declname>dhcp</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Set QoS AL Classifier DHCP Abstraction map - add or delete. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ipaddr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IPv4 or IPv6 address of system </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">dhcp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DHCP parameter match to associate or dis-associate with ipaddr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flags are defined as follows: CL_F_DHCP_ADD : Add a DHCP Association to ipaddr CL_F_DHCP_DEL : Delete a DHCP Association from ipaddr </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if OK / -1 on ERROR </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="965" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__QOS__CLASS_1ga28af7ded39657f9c0cd29f66fb4581dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_dhcp_abs_get</definition>
+        <argsstring>(iftype_t ifgroup, int32_t *num_entries, char *dhcp_arr, uint32_t flags)</argsstring>
+        <name>fapi_qos_dhcp_abs_get</name>
+        <param>
+          <type><ref refid="group__FAPI__QOS__GENERAL_1ga23c1893cfe6a7875c1a418338c6f09ad" kindref="member">iftype_t</ref></type>
+          <declname>ifgroup</declname>
+        </param>
+        <param>
+          <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref> *</type>
+          <declname>num_entries</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>dhcp_arr</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Get all DHCP Associations for a given IP address. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ifgroup</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of interface Group name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">num_entries</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of entries returned in allocated array of DHCP maps for ipaddr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">dhcp_arr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Allocated array of DHCP match entries for ifaddr. Caller needs to free buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flags are defined below </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if OK / -1 on ERROR </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="979" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga944555fb1618026c789f367d44f30af6" prot="public" static="no">
+        <name>QOS_AL_CL_OK</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>QOS_AL_CL_OK. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="36" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gad320b1c6f6000c71b43a53d3f249a3c6" prot="public" static="no">
+        <name>QOS_AL_CL_ERROR</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+<para>QOS_AL_CL_ERROR. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="39" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga39f8c99d59e0239bca697d3fb01f7d7e" prot="public" static="no">
+        <name>CL_OUTER_PCP_MARK</name>
+        <initializer>0x1</initializer>
+        <briefdescription>
+<para>CL remark outer VLAN header&apos;s priority. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="44" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaf3b63d816a81b4ecbe00738f6403eac1" prot="public" static="no">
+        <name>CL_VLAN_OUTER_VLAN_TAG</name>
+        <initializer>0x2</initializer>
+        <briefdescription>
+<para>CL remark outer VLAN header&apos;s tag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="48" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gad420a0fbcdfb3fcecbaac5f6dc92b53f" prot="public" static="no">
+        <name>CL_VLAN_OUTER_VLAN_UNTAG</name>
+        <initializer>0x4</initializer>
+        <briefdescription>
+<para>CL have no outer VLAN header. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="52" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gac702b6959dde9942bb7702da40d04d93" prot="public" static="no">
+        <name>CL_VLAN_INNER_PCP_MARK</name>
+        <initializer>0x8</initializer>
+        <briefdescription>
+<para>CL remark inner VLAN header&apos;s priority. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="56" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaacfffe406e5cd30cef8ccde173a3c214" prot="public" static="no">
+        <name>CL_VLAN_INNER_VLAN_TAG</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+<para>CL remark inner VLAN header&apos;s tag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="60" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gae0ae5549de00595583468b138805db24" prot="public" static="no">
+        <name>CL_VLAN_INNER_VLAN_UNTAG</name>
+        <initializer>0x20</initializer>
+        <briefdescription>
+<para>CL have no inner VLAN header. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="64" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga49bc0c5eb89e9a504cf3a6635beb7685" prot="public" static="no">
+        <name>CL_POLICER_ACTION_NULL</name>
+        <initializer>0x1</initializer>
+        <briefdescription>
+<para>CL Policer Actions. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Type of meter is mutually exclusive </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="71" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga15a67df8fe7fd1248366121b6081581b" prot="public" static="no">
+        <name>CL_POLICER_ACTION_DROP</name>
+        <initializer>0x2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="72" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga9c00a5c1f84174f09d77c04ecb64f20d" prot="public" static="no">
+        <name>CL_POLICER_ACTION_MARK_DSCP</name>
+        <initializer>0x4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="73" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga5f682cbc6fa8fbd0c54ef258ddfd542d" prot="public" static="no">
+        <name>CL_POLICER_ACTION_MARK_PCP</name>
+        <initializer>0x8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="74" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gacbdea39cbf4ab5d35d49219652c30987" prot="public" static="no">
+        <name>MAX_QOS_NAME_LEN</name>
+        <initializer>128</initializer>
+        <briefdescription>
+<para>Maximum name length. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="79" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gab08625a5eeb8582d69b40054201d9116" prot="public" static="no">
+        <name>MAX_VENDOR_ID_LEN</name>
+        <initializer>128</initializer>
+        <briefdescription>
+<para>Maximum vendor id length. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="83" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga2f264f80b185aa3d6b10d73051b5ca33" prot="public" static="no">
+        <name>MAX_VENDOR_ID_V6_LEN</name>
+        <initializer>128</initializer>
+        <briefdescription>
+<para>Maximum vendor id V6 length. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="87" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaff8356674e70c7efac546eee41ed1651" prot="public" static="no">
+        <name>MAX_CLIENTID_LEN</name>
+        <initializer>128</initializer>
+        <briefdescription>
+<para>Maximum client id length. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="91" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga668aa676079b70d11fd2f1ef9044dcfb" prot="public" static="no">
+        <name>MAX_USER_CLASSID_LEN</name>
+        <initializer>128</initializer>
+        <briefdescription>
+<para>Maximum user class id length. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="95" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga490480957ae3800d1b1af04261aea96f" prot="public" static="no">
+        <name>MAX_VENDOR_INFO_LEN</name>
+        <initializer>128</initializer>
+        <briefdescription>
+<para>Maximum vendor info length. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="99" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaaee7f1d8ba9da4f019bf0068103e6672" prot="public" static="no">
+        <name>MAX_MACADDR_LEN</name>
+        <initializer>32</initializer>
+        <briefdescription>
+<para>Maximum MAC address length. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="103" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga34277a18827d255a596f886d8a9f201b" prot="public" static="no">
+        <name>MAX_CL_NAME_LEN</name>
+        <initializer>32</initializer>
+        <briefdescription>
+<para>Maximum classifier name length. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="107" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga078fa167f6c71720c8ca3158564002ae" prot="public" static="no">
+        <name>MAX_CL_AP_NAME</name>
+        <initializer>32</initializer>
+        <briefdescription>
+<para>Maximum classifier AP name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="111" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga684323e1ca3c7464366255d8ab239c18" prot="public" static="no">
+        <name>IP_ADDRSTRLEN</name>
+        <initializer>48</initializer>
+        <briefdescription>
+<para>Maximum length of IP address in string form. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="115" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaac7b0ddf6094639bb919ac794ac2d330" prot="public" static="no">
+        <name>CL_FILTER_ADD</name>
+        <initializer>0x00000001</initializer>
+        <briefdescription>
+<para>Classifier add filter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="120" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gafdfbe09ca8caf42dbc84ed653aeaac60" prot="public" static="no">
+        <name>CL_FILTER_MODIFY</name>
+        <initializer>0x00000002</initializer>
+        <briefdescription>
+<para>Classifier modify filter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="124" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gac84c68beb8c3aaa01c9b1c0ac7b705ef" prot="public" static="no">
+        <name>CL_FILTER_DELETE</name>
+        <initializer>0x00000004</initializer>
+        <briefdescription>
+<para>Classifier delete filter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="128" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga5e8a126e56a23d62244de2060d85af26" prot="public" static="no">
+        <name>CL_FILTER_DELETE_EXACT</name>
+        <initializer>0x00000008</initializer>
+        <briefdescription>
+<para>Classifier delete based on exact match filter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="132" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gac47fb4e6357cbd771dae481fe0857c7f" prot="public" static="no">
+        <name>CL_FILTER_GET</name>
+        <initializer>0x00000010</initializer>
+        <briefdescription>
+<para>Classifier get filter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="136" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga185fa2bd20155e1e60216d6779fb7f89" prot="public" static="no">
+        <name>CL_FILTER_L2L</name>
+        <initializer>0x00000020</initializer>
+        <briefdescription>
+<para>Classifier filter for LAN to LAN traffic. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="140" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga06379cb42607da89f88b00e60eb0bcdc" prot="public" static="no">
+        <name>CLSCFG_PARAM_FILTER_NAME</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies classifier name set/unset in classifier-&gt;filter structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="145" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga31069195eed72ec20aedae008b0a16d1" prot="public" static="no">
+        <name>CLSCFG_PARAM_ORDER_NUM</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies classifier name set/unset in classifier-&gt;filter structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="149" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga3b34c97ad93e5072f0cae73fee6908e0" prot="public" static="no">
+        <name>CLSCFG_PARAM_SRC_DHCP</name>
+        <initializer>(1 &lt;&lt; 2)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies source DHCP options set/unset in classifier-&gt;filter structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="153" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga0028efb302f028380111f918050cad46" prot="public" static="no">
+        <name>CLSCFG_PARAM_SRC_DHCP_VENDOR_CLASS_ID</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies vendor field set/unset in classifier-&gt;filter-&gt;source DHCP structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="157" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga3f7f4f7a6ee13310e72b3754d5997c56" prot="public" static="no">
+        <name>CLSCFG_PARAM_SRC_DHCP_VENDOR_CLASS_ID_MODE</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies vendor class mode field set/unset in classifier-&gt;filter-&gt;source DHCP structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="161" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaa26bc18556806690c47a2bc28d5bac3e" prot="public" static="no">
+        <name>CLSCFG_PARAM_SRC_DHCP_VENDOR_CLASS_ID_V6</name>
+        <initializer>(1 &lt;&lt; 2)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies vendor class field for IPv6 set/unset in classifier-&gt;filter-&gt;source DHCP structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="165" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga0aaa52fa7cde16551a30df124ef509ac" prot="public" static="no">
+        <name>CLSCFG_PARAM_SRC_DHCP_CLIENT_ID</name>
+        <initializer>(1 &lt;&lt; 3)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies client field set/unset in classifier-&gt;filter-&gt;source DHCP structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="169" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaf80d9e2de58e9144d4f429d8283f77c7" prot="public" static="no">
+        <name>CLSCFG_PARAM_SRC_DHCP_USER_CLASS_ID</name>
+        <initializer>(1 &lt;&lt; 4)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies user class field set/unset in classifier-&gt;filter-&gt;source DHCP structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="173" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga44e475c1b6e51a6d395d2249252ad1f0" prot="public" static="no">
+        <name>CLSCFG_PARAM_SRC_DHCP_VENDOR_SPECIFIC_INFO</name>
+        <initializer>(1 &lt;&lt; 5)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies vendor specific field set/unset in classifier-&gt;filter-&gt;source DHCP structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="177" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gacc4d7564ff8092c59fc651f43f91a9c5" prot="public" static="no">
+        <name>CLSCFG_PARAM_DST_DHCP</name>
+        <initializer>(1 &lt;&lt; 3)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies destination DHCP options set/unset in classifier-&gt;filter structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="181" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaa7afc34341b4479f37e8ca61d8b4ce04" prot="public" static="no">
+        <name>CLSCFG_PARAM_DST_DHCP_VENDOR_CLASS_ID</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies vendor field set/unset in classifier-&gt;filter-&gt;destination DHCP structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="185" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gae2fbe779d7e55ee5a1e393de69300efe" prot="public" static="no">
+        <name>CLSCFG_PARAM_DST_DHCP_VENDOR_CLASS_ID_MODE</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies vendor class mode field set/unset in classifier-&gt;filter-&gt;destination DHCP structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="189" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga98fc67134bf609f750fe5d8dc3bfb211" prot="public" static="no">
+        <name>CLSCFG_PARAM_DST_DHCP_VENDOR_CLASS_ID_V6</name>
+        <initializer>(1 &lt;&lt; 2)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies vendor class field for IPv6 set/unset in classifier-&gt;filter-&gt;destination DHCP structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="193" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gab53254a13641816f7df02e24bb5c2190" prot="public" static="no">
+        <name>CLSCFG_PARAM_DST_DHCP_CLIENT_ID</name>
+        <initializer>(1 &lt;&lt; 3)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies client field set/unset in classifier-&gt;filter-&gt;destination DHCP structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="197" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gab9727303c2c9296c4974bd50a1cf8021" prot="public" static="no">
+        <name>CLSCFG_PARAM_DST_DHCP_USER_CLASS_ID</name>
+        <initializer>(1 &lt;&lt; 4)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies user class field set/unset in classifier-&gt;filter-&gt;destination DHCP structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="201" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaf5982f892057e0893c6c3b414f4e26c8" prot="public" static="no">
+        <name>CLSCFG_PARAM_DST_DHCP_VENDOR_SPECIFIC_INFO</name>
+        <initializer>(1 &lt;&lt; 5)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies vendor specific field set/unset in classifier-&gt;filter-&gt;destination DHCP structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="205" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaa41124ad13d035b5b4a60e2b206d983d" prot="public" static="no">
+        <name>CLSCFG_PARAM_RX_IF</name>
+        <initializer>(1 &lt;&lt; 4)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies source interface set/unset in classifier-&gt;filter structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="209" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaa5014aaa57f7bcd2c4a79d91c6f00398" prot="public" static="no">
+        <name>CLSCFG_PARAM_TX_IF</name>
+        <initializer>(1 &lt;&lt; 5)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies destination interface set/unset in classifier-&gt;filter structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="213" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga42a1927852fd76fed3ebef06518f0c2b" prot="public" static="no">
+        <name>CLSCFG_PARAM_SRC_MAC</name>
+        <initializer>(1 &lt;&lt; 6)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies source MAC address set/unset in classifier-&gt;filter structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="217" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga81e277579480cd167a5f612873958a64" prot="public" static="no">
+        <name>CLSCFG_PARAM_SRC_MAC_ADDRS</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies MAC address set/unset in classifier-&gt;filter-&gt;source MAC structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="221" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaee00e97e2fcfdeb266ecb698829d665d" prot="public" static="no">
+        <name>CLSCFG_PARAM_SRC_MAC_MASK</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies MAC address mask set/unset in classifier-&gt;filter-&gt;source MAC structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="225" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gadeac463ec45444644c63a7e5ce11157b" prot="public" static="no">
+        <name>CLSCFG_PARAM_DST_MAC</name>
+        <initializer>(1 &lt;&lt; 7)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies destination MAC address set/unset in classifier-&gt;filter structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="229" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga1bc9053d7aedef717825617895133a45" prot="public" static="no">
+        <name>CLSCFG_PARAM_DST_MAC_ADDRS</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies MAC address set/unset in classifier-&gt;filter-&gt;destination MAC structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="233" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga62bbf91589988695683d25cbfcd76308" prot="public" static="no">
+        <name>CLSCFG_PARAM_DST_MAC_MASK</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies MAC address mask set/unset in classifier-&gt;filter-&gt;destination MAC structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="237" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaa023578b2f6ba2c92206f9a0c956800e" prot="public" static="no">
+        <name>CLSCFG_PARAM_ETH_HDR</name>
+        <initializer>(1 &lt;&lt; 8)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies ethernet header options set/unset in classifier-&gt;filter structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="241" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga3a634002ae24673cab216f1a95fb0358" prot="public" static="no">
+        <name>CLSCFG_PARAM_ETH_HDR_TYPE</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies type field set/unset in classifier-&gt;filter-&gt;ethernet header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="245" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga306a9085f7f3faba2b6b75cdcf3243a8" prot="public" static="no">
+        <name>CLSCFG_PARAM_ETH_HDR_DSAP</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies type field set/unset in classifier-&gt;filter-&gt;ethernet header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="249" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gad097dc1979245aeaab1e242f5c5c34ee" prot="public" static="no">
+        <name>CLSCFG_PARAM_ETH_HDR_SSAP</name>
+        <initializer>(1 &lt;&lt; 2)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies type field set/unset in classifier-&gt;filter-&gt;ethernet header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="253" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaf021a287d12fba2a2f1d77204c297748" prot="public" static="no">
+        <name>CLSCFG_PARAM_ETH_HDR_LLC_CONTROL</name>
+        <initializer>(1 &lt;&lt; 3)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies type field set/unset in classifier-&gt;filter-&gt;ethernet header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="257" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga76f64d19269843dfa7c964b9087b220c" prot="public" static="no">
+        <name>CLSCFG_PARAM_ETH_HDR_OUI</name>
+        <initializer>(1 &lt;&lt; 4)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies type field set/unset in classifier-&gt;filter-&gt;ethernet header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="261" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga06465865917637ebdc92b0d6aeef562a" prot="public" static="no">
+        <name>CLSCFG_PARAM_ETH_HDR_PRIO</name>
+        <initializer>(1 &lt;&lt; 5)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies outer header header&apos;s VLAN priority field set/unset in classifier-&gt;filter-&gt;ethernet header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="265" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga3323c094841c5190b021c8948689fc96" prot="public" static="no">
+        <name>CLSCFG_PARAM_ETH_HDR_VLANID</name>
+        <initializer>(1 &lt;&lt; 6)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies outer header&apos;s VLAN Id field set/unset in classifier-&gt;filter-&gt;ethernet header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="269" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaa817956ab230bff211f3fcdc230aa7bb" prot="public" static="no">
+        <name>CLSCFG_PARAM_ETH_HDR_VLAN_DEI</name>
+        <initializer>(1 &lt;&lt; 7)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies outer header&apos;s DEI field set/unset in classifier-&gt;filter-&gt;ethernet header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="273" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaea94f73aa52b7240d76ba7979e8f0908" prot="public" static="no">
+        <name>CLSCFG_PARAM_ETH_HDR_INNER_PRIO</name>
+        <initializer>(1 &lt;&lt; 8)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies inner header&apos;s VLAN priority field set/unset in classifier-&gt;filter-&gt;ethernet header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="277" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga290fa0019b1ff3a1f0bf72860538303b" prot="public" static="no">
+        <name>CLSCFG_PARAM_ETH_HDR_INNER_VLANID</name>
+        <initializer>(1 &lt;&lt; 9)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies inner header&apos;s VLAN Id field set/unset in classifier-&gt;filter-&gt;ethernet header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="281" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga084af8664bb692d9d459258f1aebf7f5" prot="public" static="no">
+        <name>CLSCFG_PARAM_ETH_HDR_INNER_VLAN_DEI</name>
+        <initializer>(1 &lt;&lt; 10)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies inner header&apos;s VLAN DEI field set/unset in classifier-&gt;filter-&gt;ethernet header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="285" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga9de8f5051b3801ac096224790d765a07" prot="public" static="no">
+        <name>CLSCFG_PARAM_OUTER_IP</name>
+        <initializer>(1 &lt;&lt; 9)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies outer IP header options set/unset in classifier-&gt;filter structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="289" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga5b5e7049c7b80d793cf368ae3a7e1cc3" prot="public" static="no">
+        <name>CLSCFG_PARAM_OUTER_IP_SRC_IP</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies source IP address field set/unset in classifier-&gt;filter-&gt;outer IP header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="293" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga25cff77fe5bd05d915622e881c839fc3" prot="public" static="no">
+        <name>CLSCFG_PARAM_OUTER_IP_DST_IP</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies destination IP address field set/unset in classifier-&gt;filter-&gt;outer IP header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="297" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gab1636333a476b82f43d834e25432382e" prot="public" static="no">
+        <name>CLSCFG_PARAM_OUTER_IP_SRC_PORT</name>
+        <initializer>(1 &lt;&lt; 2)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies source port field set/unset in classifier-&gt;filter-&gt;outer IP header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="301" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gad605735a2ef44435aef61a57221ced3c" prot="public" static="no">
+        <name>CLSCFG_PARAM_OUTER_IP_DST_PORT</name>
+        <initializer>(1 &lt;&lt; 3)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies destination port field set/unset in classifier-&gt;filter-&gt;outer IP header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="305" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga8b476d0bf1917ff8fbc6e13a43c38662" prot="public" static="no">
+        <name>CLSCFG_PARAM_OUTER_IP_PROTO</name>
+        <initializer>(1 &lt;&lt; 4)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies protocol field set/unset in classifier-&gt;filter-&gt;outer IP header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="309" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gad6d817b1390cdd0c968023a1e42e4dda" prot="public" static="no">
+        <name>CLSCFG_PARAM_INNER_IP</name>
+        <initializer>(1 &lt;&lt; 10)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies inner IP header options set/unset in classifier-&gt;filter structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="313" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga5fd6dd05766ea3c6ba0004e068533570" prot="public" static="no">
+        <name>CLSCFG_PARAM_INNER_IP_SRC_IP</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies source IP address field set/unset in classifier-&gt;filter-&gt;innter IP header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="317" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaea427f0d65c170b6ff19c2853f4103cc" prot="public" static="no">
+        <name>CLSCFG_PARAM_INNER_IP_DST_IP</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies destination IP address field set/unset in classifier-&gt;filter-&gt;inner IP header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="321" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga5ba18b900992bae28b4d17deafcb477c" prot="public" static="no">
+        <name>CLSCFG_PARAM_INNER_IP_SRC_PORT</name>
+        <initializer>(1 &lt;&lt; 2)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies source port field set/unset in classifier-&gt;filter-&gt;inner IP header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="325" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="325" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaf4e1e579a91bb86fdd5957b7b12c8874" prot="public" static="no">
+        <name>CLSCFG_PARAM_INNER_IP_DST_PORT</name>
+        <initializer>(1 &lt;&lt; 3)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies destination port field set/unset in classifier-&gt;filter-&gt;inner IP header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="329" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="329" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga8dc01954dd284e27b4d88ba16f01a858" prot="public" static="no">
+        <name>CLSCFG_PARAM_INNER_IP_PROTO</name>
+        <initializer>(1 &lt;&lt; 4)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies protocol field set/unset in classifier-&gt;filter-&gt;inner IP header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="333" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="333" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga4bb55299d7f6d2c30e22ad0b60ed6414" prot="public" static="no">
+        <name>CLSCFG_PARAM_IP_HDR</name>
+        <initializer>(1 &lt;&lt; 11)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies generic IP header fields set/unset in classifier-&gt;filter structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="337" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga1eb07a962deae3b21034729a7849a214" prot="public" static="no">
+        <name>CLSCFG_PARAM_IP_HDR_LEN_MIN</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies length field set/unset in classifier-&gt;filter-&gt;generic IP header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="341" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga7d0581c861e827ee81124e0d0cb210c1" prot="public" static="no">
+        <name>CLSCFG_PARAM_IP_HDR_LEN_MAX</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies maximum length field set/unset in classifier-&gt;filter-&gt;generic IP header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="345" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="345" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga5af2e483d1bb74431d91f985d547e5ca" prot="public" static="no">
+        <name>CLSCFG_PARAM_IP_HDR_DSCP</name>
+        <initializer>(1 &lt;&lt; 2)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies DSCP field set/unset in classifier-&gt;filter-&gt;generic IP header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="349" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gacf8a4fb4dc4dcda1832c1bd55ffbc602" prot="public" static="no">
+        <name>CLSCFG_PARAM_TCP_HDR</name>
+        <initializer>(1 &lt;&lt; 12)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies TCP header fields set/unset in classifier-&gt;filter structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="353" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="353" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga687efbfecca4a115b554080f924dd061" prot="public" static="no">
+        <name>CLSCFG_PARAM_TCP_HDR_ACK</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies ACK flag field set/unset in classifier-&gt;filter-&gt;TCP header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="357" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="357" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gafc2f5f449c1d381846b0e241d7da1fec" prot="public" static="no">
+        <name>CLSCFG_PARAM_TCP_HDR_SYN</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies SYN flag field set/unset in classifier-&gt;filter-&gt;TCP header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="361" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="361" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga181ee44f13f002b1dfc64b8ec8a6a6a1" prot="public" static="no">
+        <name>CLSCFG_PARAM_TCP_HDR_FIN</name>
+        <initializer>(1 &lt;&lt; 2)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies FIN flag field set/unset in classifier-&gt;filter-&gt;TCP header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="365" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaee769ff0e4ed6f075f9460c5db38f584" prot="public" static="no">
+        <name>CLSCFG_PARAM_TCP_HDR_RST</name>
+        <initializer>(1 &lt;&lt; 3)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies RST flag field set/unset in classifier-&gt;filter-&gt;TCP header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="369" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="369" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga15b580e26fcf1b37d7f8fba283801d09" prot="public" static="no">
+        <name>CLSCFG_PARAM_TCP_HDR_URG</name>
+        <initializer>(1 &lt;&lt; 4)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies URG flag field set/unset in classifier-&gt;filter-&gt;TCP header structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="373" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="373" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga6789c1000de15696d7e77f558f139bc5" prot="public" static="no">
+        <name>CLSCFG_PARAM_APP</name>
+        <initializer>(1 &lt;&lt; 13)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies application protocol fields set/unset in classifier-&gt;filter structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="377" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="377" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaa368194c8a40c03f937855657fdddd06" prot="public" static="no">
+        <name>CLSCFG_PARAM_APP_ID</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies Id set/unset in classifier-&gt;filter-&gt;application structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="381" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="381" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga72340257f9a1ba50df18c1b3de859e32" prot="public" static="no">
+        <name>CLSCFG_PARAM_SUBPROTO_ID</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies sub-protocol Id set/unset in classifier-&gt;filter-&gt;application structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="385" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gac6e642aff7a8cd5de9f5fd71655f89f5" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT</name>
+        <initializer>(1 &lt;&lt; 14)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies action fields set/unset in classifier-&gt;filter structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="389" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaeb169b217ea7050e6231b2d4f5991fbf" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_TC</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies traffic class field set/unset in classifier-&gt;action structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="393" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="393" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga4420d723c0be6b77b802c13ad30e7d8e" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_DROP</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies drop field set/unset in classifier-&gt;filter-&gt;action structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="397" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga82e1bba9306ae8610e232bdf1fe8a65b" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_DSCP</name>
+        <initializer>(1 &lt;&lt; 2)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies DSCP remarking field set/unset in classifier-&gt;action structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="401" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaa27a5868ebd8f7bb2fc9a51bd966aeb4" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_VLAN</name>
+        <initializer>(1 &lt;&lt; 15)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies VLAN action fields set/unset in classifier-&gt;action structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="405" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaf0dc3807b76fe3deec00cd30970f6b52" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_VLAN_PCP</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies outer header&apos;s VLAN priority remarking field set/unset in classifier-&gt;action-&gt;vlan structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="409" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga6780ee04618d1f8fc512db7f55223a72" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_VLAN_ID</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies outer header&apos;s VLAN Id remarking field set/unset in classifier-&gt;action-&gt;vlan structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="413" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaf23dd4d1bf0d1f8a19026d91fa392a2a" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_VLAN_PCP_INNER</name>
+        <initializer>(1 &lt;&lt; 2)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies inner header&apos;s VLAN priority remarking field set/unset in classifier-&gt;action-&gt;vlan structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="417" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaf241e54eda720b4a3be21cc9ad3b1839" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_VLAN_ID_INNER</name>
+        <initializer>(1 &lt;&lt; 3)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies inner header&apos;s VLAN Id remarking field set/unset in classifier-&gt;action-&gt;vlan structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="421" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="421" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaf51cf704ebad97f348bd7c9daf9414ab" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_POLICER</name>
+        <initializer>(1 &lt;&lt; 16)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies policer action fields set/unset in classifier-&gt;action structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="425" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga946f94bb0ef9563bb4ce8f97c9f5a7d8" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_POLICER_NAME</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies name field set/unset in classifier-&gt;action-&gt;policer structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="429" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="429" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga7fb0e5f90776eb832dffcd53ec162c6e" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_POLICER_MTR_TYPE</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies mtr type field set/unset in classifier-&gt;action-&gt;policer structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="433" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="433" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gacd76a4de3d2d681efd9ef60f3d7c2e01" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_POLICER_CR</name>
+        <initializer>(1 &lt;&lt; 2)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies cr field set/unset in classifier-&gt;action-&gt;policer structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="437" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="437" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gac2a70466a6ce647a37cbf825e763fcba" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_POLICER_CBS</name>
+        <initializer>(1 &lt;&lt; 3)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies cbs field set/unset in classifier-&gt;action-&gt;policer structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="441" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="441" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga12ae7333fcc141093798d79d9cfd9c58" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_POLICER_EBS</name>
+        <initializer>(1 &lt;&lt; 4)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies ebs field set/unset in classifier-&gt;action-&gt;policer structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="445" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="445" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaa4256bde3605ed2ac5cc85280638a25f" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_POLICER_PR</name>
+        <initializer>(1 &lt;&lt; 5)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies pr field set/unset in classifier-&gt;action-&gt;policer structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="449" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="449" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1gaf204365272441bc75697ef596cfc0d94" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_POLICER_PBS</name>
+        <initializer>(1 &lt;&lt; 6)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies pbs field set/unset in classifier-&gt;action-&gt;policer structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="453" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="453" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga94b4e8ac023086bd663c21021b03f5f0" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_POLICYRT</name>
+        <initializer>(1 &lt;&lt; 17)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies policy route fields set/unset in classifier-&gt;action structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="457" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="457" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga923d2b6da24fe5f1e2357d4bdc59e838" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_POLICYRT_NAME</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies name field set/unset in classifier-&gt;action-&gt;policy route structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="461" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="461" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga04076d7def16a0887142ca8a3624be06" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_POLICYRT_GW_IP</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies gateway IP address field set/unset in classifier-&gt;action-&gt;policy route structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="465" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="465" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga177564364677ce11f27a8aeee185fa6b" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_POLICYRT_DST_IF</name>
+        <initializer>(1 &lt;&lt; 2)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies destination interface field set/unset in classifier-&gt;action-&gt;policy route structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="469" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="469" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga5c363c3cac4c58f9f7b1c71e2ecd9e9e" prot="public" static="no">
+        <name>CLSCFG_PARAM_ACT_POLICYRT_METRIC</name>
+        <initializer>(1 &lt;&lt; 3)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies metric field set/unset in classifier-&gt;action-&gt;policy route structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="473" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="473" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__CLASS_1ga5dc738a7d5021a3c639b5b8a9fa9237a" prot="public" static="no">
+        <name>CLSCFG_PARAM_L7_PROTO</name>
+        <initializer>(1 &lt;&lt; 18)</initializer>
+        <briefdescription>
+<para>Bit-field that specifies layer7 protocol fields set/unset in classifier-&gt;filter structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="477" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="477" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>It provides a set of API to classify packets coming into the CPE device, and perform actions like assign tc, dscp mark, drop etc. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

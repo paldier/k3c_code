@@ -1,0 +1,93 @@
+#!/bin/sh
+
+if [ ! "$ENVLOADED" ]; then
+	if [ -r /etc/rc.conf ]; then
+		 . /etc/rc.conf 2> /dev/null
+		ENVLOADED="1"
+	fi
+fi
+
+if [ ! "$CONFIGLOADED" ]; then
+	if [ -r /etc/rc.d/config.sh ]; then
+		. /etc/rc.d/config.sh 2>/dev/null
+		CONFIGLOADED="1"
+	fi
+fi
+
+RA_IF=""
+find_ra_if_from_index() {
+   eval CPEID='$'wlmn_${1}'_cpeId'
+   ra_dev=`/usr/sbin/status_oper GET "RA_MAP" "$CPEID"`
+   RA_IF=${ra_dev:2}
+}
+
+find_ra_if_from_index $1
+
+if [ "$CONFIG_FEATURE_WIRELESS" = "1" ]; then
+   your_state_file=/ramdisk/tmp/state
+   rm -f ${your_state_file}
+   iwpriv ra${RA_IF} ar9_show get_stat2 >> ${your_state_file}
+
+   if [ "${1}" = "0" ]; then
+	StartLine=3
+   elif [ "${1}" = "1" ]; then
+	StartLine=18
+   elif [ "${1}" = "2" ]; then
+	StartLine=33
+   elif [ "${1}" = "3" ]; then
+	StartLine=48
+   fi
+
+   
+   bytesTx=$(sed -n "${StartLine}p" $your_state_file | cut -d "=" -f 2 | cut -d " " -f 2)
+   StartLine=`expr ${StartLine} + 1`
+   bytesRx=$(sed -n "${StartLine}p" $your_state_file | cut -d "=" -f 2 | cut -d " " -f 2)
+   StartLine=`expr ${StartLine} + 1`
+   pktsTx=$(sed -n "${StartLine}p" $your_state_file | cut -d "=" -f 2 | cut -d " " -f 2)
+   StartLine=`expr ${StartLine} + 1`
+   pktsRx=$(sed -n "${StartLine}p" $your_state_file | cut -d "=" -f 2 | cut -d " " -f 2)
+   StartLine=`expr ${StartLine} + 1`
+   errorsTx=$(sed -n "${StartLine}p" $your_state_file | cut -d "=" -f 2 | cut -d " " -f 2)
+   StartLine=`expr ${StartLine} + 1`
+   errorsRx=$(sed -n "${StartLine}p" $your_state_file | cut -d "=" -f 2 | cut -d " " -f 2)
+   StartLine=`expr ${StartLine} + 1`
+   discardPktsTx=$(sed -n "${StartLine}p" $your_state_file | cut -d "=" -f 2 | cut -d " " -f 2)
+   StartLine=`expr ${StartLine} + 1`
+   discardPktsRx=$(sed -n "${StartLine}p" $your_state_file | cut -d "=" -f 2 | cut -d " " -f 2)
+   StartLine=`expr ${StartLine} + 1`
+   ucPktsTx=$(sed -n "${StartLine}p" $your_state_file | cut -d "=" -f 2 | cut -d " " -f 2)
+   StartLine=`expr ${StartLine} + 1`
+   ucPktsRx=$(sed -n "${StartLine}p" $your_state_file | cut -d "=" -f 2 | cut -d " " -f 2)
+   StartLine=`expr ${StartLine} + 1`
+   mcPktsTx=$(sed -n "${StartLine}p" $your_state_file | cut -d "=" -f 2 | cut -d " " -f 2)
+   StartLine=`expr ${StartLine} + 1`
+   mcPktsRx=$(sed -n "${StartLine}p" $your_state_file | cut -d "=" -f 2 | cut -d " " -f 2)
+   StartLine=`expr ${StartLine} + 1`
+   bcPktsTx=$(sed -n "${StartLine}p" $your_state_file | cut -d "=" -f 2 | cut -d " " -f 2)
+   StartLine=`expr ${StartLine} + 1`
+   bcPktsRx=$(sed -n "${StartLine}p" $your_state_file | cut -d "=" -f 2 | cut -d " " -f 2)
+   
+   echo "bytesTx=\""$bytesTx"\""
+   echo "bytesRx=\""$bytesRx"\""
+   echo "pktsTx=\""$pktsTx"\""
+   echo "pktsRx=\""$pktsRx"\""
+   echo "errorsTx=\""$errorsTx"\""
+   echo "errorsRx=\""$errorsRx"\""
+   echo "discardPktsTx=\""$discardPktsTx"\""
+   echo "discardPktsRx=\""$discardPktsRx"\""
+   echo "ucPktsTx=\""$ucPktsTx"\""
+   echo "ucPktsRx=\""$ucPktsRx"\""
+   echo "mcPktsTx=\""$mcPktsTx"\""
+   echo "mcPktsRx=\""$mcPktsRx"\""
+   echo "bcPktsTx=\""$bcPktsTx"\""
+   echo "bcPktsRx=\""$bcPktsRx"\""
+
+   #byteTx=$(grep "Tx success                      " $your_state_file | cut -d "=" -f 2 | cut -d " " -f 2)
+   #echo "bytesTx=\""$byteTx"\""
+   #byteRx=$(grep "Rx success                      " $your_state_file   | cut -d "=" -f 2 | cut -d " " -f 2)
+   #echo "bytesRx=\""$byteRx"\""
+   #errorTx=$(grep "Tx fail to Rcv ACK after retry  " $your_state_file   | cut -d "=" -f 2 | cut -d " " -f 2)
+   #echo "errorsTx=\""$errorTx"\""
+   #errorRx=$(grep "Rx with CRC                     " $your_state_file   | cut -d "=" -f 2 | cut -d " " -f 2)
+   #echo "errorsRx=\""$errorRx"\""
+fi

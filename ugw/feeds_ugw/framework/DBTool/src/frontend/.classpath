@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="resources/" kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="lib/jsr173-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jsr173-ri-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jython-standalone-2.7-b4.jar" sourcepath="D:/m2/repository/org/python/jython-standalone/2.7-b4/jython-standalone-2.7-b4-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j-api-2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j-core-2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/stax-utils-20070216.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/swingx-all-1.6.5-1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/xmlunit-1.5.jar"/>
+	<classpathentry kind="lib" path="src/resources"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

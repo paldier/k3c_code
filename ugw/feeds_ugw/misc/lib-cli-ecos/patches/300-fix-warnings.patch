@@ -1,0 +1,99 @@
+--- a/src/lib_cli_console.c
++++ b/src/lib_cli_console.c
+@@ -312,15 +312,14 @@ CLI_STATIC int console_non_block_check_i
+ 	struct cli_console_context_s *p_console_ctx)
+ {
+ #	if (defined(LINUX) && !defined(__KERNEL__)) || defined(VXWORKS) || defined(WIN32)
+-	int retval = 0;
+ 
+ 	clios_io_fd_zero(&p_console_ctx->io_fd_set);
+ 	clios_io_fd_set(p_console_ctx->io_fd, &p_console_ctx->io_fd_set);
+ 
+-	if ((retval = clios_io_select(
++	if (clios_io_select(
+ 		p_console_ctx->max_io_fd,
+ 		&p_console_ctx->io_fd_set, IFX_NULL, IFX_NULL,
+-		p_console_ctx->cycle_time_ms)) < 0)
++		p_console_ctx->cycle_time_ms) < 0)
+ 	{
+ 		return IFX_ERROR;
+ 	}
+@@ -479,8 +478,8 @@ CLI_STATIC int cmd_line_read(
+ 	clios_file_t *p_out)
+ {
+ 	char c;
+-	char echo;
+-	int retval = 0, b_eof = 0;
++	/*char echo;*/
++	int b_eof = 0;
+ 	int blank_cnt = 0;
+ 	int first = 1;
+ 	int ret = KEY_INPUT_CHAR;
+@@ -492,9 +491,9 @@ CLI_STATIC int cmd_line_read(
+ 	s += (unsigned int)clios_strlen(s);
+ 
+ 	while (len--) {
+-		echo = 0;
++		/*echo = 0;*/
+ 
+-		retval = p_console_ctx->fct_char_read(
++		(void)p_console_ctx->fct_char_read(
+ 			p_console_ctx, (clios_file_io_t *)p_in, &b_eof, &c);
+ 		if (b_eof == 1)
+ 		{
+@@ -517,16 +516,16 @@ CLI_STATIC int cmd_line_read(
+ 
+ 		switch (c) {
+ 		default:
+-			echo = c;
++			/*echo = c;*/
+ 			break;
+ 
+ 		case ' ':
+ 			if (blank_cnt) {
+ 				len++;
+ 				s--;
+-			} else {
++			} /*else {
+ 				echo = ' ';
+-			}
++			} */
+ 			blank_cnt++;
+ 			break;
+ 
+@@ -571,7 +570,7 @@ CLI_STATIC int cmd_line_read(
+ 			/*lint -restore */
+ 
+ 		case 033:
+-			retval = p_console_ctx->fct_char_read(
++			(void)p_console_ctx->fct_char_read(
+ 				p_console_ctx, (clios_file_io_t *)p_in, &b_eof, &c);
+ 			if (b_eof == 1)
+ 				{break;}
+@@ -582,7 +581,7 @@ CLI_STATIC int cmd_line_read(
+ 				break;
+ 
+ 			case '[':
+-				retval = p_console_ctx->fct_char_read(
++				(void)p_console_ctx->fct_char_read(
+ 					p_console_ctx, (clios_file_io_t *)p_in, &b_eof, &c);
+ 				if (b_eof == 1)
+ 					{break;}
+--- a/src/lib_cli_pipe.c
++++ b/src/lib_cli_pipe.c
+@@ -313,7 +313,6 @@ CLI_STATIC int pipe_log_thread(
+ 	struct cli_pipe_context_s *p_cli_pipe_context = (struct cli_pipe_context_s *)thr_params->nArg1;
+ 	unsigned long *p_msg;
+ 	unsigned int el_size;
+-	char *p_result = IFX_NULL;
+ 	unsigned long *p_buffer;
+ 
+ 	/*
+@@ -365,7 +364,6 @@ CLI_STATIC int pipe_log_thread(
+ 			struct cli_pipe_env_s *p_pipe_env = IFX_NULL;
+ 			clios_pipe_t *p_pipe;
+ 
+-			p_result = IFX_NULL;
+ 			if (((p_buffer[0] >> 16) & 0xFFFF) >= p_cli_pipe_context->n_pipes) {
+ 				CLI_USR_DBG(LIB_CLI, CLI_PRN_HIGH,
+ 					("WRN CLI Pipe: log thr - buffer overflow" CLI_CRLF));

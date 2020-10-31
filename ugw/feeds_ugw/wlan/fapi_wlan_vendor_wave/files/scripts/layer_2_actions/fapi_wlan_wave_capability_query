@@ -1,0 +1,124 @@
+#!/bin/sh
+
+# Return the Radio capabilities
+# Needed object: Radio and Radio.X_LANTIQ_COM_Vendor or no objects.
+
+wlanInitIncomplete=0
+# Source library and HW.ini files
+if [ ! "$FAPI_WLAN_WAVE_INIT_PLATFORM" ]; then
+	if [ -e /tmp/wlan_wave/fapi_wlan_wave_init_platform.sh ]; then
+		. /tmp/wlan_wave/fapi_wlan_wave_init_platform.sh
+	else
+		# If this script is called by the web before wireless init occurs, ${WAVE_TMP}/fapi_wlan_wave_init_platform.sh will be missing.
+		# In this case notify the web that is must refresh its values
+		echo fapi_wlan_wave_capability_query: Wireless init incomplete. Refresh needed. > /dev/console
+		wlanInitIncomplete=1
+		exit
+	fi
+fi
+
+print2log DBG "running fapi_wlan_wave_capability_query: args: $*"
+
+interface_name=$1
+
+# If interface name is not supplied, exit script
+check_input_param "fapi_wlan_wave_capability_query" "interface_name" "$interface_name"
+
+timestamp "fapi_wlan_wave_capability_query:$interface_name:begin"
+
+# DEBUG: TODO: REMOVE
+#cp ${IN_CONF} ${WAVE_TMP}/in_conf_capabilities
+
+# Map the object index to the received object in the in.conf file
+radio_index=`map_param_index Object $RADIO_OBJECT`
+radio_vendor_index=`map_param_index Object $RADIO_VENDOR_OBJECT`
+
+# If an object that needs to be in the output conf wasn't in the input conf, set it with an index
+next_object_index=`get_next_object_index`
+[ -z "$radio_index" ] && radio_index=$next_object_index && next_object_index=$((next_object_index+1))
+[ -z "$radio_vendor_index" ] && radio_vendor_index=$next_object_index && next_object_index=$((next_object_index+1))
+
+# Verify interface is up and ready
+[ "$wlanInitIncomplete" = "0" ] && wlanInitIncomplete=`check_if_is_ready $interface_name`
+[ "$wlanInitIncomplete" = "1" ] && exit
+
+# Read the capabilities according to interface's HW.ini file.
+# Radio capabilities
+# Maximum bit rate in Mbps
+max_bit_rate="300"
+
+# Supported frequency bands and standards (network modes)
+freq_24_standards="b,g"
+freq_5_standards="a"
+
+hw_24g=`grep HW_24G /tmp/HW.ini`
+hw_24g=${hw_24g##*=}
+hw_5g=`grep HW_52G /tmp/HW.ini`
+hw_5g=${hw_5g##*=}
+if [ "$hw_24g" = "1" ]; then
+	supported_frequency_bands="2.4GHz"
+	supported_standards="${freq_24_standards},n"
+	[ "$hw_5g" = "1" ] && supported_frequency_bands="2.4GHz,5GHz" && supported_standards="${freq_24_standards},${freq_5_standards},n"
+elif [ "$hw_5g" = "1" ]; then
+	supported_frequency_bands="5GHz"
+	supported_standards="${freq_5_standards},n"
+fi
+# Channels in use.
+# Shows the channel used by the AP and by other APs around it.
+# The channel the AP uses
+channel=`api_wrapper get iwlist $interface_name ch`
+channel=${channel##*Current Channel=}
+
+channels_in_use="$channel"
+
+# Read the channels in use from the driver's last scan results and save it to a file.
+cat /proc/net/mtlk/$interface_name/aocs_channels | awk '{print $1 " " $4 " " $5 " " $6}' | tail +3 > $WAVE_TMP/channelsInUse.table
+# If a channel is in use, add it to the list if it is not same channel as the channel used by the AP (since this channel is already in the list).
+while read ch n20 n40up n40lw; do
+	if [ $n20 -gt 0 ] || [ $n40up -gt 0 ] || [ $n40lw -gt 0 ]; then
+		[ $ch -ne $channel ] && channels_in_use="$channels_in_use,$ch"
+	fi
+done < $WAVE_TMP/channelsInUse.table
+rm -f $WAVE_TMP/channelsInUse.table
+
+# Auto channel supported
+auto_channel_supported="true"
+
+# Supported transmit power levels
+transmit_power_supported="12,25,50,100"
+
+# 802.11h supported (only when 5Ghz frequency is supported)
+ieee80211h_supported="false"
+[ "$hw_5g" = "1" ] && ieee80211h_supported="true"
+
+# Maximum number of VAPs that can be created in this radio
+max_num_vaps=`api_wrapper get iwpriv $interface_name gAPCapsMaxVAPs`
+max_num_vaps=${max_num_vaps##*:}
+
+# Create the output configuration file and set the capapabilities in it
+cat /dev/null > ${OUT_CONF}
+
+# Radio object parameters
+update_conf_out "Object_${radio_index}" "$RADIO_OBJECT"
+update_conf_out "MaxBitRate_${radio_index}" "$max_bit_rate"
+update_conf_out "SupportedFrequencyBands_${radio_index}" "$supported_frequency_bands"
+update_conf_out "SupportedStandards_${radio_index}" "$supported_standards"
+#TODO: ADD update_conf_out "PossibleChannels_${radio_index}" "$possible_channels"
+update_conf_out "ChannelsInUse_${radio_index}" "$channels_in_use"
+update_conf_out "AutoChannelSupported_${radio_index}" "$auto_channel_supported"
+update_conf_out "TransmitPowerSupported_${radio_index}" "$transmit_power_supported"
+update_conf_out "IEEE80211hSupported_${radio_index}" "$ieee80211h_supported"
+update_conf_out "Channel_${radio_index}" "$channel"
+
+# Radio.X_LANTIQ_COM_Vendor object parameters
+update_conf_out "Object_${radio_vendor_index}" "$RADIO_VENDOR_OBJECT"
+update_conf_out "MaxNumVaps_${radio_vendor_index}" "$max_num_vaps"
+
+# Configuration is completed successfully
+update_conf_out "wlan_configuration_status" "success"
+
+# DEBUG: TODO: REMOVE
+#cp ${OUT_CONF} ${WAVE_TMP}/out_conf_capabilities
+
+print2log DBG "fapi_wlan_wave_capability_query done"
+timestamp "fapi_wlan_wave_capability_query:$interface_name:done"

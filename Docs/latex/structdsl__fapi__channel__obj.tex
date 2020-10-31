@@ -1,0 +1,212 @@
+\hypertarget{structdsl__fapi__channel__obj}{\section{dsl\-\_\-fapi\-\_\-channel\-\_\-obj Struct Reference}
+\label{structdsl__fapi__channel__obj}\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+}
+
+
+{\ttfamily \#include $<$dsl\-\_\-fapi.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{structdsl__fapi__channel__obj_a092522adc02a3729ba22c4d564e253b9}{enable}
+\item 
+char \hyperlink{structdsl__fapi__channel__obj_a5769b6346cba4849ba38c2da2e99939f}{status} \mbox{[}16\mbox{]}
+\item 
+char \hyperlink{structdsl__fapi__channel__obj_a6f327970bafb74d20019e4c9f8351250}{link\-\_\-encapsulation\-\_\-supported} \mbox{[}82\mbox{]}
+\item 
+char \hyperlink{structdsl__fapi__channel__obj_a1d0d76c5a7a53c2e2553e546628ed85e}{link\-\_\-encapsulation\-\_\-used} \mbox{[}40\mbox{]}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__obj_a29ec0882fb5449a659485d51f50b3b52}{lpath}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__obj_afe9874cfeee95e864a6fc502d41200dd}{intlvdepth}
+\item 
+int \hyperlink{structdsl__fapi__channel__obj_aad9cd84951ffa3d57ee807b69ecd5f7a}{intlvblock}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__obj_a3bae6d5253cf7ee22ea613847f42b68c}{actual\-\_\-interleaving\-\_\-delay}
+\item 
+int \hyperlink{structdsl__fapi__channel__obj_af95a0127772d8831b6fdd5e07dbf3964}{actinp}
+\item 
+bool \hyperlink{structdsl__fapi__channel__obj_ab6473968098d99af963b754467b7e17c}{inpreport}
+\item 
+int \hyperlink{structdsl__fapi__channel__obj_a16441831f8081dc4164f7a86dcccad96}{nfec}
+\item 
+int \hyperlink{structdsl__fapi__channel__obj_a077979a17ac2addeeb98f721201c74ce}{rfec}
+\item 
+int \hyperlink{structdsl__fapi__channel__obj_a68826db35d08bc1124ee09bf5ccdf7a4}{lsymb}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__obj_a767b2e3a943d43f8f6114be408633486}{upstream\-\_\-curr\-\_\-rate}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__obj_ab116fbbd314f1984713b84a9e9c0cf2f}{downstream\-\_\-curr\-\_\-rate}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__obj_aac4a976754d78dde713ac994f3747e04}{actndr}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__obj_a82ffc87c655718c66427f80533e49cdb}{actndr\-\_\-ds}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__obj_aa12526963f84f3e5d2f47ab6d24c5af5}{actndr\-\_\-us}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__obj_afb07611bd9eaae95be565a54d81bb8e2}{actinprein}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__obj_af83f970357fcaddae397d639f8a010b1}{actinprein\-\_\-ds}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__obj_a84244d655abf241d2987bdfde0e55923}{actinprein\-\_\-us}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\-S\-L Channel object declaration, based on T\-R-\/181 definitions. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structdsl__fapi__channel__obj_af95a0127772d8831b6fdd5e07dbf3964}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!actinp@{actinp}}
+\index{actinp@{actinp}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{actinp}]{\setlength{\rightskip}{0pt plus 5cm}int dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::actinp}}\label{structdsl__fapi__channel__obj_af95a0127772d8831b6fdd5e07dbf3964}
+Reports the actual impulse noise protection (I\-N\-P) provided by the latency path indicated in \hyperlink{structdsl__fapi__channel__obj_a29ec0882fb5449a659485d51f50b3b52}{lpath}. The value is the actual I\-N\-P in the L0 (i.\-e., Showtime) state. \begin{DoxyNote}{Note}
+See I\-T\-U-\/\-T Recommendation \mbox{[}G.\-997.\-1\mbox{]}. 
+
+For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter S\-H\-O\-U\-L\-D be set to -\/1. 
+\end{DoxyNote}
+\hypertarget{structdsl__fapi__channel__obj_afb07611bd9eaae95be565a54d81bb8e2}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!actinprein@{actinprein}}
+\index{actinprein@{actinprein}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{actinprein}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::actinprein}}\label{structdsl__fapi__channel__obj_afb07611bd9eaae95be565a54d81bb8e2}
+Obsolete actual impulse noise protection \hypertarget{structdsl__fapi__channel__obj_af83f970357fcaddae397d639f8a010b1}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!actinprein\-\_\-ds@{actinprein\-\_\-ds}}
+\index{actinprein\-\_\-ds@{actinprein\-\_\-ds}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{actinprein\-\_\-ds}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::actinprein\-\_\-ds}}\label{structdsl__fapi__channel__obj_af83f970357fcaddae397d639f8a010b1}
+Actual impulse noise protection in downstream direction against R\-E\-I\-N, expressed in 0.\-1 D\-M\-T symbols. If retransmission is used in a given transmit direction, this parameter reports the actual impulse noise protection (I\-N\-P) against R\-E\-I\-N (under specific conditions detailed in \mbox{[}I\-T\-U T G.\-998.\-4\mbox{]}) on the bearer channel in the L0 state. In the L2 state, the parameter contains the I\-N\-P in the previous L0 state. The value is coded in fractions of D\-M\-T symbols with a granularity of 0.\-1 symbols. The range is from 0 to 25.\-4. A special value of 25.\-5 indicates an A\-C\-T\-I\-N\-P\-\_\-\-R\-E\-I\-N of 25.\-5 or higher. \begin{DoxyNote}{Note}
+This parameter is defined as A\-C\-T\-I\-N\-P\-\_\-\-R\-E\-I\-N in Clause 7.\-5.\-2.\-9 of I\-T\-U-\/\-T Recommendation \mbox{[}G.\-997.\-1\mbox{]}. 
+\end{DoxyNote}
+\hypertarget{structdsl__fapi__channel__obj_a84244d655abf241d2987bdfde0e55923}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!actinprein\-\_\-us@{actinprein\-\_\-us}}
+\index{actinprein\-\_\-us@{actinprein\-\_\-us}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{actinprein\-\_\-us}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::actinprein\-\_\-us}}\label{structdsl__fapi__channel__obj_a84244d655abf241d2987bdfde0e55923}
+Actual impulse noise protection in upstream direction against R\-E\-I\-N, expressed in 0.\-1 D\-M\-T symbols. If retransmission is used in a given transmit direction, this parameter reports the actual impulse noiseprotection (I\-N\-P) against R\-E\-I\-N (under specific conditions detailed in \mbox{[}I\-T\-U T G.\-998.\-4\mbox{]}) on the bearer channel in the L0 state. In the L2 state, the parameter contains the I\-N\-P in the previous L0 state. The value is coded in fractions of D\-M\-T symbols with a granularity of 0.\-1 symbols. The range is from 0 to 25.\-4. A special value of 25.\-5 indicates an A\-C\-T\-I\-N\-P\-\_\-\-R\-E\-I\-N of 25.\-5 or higher. \begin{DoxyNote}{Note}
+This parameter is defined as A\-C\-T\-I\-N\-P\-\_\-\-R\-E\-I\-N in Clause 7.\-5.\-2.\-9 of I\-T\-U-\/\-T Recommendation \mbox{[}G.\-997.\-1\mbox{]}. 
+\end{DoxyNote}
+\hypertarget{structdsl__fapi__channel__obj_aac4a976754d78dde713ac994f3747e04}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!actndr@{actndr}}
+\index{actndr@{actndr}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{actndr}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::actndr}}\label{structdsl__fapi__channel__obj_aac4a976754d78dde713ac994f3747e04}
+Obsolete actual net data rate \hypertarget{structdsl__fapi__channel__obj_a82ffc87c655718c66427f80533e49cdb}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!actndr\-\_\-ds@{actndr\-\_\-ds}}
+\index{actndr\-\_\-ds@{actndr\-\_\-ds}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{actndr\-\_\-ds}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::actndr\-\_\-ds}}\label{structdsl__fapi__channel__obj_a82ffc87c655718c66427f80533e49cdb}
+Actual net data rate expressed in Kbps in downstream direction\-: In L0 state, this parameter reports the net data rate at which the bearer channel is operating. In L2 state, the parameter contains the net data rate in the previous L0 state. \begin{DoxyNote}{Note}
+See \mbox{[}I\-T\-U T G.\-992.\-3\mbox{]}, \mbox{[}I\-T\-U T G.\-992.\-5\mbox{]}, \mbox{[}I\-T\-U T G.\-993.\-2\mbox{]} 
+
+See I\-T\-U-\/\-T Recommendation \mbox{[}G.\-997.\-1\mbox{]}." 
+\end{DoxyNote}
+\hypertarget{structdsl__fapi__channel__obj_aa12526963f84f3e5d2f47ab6d24c5af5}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!actndr\-\_\-us@{actndr\-\_\-us}}
+\index{actndr\-\_\-us@{actndr\-\_\-us}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{actndr\-\_\-us}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::actndr\-\_\-us}}\label{structdsl__fapi__channel__obj_aa12526963f84f3e5d2f47ab6d24c5af5}
+Actual net data rate expressed in Kbps in upstream direction\-: In L0 state, this parameter reports the net data rate at which the bearer channel is operating. In L2 state, the parameter contains the net data rate in the previous L0 state. \begin{DoxyNote}{Note}
+See \mbox{[}I\-T\-U T G.\-992.\-3\mbox{]}, \mbox{[}I\-T\-U T G.\-992.\-5\mbox{]}, \mbox{[}I\-T\-U T G.\-993.\-2\mbox{]} 
+
+See I\-T\-U-\/\-T Recommendation \mbox{[}G.\-997.\-1\mbox{]}." 
+\end{DoxyNote}
+\hypertarget{structdsl__fapi__channel__obj_a3bae6d5253cf7ee22ea613847f42b68c}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!actual\-\_\-interleaving\-\_\-delay@{actual\-\_\-interleaving\-\_\-delay}}
+\index{actual\-\_\-interleaving\-\_\-delay@{actual\-\_\-interleaving\-\_\-delay}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{actual\-\_\-interleaving\-\_\-delay}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::actual\-\_\-interleaving\-\_\-delay}}\label{structdsl__fapi__channel__obj_a3bae6d5253cf7ee22ea613847f42b68c}
+Reports the actual delay, in milliseconds, of the latency path due to interleaving. \begin{DoxyNote}{Note}
+See I\-T\-U-\/\-T Recommendation \mbox{[}G.\-997.\-1\mbox{]}. 
+\end{DoxyNote}
+\hypertarget{structdsl__fapi__channel__obj_ab116fbbd314f1984713b84a9e9c0cf2f}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!downstream\-\_\-curr\-\_\-rate@{downstream\-\_\-curr\-\_\-rate}}
+\index{downstream\-\_\-curr\-\_\-rate@{downstream\-\_\-curr\-\_\-rate}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{downstream\-\_\-curr\-\_\-rate}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::downstream\-\_\-curr\-\_\-rate}}\label{structdsl__fapi__channel__obj_ab116fbbd314f1984713b84a9e9c0cf2f}
+The current physical layer aggregate data rate (expressed in Kbps) of the downstream D\-S\-L connection. \hypertarget{structdsl__fapi__channel__obj_a092522adc02a3729ba22c4d564e253b9}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!enable@{enable}}
+\index{enable@{enable}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{enable}]{\setlength{\rightskip}{0pt plus 5cm}bool dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::enable}}\label{structdsl__fapi__channel__obj_a092522adc02a3729ba22c4d564e253b9}
+Enables or disables the channel. \begin{DoxyNote}{Note}
+This parameter is based on if\-Admin\-Status from \mbox{[}R\-F\-C2863\mbox{]}. 
+\end{DoxyNote}
+\hypertarget{structdsl__fapi__channel__obj_ab6473968098d99af963b754467b7e17c}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!inpreport@{inpreport}}
+\index{inpreport@{inpreport}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{inpreport}]{\setlength{\rightskip}{0pt plus 5cm}bool dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::inpreport}}\label{structdsl__fapi__channel__obj_ab6473968098d99af963b754467b7e17c}
+Reports whether the value reported in \hyperlink{structdsl__fapi__channel__obj_af95a0127772d8831b6fdd5e07dbf3964}{actinp} was computed assuming the receiver does not use erasure decoding. Valid values\-:
+\begin{DoxyItemize}
+\item 0 (computed per the formula assuming no erasure decoding)
+\item 1 (computed by taking into account erasure decoding capabilities of receiver). \begin{DoxyNote}{Note}
+See I\-T\-U-\/\-T Recommendation \mbox{[}G.\-997.\-1\mbox{]}. 
+
+For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter S\-H\-O\-U\-L\-D be set to false. 
+\end{DoxyNote}
+
+\end{DoxyItemize}\hypertarget{structdsl__fapi__channel__obj_aad9cd84951ffa3d57ee807b69ecd5f7a}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!intlvblock@{intlvblock}}
+\index{intlvblock@{intlvblock}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{intlvblock}]{\setlength{\rightskip}{0pt plus 5cm}int dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::intlvblock}}\label{structdsl__fapi__channel__obj_aad9cd84951ffa3d57ee807b69ecd5f7a}
+Reports the interleaver block length in use on the latency path indicated in \hyperlink{structdsl__fapi__channel__obj_a29ec0882fb5449a659485d51f50b3b52}{lpath}. \begin{DoxyNote}{Note}
+See I\-T\-U-\/\-T Recommendation \mbox{[}G.\-997.\-1\mbox{]}. 
+
+For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter S\-H\-O\-U\-L\-D be set to -\/1. 
+\end{DoxyNote}
+\hypertarget{structdsl__fapi__channel__obj_afe9874cfeee95e864a6fc502d41200dd}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!intlvdepth@{intlvdepth}}
+\index{intlvdepth@{intlvdepth}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{intlvdepth}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::intlvdepth}}\label{structdsl__fapi__channel__obj_afe9874cfeee95e864a6fc502d41200dd}
+Reports the interleaver depth D for the latency path indicated in \hyperlink{structdsl__fapi__channel__obj_a29ec0882fb5449a659485d51f50b3b52}{lpath}. \begin{DoxyNote}{Note}
+See I\-T\-U-\/\-T Recommendation \mbox{[}G.\-997.\-1\mbox{]}. 
+
+For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter S\-H\-O\-U\-L\-D be set to 0. 
+\end{DoxyNote}
+\hypertarget{structdsl__fapi__channel__obj_a6f327970bafb74d20019e4c9f8351250}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!link\-\_\-encapsulation\-\_\-supported@{link\-\_\-encapsulation\-\_\-supported}}
+\index{link\-\_\-encapsulation\-\_\-supported@{link\-\_\-encapsulation\-\_\-supported}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{link\-\_\-encapsulation\-\_\-supported}]{\setlength{\rightskip}{0pt plus 5cm}char dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::link\-\_\-encapsulation\-\_\-supported\mbox{[}82\mbox{]}}}\label{structdsl__fapi__channel__obj_a6f327970bafb74d20019e4c9f8351250}
+Comma-\/separated list of strings. List items indicate which link encapsulation standards and recommendations are supported by the Channel instance. Enumeration of\-:
+\begin{DoxyItemize}
+\item G.\-992.\-3\-\_\-\-Annex\-\_\-\-K\-\_\-\-A\-T\-M
+\item G.\-992.\-3\-\_\-\-Annex\-\_\-\-K\-\_\-\-P\-T\-M
+\item G.\-993.\-2\-\_\-\-Annex\-\_\-\-K\-\_\-\-A\-T\-M
+\item G.\-993.\-2\-\_\-\-Annex\-\_\-\-K\-\_\-\-P\-T\-M
+\item G.\-994.\-1 (Auto) 
+\end{DoxyItemize}\hypertarget{structdsl__fapi__channel__obj_a1d0d76c5a7a53c2e2553e546628ed85e}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!link\-\_\-encapsulation\-\_\-used@{link\-\_\-encapsulation\-\_\-used}}
+\index{link\-\_\-encapsulation\-\_\-used@{link\-\_\-encapsulation\-\_\-used}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{link\-\_\-encapsulation\-\_\-used}]{\setlength{\rightskip}{0pt plus 5cm}char dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::link\-\_\-encapsulation\-\_\-used\mbox{[}40\mbox{]}}}\label{structdsl__fapi__channel__obj_a1d0d76c5a7a53c2e2553e546628ed85e}
+Indicates the link encapsulation standard that the Channel instance is using for the connection. Enumeration of\-:
+\begin{DoxyItemize}
+\item G.\-992.\-3\-\_\-\-Annex\-\_\-\-K\-\_\-\-A\-T\-M
+\item G.\-992.\-3\-\_\-\-Annex\-\_\-\-K\-\_\-\-P\-T\-M
+\item G.\-993.\-2\-\_\-\-Annex\-\_\-\-K\-\_\-\-A\-T\-M
+\item G.\-993.\-2\-\_\-\-Annex\-\_\-\-K\-\_\-\-P\-T\-M 
+\end{DoxyItemize}\hypertarget{structdsl__fapi__channel__obj_a29ec0882fb5449a659485d51f50b3b52}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!lpath@{lpath}}
+\index{lpath@{lpath}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{lpath}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::lpath}}\label{structdsl__fapi__channel__obj_a29ec0882fb5449a659485d51f50b3b52}
+Reports the index of the latency path supporting the bearer channel. \begin{DoxyNote}{Note}
+See I\-T\-U-\/\-T Recommendation \mbox{[}Section 7.\-5.\-2.\-7/\-G.997.\-1\mbox{]}. 
+\end{DoxyNote}
+\hypertarget{structdsl__fapi__channel__obj_a68826db35d08bc1124ee09bf5ccdf7a4}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!lsymb@{lsymb}}
+\index{lsymb@{lsymb}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{lsymb}]{\setlength{\rightskip}{0pt plus 5cm}int dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::lsymb}}\label{structdsl__fapi__channel__obj_a68826db35d08bc1124ee09bf5ccdf7a4}
+Reports the number of bits per symbol assigned to the latency path indicated in \hyperlink{structdsl__fapi__channel__obj_a29ec0882fb5449a659485d51f50b3b52}{lpath}. This value does not include overhead due to trellis coding. \begin{DoxyNote}{Note}
+See I\-T\-U-\/\-T Recommendation \mbox{[}G.\-997.\-1\mbox{]}. 
+
+For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter S\-H\-O\-U\-L\-D be set to -\/1. 
+\end{DoxyNote}
+\hypertarget{structdsl__fapi__channel__obj_a16441831f8081dc4164f7a86dcccad96}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!nfec@{nfec}}
+\index{nfec@{nfec}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{nfec}]{\setlength{\rightskip}{0pt plus 5cm}int dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::nfec}}\label{structdsl__fapi__channel__obj_a16441831f8081dc4164f7a86dcccad96}
+Reports the size, in octets, of the Reed-\/\-Solomon codeword in use on the latency path indicated in \hyperlink{structdsl__fapi__channel__obj_a29ec0882fb5449a659485d51f50b3b52}{lpath}. \begin{DoxyNote}{Note}
+See I\-T\-U-\/\-T Recommendation \mbox{[}G.\-997.\-1\mbox{]}. 
+
+For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter S\-H\-O\-U\-L\-D be set to -\/1. 
+\end{DoxyNote}
+\hypertarget{structdsl__fapi__channel__obj_a077979a17ac2addeeb98f721201c74ce}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!rfec@{rfec}}
+\index{rfec@{rfec}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{rfec}]{\setlength{\rightskip}{0pt plus 5cm}int dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::rfec}}\label{structdsl__fapi__channel__obj_a077979a17ac2addeeb98f721201c74ce}
+Reports the number of redundancy bytes per Reed-\/\-Solomon codeword on the latency path indicated in \hyperlink{structdsl__fapi__channel__obj_a29ec0882fb5449a659485d51f50b3b52}{lpath}. \begin{DoxyNote}{Note}
+See I\-T\-U-\/\-T Recommendation \mbox{[}G.\-997.\-1\mbox{]}. 
+
+For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter S\-H\-O\-U\-L\-D be set to -\/1. 
+\end{DoxyNote}
+\hypertarget{structdsl__fapi__channel__obj_a5769b6346cba4849ba38c2da2e99939f}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!status@{status}}
+\index{status@{status}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}char dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::status\mbox{[}16\mbox{]}}}\label{structdsl__fapi__channel__obj_a5769b6346cba4849ba38c2da2e99939f}
+The current operational state of the D\-S\-L channel (see \mbox{[}Section 4.\-2.\-2/\-T\-R-\/181i2\mbox{]}). This parameter is based on if\-Oper\-Status from \mbox{[}R\-F\-C2863\mbox{]}. Enumeration of
+\begin{DoxyItemize}
+\item Up
+\item Down
+\item Unknown (not used)
+\item Dormant (not used)
+\item Not\-Present (not used)
+\item Lower\-Layer\-Down (not used)
+\item Error 
+\end{DoxyItemize}\hypertarget{structdsl__fapi__channel__obj_a767b2e3a943d43f8f6114be408633486}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}!upstream\-\_\-curr\-\_\-rate@{upstream\-\_\-curr\-\_\-rate}}
+\index{upstream\-\_\-curr\-\_\-rate@{upstream\-\_\-curr\-\_\-rate}!dsl_fapi_channel_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}}
+\subsubsection[{upstream\-\_\-curr\-\_\-rate}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-obj\-::upstream\-\_\-curr\-\_\-rate}}\label{structdsl__fapi__channel__obj_a767b2e3a943d43f8f6114be408633486}
+The current physical layer aggregate data rate (expressed in Kbps) of the upstream D\-S\-L connection. 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{dsl__fapi_8h}{dsl\-\_\-fapi.\-h}\end{DoxyCompactItemize}

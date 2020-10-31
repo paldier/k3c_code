@@ -1,0 +1,1186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="ugw__defs_8h" kind="file">
+    <compoundname>ugw_defs.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">syslog.h</includes>
+    <includes refid="help__defs_8h" local="no">help_defs.h</includes>
+    <includedby refid="ugw__common_8h" local="yes">ugw_common.h</includedby>
+    <includedby refid="ugw__proto_8h" local="yes">ugw_proto.h</includedby>
+    <includedby refid="ugw__structs_8h" local="yes">ugw_structs.h</includedby>
+    <includedby refid="ugw__debug_8h" local="yes">ugw_debug.h</includedby>
+    <incdepgraph>
+      <node id="262">
+        <label>help_defs.h</label>
+        <link refid="help__defs_8h"/>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+      </node>
+      <node id="260">
+        <label>stdint.h</label>
+      </node>
+      <node id="259">
+        <label>ugw_defs.h</label>
+        <link refid="ugw_defs.h"/>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+      </node>
+      <node id="261">
+        <label>syslog.h</label>
+      </node>
+      <node id="263">
+        <label>help_enums.h</label>
+        <link refid="help__enums_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="266">
+        <label>ugw_proto.h</label>
+        <link refid="ugw__proto_8h"/>
+        <childnode refid="267" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+      </node>
+      <node id="268">
+        <label>ugw_structs.h</label>
+        <link refid="ugw__structs_8h"/>
+        <childnode refid="266" relation="include">
+        </childnode>
+      </node>
+      <node id="264">
+        <label>ugw_defs.h</label>
+        <link refid="ugw_defs.h"/>
+        <childnode refid="265" relation="include">
+        </childnode>
+        <childnode refid="266" relation="include">
+        </childnode>
+        <childnode refid="268" relation="include">
+        </childnode>
+        <childnode refid="269" relation="include">
+        </childnode>
+      </node>
+      <node id="265">
+        <label>ugw_common.h</label>
+        <link refid="ugw__common_8h"/>
+      </node>
+      <node id="267">
+        <label>cal.h</label>
+        <link refid="cal_8h"/>
+      </node>
+      <node id="269">
+        <label>ugw_debug.h</label>
+        <link refid="ugw__debug_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__LIBHELP_1gaa8cecfc5c5c054d2875c03e77b7be15d" prot="public" static="no">
+        <name>TRUE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="35" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gaa93f0eb578d23995850d61f7d61c55c1" prot="public" static="no">
+        <name>FALSE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="39" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga2356c4c79efdae03bcd85e11d9178a32" prot="public" static="no">
+        <name>BACKUP_RESTORE_DATA_FILE</name>
+        <initializer>&quot;/tmp/run-data.xml&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>backup or restore data xml file </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="42" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga0e77cc7711c428b607377d7c5fd22eb3" prot="public" static="no">
+        <name>BACKUP_RESTORE_CONTROL_FILE</name>
+        <initializer>&quot;/tmp/run-control.xml&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>backup or restore control xml file </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="43" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga3ded1cb037978951bed86d0abbef95ac" prot="public" static="no">
+        <name>ALIAS_NAME</name>
+        <initializer>&quot;cpe-&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Alias name identifier ex: cpe-xxxx-component_NAME </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="45" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gab8a772dc3a953e57a76d6616c0dbe0ef" prot="public" static="no">
+        <name>ALIAS_NAME_C</name>
+        <initializer>&quot;CPE-&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Alias name identifier ex: CPE-xxxx-component_NAME </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="46" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gae9e4a4b60dbba4c7d6872b208b02da0a" prot="public" static="no">
+        <name>INSTANCE_NO</name>
+        <initializer>&quot;*&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Magic delimiter to replace instance no </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="48" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga9615e001b781d55752b3d44f9bfd5162" prot="public" static="no">
+        <name>DBG_INFO</name>
+        <initializer>fprintf(stderr, &quot;##########%s:%d##########\n&quot;,__func__,__LINE__);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DBG_INFO </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="50" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga7e8ff82fbeb5ab553867da272db7f59e" prot="public" static="no">
+        <name>NO_PARAM_VALUE</name>
+        <initializer>&quot;__st__&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>String identifier </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="52" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gaa4779e6716ca8a3d99dd1f16579dccc3" prot="public" static="no">
+        <name>UBUS_MSG_LENGTH</name>
+        <initializer>24576</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ubus message length used to define Tx/Rx of msg </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="57" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gaf80cdd55bad5558a63bbfc6fadd3c665" prot="public" static="no">
+        <name>MAX_UBUS_MSG_LENGTH</name>
+        <initializer>32768</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum length of the msg Tx/Rx over ubus with padding </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="62" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gab0602f28920b31b2015535b1a8c159e3" prot="public" static="no">
+        <name>OID</name>
+        <initializer>&quot;Id&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Object Identifier </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="67" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga986e1b45ade6c34d0d399c08b933da6b" prot="public" static="no">
+        <name>MULTIINST</name>
+        <initializer>&quot;multiInst&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines given object is multi-instance </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="70" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga7b7a6526ee4fc05f1bdd0f05079754d9" prot="public" static="no">
+        <name>SID</name>
+        <initializer>&quot;Sid&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Service Identifier </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="75" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gafcd28ee5da68f58dfda7b7d033fb9cfc" prot="public" static="no">
+        <name>WEBNAME</name>
+        <initializer>&quot;WebName&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Webname </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="80" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga321a20f839f3d9ccd0db1dc865850dc7" prot="public" static="no">
+        <name>ACCESS</name>
+        <initializer>&quot;access&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Access </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="85" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga84122cc8fb20a83dda3ef92cf3286740" prot="public" static="no">
+        <name>PROFILE</name>
+        <initializer>&quot;profile&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>PROFILE </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="90" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga7dd186f2b30361953627365015ba5120" prot="public" static="no">
+        <name>MAXENTRY</name>
+        <initializer>&quot;maxEntries&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum entries </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="95" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gac1e659c7aee7cd9099fc5d464169537c" prot="public" static="no">
+        <name>MINENTRY</name>
+        <initializer>&quot;minEntries&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum entries </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="100" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gaea5b29a8b32c473873eec73a683aeae0" prot="public" static="no">
+        <name>ENUMS</name>
+        <initializer>&quot;enum&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A reference to enumerations </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="105" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga80b22c555ddadb47cc6ca338a9c49126" prot="public" static="no">
+        <name>MINVAL</name>
+        <initializer>&quot;minInclusive&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum value </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="110" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gac7129ccaa762fa4c6b07733faa0a16e0" prot="public" static="no">
+        <name>MAXVAL</name>
+        <initializer>&quot;maxInclusive&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum value </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="115" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga0074b0744e9b1a16324c1e3a04b2d234" prot="public" static="no">
+        <name>MINLEN</name>
+        <initializer>&quot;minLength&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="120" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gae6648cd71a8bd49d58ae8ed33ba910d1" prot="public" static="no">
+        <name>MAXLEN</name>
+        <initializer>&quot;maxLength&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="125" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gafd1cbca7b088074f9c04a5d08f3b4ee2" prot="public" static="no">
+        <name>NUMENTRIES</name>
+        <initializer>&quot;numEntriesParameter&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>To get total numbers instance information </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="130" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gaf8bfae90c5d6853fcfb487e05b9f50c8" prot="public" static="no">
+        <name>FLAG</name>
+        <initializer>&quot;Flag&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Param (dynamic, type, modified) Identifier </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="135" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga449d3babf595d8210dbb578ac66aa0f4" prot="public" static="no">
+        <name>ACCESSLIST</name>
+        <initializer>&quot;ACL&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for access control attribute </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="140" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga6e3ff99394385544686d23c7e6f52922" prot="public" static="no">
+        <name>IS_OBJLIST</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="group__LIBHELP_1ga62f1164f5252ae6639d85d5dea956f7d" kindref="member">OBJLIST</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check objlist structure used </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="146" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gabf3a0a06fd326265c81d121ce46bfa03" prot="public" static="no">
+        <name>IS_CHANGE_FLAG_SET</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba45fd68ac3d5bebe5d404f59979f37f77" kindref="member">ATTR_CHANGEFLAG</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check changeflag set attribute </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="151" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga6e742b603e7e29b084576318b0a020b0" prot="public" static="no">
+        <name>IS_RESET_CHANGE_FLAG_SET</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga269cc0b81be50f8be29bcdbc1706fd64a661789419acf60aeefd2833e82a4f7d3" kindref="member">RESET_CHANGEFLAG</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check reset flag set or not attribute </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="156" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga174cd2a0aa09bd0719d10363c77a7945" prot="public" static="no">
+        <name>IS_GET_NOTIFY_SET</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga269cc0b81be50f8be29bcdbc1706fd64ab8845fa48ccfd17f5be8ada997a0d859" kindref="member">GET_NOTIFY_SET</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check active notify bit set or not </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="161" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gaadf4b1ce4c6607378f43026cda70db48" prot="public" static="no">
+        <name>IS_NXT_LVL_SET</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga269cc0b81be50f8be29bcdbc1706fd64a179ba6308a0a84adff2b27c5b0716fc0" kindref="member">NXT_LVL_TRUE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check next level bit set or not </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="166" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga6c17740b104fd0c96770bc3a361af7d2" prot="public" static="no">
+        <name>IS_SAVETOFLASH_NOT_SET</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba93fb968d56ea0dc63666d8372b8e35cb" kindref="member">ATTR_NOTSAVETOFLASH</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check save to flash bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="171" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gae96ab4238bdf72184e563254c5da0e23" prot="public" static="no">
+        <name>IS_MOPT_GET</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga0cdba030aaa0bd18b24dbf19b06877a0aa2e0913dec5e220b92f791525e132735" kindref="member">MOPT_GET</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check mainoper get bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="176" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga4e056b9d4e57e37e0c9af6cd5b8ef7f4" prot="public" static="no">
+        <name>IS_MOPT_SET</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga0cdba030aaa0bd18b24dbf19b06877a0ac23667be630f90a58d53d02b11d7340f" kindref="member">MOPT_SET</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check mainoper set bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="181" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga33ddb5513bb08deea13a031c64b2ba1f" prot="public" static="no">
+        <name>IS_MOPT_MODIFY</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga0cdba030aaa0bd18b24dbf19b06877a0ac23667be630f90a58d53d02b11d7340f" kindref="member">MOPT_SET</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check mainoper modify bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="186" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gad6844975ea1c331ee03702cda99468e7" prot="public" static="no">
+        <name>IS_MOPT_ACTIVATE</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga0cdba030aaa0bd18b24dbf19b06877a0a1310223d0caa84cc2bd6fc6711d05a87" kindref="member">MOPT_ACTIVATE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check mainoper Activate bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="191" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga41641fbb71e18b1edd23d5d6c3739517" prot="public" static="no">
+        <name>IS_MOPT_INIT</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga0cdba030aaa0bd18b24dbf19b06877a0a2c480dff14f2d427e0918620ecc2b99f" kindref="member">MOPT_INIT</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check mainoper init bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="197" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga119a020663142f27fc8b666d48d498d1" prot="public" static="no">
+        <name>IS_MOPT_UNINIT</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga0cdba030aaa0bd18b24dbf19b06877a0a220bedd4cacc0c78b51f080bef0913a0" kindref="member">MOPT_UNINIT</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check mainoper uninit bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="202" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga8f24724f4910a20f2b1189b10322e279" prot="public" static="no">
+        <name>IS_MOPT_NOTIFY</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga0cdba030aaa0bd18b24dbf19b06877a0aa6d912b46389d3190f3e45de07d6a19d" kindref="member">MOPT_NOTIFY</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check mainoper notify bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="207" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga327ea9257c87d922d4cf34cdb8a38d69" prot="public" static="no">
+        <name>IS_MOPT_TIMERACTION</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga0cdba030aaa0bd18b24dbf19b06877a0aaea85a0ce98f63642f33097354e2b975" kindref="member">MOPT_TIMERACTION</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check mainoper timeraction bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="211" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga6e92593fbe6e2134b813ad8e6abd7096" prot="public" static="no">
+        <name>IS_MOPT_FACTORYRESET</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga0cdba030aaa0bd18b24dbf19b06877a0acab2d045536f6f87639d9ddc92a15bfb" kindref="member">MOPT_FACTORYRESET</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check mainoper factory reset bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="216" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga9de8ee4c98ad993b22628874da930ab7" prot="public" static="no">
+        <name>IS_MOPT_BACKUP</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga0cdba030aaa0bd18b24dbf19b06877a0a79fba642447da8df763572c75b2d5e30" kindref="member">MOPT_BACKUP</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check mainoper backup bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="221" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gaf364d042ef26289927756c22b081cc51" prot="public" static="no">
+        <name>IS_MOPT_REBOOT</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga0cdba030aaa0bd18b24dbf19b06877a0a6e7aba6cee631c9f873d54db477c7cd1" kindref="member">MOPT_REBOOT</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check mainoper reboot bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="226" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga387ce232cf98493a8872cdfd92238327" prot="public" static="no">
+        <name>IS_MOPT_FWUPGRADE</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga0cdba030aaa0bd18b24dbf19b06877a0abfc1a2664f39c1e872fad1d1d98230b8" kindref="member">MOPT_FWUPGRADE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check mainoper fwupgrade bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="231" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gae8f3761c6d539c9a01ed6d3d2ad62986" prot="public" static="no">
+        <name>IS_MOPT_ROLLBACK</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga0cdba030aaa0bd18b24dbf19b06877a0ae4dd8f29bf2fe0dacabf9801d36cfc0f" kindref="member">MOPT_ROLLBACK</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check mainoper rollback bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="236" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gacd3e14e1fd731b23524e4cd7428ef1bb" prot="public" static="no">
+        <name>IS_MOPT_NOOPER</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga0cdba030aaa0bd18b24dbf19b06877a0a3a04bfea3e66c08402950cc34095d6c7" kindref="member">MOPT_NOOPER</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check mainoper noper bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="241" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga58558fc449acb4f61e13a60120cf8aa2" prot="public" static="no">
+        <name>IS_MOPT_LOGSET</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga0cdba030aaa0bd18b24dbf19b06877a0af808ed4b6160490c7d10ed88c9265303" kindref="member">MOPT_LOGSET</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check mainoper logset bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="246" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gace0e914d4ef2ed9112831b50ec6380e9" prot="public" static="no">
+        <name>IS_SOPT_VALIDATION</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76abf85e6bbd86f9dff9fafb8b704f94dee" kindref="member">SOPT_VALIDATION</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check suboper validval bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="252" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga3609995a256464cd078bdf34bc4bc609" prot="public" static="no">
+        <name>IS_SOPT_NOSUBOPER</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76ad8a3297ca7cf6f201aeebbe7a1786d44" kindref="member">SOPT_NOSUBOPER</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check suboper suboper bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="257" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gabe168af9d6aead8e80b7f5c251075e04" prot="public" static="no">
+        <name>IS_OBJOPT_ADD</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga63865642181d8ac749852d657efc4bd8aaabb1855853c165aaee5ce4f600db21d" kindref="member">OBJOPT_ADD</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check objoper add bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="262" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga37236721a9851ce31dc6de2f4ab0e8ef" prot="public" static="no">
+        <name>IS_OBJOPT_DEL</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga63865642181d8ac749852d657efc4bd8a53957d1b2b91ebb970527d1d7c86bbba" kindref="member">OBJOPT_DEL</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check objoper delete bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="267" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga83cbd4d0e7619f1d0a70b01eee616ec9" prot="public" static="no">
+        <name>IS_OBJOPT_MODIFY</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga63865642181d8ac749852d657efc4bd8a946d7d6d203768b5ccb9fb64d66009f0" kindref="member">OBJOPT_MODIFY</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check objoper modify bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="272" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga135df626a9dbb769fa0413047b3fc0f5" prot="public" static="no">
+        <name>IS_OBJOPT_NOSUBOPER</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga63865642181d8ac749852d657efc4bd8abadd23813b0d7abf14f8ecc76f381140" kindref="member">OBJOPT_NOOBJOPER</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check objoper suboper bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="277" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga5630a9cae5c944f69472900c13936ae8" prot="public" static="no">
+        <name>IS_GETOPT_LOCAL</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1ggabbfae400f613b8339e81ef9427321b84a928525dbc0377081b284b65e05f0d847" kindref="member">GETOPT_LOCAL</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check Object optional operation Local cache get bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="282" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga231eb259963c50b176d806aa1979eb83" prot="public" static="no">
+        <name>IS_GETOPT_LOCALDB</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1ggabbfae400f613b8339e81ef9427321b84a20f7a4e52b4d0ab8b1ba48fb5bf5171d" kindref="member">GETOPT_LOCALDB</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check Object optional operation Local cache get or failsafe DB get bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="287" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gac2291126c4312e2496246b6e57e33dad" prot="public" static="no">
+        <name>IS_GETOPT_DBLOCAL</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1ggabbfae400f613b8339e81ef9427321b84adce980e4fb9feed0b4747e8b3a75f122" kindref="member">GETOPT_DBLOCAL</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check Object optional operation DB get or failsafe Local cache get bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="292" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gaacb992147fd19097d983bd744f64a3b4" prot="public" static="no">
+        <name>IS_DTYP_INT</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1ggad9971b6ef33e02ba2c75d19c1d2518a1a5e2046a67c43b44453d1345083ddb0a8" kindref="member">DTYP_INT</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check int bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="298" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga61221cc53522daf0a70139eee879a6ff" prot="public" static="no">
+        <name>IS_DTYP_UNSIGNEDINT</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1ggad9971b6ef33e02ba2c75d19c1d2518a1a83acad6b2208aba94e443817f260a97d" kindref="member">DTYP_UNSIGNEDINT</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check unsigned bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="303" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga0a3ed9e807a9a17ccba554e9b5e30842" prot="public" static="no">
+        <name>IS_DTYP_STRING</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1ggad9971b6ef33e02ba2c75d19c1d2518a1ae7f1c03f67e4477bca8c3e0b36b7022c" kindref="member">DTYP_STRING</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check string bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="308" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga46d6ec5838128f28e404031b6c5b81dd" prot="public" static="no">
+        <name>IS_DTYP_DATETIME</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1ggad9971b6ef33e02ba2c75d19c1d2518a1a2271764ae7fc34b395cc47fd4aacfbf8" kindref="member">DTYP_DATETIME</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check datetime bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="313" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gaf808e5d9a8ebcbac5fc2f2cdea42b97e" prot="public" static="no">
+        <name>IS_DTYP_BOOLEAN</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1ggad9971b6ef33e02ba2c75d19c1d2518a1af076808b8b426548ec7e421c8ba2d84c" kindref="member">DTYP_BOOLEAN</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check boolean bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="318" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga88cc42098bf9839eee8487256fb03b6f" prot="public" static="no">
+        <name>IS_DTYP_HEXBINARY</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1ggad9971b6ef33e02ba2c75d19c1d2518a1a9ae015b94ea618a36598f920e6c52bb9" kindref="member">DTYP_HEXBINARY</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check HEXBINARY bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="323" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga8aa8438fb1184d5542ccf6af452e85bc" prot="public" static="no">
+        <name>IS_DTYP_LONG</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1ggad9971b6ef33e02ba2c75d19c1d2518a1a3b20b853e79af4d4cca0e90dc964c49b" kindref="member">DTYP_LONG</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check LONG bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="328" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga56688137464eb65d6baa796bb8872cc4" prot="public" static="no">
+        <name>IS_DTYP_UNLONG</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1ggad9971b6ef33e02ba2c75d19c1d2518a1aa20a92678dab5062d123c3c5329c2fe8" kindref="member">DTYP_UNLONG</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check UNLONG bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="333" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="333" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gaa27960f05b9cf62b3f164d7b9e63f0d1" prot="public" static="no">
+        <name>IS_DTYP_BASE64</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1ggad9971b6ef33e02ba2c75d19c1d2518a1a15076a00e5cb73882f567c75ad3cf047" kindref="member">DTYP_BASE64</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check BASE64 bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="338" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gaf98bb58e2c980b68277c7ec03ce20ef0" prot="public" static="no">
+        <name>IS_DTYP_NONE</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1ggad9971b6ef33e02ba2c75d19c1d2518a1a5099efee987d5775c2690287dadc2eb8" kindref="member">DTYP_NONE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check none bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="343" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="343" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga88635b2ca475fa1e9fbf2bd1e151f920" prot="public" static="no">
+        <name>IS_DYNAMIC_SET</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; MISC_DYNAMIC)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check dynamic bit set or not </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="348" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="348" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga36d2d4812ed8182cf464f0af365f9155" prot="public" static="no">
+        <name>IS_ACTIVATE_SET</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga63865642181d8ac749852d657efc4bd8ac8d0d094247d75b15be20de57af72617" kindref="member">OBJOPT_ACTIVATE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check activate bit set or not </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="353" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="353" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gace0dbce830b493e8d28c9f0fa521fcfa" prot="public" static="no">
+        <name>IS_WRITE</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga3329d9d369a4ae5cfa5d8eac33a0c0c6ad9e91523aade4ed4de08b0c3e6572d90" kindref="member">MISC_WRITE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check write access bit set or not </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="358" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="358" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga3b4eeb13c5583808221824d770a6afc8" prot="public" static="no">
+        <name>IS_READ</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga3329d9d369a4ae5cfa5d8eac33a0c0c6a466a6336da6be62cf6f7fe57c6379597" kindref="member">MISC_READ</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check read access set or not </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="363" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="363" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga6ffa31aea95d58b70b0a0ec441ffb642" prot="public" static="no">
+        <name>IS_MODIFIED</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga3329d9d369a4ae5cfa5d8eac33a0c0c6a99826fb8db4c7fce0a1678c6d8afc054" kindref="member">MISC_MODIFIED</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check modified bit set or not </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="368" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="368" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga4bdee20520c06be0cb37b99ee6a92ff4" prot="public" static="no">
+        <name>IS_PASSWD_SET</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga3329d9d369a4ae5cfa5d8eac33a0c0c6adcdd0a2c3bc54078987616b846b01896" kindref="member">MISC_PASSWD</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check password bit set or not. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="373" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="373" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga8613fffcfa3adcdeb1188e187d767733" prot="public" static="no">
+        <name>IS_PASSWD_GET_VAL</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga269cc0b81be50f8be29bcdbc1706fd64abbf52986e1d6e58b4e7d941dac80650a" kindref="member">GET_PWD_VAL</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check password value get bit set or not. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="378" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="378" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gafc0eef637f1016e8786e45e106a4881e" prot="public" static="no">
+        <name>TOP</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indentation macro for top level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="383" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="388" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gafc0eef637f1016e8786e45e106a4881e" prot="public" static="no">
+        <name>TOP</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indentation macro for top level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="388" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="388" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gaf7bf88a525ba310c5ceffd0b94b3ed09" prot="public" static="no">
+        <name>DEV_LVL</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indentation macro for Device level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="393" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="393" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga9197bc708bae07bccd3f01550a7da13c" prot="public" static="no">
+        <name>LEVEL_OBJ</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indentation macro for Object level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="398" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="398" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga4f0cc609593ce12e46d48dc14e2e3720" prot="public" static="no">
+        <name>LEVEL_OBJ_PARAM</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indentation macro for object param level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="403" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga1f7722a29a324ee4440c52218bffebef" prot="public" static="no">
+        <name>LEVEL_OBJ_PARAM_VAL</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indentation macro for object param value level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="408" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gac3f999a1a3235673b7babbfa1294afee" prot="public" static="no">
+        <name>LEVEL_PARAM_TOP</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indentation macro for param list level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="412" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga8fabc94f5bafb2197057a88deee01926" prot="public" static="no">
+        <name>LEVEL_PARAM</name>
+        <initializer>12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indentation macro for param level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="416" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gaae4f330d3207e58934ca25df51265f98" prot="public" static="no">
+        <name>LEVEL_PARAM_VAL</name>
+        <initializer>14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indentation macro for param value level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="420" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="420" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga29c1b676d6c99dcaad0edc4bf19cce8d" prot="public" static="no">
+        <name>SESSION_ID_SIZE</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indentation macro for web session </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" line="424" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h" bodystart="424" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>File contains the common definitions, macros and data structures common across all the modules in the software. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2015</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lantiq<sp/>Beteiligungs-GmbH<sp/>&amp;<sp/>Co.<sp/>KG</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lilienthalstrasse<sp/>15,<sp/>85579<sp/>Neubiberg,<sp/>Germany<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>For<sp/>licensing<sp/>information,<sp/>see<sp/>the<sp/>file<sp/>&apos;LICENSE&apos;<sp/>in<sp/>the<sp/>root<sp/>folder<sp/>of</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>software<sp/>module.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>*****************************************************************************<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>File<sp/>Name<sp/><sp/><sp/><sp/>:<sp/>ugw_defs.h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Description<sp/><sp/>:<sp/>Common<sp/>Library<sp/>contains<sp/>functions,<sp/>defines,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>structs,<sp/>enums<sp/>used<sp/>across<sp/>modules<sp/>like<sp/>CAL,<sp/>CAPI,<sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CSD,<sp/>Servd,<sp/>and<sp/>Management<sp/>Entities<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">/*<sp/>@{<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_UGW_DEFS_H</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_UGW_DEFS_H</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;syslog.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="help__defs_8h" kindref="compound">help_defs.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TRUE</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TRUE<sp/>1</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FALSE</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FALSE<sp/>0</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="group__LIBHELP_1ga2356c4c79efdae03bcd85e11d9178a32" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BACKUP_RESTORE_DATA_FILE<sp/>&quot;/tmp/run-data.xml&quot;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="group__LIBHELP_1ga0e77cc7711c428b607377d7c5fd22eb3" refkind="member"><highlight class="preprocessor">#define<sp/>BACKUP_RESTORE_CONTROL_FILE<sp/>&quot;/tmp/run-control.xml&quot;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="group__LIBHELP_1ga3ded1cb037978951bed86d0abbef95ac" refkind="member"><highlight class="preprocessor">#define<sp/>ALIAS_NAME<sp/>&quot;cpe-&quot;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="group__LIBHELP_1gab8a772dc3a953e57a76d6616c0dbe0ef" refkind="member"><highlight class="preprocessor">#define<sp/>ALIAS_NAME_C<sp/>&quot;CPE-&quot;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="group__LIBHELP_1gae9e4a4b60dbba4c7d6872b208b02da0a" refkind="member"><highlight class="preprocessor">#define<sp/>INSTANCE_NO<sp/>&quot;*&quot;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="group__LIBHELP_1ga9615e001b781d55752b3d44f9bfd5162" refkind="member"><highlight class="preprocessor">#define<sp/>DBG_INFO<sp/>fprintf(stderr,<sp/>&quot;##########%s:%d##########\n&quot;,__func__,__LINE__);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52" refid="group__LIBHELP_1ga7e8ff82fbeb5ab553867da272db7f59e" refkind="member"><highlight class="preprocessor">#<sp/>define<sp/>NO_PARAM_VALUE<sp/>&quot;__st__&quot;<sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="group__LIBHELP_1gaa4779e6716ca8a3d99dd1f16579dccc3" refkind="member"><highlight class="preprocessor">#define<sp/>UBUS_MSG_LENGTH<sp/>24576<sp/></highlight></codeline>
+<codeline lineno="62" refid="group__LIBHELP_1gaf80cdd55bad5558a63bbfc6fadd3c665" refkind="member"><highlight class="preprocessor">#define<sp/>MAX_UBUS_MSG_LENGTH<sp/>32768<sp/></highlight></codeline>
+<codeline lineno="67" refid="group__LIBHELP_1gab0602f28920b31b2015535b1a8c159e3" refkind="member"><highlight class="preprocessor">#define<sp/><sp/>OID<sp/>&quot;Id&quot;<sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="group__LIBHELP_1ga986e1b45ade6c34d0d399c08b933da6b" refkind="member"><highlight class="preprocessor">#define<sp/>MULTIINST<sp/>&quot;multiInst&quot;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="group__LIBHELP_1ga7b7a6526ee4fc05f1bdd0f05079754d9" refkind="member"><highlight class="preprocessor">#define<sp/><sp/>SID<sp/>&quot;Sid&quot;<sp/><sp/></highlight></codeline>
+<codeline lineno="80" refid="group__LIBHELP_1gafcd28ee5da68f58dfda7b7d033fb9cfc" refkind="member"><highlight class="preprocessor">#define<sp/><sp/>WEBNAME<sp/>&quot;WebName&quot;<sp/><sp/></highlight></codeline>
+<codeline lineno="85" refid="group__LIBHELP_1ga321a20f839f3d9ccd0db1dc865850dc7" refkind="member"><highlight class="preprocessor">#define<sp/><sp/>ACCESS<sp/>&quot;access&quot;<sp/><sp/></highlight></codeline>
+<codeline lineno="90" refid="group__LIBHELP_1ga84122cc8fb20a83dda3ef92cf3286740" refkind="member"><highlight class="preprocessor">#define<sp/><sp/>PROFILE<sp/>&quot;profile&quot;<sp/><sp/></highlight></codeline>
+<codeline lineno="95" refid="group__LIBHELP_1ga7dd186f2b30361953627365015ba5120" refkind="member"><highlight class="preprocessor">#define<sp/><sp/>MAXENTRY<sp/><sp/>&quot;maxEntries&quot;<sp/><sp/></highlight></codeline>
+<codeline lineno="100" refid="group__LIBHELP_1gac1e659c7aee7cd9099fc5d464169537c" refkind="member"><highlight class="preprocessor">#define<sp/><sp/>MINENTRY<sp/><sp/>&quot;minEntries&quot;<sp/><sp/></highlight></codeline>
+<codeline lineno="105" refid="group__LIBHELP_1gaea5b29a8b32c473873eec73a683aeae0" refkind="member"><highlight class="preprocessor">#define<sp/><sp/>ENUMS<sp/><sp/>&quot;enum&quot;<sp/><sp/></highlight></codeline>
+<codeline lineno="110" refid="group__LIBHELP_1ga80b22c555ddadb47cc6ca338a9c49126" refkind="member"><highlight class="preprocessor">#define<sp/><sp/>MINVAL<sp/>&quot;minInclusive&quot;<sp/><sp/></highlight></codeline>
+<codeline lineno="115" refid="group__LIBHELP_1gac7129ccaa762fa4c6b07733faa0a16e0" refkind="member"><highlight class="preprocessor">#define<sp/><sp/>MAXVAL<sp/>&quot;maxInclusive&quot;<sp/><sp/></highlight></codeline>
+<codeline lineno="120" refid="group__LIBHELP_1ga0074b0744e9b1a16324c1e3a04b2d234" refkind="member"><highlight class="preprocessor">#define<sp/><sp/>MINLEN<sp/>&quot;minLength&quot;<sp/><sp/></highlight></codeline>
+<codeline lineno="125" refid="group__LIBHELP_1gae6648cd71a8bd49d58ae8ed33ba910d1" refkind="member"><highlight class="preprocessor">#define<sp/><sp/>MAXLEN<sp/>&quot;maxLength&quot;<sp/><sp/></highlight></codeline>
+<codeline lineno="130" refid="group__LIBHELP_1gafd1cbca7b088074f9c04a5d08f3b4ee2" refkind="member"><highlight class="preprocessor">#define<sp/><sp/>NUMENTRIES<sp/>&quot;numEntriesParameter&quot;<sp/><sp/></highlight></codeline>
+<codeline lineno="135" refid="group__LIBHELP_1gaf8bfae90c5d6853fcfb487e05b9f50c8" refkind="member"><highlight class="preprocessor">#define<sp/><sp/>FLAG<sp/>&quot;Flag&quot;<sp/><sp/></highlight></codeline>
+<codeline lineno="140" refid="group__LIBHELP_1ga449d3babf595d8210dbb578ac66aa0f4" refkind="member"><highlight class="preprocessor">#define<sp/><sp/>ACCESSLIST<sp/>&quot;ACL&quot;<sp/><sp/></highlight></codeline>
+<codeline lineno="146" refid="group__LIBHELP_1ga6e3ff99394385544686d23c7e6f52922" refkind="member"><highlight class="preprocessor">#define<sp/>IS_OBJLIST(x)<sp/>OBJLIST(x)<sp/><sp/></highlight></codeline>
+<codeline lineno="151" refid="group__LIBHELP_1gabf3a0a06fd326265c81d121ce46bfa03" refkind="member"><highlight class="preprocessor">#define<sp/>IS_CHANGE_FLAG_SET(bit)<sp/>(bit<sp/>&amp;<sp/>ATTR_CHANGEFLAG)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="156" refid="group__LIBHELP_1ga6e742b603e7e29b084576318b0a020b0" refkind="member"><highlight class="preprocessor">#define<sp/>IS_RESET_CHANGE_FLAG_SET(bit)<sp/>(bit<sp/>&amp;<sp/>RESET_CHANGEFLAG)<sp/></highlight></codeline>
+<codeline lineno="161" refid="group__LIBHELP_1ga174cd2a0aa09bd0719d10363c77a7945" refkind="member"><highlight class="preprocessor">#define<sp/>IS_GET_NOTIFY_SET(bit)<sp/>(bit<sp/>&amp;<sp/>GET_NOTIFY_SET)<sp/><sp/></highlight></codeline>
+<codeline lineno="166" refid="group__LIBHELP_1gaadf4b1ce4c6607378f43026cda70db48" refkind="member"><highlight class="preprocessor">#define<sp/>IS_NXT_LVL_SET(bit)<sp/>(bit<sp/>&amp;<sp/>NXT_LVL_TRUE)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="171" refid="group__LIBHELP_1ga6c17740b104fd0c96770bc3a361af7d2" refkind="member"><highlight class="preprocessor">#define<sp/>IS_SAVETOFLASH_NOT_SET(bit)<sp/>(bit<sp/>&amp;<sp/>ATTR_NOTSAVETOFLASH)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="176" refid="group__LIBHELP_1gae96ab4238bdf72184e563254c5da0e23" refkind="member"><highlight class="preprocessor">#define<sp/>IS_MOPT_GET(bit)<sp/>(bit<sp/>&amp;<sp/>MOPT_GET)<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="181" refid="group__LIBHELP_1ga4e056b9d4e57e37e0c9af6cd5b8ef7f4" refkind="member"><highlight class="preprocessor">#define<sp/>IS_MOPT_SET(bit)<sp/>(bit<sp/>&amp;<sp/>MOPT_SET)<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="186" refid="group__LIBHELP_1ga33ddb5513bb08deea13a031c64b2ba1f" refkind="member"><highlight class="preprocessor">#define<sp/>IS_MOPT_MODIFY(bit)<sp/>(bit<sp/>&amp;<sp/>MOPT_SET)<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="191" refid="group__LIBHELP_1gad6844975ea1c331ee03702cda99468e7" refkind="member"><highlight class="preprocessor">#define<sp/>IS_MOPT_ACTIVATE(bit)<sp/>(bit<sp/>&amp;<sp/>MOPT_ACTIVATE)<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="197" refid="group__LIBHELP_1ga41641fbb71e18b1edd23d5d6c3739517" refkind="member"><highlight class="preprocessor">#define<sp/>IS_MOPT_INIT(bit)<sp/>(bit<sp/>&amp;<sp/>MOPT_INIT)<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="202" refid="group__LIBHELP_1ga119a020663142f27fc8b666d48d498d1" refkind="member"><highlight class="preprocessor">#define<sp/>IS_MOPT_UNINIT(bit)<sp/>(bit<sp/>&amp;<sp/>MOPT_UNINIT)<sp/></highlight></codeline>
+<codeline lineno="207" refid="group__LIBHELP_1ga8f24724f4910a20f2b1189b10322e279" refkind="member"><highlight class="preprocessor">#define<sp/>IS_MOPT_NOTIFY(bit)<sp/>(bit<sp/>&amp;<sp/>MOPT_NOTIFY)<sp/></highlight></codeline>
+<codeline lineno="211" refid="group__LIBHELP_1ga327ea9257c87d922d4cf34cdb8a38d69" refkind="member"><highlight class="preprocessor">#define<sp/>IS_MOPT_TIMERACTION(bit)<sp/>(bit<sp/>&amp;<sp/>MOPT_TIMERACTION)<sp/></highlight></codeline>
+<codeline lineno="216" refid="group__LIBHELP_1ga6e92593fbe6e2134b813ad8e6abd7096" refkind="member"><highlight class="preprocessor">#define<sp/>IS_MOPT_FACTORYRESET(bit)<sp/><sp/>(bit<sp/>&amp;<sp/>MOPT_FACTORYRESET)<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="221" refid="group__LIBHELP_1ga9de8ee4c98ad993b22628874da930ab7" refkind="member"><highlight class="preprocessor">#define<sp/>IS_MOPT_BACKUP(bit)<sp/><sp/>(bit<sp/>&amp;<sp/>MOPT_BACKUP)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="226" refid="group__LIBHELP_1gaf364d042ef26289927756c22b081cc51" refkind="member"><highlight class="preprocessor">#define<sp/>IS_MOPT_REBOOT(bit)<sp/><sp/>(bit<sp/>&amp;<sp/>MOPT_REBOOT)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="231" refid="group__LIBHELP_1ga387ce232cf98493a8872cdfd92238327" refkind="member"><highlight class="preprocessor">#define<sp/>IS_MOPT_FWUPGRADE(bit)<sp/>(bit<sp/>&amp;<sp/>MOPT_FWUPGRADE)<sp/></highlight></codeline>
+<codeline lineno="236" refid="group__LIBHELP_1gae8f3761c6d539c9a01ed6d3d2ad62986" refkind="member"><highlight class="preprocessor">#define<sp/>IS_MOPT_ROLLBACK(bit)<sp/>(bit<sp/>&amp;<sp/>MOPT_ROLLBACK)<sp/></highlight></codeline>
+<codeline lineno="241" refid="group__LIBHELP_1gacd3e14e1fd731b23524e4cd7428ef1bb" refkind="member"><highlight class="preprocessor">#define<sp/>IS_MOPT_NOOPER(bit)<sp/>(bit<sp/>&amp;<sp/>MOPT_NOOPER)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="246" refid="group__LIBHELP_1ga58558fc449acb4f61e13a60120cf8aa2" refkind="member"><highlight class="preprocessor">#define<sp/>IS_MOPT_LOGSET(bit)<sp/>(bit<sp/>&amp;<sp/>MOPT_LOGSET)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="252" refid="group__LIBHELP_1gace0e914d4ef2ed9112831b50ec6380e9" refkind="member"><highlight class="preprocessor">#define<sp/>IS_SOPT_VALIDATION(bit)<sp/>(bit<sp/>&amp;<sp/>SOPT_VALIDATION)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="257" refid="group__LIBHELP_1ga3609995a256464cd078bdf34bc4bc609" refkind="member"><highlight class="preprocessor">#define<sp/>IS_SOPT_NOSUBOPER(bit)<sp/>(bit<sp/>&amp;<sp/>SOPT_NOSUBOPER)<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="262" refid="group__LIBHELP_1gabe168af9d6aead8e80b7f5c251075e04" refkind="member"><highlight class="preprocessor">#define<sp/>IS_OBJOPT_ADD(bit)<sp/>(bit<sp/>&amp;<sp/>OBJOPT_ADD)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="267" refid="group__LIBHELP_1ga37236721a9851ce31dc6de2f4ab0e8ef" refkind="member"><highlight class="preprocessor">#define<sp/>IS_OBJOPT_DEL(bit)<sp/>(bit<sp/>&amp;<sp/>OBJOPT_DEL)<sp/></highlight></codeline>
+<codeline lineno="272" refid="group__LIBHELP_1ga83cbd4d0e7619f1d0a70b01eee616ec9" refkind="member"><highlight class="preprocessor">#define<sp/>IS_OBJOPT_MODIFY(bit)<sp/>(bit<sp/>&amp;<sp/>OBJOPT_MODIFY)<sp/></highlight></codeline>
+<codeline lineno="277" refid="group__LIBHELP_1ga135df626a9dbb769fa0413047b3fc0f5" refkind="member"><highlight class="preprocessor">#define<sp/>IS_OBJOPT_NOSUBOPER(bit)<sp/>(bit<sp/>&amp;<sp/>OBJOPT_NOOBJOPER)<sp/></highlight></codeline>
+<codeline lineno="282" refid="group__LIBHELP_1ga5630a9cae5c944f69472900c13936ae8" refkind="member"><highlight class="preprocessor">#define<sp/>IS_GETOPT_LOCAL(bit)<sp/>(bit<sp/>&amp;<sp/>GETOPT_LOCAL)<sp/></highlight></codeline>
+<codeline lineno="287" refid="group__LIBHELP_1ga231eb259963c50b176d806aa1979eb83" refkind="member"><highlight class="preprocessor">#define<sp/>IS_GETOPT_LOCALDB(bit)<sp/>(bit<sp/>&amp;<sp/>GETOPT_LOCALDB)<sp/></highlight></codeline>
+<codeline lineno="292" refid="group__LIBHELP_1gac2291126c4312e2496246b6e57e33dad" refkind="member"><highlight class="preprocessor">#define<sp/>IS_GETOPT_DBLOCAL(bit)<sp/>(bit<sp/>&amp;<sp/>GETOPT_DBLOCAL)<sp/></highlight></codeline>
+<codeline lineno="298" refid="group__LIBHELP_1gaacb992147fd19097d983bd744f64a3b4" refkind="member"><highlight class="preprocessor">#define<sp/>IS_DTYP_INT(bit)<sp/>(bit<sp/>&amp;<sp/>DTYP_INT)<sp/></highlight></codeline>
+<codeline lineno="303" refid="group__LIBHELP_1ga61221cc53522daf0a70139eee879a6ff" refkind="member"><highlight class="preprocessor">#define<sp/>IS_DTYP_UNSIGNEDINT(bit)<sp/>(bit<sp/>&amp;<sp/>DTYP_UNSIGNEDINT)<sp/></highlight></codeline>
+<codeline lineno="308" refid="group__LIBHELP_1ga0a3ed9e807a9a17ccba554e9b5e30842" refkind="member"><highlight class="preprocessor">#define<sp/>IS_DTYP_STRING(bit)<sp/>(bit<sp/>&amp;<sp/>DTYP_STRING)<sp/><sp/></highlight></codeline>
+<codeline lineno="313" refid="group__LIBHELP_1ga46d6ec5838128f28e404031b6c5b81dd" refkind="member"><highlight class="preprocessor">#define<sp/>IS_DTYP_DATETIME(bit)<sp/>(bit<sp/>&amp;<sp/>DTYP_DATETIME)<sp/><sp/></highlight></codeline>
+<codeline lineno="318" refid="group__LIBHELP_1gaf808e5d9a8ebcbac5fc2f2cdea42b97e" refkind="member"><highlight class="preprocessor">#define<sp/>IS_DTYP_BOOLEAN(bit)<sp/>(bit<sp/>&amp;<sp/>DTYP_BOOLEAN)<sp/><sp/></highlight></codeline>
+<codeline lineno="323" refid="group__LIBHELP_1ga88cc42098bf9839eee8487256fb03b6f" refkind="member"><highlight class="preprocessor">#define<sp/>IS_DTYP_HEXBINARY(bit)<sp/>(bit<sp/>&amp;<sp/>DTYP_HEXBINARY)<sp/><sp/></highlight></codeline>
+<codeline lineno="328" refid="group__LIBHELP_1ga8aa8438fb1184d5542ccf6af452e85bc" refkind="member"><highlight class="preprocessor">#define<sp/>IS_DTYP_LONG(bit)<sp/>(bit<sp/>&amp;<sp/>DTYP_LONG)<sp/><sp/></highlight></codeline>
+<codeline lineno="333" refid="group__LIBHELP_1ga56688137464eb65d6baa796bb8872cc4" refkind="member"><highlight class="preprocessor">#define<sp/>IS_DTYP_UNLONG(bit)<sp/>(bit<sp/>&amp;<sp/>DTYP_UNLONG)<sp/><sp/></highlight></codeline>
+<codeline lineno="338" refid="group__LIBHELP_1gaa27960f05b9cf62b3f164d7b9e63f0d1" refkind="member"><highlight class="preprocessor">#define<sp/>IS_DTYP_BASE64(bit)<sp/>(bit<sp/>&amp;<sp/>DTYP_BASE64)<sp/><sp/></highlight></codeline>
+<codeline lineno="343" refid="group__LIBHELP_1gaf98bb58e2c980b68277c7ec03ce20ef0" refkind="member"><highlight class="preprocessor">#define<sp/>IS_DTYP_NONE(bit)<sp/>(bit<sp/>&amp;<sp/>DTYP_NONE)<sp/></highlight></codeline>
+<codeline lineno="348" refid="group__LIBHELP_1ga88635b2ca475fa1e9fbf2bd1e151f920" refkind="member"><highlight class="preprocessor">#define<sp/>IS_DYNAMIC_SET(bit)<sp/>(bit<sp/>&amp;<sp/>MISC_DYNAMIC)<sp/></highlight></codeline>
+<codeline lineno="353" refid="group__LIBHELP_1ga36d2d4812ed8182cf464f0af365f9155" refkind="member"><highlight class="preprocessor">#define<sp/>IS_ACTIVATE_SET(bit)<sp/>(bit<sp/>&amp;<sp/>OBJOPT_ACTIVATE)<sp/></highlight></codeline>
+<codeline lineno="358" refid="group__LIBHELP_1gace0dbce830b493e8d28c9f0fa521fcfa" refkind="member"><highlight class="preprocessor">#define<sp/>IS_WRITE(bit)<sp/>(bit<sp/>&amp;<sp/>MISC_WRITE)<sp/></highlight></codeline>
+<codeline lineno="363" refid="group__LIBHELP_1ga3b4eeb13c5583808221824d770a6afc8" refkind="member"><highlight class="preprocessor">#define<sp/>IS_READ(bit)<sp/>(bit<sp/>&amp;<sp/>MISC_READ)<sp/></highlight></codeline>
+<codeline lineno="368" refid="group__LIBHELP_1ga6ffa31aea95d58b70b0a0ec441ffb642" refkind="member"><highlight class="preprocessor">#define<sp/>IS_MODIFIED(bit)<sp/>(bit<sp/>&amp;<sp/>MISC_MODIFIED)<sp/></highlight></codeline>
+<codeline lineno="373" refid="group__LIBHELP_1ga4bdee20520c06be0cb37b99ee6a92ff4" refkind="member"><highlight class="preprocessor">#define<sp/>IS_PASSWD_SET(bit)<sp/>(bit<sp/>&amp;<sp/>MISC_PASSWD)<sp/></highlight></codeline>
+<codeline lineno="378" refid="group__LIBHELP_1ga8613fffcfa3adcdeb1188e187d767733" refkind="member"><highlight class="preprocessor">#define<sp/>IS_PASSWD_GET_VAL(bit)<sp/>(bit<sp/>&amp;<sp/>GET_PWD_VAL)<sp/></highlight></codeline>
+<codeline lineno="383"><highlight class="preprocessor">#define<sp/>TOP<sp/>1<sp/></highlight></codeline>
+<codeline lineno="388" refid="group__LIBHELP_1gafc0eef637f1016e8786e45e106a4881e" refkind="member"><highlight class="preprocessor">#define<sp/>TOP<sp/>1<sp/></highlight></codeline>
+<codeline lineno="393" refid="group__LIBHELP_1gaf7bf88a525ba310c5ceffd0b94b3ed09" refkind="member"><highlight class="preprocessor">#define<sp/>DEV_LVL<sp/>2<sp/></highlight></codeline>
+<codeline lineno="398" refid="group__LIBHELP_1ga9197bc708bae07bccd3f01550a7da13c" refkind="member"><highlight class="preprocessor">#define<sp/>LEVEL_OBJ<sp/>4<sp/></highlight></codeline>
+<codeline lineno="403" refid="group__LIBHELP_1ga4f0cc609593ce12e46d48dc14e2e3720" refkind="member"><highlight class="preprocessor">#define<sp/>LEVEL_OBJ_PARAM<sp/>6<sp/></highlight></codeline>
+<codeline lineno="408" refid="group__LIBHELP_1ga1f7722a29a324ee4440c52218bffebef" refkind="member"><highlight class="preprocessor">#define<sp/>LEVEL_OBJ_PARAM_VAL<sp/>8<sp/></highlight></codeline>
+<codeline lineno="412" refid="group__LIBHELP_1gac3f999a1a3235673b7babbfa1294afee" refkind="member"><highlight class="preprocessor">#define<sp/>LEVEL_PARAM_TOP<sp/>10<sp/></highlight></codeline>
+<codeline lineno="416" refid="group__LIBHELP_1ga8fabc94f5bafb2197057a88deee01926" refkind="member"><highlight class="preprocessor">#define<sp/>LEVEL_PARAM<sp/>12<sp/><sp/></highlight></codeline>
+<codeline lineno="420" refid="group__LIBHELP_1gaae4f330d3207e58934ca25df51265f98" refkind="member"><highlight class="preprocessor">#define<sp/>LEVEL_PARAM_VAL<sp/>14<sp/></highlight></codeline>
+<codeline lineno="424" refid="group__LIBHELP_1ga29c1b676d6c99dcaad0edc4bf19cce8d" refkind="member"><highlight class="preprocessor">#define<sp/>SESSION_ID_SIZE<sp/>128<sp/></highlight></codeline>
+<codeline lineno="426"><highlight class="preprocessor">#endif<sp/><sp/>//#ifndef<sp/>_UGW_DEFS_H</highlight></codeline>
+<codeline lineno="427"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="428"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_defs.h"/>
+  </compounddef>
+</doxygen>

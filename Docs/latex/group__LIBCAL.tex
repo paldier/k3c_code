@@ -1,0 +1,164 @@
+\hypertarget{group__LIBCAL}{\section{Common Adaptation Layer}
+\label{group__LIBCAL}\index{Common Adaptation Layer@{Common Adaptation Layer}}
+}
+
+
+C\-A\-L is the common interface for the management entities (web, Upn\-P, C\-L\-I, C\-W\-M\-P) to the database and the system to enable interaction.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__LIBCAL_gae3a199f14f16bdc4294dc90a98d26389}{cal\-\_\-get\-Value} (\hyperlink{group__LIBHELP_ga62766f3ea8784d1db62df989f8f33d2d}{I\-N\-O\-U\-T} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Obj)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to get the values of parameters in the given object, their S\-I\-D and O\-I\-D from the D\-B and real time statistics from the system. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBCAL_ga886e5f6e932794f73ee4b9c985ad609d}{cal\-\_\-set\-Value} (\hyperlink{group__LIBHELP_ga62766f3ea8784d1db62df989f8f33d2d}{I\-N\-O\-U\-T} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Obj\-List)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to set the value(s) for parameter(s) in one or multiple objects in the System. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBCAL_ga2490637f30536869ccdf1694639a011a}{cal\-\_\-get\-Value\-From\-Db} (\hyperlink{group__LIBHELP_ga62766f3ea8784d1db62df989f8f33d2d}{I\-N\-O\-U\-T} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Obj)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to get the values of parameters in an object, their O\-I\-D, S\-I\-D and dynamic attribute information from the D\-B only. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBCAL_ga95a08176db1a7c26f079e822b3c00f6d}{cal\-\_\-set\-Value\-To\-Db} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Obj\-List)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to set the value(s) for parameter(s) in one or multiple objects to the D\-B. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBCAL_ga1d47677aa96d141afef95e4ba948d235}{cal\-\_\-update\-Periodic\-Values} (\hyperlink{group__LIBHELP_ga62766f3ea8784d1db62df989f8f33d2d}{I\-N\-O\-U\-T} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Msg)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to fetch the values of parameters from S\-L and set it to D\-B. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBCAL_gad84cebd364884a0d3e3447065174a191}{cal\-\_\-send\-Msg\-To\-Polld} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Msg, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info} $\ast$p\-Polld\-Time)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to send the object(s) and timer(s) to polld. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C\-A\-L is the common interface for the management entities (web, Upn\-P, C\-L\-I, C\-W\-M\-P) to the database and the system to enable interaction. 
+
+\subsection{Function Documentation}
+\hypertarget{group__LIBCAL_gae3a199f14f16bdc4294dc90a98d26389}{\index{Common Adaptation Layer@{Common Adaptation Layer}!cal\-\_\-get\-Value@{cal\-\_\-get\-Value}}
+\index{cal\-\_\-get\-Value@{cal\-\_\-get\-Value}!Common Adaptation Layer@{Common Adaptation Layer}}
+\subsubsection[{cal\-\_\-get\-Value}]{\setlength{\rightskip}{0pt plus 5cm}int cal\-\_\-get\-Value (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N\-O\-U\-T} {\bf Msg\-Header} $\ast$}]{px\-Obj}
+\end{DoxyParamCaption}
+)}}\label{group__LIBCAL_gae3a199f14f16bdc4294dc90a98d26389}
+
+
+A\-P\-I to get the values of parameters in the given object, their S\-I\-D and O\-I\-D from the D\-B and real time statistics from the system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em px\-Obj} & Get the parameter values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Parameter Value\-: To get the values, fill the Msg\-Header-\/$>$un\-Sub\-Oper=S\-O\-P\-T\-\_\-\-O\-B\-J\-V\-A\-L\-U\-E, Msg\-Header-\/$>$p\-Obj\-Type as type \hyperlink{structObjList}{Obj\-List} and fill the expected value names as Input \par
+ The Output value returned is the \hyperlink{structObjList}{Obj\-List} with values filled for the requested parameters 
+
+Parameter Attributes\-: To get the values, fill the Msg\-Header-\/$>$un\-Sub\-Oper=S\-O\-P\-T\-\_\-\-O\-B\-J\-A\-T\-T\-R, Msg\-Header-\/$>$p\-Obj\-Type as type \hyperlink{structObjAttrList}{Obj\-Attr\-List} and fill the expected value names as Input \par
+ The Output value is \hyperlink{structObjAttrList}{Obj\-Attr\-List} with validation attribute values filled for the requested parameters 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+U\-G\-W\-\_\-\-S\-U\-C\-C\-E\-S\-S on success / E\-R\-R\-O\-R Code on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBCAL_ga2490637f30536869ccdf1694639a011a}{\index{Common Adaptation Layer@{Common Adaptation Layer}!cal\-\_\-get\-Value\-From\-Db@{cal\-\_\-get\-Value\-From\-Db}}
+\index{cal\-\_\-get\-Value\-From\-Db@{cal\-\_\-get\-Value\-From\-Db}!Common Adaptation Layer@{Common Adaptation Layer}}
+\subsubsection[{cal\-\_\-get\-Value\-From\-Db}]{\setlength{\rightskip}{0pt plus 5cm}int cal\-\_\-get\-Value\-From\-Db (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N\-O\-U\-T} {\bf Msg\-Header} $\ast$}]{px\-Obj}
+\end{DoxyParamCaption}
+)}}\label{group__LIBCAL_ga2490637f30536869ccdf1694639a011a}
+
+
+A\-P\-I to get the values of parameters in an object, their O\-I\-D, S\-I\-D and dynamic attribute information from the D\-B only. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em px\-Obj} & Gets the list of objects and parameters with name of values that need to be fetched \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+U\-G\-W\-\_\-\-S\-U\-C\-C\-E\-S\-S on success / E\-R\-R\-O\-R Code on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBCAL_gad84cebd364884a0d3e3447065174a191}{\index{Common Adaptation Layer@{Common Adaptation Layer}!cal\-\_\-send\-Msg\-To\-Polld@{cal\-\_\-send\-Msg\-To\-Polld}}
+\index{cal\-\_\-send\-Msg\-To\-Polld@{cal\-\_\-send\-Msg\-To\-Polld}!Common Adaptation Layer@{Common Adaptation Layer}}
+\subsubsection[{cal\-\_\-send\-Msg\-To\-Polld}]{\setlength{\rightskip}{0pt plus 5cm}int cal\-\_\-send\-Msg\-To\-Polld (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N} {\bf Msg\-Header} $\ast$}]{px\-Msg, }
+\item[{{\bf I\-N} {\bf Polld\-Time\-Info} $\ast$}]{p\-Polld\-Time}
+\end{DoxyParamCaption}
+)}}\label{group__LIBCAL_gad84cebd364884a0d3e3447065174a191}
+
+
+A\-P\-I to send the object(s) and timer(s) to polld. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em px\-Msg} & Message header contains obj\-List and \hyperlink{structParamList}{Param\-List} \\
+\hline
+\mbox{\tt in}  & {\em p\-Polld\-Time} & Contains polld timer info \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+U\-G\-W\-\_\-\-S\-U\-C\-C\-E\-S\-S on success / U\-G\-W\-\_\-\-F\-A\-I\-L\-U\-R\-E on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBCAL_ga886e5f6e932794f73ee4b9c985ad609d}{\index{Common Adaptation Layer@{Common Adaptation Layer}!cal\-\_\-set\-Value@{cal\-\_\-set\-Value}}
+\index{cal\-\_\-set\-Value@{cal\-\_\-set\-Value}!Common Adaptation Layer@{Common Adaptation Layer}}
+\subsubsection[{cal\-\_\-set\-Value}]{\setlength{\rightskip}{0pt plus 5cm}int cal\-\_\-set\-Value (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N\-O\-U\-T} {\bf Msg\-Header} $\ast$}]{px\-Obj\-List}
+\end{DoxyParamCaption}
+)}}\label{group__LIBCAL_ga886e5f6e932794f73ee4b9c985ad609d}
+
+
+A\-P\-I to set the value(s) for parameter(s) in one or multiple objects in the System. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em px\-Obj\-List} & Sets the Name, Id and values for the list of objects and parameters to be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+For Input, fill the Msg\-Header-\/$>$un\-Sub\-Oper=S\-O\-P\-T\-\_\-\-O\-B\-J\-V\-A\-L\-U\-E, Msg\-Header-\/$>$p\-Obj\-Type as type \hyperlink{structObjList}{Obj\-List} and fill in the name value pairs to be set. \par
+ The Output \hyperlink{structMsgHeader}{Msg\-Header} is filled only if the S\-E\-T operation fails. The \hyperlink{structObjList}{Obj\-List} contains the list of failed object/parameter and eror string in the parameter name and value fields respectively. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+U\-G\-W\-\_\-\-S\-U\-C\-C\-E\-S\-S on success / E\-R\-R\-O\-R Code on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBCAL_ga95a08176db1a7c26f079e822b3c00f6d}{\index{Common Adaptation Layer@{Common Adaptation Layer}!cal\-\_\-set\-Value\-To\-Db@{cal\-\_\-set\-Value\-To\-Db}}
+\index{cal\-\_\-set\-Value\-To\-Db@{cal\-\_\-set\-Value\-To\-Db}!Common Adaptation Layer@{Common Adaptation Layer}}
+\subsubsection[{cal\-\_\-set\-Value\-To\-Db}]{\setlength{\rightskip}{0pt plus 5cm}int cal\-\_\-set\-Value\-To\-Db (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N} {\bf Msg\-Header} $\ast$}]{px\-Obj\-List}
+\end{DoxyParamCaption}
+)}}\label{group__LIBCAL_ga95a08176db1a7c26f079e822b3c00f6d}
+
+
+A\-P\-I to set the value(s) for parameter(s) in one or multiple objects to the D\-B. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em px\-Obj\-List} & Sets the Name, Id and values for the desired list of objects and parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+U\-G\-W\-\_\-\-S\-U\-C\-C\-E\-S\-S on success / E\-R\-R\-O\-R Code on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBCAL_ga1d47677aa96d141afef95e4ba948d235}{\index{Common Adaptation Layer@{Common Adaptation Layer}!cal\-\_\-update\-Periodic\-Values@{cal\-\_\-update\-Periodic\-Values}}
+\index{cal\-\_\-update\-Periodic\-Values@{cal\-\_\-update\-Periodic\-Values}!Common Adaptation Layer@{Common Adaptation Layer}}
+\subsubsection[{cal\-\_\-update\-Periodic\-Values}]{\setlength{\rightskip}{0pt plus 5cm}int cal\-\_\-update\-Periodic\-Values (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N\-O\-U\-T} {\bf Msg\-Header} $\ast$}]{px\-Msg}
+\end{DoxyParamCaption}
+)}}\label{group__LIBCAL_ga1d47677aa96d141afef95e4ba948d235}
+
+
+A\-P\-I to fetch the values of parameters from S\-L and set it to D\-B. 
+
+\begin{DoxyNote}{Note}
+If the object contains no parameters, then all the parameters of that object will be fetched 
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em px\-Msg} & Fetches parameter values and sets it to D\-B. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+For Input, fill the Msg\-Header-\/$>$un\-Sub\-Oper=S\-O\-P\-T\-\_\-\-O\-B\-J\-V\-A\-L\-U\-E, Msg\-Header-\/$>$p\-Obj\-Type as type \hyperlink{structObjList}{Obj\-List} and fill the expected value names \par
+ The Output \hyperlink{structMsgHeader}{Msg\-Header} is filled only if the S\-E\-T to D\-B fails. The \hyperlink{structObjList}{Obj\-List} contains the list of failed object/parameter and eror string in the parameter name and value fields respectively. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+U\-G\-W\-\_\-\-S\-U\-C\-C\-E\-S\-S on success / U\-G\-W\-\_\-\-F\-A\-I\-L\-U\-R\-E on failure 
+\end{DoxyReturn}

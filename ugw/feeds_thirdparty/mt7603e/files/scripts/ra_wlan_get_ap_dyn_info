@@ -1,0 +1,43 @@
+#!/bin/sh
+
+if [ ! "$CONFIGLOADED" ]; then
+	if [ -r /etc/rc.d/config.sh ]; then
+		. /etc/rc.d/config.sh 2>/dev/null
+		CONFIGLOADED="1"
+	fi
+fi
+
+RA_IF=""
+find_ra_if_from_index() {
+   eval CPEID='$'wlmn_${1}'_cpeId'
+   ra_dev=`/usr/sbin/status_oper GET "RA_MAP" "$CPEID"`
+   RA_IF=${ra_dev:2}
+   #echo "ATH_IF $ATH_IF "
+}
+
+find_ra_if_from_index $1
+
+if [ "$CONFIG_FEATURE_WIRELESS" = "1" ]; then
+   ifconfig_file=/ramdisk/tmp/ifconfig_dyn_info
+   iwconfig_file=/ramdisk/tmp/iwconfig_dyn_info
+   rm -f ${ifconfig_file}
+   rm -f ${iwconfig_file}
+   
+   Interface=ra${RA_IF}
+   #echo $Interface
+   ifconfig >> ${ifconfig_file}
+   iwconfig $Interface >> ${iwconfig_file}
+   
+   IF=$(grep "${Interface}" $ifconfig_file)
+   #echo $IF
+   
+   if [ "$IF" = "" ]; then
+   	echo "status=\"0\""
+   else
+   	echo "status=\"1\""
+   	Bssid=$(grep "Mode:Managed  Channel=" $iwconfig_file | cut -d ":" -f 4,5,6,7,8,9)
+      Bssid=`echo $Bssid | cut -d " " -f 2`
+   	echo "bssid=\"$Bssid\""
+   fi
+fi
+

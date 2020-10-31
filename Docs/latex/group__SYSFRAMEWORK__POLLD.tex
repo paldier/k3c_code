@@ -1,0 +1,299 @@
+\hypertarget{group__SYSFRAMEWORK__POLLD}{\section{Polling}
+\label{group__SYSFRAMEWORK__POLLD}\index{Polling@{Polling}}
+}
+
+
+Polld daemon provides polling framework for the system. It is capable of performing polling operation either at dynamic object or param level.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpolldInfo}{polld\-Info}
+\begin{DoxyCompactList}\small\item\em Contains the timer fields for polld. \end{DoxyCompactList}\item 
+struct \hyperlink{structPolldResp}{Polld\-Resp}
+\begin{DoxyCompactList}\small\item\em Contains the response code for Callbacks of polld. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__POLLD_gac79d24ad3b52565290d3fbd22a47498f}{F\-O\-R\-\_\-\-E\-A\-C\-H\-\_\-\-T\-I\-M\-E\-R\-\_\-\-O\-N\-L\-Y}(\-\_\-\-\_\-px\-Src, \-\_\-\-\_\-px\-Param)~list\-\_\-for\-\_\-each\-\_\-entry(\-\_\-\-\_\-px\-Param,\&(\-\_\-\-\_\-px\-Src-\/$>$x\-Plist),x\-Plist) \textbackslash{}
+\begin{DoxyCompactList}\small\item\em Macro used to loop through timerlist. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SYSFRAMEWORK__POLLD_ga8d9ee84002519619a100089e8bd1a3ad}{D\-E\-L\-E\-T\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-N\-O\-D\-E}(\-\_\-\-\_\-px\-Node)~do \{ \hyperlink{group__SYSFRAMEWORK__LOG_ga8ce0b241ee6ed787655fc6c683610cfa}{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O}(\char`\"{}Deleting \-: \%p Timer Node\textbackslash{}n\char`\"{}, px\-Timer\-Tmp); list\-\_\-del(\&\-\_\-\-\_\-px\-Node-\/$>$x\-Plist); \hyperlink{group__LIBHELP_gad8118b0746b34f72d8b9a150290716e5}{H\-E\-L\-P\-\_\-\-F\-R\-E\-E}(\-\_\-\-\_\-px\-Node); \} while(0);
+\begin{DoxyCompactList}\small\item\em Free up the timer linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{typedef struct \hyperlink{structpolldInfo}{polld\-Info} \hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info}}\label{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}
+
+\begin{DoxyCompactList}\small\item\em Contains the timer fields for polld. \end{DoxyCompactList}\item 
+\hypertarget{group__SYSFRAMEWORK__POLLD_gab66601607b9776a27d87bcfc0b024b6f}{typedef struct \hyperlink{structPolldResp}{Polld\-Resp} \hyperlink{group__SYSFRAMEWORK__POLLD_gab66601607b9776a27d87bcfc0b024b6f}{Polld\-Resp\-Code}}\label{group__SYSFRAMEWORK__POLLD_gab66601607b9776a27d87bcfc0b024b6f}
+
+\begin{DoxyCompactList}\small\item\em Contains the response code for Callbacks of polld. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__SYSFRAMEWORK__POLLD_gae10b07f2d0feb103db7fe4cfd192e5af}{Request\-Type} \{ \hyperlink{group__SYSFRAMEWORK__POLLD_ggae10b07f2d0feb103db7fe4cfd192e5afa63e66fe0a1e1de6cfed3c85a9aa48315}{R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-A\-D\-D} = 0, 
+\hyperlink{group__SYSFRAMEWORK__POLLD_ggae10b07f2d0feb103db7fe4cfd192e5afa08e0354be826a836f72ebfa716a7d290}{R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-D\-E\-L}, 
+\hyperlink{group__SYSFRAMEWORK__POLLD_ggae10b07f2d0feb103db7fe4cfd192e5afa3a3504998275abee398a70197a8bf6e4}{R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-M\-O\-D}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum containing the type of request for polld. \end{DoxyCompactList}\item 
+enum \hyperlink{group__SYSFRAMEWORK__POLLD_ga8d3aaea1dc4569e14bc3b498c3131b2a}{Timer\-Recurence} \{ \hyperlink{group__SYSFRAMEWORK__POLLD_gga8d3aaea1dc4569e14bc3b498c3131b2aa295266347c0bdf8dcd25d42a03275c79}{T\-I\-M\-E\-R\-R\-E\-C\-U\-R\-E\-N\-C\-E\-\_\-\-O\-N\-C\-E} = 0, 
+\hyperlink{group__SYSFRAMEWORK__POLLD_gga8d3aaea1dc4569e14bc3b498c3131b2aacfa2040c602a9b9afe857229cc05d3ad}{T\-I\-M\-E\-R\-R\-E\-C\-U\-R\-E\-N\-C\-E\-\_\-\-R\-E\-C\-U\-R\-R\-I\-N\-G}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum containing timeout for once or repeatedly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info} $\ast$ \hyperlink{group__SYSFRAMEWORK__POLLD_gae320b4db14b8f6d6c2cb985921722afa}{help\-\_\-create\-Timer\-List} (void)
+\begin{DoxyCompactList}\small\item\em Function to create head node for polld timer list. \end{DoxyCompactList}\item 
+void \hyperlink{group__SYSFRAMEWORK__POLLD_gaf539f6e7bd349a8e5f3203efda7448f4}{help\-\_\-del\-Timer\-List} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info} $\ast$$\ast$px\-Timer\-List)
+\begin{DoxyCompactList}\small\item\em Function to delete the polld timer linked list. \end{DoxyCompactList}\item 
+void \hyperlink{group__SYSFRAMEWORK__POLLD_ga7b5d0762e28e4e09406a75548c61bb4c}{help\-\_\-print\-Timer\-List} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info} $\ast$px\-Timer\-List)
+\begin{DoxyCompactList}\small\item\em Function to print polld timer linked list. \end{DoxyCompactList}\item 
+int \hyperlink{group__SYSFRAMEWORK__POLLD_ga8de5216d3d5e3b7b979c6fc189d35ade}{help\-\_\-add\-Timer\-List} (\hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} \hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info} $\ast$px\-Timer\-List, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info} $\ast$px\-Time\-Info)
+\begin{DoxyCompactList}\small\item\em Function to add a new timer node in polld timer linked list. \end{DoxyCompactList}\item 
+int \hyperlink{group__SYSFRAMEWORK__POLLD_gab17830ba31bb4e46a053646e6fca23f4}{ubus\-Msg\-To\-Polld} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{group__LIBHELP_ga0cdba030aaa0bd18b24dbf19b06877a0}{Main\-Oper} e\-Operation, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Dyn\-Msg, \hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Output\-Msg, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info} $\ast$px\-Timer\-List)
+\begin{DoxyCompactList}\small\item\em Function to send ubus message to polld. \end{DoxyCompactList}\item 
+int \hyperlink{group__SYSFRAMEWORK__POLLD_ga631a79daf4414553f01214f9f51d3b94}{help\-\_\-obj\-List\-To\-Blob\-Polld} (\hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} struct blob\-\_\-buf $\ast$buf, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Msg, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} struct ubus\-\_\-context $\ast$ctx, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} struct ubus\-\_\-request\-\_\-data $\ast$req, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info} $\ast$px\-Timer\-List)
+\begin{DoxyCompactList}\small\item\em Function to convert objlist and polld timers to blob message. \end{DoxyCompactList}\item 
+int \hyperlink{group__SYSFRAMEWORK__POLLD_ga6146742ce8a6c2a48d3ed56d5ba96e55}{help\-\_\-blob\-To\-Obj\-List\-Polld} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} struct blob\-\_\-attr $\ast$msg, \hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Msg, \hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} \hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info} $\ast$px\-Timer\-Info)
+\begin{DoxyCompactList}\small\item\em Function to convert blob message to obj\-List and polld timers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Polld daemon provides polling framework for the system. It is capable of performing polling operation either at dynamic object or param level. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__SYSFRAMEWORK__POLLD_ga8d9ee84002519619a100089e8bd1a3ad}{\index{Polling@{Polling}!D\-E\-L\-E\-T\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-N\-O\-D\-E@{D\-E\-L\-E\-T\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-N\-O\-D\-E}}
+\index{D\-E\-L\-E\-T\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-N\-O\-D\-E@{D\-E\-L\-E\-T\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-N\-O\-D\-E}!Polling@{Polling}}
+\subsubsection[{D\-E\-L\-E\-T\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-L\-E\-T\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-N\-O\-D\-E(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-px\-Node}
+\end{DoxyParamCaption}
+)~do \{ {\bf L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O}(\char`\"{}Deleting \-: \%p Timer Node\textbackslash{}n\char`\"{}, px\-Timer\-Tmp); list\-\_\-del(\&\-\_\-\-\_\-px\-Node-\/$>$x\-Plist); {\bf H\-E\-L\-P\-\_\-\-F\-R\-E\-E}(\-\_\-\-\_\-px\-Node); \} while(0);}}\label{group__SYSFRAMEWORK__POLLD_ga8d9ee84002519619a100089e8bd1a3ad}
+
+
+Free up the timer linked list. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-\-\_\-px\-Node} & Pointer to free \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__SYSFRAMEWORK__POLLD_gac79d24ad3b52565290d3fbd22a47498f}{\index{Polling@{Polling}!F\-O\-R\-\_\-\-E\-A\-C\-H\-\_\-\-T\-I\-M\-E\-R\-\_\-\-O\-N\-L\-Y@{F\-O\-R\-\_\-\-E\-A\-C\-H\-\_\-\-T\-I\-M\-E\-R\-\_\-\-O\-N\-L\-Y}}
+\index{F\-O\-R\-\_\-\-E\-A\-C\-H\-\_\-\-T\-I\-M\-E\-R\-\_\-\-O\-N\-L\-Y@{F\-O\-R\-\_\-\-E\-A\-C\-H\-\_\-\-T\-I\-M\-E\-R\-\_\-\-O\-N\-L\-Y}!Polling@{Polling}}
+\subsubsection[{F\-O\-R\-\_\-\-E\-A\-C\-H\-\_\-\-T\-I\-M\-E\-R\-\_\-\-O\-N\-L\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-O\-R\-\_\-\-E\-A\-C\-H\-\_\-\-T\-I\-M\-E\-R\-\_\-\-O\-N\-L\-Y(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-px\-Src, }
+\item[{}]{\-\_\-\-\_\-px\-Param}
+\end{DoxyParamCaption}
+)~list\-\_\-for\-\_\-each\-\_\-entry(\-\_\-\-\_\-px\-Param,\&(\-\_\-\-\_\-px\-Src-\/$>$x\-Plist),x\-Plist) \textbackslash{}}}\label{group__SYSFRAMEWORK__POLLD_gac79d24ad3b52565290d3fbd22a47498f}
+
+
+Macro used to loop through timerlist. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \-\_\-\-\_\-px\-Src} & Pointer to px\-Timer\-List \\
+\hline
+\mbox{\tt in}  & {\em \-\_\-\-\_\-px\-Param} & Pointer px\-Timer\-Tmp, used to copy the actual px\-Timer\-List values \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__SYSFRAMEWORK__POLLD_gae10b07f2d0feb103db7fe4cfd192e5af}{\index{Polling@{Polling}!Request\-Type@{Request\-Type}}
+\index{Request\-Type@{Request\-Type}!Polling@{Polling}}
+\subsubsection[{Request\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Request\-Type}}}\label{group__SYSFRAMEWORK__POLLD_gae10b07f2d0feb103db7fe4cfd192e5af}
+
+
+Enum containing the type of request for polld. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-A\-D\-D@{R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-A\-D\-D}!Polling@{Polling}}\index{Polling@{Polling}!R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-A\-D\-D@{R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-A\-D\-D}}\item[{\em 
+\hypertarget{group__SYSFRAMEWORK__POLLD_ggae10b07f2d0feb103db7fe4cfd192e5afa63e66fe0a1e1de6cfed3c85a9aa48315}{R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-A\-D\-D}\label{group__SYSFRAMEWORK__POLLD_ggae10b07f2d0feb103db7fe4cfd192e5afa63e66fe0a1e1de6cfed3c85a9aa48315}
+}]Add new timer \index{R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-D\-E\-L@{R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-D\-E\-L}!Polling@{Polling}}\index{Polling@{Polling}!R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-D\-E\-L@{R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-D\-E\-L}}\item[{\em 
+\hypertarget{group__SYSFRAMEWORK__POLLD_ggae10b07f2d0feb103db7fe4cfd192e5afa08e0354be826a836f72ebfa716a7d290}{R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-D\-E\-L}\label{group__SYSFRAMEWORK__POLLD_ggae10b07f2d0feb103db7fe4cfd192e5afa08e0354be826a836f72ebfa716a7d290}
+}]Delete existing timer value \index{R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-M\-O\-D@{R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-M\-O\-D}!Polling@{Polling}}\index{Polling@{Polling}!R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-M\-O\-D@{R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-M\-O\-D}}\item[{\em 
+\hypertarget{group__SYSFRAMEWORK__POLLD_ggae10b07f2d0feb103db7fe4cfd192e5afa3a3504998275abee398a70197a8bf6e4}{R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-M\-O\-D}\label{group__SYSFRAMEWORK__POLLD_ggae10b07f2d0feb103db7fe4cfd192e5afa3a3504998275abee398a70197a8bf6e4}
+}]Modify existing timer value \end{description}
+\end{Desc}
+\hypertarget{group__SYSFRAMEWORK__POLLD_ga8d3aaea1dc4569e14bc3b498c3131b2a}{\index{Polling@{Polling}!Timer\-Recurence@{Timer\-Recurence}}
+\index{Timer\-Recurence@{Timer\-Recurence}!Polling@{Polling}}
+\subsubsection[{Timer\-Recurence}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Timer\-Recurence}}}\label{group__SYSFRAMEWORK__POLLD_ga8d3aaea1dc4569e14bc3b498c3131b2a}
+
+
+Enum containing timeout for once or repeatedly. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{T\-I\-M\-E\-R\-R\-E\-C\-U\-R\-E\-N\-C\-E\-\_\-\-O\-N\-C\-E@{T\-I\-M\-E\-R\-R\-E\-C\-U\-R\-E\-N\-C\-E\-\_\-\-O\-N\-C\-E}!Polling@{Polling}}\index{Polling@{Polling}!T\-I\-M\-E\-R\-R\-E\-C\-U\-R\-E\-N\-C\-E\-\_\-\-O\-N\-C\-E@{T\-I\-M\-E\-R\-R\-E\-C\-U\-R\-E\-N\-C\-E\-\_\-\-O\-N\-C\-E}}\item[{\em 
+\hypertarget{group__SYSFRAMEWORK__POLLD_gga8d3aaea1dc4569e14bc3b498c3131b2aa295266347c0bdf8dcd25d42a03275c79}{T\-I\-M\-E\-R\-R\-E\-C\-U\-R\-E\-N\-C\-E\-\_\-\-O\-N\-C\-E}\label{group__SYSFRAMEWORK__POLLD_gga8d3aaea1dc4569e14bc3b498c3131b2aa295266347c0bdf8dcd25d42a03275c79}
+}]Add new timer \index{T\-I\-M\-E\-R\-R\-E\-C\-U\-R\-E\-N\-C\-E\-\_\-\-R\-E\-C\-U\-R\-R\-I\-N\-G@{T\-I\-M\-E\-R\-R\-E\-C\-U\-R\-E\-N\-C\-E\-\_\-\-R\-E\-C\-U\-R\-R\-I\-N\-G}!Polling@{Polling}}\index{Polling@{Polling}!T\-I\-M\-E\-R\-R\-E\-C\-U\-R\-E\-N\-C\-E\-\_\-\-R\-E\-C\-U\-R\-R\-I\-N\-G@{T\-I\-M\-E\-R\-R\-E\-C\-U\-R\-E\-N\-C\-E\-\_\-\-R\-E\-C\-U\-R\-R\-I\-N\-G}}\item[{\em 
+\hypertarget{group__SYSFRAMEWORK__POLLD_gga8d3aaea1dc4569e14bc3b498c3131b2aacfa2040c602a9b9afe857229cc05d3ad}{T\-I\-M\-E\-R\-R\-E\-C\-U\-R\-E\-N\-C\-E\-\_\-\-R\-E\-C\-U\-R\-R\-I\-N\-G}\label{group__SYSFRAMEWORK__POLLD_gga8d3aaea1dc4569e14bc3b498c3131b2aacfa2040c602a9b9afe857229cc05d3ad}
+}]recurring timer \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__SYSFRAMEWORK__POLLD_ga8de5216d3d5e3b7b979c6fc189d35ade}{\index{Polling@{Polling}!help\-\_\-add\-Timer\-List@{help\-\_\-add\-Timer\-List}}
+\index{help\-\_\-add\-Timer\-List@{help\-\_\-add\-Timer\-List}!Polling@{Polling}}
+\subsubsection[{help\-\_\-add\-Timer\-List}]{\setlength{\rightskip}{0pt plus 5cm}int help\-\_\-add\-Timer\-List (
+\begin{DoxyParamCaption}
+\item[{{\bf O\-U\-T} {\bf Polld\-Time\-Info} $\ast$}]{px\-Timer\-List, }
+\item[{{\bf I\-N} {\bf Polld\-Time\-Info} $\ast$}]{px\-Time\-Info}
+\end{DoxyParamCaption}
+)}}\label{group__SYSFRAMEWORK__POLLD_ga8de5216d3d5e3b7b979c6fc189d35ade}
+
+
+Function to add a new timer node in polld timer linked list. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em px\-Timer\-List} & Head pointer of polld timer linked list \\
+\hline
+\mbox{\tt in}  & {\em px\-Time\-Info} & Polld timer structure to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success on successful 
+\end{DoxyReturn}
+\hypertarget{group__SYSFRAMEWORK__POLLD_ga6146742ce8a6c2a48d3ed56d5ba96e55}{\index{Polling@{Polling}!help\-\_\-blob\-To\-Obj\-List\-Polld@{help\-\_\-blob\-To\-Obj\-List\-Polld}}
+\index{help\-\_\-blob\-To\-Obj\-List\-Polld@{help\-\_\-blob\-To\-Obj\-List\-Polld}!Polling@{Polling}}
+\subsubsection[{help\-\_\-blob\-To\-Obj\-List\-Polld}]{\setlength{\rightskip}{0pt plus 5cm}int help\-\_\-blob\-To\-Obj\-List\-Polld (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N} struct blob\-\_\-attr $\ast$}]{msg, }
+\item[{{\bf O\-U\-T} {\bf Msg\-Header} $\ast$}]{px\-Msg, }
+\item[{{\bf O\-U\-T} {\bf Polld\-Time\-Info} $\ast$}]{px\-Timer\-Info}
+\end{DoxyParamCaption}
+)}}\label{group__SYSFRAMEWORK__POLLD_ga6146742ce8a6c2a48d3ed56d5ba96e55}
+
+
+Function to convert blob message to obj\-List and polld timers. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & Contains blob attribute \\
+\hline
+\mbox{\tt out}  & {\em px\-Msg} & Message header contains obj\-List and \hyperlink{structParamList}{Param\-List} \\
+\hline
+\mbox{\tt out}  & {\em px\-Timer\-Info} & Contains polld time info \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success on successful 
+\end{DoxyReturn}
+\hypertarget{group__SYSFRAMEWORK__POLLD_gae320b4db14b8f6d6c2cb985921722afa}{\index{Polling@{Polling}!help\-\_\-create\-Timer\-List@{help\-\_\-create\-Timer\-List}}
+\index{help\-\_\-create\-Timer\-List@{help\-\_\-create\-Timer\-List}!Polling@{Polling}}
+\subsubsection[{help\-\_\-create\-Timer\-List}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Polld\-Time\-Info}$\ast$ help\-\_\-create\-Timer\-List (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group__SYSFRAMEWORK__POLLD_gae320b4db14b8f6d6c2cb985921722afa}
+
+
+Function to create head node for polld timer list. 
+
+\begin{DoxyReturn}{Returns}
+Head node pointer on successful 
+\end{DoxyReturn}
+\hypertarget{group__SYSFRAMEWORK__POLLD_gaf539f6e7bd349a8e5f3203efda7448f4}{\index{Polling@{Polling}!help\-\_\-del\-Timer\-List@{help\-\_\-del\-Timer\-List}}
+\index{help\-\_\-del\-Timer\-List@{help\-\_\-del\-Timer\-List}!Polling@{Polling}}
+\subsubsection[{help\-\_\-del\-Timer\-List}]{\setlength{\rightskip}{0pt plus 5cm}void help\-\_\-del\-Timer\-List (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N} {\bf Polld\-Time\-Info} $\ast$$\ast$}]{px\-Timer\-List}
+\end{DoxyParamCaption}
+)}}\label{group__SYSFRAMEWORK__POLLD_gaf539f6e7bd349a8e5f3203efda7448f4}
+
+
+Function to delete the polld timer linked list. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em px\-Timer\-List} & Head pointer of timerlinked list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Head node pointer on successful 
+\end{DoxyReturn}
+\hypertarget{group__SYSFRAMEWORK__POLLD_ga631a79daf4414553f01214f9f51d3b94}{\index{Polling@{Polling}!help\-\_\-obj\-List\-To\-Blob\-Polld@{help\-\_\-obj\-List\-To\-Blob\-Polld}}
+\index{help\-\_\-obj\-List\-To\-Blob\-Polld@{help\-\_\-obj\-List\-To\-Blob\-Polld}!Polling@{Polling}}
+\subsubsection[{help\-\_\-obj\-List\-To\-Blob\-Polld}]{\setlength{\rightskip}{0pt plus 5cm}int help\-\_\-obj\-List\-To\-Blob\-Polld (
+\begin{DoxyParamCaption}
+\item[{{\bf O\-U\-T} struct blob\-\_\-buf $\ast$}]{buf, }
+\item[{{\bf I\-N} {\bf Msg\-Header} $\ast$}]{px\-Msg, }
+\item[{{\bf I\-N} struct ubus\-\_\-context $\ast$}]{ctx, }
+\item[{{\bf I\-N} struct ubus\-\_\-request\-\_\-data $\ast$}]{req, }
+\item[{{\bf I\-N} {\bf Polld\-Time\-Info} $\ast$}]{px\-Timer\-List}
+\end{DoxyParamCaption}
+)}}\label{group__SYSFRAMEWORK__POLLD_ga631a79daf4414553f01214f9f51d3b94}
+
+
+Function to convert objlist and polld timers to blob message. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em buf} & Blob attribute structure \\
+\hline
+\mbox{\tt in}  & {\em px\-Msg} & message header contains obj\-List and \hyperlink{structParamList}{Param\-List} \\
+\hline
+\mbox{\tt in}  & {\em ctx} & Pointer contains ubus context \\
+\hline
+\mbox{\tt in}  & {\em req} & Contains ubus request data \\
+\hline
+\mbox{\tt in}  & {\em px\-Timer\-List} & Contains polld timer info \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success on successful 
+\end{DoxyReturn}
+\hypertarget{group__SYSFRAMEWORK__POLLD_ga7b5d0762e28e4e09406a75548c61bb4c}{\index{Polling@{Polling}!help\-\_\-print\-Timer\-List@{help\-\_\-print\-Timer\-List}}
+\index{help\-\_\-print\-Timer\-List@{help\-\_\-print\-Timer\-List}!Polling@{Polling}}
+\subsubsection[{help\-\_\-print\-Timer\-List}]{\setlength{\rightskip}{0pt plus 5cm}void help\-\_\-print\-Timer\-List (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N} {\bf Polld\-Time\-Info} $\ast$}]{px\-Timer\-List}
+\end{DoxyParamCaption}
+)}}\label{group__SYSFRAMEWORK__POLLD_ga7b5d0762e28e4e09406a75548c61bb4c}
+
+
+Function to print polld timer linked list. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em px\-Timer\-List} & Head pointer of timer linked list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Prints timer linkedlist values on successful 
+\end{DoxyReturn}
+\hypertarget{group__SYSFRAMEWORK__POLLD_gab17830ba31bb4e46a053646e6fca23f4}{\index{Polling@{Polling}!ubus\-Msg\-To\-Polld@{ubus\-Msg\-To\-Polld}}
+\index{ubus\-Msg\-To\-Polld@{ubus\-Msg\-To\-Polld}!Polling@{Polling}}
+\subsubsection[{ubus\-Msg\-To\-Polld}]{\setlength{\rightskip}{0pt plus 5cm}int ubus\-Msg\-To\-Polld (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N} {\bf Main\-Oper}}]{e\-Operation, }
+\item[{{\bf I\-N} {\bf Msg\-Header} $\ast$}]{px\-Dyn\-Msg, }
+\item[{{\bf O\-U\-T} {\bf Msg\-Header} $\ast$}]{px\-Output\-Msg, }
+\item[{{\bf I\-N} {\bf Polld\-Time\-Info} $\ast$}]{px\-Timer\-List}
+\end{DoxyParamCaption}
+)}}\label{group__SYSFRAMEWORK__POLLD_gab17830ba31bb4e46a053646e6fca23f4}
+
+
+Function to send ubus message to polld. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em e\-Operation} & Operation such as G\-E\-T \\
+\hline
+\mbox{\tt in}  & {\em px\-Dyn\-Msg} & Message header contains obj\-List and \hyperlink{structParamList}{Param\-List} \\
+\hline
+\mbox{\tt out}  & {\em px\-Output\-Msg} & Message header contains obj\-List and \hyperlink{structParamList}{Param\-List} \\
+\hline
+\mbox{\tt in}  & {\em px\-Timer\-List} & Struct contains timer info \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success on successful 
+\end{DoxyReturn}

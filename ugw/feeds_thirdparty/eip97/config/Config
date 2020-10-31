@@ -1,0 +1,8 @@
+config EIP97_TEST
+		bool "Select EIP-97 test module"
+		select PACKAGE_kmod-eip97-TEST
+		depends on TARGET_lantiq_xrx500 && PACKAGE_eip97
+		default n
+		help
+			Option to select EIP-97 test module.
+

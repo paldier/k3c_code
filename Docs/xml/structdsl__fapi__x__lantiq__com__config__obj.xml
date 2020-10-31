@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structdsl__fapi__x__lantiq__com__config__obj" kind="struct" prot="public">
+    <compoundname>dsl_fapi_x_lantiq_com_config_obj</compoundname>
+    <includes refid="dsl__fapi_8h" local="no">dsl_fapi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1a95dbacbdd804a3d90d472cb66d6980d0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dsl_fapi_x_lantiq_com_config_obj::bitswap_us_v</definition>
+        <argsstring></argsstring>
+        <name>bitswap_us_v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disables the Bitswap feature for Upstream direction on the DSL line in VDSL. Initial default: Enabled (bitswap_us_v=1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="779" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="779" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1a0c0f55d074b84a3d28caa3973ef1bef9" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dsl_fapi_x_lantiq_com_config_obj::bitswap_us_a</definition>
+        <argsstring></argsstring>
+        <name>bitswap_us_a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disables the Bitswap feature for Upstream direction on the DSL line in ADSL. Initial default: Enabled (bitswap_us_a=1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="782" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="782" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1adb7c968724b7a3c6a75d3a93ce3b4403" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dsl_fapi_x_lantiq_com_config_obj::bitswap_ds_v</definition>
+        <argsstring></argsstring>
+        <name>bitswap_ds_v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disables the Bitswap feature for Downstream direction on the DSL line in VDSL. Initial default: Enabled (bitswap_ds_v=1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="785" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="785" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1ad6bb2f5e64af8a45c8b7e76b51e7fae4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dsl_fapi_x_lantiq_com_config_obj::bitswap_ds_a</definition>
+        <argsstring></argsstring>
+        <name>bitswap_ds_a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disables the Bitswap feature for Downstream direction on the DSL line in ADSL. Initial default: Enabled (bitswap_ds_a=1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="788" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="788" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1a9b9b96db0accb1173f4b31060b1ecbc4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dsl_fapi_x_lantiq_com_config_obj::retx_us</definition>
+        <argsstring></argsstring>
+        <name>retx_us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disables the Retransmission feature for Upstream direction on the DSL line. Initial default: Enabled (retx_us=1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="791" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="791" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1a3f2204e4f2999f9f8ec7dfc0a0cb5975" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dsl_fapi_x_lantiq_com_config_obj::retx_ds_v</definition>
+        <argsstring></argsstring>
+        <name>retx_ds_v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disables the Retransmission feature for Downstream direction on the DSL line in VDSL. Initial default: Enabled (retx_ds_v=1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="794" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="794" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1af64c2d5f79e7b40504a38b1ba0550766" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dsl_fapi_x_lantiq_com_config_obj::retx_ds_a</definition>
+        <argsstring></argsstring>
+        <name>retx_ds_a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disables the Retransmission feature for Downstream direction on the DSL line in ADSL. Initial default: Enabled (retx_ds_a=0) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="797" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="797" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1a1a825689261e4fdba5c9c53120885d03" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dsl_fapi_x_lantiq_com_config_obj::sra_us_v</definition>
+        <argsstring></argsstring>
+        <name>sra_us_v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disables SRA feature for Upstream direction on the DSL line in VDSL. Initial default: Disabled (sra_us_v=1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="800" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="800" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1ad3c82e31f489873e748481dc01c41c14" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dsl_fapi_x_lantiq_com_config_obj::sra_us_a</definition>
+        <argsstring></argsstring>
+        <name>sra_us_a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disables SRA feature for Upstream direction on the DSL line in ADSL. Initial default: Enabled (sra_us_a=0) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="803" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="803" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1aaa5b8cac570ec37513c336382c15a55a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dsl_fapi_x_lantiq_com_config_obj::sra_ds_v</definition>
+        <argsstring></argsstring>
+        <name>sra_ds_v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disables SRA feature for Downstream direction on the DSL line in VDSL. Initial default: Disabled (sra_ds_v=1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="806" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="806" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1a179dd89ab13693380c0f63cbec6aeeb8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dsl_fapi_x_lantiq_com_config_obj::sra_ds_a</definition>
+        <argsstring></argsstring>
+        <name>sra_ds_a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disables SRA feature for Downstream direction on the DSL line in ADSL. Initial default: Enabled (sra_ds_a=0) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="809" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="809" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1aa49239a1b460ec28b61b740f0915b9ae" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dsl_fapi_x_lantiq_com_config_obj::virtual_noise_us</definition>
+        <argsstring></argsstring>
+        <name>virtual_noise_us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disables the Virtual Noise feature for Upstream direction on the DSL line. Initial default: Enabled (virtual_noise_us=1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="812" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="812" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1a4233ed6f0010e7e17785824f885cec21" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dsl_fapi_x_lantiq_com_config_obj::virtual_noise_ds</definition>
+        <argsstring></argsstring>
+        <name>virtual_noise_ds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disables the Virtual Noise feature for Downstream direction on the DSL line. Initial default: Enabled (virtual_noise_ds=1) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="815" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="815" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1ad30678405cb97ee59e237cd1862361f8" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_x_lantiq_com_config_obj::vectoring[9]</definition>
+        <argsstring>[9]</argsstring>
+        <name>vectoring</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current operational vectoring state of the DSL line Enumeration of: Off On Friendly Auto - (Initial default) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="822" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="822" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1ae7d116c23356c0403fbb3b40ff55edbd" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char dsl_fapi_x_lantiq_com_config_obj::xtse[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>xtse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This configuration parameter defines the transmission system types to be allowed by the xTU at initialization time. Please also refer to <ref refid="structdsl__fapi__line__obj_1af8a2b118576e853690ab301ce3d05c63" kindref="member">dsl_fapi_line_obj::xtse</ref> for a detailed definition this values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="826" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="826" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1a37e5159d62457661a69915c637c80c4d" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_x_lantiq_com_config_obj::link_encapsulation_config[80]</definition>
+        <argsstring>[80]</argsstring>
+        <name>link_encapsulation_config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Comma-separated list of strings. List items indicate which link encapsulation standards are initially used. Enumeration of: G.992.3_Annex_K_ATM - (Initial default) G.992.3_Annex_K_PTM G.993.2_Annex_K_ATM G.993.2_Annex_K_PTM - (Initial default) <simplesect kind="note"><para>Default initialization value means tat ADSL uses ATM and VDSL uses PTM. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="834" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="834" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1acad157690b955ff9c979e801c4671dac" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_x_lantiq_com_config_obj::dsl_next_mode[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>dsl_next_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The first/next mode that should be activated for initialization of the DSL line. Enumeration of: ApiDefault ADSL VDSL - (Initial default) <simplesect kind="note"><para>Reboot required on change!" </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="841" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="841" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1a2f64617e0041e9f1577472b327bd818e" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_x_lantiq_com_config_obj::next_tc_mode[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>next_tc_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The next TC mode in which the device has to initialize. Enumeration of: PTM - (Initial default) ATM </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="846" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="846" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1a1379ebdfd3e4c578081e1f7a033bf64f" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_x_lantiq_com_config_obj::dsl_act_seq[12]</definition>
+        <argsstring>[12]</argsstring>
+        <name>dsl_act_seq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Selection of activation sequence for initialization of the DSL line. Enumeration of: Auto (n/a) StandardGHS - (Initial default) NonStandard <simplesect kind="note"><para>Reboot required on change!" </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="853" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="853" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1ac4bb180638691e00261dcdf6d2665270" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_x_lantiq_com_config_obj::dsl_act_mode[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>dsl_act_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Selection of activation start mode for initialization of the DSL line. Enumeration of: GHS - (Initial default) T1413 <simplesect kind="note"><para>Reboot required on change!" </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="859" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="859" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__x__lantiq__com__config__obj_1af6abdd1483004c76b760edeb26586626" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dsl_fapi_x_lantiq_com_config_obj::dsl_remember</definition>
+        <argsstring></argsstring>
+        <name>dsl_remember</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Configures the “bRemember” flag for ADSL/VDSL multimode handling. If enabled, the parameters dsl_next_mode and dsl_act_mode needs to be updated after showtime is reached. Initial default: Enabled (dsl_remember=1) <simplesect kind="note"><para>Reboot required on change!" </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="864" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="864" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>DSL X_LANTIQ_COM_Config object declaration, based on TR-181 definitions. </para>    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="776" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="776" bodyend="865"/>
+    <listofallmembers>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1ad6bb2f5e64af8a45c8b7e76b51e7fae4" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>bitswap_ds_a</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1adb7c968724b7a3c6a75d3a93ce3b4403" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>bitswap_ds_v</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1a0c0f55d074b84a3d28caa3973ef1bef9" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>bitswap_us_a</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1a95dbacbdd804a3d90d472cb66d6980d0" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>bitswap_us_v</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1ac4bb180638691e00261dcdf6d2665270" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>dsl_act_mode</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1a1379ebdfd3e4c578081e1f7a033bf64f" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>dsl_act_seq</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1acad157690b955ff9c979e801c4671dac" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>dsl_next_mode</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1af6abdd1483004c76b760edeb26586626" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>dsl_remember</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1a37e5159d62457661a69915c637c80c4d" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>link_encapsulation_config</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1a2f64617e0041e9f1577472b327bd818e" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>next_tc_mode</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1af64c2d5f79e7b40504a38b1ba0550766" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>retx_ds_a</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1a3f2204e4f2999f9f8ec7dfc0a0cb5975" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>retx_ds_v</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1a9b9b96db0accb1173f4b31060b1ecbc4" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>retx_us</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1a179dd89ab13693380c0f63cbec6aeeb8" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>sra_ds_a</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1aaa5b8cac570ec37513c336382c15a55a" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>sra_ds_v</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1ad3c82e31f489873e748481dc01c41c14" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>sra_us_a</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1a1a825689261e4fdba5c9c53120885d03" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>sra_us_v</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1ad30678405cb97ee59e237cd1862361f8" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>vectoring</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1a4233ed6f0010e7e17785824f885cec21" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>virtual_noise_ds</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1aa49239a1b460ec28b61b740f0915b9ae" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>virtual_noise_us</name></member>
+      <member refid="structdsl__fapi__x__lantiq__com__config__obj_1ae7d116c23356c0403fbb3b40ff55edbd" prot="public" virt="non-virtual"><scope>dsl_fapi_x_lantiq_com_config_obj</scope><name>xtse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

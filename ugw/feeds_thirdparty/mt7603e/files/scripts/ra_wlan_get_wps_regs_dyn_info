@@ -1,0 +1,50 @@
+#!/bin/sh
+
+
+if [ ! "$ENVLOADED" ]; then
+	if [ -r /etc/rc.conf ]; then
+		 . /etc/rc.conf 2> /dev/null
+		ENVLOADED="1"
+	fi
+fi
+
+if [ ! "$CONFIGLOADED" ]; then
+	if [ -r /etc/rc.d/config.sh ]; then
+		. /etc/rc.d/config.sh 2>/dev/null
+		CONFIGLOADED="1"
+	fi
+fi
+
+#echo "ra_wlan_sec_modify ${1}" > /tmp/ra_wlan_sec_modify_file #Modify output file name
+
+RA_IF=""
+find_ra_if_from_index() {
+   eval CPEID='$'wlmn_${1}'_cpeId'
+   ra_dev=`/usr/sbin/status_oper GET "RA_MAP" "$CPEID"`
+   RA_IF=${ra_dev:2}
+}
+find_ra_if_from_index $1
+
+#echo "hsur current ralink_inf_idx is ${ralink_inf_idx}"
+
+if [ "$CONFIG_FEATURE_WIRELESS" = "1" ]; then
+
+   if [ "${RA_IF}" = "0" ]; then
+	StartLine=3
+   elif [ "${RA_IF}" = "1" ]; then
+	StartLine=5
+   elif [ "${RA_IF}" = "2" ]; then
+	StartLine=7
+   fi
+   
+   wps_reg_dyn_info_file=/ramdisk/tmp/wps_regs_dyn_info   
+   iwpriv ra${RA_IF} ar9_show get_wps_regs_dyn_info > ${wps_reg_dyn_info_file}
+
+
+   
+	 UUID=$(sed -n "${StartLine}p" $wps_reg_dyn_info_file | cut -d "=" -f 2 | cut -d " " -f 2)
+	
+
+   echo "UUID=\"$UUID\""   
+   
+fi

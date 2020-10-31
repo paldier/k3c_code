@@ -1,0 +1,364 @@
+\hypertarget{group__SYSFRAMEWORK__LOG}{\section{Logging}
+\label{group__SYSFRAMEWORK__LOG}\index{Logging@{Logging}}
+}
+
+
+Provides the logger framework. It offers User Space Logging A\-P\-I and Kernel Space Logging A\-P\-I.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga0fc3c4b6b33474c081d5b7ebaf22eb5a}{A\-F\-T\-E\-R\-X\-\_\-\-T\-Y\-P\-E}(x)~un \#\# x \#\# Log\-Type
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_gab1d033b94f76cefe0ba0de1f1da3727c}{X\-A\-F\-T\-E\-R\-X\-\_\-\-T\-Y\-P\-E}(x)~\hyperlink{group__SYSFRAMEWORK__LOG_ga0fc3c4b6b33474c081d5b7ebaf22eb5a}{A\-F\-T\-E\-R\-X\-\_\-\-T\-Y\-P\-E}(x)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga171078632f644bf6db8c72da116d0901}{A\-F\-T\-E\-R\-X\-\_\-\-L\-E\-V\-E\-L}(x)~un \#\# x \#\# Log\-Level
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga3f7bea0fb97f2e4ac1218aa0252200a5}{X\-A\-F\-T\-E\-R\-X\-\_\-\-L\-E\-V\-E\-L}(x)~\hyperlink{group__SYSFRAMEWORK__LOG_ga171078632f644bf6db8c72da116d0901}{A\-F\-T\-E\-R\-X\-\_\-\-L\-E\-V\-E\-L}(x)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_gac128c680f6759a02825861c81929a394}{log\-\_\-level}(N\-A\-M\-E)~\hyperlink{group__SYSFRAMEWORK__LOG_ga3f7bea0fb97f2e4ac1218aa0252200a5}{X\-A\-F\-T\-E\-R\-X\-\_\-\-L\-E\-V\-E\-L}(N\-A\-M\-E)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga6ba7163d1bf56b982e26207fd19c6423}{log\-\_\-type}(N\-A\-M\-E)~\hyperlink{group__SYSFRAMEWORK__LOG_gab1d033b94f76cefe0ba0de1f1da3727c}{X\-A\-F\-T\-E\-R\-X\-\_\-\-T\-Y\-P\-E}(N\-A\-M\-E)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga3f5ab355c6ed1320ff2619abddadc680}{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-C\-R\-I\-T}~L\-O\-G\-\_\-\-C\-R\-I\-T
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_gad121fa92bbdb74efb0c5e827ff4a03e1}{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R}~L\-O\-G\-\_\-\-E\-R\-R
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_gab96b18160146a1bf7d07bdafc4275ff8}{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O}~L\-O\-G\-\_\-\-I\-N\-F\-O
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_gace24df414cb5e54d71982cf045dc63ea}{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G}~L\-O\-G\-\_\-\-D\-E\-B\-U\-G
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga6bacf514b7f368dde78753e6056954a0}{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-N\-E}~0
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_gab97c9812f1de694e33186d9e0e0bccba}{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-I\-L\-E}~(1 $<$$<$ 0)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_gaa275fbedba156a3cddd59aae2ba0a24b}{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-N\-S\-O\-L\-E}~(1 $<$$<$ 1)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_gabcbc27505187c3c650b51ab0c4e85e7e}{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-I\-L\-E\-\_\-\-A\-N\-D\-\_\-\-C\-O\-N\-S\-O\-L\-E}~(\hyperlink{group__SYSFRAMEWORK__LOG_gab97c9812f1de694e33186d9e0e0bccba}{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-I\-L\-E} $\vert$ \hyperlink{group__SYSFRAMEWORK__LOG_gaa275fbedba156a3cddd59aae2ba0a24b}{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-N\-S\-O\-L\-E})
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga87f9c71c9333acfac7395c713bc278aa}{L\-O\-G\-F\-\_\-\-O\-P\-E\-N}(sl\-\_\-name)~openlog(sl\-\_\-name, L\-O\-G\-\_\-\-C\-O\-N\-S $\vert$ L\-O\-G\-\_\-\-P\-I\-D $\vert$ L\-O\-G\-\_\-\-N\-D\-E\-L\-A\-Y, L\-O\-G\-\_\-\-U\-S\-E\-R)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga157cea171e54321ab6f9c649437fe237}{L\-O\-G\-F\-\_\-\-C\-L\-O\-S\-E}()~closelog()
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga7e21957264df2949a8ca0081ca66e1ad}{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R}(args...)~\hyperlink{group__SYSFRAMEWORK__LOG_gad38f8471f267bf2d5b61bff49d3f8f7f}{P\-R\-I\-N\-T\-F}(E\-R\-R, \#\#args);
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_gaf3a266bb9623edc69c4867d0ce8958fb}{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-E\-M\-E\-R\-G}(args...)~\hyperlink{group__SYSFRAMEWORK__LOG_gad38f8471f267bf2d5b61bff49d3f8f7f}{P\-R\-I\-N\-T\-F}(E\-M\-E\-R\-G, \#\#args)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga5c99a255cabecdad258745297d5678d8}{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-A\-L\-E\-R\-T}(args...)~\hyperlink{group__SYSFRAMEWORK__LOG_gad38f8471f267bf2d5b61bff49d3f8f7f}{P\-R\-I\-N\-T\-F}(A\-L\-E\-R\-T, \#\#args)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_gaef161c193f8dcd83349eb0c0515861a8}{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}(args...)~\hyperlink{group__SYSFRAMEWORK__LOG_gad38f8471f267bf2d5b61bff49d3f8f7f}{P\-R\-I\-N\-T\-F}(C\-R\-I\-T, \#\#args)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga23b166efe08815e9d97f2a30a2ff97f7}{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G}(args...)~\hyperlink{group__SYSFRAMEWORK__LOG_gad38f8471f267bf2d5b61bff49d3f8f7f}{P\-R\-I\-N\-T\-F}(W\-A\-R\-N\-I\-N\-G, \#\#args)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga6629207f9928999a6e540422f48f1418}{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-N\-O\-T\-I\-C\-E}(args...)~\hyperlink{group__SYSFRAMEWORK__LOG_gad38f8471f267bf2d5b61bff49d3f8f7f}{P\-R\-I\-N\-T\-F}(N\-O\-T\-I\-C\-E, \#\#args)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga8ce0b241ee6ed787655fc6c683610cfa}{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O}(args...)~\hyperlink{group__SYSFRAMEWORK__LOG_gad38f8471f267bf2d5b61bff49d3f8f7f}{P\-R\-I\-N\-T\-F}(I\-N\-F\-O, \#\#args)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga0f75fa476eefdbfae8ed503bd116ccbd}{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G}(args...)~\hyperlink{group__SYSFRAMEWORK__LOG_gad38f8471f267bf2d5b61bff49d3f8f7f}{P\-R\-I\-N\-T\-F}(\hyperlink{structDEBUG}{D\-E\-B\-U\-G}, \#\#args)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga1e820f025f360fdd6c8248849cb3fa92}{L\-O\-G\-F\-\_\-\-L\-O\-G}(L\-E\-V\-E\-L, fmt, args...)~S\-Y\-S\-L\-O\-G\-\_\-\#\#L\-E\-V\-E\-L(P\-A\-C\-K\-A\-G\-E\-\_\-\-I\-D\char`\"{}\{\%s, \%d\}\-:\char`\"{}fmt, \-\_\-\-\_\-func\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, \#\#args)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_gad38f8471f267bf2d5b61bff49d3f8f7f}{P\-R\-I\-N\-T\-F}(L\-E\-V\-E\-L, fmt, args...)~S\-Y\-S\-L\-O\-G\-\_\-\#\#L\-E\-V\-E\-L(P\-A\-C\-K\-A\-G\-E\-\_\-\-I\-D\char`\"{}\{\%s, \%d\}\-:\char`\"{}fmt, \-\_\-\-\_\-func\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, \#\#args)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga78f938c353e4ad64de5bf4346aab5948}{S\-Y\-S\-L\-O\-G\-\_\-\-E\-M\-E\-R\-G}(fmt, args...)~\{ \}
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga2cb90a08bfc5f5721340b91e9a9d438b}{S\-Y\-S\-L\-O\-G\-\_\-\-A\-L\-E\-R\-T}(fmt, args...)~\{ \}
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_gaf70f5cecdbb327e462afc993f60603e6}{S\-Y\-S\-L\-O\-G\-\_\-\-C\-R\-I\-T}(fmt, args...)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_gac9b68a403677aee2f663dd09f97773cf}{S\-Y\-S\-L\-O\-G\-\_\-\-E\-R\-R}(fmt, args...)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_gadcfe639dbc1ac3f40090fada95624fb1}{S\-Y\-S\-L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G}(fmt, args...)~\{ \}
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga2993334cae7892a7c110d8b2b88fc201}{S\-Y\-S\-L\-O\-G\-\_\-\-N\-O\-T\-I\-C\-E}(fmt, args...)~\{ \}
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_ga63dc622c071f44545ca9372d6b1b7958}{S\-Y\-S\-L\-O\-G\-\_\-\-I\-N\-F\-O}(fmt, args...)
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__LOG_gacb7620367e96b45dfaa648535904d5e1}{S\-Y\-S\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G}(fmt, args...)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{commondefs_8h_adf4d876453337156dde61095e1f20223}{uint16\-\_\-t} \hyperlink{group__SYSFRAMEWORK__LOG_ga0b33a34b9be13e952b773f8004335033}{L\-O\-G\-L\-E\-V\-E\-L}
+\item 
+\hyperlink{commondefs_8h_adf4d876453337156dde61095e1f20223}{uint16\-\_\-t} \hyperlink{group__SYSFRAMEWORK__LOG_ga4fddbe43555720b1f547acde296315e6}{L\-O\-G\-T\-Y\-P\-E}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides the logger framework. It offers User Space Logging A\-P\-I and Kernel Space Logging A\-P\-I. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__SYSFRAMEWORK__LOG_ga171078632f644bf6db8c72da116d0901}{\index{Logging@{Logging}!A\-F\-T\-E\-R\-X\-\_\-\-L\-E\-V\-E\-L@{A\-F\-T\-E\-R\-X\-\_\-\-L\-E\-V\-E\-L}}
+\index{A\-F\-T\-E\-R\-X\-\_\-\-L\-E\-V\-E\-L@{A\-F\-T\-E\-R\-X\-\_\-\-L\-E\-V\-E\-L}!Logging@{Logging}}
+\subsubsection[{A\-F\-T\-E\-R\-X\-\_\-\-L\-E\-V\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-F\-T\-E\-R\-X\-\_\-\-L\-E\-V\-E\-L(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~un \#\# x \#\# Log\-Level}}\label{group__SYSFRAMEWORK__LOG_ga171078632f644bf6db8c72da116d0901}
+x level \hypertarget{group__SYSFRAMEWORK__LOG_ga0fc3c4b6b33474c081d5b7ebaf22eb5a}{\index{Logging@{Logging}!A\-F\-T\-E\-R\-X\-\_\-\-T\-Y\-P\-E@{A\-F\-T\-E\-R\-X\-\_\-\-T\-Y\-P\-E}}
+\index{A\-F\-T\-E\-R\-X\-\_\-\-T\-Y\-P\-E@{A\-F\-T\-E\-R\-X\-\_\-\-T\-Y\-P\-E}!Logging@{Logging}}
+\subsubsection[{A\-F\-T\-E\-R\-X\-\_\-\-T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-F\-T\-E\-R\-X\-\_\-\-T\-Y\-P\-E(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~un \#\# x \#\# Log\-Type}}\label{group__SYSFRAMEWORK__LOG_ga0fc3c4b6b33474c081d5b7ebaf22eb5a}
+x type \hypertarget{group__SYSFRAMEWORK__LOG_gac128c680f6759a02825861c81929a394}{\index{Logging@{Logging}!log\-\_\-level@{log\-\_\-level}}
+\index{log\-\_\-level@{log\-\_\-level}!Logging@{Logging}}
+\subsubsection[{log\-\_\-level}]{\setlength{\rightskip}{0pt plus 5cm}\#define log\-\_\-level(
+\begin{DoxyParamCaption}
+\item[{}]{N\-A\-M\-E}
+\end{DoxyParamCaption}
+)~{\bf X\-A\-F\-T\-E\-R\-X\-\_\-\-L\-E\-V\-E\-L}(N\-A\-M\-E)}}\label{group__SYSFRAMEWORK__LOG_gac128c680f6759a02825861c81929a394}
+log level \hypertarget{group__SYSFRAMEWORK__LOG_ga6ba7163d1bf56b982e26207fd19c6423}{\index{Logging@{Logging}!log\-\_\-type@{log\-\_\-type}}
+\index{log\-\_\-type@{log\-\_\-type}!Logging@{Logging}}
+\subsubsection[{log\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}\#define log\-\_\-type(
+\begin{DoxyParamCaption}
+\item[{}]{N\-A\-M\-E}
+\end{DoxyParamCaption}
+)~{\bf X\-A\-F\-T\-E\-R\-X\-\_\-\-T\-Y\-P\-E}(N\-A\-M\-E)}}\label{group__SYSFRAMEWORK__LOG_ga6ba7163d1bf56b982e26207fd19c6423}
+log type \hypertarget{group__SYSFRAMEWORK__LOG_ga157cea171e54321ab6f9c649437fe237}{\index{Logging@{Logging}!L\-O\-G\-F\-\_\-\-C\-L\-O\-S\-E@{L\-O\-G\-F\-\_\-\-C\-L\-O\-S\-E}}
+\index{L\-O\-G\-F\-\_\-\-C\-L\-O\-S\-E@{L\-O\-G\-F\-\_\-\-C\-L\-O\-S\-E}!Logging@{Logging}}
+\subsubsection[{L\-O\-G\-F\-\_\-\-C\-L\-O\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-F\-\_\-\-C\-L\-O\-S\-E(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~closelog()}}\label{group__SYSFRAMEWORK__LOG_ga157cea171e54321ab6f9c649437fe237}
+L\-O\-G C\-L\-O\-S\-E \hypertarget{group__SYSFRAMEWORK__LOG_ga1e820f025f360fdd6c8248849cb3fa92}{\index{Logging@{Logging}!L\-O\-G\-F\-\_\-\-L\-O\-G@{L\-O\-G\-F\-\_\-\-L\-O\-G}}
+\index{L\-O\-G\-F\-\_\-\-L\-O\-G@{L\-O\-G\-F\-\_\-\-L\-O\-G}!Logging@{Logging}}
+\subsubsection[{L\-O\-G\-F\-\_\-\-L\-O\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-F\-\_\-\-L\-O\-G(
+\begin{DoxyParamCaption}
+\item[{}]{L\-E\-V\-E\-L, }
+\item[{}]{fmt, }
+\item[{}]{args...}
+\end{DoxyParamCaption}
+)~S\-Y\-S\-L\-O\-G\-\_\-\#\#L\-E\-V\-E\-L(P\-A\-C\-K\-A\-G\-E\-\_\-\-I\-D\char`\"{}\{\%s, \%d\}\-:\char`\"{}fmt, \-\_\-\-\_\-func\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, \#\#args)}}\label{group__SYSFRAMEWORK__LOG_ga1e820f025f360fdd6c8248849cb3fa92}
+P\-R\-I\-N\-T\-F Macro \hypertarget{group__SYSFRAMEWORK__LOG_ga5c99a255cabecdad258745297d5678d8}{\index{Logging@{Logging}!L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-A\-L\-E\-R\-T@{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-A\-L\-E\-R\-T}}
+\index{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-A\-L\-E\-R\-T@{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-A\-L\-E\-R\-T}!Logging@{Logging}}
+\subsubsection[{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-A\-L\-E\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-A\-L\-E\-R\-T(
+\begin{DoxyParamCaption}
+\item[{}]{args...}
+\end{DoxyParamCaption}
+)~{\bf P\-R\-I\-N\-T\-F}(A\-L\-E\-R\-T, \#\#args)}}\label{group__SYSFRAMEWORK__LOG_ga5c99a255cabecdad258745297d5678d8}
+Macro to define alert level \hypertarget{group__SYSFRAMEWORK__LOG_gaef161c193f8dcd83349eb0c0515861a8}{\index{Logging@{Logging}!L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L@{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}}
+\index{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L@{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}!Logging@{Logging}}
+\subsubsection[{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-C\-R\-I\-T\-I\-C\-A\-L(
+\begin{DoxyParamCaption}
+\item[{}]{args...}
+\end{DoxyParamCaption}
+)~{\bf P\-R\-I\-N\-T\-F}(C\-R\-I\-T, \#\#args)}}\label{group__SYSFRAMEWORK__LOG_gaef161c193f8dcd83349eb0c0515861a8}
+Macro to define critical level \hypertarget{group__SYSFRAMEWORK__LOG_ga0f75fa476eefdbfae8ed503bd116ccbd}{\index{Logging@{Logging}!L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G@{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G}}
+\index{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G@{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G}!Logging@{Logging}}
+\subsubsection[{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G(
+\begin{DoxyParamCaption}
+\item[{}]{args...}
+\end{DoxyParamCaption}
+)~{\bf P\-R\-I\-N\-T\-F}({\bf D\-E\-B\-U\-G}, \#\#args)}}\label{group__SYSFRAMEWORK__LOG_ga0f75fa476eefdbfae8ed503bd116ccbd}
+Macro to define debug level \hypertarget{group__SYSFRAMEWORK__LOG_gaf3a266bb9623edc69c4867d0ce8958fb}{\index{Logging@{Logging}!L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-E\-M\-E\-R\-G@{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-E\-M\-E\-R\-G}}
+\index{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-E\-M\-E\-R\-G@{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-E\-M\-E\-R\-G}!Logging@{Logging}}
+\subsubsection[{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-E\-M\-E\-R\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-E\-M\-E\-R\-G(
+\begin{DoxyParamCaption}
+\item[{}]{args...}
+\end{DoxyParamCaption}
+)~{\bf P\-R\-I\-N\-T\-F}(E\-M\-E\-R\-G, \#\#args)}}\label{group__SYSFRAMEWORK__LOG_gaf3a266bb9623edc69c4867d0ce8958fb}
+Macro to define emergency level \hypertarget{group__SYSFRAMEWORK__LOG_ga7e21957264df2949a8ca0081ca66e1ad}{\index{Logging@{Logging}!L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R@{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R}}
+\index{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R@{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R}!Logging@{Logging}}
+\subsubsection[{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R(
+\begin{DoxyParamCaption}
+\item[{}]{args...}
+\end{DoxyParamCaption}
+)~{\bf P\-R\-I\-N\-T\-F}(E\-R\-R, \#\#args);}}\label{group__SYSFRAMEWORK__LOG_ga7e21957264df2949a8ca0081ca66e1ad}
+Macro to define error level \hypertarget{group__SYSFRAMEWORK__LOG_ga8ce0b241ee6ed787655fc6c683610cfa}{\index{Logging@{Logging}!L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O@{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O}}
+\index{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O@{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O}!Logging@{Logging}}
+\subsubsection[{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O(
+\begin{DoxyParamCaption}
+\item[{}]{args...}
+\end{DoxyParamCaption}
+)~{\bf P\-R\-I\-N\-T\-F}(I\-N\-F\-O, \#\#args)}}\label{group__SYSFRAMEWORK__LOG_ga8ce0b241ee6ed787655fc6c683610cfa}
+Macro to define info level \hypertarget{group__SYSFRAMEWORK__LOG_ga6629207f9928999a6e540422f48f1418}{\index{Logging@{Logging}!L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-N\-O\-T\-I\-C\-E@{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-N\-O\-T\-I\-C\-E}}
+\index{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-N\-O\-T\-I\-C\-E@{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-N\-O\-T\-I\-C\-E}!Logging@{Logging}}
+\subsubsection[{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-N\-O\-T\-I\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-N\-O\-T\-I\-C\-E(
+\begin{DoxyParamCaption}
+\item[{}]{args...}
+\end{DoxyParamCaption}
+)~{\bf P\-R\-I\-N\-T\-F}(N\-O\-T\-I\-C\-E, \#\#args)}}\label{group__SYSFRAMEWORK__LOG_ga6629207f9928999a6e540422f48f1418}
+Macro to define notice level \hypertarget{group__SYSFRAMEWORK__LOG_ga23b166efe08815e9d97f2a30a2ff97f7}{\index{Logging@{Logging}!L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G@{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G}}
+\index{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G@{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G}!Logging@{Logging}}
+\subsubsection[{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G(
+\begin{DoxyParamCaption}
+\item[{}]{args...}
+\end{DoxyParamCaption}
+)~{\bf P\-R\-I\-N\-T\-F}(W\-A\-R\-N\-I\-N\-G, \#\#args)}}\label{group__SYSFRAMEWORK__LOG_ga23b166efe08815e9d97f2a30a2ff97f7}
+Macro to define warnning level \hypertarget{group__SYSFRAMEWORK__LOG_ga87f9c71c9333acfac7395c713bc278aa}{\index{Logging@{Logging}!L\-O\-G\-F\-\_\-\-O\-P\-E\-N@{L\-O\-G\-F\-\_\-\-O\-P\-E\-N}}
+\index{L\-O\-G\-F\-\_\-\-O\-P\-E\-N@{L\-O\-G\-F\-\_\-\-O\-P\-E\-N}!Logging@{Logging}}
+\subsubsection[{L\-O\-G\-F\-\_\-\-O\-P\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-F\-\_\-\-O\-P\-E\-N(
+\begin{DoxyParamCaption}
+\item[{}]{sl\-\_\-name}
+\end{DoxyParamCaption}
+)~openlog(sl\-\_\-name, L\-O\-G\-\_\-\-C\-O\-N\-S $\vert$ L\-O\-G\-\_\-\-P\-I\-D $\vert$ L\-O\-G\-\_\-\-N\-D\-E\-L\-A\-Y, L\-O\-G\-\_\-\-U\-S\-E\-R)}}\label{group__SYSFRAMEWORK__LOG_ga87f9c71c9333acfac7395c713bc278aa}
+L\-O\-G O\-P\-E\-N \hypertarget{group__SYSFRAMEWORK__LOG_gad38f8471f267bf2d5b61bff49d3f8f7f}{\index{Logging@{Logging}!P\-R\-I\-N\-T\-F@{P\-R\-I\-N\-T\-F}}
+\index{P\-R\-I\-N\-T\-F@{P\-R\-I\-N\-T\-F}!Logging@{Logging}}
+\subsubsection[{P\-R\-I\-N\-T\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-R\-I\-N\-T\-F(
+\begin{DoxyParamCaption}
+\item[{}]{L\-E\-V\-E\-L, }
+\item[{}]{fmt, }
+\item[{}]{args...}
+\end{DoxyParamCaption}
+)~S\-Y\-S\-L\-O\-G\-\_\-\#\#L\-E\-V\-E\-L(P\-A\-C\-K\-A\-G\-E\-\_\-\-I\-D\char`\"{}\{\%s, \%d\}\-:\char`\"{}fmt, \-\_\-\-\_\-func\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, \#\#args)}}\label{group__SYSFRAMEWORK__LOG_gad38f8471f267bf2d5b61bff49d3f8f7f}
+P\-R\-I\-N\-T\-F Macro \hypertarget{group__SYSFRAMEWORK__LOG_ga3f5ab355c6ed1320ff2619abddadc680}{\index{Logging@{Logging}!S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-C\-R\-I\-T@{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-C\-R\-I\-T}}
+\index{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-C\-R\-I\-T@{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-C\-R\-I\-T}!Logging@{Logging}}
+\subsubsection[{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-C\-R\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-C\-R\-I\-T~L\-O\-G\-\_\-\-C\-R\-I\-T}}\label{group__SYSFRAMEWORK__LOG_ga3f5ab355c6ed1320ff2619abddadc680}
+critical level \hypertarget{group__SYSFRAMEWORK__LOG_gace24df414cb5e54d71982cf045dc63ea}{\index{Logging@{Logging}!S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G@{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G}}
+\index{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G@{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G}!Logging@{Logging}}
+\subsubsection[{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G~L\-O\-G\-\_\-\-D\-E\-B\-U\-G}}\label{group__SYSFRAMEWORK__LOG_gace24df414cb5e54d71982cf045dc63ea}
+debug level \hypertarget{group__SYSFRAMEWORK__LOG_gad121fa92bbdb74efb0c5e827ff4a03e1}{\index{Logging@{Logging}!S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R@{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R}}
+\index{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R@{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R}!Logging@{Logging}}
+\subsubsection[{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R~L\-O\-G\-\_\-\-E\-R\-R}}\label{group__SYSFRAMEWORK__LOG_gad121fa92bbdb74efb0c5e827ff4a03e1}
+error level \hypertarget{group__SYSFRAMEWORK__LOG_gab96b18160146a1bf7d07bdafc4275ff8}{\index{Logging@{Logging}!S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O@{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O}}
+\index{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O@{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O}!Logging@{Logging}}
+\subsubsection[{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O~L\-O\-G\-\_\-\-I\-N\-F\-O}}\label{group__SYSFRAMEWORK__LOG_gab96b18160146a1bf7d07bdafc4275ff8}
+info level \hypertarget{group__SYSFRAMEWORK__LOG_gaa275fbedba156a3cddd59aae2ba0a24b}{\index{Logging@{Logging}!S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-N\-S\-O\-L\-E@{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-N\-S\-O\-L\-E}}
+\index{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-N\-S\-O\-L\-E@{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-N\-S\-O\-L\-E}!Logging@{Logging}}
+\subsubsection[{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-N\-S\-O\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-N\-S\-O\-L\-E~(1 $<$$<$ 1)}}\label{group__SYSFRAMEWORK__LOG_gaa275fbedba156a3cddd59aae2ba0a24b}
+log type console \hypertarget{group__SYSFRAMEWORK__LOG_gab97c9812f1de694e33186d9e0e0bccba}{\index{Logging@{Logging}!S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-I\-L\-E@{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-I\-L\-E}}
+\index{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-I\-L\-E@{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-I\-L\-E}!Logging@{Logging}}
+\subsubsection[{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-I\-L\-E~(1 $<$$<$ 0)}}\label{group__SYSFRAMEWORK__LOG_gab97c9812f1de694e33186d9e0e0bccba}
+log type file \hypertarget{group__SYSFRAMEWORK__LOG_gabcbc27505187c3c650b51ab0c4e85e7e}{\index{Logging@{Logging}!S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-I\-L\-E\-\_\-\-A\-N\-D\-\_\-\-C\-O\-N\-S\-O\-L\-E@{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-I\-L\-E\-\_\-\-A\-N\-D\-\_\-\-C\-O\-N\-S\-O\-L\-E}}
+\index{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-I\-L\-E\-\_\-\-A\-N\-D\-\_\-\-C\-O\-N\-S\-O\-L\-E@{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-I\-L\-E\-\_\-\-A\-N\-D\-\_\-\-C\-O\-N\-S\-O\-L\-E}!Logging@{Logging}}
+\subsubsection[{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-I\-L\-E\-\_\-\-A\-N\-D\-\_\-\-C\-O\-N\-S\-O\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-I\-L\-E\-\_\-\-A\-N\-D\-\_\-\-C\-O\-N\-S\-O\-L\-E~({\bf S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-I\-L\-E} $\vert$ {\bf S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-O\-N\-S\-O\-L\-E})}}\label{group__SYSFRAMEWORK__LOG_gabcbc27505187c3c650b51ab0c4e85e7e}
+log type both console and file \hypertarget{group__SYSFRAMEWORK__LOG_ga6bacf514b7f368dde78753e6056954a0}{\index{Logging@{Logging}!S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-N\-E@{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-N\-E}}
+\index{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-N\-E@{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-N\-E}!Logging@{Logging}}
+\subsubsection[{S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-\_\-\-L\-O\-G\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-N\-E~0}}\label{group__SYSFRAMEWORK__LOG_ga6bacf514b7f368dde78753e6056954a0}
+log type \hypertarget{group__SYSFRAMEWORK__LOG_ga2cb90a08bfc5f5721340b91e9a9d438b}{\index{Logging@{Logging}!S\-Y\-S\-L\-O\-G\-\_\-\-A\-L\-E\-R\-T@{S\-Y\-S\-L\-O\-G\-\_\-\-A\-L\-E\-R\-T}}
+\index{S\-Y\-S\-L\-O\-G\-\_\-\-A\-L\-E\-R\-T@{S\-Y\-S\-L\-O\-G\-\_\-\-A\-L\-E\-R\-T}!Logging@{Logging}}
+\subsubsection[{S\-Y\-S\-L\-O\-G\-\_\-\-A\-L\-E\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-L\-O\-G\-\_\-\-A\-L\-E\-R\-T(
+\begin{DoxyParamCaption}
+\item[{}]{fmt, }
+\item[{}]{args...}
+\end{DoxyParamCaption}
+)~\{ \}}}\label{group__SYSFRAMEWORK__LOG_ga2cb90a08bfc5f5721340b91e9a9d438b}
+Alert log level \hypertarget{group__SYSFRAMEWORK__LOG_gaf70f5cecdbb327e462afc993f60603e6}{\index{Logging@{Logging}!S\-Y\-S\-L\-O\-G\-\_\-\-C\-R\-I\-T@{S\-Y\-S\-L\-O\-G\-\_\-\-C\-R\-I\-T}}
+\index{S\-Y\-S\-L\-O\-G\-\_\-\-C\-R\-I\-T@{S\-Y\-S\-L\-O\-G\-\_\-\-C\-R\-I\-T}!Logging@{Logging}}
+\subsubsection[{S\-Y\-S\-L\-O\-G\-\_\-\-C\-R\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-L\-O\-G\-\_\-\-C\-R\-I\-T(
+\begin{DoxyParamCaption}
+\item[{}]{fmt, }
+\item[{}]{args...}
+\end{DoxyParamCaption}
+)}}\label{group__SYSFRAMEWORK__LOG_gaf70f5cecdbb327e462afc993f60603e6}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do}\{                                     \(\backslash\)
+                                if( \hyperlink{group__SYSFRAMEWORK__LOG_ga3f5ab355c6ed1320ff2619abddadc680}{SYS\_LOG\_CRIT} > \hyperlink{group__SYSFRAMEWORK__LOG_ga0b33a34b9be13e952b773f8004335033}{LOGLEVEL}) \(\backslash\)
+                                break;  \(\backslash\)
+                                if( \hyperlink{group__SYSFRAMEWORK__LOG_ga4fddbe43555720b1f547acde296315e6}{LOGTYPE} & \hyperlink{group__SYSFRAMEWORK__LOG_gab97c9812f1de694e33186d9e0e0bccba}{SYS\_LOG\_TYPE\_FILE}) \(\backslash\)
+                                syslog(LOG\_CRIT, fmt, ##args); \(\backslash\)
+                                if( \hyperlink{group__SYSFRAMEWORK__LOG_ga4fddbe43555720b1f547acde296315e6}{LOGTYPE} & \hyperlink{group__SYSFRAMEWORK__LOG_gaa275fbedba156a3cddd59aae2ba0a24b}{SYS\_LOG\_TYPE\_CONSOLE}) \(\backslash\)
+                                LOGF\_LOG\_PRINT(COLOR\_RED, \textcolor{stringliteral}{"CRITICAL"}, fmt, ##args); \(\backslash\)
+                \}\textcolor{keywordflow}{while}(0);
+\end{DoxyCode}
+Critical log level \hypertarget{group__SYSFRAMEWORK__LOG_gacb7620367e96b45dfaa648535904d5e1}{\index{Logging@{Logging}!S\-Y\-S\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G@{S\-Y\-S\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G}}
+\index{S\-Y\-S\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G@{S\-Y\-S\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G}!Logging@{Logging}}
+\subsubsection[{S\-Y\-S\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G(
+\begin{DoxyParamCaption}
+\item[{}]{fmt, }
+\item[{}]{args...}
+\end{DoxyParamCaption}
+)}}\label{group__SYSFRAMEWORK__LOG_gacb7620367e96b45dfaa648535904d5e1}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do}\{                                     \(\backslash\)
+                                if( \hyperlink{group__SYSFRAMEWORK__LOG_gace24df414cb5e54d71982cf045dc63ea}{SYS\_LOG\_DEBUG} > \hyperlink{group__SYSFRAMEWORK__LOG_ga0b33a34b9be13e952b773f8004335033}{LOGLEVEL}) \(\backslash\)
+                                break;  \(\backslash\)
+                                if(\hyperlink{group__SYSFRAMEWORK__LOG_ga4fddbe43555720b1f547acde296315e6}{LOGTYPE} & \hyperlink{group__SYSFRAMEWORK__LOG_gab97c9812f1de694e33186d9e0e0bccba}{SYS\_LOG\_TYPE\_FILE}) \(\backslash\)
+                                syslog(LOG\_DEBUG, fmt, ##args); \(\backslash\)
+                                if( \hyperlink{group__SYSFRAMEWORK__LOG_ga4fddbe43555720b1f547acde296315e6}{LOGTYPE} & \hyperlink{group__SYSFRAMEWORK__LOG_gaa275fbedba156a3cddd59aae2ba0a24b}{SYS\_LOG\_TYPE\_CONSOLE}) \(\backslash\)
+                                LOGF\_LOG\_PRINT(COLOR\_NRM, \textcolor{stringliteral}{"DEBUG"}, fmt, ##args); \(\backslash\)
+                \}\textcolor{keywordflow}{while}(0);
+\end{DoxyCode}
+Debug log level \hypertarget{group__SYSFRAMEWORK__LOG_ga78f938c353e4ad64de5bf4346aab5948}{\index{Logging@{Logging}!S\-Y\-S\-L\-O\-G\-\_\-\-E\-M\-E\-R\-G@{S\-Y\-S\-L\-O\-G\-\_\-\-E\-M\-E\-R\-G}}
+\index{S\-Y\-S\-L\-O\-G\-\_\-\-E\-M\-E\-R\-G@{S\-Y\-S\-L\-O\-G\-\_\-\-E\-M\-E\-R\-G}!Logging@{Logging}}
+\subsubsection[{S\-Y\-S\-L\-O\-G\-\_\-\-E\-M\-E\-R\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-L\-O\-G\-\_\-\-E\-M\-E\-R\-G(
+\begin{DoxyParamCaption}
+\item[{}]{fmt, }
+\item[{}]{args...}
+\end{DoxyParamCaption}
+)~\{ \}}}\label{group__SYSFRAMEWORK__LOG_ga78f938c353e4ad64de5bf4346aab5948}
+Emergency log level \hypertarget{group__SYSFRAMEWORK__LOG_gac9b68a403677aee2f663dd09f97773cf}{\index{Logging@{Logging}!S\-Y\-S\-L\-O\-G\-\_\-\-E\-R\-R@{S\-Y\-S\-L\-O\-G\-\_\-\-E\-R\-R}}
+\index{S\-Y\-S\-L\-O\-G\-\_\-\-E\-R\-R@{S\-Y\-S\-L\-O\-G\-\_\-\-E\-R\-R}!Logging@{Logging}}
+\subsubsection[{S\-Y\-S\-L\-O\-G\-\_\-\-E\-R\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-L\-O\-G\-\_\-\-E\-R\-R(
+\begin{DoxyParamCaption}
+\item[{}]{fmt, }
+\item[{}]{args...}
+\end{DoxyParamCaption}
+)}}\label{group__SYSFRAMEWORK__LOG_gac9b68a403677aee2f663dd09f97773cf}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do}\{                                     \(\backslash\)
+                                if( \hyperlink{group__SYSFRAMEWORK__LOG_gad121fa92bbdb74efb0c5e827ff4a03e1}{SYS\_LOG\_ERR} > \hyperlink{group__SYSFRAMEWORK__LOG_ga0b33a34b9be13e952b773f8004335033}{LOGLEVEL}) \(\backslash\)
+                                break;  \(\backslash\)
+                                if( \hyperlink{group__SYSFRAMEWORK__LOG_ga4fddbe43555720b1f547acde296315e6}{LOGTYPE} & \hyperlink{group__SYSFRAMEWORK__LOG_gab97c9812f1de694e33186d9e0e0bccba}{SYS\_LOG\_TYPE\_FILE}) \(\backslash\)
+                                syslog(LOG\_ERR, fmt, ##args); \(\backslash\)
+                                if( \hyperlink{group__SYSFRAMEWORK__LOG_ga4fddbe43555720b1f547acde296315e6}{LOGTYPE} & \hyperlink{group__SYSFRAMEWORK__LOG_gaa275fbedba156a3cddd59aae2ba0a24b}{SYS\_LOG\_TYPE\_CONSOLE}) \(\backslash\)
+                                LOGF\_LOG\_PRINT(COLOR\_ORA, \textcolor{stringliteral}{"ERROR"} , fmt, ##args); \(\backslash\)
+                \}\textcolor{keywordflow}{while}(0);
+\end{DoxyCode}
+Error log level \hypertarget{group__SYSFRAMEWORK__LOG_ga63dc622c071f44545ca9372d6b1b7958}{\index{Logging@{Logging}!S\-Y\-S\-L\-O\-G\-\_\-\-I\-N\-F\-O@{S\-Y\-S\-L\-O\-G\-\_\-\-I\-N\-F\-O}}
+\index{S\-Y\-S\-L\-O\-G\-\_\-\-I\-N\-F\-O@{S\-Y\-S\-L\-O\-G\-\_\-\-I\-N\-F\-O}!Logging@{Logging}}
+\subsubsection[{S\-Y\-S\-L\-O\-G\-\_\-\-I\-N\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-L\-O\-G\-\_\-\-I\-N\-F\-O(
+\begin{DoxyParamCaption}
+\item[{}]{fmt, }
+\item[{}]{args...}
+\end{DoxyParamCaption}
+)}}\label{group__SYSFRAMEWORK__LOG_ga63dc622c071f44545ca9372d6b1b7958}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do}\{                                     \(\backslash\)
+                                if( \hyperlink{group__SYSFRAMEWORK__LOG_gab96b18160146a1bf7d07bdafc4275ff8}{SYS\_LOG\_INFO} > \hyperlink{group__SYSFRAMEWORK__LOG_ga0b33a34b9be13e952b773f8004335033}{LOGLEVEL}) \(\backslash\)
+                                break;  \(\backslash\)
+                                if( \hyperlink{group__SYSFRAMEWORK__LOG_ga4fddbe43555720b1f547acde296315e6}{LOGTYPE} & \hyperlink{group__SYSFRAMEWORK__LOG_gab97c9812f1de694e33186d9e0e0bccba}{SYS\_LOG\_TYPE\_FILE}) \(\backslash\)
+                                syslog(LOG\_INFO, fmt, ##args); \(\backslash\)
+                                if( \hyperlink{group__SYSFRAMEWORK__LOG_ga4fddbe43555720b1f547acde296315e6}{LOGTYPE} & \hyperlink{group__SYSFRAMEWORK__LOG_gaa275fbedba156a3cddd59aae2ba0a24b}{SYS\_LOG\_TYPE\_CONSOLE}) \(\backslash\)
+                                LOGF\_LOG\_PRINT(COLOR\_NRM, \textcolor{stringliteral}{"INFO"}, fmt, ##args); \(\backslash\)
+                \}\textcolor{keywordflow}{while}(0);
+\end{DoxyCode}
+Information log level \hypertarget{group__SYSFRAMEWORK__LOG_ga2993334cae7892a7c110d8b2b88fc201}{\index{Logging@{Logging}!S\-Y\-S\-L\-O\-G\-\_\-\-N\-O\-T\-I\-C\-E@{S\-Y\-S\-L\-O\-G\-\_\-\-N\-O\-T\-I\-C\-E}}
+\index{S\-Y\-S\-L\-O\-G\-\_\-\-N\-O\-T\-I\-C\-E@{S\-Y\-S\-L\-O\-G\-\_\-\-N\-O\-T\-I\-C\-E}!Logging@{Logging}}
+\subsubsection[{S\-Y\-S\-L\-O\-G\-\_\-\-N\-O\-T\-I\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-L\-O\-G\-\_\-\-N\-O\-T\-I\-C\-E(
+\begin{DoxyParamCaption}
+\item[{}]{fmt, }
+\item[{}]{args...}
+\end{DoxyParamCaption}
+)~\{ \}}}\label{group__SYSFRAMEWORK__LOG_ga2993334cae7892a7c110d8b2b88fc201}
+Notice log level \hypertarget{group__SYSFRAMEWORK__LOG_gadcfe639dbc1ac3f40090fada95624fb1}{\index{Logging@{Logging}!S\-Y\-S\-L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G@{S\-Y\-S\-L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G}}
+\index{S\-Y\-S\-L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G@{S\-Y\-S\-L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G}!Logging@{Logging}}
+\subsubsection[{S\-Y\-S\-L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Y\-S\-L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G(
+\begin{DoxyParamCaption}
+\item[{}]{fmt, }
+\item[{}]{args...}
+\end{DoxyParamCaption}
+)~\{ \}}}\label{group__SYSFRAMEWORK__LOG_gadcfe639dbc1ac3f40090fada95624fb1}
+Warning log level \hypertarget{group__SYSFRAMEWORK__LOG_ga3f7bea0fb97f2e4ac1218aa0252200a5}{\index{Logging@{Logging}!X\-A\-F\-T\-E\-R\-X\-\_\-\-L\-E\-V\-E\-L@{X\-A\-F\-T\-E\-R\-X\-\_\-\-L\-E\-V\-E\-L}}
+\index{X\-A\-F\-T\-E\-R\-X\-\_\-\-L\-E\-V\-E\-L@{X\-A\-F\-T\-E\-R\-X\-\_\-\-L\-E\-V\-E\-L}!Logging@{Logging}}
+\subsubsection[{X\-A\-F\-T\-E\-R\-X\-\_\-\-L\-E\-V\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define X\-A\-F\-T\-E\-R\-X\-\_\-\-L\-E\-V\-E\-L(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~{\bf A\-F\-T\-E\-R\-X\-\_\-\-L\-E\-V\-E\-L}(x)}}\label{group__SYSFRAMEWORK__LOG_ga3f7bea0fb97f2e4ac1218aa0252200a5}
+x after level \hypertarget{group__SYSFRAMEWORK__LOG_gab1d033b94f76cefe0ba0de1f1da3727c}{\index{Logging@{Logging}!X\-A\-F\-T\-E\-R\-X\-\_\-\-T\-Y\-P\-E@{X\-A\-F\-T\-E\-R\-X\-\_\-\-T\-Y\-P\-E}}
+\index{X\-A\-F\-T\-E\-R\-X\-\_\-\-T\-Y\-P\-E@{X\-A\-F\-T\-E\-R\-X\-\_\-\-T\-Y\-P\-E}!Logging@{Logging}}
+\subsubsection[{X\-A\-F\-T\-E\-R\-X\-\_\-\-T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define X\-A\-F\-T\-E\-R\-X\-\_\-\-T\-Y\-P\-E(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~{\bf A\-F\-T\-E\-R\-X\-\_\-\-T\-Y\-P\-E}(x)}}\label{group__SYSFRAMEWORK__LOG_gab1d033b94f76cefe0ba0de1f1da3727c}
+x after type 
+
+\subsection{Variable Documentation}
+\hypertarget{group__SYSFRAMEWORK__LOG_ga0b33a34b9be13e952b773f8004335033}{\index{Logging@{Logging}!L\-O\-G\-L\-E\-V\-E\-L@{L\-O\-G\-L\-E\-V\-E\-L}}
+\index{L\-O\-G\-L\-E\-V\-E\-L@{L\-O\-G\-L\-E\-V\-E\-L}!Logging@{Logging}}
+\subsubsection[{L\-O\-G\-L\-E\-V\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\-\_\-t} L\-O\-G\-L\-E\-V\-E\-L}}\label{group__SYSFRAMEWORK__LOG_ga0b33a34b9be13e952b773f8004335033}
+log level \hypertarget{group__SYSFRAMEWORK__LOG_ga4fddbe43555720b1f547acde296315e6}{\index{Logging@{Logging}!L\-O\-G\-T\-Y\-P\-E@{L\-O\-G\-T\-Y\-P\-E}}
+\index{L\-O\-G\-T\-Y\-P\-E@{L\-O\-G\-T\-Y\-P\-E}!Logging@{Logging}}
+\subsubsection[{L\-O\-G\-T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16\-\_\-t} L\-O\-G\-T\-Y\-P\-E}}\label{group__SYSFRAMEWORK__LOG_ga4fddbe43555720b1f547acde296315e6}
+log type 

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structdsl__fapi__line__stats__interval__obj" kind="struct" prot="public">
+    <compoundname>dsl_fapi_line_stats_interval_obj</compoundname>
+    <includes refid="dsl__fapi_8h" local="no">dsl_fapi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdsl__fapi__line__stats__interval__obj_1ab7bf52b973364ae7b0c254ef31ab18a8" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_stats_interval_obj::errored_secs</definition>
+        <argsstring></argsstring>
+        <name>errored_secs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Common data structure for the several objects.<itemizedlist>
+<listitem><para>Stats.Total: Total number of errored seconds. <simplesect kind="note"><para>(ES-L as defined in ITU-T Rec. [G.997.1]).</para></simplesect>
+</para></listitem><listitem><para>Stats.Showtime: Number of errored seconds since the most recent DSL Showtime. <simplesect kind="note"><para>(ES-L as defined in ITU-T Rec. [G.997.1]).</para></simplesect>
+</para></listitem><listitem><para>Stats.LastShowtime: Number of errored seconds since the second most recent DSL Showtime. <simplesect kind="note"><para>(ES-L as defined in ITU-T Rec. [G.997.1]).</para></simplesect>
+</para></listitem><listitem><para>Stats.CurrentDay: Number of errored seconds accumulated during the current day. <simplesect kind="note"><para>(ES-L as defined in ITU-T Rec. [G.997.1]).</para></simplesect>
+</para></listitem><listitem><para>Stats.QuarterHour: Number of errored seconds accumulated during the current quarter hour. <simplesect kind="note"><para>(ES-L as defined in ITU-T Rec. [G.997.1]). </para><simplesectsep/><para>This parameter is OPTIONAL at the G and S/T interfaces in G.997.1 Amendment 1. </para></simplesect>
+</para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="391" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__stats__interval__obj_1aa33dade3d0503936c3f3cabc64447b8e" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_stats_interval_obj::severely_errored_secs</definition>
+        <argsstring></argsstring>
+        <name>severely_errored_secs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Common data structure for the several objects.<itemizedlist>
+<listitem><para>Stats.Total: Total number of severely errored seconds. <simplesect kind="note"><para>(SES-L as defined in ITU-T Rec. [G.997.1]).</para></simplesect>
+</para></listitem><listitem><para>Stats.Showtime: Number of severely errored seconds since the most recent DSL Showtime. <simplesect kind="note"><para>(SES-L as defined in ITU-T Rec. [G.997.1]).</para></simplesect>
+</para></listitem><listitem><para>Stats.LastShowtime: Number of severely errored seconds since the second most recent DSL Showtime. <simplesect kind="note"><para>(SES-L as defined in ITU-T Rec. [G.997.1]).</para></simplesect>
+</para></listitem><listitem><para>Stats.CurrentDay: Number of severely errored seconds accumulated during the current day. <simplesect kind="note"><para>(SES-L as defined in ITU-T Rec. [G.997.1]).</para></simplesect>
+</para></listitem><listitem><para>Stats.QuarterHour: Number of severely errored seconds accumulated during the current quarter hour. <simplesect kind="note"><para>(SES-L as defined in ITU-T Rec. [G.997.1]). </para><simplesectsep/><para>This parameter is OPTIONAL at the G and S/T interfaces in G.997.1 Amendment 1. </para></simplesect>
+</para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="404" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>DSL Line object total statistics declaration, based on TR-181 definitions. DSL Line object showtime statistics declaration, based on TR-181 definitions. DSL Line object last showtime statistics declaration, based on TR-181 definitions. DSL Line object current day statistics declaration, based on TR-181 definitions. DSL Line object quarter hour statistics declaration, based on TR-181 definitions. </para>    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="378" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="378" bodyend="405"/>
+    <listofallmembers>
+      <member refid="structdsl__fapi__line__stats__interval__obj_1ab7bf52b973364ae7b0c254ef31ab18a8" prot="public" virt="non-virtual"><scope>dsl_fapi_line_stats_interval_obj</scope><name>errored_secs</name></member>
+      <member refid="structdsl__fapi__line__stats__interval__obj_1aa33dade3d0503936c3f3cabc64447b8e" prot="public" virt="non-virtual"><scope>dsl_fapi_line_stats_interval_obj</scope><name>severely_errored_secs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

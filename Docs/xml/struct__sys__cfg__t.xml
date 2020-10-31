@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct__sys__cfg__t" kind="struct" prot="public">
+    <compoundname>_sys_cfg_t</compoundname>
+    <includes refid="fapi__sys__common_8h" local="no">fapi_sys_common.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__sys__cfg__t_1ad5d30a6c3e3302f1da58c425499e72d2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__FAPI__SYSTEM_1ga3ad40ceee4008665be22b54298c37de0" kindref="member">WAN_TYPE_t</ref></type>
+        <definition>WAN_TYPE_t _sys_cfg_t::priWAN</definition>
+        <argsstring></argsstring>
+        <name>priWAN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="316" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__sys__cfg__t_1a4149f94907084a8ff545e282f7ba5e40" prot="public" static="no" mutable="no">
+        <type><ref refid="group__FAPI__SYSTEM_1ga3ad40ceee4008665be22b54298c37de0" kindref="member">WAN_TYPE_t</ref></type>
+        <definition>WAN_TYPE_t _sys_cfg_t::secWAN</definition>
+        <argsstring></argsstring>
+        <name>secWAN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="317" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__sys__cfg__t_1aade8e8ffea3219af0ffa389a36014efc" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool _sys_cfg_t::secActive</definition>
+        <argsstring></argsstring>
+        <name>secActive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="318" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__sys__cfg__t_1a4383aa0218694c7bb096fbd35c276865" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool _sys_cfg_t::qosEna</definition>
+        <argsstring></argsstring>
+        <name>qosEna</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="319" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__sys__cfg__t_1afde96e5a2052208c4537d52036979027" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool _sys_cfg_t::ipv6Ena</definition>
+        <argsstring></argsstring>
+        <name>ipv6Ena</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="320" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__sys__cfg__t_1aedd95d31d4e2eeb9090017f5b5b79398" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool _sys_cfg_t::wanlteEna</definition>
+        <argsstring></argsstring>
+        <name>wanlteEna</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="321" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__sys__cfg__t_1ab6dc3b016d55386b63ccdad15a6847d6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _sys_cfg_t::wanphy</definition>
+        <argsstring></argsstring>
+        <name>wanphy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="322" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="322" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure defining system configuration during init. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="315" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="315" bodyend="323"/>
+    <listofallmembers>
+      <member refid="struct__sys__cfg__t_1afde96e5a2052208c4537d52036979027" prot="public" virt="non-virtual"><scope>_sys_cfg_t</scope><name>ipv6Ena</name></member>
+      <member refid="struct__sys__cfg__t_1ad5d30a6c3e3302f1da58c425499e72d2" prot="public" virt="non-virtual"><scope>_sys_cfg_t</scope><name>priWAN</name></member>
+      <member refid="struct__sys__cfg__t_1a4383aa0218694c7bb096fbd35c276865" prot="public" virt="non-virtual"><scope>_sys_cfg_t</scope><name>qosEna</name></member>
+      <member refid="struct__sys__cfg__t_1aade8e8ffea3219af0ffa389a36014efc" prot="public" virt="non-virtual"><scope>_sys_cfg_t</scope><name>secActive</name></member>
+      <member refid="struct__sys__cfg__t_1a4149f94907084a8ff545e282f7ba5e40" prot="public" virt="non-virtual"><scope>_sys_cfg_t</scope><name>secWAN</name></member>
+      <member refid="struct__sys__cfg__t_1aedd95d31d4e2eeb9090017f5b5b79398" prot="public" virt="non-virtual"><scope>_sys_cfg_t</scope><name>wanlteEna</name></member>
+      <member refid="struct__sys__cfg__t_1ab6dc3b016d55386b63ccdad15a6847d6" prot="public" virt="non-virtual"><scope>_sys_cfg_t</scope><name>wanphy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

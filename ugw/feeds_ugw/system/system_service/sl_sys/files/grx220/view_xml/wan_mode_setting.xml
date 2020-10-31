@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <header>
+    <name>Primary WAN Mode Setting</name>
+        <description>Configuration of primary wan mode for VRX220</description>
+    </header>
+    <object  viewtype="form">
+        <object name="Device.X_LANTIQ_COM_System">
+            <parameter   name="PrimaryMode"  type="dropdown"  validvalues="Ethernet,LTE" webname="Primary WAN Mode"></parameter>
+        </object>
+            <parameter  name="Modify"  action="post" routeurl="Apply($event)" type="submitbutton" webname="Apply" maxlen="64"></parameter>
+            <parameter  name="Cancel"  routeurl="reset()" action="post" type="submitbutton" webname="Reset" maxlen="64"></parameter>
+    </object>
+</view>
+

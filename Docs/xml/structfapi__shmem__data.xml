@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structfapi__shmem__data" kind="struct" prot="public">
+    <compoundname>fapi_shmem_data</compoundname>
+    <includes refid="dsl__fapi_8h" local="no">dsl_fapi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfapi__shmem__data_1a9d6a8b88fc6bbef5e2d9a24b4c03f9a8" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+        <definition>struct fapi_dsl_ctx* fapi_shmem_data::ctx_ptr</definition>
+        <argsstring></argsstring>
+        <name>ctx_ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to the DSL FAPI context </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="898" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="898" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfapi__shmem__data_1aea5330eb6ae8e84e9d1c300b8e779c24" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref></type>
+        <definition>struct fapi_dsl_ctx fapi_shmem_data::ctx</definition>
+        <argsstring></argsstring>
+        <name>ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy of the DSL FAPI context </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="898" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="902" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>DSL FAPI open contexts repository </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="104">
+        <label>fapi_shmem_data</label>
+        <link refid="structfapi__shmem__data"/>
+        <childnode refid="105" relation="usage">
+          <edgelabel>ctx</edgelabel>
+          <edgelabel>ctx_ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="105">
+        <label>fapi_dsl_ctx</label>
+        <link refid="structfapi__dsl__ctx"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="894" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="894" bodyend="903"/>
+    <listofallmembers>
+      <member refid="structfapi__shmem__data_1aea5330eb6ae8e84e9d1c300b8e779c24" prot="public" virt="non-virtual"><scope>fapi_shmem_data</scope><name>ctx</name></member>
+      <member refid="structfapi__shmem__data_1a9d6a8b88fc6bbef5e2d9a24b4c03f9a8" prot="public" virt="non-virtual"><scope>fapi_shmem_data</scope><name>ctx_ptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

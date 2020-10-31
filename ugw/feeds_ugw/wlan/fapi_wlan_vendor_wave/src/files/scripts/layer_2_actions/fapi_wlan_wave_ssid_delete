@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# Remove a VAP 
+# Needed object: None
+
+# Source library script
+[ ! "$FAPI_WLAN_WAVE_INIT_PLATFORM" ] && . /tmp/wlan_wave/fapi_wlan_wave_init_platform.sh
+
+print2log DBG "Running fapi_wlan_wave_ssid_delete with $*"
+
+interface_name=$1
+
+# If interface name is not supplied, exit script
+check_input_param "fapi_wlan_wave_ssid_delete" "interface_name" "$interface_name"
+
+timestamp "fapi_wlan_wave_ssid_delete:$interface_name:begin"
+
+# Only remove a VAP if it isn't a radio interface.
+is_vap=`check_is_vap $interface_name`
+[ "$is_vap" = "true" ] && (. $ETC_PATH/fapi_wlan_wave_down $interface_name)
+
+# Create the output configuration file
+cat /dev/null > ${OUT_CONF}
+
+# Configuration is completed successfully
+update_conf_out "wlan_configuration_status" "success"
+
+# DEBUG: TODO: REMOVE
+#cp ${OUT_CONF} ${WAVE_TMP}/out_conf_ssid_delete
+
+print2log DBG "fapi_wlan_wave_ssid_delete done" 
+timestamp "fapi_wlan_wave_ssid_delete:$interface_name:done"

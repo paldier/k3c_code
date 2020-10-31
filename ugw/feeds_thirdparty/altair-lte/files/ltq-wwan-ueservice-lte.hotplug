@@ -1,0 +1,227 @@
+#!/bin/sh
+#
+# Hotplug script to load firmware and initialize Altair USB LTE WWAN dongle
+#
+
+# Include model information
+if [ ! "$ENVLOADED" ]; then
+	if [ -r /etc/rc.conf ]; then
+		. /etc/rc.conf 2> /dev/null
+		ENVLOADED="1"
+	fi
+fi
+
+if [ ! "$CONFIGLOADED" ]; then
+	if [ -r /etc/rc.d/config.sh ]; then
+		. /etc/rc.d/config.sh 2>/dev/null
+		CONFIGLOADED="1"
+	fi
+fi
+
+local s_manuf s_model s_rev s_celopr s_imei s_sig s_simsta
+local status_file="/tmp/cwan_status.txt"
+local oper_code_info="/etc/wwan/MobileNetworkCode.info"
+
+query_modem ()
+{
+	echo "$1" | socat -t 1 /dev/ttyLTE0,raw,nonblock,cr,echo=0 stdio
+}
+
+print_value ()
+{
+	[ -n "$2" ] && echo "$1 $2" || echo "$1 0"
+}
+
+out_status ()
+{
+	print_value cwantype 1
+	print_value manufacturer "$s_manuf"
+	print_value model "$s_model"
+	print_value celoper "$s_celopr"
+	print_value imei "$s_imei"
+	print_value sigstr "$s_sig"
+	print_value simsta "$s_simsta"
+        print_value cellWanSta 0
+}
+
+change_iface_in_config ()
+{
+	local IFACE_NAME=lte0
+	local OLD_IFACE=wwan0
+	local CHANGE=""
+
+	if [ "$LTEChannel_0_l2ifName" = "$OLD_IFACE" ]; then
+		status_oper -u -f /etc/rc.conf SET lte_channel LTEChannel_0_l2ifName $IFACE_NAME
+		CHANGE=1
+	fi
+	if [ "$default_wan_7_conn_iface" = "$OLD_IFACE" ]; then
+		status_oper -u -f /etc/rc.conf SET default_wan_cfg_fused default_wan_7_conn_iface $IFACE_NAME
+		CHANGE=1
+	fi
+	if [ "$default_wan_conn_iface" = "$OLD_IFACE" ]; then
+		status_oper -u -f /etc/rc.conf SET default_wan_iface default_wan_conn_iface $IFACE_NAME
+		CHANGE=1
+	fi
+
+	local i=0;
+	local baseIf;
+	while [ $i -lt $vlan_ch_cfg_Count ]; do
+		eval baseIf='$'vlanch_${i}_baseIf;
+		if [ -n "$baseIf" ] && [ "$baseIf" = "$OLD_IFACE" ]; then
+			status_oper -u -f /etc/rc.conf SET vlan_ch_cfg vlanch_${i}_baseIf $IFACE_NAME
+			status_oper -u -f /etc/rc.conf SET vlan_ch_cfg vlanch_${i}_l2ifName $IFACE_NAME
+			CHANGE=1
+			break;
+		fi
+		i=$((i+1))
+	done
+
+	i=0;
+	local ifname;
+	while [ $i -lt $wan_ip_Count ]; do
+		eval ifname='$'wanip_${i}_iface;
+		if [ -n "$ifname" ] && [ "$ifname" = "$OLD_IFACE" ]; then
+			status_oper -u -f /etc/rc.conf SET wan_ip wanip_${i}_iface $IFACE_NAME
+			status_oper -u -f /etc/rc.conf SET wan_ip wanip_${i}_l2ifName $IFACE_NAME
+			CHANGE=1
+			break;
+		fi
+		i=$((i+1))
+	done
+	if [ -n "$CHANGE" ]; then
+		/etc/rc.d/backup
+	fi
+}
+
+start_wan_services ()
+{
+	/etc/rc.d/rc.bringup_wan lte_start &
+}
+
+connect_poll ()
+{
+	local modem_connect=0;
+	while [ $modem_connect -eq 0 ]; do
+		if [ "`cat /sys/class/net/lte0/operstate`" = "down" ]; then
+			sleep 10;
+			query_modem "at+cfun=1,0"
+			sleep 1;
+			query_modem "at+cgatt=1"
+			modem_connect=0;
+		else
+			# Connect happened. So SIM works.
+			s_simsta=1;
+			
+			# Get Opertor Code or Name 
+			local getcops=`query_modem "at+cops?"|grep COPS|cut -d\" -f2`;
+			if [ -n "$getcops" ]; then
+				s_celopr=`grep $getcops $oper_code_info|tail -1|sed 's/ /_/g'`;
+				[ -z "$s_celopr" ] && s_celopr="$getcops" || true;
+			else s_celopr=Unknown; fi;
+			
+			# Get Signal Strength
+			local getsig=`echo $(query_modem "at%csq"|grep CSQ:|cut -d: -f2-|cut -d, -f1)`
+			if [ -n "$getsig" ]; then
+				s_sig=$getsig;
+			else s_sig=0; fi;
+			
+			# Print final status
+			out_status > $status_file
+			
+			modem_connect=1;
+			
+			start_wan_services;
+		fi;
+	done;
+}
+
+initialize_modem ()
+{
+	local cwi=0;
+	local c_flg=0;
+	while [ $cwi -lt $cell_wan_Count ]; do
+		eval [ '$'cwan_$cwi'_ena' = "1" ] && {
+			c_flg=1;
+			break
+		}
+		cwi=$((cwi+1))
+	done
+
+	local c_PIN;
+	local c_COD;
+	if [ "$c_flg" = "1" ]; then
+		eval c_PIN='$'cwan_$cwi'_usePIN'
+		eval c_COD='$'cwan_$cwi'_PIN'
+	fi
+	
+	# Get modem details
+	local get_modem=`query_modem "ati"`;
+	[ $? -eq 0 ] && {
+		s_manuf=`echo "$get_modem"|grep Manufacturer:|cut -d: -f2-`
+		s_model=`echo "$get_modem"|grep Model:|cut -d: -f2-`
+		#s_rev=`echo "$get_modem"|grep Revision:|cut -d: -f2-`
+	}
+
+	# Get imei
+	local get_modem=`query_modem "at+cgsn"`;
+	[ $? -eq 0 ] && {
+		s_imei=`echo $get_modem|awk '{ print $1 }'`;
+	}
+
+	##query_modem "at%earfcn=0"
+	##sleep 2;
+	
+	if [ -n "$c_PIN" ] && [ "$c_PIN" = "1" ]; then
+		query_modem "at+cpin=\"$c_COD\""
+		sleep 2;
+	fi
+
+	# Attach to LTE
+	query_modem "at+cfun=1,0"
+	
+	local get_sim=`query_modem "at%status=\"USIM\""`
+	if [ $? -eq 0 ]; then
+		echo $get_sim | grep -w "REAL USIM" >&- 2>&-
+		[ $? -eq 0 ] && s_simsta=1 || s_simsta=0;
+	else s_simsta=0; fi;
+
+	query_modem "at+cgatt=1"
+	sleep 1;
+	query_modem "at+cgpaddr"
+	
+	connect_poll &
+
+	out_status > $status_file
+	
+}
+
+load_lte_fw ()
+{
+	[ -f /tmp/lteFwLoad ] || {
+		touch /tmp/lteFwLoad; sync
+		[ -z "$CONFIG_PACKAGE_KMOD_SMVP" ] && {
+			sleep 1;
+			/opt/altair/bin/FwLoaderApp \
+				/opt/altair/bin/image.bin \
+				-d /dev/ueservice0 >/dev/null
+			sync
+		} || true
+		sleep 2;
+		echo 1 > `ls /sys/bus/usb/drivers/ue_lte/*/ue_fw_loaded`
+		ifconfig lte0 up
+
+		# Set iface in rc.conf
+		change_iface_in_config
+
+		# Initialize, connect to LTE and get status
+		initialize_modem > /dev/null
+
+		# Start connection
+		#/etc/init.d/wwan_lte.sh start
+	}
+}
+
+if [ -n "$ACTION" ] && [ "$ACTION" = "add" ]; then
+	load_lte_fw &
+fi
+

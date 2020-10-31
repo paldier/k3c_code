@@ -1,0 +1,893 @@
+\hypertarget{group__FAPI__DSL}{\section{D\-S\-L F\-A\-P\-I}
+\label{group__FAPI__DSL}\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}}
+}
+
+
+Provides functions to get or set the configurations for D\-S\-L entity through the interaction between the D\-S\-L S\-L and F\-A\-P\-I.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdsl__fapi__line__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-obj}
+\item 
+struct \hyperlink{structdsl__fapi__line__stats__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-obj}
+\item 
+struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj}
+\item 
+struct \hyperlink{structdsl__fapi__line__test__params__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-test\-\_\-params\-\_\-obj}
+\item 
+struct \hyperlink{structdsl__fapi__channel__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}
+\item 
+struct \hyperlink{structdsl__fapi__channel__stats__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj}
+\item 
+struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj}
+\item 
+struct \hyperlink{structdsl__fapi__x__lantiq__com__config__obj}{dsl\-\_\-fapi\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-obj}
+\item 
+struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx}
+\item 
+struct \hyperlink{structfapi__global__vars}{fapi\-\_\-global\-\_\-vars}
+\item 
+struct \hyperlink{structfapi__shmem__data}{fapi\-\_\-shmem\-\_\-data}
+\item 
+struct \hyperlink{structfapi__shmem}{fapi\-\_\-shmem}
+\item 
+struct \hyperlink{structfapi__dsl__init__parameter}{fapi\-\_\-dsl\-\_\-init\-\_\-parameter}
+\item 
+struct \hyperlink{structfapi__dsl__init__parameter__box}{fapi\-\_\-dsl\-\_\-init\-\_\-parameter\-\_\-box}
+\item 
+struct \hyperlink{structfapi__dsl__init__cfg}{fapi\-\_\-dsl\-\_\-init\-\_\-cfg}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \{ \hyperlink{group__FAPI__DSL_gga6a68d961535e6f7aa239751763131a70a86b665546ec20b43571b0d828acf309b}{F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-E\-R\-R\-O\-R} = -\/1, 
+\hyperlink{group__FAPI__DSL_gga6a68d961535e6f7aa239751763131a70a7eb73193aa8bbe9c3dac32625afa7930}{F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-S\-U\-C\-C\-E\-S\-S} = 0, 
+\hyperlink{group__FAPI__DSL_gga6a68d961535e6f7aa239751763131a70a970d91f80d2a68ab271d778404fb4542}{F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-W\-A\-R\-N\-I\-N\-G} = 1000
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ \hyperlink{group__FAPI__DSL_ga97a5a099ffdeed990806cc76f87e1dd1}{fapi\-\_\-dsl\-\_\-open} (unsigned int entity)
+\item 
+struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ \hyperlink{group__FAPI__DSL_gafdf9b16c3deb7606d7ac9b1bd0e28b55}{fapi\-\_\-dsl\-\_\-context\-\_\-get} (int entity)
+\item 
+void \hyperlink{group__FAPI__DSL_ga1b948f298a5b6cadd7fb70f6094f8ce9}{fapi\-\_\-dsl\-\_\-context\-\_\-free} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gaeb6ffcb5ef5d02e719b6479a15a3df4e}{fapi\-\_\-dsl\-\_\-close} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structfapi__dsl__init__cfg}{fapi\-\_\-dsl\-\_\-init\-\_\-cfg} $\ast$cfg)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga6db762b72c1f0d2c2d4144f517f7b46d}{fapi\-\_\-dsl\-\_\-uninit} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga18621a794c8d271291a7eb9dc7f593bb}{fapi\-\_\-dsl\-\_\-line\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__line__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga3a38e7977ea6636741d1bf5f7c5a1bf1}{fapi\-\_\-dsl\-\_\-line\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__line__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga8b69e9043c7560f016f288ff4d503cef}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__line__stats__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga7ce6e1d555dbdd48708d4b5f761998d9}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__line__stats__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga5df23a7c34a81f29959eadae638d8464}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-total\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga69af95fa3467bad5acdb5d4156b379d4}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-total\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga20bb0212d6e16d711068b1c99803eb62}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-showtime\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga4dd2db2d5055e8d393f0683b286ac883}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-showtime\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga4723935e967f7789a3d44db21f3a407e}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gac4cafc674b7543bc08e7bb82450b2245}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga9f7d43e38ed54800ff6508eecc503511}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-current\-\_\-day\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gaf6a1f45e9dd5b8af61b25b17d9d9ce43}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-current\-\_\-day\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga735da13abce1e87ea66d972db590f8d9}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gae1d90b50a2166be4d8679438d71045dd}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga78485df8d97915a39de9002c00a92dbd}{fapi\-\_\-dsl\-\_\-line\-\_\-test\-\_\-params\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__line__test__params__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-test\-\_\-params\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga05a9932df17850cc4c198150b5912dce}{fapi\-\_\-dsl\-\_\-line\-\_\-test\-\_\-params\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__line__test__params__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-test\-\_\-params\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga73a2b7430190378d727446880250d9bb}{fapi\-\_\-dsl\-\_\-channel\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__channel__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gade76bf5f68ad4fad63a5189eab1b3a17}{fapi\-\_\-dsl\-\_\-channel\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__channel__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga09a5f81b49d36ad57136c6e29b06d27d}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__channel__stats__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga30e905b23b61cfcea70a8f294aeebfc0}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__channel__stats__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gae9f992ac21af5b5c53c24e49ffa0f278}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-total\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gaa8989ed2cc50cd6031d2382f016745ca}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-total\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gaed59fd0e238164b60d08fd2fd5b72325}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-showtime\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga4d6bef3ba50c1235c988ab410c0c24ca}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-showtime\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gae6d0226b0a0f6628c4d2e1adb2b2213d}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gaebb4cacdd2171b543ef75bf1f94e5604}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga78c49035d7f7ea738af2b83fae3b3880}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-current\-\_\-day\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga73a901eeec71eba652a8ae0e44060a48}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-current\-\_\-day\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gaadd656408568e4b0075043258431a31d}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga3e8c60a91933658b6c1823419f025200}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga796584ea1348650374f19b51d7e53f4b}{fapi\-\_\-dsl\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__x__lantiq__com__config__obj}{dsl\-\_\-fapi\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gac5b57da774a1ecb2bf814c12d22e29a9}{fapi\-\_\-dsl\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__x__lantiq__com__config__obj}{dsl\-\_\-fapi\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-obj} $\ast$obj)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides functions to get or set the configurations for D\-S\-L entity through the interaction between the D\-S\-L S\-L and F\-A\-P\-I. Lists the entire modules from the F\-A\-P\-I\-\_\-\-D\-S\-L group. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-status@{fapi\-\_\-dsl\-\_\-status}}
+\index{fapi\-\_\-dsl\-\_\-status@{fapi\-\_\-dsl\-\_\-status}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status}}}\label{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}
+The F\-A\-P\-I library context contains global information. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-E\-R\-R\-O\-R@{F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-E\-R\-R\-O\-R}!D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}}\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-E\-R\-R\-O\-R@{F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-E\-R\-R\-O\-R}}\item[{\em 
+\hypertarget{group__FAPI__DSL_gga6a68d961535e6f7aa239751763131a70a86b665546ec20b43571b0d828acf309b}{F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-E\-R\-R\-O\-R}\label{group__FAPI__DSL_gga6a68d961535e6f7aa239751763131a70a86b665546ec20b43571b0d828acf309b}
+}]Common error \index{F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-S\-U\-C\-C\-E\-S\-S@{F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-S\-U\-C\-C\-E\-S\-S}!D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}}\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-S\-U\-C\-C\-E\-S\-S@{F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-S\-U\-C\-C\-E\-S\-S}}\item[{\em 
+\hypertarget{group__FAPI__DSL_gga6a68d961535e6f7aa239751763131a70a7eb73193aa8bbe9c3dac32625afa7930}{F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-S\-U\-C\-C\-E\-S\-S}\label{group__FAPI__DSL_gga6a68d961535e6f7aa239751763131a70a7eb73193aa8bbe9c3dac32625afa7930}
+}]Success \index{F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-W\-A\-R\-N\-I\-N\-G@{F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-W\-A\-R\-N\-I\-N\-G}!D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}}\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-W\-A\-R\-N\-I\-N\-G@{F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-W\-A\-R\-N\-I\-N\-G}}\item[{\em 
+\hypertarget{group__FAPI__DSL_gga6a68d961535e6f7aa239751763131a70a970d91f80d2a68ab271d778404fb4542}{F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-W\-A\-R\-N\-I\-N\-G}\label{group__FAPI__DSL_gga6a68d961535e6f7aa239751763131a70a970d91f80d2a68ab271d778404fb4542}
+}]Warning group \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__FAPI__DSL_ga73a2b7430190378d727446880250d9bb}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-channel\-\_\-get@{fapi\-\_\-dsl\-\_\-channel\-\_\-get}}
+\index{fapi\-\_\-dsl\-\_\-channel\-\_\-get@{fapi\-\_\-dsl\-\_\-channel\-\_\-get}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-channel\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-channel\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{struct {\bf dsl\-\_\-fapi\-\_\-channel\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga73a2b7430190378d727446880250d9bb}
+This function reads data from D\-S\-L Channel object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Channel object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_gade76bf5f68ad4fad63a5189eab1b3a17}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-channel\-\_\-set@{fapi\-\_\-dsl\-\_\-channel\-\_\-set}}
+\index{fapi\-\_\-dsl\-\_\-channel\-\_\-set@{fapi\-\_\-dsl\-\_\-channel\-\_\-set}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-channel\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-channel\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{const struct {\bf dsl\-\_\-fapi\-\_\-channel\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_gade76bf5f68ad4fad63a5189eab1b3a17}
+This function writes data to D\-S\-L Channel object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Channel object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga78c49035d7f7ea738af2b83fae3b3880}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-current\-\_\-day\-\_\-get@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-current\-\_\-day\-\_\-get}}
+\index{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-current\-\_\-day\-\_\-get@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-current\-\_\-day\-\_\-get}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-current\-\_\-day\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-current\-\_\-day\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{struct {\bf dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga78c49035d7f7ea738af2b83fae3b3880}
+This function reads data from D\-S\-L Channel Stats Current\-Day object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Channel Stats Current\-Day object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retruns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga73a901eeec71eba652a8ae0e44060a48}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-current\-\_\-day\-\_\-set@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-current\-\_\-day\-\_\-set}}
+\index{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-current\-\_\-day\-\_\-set@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-current\-\_\-day\-\_\-set}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-current\-\_\-day\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-current\-\_\-day\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{const struct {\bf dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga73a901eeec71eba652a8ae0e44060a48}
+This function writes data to D\-S\-L Channel Stats Current\-Day object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Channel Stats Current\-Day object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga09a5f81b49d36ad57136c6e29b06d27d}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-get@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-get}}
+\index{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-get@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-get}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{struct {\bf dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga09a5f81b49d36ad57136c6e29b06d27d}
+This function reads data from D\-S\-L Channel Stats object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Channel Stats object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_gae6d0226b0a0f6628c4d2e1adb2b2213d}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-get@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-get}}
+\index{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-get@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-get}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{struct {\bf dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_gae6d0226b0a0f6628c4d2e1adb2b2213d}
+This function reads data from D\-S\-L Channel Stats Last\-Showtime object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Channel Stats Last\-Showtime object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retruns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer to error codes which are defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_gaebb4cacdd2171b543ef75bf1f94e5604}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-set@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-set}}
+\index{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-set@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-set}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{const struct {\bf dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_gaebb4cacdd2171b543ef75bf1f94e5604}
+This function writes data to D\-S\-L Channel Stats Last\-Showtime object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Channel Stats Last\-Showtime object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_gaadd656408568e4b0075043258431a31d}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-get@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-get}}
+\index{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-get@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-get}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{struct {\bf dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_gaadd656408568e4b0075043258431a31d}
+This function reads data from D\-S\-L Channel Stats Quarter\-Hour object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Channel Stats Quarter\-Hour object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retruns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga3e8c60a91933658b6c1823419f025200}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-set@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-set}}
+\index{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-set@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-set}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{const struct {\bf dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga3e8c60a91933658b6c1823419f025200}
+This function writes data to D\-S\-L Channel Stats Quarter\-Hour object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & Channel Stats Quarter\-Hour object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga30e905b23b61cfcea70a8f294aeebfc0}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-set@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-set}}
+\index{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-set@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-set}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{const struct {\bf dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga30e905b23b61cfcea70a8f294aeebfc0}
+This function writes data to D\-S\-L Channel Stats object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Channel Stats object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retruns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_gaed59fd0e238164b60d08fd2fd5b72325}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-showtime\-\_\-get@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-showtime\-\_\-get}}
+\index{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-showtime\-\_\-get@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-showtime\-\_\-get}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-showtime\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-showtime\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{struct {\bf dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_gaed59fd0e238164b60d08fd2fd5b72325}
+This function reads data from D\-S\-L Channel Stats Showtime object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Channel Stats Showtime object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retruns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga4d6bef3ba50c1235c988ab410c0c24ca}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-showtime\-\_\-set@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-showtime\-\_\-set}}
+\index{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-showtime\-\_\-set@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-showtime\-\_\-set}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-showtime\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-showtime\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{const struct {\bf dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga4d6bef3ba50c1235c988ab410c0c24ca}
+This function writes data to D\-S\-L Channel Stats Showtime object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Channel Stats Showtime object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retruns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_gae9f992ac21af5b5c53c24e49ffa0f278}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-total\-\_\-get@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-total\-\_\-get}}
+\index{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-total\-\_\-get@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-total\-\_\-get}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-total\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-total\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{struct {\bf dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_gae9f992ac21af5b5c53c24e49ffa0f278}
+This function reads data from D\-S\-L Channel Stats Total object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Channel Stats Total object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_gaa8989ed2cc50cd6031d2382f016745ca}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-total\-\_\-set@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-total\-\_\-set}}
+\index{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-total\-\_\-set@{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-total\-\_\-set}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-total\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-total\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{const struct {\bf dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_gaa8989ed2cc50cd6031d2382f016745ca}
+This function writes data to D\-S\-L Channel Stats Total object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Channel Stats Total object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_gaeb6ffcb5ef5d02e719b6479a15a3df4e}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-close@{fapi\-\_\-dsl\-\_\-close}}
+\index{fapi\-\_\-dsl\-\_\-close@{fapi\-\_\-dsl\-\_\-close}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-close (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_gaeb6ffcb5ef5d02e719b6479a15a3df4e}
+This function closes D\-S\-L F\-A\-P\-I context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & pointer reference for internal F\-A\-P\-I context.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\-S\-L F\-A\-P\-I context on successful, N\-U\-L\-L if an error. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga1b948f298a5b6cadd7fb70f6094f8ce9}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-context\-\_\-free@{fapi\-\_\-dsl\-\_\-context\-\_\-free}}
+\index{fapi\-\_\-dsl\-\_\-context\-\_\-free@{fapi\-\_\-dsl\-\_\-context\-\_\-free}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-context\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void fapi\-\_\-dsl\-\_\-context\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga1b948f298a5b6cadd7fb70f6094f8ce9}
+This function releases the requested D\-S\-L F\-A\-P\-I context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & D\-S\-L Fapi context to be released \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__FAPI__DSL_gafdf9b16c3deb7606d7ac9b1bd0e28b55}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-context\-\_\-get@{fapi\-\_\-dsl\-\_\-context\-\_\-get}}
+\index{fapi\-\_\-dsl\-\_\-context\-\_\-get@{fapi\-\_\-dsl\-\_\-context\-\_\-get}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-context\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf fapi\-\_\-dsl\-\_\-ctx}$\ast$ fapi\-\_\-dsl\-\_\-context\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{int}]{entity}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_gafdf9b16c3deb7606d7ac9b1bd0e28b55}
+This function returns the requested D\-S\-L F\-A\-P\-I context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & entity number of D\-S\-L context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\-S\-L F\-A\-P\-I context on successful, N\-U\-L\-L if no open context is available. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-init@{fapi\-\_\-dsl\-\_\-init}}
+\index{fapi\-\_\-dsl\-\_\-init@{fapi\-\_\-dsl\-\_\-init}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{const struct {\bf fapi\-\_\-dsl\-\_\-init\-\_\-cfg} $\ast$}]{cfg}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}
+This function initializes the D\-S\-L Subsystem.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & pointer reference for internal F\-A\-P\-I context. On initialization call, this pointer should be given as N\-U\-L\-L; it returns the handle that needs to be stored within upper layer (S\-L) and is used for any successive F\-A\-P\-I function call.\\
+\hline
+{\em cfg} & pointer to the configuration parameters that needs to be applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga18621a794c8d271291a7eb9dc7f593bb}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-line\-\_\-get@{fapi\-\_\-dsl\-\_\-line\-\_\-get}}
+\index{fapi\-\_\-dsl\-\_\-line\-\_\-get@{fapi\-\_\-dsl\-\_\-line\-\_\-get}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-line\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-line\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{struct {\bf dsl\-\_\-fapi\-\_\-line\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga18621a794c8d271291a7eb9dc7f593bb}
+This function reads data from D\-S\-L Line object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L line object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative if an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga3a38e7977ea6636741d1bf5f7c5a1bf1}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-line\-\_\-set@{fapi\-\_\-dsl\-\_\-line\-\_\-set}}
+\index{fapi\-\_\-dsl\-\_\-line\-\_\-set@{fapi\-\_\-dsl\-\_\-line\-\_\-set}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-line\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-line\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{const struct {\bf dsl\-\_\-fapi\-\_\-line\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga3a38e7977ea6636741d1bf5f7c5a1bf1}
+This function writes data to D\-S\-L Line object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Line object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative if an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, please refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga9f7d43e38ed54800ff6508eecc503511}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-current\-\_\-day\-\_\-get@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-current\-\_\-day\-\_\-get}}
+\index{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-current\-\_\-day\-\_\-get@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-current\-\_\-day\-\_\-get}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-current\-\_\-day\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-current\-\_\-day\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{struct {\bf dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga9f7d43e38ed54800ff6508eecc503511}
+This function reads data from D\-S\-L Line Stats Current\-Day object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Line Stats Current\-Day object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retruns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_gaf6a1f45e9dd5b8af61b25b17d9d9ce43}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-current\-\_\-day\-\_\-set@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-current\-\_\-day\-\_\-set}}
+\index{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-current\-\_\-day\-\_\-set@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-current\-\_\-day\-\_\-set}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-current\-\_\-day\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-current\-\_\-day\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{const struct {\bf dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_gaf6a1f45e9dd5b8af61b25b17d9d9ce43}
+This function writes data to D\-S\-L Line Stats Current\-Day object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Line Stats Current\-Day object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga8b69e9043c7560f016f288ff4d503cef}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-get@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-get}}
+\index{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-get@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-get}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{struct {\bf dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga8b69e9043c7560f016f288ff4d503cef}
+This function reads data from D\-S\-L Line Stats object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Line Stats object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative if an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, please refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga4723935e967f7789a3d44db21f3a407e}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-get@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-get}}
+\index{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-get@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-get}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{struct {\bf dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga4723935e967f7789a3d44db21f3a407e}
+This function reads data from D\-S\-L Line Stats Last\-Showtime object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Line Stats Last\-Showtime object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_gac4cafc674b7543bc08e7bb82450b2245}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-set@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-set}}
+\index{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-set@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-set}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{const struct {\bf dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_gac4cafc674b7543bc08e7bb82450b2245}
+This function writes data to D\-S\-L Line Stats Last\-Showtime object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Line Stats Last\-Showtime object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga735da13abce1e87ea66d972db590f8d9}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-get@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-get}}
+\index{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-get@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-get}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{struct {\bf dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga735da13abce1e87ea66d972db590f8d9}
+This function reads data from D\-S\-L Line Stats Quarter\-Hour object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Line Stats Quarter\-Hour object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retruns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_gae1d90b50a2166be4d8679438d71045dd}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-set@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-set}}
+\index{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-set@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-set}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{const struct {\bf dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_gae1d90b50a2166be4d8679438d71045dd}
+This function writes data to D\-S\-L Line Stats Quarter\-Hour object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Line Stats Quarter\-Hour object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga7ce6e1d555dbdd48708d4b5f761998d9}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-set@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-set}}
+\index{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-set@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-set}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{const struct {\bf dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga7ce6e1d555dbdd48708d4b5f761998d9}
+This function writes data to D\-S\-L Line Stats object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Line Stats object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, please refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga20bb0212d6e16d711068b1c99803eb62}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-showtime\-\_\-get@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-showtime\-\_\-get}}
+\index{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-showtime\-\_\-get@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-showtime\-\_\-get}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-showtime\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-showtime\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{struct {\bf dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga20bb0212d6e16d711068b1c99803eb62}
+This function reads data from D\-S\-L Line Stats Showtime object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Line Stats Showtime object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga4dd2db2d5055e8d393f0683b286ac883}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-showtime\-\_\-set@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-showtime\-\_\-set}}
+\index{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-showtime\-\_\-set@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-showtime\-\_\-set}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-showtime\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-showtime\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{const struct {\bf dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga4dd2db2d5055e8d393f0683b286ac883}
+This function writes data to D\-S\-L Line Stats Showtime object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Line Stats Showtime object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga5df23a7c34a81f29959eadae638d8464}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-total\-\_\-get@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-total\-\_\-get}}
+\index{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-total\-\_\-get@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-total\-\_\-get}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-total\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-total\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{struct {\bf dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga5df23a7c34a81f29959eadae638d8464}
+This function reads data from D\-S\-L Line Stats Total object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Line Stats Total object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, please refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga69af95fa3467bad5acdb5d4156b379d4}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-total\-\_\-set@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-total\-\_\-set}}
+\index{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-total\-\_\-set@{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-total\-\_\-set}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-total\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-total\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{const struct {\bf dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga69af95fa3467bad5acdb5d4156b379d4}
+This function writes data to D\-S\-L Line Stats Total object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Line Stats Total object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga78485df8d97915a39de9002c00a92dbd}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-line\-\_\-test\-\_\-params\-\_\-get@{fapi\-\_\-dsl\-\_\-line\-\_\-test\-\_\-params\-\_\-get}}
+\index{fapi\-\_\-dsl\-\_\-line\-\_\-test\-\_\-params\-\_\-get@{fapi\-\_\-dsl\-\_\-line\-\_\-test\-\_\-params\-\_\-get}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-line\-\_\-test\-\_\-params\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-line\-\_\-test\-\_\-params\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{struct {\bf dsl\-\_\-fapi\-\_\-line\-\_\-test\-\_\-params\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga78485df8d97915a39de9002c00a92dbd}
+This function reads data from D\-S\-L Line Test\-Params object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Line Test\-Params object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retrusn 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga05a9932df17850cc4c198150b5912dce}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-line\-\_\-test\-\_\-params\-\_\-set@{fapi\-\_\-dsl\-\_\-line\-\_\-test\-\_\-params\-\_\-set}}
+\index{fapi\-\_\-dsl\-\_\-line\-\_\-test\-\_\-params\-\_\-set@{fapi\-\_\-dsl\-\_\-line\-\_\-test\-\_\-params\-\_\-set}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-line\-\_\-test\-\_\-params\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-line\-\_\-test\-\_\-params\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{const struct {\bf dsl\-\_\-fapi\-\_\-line\-\_\-test\-\_\-params\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga05a9932df17850cc4c198150b5912dce}
+This function writes data to D\-S\-L Line Test\-Params object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L Line Test\-Params object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga97a5a099ffdeed990806cc76f87e1dd1}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-open@{fapi\-\_\-dsl\-\_\-open}}
+\index{fapi\-\_\-dsl\-\_\-open@{fapi\-\_\-dsl\-\_\-open}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-open}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf fapi\-\_\-dsl\-\_\-ctx}$\ast$ fapi\-\_\-dsl\-\_\-open (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{entity}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga97a5a099ffdeed990806cc76f87e1dd1}
+This function opens D\-S\-L F\-A\-P\-I context.
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & V\-R\-X device number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\-S\-L F\-A\-P\-I context on successful, N\-U\-L\-L if an error. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga6db762b72c1f0d2c2d4144f517f7b46d}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-uninit@{fapi\-\_\-dsl\-\_\-uninit}}
+\index{fapi\-\_\-dsl\-\_\-uninit@{fapi\-\_\-dsl\-\_\-uninit}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-uninit}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-uninit (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga6db762b72c1f0d2c2d4144f517f7b46d}
+This function exits/shutdown the D\-S\-L Subsystem.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative if an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_ga796584ea1348650374f19b51d7e53f4b}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-get@{fapi\-\_\-dsl\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-get}}
+\index{fapi\-\_\-dsl\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-get@{fapi\-\_\-dsl\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-get}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{struct {\bf dsl\-\_\-fapi\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_ga796584ea1348650374f19b51d7e53f4b}
+This function reads data from D\-S\-L X\-\_\-\-L\-A\-N\-T\-I\-Q\-\_\-\-C\-O\-M\-\_\-\-Config object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L X\-\_\-\-L\-A\-N\-T\-I\-Q\-\_\-\-C\-O\-M\-\_\-\-Config object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retruns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__DSL_gac5b57da774a1ecb2bf814c12d22e29a9}{\index{D\-S\-L F\-A\-P\-I@{D\-S\-L F\-A\-P\-I}!fapi\-\_\-dsl\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-set@{fapi\-\_\-dsl\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-set}}
+\index{fapi\-\_\-dsl\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-set@{fapi\-\_\-dsl\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-set}!DSL FAPI@{D\-S\-L F\-A\-P\-I}}
+\subsubsection[{fapi\-\_\-dsl\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf fapi\-\_\-dsl\-\_\-status} fapi\-\_\-dsl\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf fapi\-\_\-dsl\-\_\-ctx} $\ast$}]{ctx, }
+\item[{const struct {\bf dsl\-\_\-fapi\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-obj} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__DSL_gac5b57da774a1ecb2bf814c12d22e29a9}
+This function writes data to D\-S\-L X\-\_\-\-L\-A\-N\-T\-I\-Q\-\_\-\-C\-O\-M\-\_\-\-Config object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & F\-A\-P\-I handle (context) that was initialized during and returned to calling instance within context of \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} function call.\\
+\hline
+{\em obj} & D\-S\-L X\-\_\-\-L\-A\-N\-T\-I\-Q\-\_\-\-C\-O\-M\-\_\-\-Config object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns 0 on successful, negative on an error (where -\/1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within D\-S\-L C\-P\-E A\-P\-I by D\-S\-L\-\_\-\-Error\-\_\-t type. 
+\end{DoxyReturn}

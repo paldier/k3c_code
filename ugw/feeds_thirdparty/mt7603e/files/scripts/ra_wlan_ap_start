@@ -1,0 +1,1148 @@
+#!/bin/sh
+
+
+if [ ! "$ENVLOADED" ]; then
+	if [ -r /etc/rc.conf ]; then
+		. /etc/rc.conf 2> /dev/null
+		ENVLOADED="1"
+	fi
+fi
+
+if [ ! "$CONFIGLOADED" ]; then
+	if [ -r /etc/rc.d/config.sh ]; then
+		. /etc/rc.d/config.sh 2>/dev/null
+		CONFIGLOADED="1"
+	fi
+fi
+
+WLMN_INDEX=$1
+RA_IF=""
+WLAN_VENDOR_NAME=""
+
+find_vendor_from_index() {
+  eval radioCpeId='$'wlmn_${1}_radioCpeId
+  if [ "$radioCpeId" = "1" ]; then
+     radioPrefix=0
+  elif [ "$radioCpeId" = "2" ]; then
+     radioPrefix=1
+  fi
+  eval WLAN_VENDOR_NAME='$'wlss_$radioPrefix'_prefixScript'
+  #echo "WLAN_VENDOR_NAME: $WLAN_VENDOR_NAME"
+}
+
+find_ra_if_from_index() {
+   eval CPEID='$'wlmn_${1}'_cpeId'
+   ra_dev=`/usr/sbin/status_oper GET "RA_MAP" "$CPEID"`
+   RA_IF=${ra_dev:2}
+   #echo "RA_IF $RA_IF "
+}
+
+	find_ra_if_from_index $1
+	eval APNAME=ra${RA_IF}
+        eval cpeId='$'wlmn_${WLMN_INDEX}_cpeId
+        eval RADIOCPEID='$'wlmn_${WLMN_INDEX}_radioCpeId
+
+        if [ "$RADIOCPEID" = "1" ]; then
+            IFNUM=0
+        elif [ "$RADIOCPEID" = "2" ]; then
+            IFNUM=1
+        fi
+
+	eval radioEnable='$'wlphy_${IFNUM}_radioEnable
+        if [ "$radioEnable" = "0" ]; then
+	        echo "Radio is not up"
+		iwpriv ra0 set RadioOn=0
+	        i=0
+	        eval wlan_main_Count='$'wlan_main_Count
+	        while [ $i -lt $wlan_main_Count ]
+	        do
+	         find_vendor_from_index $i
+	          if [ "$WLAN_VENDOR_NAME" = "ra" ]; then
+		     find_ra_if_from_index $i
+		     if [ "${RA_IF}" != "" ]; then
+			     /usr/sbin/brctl delif br0 ra${RA_IF} >/dev/null 2>&1	
+		             ifconfig ra${RA_IF} down
+			     eval Wdsenable='$'wlwds_${1}_enable
+			     if [ "$Wdsenable" = "1" ]; then
+	                  	    /sbin/ifconfig wds${RA_IF} down 
+		         	    /usr/sbin/brctl delif br0 wds${RA_IF} >/dev/null 2>&1
+                	     fi 
+		     fi
+	          fi
+	          i=`expr $i + 1`
+        	done
+	
+	        exit
+	else
+        echo "Radio is up"
+        i=0
+        eval wlan_main_Count='$'wlan_main_Count
+        while [ $i -lt $wlan_main_Count ]
+        do
+          find_vendor_from_index $i
+           if [ "$WLAN_VENDOR_NAME" = "ra" ]; then
+              eval tmpAPENABLE='$'wlmn_${i}_apEnable
+
+              if [ "${tmpAPENABLE}" = "1" ]; then
+                 find_ra_if_from_index $i
+		 if [ "${RA_IF}" != "" ]; then
+			/usr/sbin/brctl addif br0 ra${RA_IF} >/dev/null 2>&1
+	                # ifconfig ra${RA_IF} up
+		 fi	
+              fi
+           fi
+           i=`expr $i + 1`
+        done
+	iwpriv ra0 set RadioOn=1
+    fi
+
+    eval APENABLE='$'wlmn_${WLMN_INDEX}_apEnable
+    if [ "${APENABLE}" = "0" ]; then
+        echo "AP is not up"
+
+        ifconfig ${APNAME} down
+        exit
+    fi
+
+
+	find_ra_if_from_index $1
+        mkdir -p /ramdisk/etc/Wireless/RT2860AP/
+	#rm -f /ramdisk/etc/Wireless/RT5592AP/RT5592AP.dat
+        #WLAN_START_CONF="/ramdisk/etc/Wireless/RT5592AP/RT5592AP.dat"
+	rm -f /ramdisk/etc/Wireless/RT2860AP/RT2860AP.dat
+        WLAN_START_CONF="/ramdisk/etc/Wireless/RT2860AP/RT2860AP.dat"
+        #rm -f /var/RT2860AP.dat #AR9 ??
+        #WLAN_START_CONF="/var/RT2860AP.dat" #AR9 ??
+        #WLAN_START_CONF="/etc/Wireless/RT61AP/RT61AP.dat"
+        TEMP_FILE="/ramdisk/tmp/temp_file"
+
+        echo "#The word of \"Default\" must not be removed" >> ${WLAN_START_CONF}
+        echo "Default" >> ${WLAN_START_CONF}
+
+	eval country='$'wlphy_${IFNUM}_country
+	if [ "$country" = "0" ]; then
+		echo "CountryRegion=0" >> ${WLAN_START_CONF} #ch1-ch11
+		echo "CountryRegionABand=0" >> ${WLAN_START_CONF}
+		echo "CountryCode=IN" >> ${WLAN_START_CONF}
+	elif [ "$country" = "1" ]; then
+		echo "CountryRegion=0" >> ${WLAN_START_CONF}
+		echo "CountryRegionABand=0" >> ${WLAN_START_CONF}
+		echo "CountryCode=US" >> ${WLAN_START_CONF}
+	elif [ "$country" = "2" ]; then
+		echo "CountryRegion=1" >> ${WLAN_START_CONF} #ch1-ch13
+		echo "CountryRegionABand=4" >> ${WLAN_START_CONF}
+		echo "CountryCode=CN" >> ${WLAN_START_CONF}
+	elif [ "$country" = "3" ]; then
+		echo "CountryRegion=1" >> ${WLAN_START_CONF}
+		echo "CountryRegionABand=2" >> ${WLAN_START_CONF}
+		echo "CountryCode=FR" >> ${WLAN_START_CONF}
+	elif [ "$country" = "4" ]; then
+		echo "CountryRegion=1" >> ${WLAN_START_CONF}
+		echo "CountryRegionABand=1" >> ${WLAN_START_CONF}
+		echo "CountryCode=DE" >> ${WLAN_START_CONF}
+	elif [ "$country" = "5" ]; then
+		echo "CountryRegion=0" >> ${WLAN_START_CONF}
+		echo "CountryRegionABand=0" >> ${WLAN_START_CONF}
+		echo "CountryCode=" >> ${WLAN_START_CONF}
+	elif [ "$country" = "6" ]; then
+		echo "CountryRegion=1" >> ${WLAN_START_CONF}
+		echo "CountryRegionABand=0" >> ${WLAN_START_CONF}
+		echo "CountryCode=" >> ${WLAN_START_CONF}
+	elif [ "$country" = "7" ]; then
+		echo "CountryRegion=1" >> ${WLAN_START_CONF}
+		echo "CountryRegionABand=9" >> ${WLAN_START_CONF}
+		echo "CountryCode=JP" >> ${WLAN_START_CONF}
+	elif [ "$country" = "8" ]; then
+		echo "CountryRegion=1" >> ${WLAN_START_CONF}
+		echo "CountryRegionABand=1" >> ${WLAN_START_CONF}
+		echo "CountryCode=ES" >> ${WLAN_START_CONF}
+	else	
+		echo "CountryRegion=0" >> ${WLAN_START_CONF}
+		echo "CountryRegionABand=0" >> ${WLAN_START_CONF}	
+		echo "CountryCode=" >> ${WLAN_START_CONF}					
+	fi
+
+	echo "BssidNum=8" >> ${WLAN_START_CONF}  #Force to 8
+
+	i=0
+	SSID_VAL=1
+	while [ $i -lt $wlan_main_Count ]
+	do
+	eval tmpSsid='$'wlmn_${i}_ssid
+	ssid=`printf %b $tmpSsid`
+	find_vendor_from_index $i
+        if [ "$WLAN_VENDOR_NAME" = "ra" ]; then
+		echo "SSID${SSID_VAL}=$ssid" >> ${WLAN_START_CONF}
+		SSID_VAL=`expr ${SSID_VAL} + 1`
+	fi
+
+	i=`expr $i + 1`
+	done	
+	
+
+	eval mode='$'wlphy_${IFNUM}_standard
+	if [ "$mode" = "2" ]; then
+			#echo "11b mode"
+			echo "WirelessMode=1" >> ${WLAN_START_CONF}	
+	elif [ "$mode" = "3" ]; then
+			#echo "11g mode"
+			echo "WirelessMode=4" >> ${WLAN_START_CONF}
+	elif [ "$mode" = "0" ]; then
+			#echo "11bg mode"
+			echo "WirelessMode=0" >> ${WLAN_START_CONF}
+	elif [ "$mode" = "1" ]; then
+			#echo "11a mode"
+			echo "WirelessMode=2" >> ${WLAN_START_CONF}
+	elif [ "$mode" = "4" ]; then
+			#echo "11n mode"
+			echo "WirelessMode=6" >> ${WLAN_START_CONF}
+	elif [ "$mode" = "5" ]; then
+			#echo "11bgn mode"
+			echo "WirelessMode=9" >> ${WLAN_START_CONF}
+	elif [ "$mode" = "6" ]; then
+			#echo "11gn mode"
+			echo "WirelessMode=7" >> ${WLAN_START_CONF}
+	elif [ "$mode" = "7" ]; then
+			#echo "11an mode"
+			echo "WirelessMode=8" >> ${WLAN_START_CONF}
+	else
+		echo "wrong mode. Set to BGN mix"
+		echo "WirelessMode=9" >> ${WLAN_START_CONF}
+	fi	
+
+	echo "TxRate=0;0;0;0" >> ${WLAN_START_CONF}
+	eval channelNo='$'wlphy_${IFNUM}_channelNo
+	echo "Channel=$channelNo" >> ${WLAN_START_CONF}
+	
+	eval basicDataRate='$'wlmn_${WLMN_INDEX}_basicDataRate
+	echo $basicDataRate > ${TEMP_FILE}
+	basicrate=0
+	count=1
+	temp_rate=`sed -n '1p'  $TEMP_FILE  | cut -d "," -f $count`
+	while [ ${temp_rate} ] ;
+	do
+		if [ "$temp_rate" = "1.0" ]; then
+			basicrate=`expr $basicrate + 1`
+		elif [ "$temp_rate" = "2.0" ]; then
+			basicrate=`expr $basicrate + 2`
+		elif [ "$temp_rate" = "5.5" ]; then
+			basicrate=`expr $basicrate + 4`
+		elif [ "$temp_rate" = "11.0" ]; then
+			basicrate=`expr $basicrate + 8`
+		elif [ "$temp_rate" = "6.0" ]; then
+			basicrate=`expr $basicrate + 16`
+		elif [ "$temp_rate" = "9.0" ]; then
+			basicrate=`expr $basicrate + 32`
+		elif [ "$temp_rate" = "12.0" ]; then
+			basicrate=`expr $basicrate + 64`
+		elif [ "$temp_rate" = "18.0" ]; then
+			basicrate=`expr $basicrate + 128`
+		elif [ "$temp_rate" = "24.0" ]; then
+			basicrate=`expr $basicrate + 256`
+		elif [ "$temp_rate" = "36.0" ]; then
+			basicrate=`expr $basicrate + 512`
+		elif [ "$temp_rate" = "48.0" ]; then
+			basicrate=`expr $basicrate + 1024`
+		elif [ "$temp_rate" = "54.0" ]; then
+			basicrate=`expr $basicrate + 2048`
+		fi
+		count=`expr $count + 1`
+		temp_rate=`sed -n '1p'  $TEMP_FILE  | cut -d "," -f $count`
+		#echo "temp_rate=$temp_rate"		
+	done
+	#echo "basicrate=$basicrate"
+
+	echo "BasicRate=$basicrate" >> ${WLAN_START_CONF} #TODO: Formate transfer
+	eval beaconInt='$'wlphy_${IFNUM}_beaconInt
+	echo "BeaconPeriod=$beaconInt" >> ${WLAN_START_CONF}
+	eval dtimInt='$'wlphy_${IFNUM}_dtimInt
+	echo "DtimPeriod=$dtimInt" >> ${WLAN_START_CONF}
+
+	eval Power='$'wlphy_${IFNUM}_powerLvl
+	echo "TxPower=$Power" >> ${WLAN_START_CONF}
+
+	#echo "WiFiTest=0" >> ${WLAN_START_CONF}
+	echo "DisableOLBC=0" >> ${WLAN_START_CONF}
+	echo "BGProtection=0" >> ${WLAN_START_CONF}
+	echo "MaxStaNum=0" >> ${WLAN_START_CONF}
+	#echo "TxAntenna=" >> ${WLAN_START_CONF}
+	#echo "RxAntenna=" >> ${WLAN_START_CONF}
+
+	eval Preamble='$'wlphy_${IFNUM}_preamble
+	if [ "$Preamble" = "1" ]; then
+			echo "TxPreamble=1" >> ${WLAN_START_CONF}
+	elif [ "$Preamble" = "2" ]; then
+			echo "TxPreamble=0" >> ${WLAN_START_CONF}
+	else
+		echo "wrong Preamble. Set to LongPreamble"
+		echo "TxPreamble=0" >> ${WLAN_START_CONF}
+	fi
+	
+	eval rts='$'wlphy_${IFNUM}_rts
+	echo "RTSThreshold=$rts" >> ${WLAN_START_CONF}
+	eval fts='$'wlphy_${IFNUM}_fts
+	echo "FragThreshold=$fts" >> ${WLAN_START_CONF}
+	eval wmmEna='$'wlmn_${WLMN_INDEX}_wmmEna
+	if [ "$wmmEna" = "1" ]; then
+		echo "TxBurst=0" >> ${WLAN_START_CONF}
+	else
+		echo "TxBurst=1" >> ${WLAN_START_CONF}
+	fi
+	echo "PktAggregate=0" >> ${WLAN_START_CONF}
+	echo "TurboRate=0" >> ${WLAN_START_CONF}
+
+	#WMM
+	i=0
+	flag=1
+        while [ $i -lt $wlan_main_Count ]; do
+        find_vendor_from_index $i
+        if [ "$WLAN_VENDOR_NAME" = "ra" ]; then
+		if [ "$flag" = "1" ]; then
+			eval WmmCapable='$'wlmn_${i}_wmmEna
+		        eval APSDCapable='$'wlmn_${i}_uapsdEna
+			flag=`expr $flag + 1`
+		else
+			eval wmmEnatmp='$'wlmn_${i}_wmmEna
+			WmmCapable=$WmmCapable';'$wmmEnatmp
+			eval uapsdEnatmp='$'wlmn_${i}_uapsdEna
+			APSDCapable=$APSDCapable';'$uapsdEnatmp
+		fi
+        fi
+                i=`expr $i + 1`
+        done
+	
+	echo "WmmCapable=$WmmCapable" >> ${WLAN_START_CONF}
+	echo "APSDCapable=$APSDCapable"  >> ${WLAN_START_CONF}
+	echo "DLSCapable=0" >> ${WLAN_START_CONF}
+	
+	echo "APAifsn=$wlawmm1_0_AIFSN;$wlawmm1_1_AIFSN;$wlawmm1_2_AIFSN;$wlawmm1_3_AIFSN" >> ${WLAN_START_CONF}
+        echo "APCwmin=$wlawmm1_0_ECWmin;$wlawmm1_1_ECWmin;$wlawmm1_2_ECWmin;$wlawmm1_3_ECWmin" >> ${WLAN_START_CONF}
+        echo "APCwmax=$wlawmm1_0_ECWmax;$wlawmm1_1_ECWmax;$wlawmm1_2_ECWmax;$wlawmm1_3_ECWmax" >> ${WLAN_START_CONF}
+        echo "APTxop=$wlawmm1_0_TXOP;$wlawmm1_1_TXOP;$wlawmm1_2_TXOP;$wlawmm1_3_TXOP" >> ${WLAN_START_CONF}
+        echo "APACM=$wlawmm1_0_AdmCntrl;$wlawmm1_1_AdmCntrl;$wlawmm1_2_AdmCntrl;$wlawmm1_3_AdmCntrl" >> ${WLAN_START_CONF}
+        echo "BSSAifsn=$wlswmm1_0_AIFSN;$wlswmm1_1_AIFSN;$wlswmm1_2_AIFSN;$wlswmm1_3_AIFSN" >> ${WLAN_START_CONF}
+        echo "BSSCwmin=$wlswmm1_0_ECWmin;$wlswmm1_1_ECWmin;$wlswmm1_2_ECWmin;$wlswmm1_3_ECWmin" >> ${WLAN_START_CONF}
+        echo "BSSCwmax=$wlswmm1_0_ECWmax;$wlswmm1_1_ECWmax;$wlswmm1_2_ECWmax;$wlswmm1_3_ECWmax" >> ${WLAN_START_CONF}
+        echo "BSSTxop=$wlswmm1_0_TXOP;$wlswmm1_1_TXOP;$wlswmm1_2_TXOP;$wlswmm1_3_TXOP" >> ${WLAN_START_CONF}
+        echo "BSSACM=$wlswmm1_0_AdmCntrl;$wlswmm1_1_AdmCntrl;$wlswmm1_2_AdmCntrl;$wlswmm1_3_AdmCntrl" >> ${WLAN_START_CONF}
+        echo "AckPolicy=$wlawmm1_0_AckPolicy;$wlawmm1_1_AckPolicy;$wlawmm1_2_AckPolicy;$wlawmm1_3_AckPolicy" >> ${WLAN_START_CONF}
+        	
+	echo "NoForwarding=0" >> ${WLAN_START_CONF}
+
+	eval apIsolationEna='$'wlmn_${WLMN_INDEX}_apIsolationEna
+	if [ "$apIsolationEna" = "1" ]; then
+		echo "NoForwardingBTNBSSID=1" >> ${WLAN_START_CONF}
+	else
+		echo "NoForwardingBTNBSSID=0" >> ${WLAN_START_CONF}
+	fi
+
+	i=0
+	flag=1
+        while [ $i -lt $wlan_main_Count ]; do
+        find_vendor_from_index $i
+        if [ "$WLAN_VENDOR_NAME" = "ra" ]; then
+
+		if [ "$flag" = "1" ]; then
+			eval HideSSID='$'wlmn_${i}_ssidMode
+			flag=`expr $flag + 1`
+                else
+			eval ssidMode='$'wlmn_${i}_ssidMode
+			HideSSID=$HideSSID';'$ssidMode
+		fi
+	fi
+                i=`expr $i + 1`
+        done
+	echo "HideSSID=$HideSSID" >> ${WLAN_START_CONF}
+
+	echo "StationKeepAlive=0" >> ${WLAN_START_CONF}
+	echo "ShortSlot=1" >> ${WLAN_START_CONF}
+	eval autoChanEna='$'wlphy_${IFNUM}_autoChanEna
+	echo "AutoChannelSelect=$autoChanEna" >> ${WLAN_START_CONF}
+	#echo "MaxTxPowerLevel=16" >> ${WLAN_START_CONF}
+	echo "IEEE8021X=0;0;0;0" >> ${WLAN_START_CONF}
+	echo "IEEE80211H=0" >> ${WLAN_START_CONF}
+	echo "CSPeriod=10" >> ${WLAN_START_CONF}
+	echo "WirelessEvent=0" >> ${WLAN_START_CONF}
+	echo "IdsEnable=0" >> ${WLAN_START_CONF}
+	echo "AuthFloodThreshold=32" >> ${WLAN_START_CONF}
+	echo "AssocReqFloodThreshold=32" >> ${WLAN_START_CONF}
+	echo "ReassocReqFloodThreshold=32" >> ${WLAN_START_CONF}
+	echo "ProbeReqFloodThreshold=32" >> ${WLAN_START_CONF}
+	echo "DisassocFloodThreshold=32" >> ${WLAN_START_CONF}
+	echo "DeauthFloodThreshold=32" >> ${WLAN_START_CONF}
+	echo "EapReqFooldThreshold=32" >> ${WLAN_START_CONF}
+	eval coexistence='$'wlphy_${IFNUM}_n2040CoexEna
+	echo "HT_BSSCoexistence=$coexistence" >> ${WLAN_START_CONF}
+		
+	i=0
+        while [ $i -lt $wlan_main_Count ]; do
+        find_vendor_from_index $i
+        if [ "$WLAN_VENDOR_NAME" = "ra" ]; then
+
+		ConfMode=0
+		eval pcpe_id='$'wlmn_${i}_cpeId #I think it should cpeId
+		eval WscEnabled='$'wlwps${pcpe_id}_0_enable
+
+                if [ "$WscEnabled" = "1" ]; then
+		   eval WscEnabled='$'wlwps${pcpe_id}_0_enrolleeEna
+		   if [ "$WscEnabled" != "0" ] && [ "$WscEnabled" != "" ]; then		
+			   ConfMode=`expr $ConfMode + 1`
+		   fi
+		   eval WscEnabled='$'wlwps${pcpe_id}_0_proxyEna
+		   if [ "$WscEnabled" != "0" ] && [ "$WscEnabled" != "" ]; then		
+			   ConfMode=`expr $ConfMode + 2`
+		   fi
+		   eval WscEnabled='$'wlwps${pcpe_id}_0_intRegsEna
+		   if [ "$WscEnabled" != "0" ] && [ "$WscEnabled" != "" ]; then		
+			   ConfMode=`expr $ConfMode + 4`
+		   fi
+	      else
+	      	ConfMode=0
+	      fi
+
+              eval ConfMode$i=$ConfMode
+		ConfStatus=0
+		eval ConfStatus='$'wlwps${pcpe_id}_0_setupLock #Infineon 0 or 1
+		if [ "$ConfStatus" != "" ]; then
+			ConfStatus=`expr $ConfStatus + 1` #Ralink 1 0r 2
+	        else
+   			ConfStatus=0
+		fi
+		eval ConfStatus$i=$ConfStatus
+
+
+		APNum=`expr $i + 1`
+		eval CfgMthds='$'wlwps${APNum}_0_cfgMthds
+		echo $CfgMthds > ${TEMP_FILE}
+		WscConfMethods=0
+		count=1
+		temp_method=`sed -n '1p'  $TEMP_FILE  | cut -d "," -f $count`
+		while [ ${temp_method} ] ;
+		do
+			if [ "$temp_method" = "1" ]; then
+				WscConfMethods=`expr $WscConfMethods + 1`
+			elif [ "$temp_method" = "2" ]; then
+				WscConfMethods=`expr $WscConfMethods + 2`
+			elif [ "$temp_method" = "3" ]; then
+				WscConfMethods=`expr $WscConfMethods + 4`
+			elif [ "$temp_method" = "4" ]; then
+				WscConfMethods=`expr $WscConfMethods + 8`
+			elif [ "$temp_method" = "5" ]; then
+				WscConfMethods=`expr $WscConfMethods + 16`
+			elif [ "$temp_method" = "6" ]; then
+				WscConfMethods=`expr $WscConfMethods + 32`
+			elif [ "$temp_method" = "7" ]; then
+				WscConfMethods=`expr $WscConfMethods + 64`
+			elif [ "$temp_method" = "8" ]; then
+				WscConfMethods=`expr $WscConfMethods + 128`			
+			elif [ "$temp_method" = "9" ]; then
+				WscConfMethods=`expr $WscConfMethods + 256`
+			fi
+			count=`expr $count + 1`
+			temp_method=`sed -n '1p'  $TEMP_FILE  | cut -d "," -f $count`	
+		done
+		eval WscConfMethods$i=$WscConfMethods	
+	fi
+                i=`expr $i + 1`
+        done
+
+	i=0
+	flag=1
+        while [ $i -lt $wlan_main_Count ]; do
+        find_vendor_from_index $i
+        if [ "$WLAN_VENDOR_NAME" = "ra" ]; then
+	
+		if [ "$flag" = "1" ]; then
+                        eval WscConfMode='$'ConfMode${i}
+		        eval WscConfStatus='$'ConfStatus${i}
+		        eval WscConfMethods='$'WscConfMethods${i}
+			flag=`expr $flag + 1`
+                else
+			eval WscConfModetmp='$'ConfMode${i}
+			WscConfMode=$WscConfMode';'$WscConfModetmp
+			eval WscConfStatustmp='$'ConfStatus${i}		
+			WscConfStatus=$WscConfStatus';'$WscConfStatustmp
+			eval WscConfMethodstmp='$'WscConfMethods${i}
+			WscConfMethods=$WscConfMethods';'$WscConfMethodstmp
+		fi
+	fi
+                i=`expr $i + 1`
+        done
+
+	echo "WscConfMode=$ConfMode" >> ${WLAN_START_CONF}
+	echo "WscConfStatus=$ConfStatus" >> ${WLAN_START_CONF}
+	echo "WscConfMethods=$WscConfMethods" >> ${WLAN_START_CONF}	
+
+	echo "WscKeyASCII=0" >> ${WLAN_START_CONF}
+
+	Run1xD=0
+	i=0
+	while [ $i -lt $wlan_main_Count ]; do
+        find_vendor_from_index $i
+        if [ "$WLAN_VENDOR_NAME" = "ra" ]; then
+	
+		eval pcpe_id='$'wlmn_${i}_cpeId
+
+		eval Beacon_type_${i}='$'wlsec_${i}_beaconType
+		eval auth_type_${i}='$'wlsec_${i}_authType
+		eval encr_type_${i}='$'wlsec_${i}_encrType		
+		eval WLAN_KEY_USED_TMP='$'wlsec_${i}_wepKeyIndx
+		if [ "$WLAN_KEY_USED_TMP" = "" ]; then
+         		eval WLAN_KEY_USED_${i}="1"
+		else
+			eval WLAN_KEY_USED_${i}='$'wlsec_${i}_wepKeyIndx
+		fi
+		eval Wep_key_type_${i}='$'wlsec_${i}_wepKeyType
+		eval Mac_cntrl_type_tmp='$'wlsec_${i}_macAddrCntrlType #AccessPolicy
+		if [ "$Mac_cntrl_type_tmp" = "0" ]; then
+			eval Mac_cntrl_type_${i}="1"
+		elif [ "$Mac_cntrl_type_tmp" = "1" ]; then
+			eval Mac_cntrl_type_${i}="2"
+		elif [ "$Mac_cntrl_type_tmp" = "2" ]; then
+			eval Mac_cntrl_type_${i}="0"
+		fi
+		eval PreAuth_${i}='$'wl1x_${i}_wpa2PreAuthEna
+		eval temp='$'wl1x_${i}_grpKeyEna
+		if [ "$temp" = "1" ]; then
+			eval Rekey_${i}="TIME"
+		else
+			eval Rekey_${i}="NONE"
+		fi
+		eval Rekey_Intvl_${i}='$'wl1x_${i}_grpKeyIntvl
+
+		eval Radius_Srv_${i}='$'wl1x_${i}_radiusIP
+		eval Radius_Port_${i}='$'wl1x_${i}_radiusPort
+		eval Radius_Sec_${i}='$'wl1x_${i}_radiusSecret
+	
+		eval WLAN_KEY_USED_TMP2='$'WLAN_KEY_USED_${i}
+		eval WLAN_KEY_USED_${i}=`expr $WLAN_KEY_USED_TMP2 + 1`  #Ralink is 1~4
+
+		eval Wep_key_type_tmp='$'Wep_key_type_${i}
+		if [ "$Wep_key_type_tmp" = "0" ]; then # ascii key
+			eval Wep_key_type_${i}=1 #Ralink definition different with infineon.
+		else
+			eval Wep_key_type_${i}=0
+		fi
+		eval WLAN_KEY${pcpe_id}_0='$'wlwep${pcpe_id}_0_key
+		eval WLAN_KEY${pcpe_id}_1='$'wlwep${pcpe_id}_1_key
+		eval WLAN_KEY${pcpe_id}_2='$'wlwep${pcpe_id}_2_key
+		eval WLAN_KEY${pcpe_id}_3='$'wlwep${pcpe_id}_3_key
+
+		eval pskFlag='$'wlpsk${pcpe_id}_0_pskFlag #passPhrase or psk
+		if [ "$pskFlag" = "0" ]; then
+			eval WPAPSK_${i}='$'wlpsk${pcpe_id}_0_passPhrase #ra0
+		else
+			eval WPAPSK_${i}='$'wlpsk${pcpe_id}_0_psk #ra0
+		fi
+
+		eval Beacon_type='$'Beacon_type_${i}
+		eval auth_type='$'auth_type_${i}
+		eval encr_type='$'encr_type_${i}
+		
+		if [ "$Beacon_type" = "" ]; then
+			eval Beacon_type="0"
+		fi
+		if [ "$auth_type" = "" ]; then
+			eval auth_type="0"
+		fi
+		if [ "$encr_type" = "" ]; then
+			eval encr_type="0"
+		fi
+
+		if [ "$Beacon_type" = "0" ]; then # Basic
+			#echo "Basic Beacon Type"
+			if [ "$auth_type" = "0" ]; then # open
+				#echo "Open Authentication"
+				eval WLAN_AUTH_${i}="OPEN"
+			elif [ "$auth_type" = "1" ]; then #shared-wepkey
+				#echo "Shared WEP Key Authentication"
+				eval WLAN_AUTH_${i}="SHARED"
+			fi
+
+			if [ "$encr_type" = "0" ]; then
+				#echo "Open Encryption"
+				eval WLAN_ENCR_${i}="NONE"
+			elif [ "$encr_type" = "1" ]; then #WEP Key encryption
+				#echo "Shared WEP Key Encryption"
+				eval WLAN_ENCR_${i}="WEP"
+			fi
+		elif [ "$Beacon_type" = "1" ]; then # WPA 
+			#echo "WPA Type of Security"
+			if [ "$auth_type" = "3" ]; then # PSK/Passphrase
+				#echo "PSK or Passphrase Authentication"
+				eval WLAN_AUTH_${i}="WPAPSK"
+			elif [ "$auth_type" = "2" ]; then #RADIUS
+				eval WLAN_AUTH_${i}="WPA"
+				Run1xD=1
+			else
+				echo "Wrong auth_type"
+			fi
+
+			if [ "$encr_type" = "2" ]; then  #TKIP Encryption 
+				#echo "WPA TKIP Encryptiion"
+				eval WLAN_ENCR_${i}="TKIP"    #WPA-TKIP
+			elif [ "$encr_type" = "3" ]; then  #AES Encryption 
+		         	#echo "WPA AES Encryptiion"
+				eval WLAN_ENCR_${i}="AES"    #WPA-AES
+			elif [ "$encr_type" = "4" ]; then  #TKIP-AES Encryption 
+				#echo "WPA TKIP-AES Mixed Encryptiion"
+				eval WLAN_ENCR_${i}="TKIPAES"    #WPA-AES-TKIP
+			else
+				echo "wrong setting"
+			fi
+			eval WLAN_KEY_USED_${i}="2" #DefaultKeyID must 2 in WPA, WPA2, WPAWPA2
+
+		elif [ "$Beacon_type" = "2" ]; then # WPA2 
+			#echo "WPA2 Type of Security"
+			if [ "$auth_type" = "3" ]; then # PSK/Passphrase
+				#echo "WPA2 PSK or Passphrase Authentication"
+				eval WLAN_AUTH_${i}="WPA2PSK"
+			elif [ "$auth_type" = "2" ]; then #RADIUS
+				eval WLAN_AUTH_${i}="WPA2"
+				Run1xD=1
+			else
+				echo "Wrong auth_type"
+			fi
+
+			if [ "$encr_type" = "2" ]; then  #TKIP Encryption 
+				#echo "WPA2 TKIP Encryptiion"
+				eval WLAN_ENCR_${i}="TKIP"    #WPA2-TKIP
+			elif [ "$encr_type" = "3" ]; then  #AES Encryption 
+				#echo "WPA2 AES Encryptiion"
+				eval WLAN_ENCR_${i}="AES"    #WPA2-AES
+			elif [ "$encr_type" = "4" ] ; then  #TKIP-AES Encryption 
+				#echo "WPA2 TKIP-AES Mixed Encryptiion"
+				eval WLAN_ENCR_${i}="TKIPAES"    #WPA2-AES-TKIP
+			else
+				echo "wrong setting"
+			fi	
+			eval WLAN_KEY_USED_${i}="2" #DefaultKeyID must 2 in WPA, WPA2, WPAWPA2
+
+		elif [ "$Beacon_type" = "3" ]; then # WPA-WPA2 
+			#echo "WPA-WPA2 Type of Security"
+			if [ "$auth_type" = "3" ]; then # PSK/Passphrase
+				#echo "WPA_WPA2 PSK or Passphrase Authentication"
+				eval WLAN_AUTH_${i}="WPAPSKWPA2PSK"
+			elif [ "$auth_type" = "2" ]; then #RADIUS
+				eval WLAN_AUTH_${i}="WPA1WPA2"
+				Run1xD=1
+			else
+				echo "Wrong auth_type"
+			fi
+
+			if [ "$encr_type" = "2" ]; then  #TKIP Encryption 
+				#echo "WPA2 TKIP Encryptiion"
+				eval WLAN_ENCR_${i}="TKP"    #WPA_WPA2-TKIP
+			elif [ "$encr_type" = "3" ]; then  #AES Encryption 
+				#echo "WPA2 AES Encryptiion"
+				eval WLAN_ENCR_${i}="AES"    #WPA_WPA2-AES
+			elif [ "$encr_type" = "4" ]; then  #TKIP-AES Encryption 
+				#echo "WPA2 TKIP-AES Mixed Encryptiion"
+				eval WLAN_ENCR_${i}="TKIPAES"    #WPA_WPA2-AES-TKIP
+			else
+				echo "wrong setting"
+			fi
+			eval WLAN_KEY_USED_${i}="2" #DefaultKeyID must 2 in WPA, WPA2, WPAWPA2
+		else
+    			echo "Wrong Beacon Type"
+		fi		
+	
+	fi
+		i=`expr $i + 1`
+	done #MBSSID	
+
+	i=0
+	flag=1
+        while [ $i -lt $wlan_main_Count ]; do
+        find_vendor_from_index $i
+        if [ "$WLAN_VENDOR_NAME" = "ra" ]; then
+
+		if [ "$flag" = "1" ]; then
+			eval PreAuth='$'PreAuth_${i}
+		        eval AuthMode='$'WLAN_AUTH_${i}
+		        eval EncrypType='$'WLAN_ENCR_${i}
+		        eval RekeyInterval='$'Rekey_Intvl_${i}
+		        eval RekeyMethod='$'Rekey_${i}
+                        flag=`expr $flag + 1`
+                else
+			eval PreAuthtmp='$'PreAuth_${i}
+			PreAuth=$PreAuth';'$PreAuthtmp
+			eval AuthModetmp='$'WLAN_AUTH_${i}
+			AuthMode=$AuthMode';'$AuthModetmp
+			eval EncrypTypetmp='$'WLAN_ENCR_${i}
+			EncrypType=$EncrypType';'$EncrypTypetmp
+	        	eval RekeyIntervaltmp='$'Rekey_Intvl_${i}
+			RekeyInterval=$RekeyInterval';'$RekeyIntervaltmp
+			eval RekeyMethodtmp='$'Rekey_${i}
+			RekeyMethod=$RekeyMethod';'$RekeyMethodtmp
+		fi
+
+	fi
+		i=`expr $i + 1`
+        done
+	echo "PreAuth=$PreAuth" >> ${WLAN_START_CONF}
+	echo "AuthMode=$AuthMode" >> ${WLAN_START_CONF}
+	echo "EncrypType=$EncrypType" >> ${WLAN_START_CONF}
+	echo "RekeyInterval=$RekeyInterval" >> ${WLAN_START_CONF}
+	echo "RekeyMethod=$RekeyMethod" >> ${WLAN_START_CONF}
+
+	echo "PMKCachePeriod=10" >> ${WLAN_START_CONF}
+
+	DefaultKeyID=$WLAN_KEY_USED_0
+	i=0
+        while [ $i -lt $wlan_main_Count ]
+        do
+        find_vendor_from_index $i
+        if [ "$WLAN_VENDOR_NAME" = "ra" ]; then
+		eval pcpe_id='$'wlmn_${i}_cpeId
+		eval WPAPSK='$'WPAPSK_${i}
+		echo "WPAPSK${pcpe_id}=$WPAPSK" >> ${WLAN_START_CONF}
+	
+		j=`expr $i + 1`
+		find_vendor_from_index $j
+                if [ "$WLAN_VENDOR_NAME" = "ra" ]; then
+			eval DefaultKeyIDtmp='$'WLAN_KEY_USED_${j}
+			DefaultKeyID=$DefaultKeyID';'$DefaultKeyIDtmp
+		fi
+	        k=0
+		flag=1
+        	while [ $k -lt $wlan_main_Count ]
+	        do
+	        	find_vendor_from_index $k
+        		if [ "$WLAN_VENDOR_NAME" = "ra" ]; then
+				if [ "$flag" = "1" ]; then
+                    		        eval KeyType='$'Wep_key_type_${k}
+                		        flag=`expr $flag + 1`
+		                else
+					eval KeyTypetmp='$'Wep_key_type_${k}
+					KeyType=$KeyType';'$KeyTypetmp
+				fi
+			fi
+        	        k=`expr $k + 1`
+	        done
+		echo "Key${pcpe_id}Type=$KeyType" >> ${WLAN_START_CONF}
+		eval WLAN_KEY_0='$'WLAN_KEY${pcpe_id}_0
+		eval WLAN_KEY_1='$'WLAN_KEY${pcpe_id}_1
+		eval WLAN_KEY_2='$'WLAN_KEY${pcpe_id}_2
+		eval WLAN_KEY_3='$'WLAN_KEY${pcpe_id}_3
+		echo "Key${pcpe_id}Str1=$WLAN_KEY_0" >> ${WLAN_START_CONF}
+		echo "Key${pcpe_id}Str2=$WLAN_KEY_1" >> ${WLAN_START_CONF}
+		echo "Key${pcpe_id}Str3=$WLAN_KEY_2" >> ${WLAN_START_CONF}
+		echo "Key${pcpe_id}Str4=$WLAN_KEY_3" >> ${WLAN_START_CONF}
+
+	fi
+                i=`expr $i + 1`
+        done
+	echo "DefaultKeyID=$DefaultKeyID" >> ${WLAN_START_CONF}
+
+	echo "HSCounter=0" >> ${WLAN_START_CONF}	
+
+	list_inc=0	
+	real_count=0
+	eval access_list_count='$'wlan_mac_control_Count
+	while [ $list_inc -lt $access_list_count ]
+	do		
+		eval temp='$'wlmacctrl_${list_inc}_macAddr
+		eval pcpeid='$'wlmacctrl_${list_inc}_pcpeId
+		if [ "$pcpeid" = "$pcpe_id" ]; then
+			if [ "$real_count" != "0" ]; then
+				eval access_list_${list_inc}='$'access_list_${list_inc}';'${temp}
+				real_count=`expr $real_count + 1`
+			else
+				eval access_list_${list_inc}=${temp}
+				real_count=`expr $real_count + 1`
+			fi		
+		fi
+		list_inc=`expr $list_inc + 1`
+	
+	done
+
+	i=0
+	eval access_list_count='$'wlan_mac_control_Count
+        while [ $i -lt $access_list_count ]		
+        do
+        find_vendor_from_index $i
+        if [ "$WLAN_VENDOR_NAME" = "ra" ]; then
+		eval Mac_cntrl_type='$'Mac_cntrl_type_${i}
+		echo "AccessPolicy${i}=$Mac_cntrl_type" >> ${WLAN_START_CONF}
+		eval access_list='$'access_list_${i}
+		echo "AccessControlList${i}=$access_list" >> ${WLAN_START_CONF}
+	fi
+		i=`expr $i + 1`
+	done
+
+	#hard coded for ra0 wds doesnot work for MBSSID
+	eval Wdsenable='$'wlwds_0_enable
+	#echo "WdsPhyMode=CCK" >> ${WLAN_START_CONF} # Need confirm
+	eval WdsEncrypType='$'wlwds_0_encrType
+	echo "WdsEnable=$Wdsenable" >> ${WLAN_START_CONF}
+	echo "WdsEncrypType=$WdsEncrypType" >> ${WLAN_START_CONF}
+
+	i=0
+        flag=1
+        while [ $i -lt $wlan_main_Count ]
+        do
+        find_vendor_from_index $i
+        if [ "$WLAN_VENDOR_NAME" = "ra" ]; then
+		j=0
+		while [ $j -lt $wlan_wds_macs_Count ]
+		do
+			find_ra_if_from_index $i
+        	        eval pcpeid='$'wlwdsmac_${j}_pcpeId
+                	if [ "$flag" = "1" ]; then
+				if [ "$RA_IF" = "0" ]; then
+					eval pcpe_id='$'wlmn_${i}_cpeId
+					if [ "$pcpeid" = "$pcpe_id" ]; then
+						eval Wdslist='$'wlwdsmac_${j}_peerAP
+						flag=`expr $flag + 1`
+					fi
+				fi
+			else
+				if [ "$RA_IF" = "0" ]; then
+					eval pcpe_id='$'wlmn_${i}_cpeId
+					if [ "$pcpeid" = "$pcpe_id" ]; then
+						eval Wdslisttmp='$'wlwdsmac_${j}_peerAP
+						Wdslist=$Wdslist';'$Wdslisttmp
+					fi
+				fi
+			fi
+			j=`expr $j + 1`
+		done
+	fi
+		i=`expr $i + 1`
+        done
+	echo "WdsList=$Wdslist" >> ${WLAN_START_CONF}
+
+	#hard coded for ra0 wds doesnot work for MBSSID
+		eval wdswep1key='$'wlwep1_0_key
+		eval wdswep2key='$'wlwep1_1_key
+		eval wdswep3key='$'wlwep1_2_key
+		eval wdswep4key='$'wlwep1_3_key
+		echo "Wds0Key=$wdswep1key" >> ${WLAN_START_CONF}
+		echo "Wds1Key=$wdswep2key" >> ${WLAN_START_CONF}
+		echo "Wds2Key=$wdswep3key" >> ${WLAN_START_CONF}
+		echo "Wds3Key=$wdswep4key" >> ${WLAN_START_CONF}
+		eval WdsDefaultKey='$'wlwds_0_peerAPKeyIdx
+		echo "WdsDefaultKeyID=$WdsDefaultKey" >> ${WLAN_START_CONF}
+
+	#echo "WirelessEvent=0" >> ${WLAN_START_CONF}
+	echo "WiFiTest=0" >> ${WLAN_START_CONF}
+
+	#RADIUS
+	i=0
+	flag=1
+	while [ $i -lt $wlan_main_Count ]
+        do
+	find_vendor_from_index $i
+	if [ "$WLAN_VENDOR_NAME" = "ra" ]; then
+		
+		if [ "$flag" = "1" ]; then
+			eval RADIUS_Server='$'Radius_Srv_${i}
+		        eval RADIUS_Port='$'Radius_Port_${i}
+		        eval RADIUS_Key='$'Radius_Sec_${i}
+                        flag=`expr $flag + 1`
+                else
+			eval radius_server_tmp='$'Radius_Srv_${i}
+			RADIUS_Server=$RADIUS_Server';'$radius_server_tmp 
+			eval radius_port_tmp='$'Radius_Port_${i}
+			RADIUS_Port=$RADIUS_Port';'$radius_port_tmp
+			eval radius_key_tmp='$'Radius_Sec_${i}
+			RADIUS_Key=$RADIUS_Key';'$radius_key_tmp
+		fi
+	fi
+		i=`expr $i + 1`
+	done
+	echo "RADIUS_Server=$RADIUS_Server" >> ${WLAN_START_CONF}
+	echo "RADIUS_Port=$RADIUS_Port" >> ${WLAN_START_CONF}
+	echo "RADIUS_Key=$RADIUS_Key" >> ${WLAN_START_CONF}
+
+#	i=0
+#       while [ $i -lt $wlan_main_Count ]
+#        do
+#        find_vendor_from_index $i
+#        if [ "$WLAN_VENDOR_NAME" = "ra" ]; then	
+#		APNum=`expr ${i} + 1`
+#		eval temp='$'Radius_Sec_${i}
+#		echo "RADIUS_Key${APNum}=$temp" >> ${WLAN_START_CONF}
+#	fi
+#		i=`expr $i + 1`
+#	done
+	
+	eval ipAddr='$'lan_main_0_ipAddr
+	echo "own_ip_addr=$ipAddr" >> ${WLAN_START_CONF}
+	eval interface='$'lan_main_0_interface
+	echo "EAPifname=$interface" >> ${WLAN_START_CONF}
+	eval preauthinterface='$'lan_main_0_interface
+	echo "PreAuthifname=$preauthinterface" >> ${WLAN_START_CONF}
+
+	##### HT #####################
+	#echo "HT_HTC=0" >> ${WLAN_START_CONF}
+	echo "HT_RDG=1" >> ${WLAN_START_CONF}
+	eval nExtChanPos='$'wlphy_${IFNUM}_nExtChanPos
+	if [ "$nExtChanPos" = "1" ]; then
+		echo "HT_EXTCHA=0" >> ${WLAN_START_CONF}
+	else
+		echo "HT_EXTCHA=1" >> ${WLAN_START_CONF}
+	fi
+	echo "HT_LinkAdapt=0" >> ${WLAN_START_CONF}
+
+	eval mode='$'wlphy_${IFNUM}_standard
+	if [ "$mode" = "4" ]; then
+			#echo "11n mode"
+	      	echo "HT_OpMode=1" >> ${WLAN_START_CONF}
+	else
+	      	echo "HT_OpMode=0" >> ${WLAN_START_CONF}
+	fi
+	
+	eval nAMPDUfrms='$'wlphy_${IFNUM}_nAMPDUfrms
+	echo "HT_MpduDensity=$nAMPDUfrms" >> ${WLAN_START_CONF}
+	
+	eval nChanWidth='$'wlphy_${IFNUM}_nChanWidth	
+	if [ "$nChanWidth" = "0" ]; then
+		echo "HT_BW=0" >> ${WLAN_START_CONF} #20
+	else
+		echo "HT_BW=1" >> ${WLAN_START_CONF} #20/40 auto
+	fi
+	
+	eval nAMPDUena='$'wlphy_${IFNUM}_nAMPDUena
+	echo "HT_AutoBA=$nAMPDUena" >> ${WLAN_START_CONF}
+	eval nAMSDUena='$'wlphy_${IFNUM}_nAMSDUena
+	echo "HT_AMSDU=$wlphy_0_nAMSDUena" >> ${WLAN_START_CONF}
+	eval nBAWsize='$'wlphy_${IFNUM}_nBAWsize
+	echo "HT_BAWinSize=$wlphy_0_nBAWsize" >> ${WLAN_START_CONF}
+
+	eval nGuardIntvl='$'wlphy_${IFNUM}_nGuardIntvl
+	if [ "$nGuardIntvl" = "0" ]; then
+		echo "HT_GI=1" >> ${WLAN_START_CONF}  #400
+	else
+		echo "HT_GI=0" >> ${WLAN_START_CONF} #800
+	fi	
+
+	eval nSTBCrx='$'wlphy_${IFNUM}_nSTBCrx	
+	if [ "$nSTBCrx" = "1" ]; then
+		echo "HT_STBC=1" >> ${WLAN_START_CONF}  
+	else
+		echo "HT_STBC=0" >> ${WLAN_START_CONF} 
+	fi
+
+	eval nMCS='$'wlphy_${IFNUM}_nMCS
+	if [ $nMCS = "-1" ]; then	
+		echo "HT_MCS=33" >> ${WLAN_START_CONF}
+	else
+		echo "HT_MCS=$wlphy_0_nMCS" >> ${WLAN_START_CONF}
+	
+	fi
+
+	eval nDisallowTKIP='$'wlphy_${IFNUM}_nDisallowTKIP
+	if [ "$nDisallowTKIP" = "1" ]; then
+		echo "HT_DisallowTKIP=1" >> ${WLAN_START_CONF}  
+	else
+		echo "HT_DisallowTKIP=0" >> ${WLAN_START_CONF} 
+	fi
+
+	#interface up
+	find_ra_if_from_index $1
+	eval ApEnable='$'wlmn_${1}_apEnable
+	eval pcpe_id='$'wlmn_${1}_cpeId
+	if [ "$ApEnable" = "1" ]; then
+		/sbin/ifconfig ra${RA_IF} up
+		/usr/sbin/brctl addif br0 ra${RA_IF} >/dev/null 2>&1
+		if [ "$Wdsenable" = "1" ]; then
+                        /sbin/ifconfig wds${RA_IF} up
+                        /usr/sbin/brctl addif br0 wds${RA_IF} >/dev/null 2>&1
+                fi
+
+			eval Beacon_type='$'Beacon_type_${1}
+			eval AUTH='$'WLAN_AUTH_${1}
+			eval ENCR='$'WLAN_ENCR_${1}
+			eval DefaultKeyID='$'WLAN_KEY_USED_${1}
+			eval passphrase='$'WPAPSK_${1}
+			eval WscStatus='$'ConfStatus${1}
+#			eval ssid='$'wlmn_${1}_ssid
+			eval tmpSsid='$'wlmn_${1}_ssid
+			ssid=`printf %b $tmpSsid`
+			if [ "$AUTH" != "OPEN" ] && [ "$AUTH" != "SHARED" ]; then
+				#RADIUS
+				if [ "$Beacon_type" = "2" ] || [ "$Beacon_type" = "3" ]; then
+					if [ "$auth_type" = "2" ]; then
+						eval preauth='$'PreAuth_${1}
+						iwpriv ra${RA_IF} set PreAuth=$preauth
+						eval rekey='$'Rekey_${1}
+						iwpriv ra${RA_IF} set RekeyMethod=$rekey
+						eval rekey_interval='$'Rekey_Intvl_${1}
+						iwpriv ra${RA_IF} set RekeyInterval=$rekey_interval
+					fi
+				fi
+				if [ "$Beacon_type" = "1" ] || [ "$Beacon_type" = "2" ] || [ "$Beacon_type" = "3" ]; then
+					if [ "$auth_type" = "2" ]; then
+						eval Radius_Srv='$'wl1x_${1}_radiusIP
+			                        eval Radius_Port='$'wl1x_${1}_radiusPort
+                        			eval Radius_Sec='$'wl1x_${1}_radiusSecret
+						iwpriv ra${RA_IF} set RADIUS_Server=$Radius_Srv	
+						iwpriv ra${RA_IF} set RADIUS_Port=$Radius_Port
+						iwpriv ra${RA_IF} set RADIUS_Key=$Radius_Sec
+						iwpriv ra${RA_IF} set own_ip_addr=$lan_main_0_ipAddr
+					fi
+				fi
+
+				iwpriv ra${RA_IF} set AuthMode=$AUTH
+	                        iwpriv ra${RA_IF} set EncrypType=$ENCR
+        	                iwpriv ra${RA_IF} set IEEE8021X=0
+				iwpriv ra${RA_IF} set SSID=$ssid
+				iwpriv ra${RA_IF} set WPAPSK=$passphrase
+				iwpriv ra${RA_IF} set DefaultKeyID=$DefaultKeyID
+			elif [ "$AUTH" = "OPEN" ] || [ "$AUTH" = "SHARED" ]; then
+				if [ "$ENCR" = "WEP" ]; then
+					iwpriv ra${RA_IF} set AuthMode=$AUTH
+                		        iwpriv ra${RA_IF} set EncrypType=$ENCR
+		                        iwpriv ra${RA_IF} set IEEE8021X=0
+					eval WLAN_KEY_USED='$'WLAN_KEY_USED_${1}
+					eval Key_Used=`expr $WLAN_KEY_USED - 1`
+ 	         	                eval KeyStr='$'WLAN_KEY_${Key_Used}
+					Comm_Line='set Key'${WLAN_KEY_USED}'='${KeyStr}
+   		                        iwpriv ra${RA_IF} $Comm_Line
+				fi
+			else
+				iwpriv ra${RA_IF} set AuthMode=$AUTH
+                                iwpriv ra${RA_IF} set EncrypType=$ENCR
+                                iwpriv ra${RA_IF} set IEEE8021X=0
+			fi
+
+			#Set MacFilter
+			Comm_line='ACLClearAll=1'
+		        iwpriv ra${RA_IF} set $Comm_line
+			list_inc=0
+		        eval access_list_count='$'wlan_mac_control_Count
+			while [ $list_inc -lt $access_list_count ]
+		        do
+		                eval temp='$'wlmacctrl_${list_inc}_macAddr
+	        	        eval pcpeid='$'wlmacctrl_${list_inc}_pcpeId
+        	        	if [ "$pcpeid" = "$pcpe_id" ]; then
+					Comm_line='ACLAddEntry='${temp}
+				        iwpriv ra${RA_IF} set $Comm_line
+				fi
+				list_inc=`expr $list_inc + 1`
+			done
+			eval Mac_cntrl_type_tmp='$'wlsec_${1}_macAddrCntrlType
+			if [ "$Mac_cntrl_type_tmp" = "0" ]; then
+			      eval Mac_cntrl_type="1"
+			elif [ "$Mac_cntrl_type_tmp" = "1" ]; then
+			      eval Mac_cntrl_type="2"
+			elif [ "$Mac_cntrl_type_tmp" = "2" ]; then
+			      eval Mac_cntrl_type="0"
+			fi
+			Comm_line='AccessPolicy='${Mac_cntrl_type}
+		        iwpriv ra${RA_IF} set $Comm_line        
+			
+
+			#wmm settings
+			eval wmmEna='$'wlmn_${WLMN_INDEX}_wmmEna
+			Comm_Line='set WmmCapable='$wmmEna
+			iwpriv ra${RA_IF} $Comm_Line		
+	
+			iwpriv ra${RA_IF} set WscConfStatus=$WscStatus
+			iwpriv ra${RA_IF} set Channel=$channelNo
+			iwpriv ra${RA_IF} set SSID=$ssid	
+
+		#invoke wscd
+		eval pcpe_id='$'wlmn_${1}_cpeId #I think it should cpeId
+		eval WscEnabled='$'wlwps${pcpe_id}_0_enable
+
+		if [ "$WscEnabled" != "0" ]; then
+			/tmp/wscd -w /tmp -m 1 -d 3 -i ra${RA_IF} &	
+		fi
+		
+		
+		#hsur debug
+		        eval HideSSID='$'wlmn_${1}_ssidMode
+			Comm_Line='set HideSSID='$HideSSID
+			iwpriv ra${RA_IF} $Comm_Line
+		
+			eval MaxRate='$'wlmn_${1}_maxBitRate
+			#echo "MaxRate $MaxRate"
+			eval autoRateFallbackEna='$'wlphy_${IFNUM}_autoRateFallbackEna
+			if [ "$autoRateFallbackEna" = "0" ]; then
+				if [ "$MaxRate" = "" ]; then
+					TXRATE="0"
+				elif [ "$MaxRate" = "54.0" ]; then
+					TXRATE="12"
+				elif [ "$MaxRate" = "48.0" ]; then
+					TXRATE="11"
+				elif [ "$MaxRate" = "36.0" ]; then
+					TXRATE="10"
+				elif [ "$MaxRate" = "24.0" ]; then
+					TXRATE="9"
+				elif [ "$MaxRate" = "18.0" ]; then
+					TXRATE="8"
+				elif [ "$MaxRate" = "12.0" ]; then
+					TXRATE="7"
+				elif [ "$MaxRate" = "9.0" ]; then
+					TXRATE="6"
+				elif [ "$MaxRate" = "6.0" ]; then
+					TXRATE="5"
+				elif [ "$MaxRate" = "11.0" ]; then
+					TXRATE="4"
+				elif [ "$MaxRate" = "5.5" ]; then
+					TXRATE="3"
+				elif [ "$MaxRate" = "2.0" ]; then
+					TXRATE="2"
+				elif [ "$MaxRate" = "1.0" ]; then
+					TXRATE="1"
+				else
+					TXRATE="0"
+				fi
+			else	
+				if [ "$MaxRate" = "" ]; then
+					TXRATE="0"
+				elif [ "$MaxRate" = "54.0" ]; then
+					TXRATE="24"
+				elif [ "$MaxRate" = "48.0" ]; then
+					TXRATE="23"
+				elif [ "$MaxRate" = "36.0" ]; then
+					TXRATE="22"
+				elif [ "$MaxRate" = "24.0" ]; then
+					TXRATE="21"
+				elif [ "$MaxRate" = "18.0" ]; then
+					TXRATE="20"
+				elif [ "$MaxRate" = "12.0" ]; then
+					TXRATE="19"
+				elif [ "$MaxRate" = "9.0" ]; then
+					TXRATE="18"
+				elif [ "$MaxRate" = "6.0" ]; then
+					TXRATE="17"
+				elif [ "$MaxRate" = "11.0" ]; then
+					TXRATE="16"
+				elif [ "$MaxRate" = "5.5" ]; then
+					TXRATE="15"
+				elif [ "$MaxRate" = "2.0" ]; then
+					TXRATE="14"
+				elif [ "$MaxRate" = "1.0" ]; then
+					TXRATE="13"
+				else 
+					TXRATE="0"
+				fi
+        		fi
+			#echo "TxRate $TXRATE"
+			Comm_Line='set TxRate='$TXRATE
+			iwpriv ra${RA_IF} $Comm_Line			
+
+                        #Multicast traffic
+                        iwpriv ra${RA_IF} set IgmpSnEnable=1
+                        #CoC compliant
+                        iwpriv ra${RA_IF} set GreenAP=1
+
+#			eval Value='$'wlmn_${1}_ssid
+			eval tmpValue='$'wlmn_${1}_ssid
+			Value=`printf %b $tmpValue`
+			Comm_Line='set SSID='$Value
+			iwpriv ra${RA_IF} $Comm_Line
+
+		if [ "$RA_IF" = "0" ]; then
+			iwpriv ra${RA_IF} set INF_AMAZON_SE_PPA=1
+                        ppacmd addlan -i ra${RA_IF}
+		fi
+		if [ "$Run1xD" = "1" ]; then
+			killall rt2860apd
+			/tmp/rt2860apd &
+		fi
+	fi

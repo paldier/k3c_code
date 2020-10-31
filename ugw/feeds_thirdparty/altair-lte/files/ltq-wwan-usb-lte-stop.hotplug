@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# Hotplug script to stop lte WAN connection
+#
+
+if [ "$ACTION" = "remove" ]; then
+	echo $DEVPATH | grep -w lte0 >&- 2>&-
+	if [ $? -eq 0 ]; then
+		grep ^S: /sys/kernel/debug/usb/devices 2>&- | grep Altair >&- 2>&-
+		[ $? -ne 0 ] && {
+			# Stop connection
+			/etc/rc.d/rc.bringup_wan lte_stop
+			ifconfig lte0 down
+		} || true
+	fi
+fi
+

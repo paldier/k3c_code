@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<project name="DBTool" default="Main" basedir=".">
+  <!-- Sets variables which can later be used. -->
+  <!-- The value of a property is accessed via ${} -->
+  <property name="src.dir" location="frontend/src" />
+  <property name="res.dir" location="frontend/src/resources" />
+  <property name="lib.dir" location="frontend/lib" />
+  <property name="build.dir" location="frontend/bin" />
+  <property name="build.res.dir" location="frontend/bin/resources" />
+  <property name="dist.dir" location="dist" />
+  <property name="dist.temp.dir" location="dist/temp" />
+  <property name="dist.lib.dir" location="dist/lib" />
+
+  <!--
+    Create a classpath container which can be later used in the ant task
+  -->
+  <path id="build.classpath">
+    <fileset dir="${lib.dir}">
+      <include name="**/*.jar" />
+    </fileset>
+  </path>
+
+  <!-- Deletes the existing build directory-->
+  <target name="clean">
+    <delete dir="${build.dir}" />
+  </target>
+
+  <!-- Creates the  build  directory-->
+  <target name="makedir">
+    <mkdir dir="${build.dir}" />
+    <mkdir dir="${dist.dir}" />
+    <mkdir dir="${dist.temp.dir}" />
+  </target>
+
+  <!-- Compiles the java code -->
+  <target name="compile" depends="clean, makedir"> <!--, copy-resources -->
+    <javac srcdir="${src.dir}" destdir="${build.dir}" classpathref="build.classpath" />
+  </target>
+  
+  <target name="copy-dependencies">
+		<copy todir="${dist.lib.dir}">
+			<fileset dir="${lib.dir}" includes="**/*.jar" excludes="**/*sources.jar, **/*javadoc.jar" />
+		</copy>
+	</target>
+  
+  <!--target name="copy-resources">
+		<copy todir="${build.res.dir}">
+			<fileset dir="${res.dir}" includes="**/*" />
+		</copy>
+  </target-->
+  
+  <pathconvert property="manifest.classpath" pathsep=" ">
+    <path refid="build.classpath"/>
+    <mapper>
+      <chainedmapper>
+         <flattenmapper/>
+         <globmapper from="*.jar" to="lib/*.jar"/>
+      </chainedmapper>
+    </mapper>
+  </pathconvert>
+  
+  <target name="jar" depends="compile, copy-dependencies">
+    <jar destfile="${dist.dir}/DBTool.jar" basedir="${build.dir}">
+      <manifest>
+        <attribute name="Main-Class" value="com.lantiq.dbtool.ui.DBTool"/>
+        <attribute name="Class-Path" value="${manifest.classpath}" />
+      </manifest>
+      <fileset dir="${res.dir}" />
+    </jar>
+  </target>
+
+  <target name="Main" depends="clean, jar">
+    <description>Main target</description>
+  </target>
+
+</project> 

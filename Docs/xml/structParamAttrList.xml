@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structParamAttrList" kind="struct" prot="public">
+    <compoundname>ParamAttrList</compoundname>
+    <includes refid="help__structs_8h" local="no">help_structs.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structParamAttrList_1a4f361455c9f6518e7571b7dcd37799d1" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ParamAttrList::sParamName[MAX_LEN_PARAM_NAME]</definition>
+        <argsstring>[MAX_LEN_PARAM_NAME]</argsstring>
+        <name>sParamName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parameter Name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="39" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structParamAttrList_1a2053def555ac67f0e39742cdd467cec5" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ParamAttrList::sParamProfile[MAX_LEN_PROFILENAME]</definition>
+        <argsstring>[MAX_LEN_PROFILENAME]</argsstring>
+        <name>sParamProfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Profile name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="40" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structParamAttrList_1a279353c868f69304db1ab9e0620dd08a" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ParamAttrList::sParamWebName[MAX_LEN_WEBNAME]</definition>
+        <argsstring>[MAX_LEN_WEBNAME]</argsstring>
+        <name>sParamWebName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Web name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="41" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structParamAttrList_1a75dc56c3f70323a05748c59882e8203e" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ParamAttrList::sParamValidVal[MAX_LEN_VALID_VALUE]</definition>
+        <argsstring>[MAX_LEN_VALID_VALUE]</argsstring>
+        <name>sParamValidVal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Valid values </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="42" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structParamAttrList_1a626d8635ccd1c07d4e04a938ad880035" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ParamAttrList::sParamValue[MAX_LEN_PARAM_VALUE]</definition>
+        <argsstring>[MAX_LEN_PARAM_VALUE]</argsstring>
+        <name>sParamValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default values </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="43" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structParamAttrList_1ae51e6c2f62b765283184b01d5cabc4d8" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ParamAttrList::unMinVal</definition>
+        <argsstring></argsstring>
+        <name>unMinVal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum value </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="44" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structParamAttrList_1a990542ae05c218ca1bcbb2b12bd1880d" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ParamAttrList::unMaxVal</definition>
+        <argsstring></argsstring>
+        <name>unMaxVal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum value </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="45" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structParamAttrList_1adb113fb2072819c1cbccf7316f05bc0c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ParamAttrList::unMinLen</definition>
+        <argsstring></argsstring>
+        <name>unMinLen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="46" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structParamAttrList_1a47232c322bb7aa44bc8281de097b0126" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ParamAttrList::unMaxLen</definition>
+        <argsstring></argsstring>
+        <name>unMaxLen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="47" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structParamAttrList_1a8188e3f7aa3c97eda168df546152e0ae" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ParamAttrList::unParamFlag</definition>
+        <argsstring></argsstring>
+        <name>unParamFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parameter ACCESS[READ, WRITE], SYNTAX[Int, string, boolean, hex, datetime, etc], PERMIT[SuperAdmin,Admin,Normal,Guest] </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="48" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structParamAttrList_1a7eece3633e85108272b7629c06100271" prot="public" static="no" mutable="no">
+        <type><ref refid="group__LIBHELP_1ga73f73d414f252ff46652f16495641187" kindref="member">ListHead</ref></type>
+        <definition>ListHead ParamAttrList::xPlist</definition>
+        <argsstring></argsstring>
+        <name>xPlist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Traverse List </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="50" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains the parameters list(attribute values) </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="38" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="37" bodyend="51"/>
+    <listofallmembers>
+      <member refid="structParamAttrList_1a4f361455c9f6518e7571b7dcd37799d1" prot="public" virt="non-virtual"><scope>ParamAttrList</scope><name>sParamName</name></member>
+      <member refid="structParamAttrList_1a2053def555ac67f0e39742cdd467cec5" prot="public" virt="non-virtual"><scope>ParamAttrList</scope><name>sParamProfile</name></member>
+      <member refid="structParamAttrList_1a75dc56c3f70323a05748c59882e8203e" prot="public" virt="non-virtual"><scope>ParamAttrList</scope><name>sParamValidVal</name></member>
+      <member refid="structParamAttrList_1a626d8635ccd1c07d4e04a938ad880035" prot="public" virt="non-virtual"><scope>ParamAttrList</scope><name>sParamValue</name></member>
+      <member refid="structParamAttrList_1a279353c868f69304db1ab9e0620dd08a" prot="public" virt="non-virtual"><scope>ParamAttrList</scope><name>sParamWebName</name></member>
+      <member refid="structParamAttrList_1a47232c322bb7aa44bc8281de097b0126" prot="public" virt="non-virtual"><scope>ParamAttrList</scope><name>unMaxLen</name></member>
+      <member refid="structParamAttrList_1a990542ae05c218ca1bcbb2b12bd1880d" prot="public" virt="non-virtual"><scope>ParamAttrList</scope><name>unMaxVal</name></member>
+      <member refid="structParamAttrList_1adb113fb2072819c1cbccf7316f05bc0c" prot="public" virt="non-virtual"><scope>ParamAttrList</scope><name>unMinLen</name></member>
+      <member refid="structParamAttrList_1ae51e6c2f62b765283184b01d5cabc4d8" prot="public" virt="non-virtual"><scope>ParamAttrList</scope><name>unMinVal</name></member>
+      <member refid="structParamAttrList_1a8188e3f7aa3c97eda168df546152e0ae" prot="public" virt="non-virtual"><scope>ParamAttrList</scope><name>unParamFlag</name></member>
+      <member refid="structParamAttrList_1a7eece3633e85108272b7629c06100271" prot="public" virt="non-virtual"><scope>ParamAttrList</scope><name>xPlist</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,86 @@
+#!/bin/sh
+# Configure AccessPoint parameters
+# Needed object: AccessPoint, AccessPoint.X_LANTIQ_COM_Vendor
+
+# Source library script
+[ ! "$FAPI_WLAN_WAVE_INIT_PLATFORM" ] && . /tmp/wlan_wave/fapi_wlan_wave_init_platform.sh
+
+print2log DBG "running fapi_wlan_wave_ap_set: args: $*"
+
+interface_name=$1
+
+# If interface name is not supplied, exit script
+check_input_param "fapi_wlan_wave_ap_set" "interface_name" "$interface_name"
+
+timestamp "fapi_wlan_wave_ap_set:$interface_name:begin"
+
+# DEBUG: TODO: REMOVE
+#cp ${IN_CONF} ${WAVE_TMP}/in_conf_ap_set
+
+# Map the objects indexes to the received objects in the in.conf file
+accesspoint_index=`map_param_index Object $ACCESSPOINT_OBJECT`
+accesspoint_vendor_index=`map_param_index Object $ACCESSPOINT_VENDOR_OBJECT`
+
+# The list of the access point scripts parameters that we configure on the driver configuration file
+ap_scripts_params="apEnable
+AdvancedCoding
+STBC
+AclMode
+ACL
+HiddenSSID
+ReliableMulticast
+NetworkMode
+vapStaLimits
+UapsdEna
+APforwarding"
+
+# Currently, STBC and AdvancedCoding are not supported for VAPs
+is_vap=`check_is_vap $interface_name`
+[ "$is_vap" = "true" ] && ap_scripts_params="apEnable AclMode ACL HiddenSSID ReliableMulticast NetworkMode vapStaLimits UapsdEna APforwarding"
+
+# Stop the interface by killing hostapd
+(. $ETC_PATH/fapi_wlan_wave_init_hostapd.sh stop $interface_name)
+
+# Configure the accesspoint driver parameters
+if [ -n "$accesspoint_index" ]; then
+	configure_driver_params "$interface_name" "$accesspoint_index" "$ap_scripts_params" "${WAVE_TMP}/driver_api_accesspoint_params_to_set_${interface_name}" "$accesspoint_vendor_index"
+elif [ -n "$accesspoint_vendor_index" ]; then
+	configure_driver_params "$interface_name" "$accesspoint_vendor_index" "$ap_scripts_params" "${WAVE_TMP}/driver_api_accesspoint_params_to_set_${interface_name}"
+fi
+
+# Configure HS2.0 hairpin according to IsolationEnable (AP Forwarding)
+ap_forwarding_enabled=`get_conf_param APforwarding $accesspoint_index $interface_name`
+if [ "$ap_forwarding_enabled" = "0" ]; then
+	[ -e $ETC_PATH/wave_wifi_hairpin_config.sh ] && (. $ETC_PATH/wave_wifi_hairpin_config.sh enable $interface_name)
+else
+	[ -e $ETC_PATH/wave_wifi_hairpin_config.sh ] && (. $ETC_PATH/wave_wifi_hairpin_config.sh disable $interface_name)
+fi
+
+# Save the status of PPA enabled parameter
+touch $PPA_STATUS_CONF
+ppa_mode=`get_conf_param PPAenabled $accesspoint_vendor_index $interface_name`
+no_dot_interface_name=${interface_name/./_}
+sed -i '/ppa_'${no_dot_interface_name}'=/d' $PPA_STATUS_CONF && echo "ppa_${no_dot_interface_name}=${ppa_mode}" >> $PPA_STATUS_CONF
+
+# Save the VAP STA limits from AccessPoint and AccessPoint Vendor to a temp conf file
+if [ -n "$accesspoint_index" ]; then
+	if [ -n "$accesspoint_vendor_index" ]; then
+		save_sta_limits_params $accesspoint_index $accesspoint_vendor_index $interface_name
+	else
+		save_sta_limits_params $accesspoint_index "-1" $interface_name
+	fi
+elif [ -n "$accesspoint_vendor_index" ]; then
+	save_sta_limits_params "-1" $accesspoint_vendor_index $interface_name
+fi
+
+# Create the output configuration file
+cat /dev/null > ${OUT_CONF}
+
+# Configuration is completed successfully
+update_conf_out "wlan_configuration_status" "success"
+
+# DEBUG: TODO: REMOVE
+#cp ${OUT_CONF} ${WAVE_TMP}/out_conf_ap_set
+
+print2log DBG "fapi_wlan_wave_ap_set: Done"
+timestamp "fapi_wlan_wave_ap_set:$interface_name:done"

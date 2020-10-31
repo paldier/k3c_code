@@ -1,0 +1,8 @@
+config LTQ_TEMP_DEBUG
+	bool
+	prompt "Enable debug features"
+	default n
+	help 
+	  This option enables debug ability of the TempSensor driver for
+	  Lantiq SoC's.
+ 

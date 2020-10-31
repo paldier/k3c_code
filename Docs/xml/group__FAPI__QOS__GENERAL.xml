@@ -1,0 +1,495 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__FAPI__QOS__GENERAL" kind="group">
+    <compoundname>FAPI_QOS_GENERAL</compoundname>
+    <title>General</title>
+    <innerclass refid="structqos__cfg" prot="public">qos_cfg</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__FAPI__QOS__GENERAL_1ga6da5ac0600c64e9e1a79cd25a4a18680" prot="public" static="no">
+        <name>iftype</name>
+        <enumvalue id="group__FAPI__QOS__GENERAL_1gga6da5ac0600c64e9e1a79cd25a4a18680a3f4cfcc9a5bc49c9203f41ca90a1dee7" prot="public">
+          <name>QOS_IF_CATEGORY_ETHLAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Ethernet LAN interface category. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__GENERAL_1gga6da5ac0600c64e9e1a79cd25a4a18680a91d47780ef7ca4d597796b4f8d496419" prot="public">
+          <name>QOS_IF_CATEGORY_ETHWAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Ethernet WAN interface category. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__GENERAL_1gga6da5ac0600c64e9e1a79cd25a4a18680aa2ab44c305536466712569878893f08b" prot="public">
+          <name>QOS_IF_CATEGORY_PTMWAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>xDSL PTM WAN interface category. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__GENERAL_1gga6da5ac0600c64e9e1a79cd25a4a18680a8ed7680bc33be5a05122e5b90a6b47b0" prot="public">
+          <name>QOS_IF_CATEGORY_ATMWAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>xDSL ATM WAN interface category. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__GENERAL_1gga6da5ac0600c64e9e1a79cd25a4a18680a89f8c2e2ae52f8cbf784f7b981d0c3ca" prot="public">
+          <name>QOS_IF_CATEGORY_LTEWAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>LTE WAN interface category. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__GENERAL_1gga6da5ac0600c64e9e1a79cd25a4a18680a4c4c6095859075c080d4696c27a11261" prot="public">
+          <name>QOS_IF_CATEGORY_WLANDP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>WLAN in Directpath interface category. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__GENERAL_1gga6da5ac0600c64e9e1a79cd25a4a18680a738d70bd8a77dd636f9ac0db5ec0d1cf" prot="public">
+          <name>QOS_IF_CATEGORY_WLANNDP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>WLAN in Non-directpath interface category. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__GENERAL_1gga6da5ac0600c64e9e1a79cd25a4a18680a29df4fb22495cecca68b23d855ed46eb" prot="public">
+          <name>QOS_IF_CATEGORY_LOCAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Local interface category. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__GENERAL_1gga6da5ac0600c64e9e1a79cd25a4a18680a2ff3acdce4f2875869010dc41ef56624" prot="public">
+          <name>QOS_IF_CATEGORY_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Max interface category count. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum defining various interface categories supported. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="174" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="174" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__FAPI__QOS__GENERAL_1gaf8da7b968cb9659aef1acb8c79ff7250" prot="public" static="no">
+        <name>log_type_t</name>
+        <enumvalue id="group__FAPI__QOS__GENERAL_1ggaf8da7b968cb9659aef1acb8c79ff7250a7264ac0af0559275987af6d7fc9180f8" prot="public">
+          <name>QOS_LOG_CONSOLE</name>
+          <initializer>=2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Log messages to be shown on console </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__GENERAL_1ggaf8da7b968cb9659aef1acb8c79ff7250a6fdbe9e54ade3cac89351e3a8dd67ae0" prot="public">
+          <name>QOS_LOG_FILE</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Log messages to be put into file </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>QoS log mechanism. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="189" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="189" bodyend="192"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__FAPI__QOS__GENERAL_1ga23c1893cfe6a7875c1a418338c6f09ad" prot="public" static="no">
+        <type>enum <ref refid="group__FAPI__QOS__GENERAL_1ga6da5ac0600c64e9e1a79cd25a4a18680" kindref="member">iftype</ref></type>
+        <definition>typedef enum iftype  iftype_t</definition>
+        <argsstring></argsstring>
+        <name>iftype_t</name>
+        <briefdescription>
+<para>Enum defining various interface categories supported. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="184" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__FAPI__QOS__GENERAL_1gabfc98fb0c7c5226badf1eb79b4ab6e2b" prot="public" static="no">
+        <type>struct <ref refid="structqos__cfg" kindref="compound">qos_cfg</ref></type>
+        <definition>typedef struct qos_cfg  qos_cfg_t</definition>
+        <argsstring></argsstring>
+        <name>qos_cfg_t</name>
+        <briefdescription>
+<para>QoS general configuration data structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="42" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__FAPI__QOS__GENERAL_1gafd940d9821b55eebebc562898643af6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_cfg_get</definition>
+        <argsstring>(qos_cfg_t *qoscfg, uint32_t flags)</argsstring>
+        <name>fapi_qos_cfg_get</name>
+        <param>
+          <type><ref refid="group__FAPI__QOS__GENERAL_1gabfc98fb0c7c5226badf1eb79b4ab6e2b" kindref="member">qos_cfg_t</ref> *</type>
+          <declname>qoscfg</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Set QoS general configuration. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">qoscfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QoS general configuration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reserved currently </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on successful / -1 on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__QOS__GENERAL_1ga2f04ba96cfa8c5cd6e4c648c777c6fbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_cfg_set</definition>
+        <argsstring>(qos_cfg_t *qoscfg, uint32_t flags)</argsstring>
+        <name>fapi_qos_cfg_set</name>
+        <param>
+          <type><ref refid="group__FAPI__QOS__GENERAL_1gabfc98fb0c7c5226badf1eb79b4ab6e2b" kindref="member">qos_cfg_t</ref> *</type>
+          <declname>qoscfg</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Set QoS general configuration. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qoscfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QoS general configuration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specified type of operation<itemizedlist>
+<listitem><para>QOS_CFG_MODIFY : modify the configuration </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on successful / -1 on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__QOS__GENERAL_1ga9909b3559cf8dfbd0704a6e01ce7a9a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_init</definition>
+        <argsstring>(qos_cfg_t *qoscfg, uint32_t flags)</argsstring>
+        <name>fapi_qos_init</name>
+        <param>
+          <type><ref refid="group__FAPI__QOS__GENERAL_1gabfc98fb0c7c5226badf1eb79b4ab6e2b" kindref="member">qos_cfg_t</ref> *</type>
+          <declname>qoscfg</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>QoS configuration init. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">qoscfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>QoS AL general configuration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specified type of operation<itemizedlist>
+<listitem><para>QOS_CFG_MODIFY : modify the configuration </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on successful / -1 on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__QOS__GENERAL_1ga77057b89e0678c0af7a7f21903af2b03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_shut</definition>
+        <argsstring>(uint32_t flags)</argsstring>
+        <name>fapi_qos_shut</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>QoS configuration disable/shut. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specified type of operation<itemizedlist>
+<listitem><para>QOS_CFG_MODIFY : modify the configuration </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on successful / -1 on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="76" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" prot="public" static="no">
+        <name>IN</name>
+        <briefdescription>
+<para>IN. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="89" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" prot="public" static="no">
+        <name>OUT</name>
+        <briefdescription>
+<para>OUT. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="93" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1ga241695904231926008dba2d841b4400a" prot="public" static="no">
+        <name>IN_OUT</name>
+        <briefdescription>
+<para>IN_OUT. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="97" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1ga66ee9b201fb5c2204740ee5c2bd68eb3" prot="public" static="no">
+        <name>LTQ_SUCCESS</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>Macro that defines success state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="102" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1gaab9d5c1ffe0122fbaf498cd9ba99c275" prot="public" static="no">
+        <name>LTQ_FAIL</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+<para>Macro that defines failure state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="106" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1ga0c00a96baa89438d6b732b92a1ba11b9" prot="public" static="no">
+        <name>MAX_DATA_LEN</name>
+        <initializer>2000</initializer>
+        <briefdescription>
+<para>Macro that defines maximum data length for stack buffers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="111" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1ga245e49ca30032e7c5681167162f74937" prot="public" static="no">
+        <name>MAX_IF_LEN</name>
+        <initializer>100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="113" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1ga32ba2b54cf25c08a334eb09e38d1d5af" prot="public" static="no">
+        <name>QOSAL_ENABLE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="117" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1ga05fd78ae292aa32f08e46d8f1b2cb0d2" prot="public" static="no">
+        <name>QOSAL_DISABLE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="121" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1ga9f0e96ac7fe611e3aa7851b67749b49c" prot="public" static="no">
+        <name>QOSAL_TRUE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="126" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1ga7a64b1287a98efbef6f080cde34b8dee" prot="public" static="no">
+        <name>QOSAL_FALSE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="130" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1gafd709f201d7643c3909621f620ea648a" prot="public" static="no">
+        <name>MAX_NAME_LEN</name>
+        <initializer>64</initializer>
+        <briefdescription>
+<para>Macro that defines Name length. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="134" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1ga10bf2917a6a4297e21e03f60c487f591" prot="public" static="no">
+        <name>MAX_INTERFACES</name>
+        <initializer>9</initializer>
+        <briefdescription>
+<para>Macro that defines max interfaces. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="139" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1ga0ec173d8fafd88fb863c4da3e11a9536" prot="public" static="no">
+        <name>MAX_QUEUE_COUNT</name>
+        <initializer>9</initializer>
+        <briefdescription>
+<para>Macro that defines max queue count. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="144" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1ga53a5c7c867e818bc8b6dea3105a90f62" prot="public" static="no">
+        <name>MAX_IF_NAME_LEN</name>
+        <initializer>32</initializer>
+        <briefdescription>
+<para>MAX Interface name length. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="149" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1ga2f3f659f8f6fbf01d76a03f42351e559" prot="public" static="no">
+        <name>MAX_L7_PROTO_NAME_LEN</name>
+        <initializer>32</initializer>
+        <briefdescription>
+<para>MAX Interface name length. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="154" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1ga40c47329f782fd8a018091086fdd51e2" prot="public" static="no">
+        <name>QOSD_PID_FILE</name>
+        <initializer>&quot;/var/run/qosd.pid&quot;</initializer>
+        <briefdescription>
+<para>QoS PID file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="159" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1ga7679e55a89721f1c43ec2215c7a23282" prot="public" static="no">
+        <name>LOG_FILE_LOC</name>
+        <initializer>&quot;/tmp/qosal_dbg&quot;</initializer>
+        <briefdescription>
+<para>QoS log file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="164" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__GENERAL_1ga86d500a34c624c2cae56bc25a31b12f3" prot="public" static="no">
+        <name>UNUSED</name>
+        <param><defname>x</defname></param>
+        <initializer>(void)(x)</initializer>
+        <briefdescription>
+<para>Macro to suppress unused variable warning during compilation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" line="169" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/commondefs.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>It provides a set of API for general configuration like, enable/disable QoS, setting logging level etc. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_6b786802ba10fba0fe27c7b00d1e98ca" kind="dir">
+    <compoundname>docs</compoundname>
+    <innerfile refid="cal_8h">cal.h</innerfile>
+    <innerfile refid="commondefs_8h">commondefs.h</innerfile>
+    <innerfile refid="crc32_8h">crc32.h</innerfile>
+    <innerfile refid="dsl__fapi_8h">dsl_fapi.h</innerfile>
+    <innerfile refid="fapi__led_8h">fapi_led.h</innerfile>
+    <innerfile refid="fapi__mcast_8h">fapi_mcast.h</innerfile>
+    <innerfile refid="fapi__sys__common_8h">fapi_sys_common.h</innerfile>
+    <innerfile refid="fapi__wlan_8h">fapi_wlan.h</innerfile>
+    <innerfile refid="fapi__wlan__mtk_8h">fapi_wlan_mtk.h</innerfile>
+    <innerfile refid="help__debug_8h">help_debug.h</innerfile>
+    <innerfile refid="help__defs_8h">help_defs.h</innerfile>
+    <innerfile refid="help__enums_8h">help_enums.h</innerfile>
+    <innerfile refid="help__error_8h">help_error.h</innerfile>
+    <innerfile refid="help__logging_8h">help_logging.h</innerfile>
+    <innerfile refid="help__objlist_8h">help_objlist.h</innerfile>
+    <innerfile refid="help__proto_8h">help_proto.h</innerfile>
+    <innerfile refid="help__structs_8h">help_structs.h</innerfile>
+    <innerfile refid="qosal__cl__api_8h">qosal_cl_api.h</innerfile>
+    <innerfile refid="qosal__queue__api_8h">qosal_queue_api.h</innerfile>
+    <innerfile refid="scapi__proto_8h">scapi_proto.h</innerfile>
+    <innerfile refid="ugw__common_8h">ugw_common.h</innerfile>
+    <innerfile refid="ugw__debug_8h">ugw_debug.h</innerfile>
+    <innerfile refid="ugw__defs_8h">ugw_defs.h</innerfile>
+    <innerfile refid="ugw__doxy_8h">ugw_doxy.h</innerfile>
+    <innerfile refid="ugw__doxy__fapi_8h">ugw_doxy_fapi.h</innerfile>
+    <innerfile refid="ugw__doxy__framework_8h">ugw_doxy_framework.h</innerfile>
+    <innerfile refid="ugw__enums_8h">ugw_enums.h</innerfile>
+    <innerfile refid="ugw__error_8h">ugw_error.h</innerfile>
+    <innerfile refid="ugw__mainpage_8h">ugw_mainpage.h</innerfile>
+    <innerfile refid="ugw__proto_8h">ugw_proto.h</innerfile>
+    <innerfile refid="ugw__structs_8h">ugw_structs.h</innerfile>
+    <innerfile refid="ulogging_8h">ulogging.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,71 @@
+#!/bin/sh
+#
+# Hotplug script to initialize Altair USB LTE WWAN dongle drivers
+#
+
+local load_modules="\
+	ueservice \
+	usbnet \
+	cdc_ether \
+	ue_lte \
+"
+local sys_dev="\
+	/sys/class/uedebug/uedebug0/dev \
+	/sys/class/ueservice/ueservice0/dev \
+	/sys/class/tty/ttyLTE0/dev \
+"
+local unload_modules="";
+for mdls in $load_modules; do
+	unload_modules="$mdls $unload_modules"
+done
+
+local mdls="";
+local udv="";
+if [ -n "$ACTION" ]; then
+	if [ "$ACTION" = "add" ]; then
+		if [ -n "$DEVPATH" ]; then
+			grep ^S: /sys/kernel/debug/usb/devices 2>&- | grep Altair >&- 2>&-
+			[ $? -eq 0 ] && {
+				[ -f /tmp/lteDrvLoad ] || {
+					touch /tmp/lteDrvLoad
+					# Insert kernel modules
+					for mdls in $load_modules; do
+						insmod $mdls;
+					done; sync
+
+					# Create device nodes
+					for udv in $sys_dev; do
+						rm -f /dev/`echo $udv|cut -d'/' -f5`
+						mknod /dev/`echo $udv|cut -d'/' -f5` c $(sed 's/:/ /g' $udv)
+					done; sync
+				} || true
+			} || true
+		fi
+	elif [ "$ACTION" = "remove" ]; then
+		grep ^S: /sys/kernel/debug/usb/devices 2>&- | grep Altair >&- 2>&-
+		[ $? -ne 0 ] && {
+			if [ -f /tmp/lteFwLoad ]; then
+				rm -f /tmp/lteFwLoad;
+				killall connect_poll
+				ifconfig lte0 down
+				rm -f /tmp/lteFwLoad /tmp/lteDrvLoad /tmp/cwan_status.txt
+				for mdls in $unload_modules; do
+					rmmod $mdls
+				done; sync;
+			fi;
+		} || true
+	elif [ "$ACTION" = "RESET" ]; then
+		if [ -f /tmp/lteFwLoad ]; then
+			echo "atz" | \
+			  socat -t 1 /dev/ttyLTE0,raw,nonblock,cr,echo=0 stdio && {
+				killall connect_poll
+				ifconfig lte0 down
+				rm -f /tmp/lteFwLoad /tmp/lteDrvLoad /tmp/cwan_status.txt
+				for mdls in $unload_modules; do
+					rmmod $mdls
+				done; sync;
+			}
+		fi
+	fi
+fi
+

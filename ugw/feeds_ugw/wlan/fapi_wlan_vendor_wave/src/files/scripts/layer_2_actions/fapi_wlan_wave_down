@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# Bring down a Wave interface
+# Needed object: None
+
+# Source library script
+[ ! "$FAPI_WLAN_WAVE_INIT_PLATFORM" ] && . /tmp/wlan_wave/fapi_wlan_wave_init_platform.sh
+
+print2log DBG "running fapi_wlan_wave_down: args: $*"
+
+interface_name=$1
+
+# If interface name is not supplied, exit script
+check_input_param "fapi_wlan_wave_down" "interface_name" "$interface_name"
+
+# Disable HS2.0 components
+[ -e /proc/net/wave_wifi_l2f/l2f ] && if_search_in_l2f=`cat /proc/net/wave_wifi_l2f/l2f | grep $interface_name -w`
+[ -e /proc/net/wave_wifi_l2f/dgaf ] && if_search_in_dgaf=`cat /proc/net/wave_wifi_l2f/dgaf | grep $interface_name -w`
+[ -e $ETC_PATH/wave_wifi_parp_ctrl.sh ] && (. $ETC_PATH/wave_wifi_parp_ctrl.sh disable $interface_name)
+api_wrapper set iwpriv $interface_name sARPProxy 0
+[ -n "$if_search_in_dgaf" ] && (. $ETC_PATH/wave_wifi_dgaf_disable.sh $interface_name 0)
+[ -e $ETC_PATH/wmdctrl.sh ] && (. $ETC_PATH/wmdctrl.sh disable $interface_name)
+[ -n "$if_search_in_l2f" ] && (. $ETC_PATH/wave_wifi_l2f_ctrl.sh disable $interface_name)
+[ -e $ETC_PATH/wave_wifi_hairpin_config.sh ] && (. $ETC_PATH/wave_wifi_hairpin_config.sh disable $interface_name)
+
+# Bring the hostapd down
+(. $ETC_PATH/fapi_wlan_wave_init_hostapd.sh stop $interface_name)
+# Remove interface from bridge and PPA and bring it down
+ppa_del_if $interface_name
+brctl delif br-lan $interface_name
+api_wrapper set ifconfig $interface_name down
+
+# Check if interface is VAP
+is_vap=`check_is_vap $interface_name`
+[ "$is_vap" = "true" ] && (. $ETC_PATH/fapi_wlan_wave_init_mbss.sh stop $interface_name)
+
+print2log DBG "fapi_wlan_wave_down done"

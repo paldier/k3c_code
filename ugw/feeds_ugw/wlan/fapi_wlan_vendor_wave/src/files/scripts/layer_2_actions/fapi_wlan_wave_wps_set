@@ -1,0 +1,84 @@
+#!/bin/sh
+# Configure AccessPoint.WPS parameters
+# Needed object: AccessPoint.WPS, AccessPoint.X_LANTIQ_COM_Vendor.WPS
+
+# Source library script
+[ ! "$FAPI_WLAN_WAVE_INIT_PLATFORM" ] && . /tmp/wlan_wave/fapi_wlan_wave_init_platform.sh
+
+print2log DBG "running fapi_wlan_wave_wps_set: args: $*"
+
+interface_name=$1
+
+# If interface name is not supplied, exit script
+check_input_param "fapi_wlan_wave_wps_set" "interface_name" "$interface_name"
+
+timestamp "fapi_wlan_wave_wps_set:$interface_name:begin"
+
+# DEBUG: TODO: REMOVE
+#cp ${IN_CONF} ${WAVE_TMP}/in_conf_wps_set
+
+# Map the objects indexes to the received objects in the in.conf file
+wps_index=`map_param_index Object $ACCESSPOINT_WPS_OBJECT`
+wps_vendor_index=`map_param_index Object $ACCESSPOINT_WPS_VENDOR_OBJECT`
+device_info_index=`map_param_index Object $DEVICE_INFO_OBJECT`
+
+# If an object that needs to be in the output conf wasn't in the input conf, set it with an index
+next_object_index=`get_next_object_index`
+[ -z "$wps_index" ] && wps_index=$next_object_index && next_object_index=$((next_object_index+1))
+[ -z "$wps_vendor_index" ] && wps_vendor_index=$next_object_index && next_object_index=$((next_object_index+1))
+[ -z "$device_info_index" ] && device_info_index=$next_object_index && next_object_index=$((next_object_index+1))
+
+# Check if an action was called instead of a configuration
+wps_action=`get_conf_param WPSAction $wps_vendor_index $interface_name`
+
+# The list of the wps scripts parameters that we configure on the hostapd configuration file
+hostapd_wps_scripts_params="Manufacturer
+ModelName
+DeviceName
+ModelNumber
+SerialNumber
+WPS2ConfigMethodsEnabled
+FriendlyName
+ManufacturerUrl
+WPSState
+PIN"
+
+# Create the output configuration file (created before the init_hostapd script execution since GeneratePIN action also writes to the out.conf file)
+cat /dev/null > ${OUT_CONF}
+
+case "$wps_action" in
+	"PBC")
+		(. $ETC_PATH/fapi_wlan_wave_wps.sh conf_via_pbc $interface_name $wps_index $wps_vendor_index)
+		;;
+	"PIN")
+		(. $ETC_PATH/fapi_wlan_wave_wps.sh conf_via_pin $interface_name $wps_index $wps_vendor_index)
+		;;
+	"GeneratePIN")
+		update_conf_out "Object_${wps_vendor_index}" "$ACCESSPOINT_WPS_VENDOR_OBJECT"
+		(. $ETC_PATH/fapi_wlan_wave_wps.sh wps_generate_pin $interface_name $wps_index $wps_vendor_index)
+		;;
+	*)
+		# Stop the interface by killing hostapd
+		(. $ETC_PATH/fapi_wlan_wave_init_hostapd.sh stop $interface_name)
+
+		# Configure hostapd parameters
+		(. $ETC_PATH/fapi_wlan_wave_init_hostapd.sh create_config $interface_name $wps_index "$hostapd_wps_scripts_params" $wps_vendor_index $device_info_index)
+		;;
+esac
+
+# Set UUID if it needs to be set, read it from the temp file and remove file.
+if [ -e ${WAVE_TMP}/UUID_${interface_name} ]; then
+	. ${WAVE_TMP}/UUID_${interface_name}
+	rm -f ${WAVE_TMP}/UUID_${interface_name}
+	update_conf_out "Object_${wps_vendor_index}" "$ACCESSPOINT_WPS_VENDOR_OBJECT"
+	update_conf_out "UUID_${wps_vendor_index}" "$uuid"
+fi
+
+# Configuration is completed successfully
+update_conf_out "wlan_configuration_status" "success"
+
+# DEBUG: TODO: REMOVE
+#cp ${OUT_CONF} ${WAVE_TMP}/out_conf_wps_set
+
+print2log DBG "fapi_wlan_wave_wps_set: Done"
+timestamp "fapi_wlan_wave_wps_set:$interface_name:done"

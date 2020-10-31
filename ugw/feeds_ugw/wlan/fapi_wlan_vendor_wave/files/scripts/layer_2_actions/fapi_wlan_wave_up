@@ -1,0 +1,47 @@
+#!/bin/sh
+
+# Bring up the interfaces of a Wave radio
+# Needed object: None
+
+# Source library script
+[ ! "$FAPI_WLAN_WAVE_INIT_PLATFORM" ] && . /tmp/wlan_wave/fapi_wlan_wave_init_platform.sh
+
+print2log DBG "running fapi_wlan_wave_up: args: $*"
+
+interface_name=$1
+
+# If interface name is not supplied, exit script
+check_input_param "fapi_wlan_wave_up" "interface_name" "$interface_name"
+
+# Save the ifconfig output to a file for faster handling
+ifconfig > $WAVE_TMP/ifconfig_res
+
+# Check if VAP exists but not started and bring it up.
+ifconfig_vap=`grep "$interface_name " $WAVE_TMP/ifconfig_res`
+if [ -z "$ifconfig_vap" ]; then
+	(. $ETC_PATH/fapi_wlan_wave_init_hostapd.sh start $interface_name)
+
+	# Add the interface to the bridge, if not already in the bridge
+	if [ `brctl show br-lan | grep -c $interface_name` -eq 0 ]; then
+		brctl addif br-lan $interface_name
+	fi
+
+	# Add the interface to the PPA if it's enabled for the interface
+	# Check if PPA is set for this interface
+	. $PPA_STATUS_CONF
+	no_dot_interface_name=${interface_name/./_}
+	eval ppa_enabled=\${ppa_${no_dot_interface_name}}
+	[ "$ppa_enabled" = "1" ] && ppa_add_if $interface_name
+fi
+
+rm -f $WAVE_TMP/ifconfig_res
+# Create the output configuration file
+cat /dev/null > ${OUT_CONF}
+
+# Configuration is completed successfully
+update_conf_out "wlan_configuration_status" "success"
+
+# DEBUG: TODO: REMOVE
+#cp ${OUT_CONF} ${WAVE_TMP}/out_conf_up
+
+print2log DBG "fapi_wlan_wave_up done"

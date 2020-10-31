@@ -1,0 +1,715 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="help__error_8h" kind="file">
+    <compoundname>help_error.h</compoundname>
+    <includedby refid="help__objlist_8h" local="yes">help_objlist.h</includedby>
+    <includedby refid="ugw__error_8h" local="no">ugw_error.h</includedby>
+    <invincdepgraph>
+      <node id="131">
+        <label>ugw_proto.h</label>
+        <link refid="ugw__proto_8h"/>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+      </node>
+      <node id="135">
+        <label>fapi_sys_common.h</label>
+        <link refid="fapi__sys__common_8h"/>
+        <childnode refid="136" relation="include">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>help_objlist.h</label>
+        <link refid="help__objlist_8h_source"/>
+        <childnode refid="131" relation="include">
+        </childnode>
+      </node>
+      <node id="129">
+        <label>help_error.h</label>
+        <link refid="help_error.h"/>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+      </node>
+      <node id="137">
+        <label>fapi_led.h</label>
+        <link refid="fapi__led_8h"/>
+      </node>
+      <node id="136">
+        <label>dsl_fapi.h</label>
+        <link refid="dsl__fapi_8h"/>
+      </node>
+      <node id="133">
+        <label>ugw_common.h</label>
+        <link refid="ugw__common_8h"/>
+      </node>
+      <node id="132">
+        <label>cal.h</label>
+        <link refid="cal_8h"/>
+      </node>
+      <node id="134">
+        <label>ugw_error.h</label>
+        <link refid="ugw__error_8h_source"/>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+      </node>
+      <node id="138">
+        <label>ugw_debug.h</label>
+        <link refid="ugw__debug_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="user-defined">
+      <memberdef kind="define" id="help__error_8h_1aacfd8e683bf2245f5b52e62f45dd0483" prot="public" static="no">
+        <name>UGW_SUCCESS</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CAUTION: While adding the new error code The comment section for that error code is must, else that error message will not be handle by web. String within the comment section in the same line of error code enum will be displayed as error message on the web. Format of the comment section should follow doxygen format comment as below. Macro to define success status </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_error.h" line="34" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_error.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="help__error_8h_1a6d184bcbeb3e669bbe503b0afc3011c5" prot="public" static="no">
+        <name>UGW_FAILURE</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define failure status </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_error.h" line="35" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_error.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="enum" id="help__error_8h_1a46deb2c88512b8c9534707be581064a1" prot="public" static="no">
+        <name>FrameWorkErrCode</name>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a0a72d93e8816b7b0d38f7c26754156df" prot="public">
+          <name>ERR_INVALID_OBJNAME_REQUEST</name>
+          <initializer>= -200</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Error Requested Object is Invalid </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a57772c2da431317d7380be92f18a3fff" prot="public">
+          <name>ERR_INVALID_PARAMETER_REQUEST</name>
+          <initializer>= -201</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Error Requested Parameter is Invalid </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a18f7bb0849ff02c51aa103265dfa3ba0" prot="public">
+          <name>ERR_INVALID_INSTANCE_REQUEST</name>
+          <initializer>= -202</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Error Invalid Instance Request </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a4c04ae43009886871c491037ef692176" prot="public">
+          <name>ERR_INVALID_XML_FILE</name>
+          <initializer>= -203</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid XML File request </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a3202ff96dcd656bc62c42234e5a4a6f7" prot="public">
+          <name>ERR_FILE_NOT_FOUND</name>
+          <initializer>= -204</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>File not found, Cannot perform the operation </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a192d12498ad589fe926aaafb9253f1a1" prot="public">
+          <name>ERR_FILE_LOCK_FAILED</name>
+          <initializer>= -205</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>File lock failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a0c8929daf9bc735f213ba3349d91e823" prot="public">
+          <name>ERR_FILE_WRITE_FAILED</name>
+          <initializer>= -206</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>File write failed, Cannot perform the operation </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a6b86fbf00173acc88d2ecef6895fdef5" prot="public">
+          <name>ERR_FILE_TRUNCATE_FAILED</name>
+          <initializer>= -207</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>File truncate failed, Cannot perform the operation </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a54898c0397598a0e041fa7b0e2f3ff73" prot="public">
+          <name>ERR_NO_CONTENT</name>
+          <initializer>= -208</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>No content in recived msg </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1ae28243bb7addd3f29264e1dbfc9871dd" prot="public">
+          <name>ERR_INVALID_UBUS_ARG</name>
+          <initializer>= -209</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid ubus arguments </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a87094ec959f313249b541a4de03d723e" prot="public">
+          <name>ERR_UBUSMSG_OVERLOAD</name>
+          <initializer>= -210</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Ubus msg overloaded </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a3d85139692d5dec81e1eb50b21b1962a" prot="public">
+          <name>ERR_UBUSD_NOT_RUNNING</name>
+          <initializer>= -211</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Ubusd daemon not running </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1ac4eef49943fc776d23952b5de82a625b" prot="public">
+          <name>ERR_MEMORY_ALLOC_FAILED</name>
+          <initializer>= -212</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Memory Allocation failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a90e0cdf93631d5b5738f5bbafc62c0e1" prot="public">
+          <name>ERR_UPDATE_FAILED</name>
+          <initializer>= -213</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Update failed it can be anything like (tree update, servd internal update, csd internal update, etc) </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a370e81c1b48b0a6dbab16d3f6bb598e9" prot="public">
+          <name>ERR_MAX_INSTANCE_EXCEEDED</name>
+          <initializer>= -214</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Add operation failed, max limit reached </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a3b501b408e08c3ed294d07830c97bcbb" prot="public">
+          <name>ERR_MIN_INSTANCE_REACHED</name>
+          <initializer>= -215</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Delete operation failed, system expects this entry </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a5d87e4d97440496fff88af45d4383f09" prot="public">
+          <name>ERR_MERGE_FAILED</name>
+          <initializer>= -216</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Merge Failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a1c9246b71d919cc7856049431756aa98" prot="public">
+          <name>ERR_VALIDATION_FAILED</name>
+          <initializer>= -217</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Validataion Failed, Cannot perform the operation </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1aaaabb296ad296e391509e43d10ec564b" prot="public">
+          <name>ERR_NON_INSTANCEABLE</name>
+          <initializer>= -218</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Add Operation Failed, due to non-instancable property of the object </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a6a2384b4a1e9a02f35dedc4bbf82722f" prot="public">
+          <name>ERR_DEFAULT_LOAD_FAILURE</name>
+          <initializer>= -219</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Default value get failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a5fd0a801ac590acee796da2b6e17a2d1" prot="public">
+          <name>ERR_PATH_NOT_FOUND</name>
+          <initializer>= -220</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>File directory path not found </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a09908a78de23990c8fd4ef518e22dd11" prot="public">
+          <name>ERR_RECEIVER_NOT_RUNNING</name>
+          <initializer>= -221</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Requested server not running </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a971acbab6256581be09ac40230b8ded7" prot="public">
+          <name>ERR_ADD_OBJECT_FAILED</name>
+          <initializer>= -222</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ADD object failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a5cef53d4df7847a74e75e969ca986247" prot="public">
+          <name>ERR_DEL_OBJECT_FAILED</name>
+          <initializer>= -223</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>DEL object failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a686f8029d7a555e00af9a97298424d9a" prot="public">
+          <name>ERR_MIN_VAL_REACHED</name>
+          <initializer>= -224</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Value is not number or less than expected value </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a64108894a05d94c9208c2e01589a2ceb" prot="public">
+          <name>ERR_MAX_VAL_EXCEEDED</name>
+          <initializer>= -225</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Value is not number or greater than expected value </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a0a29312b42a33e1f013fd6a17ebbc564" prot="public">
+          <name>ERR_MIN_LEN_REACHED</name>
+          <initializer>= -226</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>String length is less than expected length </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a1ca95188c4ec63656b333443838a5bd3" prot="public">
+          <name>ERR_MAX_LEN_EXCEEDED</name>
+          <initializer>= -227</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>String length is greater than expected length </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1ad09f67815ba102d6d428bb6f9228bb6a" prot="public">
+          <name>ERR_BOOLEAN_FAILED</name>
+          <initializer>= -228</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Boolean Failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a530895b7108bfcfe3945718127258c67" prot="public">
+          <name>ERR_DATETIME_FAILED</name>
+          <initializer>= -229</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Date Time Failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a036ac124017a0a2763114e1d505d5316" prot="public">
+          <name>ERR_READ_ONLY</name>
+          <initializer>= -230</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Read only parameter, Cannot perform the operation </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a2b2b3edc0a4d621894f183ca665666ce" prot="public">
+          <name>ERR_GET_ID_FAILED</name>
+          <initializer>= -231</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Get Id Failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a53bc577de7a246679745d5f24b836834" prot="public">
+          <name>ERR_STRING_NOT_FOUND</name>
+          <initializer>= -232</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>String not found or String match failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a240d5e7db94dfe5927cbe79cf35aa580" prot="public">
+          <name>ERR_BAD_FD</name>
+          <initializer>= -233</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Bad File descriptor </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a90f7fca84f9dc6a84e0f13c898b3079a" prot="public">
+          <name>ERR_IOCTL_FAILED</name>
+          <initializer>= -234</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>IOCTL failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1ad3b9769b0eb5a54de450c2976178d32d" prot="public">
+          <name>ERR_INVALID_PARAMETER_VALUE_REQUEST</name>
+          <initializer>= -235</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid parameter value request </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a181978c5b33859d315ec370f1c7092c9" prot="public">
+          <name>ERR_ALIAS_REPLACEMENT_FAILED</name>
+          <initializer>= -236</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid parameter value request </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a6f258d4de34cb65f41c6d96ea87a5270" prot="public">
+          <name>ERR_UBUS_TIME_OUT</name>
+          <initializer>= -237</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ubus timeout happend on get/set request </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a46deb2c88512b8c9534707be581064a1a788146a62b8c1ab9b93d5e8048c087bc" prot="public">
+          <name>ERR_SL_TIME_OUT</name>
+          <initializer>= -238</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>SL failed to complete the operation or timed out </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum containing the type of error code which can be returned from the framework modules like servd, csd, and cal. Buffer error code -200 to -240. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_error.h" line="41" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_error.h" bodystart="41" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="enum" id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5" prot="public" static="no">
+        <name>SLErrCode</name>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a5f3aecc28cbef3ed98a20df53d163991" prot="public">
+          <name>ERR_INVALID_SL</name>
+          <initializer>= -241</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Required Service Library doesnot Exist !! </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a470ac29bb04da0d339c98dfefd137443" prot="public">
+          <name>ERR_INVALID_SET_PARAM_REQ</name>
+          <initializer>= -242</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Set Parameter Request Failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a991f48066fec8800274aa87a9c5f50a8" prot="public">
+          <name>ERR_INVALID_OPERATION</name>
+          <initializer>= -243</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid Operation Requested </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a8fbaf6a083a67a40dee2c8ef8db93200" prot="public">
+          <name>ERR_INVALID_IPADDRESS</name>
+          <initializer>= -244</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid IpAddress </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5abee2fe82398d81685335061f59a7cac7" prot="public">
+          <name>ERR_INVALID_IP_POOL_RANGE</name>
+          <initializer>= -245</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Pool Range Specified in Invalid </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a888b184683a1cc586f2d9b905fbc54e1" prot="public">
+          <name>ERR_INTERNAL</name>
+          <initializer>= -246</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Internal Error. Please correct the entered data </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5af0b7802c4e7f9fa1f059142585db59ed" prot="public">
+          <name>ERR_EXISTING_ATM_WAN</name>
+          <initializer>= -247</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Can&apos;t delete ATM Link, already a connection exists with this link </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5aea9ad2a2c20709fe76bc5135e3f5c446" prot="public">
+          <name>ERR_MULTIPLE_IPOA_PPPOA_WAN</name>
+          <initializer>= -248</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Creation of multiple IPoA/PPPoA connection on same ATM link is not permitted </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a4fff0c3ade219b58bdfad77a58123805" prot="public">
+          <name>ERR_MULTIPLE_BRIDGED_WAN</name>
+          <initializer>= -249</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Creation of multiple bridged WAN connection is not permitted </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a1bed00b511177485b2a2d51b140def20" prot="public">
+          <name>ERR_IPOA_PPPOA_WAN_ON_VLAN</name>
+          <initializer>= -250</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Creation of IPoA/PPPoA connection on a VLAN interface is not permitted </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a24022766a4d365081b4cf4d74b867ecb" prot="public">
+          <name>ERR_DB_READ_FAILED</name>
+          <initializer>= -251</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>DataBase Read Failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5ae93e18e03374a762fe59bdc93d31a3ad" prot="public">
+          <name>ERR_RULE_MODIFY_NOT_ALLOWED</name>
+          <initializer>= -252</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>This rule cannot be modified/deleted </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a1487298c514dbdb485eb68cfdccdfa16" prot="public">
+          <name>ERR_REJECT_BRIDGED_WAN_CONN</name>
+          <initializer>= -253</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>WAN exists on concerned wan interface, Creation of new Bridged WAN Connection is not permitted </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5aa59696257649ffb674453fbde28753e5" prot="public">
+          <name>ERR_REJECT_PPPOE_WAN_CONN</name>
+          <initializer>= -254</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Bridged WAN exists on concerned wan interface, Creation of new PPP WAN Connection is not permitted </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5af99c72bea89b9203179bdca6bafec8e5" prot="public">
+          <name>ERR_REJECT_STATIC_DHCP_WAN_CONN</name>
+          <initializer>= -255</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Static/DHCP/Bridged WAN exists on concerned wan interface, Creation of new Static/DHCP WAN Connection is not permitted </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a86e7fec9585cfdbec8be2f6c51e65115" prot="public">
+          <name>ERR_USER_ADD</name>
+          <initializer>= -256</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Failed to add user, Check system logs for proper error message </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5aa27275d8d85800782ed30976ff2838e7" prot="public">
+          <name>ERR_USER_REMOVE</name>
+          <initializer>= -257</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Failed to remove user, Check system logs for proper error message </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5ac8f00808f196c675185511c8777ebf9e" prot="public">
+          <name>ERR_BRIDGED_LANVLAN_DELETE</name>
+          <initializer>= -258</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>LAN VLAN Interface cannot be deleted as it is part of bridge. Please remove it from bridge and try again </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5aca69765a1f22f1f0650d0354a3829da8" prot="public">
+          <name>ERR_PRIMARY_BRIDGE_DELETE</name>
+          <initializer>= -259</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Deletion of Primary LAN Bridge (br-lan) is not Allowed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5af05af5494221b8c1d4ee3243fd0bfd3b" prot="public">
+          <name>ERR_DEFAULT_STATIC_ROUTE</name>
+          <initializer>= -260</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Adding static route against 0.0.0.0 network is not allowed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5af72a44c2a3241dcc317afda8b2fd0ca2" prot="public">
+          <name>ERR_BRIDGE_WITOUT_LANPORT</name>
+          <initializer>= -261</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Bridge (br-lan) should have atleast one lan port </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum containing the type of error code which can be returned from the Service Layer. Buffer error code -241 to -280. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_error.h" line="87" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_error.h" bodystart="87" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="enum" id="help__error_8h_1a8cf1b07817c2ef92aefeff3524ec0de2" prot="public" static="no">
+        <name>MEErrCode</name>
+        <enumvalue id="help__error_8h_1a8cf1b07817c2ef92aefeff3524ec0de2a5947a7dd6b4b96660b51518d1236a631" prot="public">
+          <name>ERR_402_NOT_FOUND</name>
+          <initializer>= -281</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ME Error </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum containing the type of error code which can be returned from the ME(web, cwmp, upnp, cli, etc). Buffer error code -281 to -320. </para>        </briefdescription>
+        <detaileddescription>
+<para>(Management Entity) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_error.h" line="115" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_error.h" bodystart="115" bodyend="117"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>File contains the error code returned with respect to Framework, SL, and ME. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2015</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lantiq<sp/>Beteiligungs-GmbH<sp/>&amp;<sp/>Co.<sp/>KG</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lilienthalstrasse<sp/>15,<sp/>85579<sp/>Neubiberg,<sp/>Germany<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>For<sp/>licensing<sp/>information,<sp/>see<sp/>the<sp/>file<sp/>&apos;LICENSE&apos;<sp/>in<sp/>the<sp/>root<sp/>folder<sp/>of</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>software<sp/>module.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>*****************************************************************************<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>File<sp/>Name<sp/><sp/><sp/><sp/>:<sp/>help_error.h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Description<sp/><sp/>:<sp/>Common<sp/>Library<sp/>contains<sp/>functions,<sp/>defines,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>structs,<sp/>enums<sp/>used<sp/>across<sp/>modules<sp/>like<sp/>CAL,<sp/>CAPI,<sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CSD,<sp/>Servd,<sp/>and<sp/>Management<sp/>Entities<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="comment">/*<sp/>@{<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor">#ifndef<sp/>_HELP_ERROR_H</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_HELP_ERROR_H</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="help__error_8h_1aacfd8e683bf2245f5b52e62f45dd0483" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UGW_SUCCESS<sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="help__error_8h_1a6d184bcbeb3e669bbe503b0afc3011c5" refkind="member"><highlight class="preprocessor">#define<sp/>UGW_FAILURE<sp/>-1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1" refkind="member"><highlight class="preprocessor">typedef<sp/>enum<sp/>{</highlight></codeline>
+<codeline lineno="42" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a0a72d93e8816b7b0d38f7c26754156df" refkind="member"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a0a72d93e8816b7b0d38f7c26754156df" kindref="member">ERR_INVALID_OBJNAME_REQUEST</ref><sp/>=<sp/>-200,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a57772c2da431317d7380be92f18a3fff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a57772c2da431317d7380be92f18a3fff" kindref="member">ERR_INVALID_PARAMETER_REQUEST</ref><sp/>=<sp/>-201,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a18f7bb0849ff02c51aa103265dfa3ba0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a18f7bb0849ff02c51aa103265dfa3ba0" kindref="member">ERR_INVALID_INSTANCE_REQUEST</ref><sp/>=<sp/>-202,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a4c04ae43009886871c491037ef692176" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a4c04ae43009886871c491037ef692176" kindref="member">ERR_INVALID_XML_FILE</ref><sp/>=<sp/>-203,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a3202ff96dcd656bc62c42234e5a4a6f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a3202ff96dcd656bc62c42234e5a4a6f7" kindref="member">ERR_FILE_NOT_FOUND</ref><sp/>=<sp/>-204,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a192d12498ad589fe926aaafb9253f1a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a192d12498ad589fe926aaafb9253f1a1" kindref="member">ERR_FILE_LOCK_FAILED</ref><sp/>=<sp/>-205,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a0c8929daf9bc735f213ba3349d91e823" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a0c8929daf9bc735f213ba3349d91e823" kindref="member">ERR_FILE_WRITE_FAILED</ref><sp/>=<sp/>-206,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a6b86fbf00173acc88d2ecef6895fdef5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a6b86fbf00173acc88d2ecef6895fdef5" kindref="member">ERR_FILE_TRUNCATE_FAILED</ref><sp/>=<sp/>-207,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a54898c0397598a0e041fa7b0e2f3ff73" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a54898c0397598a0e041fa7b0e2f3ff73" kindref="member">ERR_NO_CONTENT</ref><sp/>=<sp/>-208,<sp/><sp/></highlight></codeline>
+<codeline lineno="51" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1ae28243bb7addd3f29264e1dbfc9871dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1ae28243bb7addd3f29264e1dbfc9871dd" kindref="member">ERR_INVALID_UBUS_ARG</ref><sp/>=<sp/>-209,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a87094ec959f313249b541a4de03d723e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a87094ec959f313249b541a4de03d723e" kindref="member">ERR_UBUSMSG_OVERLOAD</ref><sp/>=<sp/>-210,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a3d85139692d5dec81e1eb50b21b1962a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a3d85139692d5dec81e1eb50b21b1962a" kindref="member">ERR_UBUSD_NOT_RUNNING</ref><sp/>=<sp/>-211,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1ac4eef49943fc776d23952b5de82a625b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1ac4eef49943fc776d23952b5de82a625b" kindref="member">ERR_MEMORY_ALLOC_FAILED</ref><sp/>=<sp/>-212,<sp/></highlight></codeline>
+<codeline lineno="55" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a90e0cdf93631d5b5738f5bbafc62c0e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a90e0cdf93631d5b5738f5bbafc62c0e1" kindref="member">ERR_UPDATE_FAILED</ref><sp/>=<sp/>-213,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a370e81c1b48b0a6dbab16d3f6bb598e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a370e81c1b48b0a6dbab16d3f6bb598e9" kindref="member">ERR_MAX_INSTANCE_EXCEEDED</ref><sp/>=<sp/>-214,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a3b501b408e08c3ed294d07830c97bcbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a3b501b408e08c3ed294d07830c97bcbb" kindref="member">ERR_MIN_INSTANCE_REACHED</ref><sp/>=<sp/>-215,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a5d87e4d97440496fff88af45d4383f09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a5d87e4d97440496fff88af45d4383f09" kindref="member">ERR_MERGE_FAILED</ref><sp/>=<sp/>-216,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a1c9246b71d919cc7856049431756aa98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a1c9246b71d919cc7856049431756aa98" kindref="member">ERR_VALIDATION_FAILED</ref><sp/>=<sp/>-217,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1aaaabb296ad296e391509e43d10ec564b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1aaaabb296ad296e391509e43d10ec564b" kindref="member">ERR_NON_INSTANCEABLE</ref><sp/>=<sp/>-218,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a6a2384b4a1e9a02f35dedc4bbf82722f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a6a2384b4a1e9a02f35dedc4bbf82722f" kindref="member">ERR_DEFAULT_LOAD_FAILURE</ref><sp/>=<sp/>-219,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a5fd0a801ac590acee796da2b6e17a2d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a5fd0a801ac590acee796da2b6e17a2d1" kindref="member">ERR_PATH_NOT_FOUND</ref><sp/>=<sp/>-220,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a09908a78de23990c8fd4ef518e22dd11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a09908a78de23990c8fd4ef518e22dd11" kindref="member">ERR_RECEIVER_NOT_RUNNING</ref><sp/>=<sp/>-221,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a971acbab6256581be09ac40230b8ded7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a971acbab6256581be09ac40230b8ded7" kindref="member">ERR_ADD_OBJECT_FAILED</ref><sp/>=<sp/>-222,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a5cef53d4df7847a74e75e969ca986247" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a5cef53d4df7847a74e75e969ca986247" kindref="member">ERR_DEL_OBJECT_FAILED</ref><sp/>=<sp/>-223,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a686f8029d7a555e00af9a97298424d9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a686f8029d7a555e00af9a97298424d9a" kindref="member">ERR_MIN_VAL_REACHED</ref><sp/>=<sp/>-224,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a64108894a05d94c9208c2e01589a2ceb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a64108894a05d94c9208c2e01589a2ceb" kindref="member">ERR_MAX_VAL_EXCEEDED</ref><sp/>=<sp/>-225,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a0a29312b42a33e1f013fd6a17ebbc564" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a0a29312b42a33e1f013fd6a17ebbc564" kindref="member">ERR_MIN_LEN_REACHED</ref><sp/>=<sp/>-226,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a1ca95188c4ec63656b333443838a5bd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a1ca95188c4ec63656b333443838a5bd3" kindref="member">ERR_MAX_LEN_EXCEEDED</ref><sp/>=<sp/>-227,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1ad09f67815ba102d6d428bb6f9228bb6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1ad09f67815ba102d6d428bb6f9228bb6a" kindref="member">ERR_BOOLEAN_FAILED</ref><sp/>=<sp/>-228,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a530895b7108bfcfe3945718127258c67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a530895b7108bfcfe3945718127258c67" kindref="member">ERR_DATETIME_FAILED</ref><sp/>=<sp/>-229,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a036ac124017a0a2763114e1d505d5316" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a036ac124017a0a2763114e1d505d5316" kindref="member">ERR_READ_ONLY</ref><sp/>=<sp/>-230,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a2b2b3edc0a4d621894f183ca665666ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a2b2b3edc0a4d621894f183ca665666ce" kindref="member">ERR_GET_ID_FAILED</ref><sp/>=<sp/>-231,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a53bc577de7a246679745d5f24b836834" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a53bc577de7a246679745d5f24b836834" kindref="member">ERR_STRING_NOT_FOUND</ref><sp/>=<sp/>-232,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a240d5e7db94dfe5927cbe79cf35aa580" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a240d5e7db94dfe5927cbe79cf35aa580" kindref="member">ERR_BAD_FD</ref><sp/>=<sp/>-233,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a90f7fca84f9dc6a84e0f13c898b3079a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a90f7fca84f9dc6a84e0f13c898b3079a" kindref="member">ERR_IOCTL_FAILED</ref><sp/>=<sp/>-234,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1ad3b9769b0eb5a54de450c2976178d32d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1ad3b9769b0eb5a54de450c2976178d32d" kindref="member">ERR_INVALID_PARAMETER_VALUE_REQUEST</ref><sp/>=<sp/>-235,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a181978c5b33859d315ec370f1c7092c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a181978c5b33859d315ec370f1c7092c9" kindref="member">ERR_ALIAS_REPLACEMENT_FAILED</ref><sp/>=<sp/>-236,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a6f258d4de34cb65f41c6d96ea87a5270" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a6f258d4de34cb65f41c6d96ea87a5270" kindref="member">ERR_UBUS_TIME_OUT</ref><sp/>=<sp/>-237,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80" refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a788146a62b8c1ab9b93d5e8048c087bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1a788146a62b8c1ab9b93d5e8048c087bc" kindref="member">ERR_SL_TIME_OUT</ref><sp/>=<sp/>-238<sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}<sp/><ref refid="help__error_8h_1a46deb2c88512b8c9534707be581064a1" kindref="member">FrameWorkErrCode</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="88" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a5f3aecc28cbef3ed98a20df53d163991" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a5f3aecc28cbef3ed98a20df53d163991" kindref="member">ERR_INVALID_SL</ref><sp/>=<sp/>-241,<sp/><sp/></highlight></codeline>
+<codeline lineno="89" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a470ac29bb04da0d339c98dfefd137443" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a470ac29bb04da0d339c98dfefd137443" kindref="member">ERR_INVALID_SET_PARAM_REQ</ref><sp/>=<sp/>-242,<sp/></highlight></codeline>
+<codeline lineno="90" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a991f48066fec8800274aa87a9c5f50a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a991f48066fec8800274aa87a9c5f50a8" kindref="member">ERR_INVALID_OPERATION</ref><sp/>=<sp/>-243,<sp/></highlight></codeline>
+<codeline lineno="91" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a8fbaf6a083a67a40dee2c8ef8db93200" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a8fbaf6a083a67a40dee2c8ef8db93200" kindref="member">ERR_INVALID_IPADDRESS</ref><sp/>=<sp/>-244,<sp/></highlight></codeline>
+<codeline lineno="92" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5abee2fe82398d81685335061f59a7cac7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5abee2fe82398d81685335061f59a7cac7" kindref="member">ERR_INVALID_IP_POOL_RANGE</ref><sp/>=<sp/>-245,<sp/></highlight></codeline>
+<codeline lineno="93" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a888b184683a1cc586f2d9b905fbc54e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a888b184683a1cc586f2d9b905fbc54e1" kindref="member">ERR_INTERNAL</ref><sp/>=<sp/>-246,<sp/></highlight></codeline>
+<codeline lineno="94" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5af0b7802c4e7f9fa1f059142585db59ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5af0b7802c4e7f9fa1f059142585db59ed" kindref="member">ERR_EXISTING_ATM_WAN</ref><sp/>=<sp/>-247,<sp/></highlight></codeline>
+<codeline lineno="95" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5aea9ad2a2c20709fe76bc5135e3f5c446" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5aea9ad2a2c20709fe76bc5135e3f5c446" kindref="member">ERR_MULTIPLE_IPOA_PPPOA_WAN</ref><sp/>=<sp/>-248,<sp/></highlight></codeline>
+<codeline lineno="96" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a4fff0c3ade219b58bdfad77a58123805" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a4fff0c3ade219b58bdfad77a58123805" kindref="member">ERR_MULTIPLE_BRIDGED_WAN</ref><sp/>=<sp/>-249,<sp/></highlight></codeline>
+<codeline lineno="97" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a1bed00b511177485b2a2d51b140def20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a1bed00b511177485b2a2d51b140def20" kindref="member">ERR_IPOA_PPPOA_WAN_ON_VLAN</ref><sp/>=<sp/>-250,<sp/></highlight></codeline>
+<codeline lineno="98" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a24022766a4d365081b4cf4d74b867ecb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a24022766a4d365081b4cf4d74b867ecb" kindref="member">ERR_DB_READ_FAILED</ref><sp/>=<sp/>-251,<sp/></highlight></codeline>
+<codeline lineno="99" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5ae93e18e03374a762fe59bdc93d31a3ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5ae93e18e03374a762fe59bdc93d31a3ad" kindref="member">ERR_RULE_MODIFY_NOT_ALLOWED</ref><sp/>=<sp/>-252,<sp/></highlight></codeline>
+<codeline lineno="100" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a1487298c514dbdb485eb68cfdccdfa16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a1487298c514dbdb485eb68cfdccdfa16" kindref="member">ERR_REJECT_BRIDGED_WAN_CONN</ref><sp/>=<sp/>-253,<sp/></highlight></codeline>
+<codeline lineno="101" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5aa59696257649ffb674453fbde28753e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5aa59696257649ffb674453fbde28753e5" kindref="member">ERR_REJECT_PPPOE_WAN_CONN</ref><sp/>=<sp/>-254,<sp/></highlight></codeline>
+<codeline lineno="102" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5af99c72bea89b9203179bdca6bafec8e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5af99c72bea89b9203179bdca6bafec8e5" kindref="member">ERR_REJECT_STATIC_DHCP_WAN_CONN</ref><sp/>=<sp/>-255,<sp/></highlight></codeline>
+<codeline lineno="103" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a86e7fec9585cfdbec8be2f6c51e65115" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5a86e7fec9585cfdbec8be2f6c51e65115" kindref="member">ERR_USER_ADD</ref><sp/>=<sp/>-256,<sp/></highlight></codeline>
+<codeline lineno="104" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5aa27275d8d85800782ed30976ff2838e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5aa27275d8d85800782ed30976ff2838e7" kindref="member">ERR_USER_REMOVE</ref><sp/>=<sp/>-257,<sp/></highlight></codeline>
+<codeline lineno="105" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5ac8f00808f196c675185511c8777ebf9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5ac8f00808f196c675185511c8777ebf9e" kindref="member">ERR_BRIDGED_LANVLAN_DELETE</ref><sp/>=<sp/>-258,<sp/></highlight></codeline>
+<codeline lineno="106" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5aca69765a1f22f1f0650d0354a3829da8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5aca69765a1f22f1f0650d0354a3829da8" kindref="member">ERR_PRIMARY_BRIDGE_DELETE</ref><sp/>=<sp/>-259,<sp/></highlight></codeline>
+<codeline lineno="107" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5af05af5494221b8c1d4ee3243fd0bfd3b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5af05af5494221b8c1d4ee3243fd0bfd3b" kindref="member">ERR_DEFAULT_STATIC_ROUTE</ref><sp/>=<sp/>-260,<sp/></highlight></codeline>
+<codeline lineno="108" refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5af72a44c2a3241dcc317afda8b2fd0ca2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5af72a44c2a3241dcc317afda8b2fd0ca2" kindref="member">ERR_BRIDGE_WITOUT_LANPORT</ref><sp/>=<sp/>-261<sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}<sp/><ref refid="help__error_8h_1a4e967c43fa12a2f115a89d64c58415d5" kindref="member">SLErrCode</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="help__error_8h_1a8cf1b07817c2ef92aefeff3524ec0de2" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="116" refid="help__error_8h_1a8cf1b07817c2ef92aefeff3524ec0de2a5947a7dd6b4b96660b51518d1236a631" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="help__error_8h_1a8cf1b07817c2ef92aefeff3524ec0de2a5947a7dd6b4b96660b51518d1236a631" kindref="member">ERR_402_NOT_FOUND</ref><sp/>=<sp/>-281<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}<sp/><ref refid="help__error_8h_1a8cf1b07817c2ef92aefeff3524ec0de2" kindref="member">MEErrCode</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//#ifndef<sp/>_HELP_ERROR_H</highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_error.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,44 @@
+use const pointer in cli_core_setup__file and cli_core_group_setup__file for cmd_reg_list param
+
+diff --git a/src/lib_cli_core.c b/src/lib_cli_core.c
+--- a/src/lib_cli_core.c
++++ b/src/lib_cli_core.c
+@@ -2109,7 +2109,7 @@ int cli_core_setup__file(
+ 	struct cli_core_context_s **pp_core_ctx,
+ 	unsigned int builtin_selmask,
+ 	void *p_user_fct_data,
+-	cli_cmd_register__file cmd_reg_list[])
++	const cli_cmd_register__file cmd_reg_list[])
+ {
+ #if (CLI_SUPPORT_FILE_OUT == 1)
+ 	int retval = 0, i = 0;
+@@ -2269,7 +2269,7 @@ int cli_core_group_setup__file(
+ 	struct cli_core_context_s **pp_core_ctx,
+ 	unsigned int builtin_selmask,
+ 	void *p_user_fct_data,
+-	cli_cmd_register__file cmd_reg_list[],
++	const cli_cmd_register__file cmd_reg_list[],
+ 	char const *p_group_list[],
+ 	struct cli_group_key_entry_s const *p_key_entries)
+ {
+diff --git a/src/lib_cli_core.h b/src/lib_cli_core.h
+--- a/src/lib_cli_core.h
++++ b/src/lib_cli_core.h
+@@ -584,7 +584,7 @@ extern int cli_core_setup__file(
+ 	struct cli_core_context_s **pp_core_ctx,
+ 	unsigned int builtin_selmask,
+ 	void *p_user_fct_data,
+-	cli_cmd_register__file cmd_reg_list[]);
++	const cli_cmd_register__file cmd_reg_list[]);
+ 
+ /** CLI Setup - setup a CLI interface, based on the given already existing CLI Core:
+ 
+@@ -640,7 +640,7 @@ extern int cli_core_group_setup__file(
+ 	struct cli_core_context_s **pp_core_ctx,
+ 	unsigned int builtin_selmask,
+ 	void *p_user_fct_data,
+-	cli_cmd_register__file cmd_reg_list[],
++	const cli_cmd_register__file cmd_reg_list[],
+ 	char const *p_group_list[],
+ 	struct cli_group_key_entry_s const *p_key_entries);
+ 

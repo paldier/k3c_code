@@ -1,0 +1,444 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="help__enums_8h" kind="file">
+    <compoundname>help_enums.h</compoundname>
+    <includedby refid="help__structs_8h" local="yes">help_structs.h</includedby>
+    <includedby refid="help__defs_8h" local="yes">help_defs.h</includedby>
+    <includedby refid="ugw__enums_8h" local="no">ugw_enums.h</includedby>
+    <invincdepgraph>
+      <node id="123">
+        <label>help_defs.h</label>
+        <link refid="help__defs_8h"/>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+      </node>
+      <node id="115">
+        <label>help_structs.h</label>
+        <link refid="help__structs_8h"/>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+      </node>
+      <node id="117">
+        <label>help_proto.h</label>
+        <link refid="help__proto_8h"/>
+        <childnode refid="118" relation="include">
+        </childnode>
+      </node>
+      <node id="119">
+        <label>ugw_proto.h</label>
+        <link refid="ugw__proto_8h"/>
+        <childnode refid="120" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+      </node>
+      <node id="118">
+        <label>help_objlist.h</label>
+        <link refid="help__objlist_8h_source"/>
+        <childnode refid="119" relation="include">
+        </childnode>
+      </node>
+      <node id="127">
+        <label>ugw_enums.h</label>
+        <link refid="ugw__enums_8h"/>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+      </node>
+      <node id="122">
+        <label>ugw_structs.h</label>
+        <link refid="ugw__structs_8h"/>
+        <childnode refid="119" relation="include">
+        </childnode>
+      </node>
+      <node id="116">
+        <label>fapi_wlan.h</label>
+        <link refid="fapi__wlan_8h"/>
+      </node>
+      <node id="125">
+        <label>ugw_defs.h</label>
+        <link refid="ugw__defs_8h"/>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+      </node>
+      <node id="124">
+        <label>help_debug.h</label>
+        <link refid="help__debug_8h"/>
+        <childnode refid="118" relation="include">
+        </childnode>
+      </node>
+      <node id="114">
+        <label>help_enums.h</label>
+        <link refid="help_enums.h"/>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+      </node>
+      <node id="121">
+        <label>ugw_common.h</label>
+        <link refid="ugw__common_8h"/>
+      </node>
+      <node id="120">
+        <label>cal.h</label>
+        <link refid="cal_8h"/>
+      </node>
+      <node id="126">
+        <label>ugw_debug.h</label>
+        <link refid="ugw__debug_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__LIBHELP_1ga26a2d765c9669d7cf62818f31a306f76" prot="public" static="no">
+        <name>SubOper</name>
+        <enumvalue id="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a86ca54869a37d6b2ee9f1ef03f18d7bd" prot="public">
+          <name>SOPT_ID</name>
+          <initializer>= 0x1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>SET/GET_ID_ONLY </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a590689005d14f4443e685b735a0fb598" prot="public">
+          <name>SOPT_OBJNAME</name>
+          <initializer>= 0x2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>SET/GET_SUB_TREE </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a509d34676cdc189cd6db36c8f31df9c0" prot="public">
+          <name>SOPT_OBJVALUE</name>
+          <initializer>= 0x4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>SET/GET_COMPLETE </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a08d5b1a74d6081b7c8fcf583dab97752" prot="public">
+          <name>SOPT_OBJATTR</name>
+          <initializer>= 0x8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>SET/GET_ATTR_VALUE </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a9830de59cb01d6e64813002b2dffe92c" prot="public">
+          <name>SOPT_OBJACSATTR</name>
+          <initializer>= 0x10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>SET/GET_ATTR_VALUE </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76abf85e6bbd86f9dff9fafb8b704f94dee" prot="public">
+          <name>SOPT_VALIDATION</name>
+          <initializer>= 0x20</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>SET/GET_VALID_VALUES </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a43d345af96a636bddcae661c50020347" prot="public">
+          <name>SOPT_DEFVAL</name>
+          <initializer>= 0x40</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>SET/GET_DEFAULT_VALUE </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76ad8a3297ca7cf6f201aeebbe7a1786d44" prot="public">
+          <name>SOPT_NOSUBOPER</name>
+          <initializer>= 0x80</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>NO_SUBOPER </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a34f27eaeec6a02cf39bc5f9ccd625e84" prot="public">
+          <name>SOPT_LEAFNODE</name>
+          <initializer>= 0x100</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>GET LEAF NODE ONLY </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a611b573ef4cad192232654b47c4e1ea0" prot="public">
+          <name>SOPT_ORGOWN</name>
+          <initializer>= 0x200</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>IDENTIFY ORGINAL OWNER </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum containing the type of operation which includes ID_ONLY, SUB_TREE etc \ for per transaction. </para>        </briefdescription>
+        <detaileddescription>
+<para>Enum containing the type of operation which includes ID_ONLY,SUB_TREE etc \ for per transaction. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_enums.h" line="35" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_enums.h" bodystart="34" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__LIBHELP_1ga555fa67cbcfe777fe604bb5806ecab91" prot="public" static="no">
+        <name>MiscType</name>
+        <enumvalue id="group__LIBHELP_1gga555fa67cbcfe777fe604bb5806ecab91a7f462f0d64035391542c63c66d0a700f" prot="public">
+          <name>COPY_COMPLETE_OBJ</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Copy complete objlist objlist </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga555fa67cbcfe777fe604bb5806ecab91a96f2154f53b9b374ac0548088d938b96" prot="public">
+          <name>COPY_SINGLE_OBJ</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Copy single objlist </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga555fa67cbcfe777fe604bb5806ecab91a1c5c70d27e76da6c416f41667549bc3f" prot="public">
+          <name>EMPTY_OBJLIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Empty objlist </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga555fa67cbcfe777fe604bb5806ecab91aca545429fdcd331d3f4466a7b8a796f3" prot="public">
+          <name>FREE_OBJLIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Free objlist </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum containing the misc type for various requirements. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_enums.h" line="52" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_enums.h" bodystart="51" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__LIBHELP_1ga394c61369f4e995f18b58c77d1a3cccb" prot="public" static="no">
+        <name>AcsAttr</name>
+        <enumvalue id="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba93fb968d56ea0dc63666d8372b8e35cb" prot="public">
+          <name>ATTR_NOTSAVETOFLASH</name>
+          <initializer>= 0x400</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Save To Flash (true if the not attribute is not present and false if the not attribute is present) </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba0a533fdeb6f381a6f85a6257aac1c61c" prot="public">
+          <name>ATTR_INFORMTOACS</name>
+          <initializer>= 0x800</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Inform to ACS </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba660b640063fbc5ee2d289a3fa58d0d93" prot="public">
+          <name>ATTR_ACTIVENOTI</name>
+          <initializer>= 0x1000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Active Notification </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccbaeb39c01e580d65085d016537cae56d77" prot="public">
+          <name>ATTR_PASSIVENOTI</name>
+          <initializer>= 0x2000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Passive Notificaton </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba4c3c4ea2fce55ef95adf0b594fb1b038" prot="public">
+          <name>ATTR_NOTIDISABLED</name>
+          <initializer>= 0x4000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Disabled Notification </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba45fd68ac3d5bebe5d404f59979f37f77" prot="public">
+          <name>ATTR_CHANGEFLAG</name>
+          <initializer>= 0x8000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Change flag </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba8286c92a167097d799178cac47443730" prot="public">
+          <name>ATTR_CANDENY</name>
+          <initializer>= 0x20000000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>CanDeny flag </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_enums.h" line="63" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_enums.h" bodystart="62" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__LIBHELP_1ga3b5e9e55eb7b08d5702a101e529e5507" prot="public" static="no">
+        <name>Owner</name>
+        <enumvalue id="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507afd4ab478568086323ad31db39ff42c55" prot="public">
+          <name>OWN_TR69</name>
+          <initializer>= 0x1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>DeVM </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507a6d24bd2ee1e2fe7ec7b1453c835221f6" prot="public">
+          <name>OWN_WEB</name>
+          <initializer>= 0x2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>WEB </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507aa456b29529a8625118c2e5002ddde02a" prot="public">
+          <name>OWN_SERVD</name>
+          <initializer>= 0x4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>SERVD </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507a835c8e2f1c1761f7b6a96741727d034d" prot="public">
+          <name>OWN_CLI</name>
+          <initializer>= 0x8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>CLI </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507abdc4cf6227f600ff8519e594e91f3b68" prot="public">
+          <name>OWN_POLLD</name>
+          <initializer>= 0x10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>POLLD </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507af9c8e0f2e72366671c2313c42146c31c" prot="public">
+          <name>OWN_OTHER</name>
+          <initializer>= 0x20</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>OTHER </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum containing the Owner Type whose try to set/get for ex:web.tr69 etc. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_enums.h" line="77" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_enums.h" bodystart="76" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>File contains all enumerations for the common library. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2015</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lantiq<sp/>Beteiligungs-GmbH<sp/>&amp;<sp/>Co.<sp/>KG</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lilienthalstrasse<sp/>15,<sp/>85579<sp/>Neubiberg,<sp/>Germany<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>For<sp/>licensing<sp/>information,<sp/>see<sp/>the<sp/>file<sp/>&apos;LICENSE&apos;<sp/>in<sp/>the<sp/>root<sp/>folder<sp/>of</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>software<sp/>module.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>*****************************************************************************<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>File<sp/>Name<sp/><sp/><sp/><sp/>:<sp/>help_enums.h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Description<sp/><sp/>:<sp/>Common<sp/>Library<sp/>contains<sp/>functions,<sp/>defines,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>structs,<sp/>enums<sp/>used<sp/>across<sp/>modules<sp/>like<sp/>CAL,<sp/>CAPI,<sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CSD,<sp/>Servd,<sp/>and<sp/>Management<sp/>Entities<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor">#ifndef<sp/>_HELP_ENUMS_H</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_HELP_ENUMS_H</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="28"><highlight class="comment">/*<sp/>@{<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="group__LIBHELP_1ga26a2d765c9669d7cf62818f31a306f76" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36" refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a86ca54869a37d6b2ee9f1ef03f18d7bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a86ca54869a37d6b2ee9f1ef03f18d7bd" kindref="member">SOPT_ID</ref><sp/>=<sp/>0x1,</highlight></codeline>
+<codeline lineno="37" refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a590689005d14f4443e685b735a0fb598" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a590689005d14f4443e685b735a0fb598" kindref="member">SOPT_OBJNAME</ref><sp/>=<sp/>0x2,</highlight></codeline>
+<codeline lineno="38" refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a509d34676cdc189cd6db36c8f31df9c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a509d34676cdc189cd6db36c8f31df9c0" kindref="member">SOPT_OBJVALUE</ref><sp/>=<sp/>0x4,</highlight></codeline>
+<codeline lineno="39" refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a08d5b1a74d6081b7c8fcf583dab97752" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a08d5b1a74d6081b7c8fcf583dab97752" kindref="member">SOPT_OBJATTR</ref><sp/>=<sp/>0x8,</highlight></codeline>
+<codeline lineno="40" refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a9830de59cb01d6e64813002b2dffe92c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a9830de59cb01d6e64813002b2dffe92c" kindref="member">SOPT_OBJACSATTR</ref><sp/>=<sp/>0x10,</highlight></codeline>
+<codeline lineno="41" refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76abf85e6bbd86f9dff9fafb8b704f94dee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76abf85e6bbd86f9dff9fafb8b704f94dee" kindref="member">SOPT_VALIDATION</ref><sp/>=<sp/>0x20,</highlight></codeline>
+<codeline lineno="42" refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a43d345af96a636bddcae661c50020347" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a43d345af96a636bddcae661c50020347" kindref="member">SOPT_DEFVAL</ref><sp/>=<sp/>0x40,</highlight></codeline>
+<codeline lineno="43" refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76ad8a3297ca7cf6f201aeebbe7a1786d44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76ad8a3297ca7cf6f201aeebbe7a1786d44" kindref="member">SOPT_NOSUBOPER</ref>=<sp/>0x80,</highlight></codeline>
+<codeline lineno="44" refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a34f27eaeec6a02cf39bc5f9ccd625e84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a34f27eaeec6a02cf39bc5f9ccd625e84" kindref="member">SOPT_LEAFNODE</ref><sp/>=<sp/>0x100,</highlight></codeline>
+<codeline lineno="45" refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a611b573ef4cad192232654b47c4e1ea0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a611b573ef4cad192232654b47c4e1ea0" kindref="member">SOPT_ORGOWN</ref><sp/>=<sp/>0x200</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}<ref refid="group__LIBHELP_1ga26a2d765c9669d7cf62818f31a306f76" kindref="member">SubOper</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="group__LIBHELP_1ga555fa67cbcfe777fe604bb5806ecab91" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53" refid="group__LIBHELP_1gga555fa67cbcfe777fe604bb5806ecab91a7f462f0d64035391542c63c66d0a700f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga555fa67cbcfe777fe604bb5806ecab91a7f462f0d64035391542c63c66d0a700f" kindref="member">COPY_COMPLETE_OBJ</ref>=0,<sp/></highlight></codeline>
+<codeline lineno="54" refid="group__LIBHELP_1gga555fa67cbcfe777fe604bb5806ecab91a96f2154f53b9b374ac0548088d938b96" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga555fa67cbcfe777fe604bb5806ecab91a96f2154f53b9b374ac0548088d938b96" kindref="member">COPY_SINGLE_OBJ</ref>=1,<sp/></highlight></codeline>
+<codeline lineno="55" refid="group__LIBHELP_1gga555fa67cbcfe777fe604bb5806ecab91a1c5c70d27e76da6c416f41667549bc3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga555fa67cbcfe777fe604bb5806ecab91a1c5c70d27e76da6c416f41667549bc3f" kindref="member">EMPTY_OBJLIST</ref>,<sp/></highlight></codeline>
+<codeline lineno="56" refid="group__LIBHELP_1gga555fa67cbcfe777fe604bb5806ecab91aca545429fdcd331d3f4466a7b8a796f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga555fa67cbcfe777fe604bb5806ecab91aca545429fdcd331d3f4466a7b8a796f3" kindref="member">FREE_OBJLIST</ref><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}<ref refid="group__LIBHELP_1ga555fa67cbcfe777fe604bb5806ecab91" kindref="member">MiscType</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="group__LIBHELP_1ga394c61369f4e995f18b58c77d1a3cccb" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64" refid="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba93fb968d56ea0dc63666d8372b8e35cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba93fb968d56ea0dc63666d8372b8e35cb" kindref="member">ATTR_NOTSAVETOFLASH</ref><sp/>=<sp/>0x400,<sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba0a533fdeb6f381a6f85a6257aac1c61c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba0a533fdeb6f381a6f85a6257aac1c61c" kindref="member">ATTR_INFORMTOACS</ref><sp/>=<sp/>0x800,<sp/></highlight></codeline>
+<codeline lineno="66" refid="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba660b640063fbc5ee2d289a3fa58d0d93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba660b640063fbc5ee2d289a3fa58d0d93" kindref="member">ATTR_ACTIVENOTI</ref><sp/>=<sp/>0x1000,<sp/></highlight></codeline>
+<codeline lineno="67" refid="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccbaeb39c01e580d65085d016537cae56d77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccbaeb39c01e580d65085d016537cae56d77" kindref="member">ATTR_PASSIVENOTI</ref><sp/>=<sp/>0x2000,<sp/></highlight></codeline>
+<codeline lineno="68" refid="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba4c3c4ea2fce55ef95adf0b594fb1b038" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba4c3c4ea2fce55ef95adf0b594fb1b038" kindref="member">ATTR_NOTIDISABLED</ref><sp/>=<sp/>0x4000,<sp/></highlight></codeline>
+<codeline lineno="69" refid="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba45fd68ac3d5bebe5d404f59979f37f77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba45fd68ac3d5bebe5d404f59979f37f77" kindref="member">ATTR_CHANGEFLAG</ref><sp/><sp/>=<sp/>0x8000,<sp/></highlight></codeline>
+<codeline lineno="70" refid="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba8286c92a167097d799178cac47443730" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba8286c92a167097d799178cac47443730" kindref="member">ATTR_CANDENY</ref><sp/>=<sp/>0x20000000<sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}<ref refid="group__LIBHELP_1ga394c61369f4e995f18b58c77d1a3cccb" kindref="member">AcsAttr</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="group__LIBHELP_1ga3b5e9e55eb7b08d5702a101e529e5507" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78" refid="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507afd4ab478568086323ad31db39ff42c55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507afd4ab478568086323ad31db39ff42c55" kindref="member">OWN_TR69</ref><sp/>=<sp/>0x1,</highlight></codeline>
+<codeline lineno="79" refid="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507a6d24bd2ee1e2fe7ec7b1453c835221f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507a6d24bd2ee1e2fe7ec7b1453c835221f6" kindref="member">OWN_WEB</ref><sp/>=<sp/>0x2,</highlight></codeline>
+<codeline lineno="80" refid="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507aa456b29529a8625118c2e5002ddde02a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507aa456b29529a8625118c2e5002ddde02a" kindref="member">OWN_SERVD</ref><sp/>=<sp/>0x4,</highlight></codeline>
+<codeline lineno="81" refid="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507a835c8e2f1c1761f7b6a96741727d034d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507a835c8e2f1c1761f7b6a96741727d034d" kindref="member">OWN_CLI</ref><sp/>=<sp/>0x8,</highlight></codeline>
+<codeline lineno="82" refid="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507abdc4cf6227f600ff8519e594e91f3b68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507abdc4cf6227f600ff8519e594e91f3b68" kindref="member">OWN_POLLD</ref><sp/>=<sp/>0x10,</highlight></codeline>
+<codeline lineno="83" refid="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507af9c8e0f2e72366671c2313c42146c31c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507af9c8e0f2e72366671c2313c42146c31c" kindref="member">OWN_OTHER</ref><sp/>=<sp/>0x20</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}<ref refid="group__LIBHELP_1ga3b5e9e55eb7b08d5702a101e529e5507" kindref="member">Owner</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>#ifndef<sp/>_HELP_ENUMS_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_enums.h"/>
+  </compounddef>
+</doxygen>

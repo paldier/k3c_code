@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structMCAST__MEMBER__t" kind="struct" prot="public">
+    <compoundname>MCAST_MEMBER_t</compoundname>
+    <includes refid="fapi__mcast_8h" local="no">fapi_mcast.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structMCAST__MEMBER__t_1af64a5251fc8af6ac16052e9d8d97ae51" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char MCAST_MEMBER_t::intfName[IFSIZE]</definition>
+        <argsstring>[IFSIZE]</argsstring>
+        <name>intfName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LAN/WLAN Member NetDevice </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="87" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMCAST__MEMBER__t_1ab0297b5fb862c50e7624b0df5162b4fa" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char MCAST_MEMBER_t::rxIntfName[IFSIZE]</definition>
+        <argsstring>[IFSIZE]</argsstring>
+        <name>rxIntfName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WAN Member NetDevice </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="88" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMCAST__MEMBER__t_1abdec041f2d9705e2f9b3dfb0140040ad" prot="public" static="no" mutable="no">
+        <type><ref refid="structipaddr__t" kindref="compound">ipaddr_t</ref></type>
+        <definition>ipaddr_t MCAST_MEMBER_t::groupIP</definition>
+        <argsstring></argsstring>
+        <name>groupIP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destination IP (GA) - v4 or v6 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="89" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMCAST__MEMBER__t_1a02d8c40017220d42cb82938036e7da3b" prot="public" static="no" mutable="no">
+        <type><ref refid="structipaddr__t" kindref="compound">ipaddr_t</ref></type>
+        <definition>ipaddr_t MCAST_MEMBER_t::srcIP</definition>
+        <argsstring></argsstring>
+        <name>srcIP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Source IP - v4 or v6 (optional) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="90" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMCAST__MEMBER__t_1a451fba306b8ff40473c5927a05e299f6" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MCAST_MEMBER_t::proto</definition>
+        <argsstring></argsstring>
+        <name>proto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Protocol Number </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="91" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMCAST__MEMBER__t_1acaa4ac9a1eb240ab6c1328f754c3628d" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MCAST_MEMBER_t::sPort</definition>
+        <argsstring></argsstring>
+        <name>sPort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>UDP Source Port </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="92" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMCAST__MEMBER__t_1a07ede5f961dc4deae13a5f799c6610ba" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MCAST_MEMBER_t::dPort</definition>
+        <argsstring></argsstring>
+        <name>dPort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>UDP Destination Port </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="93" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMCAST__MEMBER__t_1a4ce6350f2ca6f1b97c4d12cab85f3a71" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char MCAST_MEMBER_t::macaddr[ETH_ALEN]</definition>
+        <argsstring>[ETH_ALEN]</argsstring>
+        <name>macaddr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LAN/WLAN Client MAC Address </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="94" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure describing multicast membership configuration. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="112">
+        <label>ipaddr_t</label>
+        <link refid="structipaddr__t"/>
+      </node>
+      <node id="111">
+        <label>MCAST_MEMBER_t</label>
+        <link refid="structMCAST__MEMBER__t"/>
+        <childnode refid="112" relation="usage">
+          <edgelabel>srcIP</edgelabel>
+          <edgelabel>groupIP</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="86" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" bodystart="86" bodyend="95"/>
+    <listofallmembers>
+      <member refid="structMCAST__MEMBER__t_1a07ede5f961dc4deae13a5f799c6610ba" prot="public" virt="non-virtual"><scope>MCAST_MEMBER_t</scope><name>dPort</name></member>
+      <member refid="structMCAST__MEMBER__t_1abdec041f2d9705e2f9b3dfb0140040ad" prot="public" virt="non-virtual"><scope>MCAST_MEMBER_t</scope><name>groupIP</name></member>
+      <member refid="structMCAST__MEMBER__t_1af64a5251fc8af6ac16052e9d8d97ae51" prot="public" virt="non-virtual"><scope>MCAST_MEMBER_t</scope><name>intfName</name></member>
+      <member refid="structMCAST__MEMBER__t_1a4ce6350f2ca6f1b97c4d12cab85f3a71" prot="public" virt="non-virtual"><scope>MCAST_MEMBER_t</scope><name>macaddr</name></member>
+      <member refid="structMCAST__MEMBER__t_1a451fba306b8ff40473c5927a05e299f6" prot="public" virt="non-virtual"><scope>MCAST_MEMBER_t</scope><name>proto</name></member>
+      <member refid="structMCAST__MEMBER__t_1ab0297b5fb862c50e7624b0df5162b4fa" prot="public" virt="non-virtual"><scope>MCAST_MEMBER_t</scope><name>rxIntfName</name></member>
+      <member refid="structMCAST__MEMBER__t_1acaa4ac9a1eb240ab6c1328f754c3628d" prot="public" virt="non-virtual"><scope>MCAST_MEMBER_t</scope><name>sPort</name></member>
+      <member refid="structMCAST__MEMBER__t_1a02d8c40017220d42cb82938036e7da3b" prot="public" virt="non-virtual"><scope>MCAST_MEMBER_t</scope><name>srcIP</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

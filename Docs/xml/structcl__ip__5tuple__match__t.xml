@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structcl__ip__5tuple__match__t" kind="struct" prot="public">
+    <compoundname>cl_ip_5tuple_match_t</compoundname>
+    <includes refid="qosal__cl__api_8h" local="no">qosal_cl_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcl__ip__5tuple__match__t_1aeb63c3c0bd893819a2257c47c4d1f1c8" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__ipaddr__match__t" kindref="compound">cl_ipaddr_match_t</ref></type>
+        <definition>cl_ipaddr_match_t cl_ip_5tuple_match_t::src_ip</definition>
+        <argsstring></argsstring>
+        <name>src_ip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Source IP address (IPv4 or IPv6) match of packet </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="637" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="637" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__ip__5tuple__match__t_1ae64911318dd2c0b8bd78a66cee70e6ee" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__ipaddr__match__t" kindref="compound">cl_ipaddr_match_t</ref></type>
+        <definition>cl_ipaddr_match_t cl_ip_5tuple_match_t::dst_ip</definition>
+        <argsstring></argsstring>
+        <name>dst_ip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destination IP address (IPv4 or IPv6) match of packet </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="638" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="638" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__ip__5tuple__match__t_1a5447664eb7486da5424d6022f31a6212" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t cl_ip_5tuple_match_t::ip_p</definition>
+        <argsstring></argsstring>
+        <name>ip_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>IP Protocol of packet. -1 means not specified </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="639" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="639" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__ip__5tuple__match__t_1aa22d6ac44d06a368be8a3d6aebea9380" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t cl_ip_5tuple_match_t::ip_p_exclude</definition>
+        <argsstring></argsstring>
+        <name>ip_p_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Exclude flag for IP Protocol </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="640" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="640" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__ip__5tuple__match__t_1ae35e648a631112c8bf6e7473e2f5f8e8" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__port__match__t" kindref="compound">cl_port_match_t</ref></type>
+        <definition>cl_port_match_t cl_ip_5tuple_match_t::src_port</definition>
+        <argsstring></argsstring>
+        <name>src_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destination TCP/UDP port match </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="641" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="641" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__ip__5tuple__match__t_1a0fe61ca8c96e29c5da6add2108fc4762" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__port__match__t" kindref="compound">cl_port_match_t</ref></type>
+        <definition>cl_port_match_t cl_ip_5tuple_match_t::dst_port</definition>
+        <argsstring></argsstring>
+        <name>dst_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Source TCP/UDP port match </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="642" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="642" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__ip__5tuple__match__t_1af95e2941e57be656c6fd1490345bd7a3" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__param__in__ex__t" kindref="compound">cl_param_in_ex_t</ref></type>
+        <definition>cl_param_in_ex_t cl_ip_5tuple_match_t::param_in_ex</definition>
+        <argsstring></argsstring>
+        <name>param_in_ex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bit-map to indicate included and excluded parameters of 5-tuple IP </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="643" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="643" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>5-tuple IP Match fields structure </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="35">
+        <label>cl_ip_5tuple_match_t</label>
+        <link refid="structcl__ip__5tuple__match__t"/>
+        <childnode refid="36" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>dst_ip</edgelabel>
+          <edgelabel>src_ip</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>src_port</edgelabel>
+          <edgelabel>dst_port</edgelabel>
+        </childnode>
+      </node>
+      <node id="36">
+        <label>cl_param_in_ex_t</label>
+        <link refid="structcl__param__in__ex__t"/>
+      </node>
+      <node id="37">
+        <label>cl_ipaddr_match_t</label>
+        <link refid="structcl__ipaddr__match__t"/>
+      </node>
+      <node id="38">
+        <label>cl_port_match_t</label>
+        <link refid="structcl__port__match__t"/>
+        <childnode refid="36" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="636" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="636" bodyend="644"/>
+    <listofallmembers>
+      <member refid="structcl__ip__5tuple__match__t_1ae64911318dd2c0b8bd78a66cee70e6ee" prot="public" virt="non-virtual"><scope>cl_ip_5tuple_match_t</scope><name>dst_ip</name></member>
+      <member refid="structcl__ip__5tuple__match__t_1a0fe61ca8c96e29c5da6add2108fc4762" prot="public" virt="non-virtual"><scope>cl_ip_5tuple_match_t</scope><name>dst_port</name></member>
+      <member refid="structcl__ip__5tuple__match__t_1a5447664eb7486da5424d6022f31a6212" prot="public" virt="non-virtual"><scope>cl_ip_5tuple_match_t</scope><name>ip_p</name></member>
+      <member refid="structcl__ip__5tuple__match__t_1aa22d6ac44d06a368be8a3d6aebea9380" prot="public" virt="non-virtual"><scope>cl_ip_5tuple_match_t</scope><name>ip_p_exclude</name></member>
+      <member refid="structcl__ip__5tuple__match__t_1af95e2941e57be656c6fd1490345bd7a3" prot="public" virt="non-virtual"><scope>cl_ip_5tuple_match_t</scope><name>param_in_ex</name></member>
+      <member refid="structcl__ip__5tuple__match__t_1aeb63c3c0bd893819a2257c47c4d1f1c8" prot="public" virt="non-virtual"><scope>cl_ip_5tuple_match_t</scope><name>src_ip</name></member>
+      <member refid="structcl__ip__5tuple__match__t_1ae35e648a631112c8bf6e7473e2f5f8e8" prot="public" virt="non-virtual"><scope>cl_ip_5tuple_match_t</scope><name>src_port</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

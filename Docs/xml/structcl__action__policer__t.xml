@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structcl__action__policer__t" kind="struct" prot="public">
+    <compoundname>cl_action_policer_t</compoundname>
+    <includes refid="qosal__cl__api_8h" local="no">qosal_cl_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcl__action__policer__t_1a490e11e21624bdd2d9ff1dcbd83947b8" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_action_policer_t::enable</definition>
+        <argsstring></argsstring>
+        <name>enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether Policer is enabled </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="527" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="527" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__policer__t_1ab03e04d215ba95b54443f3dc90c9bc30" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char cl_action_policer_t::name[MAX_QOS_NAME_LEN]</definition>
+        <argsstring>[MAX_QOS_NAME_LEN]</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Name or Alias of Policer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="528" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="528" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__policer__t_1ab081660ba160894ca6fe330fb23c115f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__FAPI__QOS__CLASS_1ga320ad61e79289091e97378966fb083b3" kindref="member">cl_meter_type_t</ref></type>
+        <definition>cl_meter_type_t cl_action_policer_t::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type of Meter - TokenBucket, srTCM, trTCM </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="529" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="529" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__policer__t_1a6b328b9dd494fa3298e8ef598edb5245" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_action_policer_t::cr</definition>
+        <argsstring></argsstring>
+        <name>cr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Committed Rate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="530" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="530" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__policer__t_1ade7a7f8d4ae3cb3c3b04ea3a291fd450" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_action_policer_t::cbs</definition>
+        <argsstring></argsstring>
+        <name>cbs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Committed Burst Size </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="531" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="531" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__policer__t_1a622f9bacf5e0490b900e8edc8f9cf05f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_action_policer_t::ebs</definition>
+        <argsstring></argsstring>
+        <name>ebs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Excess Burst Size </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="532" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="532" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__policer__t_1a8d5e61660df2335c7dbed64b6aa90d9c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_action_policer_t::pr</definition>
+        <argsstring></argsstring>
+        <name>pr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Peak Rate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="533" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="533" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__policer__t_1a36a8d678c02da25d3add2aa1036d11d5" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_action_policer_t::pbs</definition>
+        <argsstring></argsstring>
+        <name>pbs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Peak Burst Size </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="534" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="534" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__policer__t_1aaccf90075204c956c1a3ae1b45f84749" prot="public" static="no" mutable="no">
+        <type><ref refid="structpolicer__action__t" kindref="compound">policer_action_t</ref></type>
+        <definition>policer_action_t cl_action_policer_t::confg</definition>
+        <argsstring></argsstring>
+        <name>confg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Conforming Policer Action </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="536" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="536" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__policer__t_1ae50ca4ef91d3382c4ac66b5a21672f32" prot="public" static="no" mutable="no">
+        <type><ref refid="structpolicer__action__t" kindref="compound">policer_action_t</ref></type>
+        <definition>policer_action_t cl_action_policer_t::non_confg</definition>
+        <argsstring></argsstring>
+        <name>non_confg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Non-Conforming Policer Action </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="537" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="537" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__policer__t_1aa54565ed3cc4df7a357337d9857f7829" prot="public" static="no" mutable="no">
+        <type><ref refid="structpolicer__action__t" kindref="compound">policer_action_t</ref></type>
+        <definition>policer_action_t cl_action_policer_t::partial_confg</definition>
+        <argsstring></argsstring>
+        <name>partial_confg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Partial Conforming Policer Action </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="538" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="538" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classifer action Policer data structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="14">
+        <label>policer_action_t</label>
+        <link refid="structpolicer__action__t"/>
+      </node>
+      <node id="13">
+        <label>cl_action_policer_t</label>
+        <link refid="structcl__action__policer__t"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>partial_confg</edgelabel>
+          <edgelabel>non_confg</edgelabel>
+          <edgelabel>confg</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="526" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="526" bodyend="539"/>
+    <listofallmembers>
+      <member refid="structcl__action__policer__t_1ade7a7f8d4ae3cb3c3b04ea3a291fd450" prot="public" virt="non-virtual"><scope>cl_action_policer_t</scope><name>cbs</name></member>
+      <member refid="structcl__action__policer__t_1aaccf90075204c956c1a3ae1b45f84749" prot="public" virt="non-virtual"><scope>cl_action_policer_t</scope><name>confg</name></member>
+      <member refid="structcl__action__policer__t_1a6b328b9dd494fa3298e8ef598edb5245" prot="public" virt="non-virtual"><scope>cl_action_policer_t</scope><name>cr</name></member>
+      <member refid="structcl__action__policer__t_1a622f9bacf5e0490b900e8edc8f9cf05f" prot="public" virt="non-virtual"><scope>cl_action_policer_t</scope><name>ebs</name></member>
+      <member refid="structcl__action__policer__t_1a490e11e21624bdd2d9ff1dcbd83947b8" prot="public" virt="non-virtual"><scope>cl_action_policer_t</scope><name>enable</name></member>
+      <member refid="structcl__action__policer__t_1ab03e04d215ba95b54443f3dc90c9bc30" prot="public" virt="non-virtual"><scope>cl_action_policer_t</scope><name>name</name></member>
+      <member refid="structcl__action__policer__t_1ae50ca4ef91d3382c4ac66b5a21672f32" prot="public" virt="non-virtual"><scope>cl_action_policer_t</scope><name>non_confg</name></member>
+      <member refid="structcl__action__policer__t_1aa54565ed3cc4df7a357337d9857f7829" prot="public" virt="non-virtual"><scope>cl_action_policer_t</scope><name>partial_confg</name></member>
+      <member refid="structcl__action__policer__t_1a36a8d678c02da25d3add2aa1036d11d5" prot="public" virt="non-virtual"><scope>cl_action_policer_t</scope><name>pbs</name></member>
+      <member refid="structcl__action__policer__t_1a8d5e61660df2335c7dbed64b6aa90d9c" prot="public" virt="non-virtual"><scope>cl_action_policer_t</scope><name>pr</name></member>
+      <member refid="structcl__action__policer__t_1ab081660ba160894ca6fe330fb23c115f" prot="public" virt="non-virtual"><scope>cl_action_policer_t</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structpolldInfo" kind="struct" prot="public">
+    <compoundname>polldInfo</compoundname>
+    <includes refid="ugw__common_8h" local="no">ugw_common.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpolldInfo_1acf3be94a68302552eed37fe8ab74ee07" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t polldInfo::unRequest_type</definition>
+        <argsstring></argsstring>
+        <name>unRequest_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>REQTYPE_TIMER_ADD/REQTYPE_TIMER_DEL/REQTYPE_TIMER_MOD </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="102" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolldInfo_1aa560623f9e58a960842720b570f7ca78" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t polldInfo::unOccurrence</definition>
+        <argsstring></argsstring>
+        <name>unOccurrence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TIMERRECURENCE_ONCE/TIMERRECURENCE_RECURRING </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="103" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolldInfo_1a0574a5c222aea42a88fea3fe8360f910" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t polldInfo::unTimeOut</definition>
+        <argsstring></argsstring>
+        <name>unTimeOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TimeOut in sec </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="104" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolldInfo_1a9def109559e64753727d2fbd282273ce" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t polldInfo::unReferenceCount</definition>
+        <argsstring></argsstring>
+        <name>unReferenceCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="105" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolldInfo_1a8613886ff61c141e5d5e36b2d40f709d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__LIBHELP_1ga73f73d414f252ff46652f16495641187" kindref="member">ListHead</ref></type>
+        <definition>ListHead polldInfo::xPlist</definition>
+        <argsstring></argsstring>
+        <name>xPlist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Traverse List </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="106" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains the timer fields for polld. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="101" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="101" bodyend="107"/>
+    <listofallmembers>
+      <member refid="structpolldInfo_1aa560623f9e58a960842720b570f7ca78" prot="public" virt="non-virtual"><scope>polldInfo</scope><name>unOccurrence</name></member>
+      <member refid="structpolldInfo_1a9def109559e64753727d2fbd282273ce" prot="public" virt="non-virtual"><scope>polldInfo</scope><name>unReferenceCount</name></member>
+      <member refid="structpolldInfo_1acf3be94a68302552eed37fe8ab74ee07" prot="public" virt="non-virtual"><scope>polldInfo</scope><name>unRequest_type</name></member>
+      <member refid="structpolldInfo_1a0574a5c222aea42a88fea3fe8360f910" prot="public" virt="non-virtual"><scope>polldInfo</scope><name>unTimeOut</name></member>
+      <member refid="structpolldInfo_1a8613886ff61c141e5d5e36b2d40f709d" prot="public" virt="non-virtual"><scope>polldInfo</scope><name>xPlist</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

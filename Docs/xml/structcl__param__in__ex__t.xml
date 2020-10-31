@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structcl__param__in__ex__t" kind="struct" prot="public">
+    <compoundname>cl_param_in_ex_t</compoundname>
+    <includes refid="qosal__cl__api_8h" local="no">qosal_cl_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcl__param__in__ex__t_1a005f264d861b00654d8ca07650fbeb85" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_param_in_ex_t::param_in</definition>
+        <argsstring></argsstring>
+        <name>param_in</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bit-map to indicate various parameters included </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="490" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="490" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__param__in__ex__t_1ad7b4d1bf551cffd1bfb75cf63757d2de" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_param_in_ex_t::param_ex</definition>
+        <argsstring></argsstring>
+        <name>param_ex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bit-map to indicate various parameters excluded </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="491" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="491" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Bit-map indication of fields selected or excluded of structure within which this structure is placed. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="489" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="489" bodyend="492"/>
+    <listofallmembers>
+      <member refid="structcl__param__in__ex__t_1ad7b4d1bf551cffd1bfb75cf63757d2de" prot="public" virt="non-virtual"><scope>cl_param_in_ex_t</scope><name>param_ex</name></member>
+      <member refid="structcl__param__in__ex__t_1a005f264d861b00654d8ca07650fbeb85" prot="public" virt="non-virtual"><scope>cl_param_in_ex_t</scope><name>param_in</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

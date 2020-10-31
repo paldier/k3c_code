@@ -1,0 +1,248 @@
+\hypertarget{group__FAPI__QOS__GENERAL}{\section{General}
+\label{group__FAPI__QOS__GENERAL}\index{General@{General}}
+}
+
+
+It provides a set of A\-P\-I for general configuration like, enable/disable Qo\-S, setting logging level etc.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structqos__cfg}{qos\-\_\-cfg}
+\begin{DoxyCompactList}\small\item\em Qo\-S general configuration data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__FAPI__QOS__GENERAL_gac2bbd6d630a06a980d9a92ddb9a49928}{\#define \hyperlink{group__FAPI__QOS__GENERAL_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N}}\label{group__FAPI__QOS__GENERAL_gac2bbd6d630a06a980d9a92ddb9a49928}
+
+\begin{DoxyCompactList}\small\item\em I\-N. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__GENERAL_gaec78e7a9e90a406a56f859ee456e8eae}{\#define \hyperlink{group__FAPI__QOS__GENERAL_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T}}\label{group__FAPI__QOS__GENERAL_gaec78e7a9e90a406a56f859ee456e8eae}
+
+\begin{DoxyCompactList}\small\item\em O\-U\-T. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__GENERAL_ga241695904231926008dba2d841b4400a}{\#define \hyperlink{group__FAPI__QOS__GENERAL_ga241695904231926008dba2d841b4400a}{I\-N\-\_\-\-O\-U\-T}}\label{group__FAPI__QOS__GENERAL_ga241695904231926008dba2d841b4400a}
+
+\begin{DoxyCompactList}\small\item\em I\-N\-\_\-\-O\-U\-T. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__GENERAL_ga66ee9b201fb5c2204740ee5c2bd68eb3}{\#define \hyperlink{group__FAPI__QOS__GENERAL_ga66ee9b201fb5c2204740ee5c2bd68eb3}{L\-T\-Q\-\_\-\-S\-U\-C\-C\-E\-S\-S}~0}\label{group__FAPI__QOS__GENERAL_ga66ee9b201fb5c2204740ee5c2bd68eb3}
+
+\begin{DoxyCompactList}\small\item\em Macro that defines success state. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__GENERAL_gaab9d5c1ffe0122fbaf498cd9ba99c275}{\#define \hyperlink{group__FAPI__QOS__GENERAL_gaab9d5c1ffe0122fbaf498cd9ba99c275}{L\-T\-Q\-\_\-\-F\-A\-I\-L}~-\/1}\label{group__FAPI__QOS__GENERAL_gaab9d5c1ffe0122fbaf498cd9ba99c275}
+
+\begin{DoxyCompactList}\small\item\em Macro that defines failure state. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__GENERAL_ga0c00a96baa89438d6b732b92a1ba11b9}{\#define \hyperlink{group__FAPI__QOS__GENERAL_ga0c00a96baa89438d6b732b92a1ba11b9}{M\-A\-X\-\_\-\-D\-A\-T\-A\-\_\-\-L\-E\-N}~2000}\label{group__FAPI__QOS__GENERAL_ga0c00a96baa89438d6b732b92a1ba11b9}
+
+\begin{DoxyCompactList}\small\item\em Macro that defines maximum data length for stack buffers. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__GENERAL_gafd709f201d7643c3909621f620ea648a}{\#define \hyperlink{group__FAPI__QOS__GENERAL_gafd709f201d7643c3909621f620ea648a}{M\-A\-X\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}~64}\label{group__FAPI__QOS__GENERAL_gafd709f201d7643c3909621f620ea648a}
+
+\begin{DoxyCompactList}\small\item\em Macro that defines Name length. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__GENERAL_ga10bf2917a6a4297e21e03f60c487f591}{\#define \hyperlink{group__FAPI__QOS__GENERAL_ga10bf2917a6a4297e21e03f60c487f591}{M\-A\-X\-\_\-\-I\-N\-T\-E\-R\-F\-A\-C\-E\-S}~9}\label{group__FAPI__QOS__GENERAL_ga10bf2917a6a4297e21e03f60c487f591}
+
+\begin{DoxyCompactList}\small\item\em Macro that defines max interfaces. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__GENERAL_ga0ec173d8fafd88fb863c4da3e11a9536}{\#define \hyperlink{group__FAPI__QOS__GENERAL_ga0ec173d8fafd88fb863c4da3e11a9536}{M\-A\-X\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-C\-O\-U\-N\-T}~9}\label{group__FAPI__QOS__GENERAL_ga0ec173d8fafd88fb863c4da3e11a9536}
+
+\begin{DoxyCompactList}\small\item\em Macro that defines max queue count. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__GENERAL_ga53a5c7c867e818bc8b6dea3105a90f62}{\#define \hyperlink{group__FAPI__QOS__GENERAL_ga53a5c7c867e818bc8b6dea3105a90f62}{M\-A\-X\-\_\-\-I\-F\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}~32}\label{group__FAPI__QOS__GENERAL_ga53a5c7c867e818bc8b6dea3105a90f62}
+
+\begin{DoxyCompactList}\small\item\em M\-A\-X Interface name length. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__GENERAL_ga2f3f659f8f6fbf01d76a03f42351e559}{\#define \hyperlink{group__FAPI__QOS__GENERAL_ga2f3f659f8f6fbf01d76a03f42351e559}{M\-A\-X\-\_\-\-L7\-\_\-\-P\-R\-O\-T\-O\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}~32}\label{group__FAPI__QOS__GENERAL_ga2f3f659f8f6fbf01d76a03f42351e559}
+
+\begin{DoxyCompactList}\small\item\em M\-A\-X Interface name length. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__GENERAL_ga40c47329f782fd8a018091086fdd51e2}{\#define \hyperlink{group__FAPI__QOS__GENERAL_ga40c47329f782fd8a018091086fdd51e2}{Q\-O\-S\-D\-\_\-\-P\-I\-D\-\_\-\-F\-I\-L\-E}~\char`\"{}/var/run/qosd.\-pid\char`\"{}}\label{group__FAPI__QOS__GENERAL_ga40c47329f782fd8a018091086fdd51e2}
+
+\begin{DoxyCompactList}\small\item\em Qo\-S P\-I\-D file. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__GENERAL_ga7679e55a89721f1c43ec2215c7a23282}{\#define \hyperlink{group__FAPI__QOS__GENERAL_ga7679e55a89721f1c43ec2215c7a23282}{L\-O\-G\-\_\-\-F\-I\-L\-E\-\_\-\-L\-O\-C}~\char`\"{}/tmp/qosal\-\_\-dbg\char`\"{}}\label{group__FAPI__QOS__GENERAL_ga7679e55a89721f1c43ec2215c7a23282}
+
+\begin{DoxyCompactList}\small\item\em Qo\-S log file. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__GENERAL_ga86d500a34c624c2cae56bc25a31b12f3}{\#define \hyperlink{group__FAPI__QOS__GENERAL_ga86d500a34c624c2cae56bc25a31b12f3}{U\-N\-U\-S\-E\-D}(x)~(void)(x)}\label{group__FAPI__QOS__GENERAL_ga86d500a34c624c2cae56bc25a31b12f3}
+
+\begin{DoxyCompactList}\small\item\em Macro to suppress unused variable warning during compilation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__FAPI__QOS__GENERAL_ga23c1893cfe6a7875c1a418338c6f09ad}{typedef enum \hyperlink{group__FAPI__QOS__GENERAL_ga6da5ac0600c64e9e1a79cd25a4a18680}{iftype} \hyperlink{group__FAPI__QOS__GENERAL_ga23c1893cfe6a7875c1a418338c6f09ad}{iftype\-\_\-t}}\label{group__FAPI__QOS__GENERAL_ga23c1893cfe6a7875c1a418338c6f09ad}
+
+\begin{DoxyCompactList}\small\item\em Enum defining various interface categories supported. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__GENERAL_gabfc98fb0c7c5226badf1eb79b4ab6e2b}{typedef struct \hyperlink{structqos__cfg}{qos\-\_\-cfg} \hyperlink{group__FAPI__QOS__GENERAL_gabfc98fb0c7c5226badf1eb79b4ab6e2b}{qos\-\_\-cfg\-\_\-t}}\label{group__FAPI__QOS__GENERAL_gabfc98fb0c7c5226badf1eb79b4ab6e2b}
+
+\begin{DoxyCompactList}\small\item\em Qo\-S general configuration data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__FAPI__QOS__GENERAL_ga6da5ac0600c64e9e1a79cd25a4a18680}{iftype} \{ \\*
+\hyperlink{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a3f4cfcc9a5bc49c9203f41ca90a1dee7}{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-E\-T\-H\-L\-A\-N}, 
+\hyperlink{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a91d47780ef7ca4d597796b4f8d496419}{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-E\-T\-H\-W\-A\-N}, 
+\hyperlink{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680aa2ab44c305536466712569878893f08b}{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-P\-T\-M\-W\-A\-N}, 
+\hyperlink{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a8ed7680bc33be5a05122e5b90a6b47b0}{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-A\-T\-M\-W\-A\-N}, 
+\\*
+\hyperlink{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a89f8c2e2ae52f8cbf784f7b981d0c3ca}{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-L\-T\-E\-W\-A\-N}, 
+\hyperlink{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a4c4c6095859075c080d4696c27a11261}{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-W\-L\-A\-N\-D\-P}, 
+\hyperlink{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a738d70bd8a77dd636f9ac0db5ec0d1cf}{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-W\-L\-A\-N\-N\-D\-P}, 
+\hyperlink{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a29df4fb22495cecca68b23d855ed46eb}{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-L\-O\-C\-A\-L}, 
+\\*
+\hyperlink{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a2ff3acdce4f2875869010dc41ef56624}{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-M\-A\-X}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum defining various interface categories supported. \end{DoxyCompactList}\item 
+enum \hyperlink{group__FAPI__QOS__GENERAL_gaf8da7b968cb9659aef1acb8c79ff7250}{log\-\_\-type\-\_\-t} \{ \hyperlink{group__FAPI__QOS__GENERAL_ggaf8da7b968cb9659aef1acb8c79ff7250a7264ac0af0559275987af6d7fc9180f8}{Q\-O\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-S\-O\-L\-E} =2, 
+\hyperlink{group__FAPI__QOS__GENERAL_ggaf8da7b968cb9659aef1acb8c79ff7250a6fdbe9e54ade3cac89351e3a8dd67ae0}{Q\-O\-S\-\_\-\-L\-O\-G\-\_\-\-F\-I\-L\-E} =1
+ \}
+\begin{DoxyCompactList}\small\item\em Qo\-S log mechanism. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__GENERAL_gafd940d9821b55eebebc562898643af6b}{fapi\-\_\-qos\-\_\-cfg\-\_\-get} (\hyperlink{group__FAPI__QOS__GENERAL_gabfc98fb0c7c5226badf1eb79b4ab6e2b}{qos\-\_\-cfg\-\_\-t} $\ast$qoscfg, uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Set Qo\-S general configuration. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__GENERAL_ga2f04ba96cfa8c5cd6e4c648c777c6fbd}{fapi\-\_\-qos\-\_\-cfg\-\_\-set} (\hyperlink{group__FAPI__QOS__GENERAL_gabfc98fb0c7c5226badf1eb79b4ab6e2b}{qos\-\_\-cfg\-\_\-t} $\ast$qoscfg, uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Set Qo\-S general configuration. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__GENERAL_ga9909b3559cf8dfbd0704a6e01ce7a9a6}{fapi\-\_\-qos\-\_\-init} (\hyperlink{group__FAPI__QOS__GENERAL_gabfc98fb0c7c5226badf1eb79b4ab6e2b}{qos\-\_\-cfg\-\_\-t} $\ast$qoscfg, uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Qo\-S configuration init. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__GENERAL_ga77057b89e0678c0af7a7f21903af2b03}{fapi\-\_\-qos\-\_\-shut} (uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Qo\-S configuration disable/shut. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It provides a set of A\-P\-I for general configuration like, enable/disable Qo\-S, setting logging level etc. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__FAPI__QOS__GENERAL_ga6da5ac0600c64e9e1a79cd25a4a18680}{\index{General@{General}!iftype@{iftype}}
+\index{iftype@{iftype}!General@{General}}
+\subsubsection[{iftype}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf iftype}}}\label{group__FAPI__QOS__GENERAL_ga6da5ac0600c64e9e1a79cd25a4a18680}
+
+
+Enum defining various interface categories supported. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-E\-T\-H\-L\-A\-N@{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-E\-T\-H\-L\-A\-N}!General@{General}}\index{General@{General}!Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-E\-T\-H\-L\-A\-N@{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-E\-T\-H\-L\-A\-N}}\item[{\em 
+\hypertarget{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a3f4cfcc9a5bc49c9203f41ca90a1dee7}{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-E\-T\-H\-L\-A\-N}\label{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a3f4cfcc9a5bc49c9203f41ca90a1dee7}
+}]Ethernet L\-A\-N interface category. \index{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-E\-T\-H\-W\-A\-N@{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-E\-T\-H\-W\-A\-N}!General@{General}}\index{General@{General}!Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-E\-T\-H\-W\-A\-N@{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-E\-T\-H\-W\-A\-N}}\item[{\em 
+\hypertarget{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a91d47780ef7ca4d597796b4f8d496419}{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-E\-T\-H\-W\-A\-N}\label{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a91d47780ef7ca4d597796b4f8d496419}
+}]Ethernet W\-A\-N interface category. \index{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-P\-T\-M\-W\-A\-N@{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-P\-T\-M\-W\-A\-N}!General@{General}}\index{General@{General}!Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-P\-T\-M\-W\-A\-N@{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-P\-T\-M\-W\-A\-N}}\item[{\em 
+\hypertarget{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680aa2ab44c305536466712569878893f08b}{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-P\-T\-M\-W\-A\-N}\label{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680aa2ab44c305536466712569878893f08b}
+}]x\-D\-S\-L P\-T\-M W\-A\-N interface category. \index{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-A\-T\-M\-W\-A\-N@{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-A\-T\-M\-W\-A\-N}!General@{General}}\index{General@{General}!Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-A\-T\-M\-W\-A\-N@{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-A\-T\-M\-W\-A\-N}}\item[{\em 
+\hypertarget{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a8ed7680bc33be5a05122e5b90a6b47b0}{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-A\-T\-M\-W\-A\-N}\label{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a8ed7680bc33be5a05122e5b90a6b47b0}
+}]x\-D\-S\-L A\-T\-M W\-A\-N interface category. \index{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-L\-T\-E\-W\-A\-N@{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-L\-T\-E\-W\-A\-N}!General@{General}}\index{General@{General}!Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-L\-T\-E\-W\-A\-N@{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-L\-T\-E\-W\-A\-N}}\item[{\em 
+\hypertarget{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a89f8c2e2ae52f8cbf784f7b981d0c3ca}{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-L\-T\-E\-W\-A\-N}\label{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a89f8c2e2ae52f8cbf784f7b981d0c3ca}
+}]L\-T\-E W\-A\-N interface category. \index{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-W\-L\-A\-N\-D\-P@{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-W\-L\-A\-N\-D\-P}!General@{General}}\index{General@{General}!Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-W\-L\-A\-N\-D\-P@{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-W\-L\-A\-N\-D\-P}}\item[{\em 
+\hypertarget{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a4c4c6095859075c080d4696c27a11261}{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-W\-L\-A\-N\-D\-P}\label{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a4c4c6095859075c080d4696c27a11261}
+}]W\-L\-A\-N in Directpath interface category. \index{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-W\-L\-A\-N\-N\-D\-P@{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-W\-L\-A\-N\-N\-D\-P}!General@{General}}\index{General@{General}!Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-W\-L\-A\-N\-N\-D\-P@{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-W\-L\-A\-N\-N\-D\-P}}\item[{\em 
+\hypertarget{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a738d70bd8a77dd636f9ac0db5ec0d1cf}{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-W\-L\-A\-N\-N\-D\-P}\label{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a738d70bd8a77dd636f9ac0db5ec0d1cf}
+}]W\-L\-A\-N in Non-\/directpath interface category. \index{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-L\-O\-C\-A\-L@{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-L\-O\-C\-A\-L}!General@{General}}\index{General@{General}!Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-L\-O\-C\-A\-L@{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-L\-O\-C\-A\-L}}\item[{\em 
+\hypertarget{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a29df4fb22495cecca68b23d855ed46eb}{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-L\-O\-C\-A\-L}\label{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a29df4fb22495cecca68b23d855ed46eb}
+}]Local interface category. \index{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-M\-A\-X@{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-M\-A\-X}!General@{General}}\index{General@{General}!Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-M\-A\-X@{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-M\-A\-X}}\item[{\em 
+\hypertarget{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a2ff3acdce4f2875869010dc41ef56624}{Q\-O\-S\-\_\-\-I\-F\-\_\-\-C\-A\-T\-E\-G\-O\-R\-Y\-\_\-\-M\-A\-X}\label{group__FAPI__QOS__GENERAL_gga6da5ac0600c64e9e1a79cd25a4a18680a2ff3acdce4f2875869010dc41ef56624}
+}]Max interface category count. \end{description}
+\end{Desc}
+\hypertarget{group__FAPI__QOS__GENERAL_gaf8da7b968cb9659aef1acb8c79ff7250}{\index{General@{General}!log\-\_\-type\-\_\-t@{log\-\_\-type\-\_\-t}}
+\index{log\-\_\-type\-\_\-t@{log\-\_\-type\-\_\-t}!General@{General}}
+\subsubsection[{log\-\_\-type\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf log\-\_\-type\-\_\-t}}}\label{group__FAPI__QOS__GENERAL_gaf8da7b968cb9659aef1acb8c79ff7250}
+
+
+Qo\-S log mechanism. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Q\-O\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-S\-O\-L\-E@{Q\-O\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-S\-O\-L\-E}!General@{General}}\index{General@{General}!Q\-O\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-S\-O\-L\-E@{Q\-O\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-S\-O\-L\-E}}\item[{\em 
+\hypertarget{group__FAPI__QOS__GENERAL_ggaf8da7b968cb9659aef1acb8c79ff7250a7264ac0af0559275987af6d7fc9180f8}{Q\-O\-S\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-S\-O\-L\-E}\label{group__FAPI__QOS__GENERAL_ggaf8da7b968cb9659aef1acb8c79ff7250a7264ac0af0559275987af6d7fc9180f8}
+}]Log messages to be shown on console \index{Q\-O\-S\-\_\-\-L\-O\-G\-\_\-\-F\-I\-L\-E@{Q\-O\-S\-\_\-\-L\-O\-G\-\_\-\-F\-I\-L\-E}!General@{General}}\index{General@{General}!Q\-O\-S\-\_\-\-L\-O\-G\-\_\-\-F\-I\-L\-E@{Q\-O\-S\-\_\-\-L\-O\-G\-\_\-\-F\-I\-L\-E}}\item[{\em 
+\hypertarget{group__FAPI__QOS__GENERAL_ggaf8da7b968cb9659aef1acb8c79ff7250a6fdbe9e54ade3cac89351e3a8dd67ae0}{Q\-O\-S\-\_\-\-L\-O\-G\-\_\-\-F\-I\-L\-E}\label{group__FAPI__QOS__GENERAL_ggaf8da7b968cb9659aef1acb8c79ff7250a6fdbe9e54ade3cac89351e3a8dd67ae0}
+}]Log messages to be put into file \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__FAPI__QOS__GENERAL_gafd940d9821b55eebebc562898643af6b}{\index{General@{General}!fapi\-\_\-qos\-\_\-cfg\-\_\-get@{fapi\-\_\-qos\-\_\-cfg\-\_\-get}}
+\index{fapi\-\_\-qos\-\_\-cfg\-\_\-get@{fapi\-\_\-qos\-\_\-cfg\-\_\-get}!General@{General}}
+\subsubsection[{fapi\-\_\-qos\-\_\-cfg\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} fapi\-\_\-qos\-\_\-cfg\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{{\bf qos\-\_\-cfg\-\_\-t} $\ast$}]{qoscfg, }
+\item[{uint32\-\_\-t}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__QOS__GENERAL_gafd940d9821b55eebebc562898643af6b}
+
+
+Set Qo\-S general configuration. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em qoscfg} & Qo\-S general configuration \\
+\hline
+\mbox{\tt in}  & {\em flags} & Reserved currently \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on successful / -\/1 on failure 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__QOS__GENERAL_ga2f04ba96cfa8c5cd6e4c648c777c6fbd}{\index{General@{General}!fapi\-\_\-qos\-\_\-cfg\-\_\-set@{fapi\-\_\-qos\-\_\-cfg\-\_\-set}}
+\index{fapi\-\_\-qos\-\_\-cfg\-\_\-set@{fapi\-\_\-qos\-\_\-cfg\-\_\-set}!General@{General}}
+\subsubsection[{fapi\-\_\-qos\-\_\-cfg\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} fapi\-\_\-qos\-\_\-cfg\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf qos\-\_\-cfg\-\_\-t} $\ast$}]{qoscfg, }
+\item[{uint32\-\_\-t}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__QOS__GENERAL_ga2f04ba96cfa8c5cd6e4c648c777c6fbd}
+
+
+Set Qo\-S general configuration. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em qoscfg} & Qo\-S general configuration \\
+\hline
+\mbox{\tt in}  & {\em flags} & Specified type of operation
+\begin{DoxyItemize}
+\item Q\-O\-S\-\_\-\-C\-F\-G\-\_\-\-M\-O\-D\-I\-F\-Y \-: modify the configuration 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on successful / -\/1 on failure 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__QOS__GENERAL_ga9909b3559cf8dfbd0704a6e01ce7a9a6}{\index{General@{General}!fapi\-\_\-qos\-\_\-init@{fapi\-\_\-qos\-\_\-init}}
+\index{fapi\-\_\-qos\-\_\-init@{fapi\-\_\-qos\-\_\-init}!General@{General}}
+\subsubsection[{fapi\-\_\-qos\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} fapi\-\_\-qos\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf qos\-\_\-cfg\-\_\-t} $\ast$}]{qoscfg, }
+\item[{uint32\-\_\-t}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__QOS__GENERAL_ga9909b3559cf8dfbd0704a6e01ce7a9a6}
+
+
+Qo\-S configuration init. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em qoscfg} & Qo\-S A\-L general configuration \\
+\hline
+\mbox{\tt in}  & {\em flags} & Specified type of operation
+\begin{DoxyItemize}
+\item Q\-O\-S\-\_\-\-C\-F\-G\-\_\-\-M\-O\-D\-I\-F\-Y \-: modify the configuration 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on successful / -\/1 on failure 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__QOS__GENERAL_ga77057b89e0678c0af7a7f21903af2b03}{\index{General@{General}!fapi\-\_\-qos\-\_\-shut@{fapi\-\_\-qos\-\_\-shut}}
+\index{fapi\-\_\-qos\-\_\-shut@{fapi\-\_\-qos\-\_\-shut}!General@{General}}
+\subsubsection[{fapi\-\_\-qos\-\_\-shut}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} fapi\-\_\-qos\-\_\-shut (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__QOS__GENERAL_ga77057b89e0678c0af7a7f21903af2b03}
+
+
+Qo\-S configuration disable/shut. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em flags} & Specified type of operation
+\begin{DoxyItemize}
+\item Q\-O\-S\-\_\-\-C\-F\-G\-\_\-\-M\-O\-D\-I\-F\-Y \-: modify the configuration 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on successful / -\/1 on failure 
+\end{DoxyReturn}

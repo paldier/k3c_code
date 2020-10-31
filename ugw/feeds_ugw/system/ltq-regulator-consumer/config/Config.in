@@ -1,0 +1,7 @@
+config LTQ_REGULATOR_CONSUMER_DEBUG
+	bool
+	prompt "Enable debug prints"
+	default n
+	help 
+	  This option enables debug outputs of the regulator consumer driver.
+ 

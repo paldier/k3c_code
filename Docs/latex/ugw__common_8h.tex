@@ -1,0 +1,141 @@
+\hypertarget{ugw__common_8h}{\section{ugw\-\_\-common.\-h File Reference}
+\label{ugw__common_8h}\index{ugw\-\_\-common.\-h@{ugw\-\_\-common.\-h}}
+}
+
+
+File contains prototypes and associated data structures that are used across multiple S\-Ls.  
+
+
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}ugw\-\_\-defs.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ugw\-\_\-objmsg.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ugw\-\_\-proto.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$libubus.\-h$>$}\\*
+{\ttfamily \#include $<$libubox/blobmsg\-\_\-json.\-h$>$}\\*
+{\ttfamily \#include $<$libubox/blobmsg.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structname__value__t}{name\-\_\-value\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Defines the name-\/value pairs used for string-\/to-\/macro enum mapping. \end{DoxyCompactList}\item 
+struct \hyperlink{structParamMap__t}{Param\-Map\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Defines the bit-\/map to set/identify parameters for which values are set. \end{DoxyCompactList}\item 
+struct \hyperlink{structx__LTQ__Param}{x\-\_\-\-L\-T\-Q\-\_\-\-Param}
+\begin{DoxyCompactList}\small\item\em Defines the parameter-\/offset map for each structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structpolldInfo}{polld\-Info}
+\begin{DoxyCompactList}\small\item\em Contains the timer fields for polld. \end{DoxyCompactList}\item 
+struct \hyperlink{structPolldResp}{Polld\-Resp}
+\begin{DoxyCompactList}\small\item\em Contains the response code for Callbacks of polld. \end{DoxyCompactList}\item 
+struct \hyperlink{structWsdData}{Wsd\-Data}
+\begin{DoxyCompactList}\small\item\em Contains the websocket data with Msg Header. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__LIBHELP_ga87909ff79ce67a556f60ca606544e57d}{P\-A\-R\-A\-M\-\_\-\-M\-A\-P\-\_\-\-N\-A\-M\-E}~\char`\"{}x\-Param\-Map\char`\"{}
+\item 
+\#define \hyperlink{group__SYSFRAMEWORK__POLLD_gac79d24ad3b52565290d3fbd22a47498f}{F\-O\-R\-\_\-\-E\-A\-C\-H\-\_\-\-T\-I\-M\-E\-R\-\_\-\-O\-N\-L\-Y}(\-\_\-\-\_\-px\-Src, \-\_\-\-\_\-px\-Param)~list\-\_\-for\-\_\-each\-\_\-entry(\-\_\-\-\_\-px\-Param,\&(\-\_\-\-\_\-px\-Src-\/$>$x\-Plist),x\-Plist) \textbackslash{}
+\begin{DoxyCompactList}\small\item\em Macro used to loop through timerlist. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__SYSFRAMEWORK__POLLD_ga8d9ee84002519619a100089e8bd1a3ad}{D\-E\-L\-E\-T\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-N\-O\-D\-E}(\-\_\-\-\_\-px\-Node)~do \{ \hyperlink{group__SYSFRAMEWORK__LOG_ga8ce0b241ee6ed787655fc6c683610cfa}{L\-O\-G\-F\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O}(\char`\"{}Deleting \-: \%p Timer Node\textbackslash{}n\char`\"{}, px\-Timer\-Tmp); list\-\_\-del(\&\-\_\-\-\_\-px\-Node-\/$>$x\-Plist); \hyperlink{group__LIBHELP_gad8118b0746b34f72d8b9a150290716e5}{H\-E\-L\-P\-\_\-\-F\-R\-E\-E}(\-\_\-\-\_\-px\-Node); \} while(0);
+\begin{DoxyCompactList}\small\item\em Free up the timer linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{typedef struct \hyperlink{structpolldInfo}{polld\-Info} \hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info}}\label{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}
+
+\begin{DoxyCompactList}\small\item\em Contains the timer fields for polld. \end{DoxyCompactList}\item 
+\hypertarget{group__SYSFRAMEWORK__POLLD_gab66601607b9776a27d87bcfc0b024b6f}{typedef struct \hyperlink{structPolldResp}{Polld\-Resp} \hyperlink{group__SYSFRAMEWORK__POLLD_gab66601607b9776a27d87bcfc0b024b6f}{Polld\-Resp\-Code}}\label{group__SYSFRAMEWORK__POLLD_gab66601607b9776a27d87bcfc0b024b6f}
+
+\begin{DoxyCompactList}\small\item\em Contains the response code for Callbacks of polld. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__LIBHELP_gaf878e044f6bcefab8a0bfc6468814811}{x\-\_\-\-L\-T\-Q\-\_\-\-Types} \{ \\*
+\hyperlink{group__LIBHELP_ggaf878e044f6bcefab8a0bfc6468814811af7bbcb8a6976b950c4d4371f3ee8a730}{L\-T\-Q\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-Y\-P\-E\-\_\-\-O\-B\-J\-\_\-\-L\-I\-S\-T}, 
+\hyperlink{group__LIBHELP_ggaf878e044f6bcefab8a0bfc6468814811ac0fb9e74a657c608d24ed8266508024f}{L\-T\-Q\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-I\-N\-T}, 
+\hyperlink{group__LIBHELP_ggaf878e044f6bcefab8a0bfc6468814811add9f44ccc630268e8fae17cdc49d5f3c}{L\-T\-Q\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-T}, 
+\hyperlink{group__LIBHELP_ggaf878e044f6bcefab8a0bfc6468814811a5d1da7a589eedf42f68ccc702022a501}{L\-T\-Q\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-H\-O\-R\-T\-\_\-\-I\-N\-T}, 
+\\*
+\hyperlink{group__LIBHELP_ggaf878e044f6bcefab8a0bfc6468814811a3439aa96f78cca52ed69ab8c47b14865}{L\-T\-Q\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-H\-O\-R\-T\-\_\-\-I\-N\-T}, 
+\hyperlink{group__LIBHELP_ggaf878e044f6bcefab8a0bfc6468814811ac0de381358d323732335f0b242da4993}{L\-T\-Q\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-L\-O\-N\-G}, 
+\hyperlink{group__LIBHELP_ggaf878e044f6bcefab8a0bfc6468814811a3c6de02b9b1390c84d87eab266b13d11}{L\-T\-Q\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-N\-G}, 
+\hyperlink{group__LIBHELP_ggaf878e044f6bcefab8a0bfc6468814811abc1f5be586c390a92c2b0836d004617a}{L\-T\-Q\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-H\-A\-R}, 
+\\*
+\hyperlink{group__LIBHELP_ggaf878e044f6bcefab8a0bfc6468814811a1a5bf35441a752858ec6095840ab5a36}{L\-T\-Q\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-C\-H\-A\-R}, 
+\hyperlink{group__LIBHELP_ggaf878e044f6bcefab8a0bfc6468814811a2b209ca682063d25b55cbaa5c4b49972}{L\-T\-Q\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-L\-O\-A\-T}, 
+\hyperlink{group__LIBHELP_ggaf878e044f6bcefab8a0bfc6468814811ae55ada5c0acfb7cd4db758db66715e9f}{L\-T\-Q\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-O\-O\-L}, 
+\hyperlink{group__LIBHELP_ggaf878e044f6bcefab8a0bfc6468814811a3cd925d097dbb85317b159abd56bad93}{L\-T\-Q\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-Y\-P\-E\-\_\-\-E\-N\-U\-M}, 
+\\*
+\hyperlink{group__LIBHELP_ggaf878e044f6bcefab8a0bfc6468814811a1d3dbfbf8a44738de201ac500f496f83}{L\-T\-Q\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-Y\-P\-E\-\_\-\-H\-E\-X}, 
+\hyperlink{group__LIBHELP_ggaf878e044f6bcefab8a0bfc6468814811a4c338e29ee28a9764c5e50c05bee0204}{L\-T\-Q\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-T\-R}, 
+\hyperlink{group__LIBHELP_ggaf878e044f6bcefab8a0bfc6468814811aa0d084e1103f1400b632bfc4e0c7e8df}{L\-T\-Q\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-A\-T\-E\-T\-I\-M\-E}, 
+\hyperlink{group__LIBHELP_ggaf878e044f6bcefab8a0bfc6468814811a92c3af8fd9e67a1cc40fa40d49dcec20}{L\-T\-Q\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-T\-R\-U\-C\-T}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum defining various data types. \end{DoxyCompactList}\item 
+enum \hyperlink{group__SYSFRAMEWORK__POLLD_gae10b07f2d0feb103db7fe4cfd192e5af}{Request\-Type} \{ \hyperlink{group__SYSFRAMEWORK__POLLD_ggae10b07f2d0feb103db7fe4cfd192e5afa63e66fe0a1e1de6cfed3c85a9aa48315}{R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-A\-D\-D} = 0, 
+\hyperlink{group__SYSFRAMEWORK__POLLD_ggae10b07f2d0feb103db7fe4cfd192e5afa08e0354be826a836f72ebfa716a7d290}{R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-D\-E\-L}, 
+\hyperlink{group__SYSFRAMEWORK__POLLD_ggae10b07f2d0feb103db7fe4cfd192e5afa3a3504998275abee398a70197a8bf6e4}{R\-E\-Q\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-R\-\_\-\-M\-O\-D}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum containing the type of request for polld. \end{DoxyCompactList}\item 
+enum \hyperlink{group__SYSFRAMEWORK__POLLD_ga8d3aaea1dc4569e14bc3b498c3131b2a}{Timer\-Recurence} \{ \hyperlink{group__SYSFRAMEWORK__POLLD_gga8d3aaea1dc4569e14bc3b498c3131b2aa295266347c0bdf8dcd25d42a03275c79}{T\-I\-M\-E\-R\-R\-E\-C\-U\-R\-E\-N\-C\-E\-\_\-\-O\-N\-C\-E} = 0, 
+\hyperlink{group__SYSFRAMEWORK__POLLD_gga8d3aaea1dc4569e14bc3b498c3131b2aacfa2040c602a9b9afe857229cc05d3ad}{T\-I\-M\-E\-R\-R\-E\-C\-U\-R\-E\-N\-C\-E\-\_\-\-R\-E\-C\-U\-R\-R\-I\-N\-G}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum containing timeout for once or repeatedly. \end{DoxyCompactList}\item 
+enum \hyperlink{group__LIBHELP_ga3a023c0c27667e78ae521eb64f1c7c81}{Param\-Type} 
+\begin{DoxyCompactList}\small\item\em Enum containing data types supported to construct blob message. \end{DoxyCompactList}\item 
+enum \hyperlink{group__LIBHELP_ga21d5e8f8cdaa838586b31007df0a950b}{Action\-Type} \{ \hyperlink{group__LIBHELP_gga21d5e8f8cdaa838586b31007df0a950ba4645d70cb9bb2228f230d601f477639d}{A\-C\-T\-I\-O\-N\-\_\-\-S\-T\-O\-P} = 0, 
+\hyperlink{group__LIBHELP_gga21d5e8f8cdaa838586b31007df0a950bad18d9bd6c0a4eced8d31c7b1c6b9dd16}{A\-C\-T\-I\-O\-N\-\_\-\-S\-T\-A\-R\-T} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Enum containing the actions sent from web to wsd forwarded to servd. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info} $\ast$ \hyperlink{group__SYSFRAMEWORK__POLLD_gae320b4db14b8f6d6c2cb985921722afa}{help\-\_\-create\-Timer\-List} (void)
+\begin{DoxyCompactList}\small\item\em Function to create head node for polld timer list. \end{DoxyCompactList}\item 
+void \hyperlink{group__SYSFRAMEWORK__POLLD_gaf539f6e7bd349a8e5f3203efda7448f4}{help\-\_\-del\-Timer\-List} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info} $\ast$$\ast$px\-Timer\-List)
+\begin{DoxyCompactList}\small\item\em Function to delete the polld timer linked list. \end{DoxyCompactList}\item 
+void \hyperlink{group__SYSFRAMEWORK__POLLD_ga7b5d0762e28e4e09406a75548c61bb4c}{help\-\_\-print\-Timer\-List} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info} $\ast$px\-Timer\-List)
+\begin{DoxyCompactList}\small\item\em Function to print polld timer linked list. \end{DoxyCompactList}\item 
+int \hyperlink{group__SYSFRAMEWORK__POLLD_ga8de5216d3d5e3b7b979c6fc189d35ade}{help\-\_\-add\-Timer\-List} (\hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} \hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info} $\ast$px\-Timer\-List, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info} $\ast$px\-Time\-Info)
+\begin{DoxyCompactList}\small\item\em Function to add a new timer node in polld timer linked list. \end{DoxyCompactList}\item 
+int \hyperlink{group__SYSFRAMEWORK__POLLD_gab17830ba31bb4e46a053646e6fca23f4}{ubus\-Msg\-To\-Polld} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{group__LIBHELP_ga0cdba030aaa0bd18b24dbf19b06877a0}{Main\-Oper} e\-Operation, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Dyn\-Msg, \hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Output\-Msg, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info} $\ast$px\-Timer\-List)
+\begin{DoxyCompactList}\small\item\em Function to send ubus message to polld. \end{DoxyCompactList}\item 
+int \hyperlink{group__SYSFRAMEWORK__POLLD_ga631a79daf4414553f01214f9f51d3b94}{help\-\_\-obj\-List\-To\-Blob\-Polld} (\hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} struct blob\-\_\-buf $\ast$buf, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Msg, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} struct ubus\-\_\-context $\ast$ctx, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} struct ubus\-\_\-request\-\_\-data $\ast$req, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info} $\ast$px\-Timer\-List)
+\begin{DoxyCompactList}\small\item\em Function to convert objlist and polld timers to blob message. \end{DoxyCompactList}\item 
+int \hyperlink{group__SYSFRAMEWORK__POLLD_ga6146742ce8a6c2a48d3ed56d5ba96e55}{help\-\_\-blob\-To\-Obj\-List\-Polld} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} struct blob\-\_\-attr $\ast$msg, \hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Msg, \hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} \hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info} $\ast$px\-Timer\-Info)
+\begin{DoxyCompactList}\small\item\em Function to convert blob message to obj\-List and polld timers. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBHELP_ga150ff6f76ba6396d5e81bc584bac0ae8}{enum\-Map\-Get} (\hyperlink{structname__value__t}{name\-\_\-value\-\_\-t} enum\-\_\-nv\mbox{[}$\,$\mbox{]}, \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} i\-Size, char $\ast$tr\-Val, \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} $\ast$ui\-Id, \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} i\-Sel)
+\begin{DoxyCompactList}\small\item\em A\-P\-I for converting string format of enum to integer and vice-\/versa. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBHELP_ga08300bca1af4dcd87c17484ba5423465}{help\-\_\-objlist\-To\-Struct\-Conv} (\hyperlink{structObjList}{Obj\-List} $\ast$px\-Obj, void $\ast$px\-Struct, \hyperlink{structx__LTQ__Param}{x\-\_\-\-L\-T\-Q\-\_\-\-Param} x\-Param\-Detail\mbox{[}$\,$\mbox{]}, \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} i\-Size)
+\begin{DoxyCompactList}\small\item\em A\-P\-I for converting name-\/value pairs coming from servd into C structure. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBHELP_ga28a2489527017209b1597af38de0486c}{help\-\_\-struct\-To\-Objlist\-Conv} (\hyperlink{structObjList}{Obj\-List} $\ast$px\-Obj, void $\ast$px\-Struct, \hyperlink{structx__LTQ__Param}{x\-\_\-\-L\-T\-Q\-\_\-\-Param} x\-Param\-Detail\mbox{[}$\,$\mbox{]}, \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} i\-Size)
+\begin{DoxyCompactList}\small\item\em A\-P\-I for converting name-\/value pairs coming from servd into C structure. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBHELP_gabde6cd1678f5635e93a21caa32652427}{help\-\_\-struct\-To\-Objlist\-Mapping} (\hyperlink{structObjList}{Obj\-List} $\ast$px\-Tmp\-Obj, void $\ast$px\-Struct, \hyperlink{structx__LTQ__Param}{x\-\_\-\-L\-T\-Q\-\_\-\-Param} x\-Param\-Detail\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em A\-P\-I for Updating the Oject-\/ params values coming from servd with the corresponding value from C structure. \end{DoxyCompactList}\item 
+\hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} char $\ast$ \hyperlink{group__LIBHELP_gae446d514164f23d3e91f7170e9fc973b}{H\-E\-L\-P\-\_\-\-S\-T\-R\-D\-U\-P} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-In\-Str)
+\begin{DoxyCompactList}\small\item\em Function to perform strdup functionality. \end{DoxyCompactList}\item 
+\hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBHELP_ga1ec415f0fca441424045a6af058be412}{H\-E\-L\-P\-\_\-\-S\-T\-R\-D\-U\-P\-\_\-\-F\-R\-E\-E} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-In\-Str)
+\begin{DoxyCompactList}\small\item\em Function to free strdup allocated memory. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__LIBHELP_gaa326c5a055a6ea61eba5c165005fc5b6}{H\-E\-L\-P\-\_\-\-S\-T\-R\-N\-C\-P\-Y} (\hyperlink{group__LIBHELP_ga62766f3ea8784d1db62df989f8f33d2d}{I\-N\-O\-U\-T} char $\ast$pc\-Dest, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} const char $\ast$pc\-Src, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} size\-\_\-t n\-Dest\-Size)
+\begin{DoxyCompactList}\small\item\em Function to perform safe strncpy. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__LIBHELP_gaa84cc97acac4c77866e70fc850a1c670}{H\-E\-L\-P\-\_\-\-S\-T\-R\-N\-C\-A\-T} (\hyperlink{group__LIBHELP_ga62766f3ea8784d1db62df989f8f33d2d}{I\-N\-O\-U\-T} char $\ast$pc\-Dest, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} const char $\ast$pc\-Src, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} size\-\_\-t n\-Dest\-Size)
+\begin{DoxyCompactList}\small\item\em Function to perform safe strncat. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBHELP_gac08fb726326e0ccf6dff05f97c251b93}{H\-E\-L\-P\-\_\-\-S\-T\-R\-C\-M\-P} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} const char $\ast$pc\-Str1, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} const char $\ast$pc\-Str2)
+\begin{DoxyCompactList}\small\item\em Function for string comparision. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__LIBHELP_gac0126ae1cda6789711a261d98607dc7a}{H\-E\-L\-P\-\_\-\-S\-T\-R\-C\-H\-R} (\hyperlink{group__LIBHELP_ga62766f3ea8784d1db62df989f8f33d2d}{I\-N\-O\-U\-T} char $\ast$pc\-Str, int n\-Char)
+\begin{DoxyCompactList}\small\item\em Function for finding a character in a string. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__LIBHELP_gaf5844e281e1aaceb45769c5e891aebdd}{H\-E\-L\-P\-\_\-\-S\-T\-R\-S\-T\-R} (\hyperlink{group__LIBHELP_ga62766f3ea8784d1db62df989f8f33d2d}{I\-N\-O\-U\-T} char $\ast$pc\-Hay\-Stack, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-Needle)
+\begin{DoxyCompactList}\small\item\em Function to search for substring in a string. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__LIBHELP_ga836960ef80323486284e33eff0b4cc53}{H\-E\-L\-P\-\_\-\-S\-T\-R\-T\-O\-K\-\_\-\-R} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-Str, const char $\ast$pc\-Delimiters, char $\ast$$\ast$ppc\-Save\-Ptr)
+\begin{DoxyCompactList}\small\item\em Function to tokenize a string. \end{DoxyCompactList}\item 
+\hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBHELP_ga58565b7c016691926c9934bb01d229d2}{help\-\_\-send\-Ubus\-Message} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} struct blob\-\_\-buf $\ast$px\-Blob, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$ps\-Ubus\-Object, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$ps\-Ubus\-Method)
+\begin{DoxyCompactList}\small\item\em Function to send the ubus message to Ubus registered daemons. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBHELP_ga53ced793bbf6127fefac2604a5d60040}{help\-\_\-\-Wsd\-Data\-To\-Blob} (struct blob\-\_\-buf $\ast$buf, \hyperlink{structWsdData}{Wsd\-Data} $\ast$px\-Wsd\-Data)
+\begin{DoxyCompactList}\small\item\em Function to covert websocket data to blobmsg. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBHELP_gaac423bf955bd0d2e1d82355d68ec9b00}{help\-\_\-blob\-To\-Wsd\-Data} (struct blob\-\_\-attr $\ast$msg, \hyperlink{structWsdData}{Wsd\-Data} $\ast$px\-Wsd\-Data)
+\begin{DoxyCompactList}\small\item\em Function to covert blob msg to websocket data. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBHELP_ga2c531fc3603622626fb9c1f7b5cdad4e}{help\-\_\-send\-Status\-To\-Web} (uint32\-\_\-t un\-Notify\-Id, unsigned char uc\-Type, char $\ast$pc\-Message)
+\begin{DoxyCompactList}\small\item\em Function to send status messages through ubus to wsd and web. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File contains prototypes and associated data structures that are used across multiple S\-Ls. 

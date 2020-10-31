@@ -1,0 +1,136 @@
+\hypertarget{structcl__match__filter__t}{\section{cl\-\_\-match\-\_\-filter\-\_\-t Struct Reference}
+\label{structcl__match__filter__t}\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+}
+
+
+Classifer Match fields structure.  
+
+
+
+
+{\ttfamily \#include $<$qosal\-\_\-cl\-\_\-api.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t \hyperlink{structcl__match__filter__t_abb961ab5e05074003112e334646955b8}{enable}
+\item 
+uint32\-\_\-t \hyperlink{structcl__match__filter__t_ae03c1c223e9dc94b6f91c665f604b1d2}{status}
+\item 
+char \hyperlink{structcl__match__filter__t_afc0fa04b66e0e2e9427b6f0ef139fafe}{name} \mbox{[}\hyperlink{group__FAPI__QOS__CLASS_ga34277a18827d255a596f886d8a9f201b}{M\-A\-X\-\_\-\-C\-L\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+uint32\-\_\-t \hyperlink{structcl__match__filter__t_ae41a40e7a69a752ce76c02052af28d81}{order}
+\item 
+uint32\-\_\-t \hyperlink{structcl__match__filter__t_ad3385b677ff9b1d4590d8b3efd4be874}{owner}
+\item 
+uint32\-\_\-t \hyperlink{structcl__match__filter__t_ab37ad5c104db0aa7323f66093a822f5c}{flags}
+\item 
+\hyperlink{structcl__dhcp__match__t}{cl\-\_\-dhcp\-\_\-match\-\_\-t} \hyperlink{structcl__match__filter__t_a9d90c29a97a7f4c430dfbdf6c40fc9c7}{src\-\_\-dhcp}
+\item 
+\hyperlink{structcl__dhcp__match__t}{cl\-\_\-dhcp\-\_\-match\-\_\-t} \hyperlink{structcl__match__filter__t_af34f72c117557e50b1d5fb3bf0aa1733}{dst\-\_\-dhcp}
+\item 
+char \hyperlink{structcl__match__filter__t_af705c456c2a3101586b302755ca75960}{rx\-\_\-if} \mbox{[}\hyperlink{group__FAPI__QOS__GENERAL_ga53a5c7c867e818bc8b6dea3105a90f62}{M\-A\-X\-\_\-\-I\-F\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{structcl__match__filter__t_aadf5eab7cdde955d01c44945629d8137}{rx\-\_\-if\-\_\-exclude}
+\item 
+char \hyperlink{structcl__match__filter__t_a9301f7b0a961e65e0dd20ff9dd430288}{tx\-\_\-if} \mbox{[}\hyperlink{group__FAPI__QOS__GENERAL_ga53a5c7c867e818bc8b6dea3105a90f62}{M\-A\-X\-\_\-\-I\-F\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{structcl__match__filter__t_a38f3b37d5e0e8e7a6e4d8a38a91a4d30}{tx\-\_\-if\-\_\-exclude}
+\item 
+\hyperlink{structcl__macaddr__match__t}{cl\-\_\-macaddr\-\_\-match\-\_\-t} \hyperlink{structcl__match__filter__t_ad4fd6c5bb8a5e61910b1542677c86b98}{dst\-\_\-mac}
+\item 
+\hyperlink{structcl__macaddr__match__t}{cl\-\_\-macaddr\-\_\-match\-\_\-t} \hyperlink{structcl__match__filter__t_ac4b0153044c639dc1e4baea491f30636}{src\-\_\-mac}
+\item 
+\hyperlink{structcl__eth__match__t}{cl\-\_\-eth\-\_\-match\-\_\-t} \hyperlink{structcl__match__filter__t_a5ae577cb62beb21526852c690c114daf}{ethhdr}
+\item 
+\hyperlink{structcl__ip__5tuple__match__t}{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t} \hyperlink{structcl__match__filter__t_a346a191513fe31bcadd310ffa61a6ec3}{outer\-\_\-ip}
+\item 
+\hyperlink{structcl__ip__5tuple__match__t}{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t} \hyperlink{structcl__match__filter__t_a4c6b0da49677eba7fea7787b01ad0623}{inner\-\_\-ip}
+\item 
+\hyperlink{structcl__ip__match__t}{cl\-\_\-ip\-\_\-match\-\_\-t} \hyperlink{structcl__match__filter__t_afcf3c38c71289d28a01fe1092010a2a2}{iphdr}
+\item 
+\hyperlink{structcl__tcp__match__t}{cl\-\_\-tcp\-\_\-match\-\_\-t} \hyperlink{structcl__match__filter__t_a67500b532d5be44ad701432e07d06f6f}{tcphdr}
+\item 
+\hyperlink{structcl__app__match__t}{cl\-\_\-app\-\_\-match\-\_\-t} \hyperlink{structcl__match__filter__t_ae968b9a6e2eaa31437509679e6c7c5c9}{app}
+\item 
+char \hyperlink{structcl__match__filter__t_ab5de4e65d81db7ec44acc42904e43d58}{l7\-\_\-proto} \mbox{[}\hyperlink{group__FAPI__QOS__GENERAL_ga2f3f659f8f6fbf01d76a03f42351e559}{M\-A\-X\-\_\-\-L7\-\_\-\-P\-R\-O\-T\-O\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+\hyperlink{structcl__param__in__ex__t}{cl\-\_\-param\-\_\-in\-\_\-ex\-\_\-t} \hyperlink{structcl__match__filter__t_ac581a74dab7bf535f92e833056f01b0c}{param\-\_\-in\-\_\-ex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classifer Match fields structure. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structcl__match__filter__t_ae968b9a6e2eaa31437509679e6c7c5c9}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!app@{app}}
+\index{app@{app}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{app}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-app\-\_\-match\-\_\-t} cl\-\_\-match\-\_\-filter\-\_\-t\-::app}}\label{structcl__match__filter__t_ae968b9a6e2eaa31437509679e6c7c5c9}
+Application based classifier \hypertarget{structcl__match__filter__t_af34f72c117557e50b1d5fb3bf0aa1733}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!dst\-\_\-dhcp@{dst\-\_\-dhcp}}
+\index{dst\-\_\-dhcp@{dst\-\_\-dhcp}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{dst\-\_\-dhcp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-dhcp\-\_\-match\-\_\-t} cl\-\_\-match\-\_\-filter\-\_\-t\-::dst\-\_\-dhcp}}\label{structcl__match__filter__t_af34f72c117557e50b1d5fb3bf0aa1733}
+D\-H\-C\-P Classifier based filter fields for Pkt Dst \hypertarget{structcl__match__filter__t_ad4fd6c5bb8a5e61910b1542677c86b98}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!dst\-\_\-mac@{dst\-\_\-mac}}
+\index{dst\-\_\-mac@{dst\-\_\-mac}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{dst\-\_\-mac}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-macaddr\-\_\-match\-\_\-t} cl\-\_\-match\-\_\-filter\-\_\-t\-::dst\-\_\-mac}}\label{structcl__match__filter__t_ad4fd6c5bb8a5e61910b1542677c86b98}
+Match against Dst M\-A\-C address of pkt \hypertarget{structcl__match__filter__t_abb961ab5e05074003112e334646955b8}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!enable@{enable}}
+\index{enable@{enable}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{enable}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t cl\-\_\-match\-\_\-filter\-\_\-t\-::enable}}\label{structcl__match__filter__t_abb961ab5e05074003112e334646955b8}
+Whether Filter is enabled \hypertarget{structcl__match__filter__t_a5ae577cb62beb21526852c690c114daf}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!ethhdr@{ethhdr}}
+\index{ethhdr@{ethhdr}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{ethhdr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-eth\-\_\-match\-\_\-t} cl\-\_\-match\-\_\-filter\-\_\-t\-::ethhdr}}\label{structcl__match__filter__t_a5ae577cb62beb21526852c690c114daf}
+Match against Ethernet header fields \hypertarget{structcl__match__filter__t_ab37ad5c104db0aa7323f66093a822f5c}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!flags@{flags}}
+\index{flags@{flags}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t cl\-\_\-match\-\_\-filter\-\_\-t\-::flags}}\label{structcl__match__filter__t_ab37ad5c104db0aa7323f66093a822f5c}
+Following flags can be kept as per filter structure\-: C\-L\-\_\-\-F\-I\-L\-T\-E\-R\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D \-: Modified after being originally added C\-L\-\_\-\-F\-I\-L\-T\-E\-R\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D\-\_\-\-O\-T\-H\-E\-R \-: Modified by an entity other than the owner \hypertarget{structcl__match__filter__t_a4c6b0da49677eba7fea7787b01ad0623}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!inner\-\_\-ip@{inner\-\_\-ip}}
+\index{inner\-\_\-ip@{inner\-\_\-ip}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{inner\-\_\-ip}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t} cl\-\_\-match\-\_\-filter\-\_\-t\-::inner\-\_\-ip}}\label{structcl__match__filter__t_a4c6b0da49677eba7fea7787b01ad0623}
+I\-P 5-\/tuple match for Inner I\-P header \hypertarget{structcl__match__filter__t_afcf3c38c71289d28a01fe1092010a2a2}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!iphdr@{iphdr}}
+\index{iphdr@{iphdr}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{iphdr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-ip\-\_\-match\-\_\-t} cl\-\_\-match\-\_\-filter\-\_\-t\-::iphdr}}\label{structcl__match__filter__t_afcf3c38c71289d28a01fe1092010a2a2}
+Match against other I\-P header fields \hypertarget{structcl__match__filter__t_ab5de4e65d81db7ec44acc42904e43d58}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!l7\-\_\-proto@{l7\-\_\-proto}}
+\index{l7\-\_\-proto@{l7\-\_\-proto}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{l7\-\_\-proto}]{\setlength{\rightskip}{0pt plus 5cm}char cl\-\_\-match\-\_\-filter\-\_\-t\-::l7\-\_\-proto\mbox{[}{\bf M\-A\-X\-\_\-\-L7\-\_\-\-P\-R\-O\-T\-O\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}}}\label{structcl__match__filter__t_ab5de4e65d81db7ec44acc42904e43d58}
+Layer7 protocol name, like ftp,sip etc \hypertarget{structcl__match__filter__t_afc0fa04b66e0e2e9427b6f0ef139fafe}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!name@{name}}
+\index{name@{name}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}char cl\-\_\-match\-\_\-filter\-\_\-t\-::name\mbox{[}{\bf M\-A\-X\-\_\-\-C\-L\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}}}\label{structcl__match__filter__t_afc0fa04b66e0e2e9427b6f0ef139fafe}
+Name or Alias of the classifier \hypertarget{structcl__match__filter__t_ae41a40e7a69a752ce76c02052af28d81}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!order@{order}}
+\index{order@{order}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{order}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t cl\-\_\-match\-\_\-filter\-\_\-t\-::order}}\label{structcl__match__filter__t_ae41a40e7a69a752ce76c02052af28d81}
+Ordered location of the classifier \hypertarget{structcl__match__filter__t_a346a191513fe31bcadd310ffa61a6ec3}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!outer\-\_\-ip@{outer\-\_\-ip}}
+\index{outer\-\_\-ip@{outer\-\_\-ip}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{outer\-\_\-ip}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t} cl\-\_\-match\-\_\-filter\-\_\-t\-::outer\-\_\-ip}}\label{structcl__match__filter__t_a346a191513fe31bcadd310ffa61a6ec3}
+I\-P 5-\/tuple match for Outer I\-P header \hypertarget{structcl__match__filter__t_ad3385b677ff9b1d4590d8b3efd4be874}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!owner@{owner}}
+\index{owner@{owner}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{owner}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t cl\-\_\-match\-\_\-filter\-\_\-t\-::owner}}\label{structcl__match__filter__t_ad3385b677ff9b1d4590d8b3efd4be874}
+Enumerated value of who is doing the operation Possible owners can be\-: T\-R-\/069, Web G\-U\-I, C\-L\-I, System, Base\-Rules \hypertarget{structcl__match__filter__t_ac581a74dab7bf535f92e833056f01b0c}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!param\-\_\-in\-\_\-ex@{param\-\_\-in\-\_\-ex}}
+\index{param\-\_\-in\-\_\-ex@{param\-\_\-in\-\_\-ex}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{param\-\_\-in\-\_\-ex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-param\-\_\-in\-\_\-ex\-\_\-t} cl\-\_\-match\-\_\-filter\-\_\-t\-::param\-\_\-in\-\_\-ex}}\label{structcl__match__filter__t_ac581a74dab7bf535f92e833056f01b0c}
+Bit-\/map to indicate included and excluded parameters of main filter \hypertarget{structcl__match__filter__t_af705c456c2a3101586b302755ca75960}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!rx\-\_\-if@{rx\-\_\-if}}
+\index{rx\-\_\-if@{rx\-\_\-if}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{rx\-\_\-if}]{\setlength{\rightskip}{0pt plus 5cm}char cl\-\_\-match\-\_\-filter\-\_\-t\-::rx\-\_\-if\mbox{[}{\bf M\-A\-X\-\_\-\-I\-F\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}}}\label{structcl__match__filter__t_af705c456c2a3101586b302755ca75960}
+Rx Interface name. Null string means any interface \hypertarget{structcl__match__filter__t_aadf5eab7cdde955d01c44945629d8137}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!rx\-\_\-if\-\_\-exclude@{rx\-\_\-if\-\_\-exclude}}
+\index{rx\-\_\-if\-\_\-exclude@{rx\-\_\-if\-\_\-exclude}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{rx\-\_\-if\-\_\-exclude}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} cl\-\_\-match\-\_\-filter\-\_\-t\-::rx\-\_\-if\-\_\-exclude}}\label{structcl__match__filter__t_aadf5eab7cdde955d01c44945629d8137}
+Exclude /invert match of specificed rx\-\_\-if field \hypertarget{structcl__match__filter__t_a9d90c29a97a7f4c430dfbdf6c40fc9c7}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!src\-\_\-dhcp@{src\-\_\-dhcp}}
+\index{src\-\_\-dhcp@{src\-\_\-dhcp}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{src\-\_\-dhcp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-dhcp\-\_\-match\-\_\-t} cl\-\_\-match\-\_\-filter\-\_\-t\-::src\-\_\-dhcp}}\label{structcl__match__filter__t_a9d90c29a97a7f4c430dfbdf6c40fc9c7}
+D\-H\-C\-P Classifier based filter fields for Pkt Src \hypertarget{structcl__match__filter__t_ac4b0153044c639dc1e4baea491f30636}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!src\-\_\-mac@{src\-\_\-mac}}
+\index{src\-\_\-mac@{src\-\_\-mac}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{src\-\_\-mac}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-macaddr\-\_\-match\-\_\-t} cl\-\_\-match\-\_\-filter\-\_\-t\-::src\-\_\-mac}}\label{structcl__match__filter__t_ac4b0153044c639dc1e4baea491f30636}
+Match against Src M\-A\-C address of pkt \hypertarget{structcl__match__filter__t_ae03c1c223e9dc94b6f91c665f604b1d2}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!status@{status}}
+\index{status@{status}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t cl\-\_\-match\-\_\-filter\-\_\-t\-::status}}\label{structcl__match__filter__t_ae03c1c223e9dc94b6f91c665f604b1d2}
+Operational status of the filter. Only valid on G\-E\-T \hypertarget{structcl__match__filter__t_a67500b532d5be44ad701432e07d06f6f}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!tcphdr@{tcphdr}}
+\index{tcphdr@{tcphdr}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{tcphdr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-tcp\-\_\-match\-\_\-t} cl\-\_\-match\-\_\-filter\-\_\-t\-::tcphdr}}\label{structcl__match__filter__t_a67500b532d5be44ad701432e07d06f6f}
+Match against other T\-C\-P header fields \hypertarget{structcl__match__filter__t_a9301f7b0a961e65e0dd20ff9dd430288}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!tx\-\_\-if@{tx\-\_\-if}}
+\index{tx\-\_\-if@{tx\-\_\-if}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{tx\-\_\-if}]{\setlength{\rightskip}{0pt plus 5cm}char cl\-\_\-match\-\_\-filter\-\_\-t\-::tx\-\_\-if\mbox{[}{\bf M\-A\-X\-\_\-\-I\-F\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}}}\label{structcl__match__filter__t_a9301f7b0a961e65e0dd20ff9dd430288}
+Tx Interface name. Null string means any interface \hypertarget{structcl__match__filter__t_a38f3b37d5e0e8e7a6e4d8a38a91a4d30}{\index{cl\-\_\-match\-\_\-filter\-\_\-t@{cl\-\_\-match\-\_\-filter\-\_\-t}!tx\-\_\-if\-\_\-exclude@{tx\-\_\-if\-\_\-exclude}}
+\index{tx\-\_\-if\-\_\-exclude@{tx\-\_\-if\-\_\-exclude}!cl_match_filter_t@{cl\-\_\-match\-\_\-filter\-\_\-t}}
+\subsubsection[{tx\-\_\-if\-\_\-exclude}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} cl\-\_\-match\-\_\-filter\-\_\-t\-::tx\-\_\-if\-\_\-exclude}}\label{structcl__match__filter__t_a38f3b37d5e0e8e7a6e4d8a38a91a4d30}
+Exclude /invert match of specificed Tx\-\_\-if field 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qosal__cl__api_8h}{qosal\-\_\-cl\-\_\-api.\-h}\end{DoxyCompactItemize}

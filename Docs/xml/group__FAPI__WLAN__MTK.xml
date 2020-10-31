@@ -1,0 +1,1369 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__FAPI__WLAN__MTK" kind="group">
+    <compoundname>FAPI_WLAN_MTK</compoundname>
+    <title>MTK</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga855acd474011bfafa43fcd60f19677f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_hw_init</definition>
+        <argsstring>(ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_hw_init</name>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to initialize WLAN Radios. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- in: Object: Device.Wifi.Radio.Vendor - all parameters from this object out: List of objects:<orderedlist>
+<listitem><para>Device.Wifi, Param: RadioNumberOfEntries - number of radio interfaces that were created</para></listitem><listitem><para>Device.Wifi.Radio, Param: Name - Name of interface (This object * number of interfaces created) </para></listitem></orderedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags are placeholder for any future usage. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga2263cdf663761a72e9ef34b0737fed5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_hw_uninit</definition>
+        <argsstring>(ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_hw_uninit</name>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to Uninitialize WLAN Radios. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- should be NULL, unused object, placeholder for any future usage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flags are placeholder for any future usage. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE <verbatim>    Uninitializes the WLAN radios, removes the WLAN drivers, and cleans the internal SW structures for the WLAN vendor implementations</verbatim> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga072e397577e8156a5d657f5ba0f188ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_capability_query</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_capability_query</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to query WLAN capability of underlying WLAN Radio. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- WLAN radio interface name. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Object: Device.Wifi.Radio - empty object, out: object will be filled with capabilities as parameters </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags are placeholder for any future usage. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1gaa410cf97e2163b3db5bbc0e26b601ed0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_radio_set</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_radio_set</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to set WLAN Radio Info. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- WLAN radio interface name. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- List of 1 or 2 objects: Device.Wifi.Radio and/or Device.Wifi.Radio.Vendor </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags are placeholder for any future usage. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="77" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1gaa345bef0cb71602644034ff5c749b9c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_radio_stats_query</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_radio_stats_query</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to get WLAN Radio Statistics. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- WLAN radio interface name. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Object: Device.Wifi.Radio.Stats. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags are placeholder for any future usage. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE <verbatim>    Pass an object containing object name with no parameters, to get all statistics in the object.
+    Pass an object with name and parameters that should be read if you want a subset of statistics.</verbatim> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="91" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga7de7b52db1adb5f211b8b12635d17272" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_neighboring_diagnostic_query</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_neighboring_diagnostic_query</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="96" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga4786caff1c55d1d5b100ce774c00c1a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_ssid_add</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_ssid_add</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to add a WLAN SSID interface, i.e. to create a VAP. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- WLAN <emphasis>RADIO</emphasis> interface name, parent of VAP </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- in (optional): Device.Wifi.SSID Object containing the VAP interface name and its MAC address, out: the created VAP interface name and its MAC address </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags are placeholder for any future usage. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE <verbatim>    Create a virtual access point (AKA VAP or MBSSID), transmitting on the passed radio interface.
+    For some vendors the radio interface will be the name of the main AP, for others there is a unique name for radio configuration.</verbatim> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="110" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1gae7220c3b8286cca502ea1b49cee1be89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_ssid_delete</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_ssid_delete</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to remove a WLAN SSID interface, i.e. to delete a VAP. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- WLAN <emphasis>VAP</emphasis> interface name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- should be NULL, unused object, placeholder for any future usage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags are placeholder for any future usage. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="121" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga71e67cab797b2c5a7c5e9d086fe17d60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_ssid_set</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_ssid_set</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to set SSID in WLAN SSID Object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- WLAN AP/VAP interface name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device.Wifi.SSID Object Config for Setting. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags are placeholder for any future usage. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="132" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga363651e024fe759b03f0e4a5ac303061" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_ssid_get</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_ssid_get</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to get WLAN SSID Info, e.g. current configuration. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- WLAN AP/VAP interface name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- WLAN Device.Wifi.SSID Object Info. The Object name and (optionally) parameter names to read are passed as input, values are returned as output. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags are placeholder for any future usage. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="143" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1gaefaafba9a63bf363c844f1b456529f9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_ssid_stats_query</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_ssid_stats_query</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to get WLAN SSID Statistics. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- WLAN AP/VAP interface name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device.Wifi.SSID.Stats Object. The Object name is passed as input. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags are placeholder for any future usage. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="154" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga5bdf8123e40ea7b9ba2fd55b389b9c21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_ap_set</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_ap_set</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to set WLAN AccessPoint Object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- WLAN AP/VAP interface name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- List of 1 or 2 objects: Device.Wifi.AccessPoint and/or Device.Wifi.AccessPoint.Vendor </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags are placeholder for any future usage. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="170" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga1f8ce919749a5229575658b633824197" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_ap_get</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_ap_get</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to get WLAN AccessPoint Info, e.g. current configuration. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- WLAN AP/VAP interface name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device.Wifi.AccessPoint Object Info. The Object name and parameter names to read are passed as input, values are returned as output. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags are placeholder for any future usage. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="181" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga5415fb361f93510ba11c63c22052a8a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_security_set</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_security_set</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to set WLAN Security Object (Device.Wifi.AccessPoint.Security). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- WLAN AP/VAP interface name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device.Wifi.AccessPoint.Security Object Config for Setting. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags are placeholder for any future usage. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="192" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga3a4145145bf426f0b94c37ab1593efb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_security_get</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_security_get</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to get WLAN Security Info. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- WLAN AP/VAP interface name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device.Wifi.AccessPoint.Security Object Info. The Object name and parameter names to read are passed as input, values are returned as output. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags are placeholder for any future usage. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="203" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga4a9587395749e39648a991f1390a30a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_wps_set</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_wps_set</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to set WLAN WPS Object (Device.Wifi.AccessPoint.WPS). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- WLAN AP/VAP interface name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device.Wifi.AccessPoint.WPS Object Config for Setting. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags are placeholder for any future usage. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+<xrefsect id="todo_1_todo000010"><xreftitle>Todo</xreftitle><xrefdescription><para>Accept a list to include the WPS vendor parameters (which object?) </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="215" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1gab8668d80972efa350233ceb8488d8646" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_wps_get</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_wps_get</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to get WLAN WPS Info. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- WLAN AP/VAP interface name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device.Wifi.AccessPoint.WPS Object Info. The Object name and parameter names to read are passed as input, values are returned as output. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags are placeholder for any future usage. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="226" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga4090a67332a33634f88ce8ee4c82196e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_assoc_devices_query</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_assoc_devices_query</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to get all associated stations information. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- WLAN AP/VAP Interface name. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Device.Wifi.AccessPoint.AssociatedDevice object. Returns list of associated devices and their statistics. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flags for any future use. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+<xrefsect id="todo_1_todo000011"><xreftitle>Todo</xreftitle><xrefdescription><para>Do we want to separate to API for getting a list of Associated devices and a different API for statistics?</para></xrefdescription></xrefsect><verbatim>    Returns list of objects, for each STA return a pair of objects: 
+    Device.WiFi.AccessPoint.AssociatedDevice and Device.WiFi.AccessPoint.AssociatedDevice.Stats</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="241" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1gace5556e76089a26b61500bb89c9c054f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_wmm_sta_set</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_wmm_sta_set</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="245" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1gaa8dedbd5ae0181b1ca52e087d5b45b34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_wmm_sta_get</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_wmm_sta_get</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="249" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1gad3cc6ca6e38bf184e2efe7a32fbd4d5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_wmm_sta_stats_query</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_wmm_sta_stats_query</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="253" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga0d805d8e13a7393146a16599d5671737" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_wmm_ap_set</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_wmm_ap_set</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="257" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1gaa7e2c668418a84c96c3c52fc85756a70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_wmm_ap_get</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_wmm_ap_get</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="261" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1gabf489a31440ea0266463d82bc04e373d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_wmm_ap_stats_query</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_wmm_ap_stats_query</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="265" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1gad77115b634cfc09207c2c82c93450668" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_wds_set</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_wds_set</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="269" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1gad732a70a514ea222ccd85ff6326f87e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_wds_get</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_wds_get</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="273" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga7d7d8753bbd4fefbdff0c4bd3402194a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_hotspot_set</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_hotspot_set</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="277" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1gac7187919c3fba505754f1e885d180f2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_hotspot_get</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_hotspot_get</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="281" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga2df20c04e67949c80078c7755aa88437" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_up</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_up</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="285" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga6d6eee2ad948d3393150cbd8ff91566b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_wlan_mtk_dummy</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, unsigned int flags)</argsstring>
+        <name>fapi_wlan_mtk_dummy</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="288" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga8f6373889d77d98b133e979536b1b537" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int execute_config_in</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, const char *scriptName, bool *objArray)</argsstring>
+        <name>execute_config_in</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>scriptName</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>objArray</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to create a config.in file for the FAPI scripts layer and call the appropriate script. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- WLAN AP/VAP interface name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- block of objects required by the script </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">scriptName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- L2 script that is executed for the API </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">ObjArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Helper array to hold object index </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="301" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1gac0e3dab1382570b830571575cdfab26a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int parse_config_out</definition>
+        <argsstring>(ObjList *wlObj, bool *objArray)</argsstring>
+        <name>parse_config_out</name>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>objArray</declname>
+        </param>
+        <briefdescription>
+<para>This function is used for parsing the output configuration file that was created by the script layer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- block of objects required by the script </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">objArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Helper array to hold object index </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="311" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1gaddcf86d264b43cf438190c97fe1afc52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ltq_mtk_sh_helper</definition>
+        <argsstring>(const char *iface, ObjList *wlObj, const char *scriptName)</argsstring>
+        <name>ltq_mtk_sh_helper</name>
+        <param>
+          <type>const char *</type>
+          <declname>iface</declname>
+        </param>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>wlObj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>scriptName</declname>
+        </param>
+        <briefdescription>
+<para>ltq_mtk_sh_helper is the main function of this module, mostly responsible to intermediate between the FAPI wlan layer and the scripts layer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- WLAN AP/VAP interface name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">wlObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- block of objects required by the script </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">scriptName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- L2 script that is executed for the API </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="322" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1gad7f8b0c392ec8cca25a3595449ba177f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int indexHandler</definition>
+        <argsstring>(char *s)</argsstring>
+        <name>indexHandler</name>
+        <param>
+          <type>char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Helper function that removes the index suffix from the string and returns it as integer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- string with index suffix </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>for legal value returned the index number, for ERROR cases returned -1 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="331" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1gaf0c15e2098bea9b34e939dde2e025657" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int convert_str_to_hex</definition>
+        <argsstring>(char *hex_value, const char *value)</argsstring>
+        <name>convert_str_to_hex</name>
+        <param>
+          <type>char *</type>
+          <declname>hex_value</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>convert_str_to_hex helper function that converts string to ASCII hex string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hex_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer to temp string that used for returning the output of the function. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the source string that should be converted to ASCII hex value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="342" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__WLAN__MTK_1ga1bcf6721352838d23bd13ac5e99368a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void remove_new_line</definition>
+        <argsstring>(char *s)</argsstring>
+        <name>remove_new_line</name>
+        <param>
+          <type>char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>remove_new_line remove new line from string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to string </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_wlan_mtk.h" line="350" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>It provides a set of MTK speciffic API for WLAN configuration. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

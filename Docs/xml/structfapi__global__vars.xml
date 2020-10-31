@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structfapi__global__vars" kind="struct" prot="public">
+    <compoundname>fapi_global_vars</compoundname>
+    <includes refid="dsl__fapi_8h" local="no">dsl_fapi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfapi__global__vars_1a0c92f4f92770759f8898dfdadc607dd2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int fapi_global_vars::drv_load_cnt</definition>
+        <argsstring></argsstring>
+        <name>drv_load_cnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CPE kernel drivers load counter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="884" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="884" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfapi__global__vars_1a72c08739f19e0037d10d327d349b437f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int fapi_global_vars::appl_start_cnt</definition>
+        <argsstring></argsstring>
+        <name>appl_start_cnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CPE control application load counter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="888" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="888" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>DSL FAPI global variables shared for all processes </para>    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="880" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="880" bodyend="889"/>
+    <listofallmembers>
+      <member refid="structfapi__global__vars_1a72c08739f19e0037d10d327d349b437f" prot="public" virt="non-virtual"><scope>fapi_global_vars</scope><name>appl_start_cnt</name></member>
+      <member refid="structfapi__global__vars_1a0c92f4f92770759f8898dfdadc607dd2" prot="public" virt="non-virtual"><scope>fapi_global_vars</scope><name>drv_load_cnt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

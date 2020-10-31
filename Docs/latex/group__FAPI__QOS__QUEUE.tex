@@ -1,0 +1,579 @@
+\hypertarget{group__FAPI__QOS__QUEUE}{\section{Queuing}
+\label{group__FAPI__QOS__QUEUE}\index{Queuing@{Queuing}}
+}
+
+
+Provides a set of A\-P\-I to create queue for an interface, configure shaper on a queue/port, etc.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structqos__shaper}{qos\-\_\-shaper}
+\begin{DoxyCompactList}\small\item\em Qo\-S Shaper configuration structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structqos__wred}{qos\-\_\-wred}
+\begin{DoxyCompactList}\small\item\em Qo\-S W\-R\-E\-D Drop configuration structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structqos__drop__cfg}{qos\-\_\-drop\-\_\-cfg}
+\begin{DoxyCompactList}\small\item\em Qo\-S Queue Drop configuration structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structqos__queue__cfg}{qos\-\_\-queue\-\_\-cfg}
+\begin{DoxyCompactList}\small\item\em Qo\-S Queue Configuration structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structqos__queue__stats__t}{qos\-\_\-queue\-\_\-stats\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Qo\-S Queue statistics structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structx__qapi__t}{x\-\_\-qapi\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Qo\-S Queue Configuration structure used for inter process communication. \end{DoxyCompactList}\item 
+struct \hyperlink{structx__qoscfg__t}{x\-\_\-qoscfg\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Qo\-S Queue General configuration structure used for inter process communication. \end{DoxyCompactList}\item 
+struct \hyperlink{structx__ifcfg__t}{x\-\_\-ifcfg\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Qo\-S interface mapping structure for interface process communication. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__FAPI__QOS__QUEUE_gaa0fc84bf29249c2714352aabdc6872a1}{\#define \hyperlink{group__FAPI__QOS__QUEUE_gaa0fc84bf29249c2714352aabdc6872a1}{Q\-O\-S\-\_\-\-A\-L\-\_\-\-Q\-\_\-\-O\-K}~0}\label{group__FAPI__QOS__QUEUE_gaa0fc84bf29249c2714352aabdc6872a1}
+
+\begin{DoxyCompactList}\small\item\em Q\-O\-S\-\_\-\-A\-L\-\_\-\-Q\-\_\-\-O\-K. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_ga871827864df903f59809893e94a1a26a}{\#define \hyperlink{group__FAPI__QOS__QUEUE_ga871827864df903f59809893e94a1a26a}{Q\-O\-S\-\_\-\-A\-L\-\_\-\-Q\-\_\-\-E\-R\-R\-O\-R}~-\/1}\label{group__FAPI__QOS__QUEUE_ga871827864df903f59809893e94a1a26a}
+
+\begin{DoxyCompactList}\small\item\em Q\-O\-S\-\_\-\-A\-L\-\_\-\-Q\-\_\-\-E\-R\-R\-O\-R. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_gaba233f88b964fa268be32daababb0ddb}{\#define \hyperlink{group__FAPI__QOS__QUEUE_gaba233f88b964fa268be32daababb0ddb}{C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-T\-C}~0x1}\label{group__FAPI__QOS__QUEUE_gaba233f88b964fa268be32daababb0ddb}
+
+\begin{DoxyCompactList}\small\item\em C\-L action traffic class. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_gaba07a1aea72eb2747e5b5328219a135a}{C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-D\-R\-O\-P}~0x2
+\begin{DoxyCompactList}\small\item\em Classifier action drop. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_ga0ba89992e3bb42683abf9eae8abfe99a}{\#define \hyperlink{group__FAPI__QOS__QUEUE_ga0ba89992e3bb42683abf9eae8abfe99a}{C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-D\-S\-C\-P}~0x4}\label{group__FAPI__QOS__QUEUE_ga0ba89992e3bb42683abf9eae8abfe99a}
+
+\begin{DoxyCompactList}\small\item\em Classifier action remark D\-S\-C\-P value. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_gacef9c6146debb9509e70fbd128604fef}{\#define \hyperlink{group__FAPI__QOS__QUEUE_gacef9c6146debb9509e70fbd128604fef}{C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-V\-L\-A\-N}~0x8}\label{group__FAPI__QOS__QUEUE_gacef9c6146debb9509e70fbd128604fef}
+
+\begin{DoxyCompactList}\small\item\em Classifier action remark V\-L\-A\-N priority. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_gaeb02670f38dbe11bb37a20b43404aa2f}{\#define \hyperlink{group__FAPI__QOS__QUEUE_gaeb02670f38dbe11bb37a20b43404aa2f}{C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-P\-O\-L\-I\-C\-E\-R}~0x10}\label{group__FAPI__QOS__QUEUE_gaeb02670f38dbe11bb37a20b43404aa2f}
+
+\begin{DoxyCompactList}\small\item\em Classifier action policer. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_ga6142d956017289f4fba2b8474a8590ae}{\#define \hyperlink{group__FAPI__QOS__QUEUE_ga6142d956017289f4fba2b8474a8590ae}{C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-P\-O\-L\-I\-C\-Y\-\_\-\-R\-O\-U\-T\-E}~0x20}\label{group__FAPI__QOS__QUEUE_ga6142d956017289f4fba2b8474a8590ae}
+
+\begin{DoxyCompactList}\small\item\em Classifier action policy route. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_gab3a5eba054b613a8625f8ba2a1ff0b3d}{\#define \hyperlink{group__FAPI__QOS__QUEUE_gab3a5eba054b613a8625f8ba2a1ff0b3d}{C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-A\-C\-C\-E\-L\-E\-R\-A\-T\-I\-O\-N}~0x40}\label{group__FAPI__QOS__QUEUE_gab3a5eba054b613a8625f8ba2a1ff0b3d}
+
+\begin{DoxyCompactList}\small\item\em Classifier action for accelerating session or not. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_gad1a39bca2eca8c238c322b1f277e79ce}{\#define \hyperlink{group__FAPI__QOS__QUEUE_gad1a39bca2eca8c238c322b1f277e79ce}{C\-L\-\_\-\-I\-N\-T\-\_\-\-I\-P\-T\-\_\-\-C\-H\-\_\-\-C\-R\-E\-A\-T\-E\-D}~0x80}\label{group__FAPI__QOS__QUEUE_gad1a39bca2eca8c238c322b1f277e79ce}
+
+\begin{DoxyCompactList}\small\item\em Classifier internal flag to indicate required chains in iptables created. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_gace2d4f3d52f545638f8a3149e98c82fc}{\#define \hyperlink{group__FAPI__QOS__QUEUE_gace2d4f3d52f545638f8a3149e98c82fc}{C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-T\-C\-\_\-\-I\-N\-G\-R\-E\-S\-S}~0x100}\label{group__FAPI__QOS__QUEUE_gace2d4f3d52f545638f8a3149e98c82fc}
+
+\begin{DoxyCompactList}\small\item\em Classifier T\-C marking action location (ingress/egress) \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_ga8c2658456d4f94c43de2b47e6cc488eb}{\#define \hyperlink{group__FAPI__QOS__QUEUE_ga8c2658456d4f94c43de2b47e6cc488eb}{M\-A\-X\-\_\-\-Q\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}~128}\label{group__FAPI__QOS__QUEUE_ga8c2658456d4f94c43de2b47e6cc488eb}
+
+\begin{DoxyCompactList}\small\item\em M\-A\-X\-\_\-\-Q\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_ga75e5a2112ac055521c4cb0e64b278be8}{\#define \hyperlink{group__FAPI__QOS__QUEUE_ga75e5a2112ac055521c4cb0e64b278be8}{M\-A\-X\-\_\-\-T\-C\-\_\-\-N\-U\-M}~8}\label{group__FAPI__QOS__QUEUE_ga75e5a2112ac055521c4cb0e64b278be8}
+
+\begin{DoxyCompactList}\small\item\em M\-A\-X\-\_\-\-T\-C\-\_\-\-N\-U\-M. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_gab80f9753502dd8a9811046d0c9436ca4}{\#define \hyperlink{group__FAPI__QOS__QUEUE_gab80f9753502dd8a9811046d0c9436ca4}{Q\-O\-S\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-N\-A\-M\-E}~\char`\"{}def\-\_\-queue\char`\"{}}\label{group__FAPI__QOS__QUEUE_gab80f9753502dd8a9811046d0c9436ca4}
+
+\begin{DoxyCompactList}\small\item\em Default queue identifier; Queues with name as Q\-O\-S\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-N\-A\-M\-E are considered default queues. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_gaca804825b14c6e09547334ab4903f860}{\#define \hyperlink{group__FAPI__QOS__QUEUE_gaca804825b14c6e09547334ab4903f860}{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-F\-\_\-\-P\-I\-R}~0x00000002}\label{group__FAPI__QOS__QUEUE_gaca804825b14c6e09547334ab4903f860}
+
+\begin{DoxyCompactList}\small\item\em Peak shaper info configured. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_ga7aa727cd5a533da5d21f3cf9f814b936}{\#define \hyperlink{group__FAPI__QOS__QUEUE_ga7aa727cd5a533da5d21f3cf9f814b936}{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-F\-\_\-\-C\-I\-R}~0x00000004}\label{group__FAPI__QOS__QUEUE_ga7aa727cd5a533da5d21f3cf9f814b936}
+
+\begin{DoxyCompactList}\small\item\em Committed shaper info configured. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_ga7306e528452e4389e8c7a76dbbf3af64}{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-R\-E\-S\-S}~0x00000001
+\begin{DoxyCompactList}\small\item\em Qo\-S queue operation related flags. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_ga34dba99f30e84ea75cab31c31f353fdf}{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D}~0x00000002
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_ga9a1077936ad9252e2a13501b25732c2e}{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D\-\_\-\-O\-T\-H\-E\-R}~0x00000004
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_gab3c92215e835050ca004780f75f95409}{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-H\-W}~0x00000008
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_gad3de124faf55138ec673ff88700b70e9}{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-C\-P\-U}~0x00000010
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_ga3daab7eabb364df508e0cffdafc716b1}{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-D\-E\-F\-A\-U\-L\-T}~0x00000020
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_ga23373ec976d76acc26ae4b7a13a5490e}{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-S\-K\-I\-P\-\_\-\-D\-E\-F\-\_\-\-Q\-\_\-\-C\-H\-K}~0x00000040
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_ga3ff77637a60ecb38f8b370157f43ac4a}{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-T\-\_\-\-Q}~0x00000080
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_gaccc096a1afc94084de913a8de593cd7a}{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P1}~0x00000100
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_gab6da64324452e6385a5a045e438240cb}{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P2}~0x00000200
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_ga1de29a6e534286eb607bf16191d8d94b}{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P3}~0x00000400
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_ga4f50900ef23e2fb31aeac3eb9932c8be}{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P4}~0x00000800
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_ga1ce6f7b2edbc2fb87b3e0bf2c2da231d}{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P5}~0x00001000
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_ga5046759dc7d0ebae110694a9be334def}{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P6}~0x00002000
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_ga30f059995ac6786208d944eb84f39fef}{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-L\-I\-N\-K\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E}~0x00004000
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_ga9a9a7fe4e0e98bd1a08c146a5ceea156}{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-R\-X\-\_\-\-P\-K\-T}~0x00000001
+\begin{DoxyCompactList}\small\item\em Qo\-S queue statistics related flags. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_ga1bc411916553d677f198bfe53a9d66e5}{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-R\-X\-\_\-\-B\-Y\-T\-E}~0x00000002
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_gadb32e8befc0db998929b240570021e27}{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-T\-X\-\_\-\-P\-K\-T}~0x00000004
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_gaae63033c6c8e70e7f6f44ffbcdfe2d98}{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-T\-X\-\_\-\-B\-Y\-T\-E}~0x00000008
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_gad7742bbe991b93d5e2f2cb15f9368fd5}{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-D\-R\-O\-P\-\_\-\-P\-K\-T}~0x00000010
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_ga823c7487863f66b69788ca8f7a6ae5bc}{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-D\-R\-O\-P\-\_\-\-B\-Y\-T\-E}~0x00000020
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_ga039fef59e2d78c81c3208d48b592ca99}{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-O\-C\-C\-\_\-\-P\-K\-T}~0x00000040
+\item 
+\#define \hyperlink{group__FAPI__QOS__QUEUE_ga08bb5276a8019c599b5dabec03ca9ce3}{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-O\-C\-C\-\_\-\-P\-C\-T}~0x00000080
+\item 
+\hypertarget{group__FAPI__QOS__QUEUE_gaeb2dbdb4c944301060491384b675bb9c}{\#define \hyperlink{group__FAPI__QOS__QUEUE_gaeb2dbdb4c944301060491384b675bb9c}{Q\-O\-S\-\_\-\-O\-P\-\_\-\-F\-\_\-\-A\-D\-D}~0x00000001}\label{group__FAPI__QOS__QUEUE_gaeb2dbdb4c944301060491384b675bb9c}
+
+\begin{DoxyCompactList}\small\item\em Queue add operation flag. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_ga7784ac1b56789390044395c968750dfb}{\#define \hyperlink{group__FAPI__QOS__QUEUE_ga7784ac1b56789390044395c968750dfb}{Q\-O\-S\-\_\-\-O\-P\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-Y}~0x00000002}\label{group__FAPI__QOS__QUEUE_ga7784ac1b56789390044395c968750dfb}
+
+\begin{DoxyCompactList}\small\item\em Queue modify operation flag. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_gafa18a9d931c39c4ad229c5c9680522ec}{\#define \hyperlink{group__FAPI__QOS__QUEUE_gafa18a9d931c39c4ad229c5c9680522ec}{Q\-O\-S\-\_\-\-O\-P\-\_\-\-F\-\_\-\-D\-E\-L\-E\-T\-E}~0x00000004}\label{group__FAPI__QOS__QUEUE_gafa18a9d931c39c4ad229c5c9680522ec}
+
+\begin{DoxyCompactList}\small\item\em Queue delete operation flag. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_gae2e14dd5f31d858be56a4e8fd572390c}{\#define \hyperlink{group__FAPI__QOS__QUEUE_gae2e14dd5f31d858be56a4e8fd572390c}{Q\-O\-S\-\_\-\-O\-P\-\_\-\-F\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-D\-R\-O\-P}~0x00000008}\label{group__FAPI__QOS__QUEUE_gae2e14dd5f31d858be56a4e8fd572390c}
+
+\begin{DoxyCompactList}\small\item\em Queue drop algorithm set operation flag. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_ga1a11fb7eb4bfd2abdf7ea9eaed0a3aac}{\#define \hyperlink{group__FAPI__QOS__QUEUE_ga1a11fb7eb4bfd2abdf7ea9eaed0a3aac}{Q\-O\-S\-\_\-\-O\-P\-\_\-\-F\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-S\-C\-H\-E\-D}~0x00000010}\label{group__FAPI__QOS__QUEUE_ga1a11fb7eb4bfd2abdf7ea9eaed0a3aac}
+
+\begin{DoxyCompactList}\small\item\em Queue scheduler algorithm set operation flag. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_ga36afcc257c4b08f215030cc9dc02fbb7}{\#define \hyperlink{group__FAPI__QOS__QUEUE_ga36afcc257c4b08f215030cc9dc02fbb7}{Q\-O\-S\-\_\-\-O\-P\-\_\-\-F\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-S\-H\-A\-P\-E\-R}~0x00000020}\label{group__FAPI__QOS__QUEUE_ga36afcc257c4b08f215030cc9dc02fbb7}
+
+\begin{DoxyCompactList}\small\item\em Queue shaper set operation flag. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_gac13ebe36678ac81af0ea00dd884329dc}{\#define \hyperlink{group__FAPI__QOS__QUEUE_gac13ebe36678ac81af0ea00dd884329dc}{Q\-O\-S\-\_\-\-O\-P\-\_\-\-C\-F\-G\-\_\-\-D\-U\-M\-P}~0x00000040}\label{group__FAPI__QOS__QUEUE_gac13ebe36678ac81af0ea00dd884329dc}
+
+\begin{DoxyCompactList}\small\item\em Dump Qo\-S configuration. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_ga3a8cc13f32a00ba1434b36b48dcea721}{\#define \hyperlink{group__FAPI__QOS__QUEUE_ga3a8cc13f32a00ba1434b36b48dcea721}{Q\-O\-S\-\_\-\-O\-P\-\_\-\-F\-\_\-\-I\-N\-G\-R\-E\-S\-S}~0x00000080}\label{group__FAPI__QOS__QUEUE_ga3a8cc13f32a00ba1434b36b48dcea721}
+
+\begin{DoxyCompactList}\small\item\em Ingress operation flag. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_ga9c63e4ccaf612b2a696c39cf976b195a}{\#define \hyperlink{group__FAPI__QOS__QUEUE_ga9c63e4ccaf612b2a696c39cf976b195a}{Q\-O\-S\-\_\-\-D\-O\-N\-T\-\_\-\-U\-S\-E\-\_\-\-D\-E\-F\-\_\-\-C\-F\-G}~0x00000100}\label{group__FAPI__QOS__QUEUE_ga9c63e4ccaf612b2a696c39cf976b195a}
+
+\begin{DoxyCompactList}\small\item\em Flag to indicate not to use default general configuration during init. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__FAPI__QOS__QUEUE_ga05ce7ada7ae20b289d4e675ad099c8f0}{typedef struct \hyperlink{structqos__shaper}{qos\-\_\-shaper} \hyperlink{group__FAPI__QOS__QUEUE_ga05ce7ada7ae20b289d4e675ad099c8f0}{qos\-\_\-shaper\-\_\-t}}\label{group__FAPI__QOS__QUEUE_ga05ce7ada7ae20b289d4e675ad099c8f0}
+
+\begin{DoxyCompactList}\small\item\em Qo\-S Shaper configuration structure. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structqos__wred}{qos\-\_\-wred} \hyperlink{group__FAPI__QOS__QUEUE_ga42b4d8fefa10f2b563d6151e772c6b3c}{qos\-\_\-wred\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Qo\-S W\-R\-E\-D Drop configuration structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_ga5db7cfdc67250c1a25470eb030e4fccb}{typedef struct \hyperlink{structqos__drop__cfg}{qos\-\_\-drop\-\_\-cfg} \hyperlink{group__FAPI__QOS__QUEUE_ga5db7cfdc67250c1a25470eb030e4fccb}{qos\-\_\-drop\-\_\-cfg\-\_\-t}}\label{group__FAPI__QOS__QUEUE_ga5db7cfdc67250c1a25470eb030e4fccb}
+
+\begin{DoxyCompactList}\small\item\em Qo\-S Queue Drop configuration structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__QUEUE_gaa27a8975bf3ed923f280f804086e1e4e}{typedef struct \hyperlink{structqos__queue__cfg}{qos\-\_\-queue\-\_\-cfg} \hyperlink{group__FAPI__QOS__QUEUE_gaa27a8975bf3ed923f280f804086e1e4e}{qos\-\_\-queue\-\_\-cfg\-\_\-t}}\label{group__FAPI__QOS__QUEUE_gaa27a8975bf3ed923f280f804086e1e4e}
+
+\begin{DoxyCompactList}\small\item\em Qo\-S Queue Configuration structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__FAPI__QOS__QUEUE_ga1239e331f224c9a00c3047d30edaa939}{qos\-\_\-sched\-\_\-mode\-\_\-t} \{ \hyperlink{group__FAPI__QOS__QUEUE_gga1239e331f224c9a00c3047d30edaa939ab36224a8020ac797bd5d288416b8a60c}{Q\-O\-S\-\_\-\-S\-C\-H\-E\-D\-\_\-\-S\-P} =0, 
+\hyperlink{group__FAPI__QOS__QUEUE_gga1239e331f224c9a00c3047d30edaa939ad4c9d46debeaa176ead4f39ce6749586}{Q\-O\-S\-\_\-\-S\-C\-H\-E\-D\-\_\-\-W\-F\-Q} =1
+ \}
+\begin{DoxyCompactList}\small\item\em Qo\-S Shaper Mode Configuration. \end{DoxyCompactList}\item 
+enum \hyperlink{group__FAPI__QOS__QUEUE_ga59365e8b97823ce54ac3e627abc95dd5}{qos\-\_\-shaper\-\_\-mode\-\_\-t} \{ \\*
+\hyperlink{group__FAPI__QOS__QUEUE_gga59365e8b97823ce54ac3e627abc95dd5aeaf9faef4573eeaba7034840720cce37}{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-N\-O\-N\-E} =0, 
+\hyperlink{group__FAPI__QOS__QUEUE_gga59365e8b97823ce54ac3e627abc95dd5a29fea50ad673068f3d2b59ba8676998e}{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-I\-N\-D} =1, 
+\hyperlink{group__FAPI__QOS__QUEUE_gga59365e8b97823ce54ac3e627abc95dd5acc40218e63ca2f3fba38c8f98c9a0832}{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-T\-R\-\_\-\-T\-C\-M} =2, 
+\hyperlink{group__FAPI__QOS__QUEUE_gga59365e8b97823ce54ac3e627abc95dd5ad63abd52de51f0b633cab8c41633f249}{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-T\-R\-\_\-\-T\-C\-M\-\_\-\-R\-F\-C4115} =3, 
+\\*
+\hyperlink{group__FAPI__QOS__QUEUE_gga59365e8b97823ce54ac3e627abc95dd5a346472924caeb95880bc570c4b92118b}{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-L\-O\-O\-S\-E\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-I\-N\-D} =4
+ \}
+\begin{DoxyCompactList}\small\item\em Qo\-S Shaper Mode Configuration. \end{DoxyCompactList}\item 
+enum \hyperlink{group__FAPI__QOS__QUEUE_gac3dd371b02e4e2ff5023eaa49dfd7aab}{qos\-\_\-drop\-\_\-mode\-\_\-t} \{ \hyperlink{group__FAPI__QOS__QUEUE_ggac3dd371b02e4e2ff5023eaa49dfd7aabad633473386b40a2abf8c8bbaf6347b90}{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-T\-A\-I\-L} =0, 
+\hyperlink{group__FAPI__QOS__QUEUE_ggac3dd371b02e4e2ff5023eaa49dfd7aaba52861308ec9d0b27383e658a4b1a2929}{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-R\-E\-D} =1, 
+\hyperlink{group__FAPI__QOS__QUEUE_ggac3dd371b02e4e2ff5023eaa49dfd7aaba0ec07d74821ef58ed141af01e60a8d4f}{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-W\-R\-E\-D} =2, 
+\hyperlink{group__FAPI__QOS__QUEUE_ggac3dd371b02e4e2ff5023eaa49dfd7aabafbbcf309cee7513222292d89a35de80b}{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-C\-O\-D\-E\-L} =3
+ \}
+\begin{DoxyCompactList}\small\item\em Qo\-S Queue drop Mode Configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__QUEUE_gab200a6c190efb8ff569a9a83a2e2a39e}{fapi\-\_\-qos\-\_\-queue\-\_\-set} (char $\ast$ifname, \hyperlink{group__FAPI__QOS__QUEUE_gaa27a8975bf3ed923f280f804086e1e4e}{qos\-\_\-queue\-\_\-cfg\-\_\-t} $\ast$q, uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Set Qo\-S Queue Configuration -\/ involves adding a new queue or modifying an existing queue, or deleting an existing queue. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__QUEUE_ga727ee91ab59e9b90747c24ad946c08a2}{fapi\-\_\-qos\-\_\-queue\-\_\-get} (char $\ast$ifname, char $\ast$queue\-\_\-name, \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} $\ast$num\-\_\-queues, \hyperlink{group__FAPI__QOS__QUEUE_gaa27a8975bf3ed923f280f804086e1e4e}{qos\-\_\-queue\-\_\-cfg\-\_\-t} $\ast$$\ast$q, uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Get one of all Qo\-S Queue Configuration on given interface. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__QUEUE_gadc2ed3ac56edaa5cdb56e65f6a737aec}{fapi\-\_\-qos\-\_\-queue\-\_\-stats\-\_\-get} (char $\ast$ifname, char $\ast$queue\-\_\-name, \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} $\ast$num\-\_\-queues, \hyperlink{structqos__queue__stats__t}{qos\-\_\-queue\-\_\-stats\-\_\-t} $\ast$$\ast$qstats, uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Get statistics of one or all Queues on given interface. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__QUEUE_ga689e45276a2ec8a97f4fdace1360aafa}{fapi\-\_\-qos\-\_\-port\-\_\-config\-\_\-set} (char $\ast$ifname, \hyperlink{group__FAPI__QOS__QUEUE_ga05ce7ada7ae20b289d4e675ad099c8f0}{qos\-\_\-shaper\-\_\-t} $\ast$shaper, \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} weight, \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} priority, uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Set Port Qo\-S characteristics like rate shaper, and/or weight/priority if this port is cascaded into another scheduler. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__QUEUE_gaa91cdf232e5ee1ffb8c0c501c743c694}{fapi\-\_\-qos\-\_\-port\-\_\-config\-\_\-get} (char $\ast$ifname, \hyperlink{group__FAPI__QOS__QUEUE_ga05ce7ada7ae20b289d4e675ad099c8f0}{qos\-\_\-shaper\-\_\-t} $\ast$shaper, \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} $\ast$weight, \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} $\ast$priority, uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Get Port Qo\-S characteristics like rate shaper, and/or weight/priority if this port is cascaded into another scheduler. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__QUEUE_ga10ae649e4e386857ad8cadeb7e2e2e41}{fapi\-\_\-qos\-\_\-port\-\_\-update} (char $\ast$ifname, uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Notification on port add or delete in the system from higher layers/system management. This allows qos\-\_\-al to add/del queues from template files to system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides a set of A\-P\-I to create queue for an interface, configure shaper on a queue/port, etc. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__FAPI__QOS__QUEUE_gaba07a1aea72eb2747e5b5328219a135a}{\index{Queuing@{Queuing}!C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-D\-R\-O\-P@{C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-D\-R\-O\-P}}
+\index{C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-D\-R\-O\-P@{C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-D\-R\-O\-P}!Queuing@{Queuing}}
+\subsubsection[{C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-D\-R\-O\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-D\-R\-O\-P~0x2}}\label{group__FAPI__QOS__QUEUE_gaba07a1aea72eb2747e5b5328219a135a}
+
+
+Classifier action drop. 
+
+\begin{DoxyNote}{Note}
+D\-R\-O\-P is mutually exclusive with any other classifier action -\/ all other actions could be combined on a packet 
+\end{DoxyNote}
+\hypertarget{group__FAPI__QOS__QUEUE_gad3de124faf55138ec673ff88700b70e9}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-C\-P\-U@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-C\-P\-U}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-C\-P\-U@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-C\-P\-U}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-C\-P\-U}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-C\-P\-U~0x00000010}}\label{group__FAPI__QOS__QUEUE_gad3de124faf55138ec673ff88700b70e9}
+Software operation flag \hypertarget{group__FAPI__QOS__QUEUE_ga3daab7eabb364df508e0cffdafc716b1}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-D\-E\-F\-A\-U\-L\-T@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-D\-E\-F\-A\-U\-L\-T}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-D\-E\-F\-A\-U\-L\-T@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-D\-E\-F\-A\-U\-L\-T}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-D\-E\-F\-A\-U\-L\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-D\-E\-F\-A\-U\-L\-T~0x00000020}}\label{group__FAPI__QOS__QUEUE_ga3daab7eabb364df508e0cffdafc716b1}
+Default Queue operation flag \hypertarget{group__FAPI__QOS__QUEUE_gab3c92215e835050ca004780f75f95409}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-H\-W@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-H\-W}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-H\-W@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-H\-W}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-H\-W}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-H\-W~0x00000008}}\label{group__FAPI__QOS__QUEUE_gab3c92215e835050ca004780f75f95409}
+Hardware operation flag \hypertarget{group__FAPI__QOS__QUEUE_gaccc096a1afc94084de913a8de593cd7a}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P1@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P1}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P1@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P1}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P1}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P1~0x00000100}}\label{group__FAPI__QOS__QUEUE_gaccc096a1afc94084de913a8de593cd7a}
+Ingress Queue Group-\/1 flag \hypertarget{group__FAPI__QOS__QUEUE_gab6da64324452e6385a5a045e438240cb}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P2@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P2}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P2@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P2}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P2}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P2~0x00000200}}\label{group__FAPI__QOS__QUEUE_gab6da64324452e6385a5a045e438240cb}
+Ingress Queue Group-\/2 flag \hypertarget{group__FAPI__QOS__QUEUE_ga1de29a6e534286eb607bf16191d8d94b}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P3@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P3}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P3@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P3}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P3}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P3~0x00000400}}\label{group__FAPI__QOS__QUEUE_ga1de29a6e534286eb607bf16191d8d94b}
+Ingress Queue Group-\/3 flag \hypertarget{group__FAPI__QOS__QUEUE_ga4f50900ef23e2fb31aeac3eb9932c8be}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P4@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P4}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P4@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P4}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P4}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P4~0x00000800}}\label{group__FAPI__QOS__QUEUE_ga4f50900ef23e2fb31aeac3eb9932c8be}
+Ingress Queue Group-\/4 flag \hypertarget{group__FAPI__QOS__QUEUE_ga1ce6f7b2edbc2fb87b3e0bf2c2da231d}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P5@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P5}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P5@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P5}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P5}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P5~0x00001000}}\label{group__FAPI__QOS__QUEUE_ga1ce6f7b2edbc2fb87b3e0bf2c2da231d}
+Ingress Queue Group-\/5 flag \hypertarget{group__FAPI__QOS__QUEUE_ga5046759dc7d0ebae110694a9be334def}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P6@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P6}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P6@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P6}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P6}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-G\-R\-P6~0x00002000}}\label{group__FAPI__QOS__QUEUE_ga5046759dc7d0ebae110694a9be334def}
+Ingress Queue Group-\/6 flag \hypertarget{group__FAPI__QOS__QUEUE_ga7306e528452e4389e8c7a76dbbf3af64}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-R\-E\-S\-S@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-R\-E\-S\-S}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-R\-E\-S\-S@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-R\-E\-S\-S}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-R\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-R\-E\-S\-S~0x00000001}}\label{group__FAPI__QOS__QUEUE_ga7306e528452e4389e8c7a76dbbf3af64}
+
+
+Qo\-S queue operation related flags. 
+
+Ingress operation flag \hypertarget{group__FAPI__QOS__QUEUE_ga3ff77637a60ecb38f8b370157f43ac4a}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-T\-\_\-\-Q@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-T\-\_\-\-Q}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-T\-\_\-\-Q@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-T\-\_\-\-Q}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-T\-\_\-\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-T\-\_\-\-Q~0x00000080}}\label{group__FAPI__QOS__QUEUE_ga3ff77637a60ecb38f8b370157f43ac4a}
+Internal queue identification flag \hypertarget{group__FAPI__QOS__QUEUE_ga30f059995ac6786208d944eb84f39fef}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-L\-I\-N\-K\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-L\-I\-N\-K\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-L\-I\-N\-K\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-L\-I\-N\-K\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-L\-I\-N\-K\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-L\-I\-N\-K\-\_\-\-S\-T\-A\-T\-E\-\_\-\-C\-H\-A\-N\-G\-E~0x00004000}}\label{group__FAPI__QOS__QUEUE_ga30f059995ac6786208d944eb84f39fef}
+Configuration triggered from link state change \hypertarget{group__FAPI__QOS__QUEUE_ga34dba99f30e84ea75cab31c31f353fdf}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D~0x00000002}}\label{group__FAPI__QOS__QUEUE_ga34dba99f30e84ea75cab31c31f353fdf}
+Modify operation flag \hypertarget{group__FAPI__QOS__QUEUE_ga9a1077936ad9252e2a13501b25732c2e}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D\-\_\-\-O\-T\-H\-E\-R@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D\-\_\-\-O\-T\-H\-E\-R}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D\-\_\-\-O\-T\-H\-E\-R@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D\-\_\-\-O\-T\-H\-E\-R}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D\-\_\-\-O\-T\-H\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D\-\_\-\-O\-T\-H\-E\-R~0x00000004}}\label{group__FAPI__QOS__QUEUE_ga9a1077936ad9252e2a13501b25732c2e}
+Modify other operation flag \hypertarget{group__FAPI__QOS__QUEUE_ga23373ec976d76acc26ae4b7a13a5490e}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-S\-K\-I\-P\-\_\-\-D\-E\-F\-\_\-\-Q\-\_\-\-C\-H\-K@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-S\-K\-I\-P\-\_\-\-D\-E\-F\-\_\-\-Q\-\_\-\-C\-H\-K}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-S\-K\-I\-P\-\_\-\-D\-E\-F\-\_\-\-Q\-\_\-\-C\-H\-K@{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-S\-K\-I\-P\-\_\-\-D\-E\-F\-\_\-\-Q\-\_\-\-C\-H\-K}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-S\-K\-I\-P\-\_\-\-D\-E\-F\-\_\-\-Q\-\_\-\-C\-H\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-S\-K\-I\-P\-\_\-\-D\-E\-F\-\_\-\-Q\-\_\-\-C\-H\-K~0x00000040}}\label{group__FAPI__QOS__QUEUE_ga23373ec976d76acc26ae4b7a13a5490e}
+Default Queue check skip flag \hypertarget{group__FAPI__QOS__QUEUE_ga823c7487863f66b69788ca8f7a6ae5bc}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-D\-R\-O\-P\-\_\-\-B\-Y\-T\-E@{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-D\-R\-O\-P\-\_\-\-B\-Y\-T\-E}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-D\-R\-O\-P\-\_\-\-B\-Y\-T\-E@{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-D\-R\-O\-P\-\_\-\-B\-Y\-T\-E}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-D\-R\-O\-P\-\_\-\-B\-Y\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-D\-R\-O\-P\-\_\-\-B\-Y\-T\-E~0x00000020}}\label{group__FAPI__QOS__QUEUE_ga823c7487863f66b69788ca8f7a6ae5bc}
+Drop Bytes support flag \hypertarget{group__FAPI__QOS__QUEUE_gad7742bbe991b93d5e2f2cb15f9368fd5}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-D\-R\-O\-P\-\_\-\-P\-K\-T@{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-D\-R\-O\-P\-\_\-\-P\-K\-T}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-D\-R\-O\-P\-\_\-\-P\-K\-T@{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-D\-R\-O\-P\-\_\-\-P\-K\-T}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-D\-R\-O\-P\-\_\-\-P\-K\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-D\-R\-O\-P\-\_\-\-P\-K\-T~0x00000010}}\label{group__FAPI__QOS__QUEUE_gad7742bbe991b93d5e2f2cb15f9368fd5}
+Drop Packets support flag \hypertarget{group__FAPI__QOS__QUEUE_ga08bb5276a8019c599b5dabec03ca9ce3}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-O\-C\-C\-\_\-\-P\-C\-T@{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-O\-C\-C\-\_\-\-P\-C\-T}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-O\-C\-C\-\_\-\-P\-C\-T@{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-O\-C\-C\-\_\-\-P\-C\-T}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-O\-C\-C\-\_\-\-P\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-O\-C\-C\-\_\-\-P\-C\-T~0x00000080}}\label{group__FAPI__QOS__QUEUE_ga08bb5276a8019c599b5dabec03ca9ce3}
+Queue Occupacny Percentage support flag \hypertarget{group__FAPI__QOS__QUEUE_ga039fef59e2d78c81c3208d48b592ca99}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-O\-C\-C\-\_\-\-P\-K\-T@{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-O\-C\-C\-\_\-\-P\-K\-T}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-O\-C\-C\-\_\-\-P\-K\-T@{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-O\-C\-C\-\_\-\-P\-K\-T}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-O\-C\-C\-\_\-\-P\-K\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-O\-C\-C\-\_\-\-P\-K\-T~0x00000040}}\label{group__FAPI__QOS__QUEUE_ga039fef59e2d78c81c3208d48b592ca99}
+Queue Occupacny Packets support flag \hypertarget{group__FAPI__QOS__QUEUE_ga1bc411916553d677f198bfe53a9d66e5}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-R\-X\-\_\-\-B\-Y\-T\-E@{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-R\-X\-\_\-\-B\-Y\-T\-E}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-R\-X\-\_\-\-B\-Y\-T\-E@{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-R\-X\-\_\-\-B\-Y\-T\-E}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-R\-X\-\_\-\-B\-Y\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-R\-X\-\_\-\-B\-Y\-T\-E~0x00000002}}\label{group__FAPI__QOS__QUEUE_ga1bc411916553d677f198bfe53a9d66e5}
+Rx Bytes support flag \hypertarget{group__FAPI__QOS__QUEUE_ga9a9a7fe4e0e98bd1a08c146a5ceea156}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-R\-X\-\_\-\-P\-K\-T@{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-R\-X\-\_\-\-P\-K\-T}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-R\-X\-\_\-\-P\-K\-T@{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-R\-X\-\_\-\-P\-K\-T}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-R\-X\-\_\-\-P\-K\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-R\-X\-\_\-\-P\-K\-T~0x00000001}}\label{group__FAPI__QOS__QUEUE_ga9a9a7fe4e0e98bd1a08c146a5ceea156}
+
+
+Qo\-S queue statistics related flags. 
+
+Rx Packets support flag \hypertarget{group__FAPI__QOS__QUEUE_gaae63033c6c8e70e7f6f44ffbcdfe2d98}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-T\-X\-\_\-\-B\-Y\-T\-E@{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-T\-X\-\_\-\-B\-Y\-T\-E}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-T\-X\-\_\-\-B\-Y\-T\-E@{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-T\-X\-\_\-\-B\-Y\-T\-E}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-T\-X\-\_\-\-B\-Y\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-T\-X\-\_\-\-B\-Y\-T\-E~0x00000008}}\label{group__FAPI__QOS__QUEUE_gaae63033c6c8e70e7f6f44ffbcdfe2d98}
+Tx Bytes support flag \hypertarget{group__FAPI__QOS__QUEUE_gadb32e8befc0db998929b240570021e27}{\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-T\-X\-\_\-\-P\-K\-T@{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-T\-X\-\_\-\-P\-K\-T}}
+\index{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-T\-X\-\_\-\-P\-K\-T@{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-T\-X\-\_\-\-P\-K\-T}!Queuing@{Queuing}}
+\subsubsection[{Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-T\-X\-\_\-\-P\-K\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define Q\-O\-S\-\_\-\-Q\-\_\-\-S\-T\-A\-T\-\_\-\-T\-X\-\_\-\-P\-K\-T~0x00000004}}\label{group__FAPI__QOS__QUEUE_gadb32e8befc0db998929b240570021e27}
+Tx Packets support flag 
+
+\subsection{Typedef Documentation}
+\hypertarget{group__FAPI__QOS__QUEUE_ga42b4d8fefa10f2b563d6151e772c6b3c}{\index{Queuing@{Queuing}!qos\-\_\-wred\-\_\-t@{qos\-\_\-wred\-\_\-t}}
+\index{qos\-\_\-wred\-\_\-t@{qos\-\_\-wred\-\_\-t}!Queuing@{Queuing}}
+\subsubsection[{qos\-\_\-wred\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf qos\-\_\-wred} {\bf qos\-\_\-wred\-\_\-t}}}\label{group__FAPI__QOS__QUEUE_ga42b4d8fefa10f2b563d6151e772c6b3c}
+
+
+Qo\-S W\-R\-E\-D Drop configuration structure. 
+
+\begin{DoxyRemark}{Remarks}
+If R\-E\-D, then this is same as W\-R\-E\-D Curve 0 only configuration 
+\end{DoxyRemark}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__FAPI__QOS__QUEUE_gac3dd371b02e4e2ff5023eaa49dfd7aab}{\index{Queuing@{Queuing}!qos\-\_\-drop\-\_\-mode\-\_\-t@{qos\-\_\-drop\-\_\-mode\-\_\-t}}
+\index{qos\-\_\-drop\-\_\-mode\-\_\-t@{qos\-\_\-drop\-\_\-mode\-\_\-t}!Queuing@{Queuing}}
+\subsubsection[{qos\-\_\-drop\-\_\-mode\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf qos\-\_\-drop\-\_\-mode\-\_\-t}}}\label{group__FAPI__QOS__QUEUE_gac3dd371b02e4e2ff5023eaa49dfd7aab}
+
+
+Qo\-S Queue drop Mode Configuration. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-T\-A\-I\-L@{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-T\-A\-I\-L}!Queuing@{Queuing}}\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-T\-A\-I\-L@{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-T\-A\-I\-L}}\item[{\em 
+\hypertarget{group__FAPI__QOS__QUEUE_ggac3dd371b02e4e2ff5023eaa49dfd7aabad633473386b40a2abf8c8bbaf6347b90}{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-T\-A\-I\-L}\label{group__FAPI__QOS__QUEUE_ggac3dd371b02e4e2ff5023eaa49dfd7aabad633473386b40a2abf8c8bbaf6347b90}
+}]Tail-\/drop \index{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-R\-E\-D@{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-R\-E\-D}!Queuing@{Queuing}}\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-R\-E\-D@{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-R\-E\-D}}\item[{\em 
+\hypertarget{group__FAPI__QOS__QUEUE_ggac3dd371b02e4e2ff5023eaa49dfd7aaba52861308ec9d0b27383e658a4b1a2929}{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-R\-E\-D}\label{group__FAPI__QOS__QUEUE_ggac3dd371b02e4e2ff5023eaa49dfd7aaba52861308ec9d0b27383e658a4b1a2929}
+}]Random early detection \index{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-W\-R\-E\-D@{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-W\-R\-E\-D}!Queuing@{Queuing}}\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-W\-R\-E\-D@{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-W\-R\-E\-D}}\item[{\em 
+\hypertarget{group__FAPI__QOS__QUEUE_ggac3dd371b02e4e2ff5023eaa49dfd7aaba0ec07d74821ef58ed141af01e60a8d4f}{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-W\-R\-E\-D}\label{group__FAPI__QOS__QUEUE_ggac3dd371b02e4e2ff5023eaa49dfd7aaba0ec07d74821ef58ed141af01e60a8d4f}
+}]Weighted random early detection \index{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-C\-O\-D\-E\-L@{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-C\-O\-D\-E\-L}!Queuing@{Queuing}}\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-C\-O\-D\-E\-L@{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-C\-O\-D\-E\-L}}\item[{\em 
+\hypertarget{group__FAPI__QOS__QUEUE_ggac3dd371b02e4e2ff5023eaa49dfd7aabafbbcf309cee7513222292d89a35de80b}{Q\-O\-S\-\_\-\-D\-R\-O\-P\-\_\-\-C\-O\-D\-E\-L}\label{group__FAPI__QOS__QUEUE_ggac3dd371b02e4e2ff5023eaa49dfd7aabafbbcf309cee7513222292d89a35de80b}
+}]Controlled delay \end{description}
+\end{Desc}
+\hypertarget{group__FAPI__QOS__QUEUE_ga1239e331f224c9a00c3047d30edaa939}{\index{Queuing@{Queuing}!qos\-\_\-sched\-\_\-mode\-\_\-t@{qos\-\_\-sched\-\_\-mode\-\_\-t}}
+\index{qos\-\_\-sched\-\_\-mode\-\_\-t@{qos\-\_\-sched\-\_\-mode\-\_\-t}!Queuing@{Queuing}}
+\subsubsection[{qos\-\_\-sched\-\_\-mode\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf qos\-\_\-sched\-\_\-mode\-\_\-t}}}\label{group__FAPI__QOS__QUEUE_ga1239e331f224c9a00c3047d30edaa939}
+
+
+Qo\-S Shaper Mode Configuration. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Q\-O\-S\-\_\-\-S\-C\-H\-E\-D\-\_\-\-S\-P@{Q\-O\-S\-\_\-\-S\-C\-H\-E\-D\-\_\-\-S\-P}!Queuing@{Queuing}}\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-S\-C\-H\-E\-D\-\_\-\-S\-P@{Q\-O\-S\-\_\-\-S\-C\-H\-E\-D\-\_\-\-S\-P}}\item[{\em 
+\hypertarget{group__FAPI__QOS__QUEUE_gga1239e331f224c9a00c3047d30edaa939ab36224a8020ac797bd5d288416b8a60c}{Q\-O\-S\-\_\-\-S\-C\-H\-E\-D\-\_\-\-S\-P}\label{group__FAPI__QOS__QUEUE_gga1239e331f224c9a00c3047d30edaa939ab36224a8020ac797bd5d288416b8a60c}
+}]Queue scheduling algorithm is strict priority \index{Q\-O\-S\-\_\-\-S\-C\-H\-E\-D\-\_\-\-W\-F\-Q@{Q\-O\-S\-\_\-\-S\-C\-H\-E\-D\-\_\-\-W\-F\-Q}!Queuing@{Queuing}}\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-S\-C\-H\-E\-D\-\_\-\-W\-F\-Q@{Q\-O\-S\-\_\-\-S\-C\-H\-E\-D\-\_\-\-W\-F\-Q}}\item[{\em 
+\hypertarget{group__FAPI__QOS__QUEUE_gga1239e331f224c9a00c3047d30edaa939ad4c9d46debeaa176ead4f39ce6749586}{Q\-O\-S\-\_\-\-S\-C\-H\-E\-D\-\_\-\-W\-F\-Q}\label{group__FAPI__QOS__QUEUE_gga1239e331f224c9a00c3047d30edaa939ad4c9d46debeaa176ead4f39ce6749586}
+}]Queue scheduling algorithm is weighted fair queuing \end{description}
+\end{Desc}
+\hypertarget{group__FAPI__QOS__QUEUE_ga59365e8b97823ce54ac3e627abc95dd5}{\index{Queuing@{Queuing}!qos\-\_\-shaper\-\_\-mode\-\_\-t@{qos\-\_\-shaper\-\_\-mode\-\_\-t}}
+\index{qos\-\_\-shaper\-\_\-mode\-\_\-t@{qos\-\_\-shaper\-\_\-mode\-\_\-t}!Queuing@{Queuing}}
+\subsubsection[{qos\-\_\-shaper\-\_\-mode\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf qos\-\_\-shaper\-\_\-mode\-\_\-t}}}\label{group__FAPI__QOS__QUEUE_ga59365e8b97823ce54ac3e627abc95dd5}
+
+
+Qo\-S Shaper Mode Configuration. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-N\-O\-N\-E@{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-N\-O\-N\-E}!Queuing@{Queuing}}\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-N\-O\-N\-E@{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-N\-O\-N\-E}}\item[{\em 
+\hypertarget{group__FAPI__QOS__QUEUE_gga59365e8b97823ce54ac3e627abc95dd5aeaf9faef4573eeaba7034840720cce37}{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-N\-O\-N\-E}\label{group__FAPI__QOS__QUEUE_gga59365e8b97823ce54ac3e627abc95dd5aeaf9faef4573eeaba7034840720cce37}
+}]No shaper assigned \index{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-I\-N\-D@{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-I\-N\-D}!Queuing@{Queuing}}\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-I\-N\-D@{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-I\-N\-D}}\item[{\em 
+\hypertarget{group__FAPI__QOS__QUEUE_gga59365e8b97823ce54ac3e627abc95dd5a29fea50ad673068f3d2b59ba8676998e}{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-I\-N\-D}\label{group__FAPI__QOS__QUEUE_gga59365e8b97823ce54ac3e627abc95dd5a29fea50ad673068f3d2b59ba8676998e}
+}]Color blind \index{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-T\-R\-\_\-\-T\-C\-M@{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-T\-R\-\_\-\-T\-C\-M}!Queuing@{Queuing}}\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-T\-R\-\_\-\-T\-C\-M@{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-T\-R\-\_\-\-T\-C\-M}}\item[{\em 
+\hypertarget{group__FAPI__QOS__QUEUE_gga59365e8b97823ce54ac3e627abc95dd5acc40218e63ca2f3fba38c8f98c9a0832}{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-T\-R\-\_\-\-T\-C\-M}\label{group__FAPI__QOS__QUEUE_gga59365e8b97823ce54ac3e627abc95dd5acc40218e63ca2f3fba38c8f98c9a0832}
+}]Three-\/color marking \index{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-T\-R\-\_\-\-T\-C\-M\-\_\-\-R\-F\-C4115@{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-T\-R\-\_\-\-T\-C\-M\-\_\-\-R\-F\-C4115}!Queuing@{Queuing}}\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-T\-R\-\_\-\-T\-C\-M\-\_\-\-R\-F\-C4115@{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-T\-R\-\_\-\-T\-C\-M\-\_\-\-R\-F\-C4115}}\item[{\em 
+\hypertarget{group__FAPI__QOS__QUEUE_gga59365e8b97823ce54ac3e627abc95dd5ad63abd52de51f0b633cab8c41633f249}{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-T\-R\-\_\-\-T\-C\-M\-\_\-\-R\-F\-C4115}\label{group__FAPI__QOS__QUEUE_gga59365e8b97823ce54ac3e627abc95dd5ad63abd52de51f0b633cab8c41633f249}
+}]Three-\/color marking as in R\-F\-C4115 \index{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-L\-O\-O\-S\-E\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-I\-N\-D@{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-L\-O\-O\-S\-E\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-I\-N\-D}!Queuing@{Queuing}}\index{Queuing@{Queuing}!Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-L\-O\-O\-S\-E\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-I\-N\-D@{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-L\-O\-O\-S\-E\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-I\-N\-D}}\item[{\em 
+\hypertarget{group__FAPI__QOS__QUEUE_gga59365e8b97823ce54ac3e627abc95dd5a346472924caeb95880bc570c4b92118b}{Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-L\-O\-O\-S\-E\-\_\-\-C\-O\-L\-O\-R\-\_\-\-B\-L\-I\-N\-D}\label{group__FAPI__QOS__QUEUE_gga59365e8b97823ce54ac3e627abc95dd5a346472924caeb95880bc570c4b92118b}
+}]Loose color blind \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__FAPI__QOS__QUEUE_gaa91cdf232e5ee1ffb8c0c501c743c694}{\index{Queuing@{Queuing}!fapi\-\_\-qos\-\_\-port\-\_\-config\-\_\-get@{fapi\-\_\-qos\-\_\-port\-\_\-config\-\_\-get}}
+\index{fapi\-\_\-qos\-\_\-port\-\_\-config\-\_\-get@{fapi\-\_\-qos\-\_\-port\-\_\-config\-\_\-get}!Queuing@{Queuing}}
+\subsubsection[{fapi\-\_\-qos\-\_\-port\-\_\-config\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} fapi\-\_\-qos\-\_\-port\-\_\-config\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ifname, }
+\item[{{\bf qos\-\_\-shaper\-\_\-t} $\ast$}]{shaper, }
+\item[{{\bf int32\-\_\-t} $\ast$}]{weight, }
+\item[{{\bf int32\-\_\-t} $\ast$}]{priority, }
+\item[{uint32\-\_\-t}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__QOS__QUEUE_gaa91cdf232e5ee1ffb8c0c501c743c694}
+
+
+Get Port Qo\-S characteristics like rate shaper, and/or weight/priority if this port is cascaded into another scheduler. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ifname} & Name of interface whose port Qo\-S characteristics are to be configured \\
+\hline
+\mbox{\tt out}  & {\em shaper} & Port shaper configuration \\
+\hline
+\mbox{\tt out}  & {\em weight} & Port weight when port is cascaded into next stage scheduler. -\/1 means no weight, only priority \\
+\hline
+\mbox{\tt out}  & {\em priority} & Port priority when port is cascaded into next stage scheduler. -\/1 means no priority, only weight \\
+\hline
+\mbox{\tt in}  & {\em flags} & Flags are defined as follows\-:
+\begin{DoxyItemize}
+\item Q\-O\-S\-\_\-\-O\-P\-\_\-\-F\-\_\-\-I\-N\-G\-R\-E\-S\-S \-: if port egress or ingress configuration is to be returned 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on successful / -\/1 on failure 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__QOS__QUEUE_ga689e45276a2ec8a97f4fdace1360aafa}{\index{Queuing@{Queuing}!fapi\-\_\-qos\-\_\-port\-\_\-config\-\_\-set@{fapi\-\_\-qos\-\_\-port\-\_\-config\-\_\-set}}
+\index{fapi\-\_\-qos\-\_\-port\-\_\-config\-\_\-set@{fapi\-\_\-qos\-\_\-port\-\_\-config\-\_\-set}!Queuing@{Queuing}}
+\subsubsection[{fapi\-\_\-qos\-\_\-port\-\_\-config\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} fapi\-\_\-qos\-\_\-port\-\_\-config\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ifname, }
+\item[{{\bf qos\-\_\-shaper\-\_\-t} $\ast$}]{shaper, }
+\item[{{\bf int32\-\_\-t}}]{weight, }
+\item[{{\bf int32\-\_\-t}}]{priority, }
+\item[{uint32\-\_\-t}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__QOS__QUEUE_ga689e45276a2ec8a97f4fdace1360aafa}
+
+
+Set Port Qo\-S characteristics like rate shaper, and/or weight/priority if this port is cascaded into another scheduler. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ifname} & Name of interface whose port Qo\-S characteristics are to be configured \\
+\hline
+\mbox{\tt in}  & {\em shaper} & Port shaper configuration \\
+\hline
+\mbox{\tt in}  & {\em weight} & Port weight when port is cascaded into next stage scheduler. -\/1 means no weight, only priority \\
+\hline
+\mbox{\tt in}  & {\em priority} & Port priority when port is cascaded into next stage scheduler. -\/1 means no priority, only weight \\
+\hline
+\mbox{\tt in}  & {\em flags} & Flags are defined as follows\-:
+\begin{DoxyItemize}
+\item Q\-O\-S\-\_\-\-O\-P\-\_\-\-F\-\_\-\-A\-D\-D
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item Q\-O\-S\-\_\-\-O\-P\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-Y
+\item Q\-O\-S\-\_\-\-O\-P\-\_\-\-F\-\_\-\-D\-E\-L\-E\-T\-E \begin{DoxyReturn}{Returns}
+0 on successful / -\/1 on failure 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\hypertarget{group__FAPI__QOS__QUEUE_ga10ae649e4e386857ad8cadeb7e2e2e41}{\index{Queuing@{Queuing}!fapi\-\_\-qos\-\_\-port\-\_\-update@{fapi\-\_\-qos\-\_\-port\-\_\-update}}
+\index{fapi\-\_\-qos\-\_\-port\-\_\-update@{fapi\-\_\-qos\-\_\-port\-\_\-update}!Queuing@{Queuing}}
+\subsubsection[{fapi\-\_\-qos\-\_\-port\-\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} fapi\-\_\-qos\-\_\-port\-\_\-update (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ifname, }
+\item[{uint32\-\_\-t}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__QOS__QUEUE_ga10ae649e4e386857ad8cadeb7e2e2e41}
+
+
+Notification on port add or delete in the system from higher layers/system management. This allows qos\-\_\-al to add/del queues from template files to system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ifname} & Interface which is to be added or deleted from Qo\-S configuration of system \\
+\hline
+\mbox{\tt in}  & {\em flags} & Flags are as as follows\-:
+\begin{DoxyItemize}
+\item Q\-O\-S\-\_\-\-O\-P\-\_\-\-F\-\_\-\-A\-D\-D \-: Add Qo\-S Port
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item Q\-O\-S\-\_\-\-O\-P\-\_\-\-F\-\_\-\-D\-E\-L\-E\-T\-E \-: Delete Qo\-S Port \begin{DoxyReturn}{Returns}
+0 on successful / -\/1 on failure 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\hypertarget{group__FAPI__QOS__QUEUE_ga727ee91ab59e9b90747c24ad946c08a2}{\index{Queuing@{Queuing}!fapi\-\_\-qos\-\_\-queue\-\_\-get@{fapi\-\_\-qos\-\_\-queue\-\_\-get}}
+\index{fapi\-\_\-qos\-\_\-queue\-\_\-get@{fapi\-\_\-qos\-\_\-queue\-\_\-get}!Queuing@{Queuing}}
+\subsubsection[{fapi\-\_\-qos\-\_\-queue\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} fapi\-\_\-qos\-\_\-queue\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ifname, }
+\item[{char $\ast$}]{queue\-\_\-name, }
+\item[{{\bf int32\-\_\-t} $\ast$}]{num\-\_\-queues, }
+\item[{{\bf qos\-\_\-queue\-\_\-cfg\-\_\-t} $\ast$$\ast$}]{q, }
+\item[{uint32\-\_\-t}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__QOS__QUEUE_ga727ee91ab59e9b90747c24ad946c08a2}
+
+
+Get one of all Qo\-S Queue Configuration on given interface. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ifname} & Name of interface on which queue is to be queried (egress or ingress) \\
+\hline
+\mbox{\tt in}  & {\em queue\-\_\-name} & Name of queue which is to be queried \\
+\hline
+\mbox{\tt out}  & {\em num\-\_\-queues} & Number of queues returned \\
+\hline
+\mbox{\tt out}  & {\em q} & Array of Queue configuration of num\-\_\-queues number of queues Caller must free the buffer \\
+\hline
+\mbox{\tt in}  & {\em flags} & Specifies if the Filter is to do one of the following\-:
+\begin{DoxyItemize}
+\item Q\-O\-S\-\_\-\-O\-P\-\_\-\-F\-\_\-\-I\-N\-G\-R\-E\-S\-S -\/ if ingress queues are to be retrieved, otherwise egress queues are retrieved 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on successful / -\/1 on failure 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+if Queue\-Id is -\/1, then all queues for if\-\_\-name are returned (number of queues given by num\-\_\-queues), else only queue given by queue\-\_\-id is returned 
+\end{DoxyRemark}
+\hypertarget{group__FAPI__QOS__QUEUE_gab200a6c190efb8ff569a9a83a2e2a39e}{\index{Queuing@{Queuing}!fapi\-\_\-qos\-\_\-queue\-\_\-set@{fapi\-\_\-qos\-\_\-queue\-\_\-set}}
+\index{fapi\-\_\-qos\-\_\-queue\-\_\-set@{fapi\-\_\-qos\-\_\-queue\-\_\-set}!Queuing@{Queuing}}
+\subsubsection[{fapi\-\_\-qos\-\_\-queue\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} fapi\-\_\-qos\-\_\-queue\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ifname, }
+\item[{{\bf qos\-\_\-queue\-\_\-cfg\-\_\-t} $\ast$}]{q, }
+\item[{uint32\-\_\-t}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__QOS__QUEUE_gab200a6c190efb8ff569a9a83a2e2a39e}
+
+
+Set Qo\-S Queue Configuration -\/ involves adding a new queue or modifying an existing queue, or deleting an existing queue. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ifname} & Name of interface on which queue is to be added (egress or ingress) \\
+\hline
+\mbox{\tt in}  & {\em q} & Queue configuration to add, modify or delete \\
+\hline
+\mbox{\tt in}  & {\em flags} & Specifies if Filter is to do one of the following\-:
+\begin{DoxyItemize}
+\item Q\-O\-S\-\_\-\-O\-P\-\_\-\-F\-\_\-\-A\-D\-D
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item Q\-O\-S\-\_\-\-O\-P\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-Y
+\item Q\-O\-S\-\_\-\-O\-P\-\_\-\-F\-\_\-\-D\-E\-L\-E\-T\-E
+\item Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-G\-E\-N\-E\-R\-I\-C\-\_\-\-M\-O\-D\-I\-F\-Y
+\item Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-D\-R\-O\-P\-\_\-\-M\-O\-D\-I\-F\-Y
+\item Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-S\-C\-H\-E\-D\-\_\-\-M\-O\-D\-I\-F\-Y
+\item Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-M\-O\-D\-I\-F\-Y
+\item Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-Q\-U\-E\-U\-E\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-D\-E\-L\-E\-T\-E \begin{DoxyReturn}{Returns}
+Queue\-Id on successful / -\/1 on failure 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\hypertarget{group__FAPI__QOS__QUEUE_gadc2ed3ac56edaa5cdb56e65f6a737aec}{\index{Queuing@{Queuing}!fapi\-\_\-qos\-\_\-queue\-\_\-stats\-\_\-get@{fapi\-\_\-qos\-\_\-queue\-\_\-stats\-\_\-get}}
+\index{fapi\-\_\-qos\-\_\-queue\-\_\-stats\-\_\-get@{fapi\-\_\-qos\-\_\-queue\-\_\-stats\-\_\-get}!Queuing@{Queuing}}
+\subsubsection[{fapi\-\_\-qos\-\_\-queue\-\_\-stats\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} fapi\-\_\-qos\-\_\-queue\-\_\-stats\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ifname, }
+\item[{char $\ast$}]{queue\-\_\-name, }
+\item[{{\bf int32\-\_\-t} $\ast$}]{num\-\_\-queues, }
+\item[{{\bf qos\-\_\-queue\-\_\-stats\-\_\-t} $\ast$$\ast$}]{qstats, }
+\item[{uint32\-\_\-t}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__QOS__QUEUE_gadc2ed3ac56edaa5cdb56e65f6a737aec}
+
+
+Get statistics of one or all Queues on given interface. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ifname} & Name of interface on which queue is to be queried (egress or ingress) \\
+\hline
+\mbox{\tt in}  & {\em queue\-\_\-name} & Name of queue for which statistics are to be queried \\
+\hline
+\mbox{\tt out}  & {\em num\-\_\-queues} & Number of queues returned \\
+\hline
+\mbox{\tt out}  & {\em qstats} & Array of Queue statistics of num\-\_\-queues number of queues Caller must free the buffer \\
+\hline
+\mbox{\tt in}  & {\em flags} & Specifies whether Filter is to do one of the following\-: Q\-O\-S\-\_\-\-O\-P\-\_\-\-F\-\_\-\-I\-N\-G\-R\-E\-S\-S -\/ if ingress queues statistics are to be retrieved, otherwise egress queues statistics are retrieved \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on successful / -\/1 on failure 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+if queue\-\_\-name is not specified or N\-U\-L\-L, then statistics of all queues for if\-\_\-name are returned (number of queues given by num\-\_\-queues), else only statistics of queue given by queue\-\_\-name is returned 
+\end{DoxyRemark}

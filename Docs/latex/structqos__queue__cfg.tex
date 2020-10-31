@@ -1,0 +1,97 @@
+\hypertarget{structqos__queue__cfg}{\section{qos\-\_\-queue\-\_\-cfg Struct Reference}
+\label{structqos__queue__cfg}\index{qos\-\_\-queue\-\_\-cfg@{qos\-\_\-queue\-\_\-cfg}}
+}
+
+
+Qo\-S Queue Configuration structure.  
+
+
+
+
+{\ttfamily \#include $<$qosal\-\_\-queue\-\_\-api.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t \hyperlink{structqos__queue__cfg_a9f29f1f01fcceaa20a155f384d2ba1ba}{enable}
+\item 
+uint32\-\_\-t \hyperlink{structqos__queue__cfg_a5606d7eca82540293ea53b343f0e55c3}{status}
+\item 
+char \hyperlink{structqos__queue__cfg_a1a3367219d1ddc63ec994f57bbeb59f0}{name} \mbox{[}\hyperlink{group__FAPI__QOS__QUEUE_ga8c2658456d4f94c43de2b47e6cc488eb}{M\-A\-X\-\_\-\-Q\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+uint32\-\_\-t \hyperlink{structqos__queue__cfg_af7f5644a58135f1b6f52a818ce958675}{owner}
+\item 
+uint32\-\_\-t \hyperlink{structqos__queue__cfg_ae62e947c5c062e477347f21b34586901}{flags}
+\item 
+uint32\-\_\-t \hyperlink{structqos__queue__cfg_ab510e8e08dc8ab97b37e80cd86025c2b}{queue\-\_\-id}
+\item 
+char \hyperlink{structqos__queue__cfg_a1571ed347d8821847dcf966c0e26d034}{tc\-\_\-map} \mbox{[}\hyperlink{group__FAPI__QOS__QUEUE_ga75e5a2112ac055521c4cb0e64b278be8}{M\-A\-X\-\_\-\-T\-C\-\_\-\-N\-U\-M}\mbox{]}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{structqos__queue__cfg_a11b6e0171620866d462244ccaf97e40a}{qlen}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{structqos__queue__cfg_a4a188cdf7f60a129d2909fc6335f120b}{weight}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{structqos__queue__cfg_a0016a6fbcc623edf864ce6b0a51e4a53}{priority}
+\item 
+\hyperlink{group__FAPI__QOS__QUEUE_ga5db7cfdc67250c1a25470eb030e4fccb}{qos\-\_\-drop\-\_\-cfg\-\_\-t} \hyperlink{structqos__queue__cfg_a6fb4600c84f6821fb50126c65f32d403}{drop}
+\item 
+\hyperlink{group__FAPI__QOS__QUEUE_ga1239e331f224c9a00c3047d30edaa939}{qos\-\_\-sched\-\_\-mode\-\_\-t} \hyperlink{structqos__queue__cfg_afd37a80d7d3748ec6e8b6e28adc006b4}{sched}
+\item 
+\hyperlink{group__FAPI__QOS__QUEUE_ga05ce7ada7ae20b289d4e675ad099c8f0}{qos\-\_\-shaper\-\_\-t} \hyperlink{structqos__queue__cfg_a7dd1ff7c97cd7199ee77f331d31a541b}{shaper}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Qo\-S Queue Configuration structure. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structqos__queue__cfg_a6fb4600c84f6821fb50126c65f32d403}{\index{qos\-\_\-queue\-\_\-cfg@{qos\-\_\-queue\-\_\-cfg}!drop@{drop}}
+\index{drop@{drop}!qos_queue_cfg@{qos\-\_\-queue\-\_\-cfg}}
+\subsubsection[{drop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf qos\-\_\-drop\-\_\-cfg\-\_\-t} qos\-\_\-queue\-\_\-cfg\-::drop}}\label{structqos__queue__cfg_a6fb4600c84f6821fb50126c65f32d403}
+Queue Drop Properties \hypertarget{structqos__queue__cfg_a9f29f1f01fcceaa20a155f384d2ba1ba}{\index{qos\-\_\-queue\-\_\-cfg@{qos\-\_\-queue\-\_\-cfg}!enable@{enable}}
+\index{enable@{enable}!qos_queue_cfg@{qos\-\_\-queue\-\_\-cfg}}
+\subsubsection[{enable}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-queue\-\_\-cfg\-::enable}}\label{structqos__queue__cfg_a9f29f1f01fcceaa20a155f384d2ba1ba}
+Whether Queue is enabled \hypertarget{structqos__queue__cfg_ae62e947c5c062e477347f21b34586901}{\index{qos\-\_\-queue\-\_\-cfg@{qos\-\_\-queue\-\_\-cfg}!flags@{flags}}
+\index{flags@{flags}!qos_queue_cfg@{qos\-\_\-queue\-\_\-cfg}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-queue\-\_\-cfg\-::flags}}\label{structqos__queue__cfg_ae62e947c5c062e477347f21b34586901}
+Following flags can be kept per filter structure\-:
+\begin{DoxyItemize}
+\item Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D \-: Modified after being originally added
+\item Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D\-\_\-\-O\-T\-H\-E\-R \-: Modified by an entity other than the owner
+\item Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-H\-W \-: Set if this Q is in H\-W
+\item Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-R\-E\-S\-S \-: This queue is applied to ingress from the interface 
+\end{DoxyItemize}\hypertarget{structqos__queue__cfg_a1a3367219d1ddc63ec994f57bbeb59f0}{\index{qos\-\_\-queue\-\_\-cfg@{qos\-\_\-queue\-\_\-cfg}!name@{name}}
+\index{name@{name}!qos_queue_cfg@{qos\-\_\-queue\-\_\-cfg}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}char qos\-\_\-queue\-\_\-cfg\-::name\mbox{[}{\bf M\-A\-X\-\_\-\-Q\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}}}\label{structqos__queue__cfg_a1a3367219d1ddc63ec994f57bbeb59f0}
+Name or Alias of the queue, if any \hypertarget{structqos__queue__cfg_af7f5644a58135f1b6f52a818ce958675}{\index{qos\-\_\-queue\-\_\-cfg@{qos\-\_\-queue\-\_\-cfg}!owner@{owner}}
+\index{owner@{owner}!qos_queue_cfg@{qos\-\_\-queue\-\_\-cfg}}
+\subsubsection[{owner}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-queue\-\_\-cfg\-::owner}}\label{structqos__queue__cfg_af7f5644a58135f1b6f52a818ce958675}
+Enumerated value of who is doing the operation. Possible owners can be\-: T\-R-\/069, Web G\-U\-I, C\-L\-I, System, Base\-Rules \hypertarget{structqos__queue__cfg_a0016a6fbcc623edf864ce6b0a51e4a53}{\index{qos\-\_\-queue\-\_\-cfg@{qos\-\_\-queue\-\_\-cfg}!priority@{priority}}
+\index{priority@{priority}!qos_queue_cfg@{qos\-\_\-queue\-\_\-cfg}}
+\subsubsection[{priority}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} qos\-\_\-queue\-\_\-cfg\-::priority}}\label{structqos__queue__cfg_a0016a6fbcc623edf864ce6b0a51e4a53}
+Queue Priority or Precedence. Start from 1-\/16, with 1 as highest priority \hypertarget{structqos__queue__cfg_a11b6e0171620866d462244ccaf97e40a}{\index{qos\-\_\-queue\-\_\-cfg@{qos\-\_\-queue\-\_\-cfg}!qlen@{qlen}}
+\index{qlen@{qlen}!qos_queue_cfg@{qos\-\_\-queue\-\_\-cfg}}
+\subsubsection[{qlen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} qos\-\_\-queue\-\_\-cfg\-::qlen}}\label{structqos__queue__cfg_a11b6e0171620866d462244ccaf97e40a}
+Length of Queue in bytes \hypertarget{structqos__queue__cfg_ab510e8e08dc8ab97b37e80cd86025c2b}{\index{qos\-\_\-queue\-\_\-cfg@{qos\-\_\-queue\-\_\-cfg}!queue\-\_\-id@{queue\-\_\-id}}
+\index{queue\-\_\-id@{queue\-\_\-id}!qos_queue_cfg@{qos\-\_\-queue\-\_\-cfg}}
+\subsubsection[{queue\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-queue\-\_\-cfg\-::queue\-\_\-id}}\label{structqos__queue__cfg_ab510e8e08dc8ab97b37e80cd86025c2b}
+Queue Id for other operations \hypertarget{structqos__queue__cfg_afd37a80d7d3748ec6e8b6e28adc006b4}{\index{qos\-\_\-queue\-\_\-cfg@{qos\-\_\-queue\-\_\-cfg}!sched@{sched}}
+\index{sched@{sched}!qos_queue_cfg@{qos\-\_\-queue\-\_\-cfg}}
+\subsubsection[{sched}]{\setlength{\rightskip}{0pt plus 5cm}{\bf qos\-\_\-sched\-\_\-mode\-\_\-t} qos\-\_\-queue\-\_\-cfg\-::sched}}\label{structqos__queue__cfg_afd37a80d7d3748ec6e8b6e28adc006b4}
+Qo\-S scheduler mode -\/ Priority, W\-F\-Q \hypertarget{structqos__queue__cfg_a7dd1ff7c97cd7199ee77f331d31a541b}{\index{qos\-\_\-queue\-\_\-cfg@{qos\-\_\-queue\-\_\-cfg}!shaper@{shaper}}
+\index{shaper@{shaper}!qos_queue_cfg@{qos\-\_\-queue\-\_\-cfg}}
+\subsubsection[{shaper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf qos\-\_\-shaper\-\_\-t} qos\-\_\-queue\-\_\-cfg\-::shaper}}\label{structqos__queue__cfg_a7dd1ff7c97cd7199ee77f331d31a541b}
+Shaper Configuration \hypertarget{structqos__queue__cfg_a5606d7eca82540293ea53b343f0e55c3}{\index{qos\-\_\-queue\-\_\-cfg@{qos\-\_\-queue\-\_\-cfg}!status@{status}}
+\index{status@{status}!qos_queue_cfg@{qos\-\_\-queue\-\_\-cfg}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-queue\-\_\-cfg\-::status}}\label{structqos__queue__cfg_a5606d7eca82540293ea53b343f0e55c3}
+Operational status of the queue. Only valid on G\-E\-T \hypertarget{structqos__queue__cfg_a1571ed347d8821847dcf966c0e26d034}{\index{qos\-\_\-queue\-\_\-cfg@{qos\-\_\-queue\-\_\-cfg}!tc\-\_\-map@{tc\-\_\-map}}
+\index{tc\-\_\-map@{tc\-\_\-map}!qos_queue_cfg@{qos\-\_\-queue\-\_\-cfg}}
+\subsubsection[{tc\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}char qos\-\_\-queue\-\_\-cfg\-::tc\-\_\-map\mbox{[}{\bf M\-A\-X\-\_\-\-T\-C\-\_\-\-N\-U\-M}\mbox{]}}}\label{structqos__queue__cfg_a1571ed347d8821847dcf966c0e26d034}
+Which all Traffic Class(es) map to this Queue \hypertarget{structqos__queue__cfg_a4a188cdf7f60a129d2909fc6335f120b}{\index{qos\-\_\-queue\-\_\-cfg@{qos\-\_\-queue\-\_\-cfg}!weight@{weight}}
+\index{weight@{weight}!qos_queue_cfg@{qos\-\_\-queue\-\_\-cfg}}
+\subsubsection[{weight}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} qos\-\_\-queue\-\_\-cfg\-::weight}}\label{structqos__queue__cfg_a4a188cdf7f60a129d2909fc6335f120b}
+W\-F\-Q Weight 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qosal__queue__api_8h}{qosal\-\_\-queue\-\_\-api.\-h}\end{DoxyCompactItemize}

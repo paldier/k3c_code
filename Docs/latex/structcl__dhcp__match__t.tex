@@ -1,0 +1,86 @@
+\hypertarget{structcl__dhcp__match__t}{\section{cl\-\_\-dhcp\-\_\-match\-\_\-t Struct Reference}
+\label{structcl__dhcp__match__t}\index{cl\-\_\-dhcp\-\_\-match\-\_\-t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}}
+}
+
+
+D\-H\-C\-P match fields.  
+
+
+
+
+{\ttfamily \#include $<$qosal\-\_\-cl\-\_\-api.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{structcl__dhcp__match__t_a34232c984c0714c21469ae1194f2270f}{vendor\-\_\-classid} \mbox{[}\hyperlink{group__FAPI__QOS__CLASS_gab08625a5eeb8582d69b40054201d9116}{M\-A\-X\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-I\-D\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+\hyperlink{group__FAPI__QOS__CLASS_ga002c716c5dae6e4be5433e1f11659cdb}{str\-\_\-match\-\_\-mode\-\_\-t} \hyperlink{structcl__dhcp__match__t_ae881ec5da3e1f70dbb600f526c5698e0}{vendor\-\_\-classid\-\_\-mode}
+\item 
+char \hyperlink{structcl__dhcp__match__t_a09ecab3ee355fd73a5898de14c86d20d}{vendor\-\_\-classid\-\_\-v6} \mbox{[}\hyperlink{group__FAPI__QOS__CLASS_ga2f264f80b185aa3d6b10d73051b5ca33}{M\-A\-X\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-I\-D\-\_\-\-V6\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+uint32\-\_\-t \hyperlink{structcl__dhcp__match__t_a4226ed14571461835822f97c2f0ea85c}{vendor\-\_\-exclude}
+\item 
+char \hyperlink{structcl__dhcp__match__t_a470963491f6c59a80fd70132406a7085}{clientid} \mbox{[}\hyperlink{group__FAPI__QOS__CLASS_gaff8356674e70c7efac546eee41ed1651}{M\-A\-X\-\_\-\-C\-L\-I\-E\-N\-T\-I\-D\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+uint32\-\_\-t \hyperlink{structcl__dhcp__match__t_a3d01140b8ad2771af007bc6b338f67d9}{clientid\-\_\-exclude}
+\item 
+char \hyperlink{structcl__dhcp__match__t_a43948e837781a5411afbf92f86b6ef9d}{user\-\_\-classid} \mbox{[}\hyperlink{group__FAPI__QOS__CLASS_ga668aa676079b70d11fd2f1ef9044dcfb}{M\-A\-X\-\_\-\-U\-S\-E\-R\-\_\-\-C\-L\-A\-S\-S\-I\-D\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+uint32\-\_\-t \hyperlink{structcl__dhcp__match__t_a4a9acef87783b241f88bfb9406401b51}{user\-\_\-classid\-\_\-exclude}
+\item 
+char \hyperlink{structcl__dhcp__match__t_a2fcd52a023b1b4afee4ffbf806a361a5}{vendor\-\_\-specific\-\_\-info} \mbox{[}\hyperlink{group__FAPI__QOS__CLASS_ga490480957ae3800d1b1af04261aea96f}{M\-A\-X\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-I\-N\-F\-O\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+uint32\-\_\-t \hyperlink{structcl__dhcp__match__t_a7bf3b9316d154585b7748ac9502c52e2}{vendor\-\_\-specific\-\_\-info\-\_\-exclude}
+\item 
+\hyperlink{structcl__param__in__ex__t}{cl\-\_\-param\-\_\-in\-\_\-ex\-\_\-t} \hyperlink{structcl__dhcp__match__t_a1b012eaaabefd67b6a9b251270b48666}{param\-\_\-in\-\_\-ex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\-H\-C\-P match fields. 
+
+\begin{DoxyNote}{Note}
+The D\-H\-C\-P match fields are matched against D\-H\-C\-P Request and response messages from/to a Host, and then applied to all traffic from/to that I\-P address (Src or Dst) 
+\end{DoxyNote}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structcl__dhcp__match__t_a470963491f6c59a80fd70132406a7085}{\index{cl\-\_\-dhcp\-\_\-match\-\_\-t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}!clientid@{clientid}}
+\index{clientid@{clientid}!cl_dhcp_match_t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}}
+\subsubsection[{clientid}]{\setlength{\rightskip}{0pt plus 5cm}char cl\-\_\-dhcp\-\_\-match\-\_\-t\-::clientid\mbox{[}{\bf M\-A\-X\-\_\-\-C\-L\-I\-E\-N\-T\-I\-D\-\_\-\-L\-E\-N}\mbox{]}}}\label{structcl__dhcp__match__t_a470963491f6c59a80fd70132406a7085}
+Client Id string to match against \hypertarget{structcl__dhcp__match__t_a3d01140b8ad2771af007bc6b338f67d9}{\index{cl\-\_\-dhcp\-\_\-match\-\_\-t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}!clientid\-\_\-exclude@{clientid\-\_\-exclude}}
+\index{clientid\-\_\-exclude@{clientid\-\_\-exclude}!cl_dhcp_match_t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}}
+\subsubsection[{clientid\-\_\-exclude}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t cl\-\_\-dhcp\-\_\-match\-\_\-t\-::clientid\-\_\-exclude}}\label{structcl__dhcp__match__t_a3d01140b8ad2771af007bc6b338f67d9}
+Exclude Flag or Invert match for Client Id \hypertarget{structcl__dhcp__match__t_a1b012eaaabefd67b6a9b251270b48666}{\index{cl\-\_\-dhcp\-\_\-match\-\_\-t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}!param\-\_\-in\-\_\-ex@{param\-\_\-in\-\_\-ex}}
+\index{param\-\_\-in\-\_\-ex@{param\-\_\-in\-\_\-ex}!cl_dhcp_match_t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}}
+\subsubsection[{param\-\_\-in\-\_\-ex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-param\-\_\-in\-\_\-ex\-\_\-t} cl\-\_\-dhcp\-\_\-match\-\_\-t\-::param\-\_\-in\-\_\-ex}}\label{structcl__dhcp__match__t_a1b012eaaabefd67b6a9b251270b48666}
+Bit-\/map to indicate included and excluded parameters of D\-H\-C\-P \hypertarget{structcl__dhcp__match__t_a43948e837781a5411afbf92f86b6ef9d}{\index{cl\-\_\-dhcp\-\_\-match\-\_\-t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}!user\-\_\-classid@{user\-\_\-classid}}
+\index{user\-\_\-classid@{user\-\_\-classid}!cl_dhcp_match_t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}}
+\subsubsection[{user\-\_\-classid}]{\setlength{\rightskip}{0pt plus 5cm}char cl\-\_\-dhcp\-\_\-match\-\_\-t\-::user\-\_\-classid\mbox{[}{\bf M\-A\-X\-\_\-\-U\-S\-E\-R\-\_\-\-C\-L\-A\-S\-S\-I\-D\-\_\-\-L\-E\-N}\mbox{]}}}\label{structcl__dhcp__match__t_a43948e837781a5411afbf92f86b6ef9d}
+User Class Id string to match against \hypertarget{structcl__dhcp__match__t_a4a9acef87783b241f88bfb9406401b51}{\index{cl\-\_\-dhcp\-\_\-match\-\_\-t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}!user\-\_\-classid\-\_\-exclude@{user\-\_\-classid\-\_\-exclude}}
+\index{user\-\_\-classid\-\_\-exclude@{user\-\_\-classid\-\_\-exclude}!cl_dhcp_match_t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}}
+\subsubsection[{user\-\_\-classid\-\_\-exclude}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t cl\-\_\-dhcp\-\_\-match\-\_\-t\-::user\-\_\-classid\-\_\-exclude}}\label{structcl__dhcp__match__t_a4a9acef87783b241f88bfb9406401b51}
+Exclude Flag or Invert match for User Class Id \hypertarget{structcl__dhcp__match__t_a34232c984c0714c21469ae1194f2270f}{\index{cl\-\_\-dhcp\-\_\-match\-\_\-t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}!vendor\-\_\-classid@{vendor\-\_\-classid}}
+\index{vendor\-\_\-classid@{vendor\-\_\-classid}!cl_dhcp_match_t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}}
+\subsubsection[{vendor\-\_\-classid}]{\setlength{\rightskip}{0pt plus 5cm}char cl\-\_\-dhcp\-\_\-match\-\_\-t\-::vendor\-\_\-classid\mbox{[}{\bf M\-A\-X\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-I\-D\-\_\-\-L\-E\-N}\mbox{]}}}\label{structcl__dhcp__match__t_a34232c984c0714c21469ae1194f2270f}
+Vendor Id string to match against \hypertarget{structcl__dhcp__match__t_ae881ec5da3e1f70dbb600f526c5698e0}{\index{cl\-\_\-dhcp\-\_\-match\-\_\-t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}!vendor\-\_\-classid\-\_\-mode@{vendor\-\_\-classid\-\_\-mode}}
+\index{vendor\-\_\-classid\-\_\-mode@{vendor\-\_\-classid\-\_\-mode}!cl_dhcp_match_t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}}
+\subsubsection[{vendor\-\_\-classid\-\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf str\-\_\-match\-\_\-mode\-\_\-t} cl\-\_\-dhcp\-\_\-match\-\_\-t\-::vendor\-\_\-classid\-\_\-mode}}\label{structcl__dhcp__match__t_ae881ec5da3e1f70dbb600f526c5698e0}
+Vendor Id match mode -\/ Exact, Prefix, Suffix, Substring \hypertarget{structcl__dhcp__match__t_a09ecab3ee355fd73a5898de14c86d20d}{\index{cl\-\_\-dhcp\-\_\-match\-\_\-t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}!vendor\-\_\-classid\-\_\-v6@{vendor\-\_\-classid\-\_\-v6}}
+\index{vendor\-\_\-classid\-\_\-v6@{vendor\-\_\-classid\-\_\-v6}!cl_dhcp_match_t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}}
+\subsubsection[{vendor\-\_\-classid\-\_\-v6}]{\setlength{\rightskip}{0pt plus 5cm}char cl\-\_\-dhcp\-\_\-match\-\_\-t\-::vendor\-\_\-classid\-\_\-v6\mbox{[}{\bf M\-A\-X\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-I\-D\-\_\-\-V6\-\_\-\-L\-E\-N}\mbox{]}}}\label{structcl__dhcp__match__t_a09ecab3ee355fd73a5898de14c86d20d}
+Vendor Id for D\-H\-C\-Pv6 string to match against \hypertarget{structcl__dhcp__match__t_a4226ed14571461835822f97c2f0ea85c}{\index{cl\-\_\-dhcp\-\_\-match\-\_\-t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}!vendor\-\_\-exclude@{vendor\-\_\-exclude}}
+\index{vendor\-\_\-exclude@{vendor\-\_\-exclude}!cl_dhcp_match_t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}}
+\subsubsection[{vendor\-\_\-exclude}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t cl\-\_\-dhcp\-\_\-match\-\_\-t\-::vendor\-\_\-exclude}}\label{structcl__dhcp__match__t_a4226ed14571461835822f97c2f0ea85c}
+Exclude Flag or Invert match for Vendor Class Id \hypertarget{structcl__dhcp__match__t_a2fcd52a023b1b4afee4ffbf806a361a5}{\index{cl\-\_\-dhcp\-\_\-match\-\_\-t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}!vendor\-\_\-specific\-\_\-info@{vendor\-\_\-specific\-\_\-info}}
+\index{vendor\-\_\-specific\-\_\-info@{vendor\-\_\-specific\-\_\-info}!cl_dhcp_match_t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}}
+\subsubsection[{vendor\-\_\-specific\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}char cl\-\_\-dhcp\-\_\-match\-\_\-t\-::vendor\-\_\-specific\-\_\-info\mbox{[}{\bf M\-A\-X\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-I\-N\-F\-O\-\_\-\-L\-E\-N}\mbox{]}}}\label{structcl__dhcp__match__t_a2fcd52a023b1b4afee4ffbf806a361a5}
+Vendor Specific Info string to match against \hypertarget{structcl__dhcp__match__t_a7bf3b9316d154585b7748ac9502c52e2}{\index{cl\-\_\-dhcp\-\_\-match\-\_\-t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}!vendor\-\_\-specific\-\_\-info\-\_\-exclude@{vendor\-\_\-specific\-\_\-info\-\_\-exclude}}
+\index{vendor\-\_\-specific\-\_\-info\-\_\-exclude@{vendor\-\_\-specific\-\_\-info\-\_\-exclude}!cl_dhcp_match_t@{cl\-\_\-dhcp\-\_\-match\-\_\-t}}
+\subsubsection[{vendor\-\_\-specific\-\_\-info\-\_\-exclude}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t cl\-\_\-dhcp\-\_\-match\-\_\-t\-::vendor\-\_\-specific\-\_\-info\-\_\-exclude}}\label{structcl__dhcp__match__t_a7bf3b9316d154585b7748ac9502c52e2}
+Exclude Flag or Invert match for Vendor Specific Info 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qosal__cl__api_8h}{qosal\-\_\-cl\-\_\-api.\-h}\end{DoxyCompactItemize}

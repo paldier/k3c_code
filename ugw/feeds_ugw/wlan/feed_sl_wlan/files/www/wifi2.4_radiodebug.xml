@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view viewid="wifidebug">
+  <header>
+    <image>images/icons/wireless.png</image>
+    <name>Advanced</name>
+    <description>Settings to configure debug parameters of radio</description>
+  </header>
+  <object viewtype="form">
+    <object name="Device.WiFi.Radio.1" title="Debug Paramters" >
+      <row>
+        <col>
+          <parameter name="GuardInterval" required="false" type="dropdown" validvalues="400nsec,800nsec,Auto" webname="Guard Interval"/>
+        </col>
+        <col>
+          <parameter name="PreambleType" required="false" type="dropdown" validvalues="short,long,Auto" webname="Preamble"/>
+        </col>
+      </row>
+    </object>
+    <object name="Device.WiFi.Radio.1.X_LANTIQ_COM_Vendor" >
+      <row>
+        <col>
+          <parameter name="Dot11dEnable" required="false" type="toggle" webname="80211d"/>
+        </col>
+        <col>
+          <parameter name="Dot11nProtection" required="false" type="dropdown" validvalues="None,RTS/CTS,CTS2Self" webname="Protection"/>
+        </col>
+      </row>
+        <row>
+        <col>
+          <parameter name="WaveOfflineCalibrationMask" required="false" type="string"  webname="Offline Calibration Mask"/>
+        </col>
+        </row>
+        <row>
+         <col>
+          <parameter name="WaveOnlineCalibrationMask" required="false" type="string"  webname="Online Calibration Mask"/>
+        </col>
+      </row>
+        <row>
+        <col>
+          <parameter name="WaveChannelWidthMask24" required="false" type="dropdown" validvalues="0,1,2,3" webname="Channel Width Mask- 2.4Ghz"/>
+        </col>
+        <col>
+          <parameter name="WaveChannelWidthMask5" required="false" type="dropdown" validvalues="0,1,2,3" webname="Channel Width Mask- 5Ghz"/>
+        </col>
+      </row>
+      <row>
+        <col>
+          <parameter name="WaveFastpathEnabled" required="false" type="toggle" webname="GSWIP Fastpath"/>
+        </col>
+        <col>
+          <parameter name="WaveACSNumbssCoef" required="false" type="string" webname="ACS Numbss Coefficients"/>
+        </col>
+      </row>
+      <row>
+        <col>
+          <parameter name="WaveFastRecoveryEnabled" required="false" type="toggle" webname="Fast Recovery Enable"/>
+        </col>
+        <col>
+          <parameter name="WaveFastRecoveryLimit" required="false" type="string" webname="Fast Recovery Limit"/>
+        </col>
+      </row>
+      <row>
+        <col>
+          <parameter name="WaveFullRecoveryEnabled" required="false" type="toggle" webname="Full Recovery Enable"/>
+        </col>
+        <col>
+          <parameter name="WaveFullRecoveryLimit" required="false" type="string" webname="Full Recovery Limit"/>
+        </col>
+      </row>
+      <row>
+        <col>
+          <parameter name="WaveCompleteRecoveryEnabled" required="false" type="toggle" webname="Complete Recovery Enable"/>
+        </col>
+        <col>
+          <parameter name="WaveRecoveryTimer" required="false" type="string" webname="Recovery Timer"/>
+        </col>
+      </row>
+      <row>
+        <col>
+          <parameter name="WaveAutoRecoveryDumpsEnabled" required="false" type="toggle" webname="Save FW Dumps"/>
+        </col>
+        <col>
+          <parameter name="WaveRecoveryNumOfDumps" required="false" type="string" webname="Number of Dumps to Save"/>
+        </col>
+      </row>
+      <row>
+        <col>
+          <parameter name="WaveScriptsProfilingEnabled" required="false" type="toggle"  webname="Enable Script Profiling"/>
+        </col>
+        <col>
+          <parameter name="WaveScriptsDebugLevel" required="false" type="string"  webname="Scripts Debug Level"/>
+        </col>
+        <col>
+          <parameter name="WaveScriptsDebugOutput" required="false" type="string" webname="Scripts Debug Output"/>
+        </col>
+      </row>
+      <parameter name="WaveDriverDebugLevelConsole" required="false" type="number"  webname="Driver Debug Level"/>
+      <parameter name="WaveTxOpEnabled" required="false" type="toggle"  webname="Enable TXOP"/>
+      <row>
+      <col>
+        <parameter name="WaveHtNumMsdusInAmsdu" required="false" type="dropdown" validvalues="2,3,4,5,6,7" webname="HT Number MSDUs in AMSDU"/>
+      </col>
+      <col>
+        <parameter name="WaveVhtNumMsdusInAmsdu" required="false" type="dropdown" validvalues="2,3,4,5,6,7" webname="VHT Number MSDUs in AMSDU"/>
+       </col>
+      </row>
+      <parameter name="WaveAssocRespRxMcsMask" required="false" type="toggle"  webname="Mask out STA RX MCS in Assoc Rsp"/>
+      <row>
+        <col>
+          <parameter name="CoexEnabled" required="false" type="toggle"  webname="20/40 Mhz Co-Existence Enable"/>
+        </col>
+        <col>
+          <parameter name="WaveIgnore40MhzIntolerant" required="false" type="toggle"  webname="Ignore 40MHz Intolerant"/>
+        </col>
+      </row>
+    </object>
+    <parameter name="Modify" type="submitbutton" routeurl="Apply($event)" webname="Apply"/>
+  </object>
+</view>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structPORTcfg__t" kind="struct" prot="public">
+    <compoundname>PORTcfg_t</compoundname>
+    <includes refid="fapi__sys__common_8h" local="no">fapi_sys_common.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structPORTcfg__t_1a6ebe05014701540004f90b309c5b3984" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t PORTcfg_t::eLink</definition>
+        <argsstring></argsstring>
+        <name>eLink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="306" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structPORTcfg__t_1a7208ef7a7d42097309fb0cde7258fc4f" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t PORTcfg_t::eSpeed</definition>
+        <argsstring></argsstring>
+        <name>eSpeed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="307" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structPORTcfg__t_1ac005edcf55998935eb93042c68f128e6" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t PORTcfg_t::DuplexForce</definition>
+        <argsstring></argsstring>
+        <name>DuplexForce</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="308" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structPORTcfg__t_1aa84dc9eb06b3d90d88cf53f85ad23951" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t PORTcfg_t::eEnable</definition>
+        <argsstring></argsstring>
+        <name>eEnable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="309" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure describing switch port configuration parameters. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="305" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="305" bodyend="310"/>
+    <listofallmembers>
+      <member refid="structPORTcfg__t_1ac005edcf55998935eb93042c68f128e6" prot="public" virt="non-virtual"><scope>PORTcfg_t</scope><name>DuplexForce</name></member>
+      <member refid="structPORTcfg__t_1aa84dc9eb06b3d90d88cf53f85ad23951" prot="public" virt="non-virtual"><scope>PORTcfg_t</scope><name>eEnable</name></member>
+      <member refid="structPORTcfg__t_1a6ebe05014701540004f90b309c5b3984" prot="public" virt="non-virtual"><scope>PORTcfg_t</scope><name>eLink</name></member>
+      <member refid="structPORTcfg__t_1a7208ef7a7d42097309fb0cde7258fc4f" prot="public" virt="non-virtual"><scope>PORTcfg_t</scope><name>eSpeed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

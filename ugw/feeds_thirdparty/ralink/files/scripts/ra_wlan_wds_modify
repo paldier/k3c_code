@@ -1,0 +1,89 @@
+#!/bin/sh
+
+if [ ! "$ENVLOADED" ]; then
+        if [ -r /etc/rc.conf ]; then
+                 . /etc/rc.conf 2> /dev/null
+                ENVLOADED="1"
+        fi
+fi
+
+if [ ! "$CONFIGLOADED" ]; then
+        if [ -r /etc/rc.d/config.sh ]; then
+                . /etc/rc.d/config.sh 2>/dev/null
+                CONFIGLOADED="1"
+        fi
+fi
+
+RA_IF=""
+WLAN_VENDOR_NAME=""
+find_vendor_from_index() {
+  eval radioCpeId='$'wlmn_${1}_radioCpeId
+  if [ "$radioCpeId" = "1" ]; then
+     radioPrefix=0
+  elif [ "$radioCpeId" = "2" ]; then
+     radioPrefix=1
+  fi
+  eval WLAN_VENDOR_NAME='$'wlss_$radioPrefix'_prefixScript'
+  #echo "WLAN_VENDOR_NAME: $WLAN_VENDOR_NAME"
+}
+
+find_ra_if_from_index() {
+   eval CPEID='$'wlmn_${1}'_cpeId'
+   ra_dev=`/usr/sbin/status_oper GET "RA_MAP" "$CPEID"`
+   RA_IF=${ra_dev:2}
+   #echo "RA_IF $RA_IF "
+}
+
+find_ra_if_from_index $1
+eval wds_enable='$'wlwds_${1}_enable
+if [ "$wds_enable" = "0" ] && [ "$RA_IF" != "0" ]; then
+        echo "Ralink WDS disabled"
+	/sbin/ifconfig wds${RA_IF} down
+        /usr/sbin/brctl delif br0 wds${RA_IF} >/dev/null 2>&1
+	/etc/rc.d/ra_wlan_ap_start $1
+        exit
+fi
+
+		/etc/rc.d/ra_wlan_ap_start $1
+                i=0
+                eval wlan_main_Count='$'wlan_main_Count
+                while [ $i -lt $wlan_main_Count ]
+                do
+                 find_vendor_from_index $i
+                  if [ "$WLAN_VENDOR_NAME" = "ra" ]; then
+                     find_ra_if_from_index $i
+                     if [ "${RA_IF}" != "" ]; then
+			     iwpriv ra${RA_IF} set INF_AMAZON_SE_PPA=0
+			     /usr/sbin/brctl delif br0 wds${RA_IF} >/dev/null 2>&1
+                             /sbin/ifconfig wds${RA_IF} down
+			     /usr/sbin/brctl delif br0 ra${RA_IF} >/dev/null 2>&1
+                             /sbin/ifconfig ra${RA_IF} down
+				eval CPEID='$'wlmn_${i}'_cpeId'
+                                /usr/sbin/status_oper -d SET "RA_MAP" "$CPEID"
+                     fi
+                  fi
+                  i=`expr $i + 1`
+                done
+
+	rmmod rt5592ap
+	sleep 1 
+	insmod /lib/modules/`uname -r`/rt5592ap.ko
+
+	     eval ap_count='$'wlan_main_Count
+	     ra_index=0
+             j=0
+             while [ $j -lt $ap_count ]
+             do
+		find_vendor_from_index $j
+                if [ "$WLAN_VENDOR_NAME" = "ra" ]; then
+
+                   eval CPEID='$'wlmn_$j'_cpeId'
+                   eval RAIF=ra${ra_index}
+                   echo "Starting Ralink interface $RAIF $j"
+                   /usr/sbin/status_oper -a SET "RA_MAP" "$CPEID" "$RAIF"
+                                                        /etc/rc.d/ra_wlan_ap_start $j
+                   ra_index=`expr $ra_index + 1`
+
+                fi
+                j=`expr $j + 1`
+             done

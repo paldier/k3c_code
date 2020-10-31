@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <name>Management Server</name>
+    <object title="Management Server" name="Device.ManagementServer" viewtype="form">
+        <parameter name="EnableCWMP"  type="checkbox" writable="true" webname="EnableCWMP" ></parameter>
+        <parameter name="URL" type="string" writable="true" webname="URL" ></parameter>
+        <parameter name="Username" type="string" writable="true" webname="Username" ></parameter>
+        <parameter name="Password" type="string" writable="true" webname="Password" ></parameter>
+        <parameter name="PeriodicInformEnable" type="string" writable="true" webname="PeriodicInformEnable" ></parameter>
+        <parameter name="PeriodicInformInterval" type="string" writable="true" webname="PeriodicInformInterval" ></parameter>
+        <parameter name="PeriodicInformTime" type="string" writable="true" webname="PeriodicInformTime" ></parameter>
+        <parameter name="ConnectionRequestURL" required="false" type="string" access="readonly" webname="ConnectionRequestURL" ></parameter>
+        <parameter name="ConnectionRequestUsername" type="string" writable="true" webname="ConnectionRequestUsername" ></parameter>
+        <parameter name="ConnectionRequestPassword" type="string" writable="true" webname="ConnectionRequestPassword" ></parameter>
+        <parameter name="UpgradesManaged" required="false" type="checkbox" writable="true" webname="UpgradesManaged" ></parameter>
+        <parameter name="CWMPRetryMinimumWaitInterval" type="string" writable="true" webname="CWMPRetryMinimumWaitInterval" ></parameter>
+        <parameter name="CWMPRetryIntervalMultiplier" type="string" writable="true" webname="CWMPRetryIntervalMultiplier" ></parameter>
+        <parameter  name="Modify"  action="post" routeurl="Apply($event)" type="submitbutton" webname="Modify" maxlen="64"></parameter>
+        <parameter  name="Cancel"  routeurl="reset()" action="post" type="submitbutton" webname="Reset" maxlen="64"></parameter>
+    </object>
+</view>
+

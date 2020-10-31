@@ -1,0 +1,83 @@
+#!/bin/sh
+
+if [ ! "$ENVLOADED" ]; then
+	if [ -r /etc/rc.conf ]; then
+		. /etc/rc.conf 2> /dev/null
+		ENVLOADED="1"
+	fi
+fi
+
+if [ ! "$CONFIGLOADED" ]; then
+	if [ -r /etc/rc.d/config.sh ]; then
+		. /etc/rc.d/config.sh 2>/dev/null
+		CONFIGLOADED="1"
+	fi
+fi
+
+RA_IF=""
+find_ra_if_from_index() {
+   eval CPEID='$'wlmn_${1}'_cpeId'
+   ra_dev=`/usr/sbin/status_oper GET "RA_MAP" "$CPEID"`
+   RA_IF=${ra_dev:2}
+}
+
+find_ra_if_from_index $1
+echo "hsur current ralink_inf_idx is ${RA_IF}"
+
+   # After sourcing rc.conf - read out the settings.
+	Comm_line='ACLClearAll=1'
+	iwpriv ra${RA_IF} set $Comm_line
+	echo "iwpriv ra${RA_IF} set $Comm_line"
+
+	list_inc=0
+	real_count=0	
+	access_list=""
+	eval access_list_count='$'wlan_mac_control_Count
+	while [ $list_inc -lt $access_list_count ]
+	do		
+		eval temp='$'wlmacctrl_${list_inc}_macAddr
+		eval pcpeid='$'wlmacctrl_${list_inc}_pcpeId
+		if [ "$pcpeid" = "$ralink_cpeid" ]; then
+		
+			Comm_line='ACLAddEntry='${temp}
+			iwpriv ra${RA_IF} set $Comm_line
+			echo "iwpriv ra${RA_IF} set $Comm_line"
+			#if [ "$real_count" != "0" ]; then
+			#	access_list=${access_list}';'${temp}
+			#	real_count=`expr $real_count + 1`
+			#else
+			#	access_list=${temp}
+			#	real_count=`expr $real_count + 1`
+			#fi
+		fi
+
+		#if [ "$list_inc" != "0" ]; then
+		#	access_list=${access_list}';'${temp}
+		#else
+		#	access_list=${temp}
+		#fi		
+	
+		list_inc=`expr $list_inc + 1`
+	
+	done
+	#echo "access_list=$access_list"
+	eval Mac_cntrl_type_tmp='$'wlsec_${1}_macAddrCntrlType #AccessPolicy
+   if [ "$Mac_cntrl_type_tmp" = "0" ]; then
+      eval Mac_cntrl_type="1"
+   elif [ "$Mac_cntrl_type_tmp" = "1" ]; then
+      eval Mac_cntrl_type="2"
+   elif [ "$Mac_cntrl_type_tmp" = "2" ]; then
+      eval Mac_cntrl_type="0"
+   fi
+	Comm_line='AccessPolicy='${Mac_cntrl_type}
+	iwpriv ra${RA_IF} set $Comm_line	
+
+	#echo "iwpriv ra${ralink_inf_idx} set $Comm_line"
+	#Comm_line='AccessControlList='${access_list}
+	#iwpriv ra${ralink_inf_idx} set $Comm_line
+
+	echo "iwpriv ra${RA_IF} set $Comm_line"
+
+	#iwpriv ra0 set $Comm_line
+	#iwpriv ra1 set $Comm_line
+	#iwpriv ra2 set $Comm_line

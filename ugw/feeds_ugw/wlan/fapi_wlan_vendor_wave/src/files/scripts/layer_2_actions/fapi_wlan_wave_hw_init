@@ -1,0 +1,105 @@
+#!/bin/sh
+# Prepare Wave environment and initiate Wave drivers
+# Needed object: Radio.Vendor
+
+# Source library script
+. /opt/lantiq/wave/scripts/fapi_wlan_wave_init_platform.sh
+
+print2log DBG "fapi_wlan_wave_hw_init: args: $*"
+
+# Create the temp directory
+mkdir -p $WAVE_TMP
+
+# Create symbolic link for the library script
+cp -s /opt/lantiq/wave/scripts/fapi_wlan_wave_init_platform.sh ${WAVE_TMP}/fapi_wlan_wave_init_platform.sh
+
+# DEBUG: TODO: REMOVE
+#cp ${IN_CONF} ${WAVE_TMP}/in_conf_init
+
+# Map the object indexes to the received object in the in.conf file
+radio_vendor_index=`map_param_index Object $RADIO_VENDOR_OBJECT`
+# Get the next object index to use
+next_object_index=`get_next_object_index`
+
+# Count number of Wave interfaces
+. $ETC_PATH/fapi_wlan_wave_discover.sh
+wave_count=$((PCI_LTQ_COUNT+AHB_WLAN_COUNT))
+
+if [ $wave_count -gt 0 ]; then
+	# Configure Hotplug
+	echo /opt/lantiq/sbin/hotplug > /proc/sys/kernel/hotplug
+
+	# Bringing up the RT Logger
+	(. $ETC_PATH/fapi_wlan_wave_init_rtlogger.sh should_run $radio_vendor_index) && (. $ETC_PATH/fapi_wlan_wave_init_rtlogger.sh start $radio_vendor_index)
+
+	# Get calibration file from FLASH
+	(. $ETC_PATH/fapi_wlan_wave_init_eeprom.sh should_run) && (. $ETC_PATH/fapi_wlan_wave_init_eeprom.sh start)
+
+	# Create softlinks needed in /tmp
+	(. $ETC_PATH/fapi_wlan_wave_init_links.sh should_run $radio_vendor_index) && (. $ETC_PATH/fapi_wlan_wave_init_links.sh start $radio_vendor_index)
+
+	# Insmod WAVE driver
+	(. $ETC_PATH/fapi_wlan_wave_init_driver.sh should_run ap $radio_vendor_index $wave_count) && (. $ETC_PATH/fapi_wlan_wave_init_driver.sh start ap $radio_vendor_index $wave_count)
+
+	# Read country from EEPROM
+	eeprom=`api_wrapper get iwpriv wlan0 gEEPROM`
+	country_code=`echo "$eeprom" | sed -n '/EEPROM country:/{s/EEPROM country:.*\([A-Z?][A-Z?]\)/\1/p}'`
+	
+	if [ -z "$country_code" ]; then
+		print2log ALERT "fapi_wlan_wave_hw_init: Country code is empty. EEPROM or calibration file might be missing"
+		echo "fapi_wlan_wave_hw_init: Country code is empty. EEPROM or calibration file might be missing" >> $wave_init_failure
+		exit 1
+	fi
+		
+	# Insmod hotspot drivers
+	[ -e $ETC_PATH/wave_wifi_parp_ctrl.sh ] && (. $ETC_PATH/wave_wifi_parp_ctrl.sh start)
+	[ -e $ETC_PATH/wave_wifi_l2f_ctrl.sh ] && (. $ETC_PATH/wave_wifi_l2f_ctrl.sh start)
+	
+	# Read the names of the interfaces created
+	interfaces_created=`ls /proc/net/mtlk | grep wlan`
+	for interface in $interfaces_created; do
+		# Create HW.ini
+		(. $ETC_PATH/fapi_wlan_wave_init_rdlim.sh should_run $interface) && (. $ETC_PATH/fapi_wlan_wave_init_rdlim.sh start $interface)
+
+		# Restart drvhlpr
+		(. $ETC_PATH/fapi_wlan_wave_init_drvhlpr.sh restart $interface $radio_vendor_index)
+		
+		# Save the FW recovery parameters from Radio.Vendor to a temp conf file for each radio
+		save_recovery_params $radio_vendor_index $interface
+		
+		# Save the CoC parameters from Radio.Vendor to a temp conf file for each radio
+		save_coc_params $radio_vendor_index $interface
+	done
+fi
+
+# Create the output configuration file
+cat /dev/null > ${OUT_CONF}
+
+# Map indexes for the objects to return:
+# wifi, radio for wlan0
+wifi_index=$next_object_index
+next_object_index=$((next_object_index+1))
+radio_index=$next_object_index
+next_object_index=$((next_object_index+1))
+
+# Update number of Radio interfaces created
+update_conf_out "Object_${wifi_index}" "$WIFI_OBJECT"
+update_conf_out "RadioNumberOfEntries_${wifi_index}" "$wave_count"
+
+# Update the names of the interfaces created
+for interface in $interfaces_created; do
+	update_conf_out "Object_${radio_index}" "$RADIO_OBJECT"
+	update_conf_out "Name_${radio_index}" "$interface"
+	# Update regulatory domain only if country is set in the EEPROM
+	[ -n "$country_code" ] && [ "$country_code" != "??" ] && update_conf_out "RegulatoryDomain_$radio_index)" "$country_code"
+	radio_index=$next_object_index
+	next_object_index=$((next_object_index+1))
+done
+
+# Configuration is completed successfully
+update_conf_out "wlan_configuration_status" "success"
+
+# DEBUG: TODO: REMOVE
+#cp ${OUT_CONF} ${WAVE_TMP}/out_conf_init
+
+print2log DBG "fapi_wlan_wave_hw_init done"

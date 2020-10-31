@@ -1,0 +1,79 @@
+\hypertarget{structdsl__fapi__line__stats__interval__obj}{\section{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj Struct Reference}
+\label{structdsl__fapi__line__stats__interval__obj}\index{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj@{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj}}
+}
+
+
+{\ttfamily \#include $<$dsl\-\_\-fapi.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{structdsl__fapi__line__stats__interval__obj_ab7bf52b973364ae7b0c254ef31ab18a8}{errored\-\_\-secs}
+\item 
+unsigned int \hyperlink{structdsl__fapi__line__stats__interval__obj_aa33dade3d0503936c3f3cabc64447b8e}{severely\-\_\-errored\-\_\-secs}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\-S\-L Line object total statistics declaration, based on T\-R-\/181 definitions. D\-S\-L Line object showtime statistics declaration, based on T\-R-\/181 definitions. D\-S\-L Line object last showtime statistics declaration, based on T\-R-\/181 definitions. D\-S\-L Line object current day statistics declaration, based on T\-R-\/181 definitions. D\-S\-L Line object quarter hour statistics declaration, based on T\-R-\/181 definitions. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structdsl__fapi__line__stats__interval__obj_ab7bf52b973364ae7b0c254ef31ab18a8}{\index{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj@{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj}!errored\-\_\-secs@{errored\-\_\-secs}}
+\index{errored\-\_\-secs@{errored\-\_\-secs}!dsl_fapi_line_stats_interval_obj@{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj}}
+\subsubsection[{errored\-\_\-secs}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj\-::errored\-\_\-secs}}\label{structdsl__fapi__line__stats__interval__obj_ab7bf52b973364ae7b0c254ef31ab18a8}
+Common data structure for the several objects.
+\begin{DoxyItemize}
+\item Stats.\-Total\-: Total number of errored seconds. \begin{DoxyNote}{Note}
+(E\-S-\/\-L as defined in I\-T\-U-\/\-T Rec. \mbox{[}G.\-997.\-1\mbox{]}).
+\end{DoxyNote}
+
+\item Stats.\-Showtime\-: Number of errored seconds since the most recent D\-S\-L Showtime. \begin{DoxyNote}{Note}
+(E\-S-\/\-L as defined in I\-T\-U-\/\-T Rec. \mbox{[}G.\-997.\-1\mbox{]}).
+\end{DoxyNote}
+
+\item Stats.\-Last\-Showtime\-: Number of errored seconds since the second most recent D\-S\-L Showtime. \begin{DoxyNote}{Note}
+(E\-S-\/\-L as defined in I\-T\-U-\/\-T Rec. \mbox{[}G.\-997.\-1\mbox{]}).
+\end{DoxyNote}
+
+\item Stats.\-Current\-Day\-: Number of errored seconds accumulated during the current day. \begin{DoxyNote}{Note}
+(E\-S-\/\-L as defined in I\-T\-U-\/\-T Rec. \mbox{[}G.\-997.\-1\mbox{]}).
+\end{DoxyNote}
+
+\item Stats.\-Quarter\-Hour\-: Number of errored seconds accumulated during the current quarter hour. \begin{DoxyNote}{Note}
+(E\-S-\/\-L as defined in I\-T\-U-\/\-T Rec. \mbox{[}G.\-997.\-1\mbox{]}). 
+
+This parameter is O\-P\-T\-I\-O\-N\-A\-L at the G and S/\-T interfaces in G.\-997.\-1 Amendment 1. 
+\end{DoxyNote}
+
+\end{DoxyItemize}\hypertarget{structdsl__fapi__line__stats__interval__obj_aa33dade3d0503936c3f3cabc64447b8e}{\index{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj@{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj}!severely\-\_\-errored\-\_\-secs@{severely\-\_\-errored\-\_\-secs}}
+\index{severely\-\_\-errored\-\_\-secs@{severely\-\_\-errored\-\_\-secs}!dsl_fapi_line_stats_interval_obj@{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj}}
+\subsubsection[{severely\-\_\-errored\-\_\-secs}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj\-::severely\-\_\-errored\-\_\-secs}}\label{structdsl__fapi__line__stats__interval__obj_aa33dade3d0503936c3f3cabc64447b8e}
+Common data structure for the several objects.
+\begin{DoxyItemize}
+\item Stats.\-Total\-: Total number of severely errored seconds. \begin{DoxyNote}{Note}
+(S\-E\-S-\/\-L as defined in I\-T\-U-\/\-T Rec. \mbox{[}G.\-997.\-1\mbox{]}).
+\end{DoxyNote}
+
+\item Stats.\-Showtime\-: Number of severely errored seconds since the most recent D\-S\-L Showtime. \begin{DoxyNote}{Note}
+(S\-E\-S-\/\-L as defined in I\-T\-U-\/\-T Rec. \mbox{[}G.\-997.\-1\mbox{]}).
+\end{DoxyNote}
+
+\item Stats.\-Last\-Showtime\-: Number of severely errored seconds since the second most recent D\-S\-L Showtime. \begin{DoxyNote}{Note}
+(S\-E\-S-\/\-L as defined in I\-T\-U-\/\-T Rec. \mbox{[}G.\-997.\-1\mbox{]}).
+\end{DoxyNote}
+
+\item Stats.\-Current\-Day\-: Number of severely errored seconds accumulated during the current day. \begin{DoxyNote}{Note}
+(S\-E\-S-\/\-L as defined in I\-T\-U-\/\-T Rec. \mbox{[}G.\-997.\-1\mbox{]}).
+\end{DoxyNote}
+
+\item Stats.\-Quarter\-Hour\-: Number of severely errored seconds accumulated during the current quarter hour. \begin{DoxyNote}{Note}
+(S\-E\-S-\/\-L as defined in I\-T\-U-\/\-T Rec. \mbox{[}G.\-997.\-1\mbox{]}). 
+
+This parameter is O\-P\-T\-I\-O\-N\-A\-L at the G and S/\-T interfaces in G.\-997.\-1 Amendment 1. 
+\end{DoxyNote}
+
+\end{DoxyItemize}
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{dsl__fapi_8h}{dsl\-\_\-fapi.\-h}\end{DoxyCompactItemize}

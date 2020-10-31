@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct__brAccelCfg__t" kind="struct" prot="public">
+    <compoundname>_brAccelCfg_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__brAccelCfg__t_1a0f48c7aeb4fa645e1ac6f8e92df1cfd8" prot="public" static="no" mutable="no">
+        <type><ref refid="group__FAPI__SYSTEM_1gaeda32b17b048a7f04c975abc7e9403c1" kindref="member">Oper_t</ref></type>
+        <definition>Oper_t _brAccelCfg_t::oper</definition>
+        <argsstring></argsstring>
+        <name>oper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="350" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__brAccelCfg__t_1a9efe3d5d614ec9c52a2dd04b5d7049f3" prot="public" static="no" mutable="no">
+        <type>vlanCfg_t</type>
+        <definition>vlanCfg_t _brAccelCfg_t::WanVlanCfg</definition>
+        <argsstring></argsstring>
+        <name>WanVlanCfg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="351" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__brAccelCfg__t_1aa047d3ff28424998b6868731c1bb4a16" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char _brAccelCfg_t::sBrName[MAX_IFACE_SIZE]</definition>
+        <argsstring>[MAX_IFACE_SIZE]</argsstring>
+        <name>sBrName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="352" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="352" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="349" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="349" bodyend="353"/>
+    <listofallmembers>
+      <member refid="struct__brAccelCfg__t_1a0f48c7aeb4fa645e1ac6f8e92df1cfd8" prot="public" virt="non-virtual"><scope>_brAccelCfg_t</scope><name>oper</name></member>
+      <member refid="struct__brAccelCfg__t_1aa047d3ff28424998b6868731c1bb4a16" prot="public" virt="non-virtual"><scope>_brAccelCfg_t</scope><name>sBrName</name></member>
+      <member refid="struct__brAccelCfg__t_1a9efe3d5d614ec9c52a2dd04b5d7049f3" prot="public" virt="non-virtual"><scope>_brAccelCfg_t</scope><name>WanVlanCfg</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

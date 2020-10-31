@@ -1,0 +1,985 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="help__logging_8h" kind="file">
+    <compoundname>help_logging.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdarg.h</includes>
+    <includes local="no">syslog.h</includes>
+    <includes local="no">sys/time.h</includes>
+    <includes local="no">time.h</includes>
+    <includedby refid="help__objlist_8h" local="yes">help_objlist.h</includedby>
+    <includedby refid="ulogging_8h" local="no">ulogging.h</includedby>
+    <incdepgraph>
+      <node id="142">
+        <label>stdarg.h</label>
+      </node>
+      <node id="141">
+        <label>stdint.h</label>
+      </node>
+      <node id="143">
+        <label>syslog.h</label>
+      </node>
+      <node id="145">
+        <label>time.h</label>
+      </node>
+      <node id="144">
+        <label>sys/time.h</label>
+      </node>
+      <node id="140">
+        <label>stdio.h</label>
+      </node>
+      <node id="139">
+        <label>help_logging.h</label>
+        <link refid="help_logging.h"/>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="148">
+        <label>ugw_proto.h</label>
+        <link refid="ugw__proto_8h"/>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+      </node>
+      <node id="147">
+        <label>help_objlist.h</label>
+        <link refid="help__objlist_8h_source"/>
+        <childnode refid="148" relation="include">
+        </childnode>
+      </node>
+      <node id="151">
+        <label>ulogging.h</label>
+        <link refid="ulogging_8h_source"/>
+        <childnode refid="152" relation="include">
+        </childnode>
+      </node>
+      <node id="150">
+        <label>ugw_common.h</label>
+        <link refid="ugw__common_8h"/>
+      </node>
+      <node id="149">
+        <label>cal.h</label>
+        <link refid="cal_8h"/>
+      </node>
+      <node id="152">
+        <label>ugw_debug.h</label>
+        <link refid="ugw__debug_8h"/>
+      </node>
+      <node id="146">
+        <label>help_logging.h</label>
+        <link refid="help_logging.h"/>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="help__logging_8h_1a054a0f32e7eed9d13948b4d92a9e0b35" prot="public" static="no">
+        <name>DBG_TIMESTAMP</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for debug timestamp </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="19" column="17" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga0fc3c4b6b33474c081d5b7ebaf22eb5a" prot="public" static="no">
+        <name>AFTERX_TYPE</name>
+        <param><defname>x</defname></param>
+        <initializer>un ## x ## LogType</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>x type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="37" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gab1d033b94f76cefe0ba0de1f1da3727c" prot="public" static="no">
+        <name>XAFTERX_TYPE</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1ga0fc3c4b6b33474c081d5b7ebaf22eb5a" kindref="member">AFTERX_TYPE</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>x after type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="38" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga171078632f644bf6db8c72da116d0901" prot="public" static="no">
+        <name>AFTERX_LEVEL</name>
+        <param><defname>x</defname></param>
+        <initializer>un ## x ## LogLevel</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>x level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="39" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga3f7bea0fb97f2e4ac1218aa0252200a5" prot="public" static="no">
+        <name>XAFTERX_LEVEL</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1ga171078632f644bf6db8c72da116d0901" kindref="member">AFTERX_LEVEL</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>x after level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="40" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gac128c680f6759a02825861c81929a394" prot="public" static="no">
+        <name>log_level</name>
+        <param><defname>NAME</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1ga3f7bea0fb97f2e4ac1218aa0252200a5" kindref="member">XAFTERX_LEVEL</ref>(NAME)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="42" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga6ba7163d1bf56b982e26207fd19c6423" prot="public" static="no">
+        <name>log_type</name>
+        <param><defname>NAME</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1gab1d033b94f76cefe0ba0de1f1da3727c" kindref="member">XAFTERX_TYPE</ref>(NAME)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>log type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="43" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga082e12cb1904cc2f0ac5f368f048c279" prot="public" static="no">
+        <name>COLOR_NRM</name>
+        <initializer>&quot;\x1B[0m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="52" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gad86358bf19927183dd7b4ae215a29731" prot="public" static="no">
+        <name>COLOR_RED</name>
+        <initializer>&quot;\x1B[31m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="53" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gab99b152ac35d8b4e06767a7e5e285814" prot="public" static="no">
+        <name>COLOR_GRN</name>
+        <initializer>&quot;\x1B[32m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="54" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga23b3319f98dd6b2d72fa93d086901440" prot="public" static="no">
+        <name>COLOR_YEL</name>
+        <initializer>&quot;\x1B[33m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="55" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga2ed4ccec69fff4103cd109ed22e56dd9" prot="public" static="no">
+        <name>COLOR_BLU</name>
+        <initializer>&quot;\x1B[34m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="56" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga6d7fb639a4f49c9119fddee3efb937fe" prot="public" static="no">
+        <name>COLOR_MAG</name>
+        <initializer>&quot;\x1B[35m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="57" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga0ccbe1461afc9b8722f479efcf51d721" prot="public" static="no">
+        <name>COLOR_CYN</name>
+        <initializer>&quot;\x1B[36m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="58" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga7dc383234801587a18cf5e2680963752" prot="public" static="no">
+        <name>COLOR_WHT</name>
+        <initializer>&quot;\x1B[37m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="59" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gabf6360d575e7e78fcabf8c7f5be709db" prot="public" static="no">
+        <name>COLOR_ORA</name>
+        <initializer>&quot;\x1B[38;5;214m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="60" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga3f5ab355c6ed1320ff2619abddadc680" prot="public" static="no">
+        <name>SYS_LOG_CRIT</name>
+        <initializer>LOG_CRIT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>critical level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="64" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gad121fa92bbdb74efb0c5e827ff4a03e1" prot="public" static="no">
+        <name>SYS_LOG_ERR</name>
+        <initializer>LOG_ERR</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>error level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="65" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gab96b18160146a1bf7d07bdafc4275ff8" prot="public" static="no">
+        <name>SYS_LOG_INFO</name>
+        <initializer>LOG_INFO</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>info level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="68" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gace24df414cb5e54d71982cf045dc63ea" prot="public" static="no">
+        <name>SYS_LOG_DEBUG</name>
+        <initializer>LOG_DEBUG</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>debug level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="69" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga6bacf514b7f368dde78753e6056954a0" prot="public" static="no">
+        <name>SYS_LOG_TYPE_NONE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>log type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="71" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gab97c9812f1de694e33186d9e0e0bccba" prot="public" static="no">
+        <name>SYS_LOG_TYPE_FILE</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>log type file </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="72" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gaa275fbedba156a3cddd59aae2ba0a24b" prot="public" static="no">
+        <name>SYS_LOG_TYPE_CONSOLE</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>log type console </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="73" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gabcbc27505187c3c650b51ab0c4e85e7e" prot="public" static="no">
+        <name>SYS_LOG_TYPE_FILE_AND_CONSOLE</name>
+        <initializer>(<ref refid="group__SYSFRAMEWORK__LOG_1gab97c9812f1de694e33186d9e0e0bccba" kindref="member">SYS_LOG_TYPE_FILE</ref> | <ref refid="group__SYSFRAMEWORK__LOG_1gaa275fbedba156a3cddd59aae2ba0a24b" kindref="member">SYS_LOG_TYPE_CONSOLE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>log type both console and file </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="74" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga87f9c71c9333acfac7395c713bc278aa" prot="public" static="no">
+        <name>LOGF_OPEN</name>
+        <param><defname>sl_name</defname></param>
+        <initializer>openlog(sl_name, LOG_CONS | LOG_PID | LOG_NDELAY, LOG_USER)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LOG OPEN </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="109" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga157cea171e54321ab6f9c649437fe237" prot="public" static="no">
+        <name>LOGF_CLOSE</name>
+        <param></param>
+        <initializer>closelog()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LOG CLOSE </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="110" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga7e21957264df2949a8ca0081ca66e1ad" prot="public" static="no">
+        <name>LOGF_LOG_ERROR</name>
+        <param><defname>args...</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" kindref="member">PRINTF</ref>(ERR, ##args);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define error level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="128" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gaf3a266bb9623edc69c4867d0ce8958fb" prot="public" static="no">
+        <name>LOGF_LOG_EMERG</name>
+        <param><defname>args...</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" kindref="member">PRINTF</ref>(EMERG, ##args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define emergency level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="129" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga5c99a255cabecdad258745297d5678d8" prot="public" static="no">
+        <name>LOGF_LOG_ALERT</name>
+        <param><defname>args...</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" kindref="member">PRINTF</ref>(ALERT, ##args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define alert level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="130" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gaef161c193f8dcd83349eb0c0515861a8" prot="public" static="no">
+        <name>LOGF_LOG_CRITICAL</name>
+        <param><defname>args...</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" kindref="member">PRINTF</ref>(CRIT, ##args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define critical level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="131" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga23b166efe08815e9d97f2a30a2ff97f7" prot="public" static="no">
+        <name>LOGF_LOG_WARNING</name>
+        <param><defname>args...</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" kindref="member">PRINTF</ref>(WARNING, ##args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define warnning level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="132" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga6629207f9928999a6e540422f48f1418" prot="public" static="no">
+        <name>LOGF_LOG_NOTICE</name>
+        <param><defname>args...</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" kindref="member">PRINTF</ref>(NOTICE, ##args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define notice level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="133" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga8ce0b241ee6ed787655fc6c683610cfa" prot="public" static="no">
+        <name>LOGF_LOG_INFO</name>
+        <param><defname>args...</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" kindref="member">PRINTF</ref>(INFO, ##args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define info level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="134" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga0f75fa476eefdbfae8ed503bd116ccbd" prot="public" static="no">
+        <name>LOGF_LOG_DEBUG</name>
+        <param><defname>args...</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" kindref="member">PRINTF</ref>(<ref refid="structDEBUG" kindref="compound">DEBUG</ref>, ##args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define debug level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="135" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga1e820f025f360fdd6c8248849cb3fa92" prot="public" static="no">
+        <name>LOGF_LOG</name>
+        <param><defname>LEVEL</defname></param>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>SYSLOG_##LEVEL(PACKAGE_ID&quot;{%s, %d}:&quot;fmt, __func__, __LINE__, ##args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>PRINTF Macro </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="136" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" prot="public" static="no">
+        <name>PRINTF</name>
+        <param><defname>LEVEL</defname></param>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>SYSLOG_##LEVEL(PACKAGE_ID&quot;{%s, %d}:&quot;fmt, __func__, __LINE__, ##args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>PRINTF Macro </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="138" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga78f938c353e4ad64de5bf4346aab5948" prot="public" static="no">
+        <name>SYSLOG_EMERG</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>{ }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Emergency log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="151" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga2cb90a08bfc5f5721340b91e9a9d438b" prot="public" static="no">
+        <name>SYSLOG_ALERT</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>{ }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Alert log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="165" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gaf70f5cecdbb327e462afc993f60603e6" prot="public" static="no">
+        <name>SYSLOG_CRIT</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>do{					\
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1ga3f5ab355c6ed1320ff2619abddadc680" kindref="member">SYS_LOG_CRIT</ref> &gt; <ref refid="group__SYSFRAMEWORK__LOG_1ga0b33a34b9be13e952b773f8004335033" kindref="member">LOGLEVEL</ref>) \
+				break;  \
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" kindref="member">LOGTYPE</ref> &amp; <ref refid="group__SYSFRAMEWORK__LOG_1gab97c9812f1de694e33186d9e0e0bccba" kindref="member">SYS_LOG_TYPE_FILE</ref>) \
+				syslog(LOG_CRIT, fmt, ##args); \
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" kindref="member">LOGTYPE</ref> &amp; <ref refid="group__SYSFRAMEWORK__LOG_1gaa275fbedba156a3cddd59aae2ba0a24b" kindref="member">SYS_LOG_TYPE_CONSOLE</ref>) \
+				LOGF_LOG_PRINT(COLOR_RED, &quot;CRITICAL&quot;, fmt, ##args); \
+		}while(0);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Critical log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="169" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gac9b68a403677aee2f663dd09f97773cf" prot="public" static="no">
+        <name>SYSLOG_ERR</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>do{					\
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1gad121fa92bbdb74efb0c5e827ff4a03e1" kindref="member">SYS_LOG_ERR</ref> &gt; <ref refid="group__SYSFRAMEWORK__LOG_1ga0b33a34b9be13e952b773f8004335033" kindref="member">LOGLEVEL</ref>) \
+				break;  \
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" kindref="member">LOGTYPE</ref> &amp; <ref refid="group__SYSFRAMEWORK__LOG_1gab97c9812f1de694e33186d9e0e0bccba" kindref="member">SYS_LOG_TYPE_FILE</ref>) \
+				syslog(LOG_ERR, fmt, ##args); \
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" kindref="member">LOGTYPE</ref> &amp; <ref refid="group__SYSFRAMEWORK__LOG_1gaa275fbedba156a3cddd59aae2ba0a24b" kindref="member">SYS_LOG_TYPE_CONSOLE</ref>) \
+				LOGF_LOG_PRINT(COLOR_ORA, &quot;ERROR&quot; , fmt, ##args); \
+		}while(0);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Error log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="183" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gadcfe639dbc1ac3f40090fada95624fb1" prot="public" static="no">
+        <name>SYSLOG_WARNING</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>{ }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Warning log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="207" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga2993334cae7892a7c110d8b2b88fc201" prot="public" static="no">
+        <name>SYSLOG_NOTICE</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>{ }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Notice log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="221" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga63dc622c071f44545ca9372d6b1b7958" prot="public" static="no">
+        <name>SYSLOG_INFO</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>do{					\
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1gab96b18160146a1bf7d07bdafc4275ff8" kindref="member">SYS_LOG_INFO</ref> &gt; <ref refid="group__SYSFRAMEWORK__LOG_1ga0b33a34b9be13e952b773f8004335033" kindref="member">LOGLEVEL</ref>) \
+				break;  \
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" kindref="member">LOGTYPE</ref> &amp; <ref refid="group__SYSFRAMEWORK__LOG_1gab97c9812f1de694e33186d9e0e0bccba" kindref="member">SYS_LOG_TYPE_FILE</ref>) \
+				syslog(LOG_INFO, fmt, ##args); \
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" kindref="member">LOGTYPE</ref> &amp; <ref refid="group__SYSFRAMEWORK__LOG_1gaa275fbedba156a3cddd59aae2ba0a24b" kindref="member">SYS_LOG_TYPE_CONSOLE</ref>) \
+				LOGF_LOG_PRINT(COLOR_NRM, &quot;INFO&quot;, fmt, ##args); \
+		}while(0);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Information log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="225" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gacb7620367e96b45dfaa648535904d5e1" prot="public" static="no">
+        <name>SYSLOG_DEBUG</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>do{					\
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1gace24df414cb5e54d71982cf045dc63ea" kindref="member">SYS_LOG_DEBUG</ref> &gt; <ref refid="group__SYSFRAMEWORK__LOG_1ga0b33a34b9be13e952b773f8004335033" kindref="member">LOGLEVEL</ref>) \
+				break;  \
+				if(<ref refid="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" kindref="member">LOGTYPE</ref> &amp; <ref refid="group__SYSFRAMEWORK__LOG_1gab97c9812f1de694e33186d9e0e0bccba" kindref="member">SYS_LOG_TYPE_FILE</ref>) \
+				syslog(LOG_DEBUG, fmt, ##args); \
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" kindref="member">LOGTYPE</ref> &amp; <ref refid="group__SYSFRAMEWORK__LOG_1gaa275fbedba156a3cddd59aae2ba0a24b" kindref="member">SYS_LOG_TYPE_CONSOLE</ref>) \
+				LOGF_LOG_PRINT(COLOR_NRM, &quot;DEBUG&quot;, fmt, ##args); \
+		}while(0);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Debug log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="239" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__SYSFRAMEWORK__LOG_1ga0b33a34b9be13e952b773f8004335033" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t LOGLEVEL</definition>
+        <argsstring></argsstring>
+        <name>LOGLEVEL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t LOGTYPE</definition>
+        <argsstring></argsstring>
+        <name>LOGTYPE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>log type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="77" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__SYSFRAMEWORK__LOG_1gae3685d7d888bfcbde21dd061b703fd7e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void static void LOGF_LOG_PRINT</definition>
+        <argsstring>(const char *color_code, const char *logtype, const char *fmt,...) __attribute__((format(printf</argsstring>
+        <name>LOGF_LOG_PRINT</name>
+        <param>
+          <type>const char *</type>
+          <declname>color_code</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>logtype</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="78" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="80" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SYSFRAMEWORK__LOG_1ga489780099e0daaec20ccdb518ec87eed" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void LOGF_MASK</definition>
+        <argsstring>(int log_level)</argsstring>
+        <name>LOGF_MASK</name>
+        <param>
+          <type>int</type>
+          <declname>log_level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="112" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="112" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SYSFRAMEWORK__LOG_1ga05ae7de46e6b10f8c4a267695118819f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void LOGF_TYPE</definition>
+        <argsstring>(int log_type)</argsstring>
+        <name>LOGF_TYPE</name>
+        <param>
+          <type>int</type>
+          <declname>log_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="123" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="123" bodyend="125"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>File contains macros and enums for logging debug messages. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2015</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lantiq<sp/>Beteiligungs-GmbH<sp/>&amp;<sp/>Co.<sp/>KG</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lilienthalstrasse<sp/>15,<sp/>85579<sp/>Neubiberg,<sp/>Germany<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>For<sp/>licensing<sp/>information,<sp/>see<sp/>the<sp/>file<sp/>&apos;LICENSE&apos;<sp/>in<sp/>the<sp/>root<sp/>folder<sp/>of</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>software<sp/>module.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>*****************************************************************************<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>File<sp/>Name<sp/><sp/><sp/><sp/>:<sp/>help_logging.h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Description<sp/><sp/>:<sp/>header<sp/>file<sp/>for<sp/>logging<sp/>framework<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HELP_LOGGING_H</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>HELP_LOGGING_H</highlight></codeline>
+<codeline lineno="19" refid="help__logging_8h_1a054a0f32e7eed9d13948b4d92a9e0b35" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>DBG_TIMESTAMP<sp/>1<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor">#include&lt;stdio.h&gt;</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;stdarg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;syslog.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DBG_TIMESTAMP</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">/*<sp/>@{<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="group__SYSFRAMEWORK__LOG_1ga0fc3c4b6b33474c081d5b7ebaf22eb5a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AFTERX_TYPE(x)<sp/>un<sp/>##<sp/>x<sp/>##<sp/>LogType<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38" refid="group__SYSFRAMEWORK__LOG_1gab1d033b94f76cefe0ba0de1f1da3727c" refkind="member"><highlight class="preprocessor">#define<sp/>XAFTERX_TYPE(x)<sp/>AFTERX_TYPE(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="group__SYSFRAMEWORK__LOG_1ga171078632f644bf6db8c72da116d0901" refkind="member"><highlight class="preprocessor">#define<sp/>AFTERX_LEVEL(x)<sp/>un<sp/>##<sp/>x<sp/>##<sp/>LogLevel<sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="group__SYSFRAMEWORK__LOG_1ga3f7bea0fb97f2e4ac1218aa0252200a5" refkind="member"><highlight class="preprocessor">#define<sp/>XAFTERX_LEVEL(x)<sp/>AFTERX_LEVEL(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="group__SYSFRAMEWORK__LOG_1gac128c680f6759a02825861c81929a394" refkind="member"><highlight class="preprocessor">#define<sp/>log_level(NAME)<sp/>XAFTERX_LEVEL(NAME)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="group__SYSFRAMEWORK__LOG_1ga6ba7163d1bf56b982e26207fd19c6423" refkind="member"><highlight class="preprocessor">#define<sp/>log_type(NAME)<sp/>XAFTERX_TYPE(NAME)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor">#ifndef<sp/>LOGGING_ID</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#error<sp/>&quot;Please<sp/>define<sp/>LOGGING_ID&quot;</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>LOGTYPE<sp/>log_type(LOGGING_ID)<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor">#define<sp/>LOGLEVEL<sp/>log_level(LOGGING_ID)<sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COLOR_NRM<sp/><sp/>&quot;\x1B[0m&quot;</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>COLOR_RED<sp/><sp/>&quot;\x1B[31m&quot;</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>COLOR_GRN<sp/><sp/>&quot;\x1B[32m&quot;</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>COLOR_YEL<sp/><sp/>&quot;\x1B[33m&quot;</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>COLOR_BLU<sp/><sp/>&quot;\x1B[34m&quot;</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>COLOR_MAG<sp/><sp/>&quot;\x1B[35m&quot;</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>COLOR_CYN<sp/><sp/>&quot;\x1B[36m&quot;</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>COLOR_WHT<sp/><sp/>&quot;\x1B[37m&quot;</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>COLOR_ORA<sp/><sp/>&quot;\x1B[38;5;214m&quot;</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>SYS_LOG_EMERG<sp/><sp/><sp/><sp/><sp/>LOG_EMERG<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>SYS_LOG_ALERT<sp/><sp/><sp/><sp/><sp/>LOG_ALERT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="group__SYSFRAMEWORK__LOG_1ga3f5ab355c6ed1320ff2619abddadc680" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYS_LOG_CRIT<sp/><sp/><sp/><sp/><sp/><sp/>LOG_CRIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="group__SYSFRAMEWORK__LOG_1gad121fa92bbdb74efb0c5e827ff4a03e1" refkind="member"><highlight class="preprocessor">#define<sp/>SYS_LOG_ERR<sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOG_ERR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor">//#define<sp/>SYS_LOG_WARNING<sp/><sp/><sp/>LOG_WARNING<sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"></highlight><highlight class="comment">//#define<sp/>SYS_LOG_NOTICE<sp/><sp/><sp/><sp/>LOG_NOTICE<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="group__SYSFRAMEWORK__LOG_1gab96b18160146a1bf7d07bdafc4275ff8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYS_LOG_INFO<sp/><sp/><sp/><sp/><sp/><sp/>LOG_INFO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="group__SYSFRAMEWORK__LOG_1gace24df414cb5e54d71982cf045dc63ea" refkind="member"><highlight class="preprocessor">#define<sp/>SYS_LOG_DEBUG<sp/><sp/><sp/><sp/><sp/>LOG_DEBUG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="group__SYSFRAMEWORK__LOG_1ga6bacf514b7f368dde78753e6056954a0" refkind="member"><highlight class="preprocessor">#define<sp/>SYS_LOG_TYPE_NONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="group__SYSFRAMEWORK__LOG_1gab97c9812f1de694e33186d9e0e0bccba" refkind="member"><highlight class="preprocessor">#define<sp/>SYS_LOG_TYPE_FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73" refid="group__SYSFRAMEWORK__LOG_1gaa275fbedba156a3cddd59aae2ba0a24b" refkind="member"><highlight class="preprocessor">#define<sp/>SYS_LOG_TYPE_CONSOLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="group__SYSFRAMEWORK__LOG_1gabcbc27505187c3c650b51ab0c4e85e7e" refkind="member"><highlight class="preprocessor">#define<sp/>SYS_LOG_TYPE_FILE_AND_CONSOLE<sp/>(SYS_LOG_TYPE_FILE<sp/>|<sp/>SYS_LOG_TYPE_CONSOLE)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor">extern<sp/>uint16_t<sp/>LOGLEVEL;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor">extern<sp/>uint16_t<sp/>LOGTYPE;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor">static<sp/>void<sp/>LOGF_LOG_PRINT(const<sp/>char<sp/>*color_code,<sp/>const<sp/>char<sp/>*logtype,<sp/>const<sp/>char<sp/>*fmt,<sp/>...)<sp/>__attribute__((format(printf,<sp/>3,<sp/>4)));</highlight></codeline>
+<codeline lineno="79"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LOGF_LOG_PRINT(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*color_code,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*logtype,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt,<sp/>...)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>cAppendStr[256]={0};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>va_list<sp/>args;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DBG_TIMESTAMP</highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/>tv;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tm<sp/>*<sp/>timeinfo;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_t<sp/>nowtime;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>tmbuf[50]=</highlight><highlight class="stringliteral">&quot;\0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gettimeofday(&amp;tv,<sp/>NULL);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nowtime<sp/>=<sp/>tv.tv_sec;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeinfo<sp/>=<sp/>localtime(&amp;nowtime);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(timeinfo<sp/>!=<sp/>NULL)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strftime(tmbuf,50,</highlight><highlight class="stringliteral">&quot;%d-%m-%Y<sp/>%T&quot;</highlight><highlight class="normal">,<sp/>timeinfo);<sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifdef<sp/>DBG_TIMESTAMP</highlight></codeline>
+<codeline lineno="95"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(cAppendStr,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(cAppendStr),<sp/></highlight><highlight class="stringliteral">&quot;%s&lt;%s&gt;<sp/>[%s]<sp/>&quot;</highlight><highlight class="normal">,color_code,<sp/>tmbuf,<sp/>logtype);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(cAppendStr,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(cAppendStr),<sp/></highlight><highlight class="stringliteral">&quot;%s[%s]<sp/>&quot;</highlight><highlight class="normal">,color_code,<sp/>logtype);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal">{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>cAppendStr);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>va_start(args,<sp/>fmt);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vprintf(fmt,<sp/>args);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>va_end(args);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,COLOR_NRM);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fflush(stdout);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="group__SYSFRAMEWORK__LOG_1ga87f9c71c9333acfac7395c713bc278aa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOGF_OPEN(sl_name)<sp/>openlog(sl_name,<sp/>LOG_CONS<sp/>|<sp/>LOG_PID<sp/>|<sp/>LOG_NDELAY,<sp/>LOG_USER)<sp/><sp/></highlight></codeline>
+<codeline lineno="110" refid="group__SYSFRAMEWORK__LOG_1ga157cea171e54321ab6f9c649437fe237" refkind="member"><highlight class="preprocessor">#define<sp/>LOGF_CLOSE()<sp/><sp/>closelog()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="preprocessor">static<sp/>inline<sp/>void<sp/>LOGF_MASK(int<sp/>log_level)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifdef<sp/>PROC_LEVEL</highlight></codeline>
+<codeline lineno="114"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="group__SYSFRAMEWORK__LOG_1gac128c680f6759a02825861c81929a394" kindref="member">log_level</ref><sp/>&gt;=<sp/>SYS_LOG_EMERG<sp/>&amp;&amp;<sp/><ref refid="group__SYSFRAMEWORK__LOG_1gac128c680f6759a02825861c81929a394" kindref="member">log_level</ref><sp/>&lt;=<sp/><ref refid="group__SYSFRAMEWORK__LOG_1gace24df414cb5e54d71982cf045dc63ea" kindref="member">SYS_LOG_DEBUG</ref>)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setlogmask(LOG_UPTO(<ref refid="group__SYSFRAMEWORK__LOG_1gac128c680f6759a02825861c81929a394" kindref="member">log_level</ref>));</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setlogmask(LOG_UPTO(<ref refid="group__SYSFRAMEWORK__LOG_1gab96b18160146a1bf7d07bdafc4275ff8" kindref="member">SYS_LOG_INFO</ref>));</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="119"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__SYSFRAMEWORK__LOG_1ga0b33a34b9be13e952b773f8004335033" kindref="member">LOGLEVEL</ref><sp/>=<sp/><ref refid="group__SYSFRAMEWORK__LOG_1gac128c680f6759a02825861c81929a394" kindref="member">log_level</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="121"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LOGF_TYPE(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__SYSFRAMEWORK__LOG_1ga6ba7163d1bf56b982e26207fd19c6423" kindref="member">log_type</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" kindref="member">LOGTYPE</ref><sp/>=<sp/><ref refid="group__SYSFRAMEWORK__LOG_1ga6ba7163d1bf56b982e26207fd19c6423" kindref="member">log_type</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PACKAGE_ID<sp/>will<sp/>be<sp/>provided<sp/>by<sp/>relevant<sp/>package<sp/>make<sp/>file.<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="group__SYSFRAMEWORK__LOG_1ga7e21957264df2949a8ca0081ca66e1ad" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOGF_LOG_ERROR(args...)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>PRINTF(ERR,<sp/>##args);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129" refid="group__SYSFRAMEWORK__LOG_1gaf3a266bb9623edc69c4867d0ce8958fb" refkind="member"><highlight class="preprocessor">#define<sp/>LOGF_LOG_EMERG(args...)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>PRINTF(EMERG,<sp/>##args)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="130" refid="group__SYSFRAMEWORK__LOG_1ga5c99a255cabecdad258745297d5678d8" refkind="member"><highlight class="preprocessor">#define<sp/>LOGF_LOG_ALERT(args...)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>PRINTF(ALERT,<sp/>##args)<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="131" refid="group__SYSFRAMEWORK__LOG_1gaef161c193f8dcd83349eb0c0515861a8" refkind="member"><highlight class="preprocessor">#define<sp/>LOGF_LOG_CRITICAL(args...)<sp/><sp/><sp/><sp/>PRINTF(CRIT,<sp/>##args)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="132" refid="group__SYSFRAMEWORK__LOG_1ga23b166efe08815e9d97f2a30a2ff97f7" refkind="member"><highlight class="preprocessor">#define<sp/>LOGF_LOG_WARNING(args...)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PRINTF(WARNING,<sp/>##args)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133" refid="group__SYSFRAMEWORK__LOG_1ga6629207f9928999a6e540422f48f1418" refkind="member"><highlight class="preprocessor">#define<sp/>LOGF_LOG_NOTICE(args...)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PRINTF(NOTICE,<sp/>##args)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="134" refid="group__SYSFRAMEWORK__LOG_1ga8ce0b241ee6ed787655fc6c683610cfa" refkind="member"><highlight class="preprocessor">#define<sp/>LOGF_LOG_INFO(args...)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PRINTF(INFO,<sp/>##args)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135" refid="group__SYSFRAMEWORK__LOG_1ga0f75fa476eefdbfae8ed503bd116ccbd" refkind="member"><highlight class="preprocessor">#define<sp/>LOGF_LOG_DEBUG(args...)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>PRINTF(DEBUG,<sp/>##args)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="136" refid="group__SYSFRAMEWORK__LOG_1ga1e820f025f360fdd6c8248849cb3fa92" refkind="member"><highlight class="preprocessor">#define<sp/>LOGF_LOG(LEVEL,<sp/>fmt,<sp/>args...)<sp/>SYSLOG_##LEVEL(PACKAGE_ID&quot;{%s,<sp/>%d}:&quot;fmt,<sp/>__func__,<sp/>__LINE__,<sp/>##args)<sp/></highlight></codeline>
+<codeline lineno="138" refid="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" refkind="member"><highlight class="preprocessor">#define<sp/>PRINTF(LEVEL,<sp/>fmt,<sp/>args...)<sp/><sp/><sp/>SYSLOG_##LEVEL(PACKAGE_ID&quot;{%s,<sp/>%d}:&quot;fmt,<sp/>__func__,<sp/>__LINE__,<sp/>##args)<sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="preprocessor">#ifdef<sp/>SYS_LOG_EMERG<sp/><sp/>//<sp/>level<sp/>0</highlight></codeline>
+<codeline lineno="141"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSLOG_EMERG(fmt,<sp/>args...)<sp/>\</highlight></codeline>
+<codeline lineno="142"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="143"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>SYS_LOG_EMERG<sp/>&gt;<sp/>LOGLEVEL)<sp/>\</highlight></codeline>
+<codeline lineno="144"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="145"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>LOGTYPE<sp/>&amp;<sp/>SYS_LOG_TYPE_FILE)<sp/>\</highlight></codeline>
+<codeline lineno="146"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>syslog(LOG_EMERG,<sp/>fmt,<sp/>##args);<sp/>\</highlight></codeline>
+<codeline lineno="147"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>LOGTYPE<sp/>&amp;<sp/>SYS_LOG_TYPE_CONSOLE)<sp/>\</highlight></codeline>
+<codeline lineno="148"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOGF_LOG_PRINT(COLOR_RED,<sp/>&quot;EMERG&quot;,<sp/>fmt,<sp/>##args);<sp/>\</highlight></codeline>
+<codeline lineno="149"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}while(0);</highlight></codeline>
+<codeline lineno="150"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="151" refid="group__SYSFRAMEWORK__LOG_1ga78f938c353e4ad64de5bf4346aab5948" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSLOG_EMERG(fmt,<sp/>args...)<sp/>{<sp/>}<sp/><sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="153"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SYS_LOG_ALERT<sp/>//<sp/>level<sp/>1</highlight></codeline>
+<codeline lineno="155"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSLOG_ALERT(fmt,<sp/>args...)<sp/>\</highlight></codeline>
+<codeline lineno="156"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="157"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>SYS_LOG_ALERT<sp/>&gt;<sp/>LOGLEVEL)<sp/>\</highlight></codeline>
+<codeline lineno="158"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="159"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>LOGTYPE<sp/>&amp;<sp/>SYS_LOG_TYPE_FILE)<sp/>\</highlight></codeline>
+<codeline lineno="160"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>syslog(LOG_ALERT,<sp/>fmt,<sp/>##args);<sp/>\</highlight></codeline>
+<codeline lineno="161"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>LOGTYPE<sp/>&amp;<sp/>SYS_LOG_TYPE_CONSOLE)<sp/>\</highlight></codeline>
+<codeline lineno="162"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOGF_LOG_PRINT(COLOR_RED,<sp/>&quot;ALERT&quot;,<sp/>fmt,<sp/>##args);<sp/>\</highlight></codeline>
+<codeline lineno="163"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}while(0);</highlight></codeline>
+<codeline lineno="164"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="165" refid="group__SYSFRAMEWORK__LOG_1ga2cb90a08bfc5f5721340b91e9a9d438b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSLOG_ALERT(fmt,<sp/>args...)<sp/>{<sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="166"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="167"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SYS_LOG_CRIT<sp/>//<sp/>level<sp/>2</highlight></codeline>
+<codeline lineno="169" refid="group__SYSFRAMEWORK__LOG_1gaf70f5cecdbb327e462afc993f60603e6" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSLOG_CRIT(fmt,<sp/>args...)<sp/>\</highlight></codeline>
+<codeline lineno="170"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="171"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>SYS_LOG_CRIT<sp/>&gt;<sp/>LOGLEVEL)<sp/>\</highlight></codeline>
+<codeline lineno="172"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="173"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>LOGTYPE<sp/>&amp;<sp/>SYS_LOG_TYPE_FILE)<sp/>\</highlight></codeline>
+<codeline lineno="174"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>syslog(LOG_CRIT,<sp/>fmt,<sp/>##args);<sp/>\</highlight></codeline>
+<codeline lineno="175"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>LOGTYPE<sp/>&amp;<sp/>SYS_LOG_TYPE_CONSOLE)<sp/>\</highlight></codeline>
+<codeline lineno="176"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOGF_LOG_PRINT(COLOR_RED,<sp/>&quot;CRITICAL&quot;,<sp/>fmt,<sp/>##args);<sp/>\</highlight></codeline>
+<codeline lineno="177"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}while(0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="178"><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="179"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSLOG_CRIT(fmt,<sp/>args...)<sp/>{<sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="181"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SYS_LOG_ERR<sp/><sp/>//<sp/>level<sp/>3</highlight></codeline>
+<codeline lineno="183"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSLOG_ERR(fmt,<sp/>args...)<sp/>\</highlight></codeline>
+<codeline lineno="184"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="185"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>SYS_LOG_ERR<sp/>&gt;<sp/>LOGLEVEL)<sp/>\</highlight></codeline>
+<codeline lineno="186"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="187"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>LOGTYPE<sp/>&amp;<sp/>SYS_LOG_TYPE_FILE)<sp/>\</highlight></codeline>
+<codeline lineno="188"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>syslog(LOG_ERR,<sp/>fmt,<sp/>##args);<sp/>\</highlight></codeline>
+<codeline lineno="189"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>LOGTYPE<sp/>&amp;<sp/>SYS_LOG_TYPE_CONSOLE)<sp/>\</highlight></codeline>
+<codeline lineno="190"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOGF_LOG_PRINT(COLOR_ORA,<sp/>&quot;ERROR&quot;<sp/>,<sp/>fmt,<sp/>##args);<sp/>\</highlight></codeline>
+<codeline lineno="191" refid="group__SYSFRAMEWORK__LOG_1gac9b68a403677aee2f663dd09f97773cf" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}while(0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="192"><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="193"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSLOG_ERR(fmt,<sp/>args...)<sp/>{<sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="194"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="195"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SYS_LOG_WARNING<sp/>//<sp/>level<sp/>4</highlight></codeline>
+<codeline lineno="197"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSLOG_WARNING(fmt,<sp/>args...)<sp/>\</highlight></codeline>
+<codeline lineno="198"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="199"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>SYS_LOG_WARNING<sp/>&gt;<sp/>LOGLEVEL)<sp/>\</highlight></codeline>
+<codeline lineno="200"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="201"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>LOGTYPE<sp/>&amp;<sp/>SYS_LOG_TYPE_FILE)<sp/>\</highlight></codeline>
+<codeline lineno="202"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>syslog(LOG_WARNING,<sp/>fmt,<sp/>##args);<sp/>\</highlight></codeline>
+<codeline lineno="203"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>LOGTYPE<sp/>&amp;<sp/>SYS_LOG_TYPE_CONSOLE)<sp/>\</highlight></codeline>
+<codeline lineno="204"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOGF_LOG_PRINT(COLOR_NRM,<sp/>&quot;WARNING&quot;<sp/>,<sp/>fmt,<sp/>##args);<sp/>\</highlight></codeline>
+<codeline lineno="205"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}while(0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="206"><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="207"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSLOG_WARNING(fmt,<sp/>args...)<sp/>{<sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="208"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="209"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SYS_LOG_NOTICE<sp/>//<sp/>level<sp/>5</highlight></codeline>
+<codeline lineno="211"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSLOG_NOTICE(fmt,<sp/>args...)<sp/>\</highlight></codeline>
+<codeline lineno="212"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="213"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>SYS_LOG_NOTICE<sp/>&gt;<sp/>LOGLEVEL)<sp/>\</highlight></codeline>
+<codeline lineno="214"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="215"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>LOGTYPE<sp/>&amp;<sp/>SYS_LOG_TYPE_FILE)<sp/>\</highlight></codeline>
+<codeline lineno="216"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>syslog(LOG_NOTICE,<sp/>fmt,<sp/>##args);<sp/>\</highlight></codeline>
+<codeline lineno="217"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>LOGTYPE<sp/>&amp;<sp/>SYS_LOG_TYPE_CONSOLE)<sp/>\</highlight></codeline>
+<codeline lineno="218"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOGF_LOG_PRINT(COLOR_NRM,<sp/>&quot;NOTICE&quot;,<sp/>fmt,<sp/>##args);<sp/>\</highlight></codeline>
+<codeline lineno="219"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}while(0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="220"><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="221"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSLOG_NOTICE(fmt,<sp/>args...)<sp/>{<sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="222"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="223" refid="group__SYSFRAMEWORK__LOG_1gadcfe639dbc1ac3f40090fada95624fb1" refkind="member"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SYS_LOG_INFO<sp/>//<sp/>level<sp/>6</highlight></codeline>
+<codeline lineno="225"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSLOG_INFO(fmt,<sp/>args...)<sp/>\</highlight></codeline>
+<codeline lineno="226"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="227"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>SYS_LOG_INFO<sp/>&gt;<sp/>LOGLEVEL)<sp/>\</highlight></codeline>
+<codeline lineno="228"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="229"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>LOGTYPE<sp/>&amp;<sp/>SYS_LOG_TYPE_FILE)<sp/>\</highlight></codeline>
+<codeline lineno="230"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>syslog(LOG_INFO,<sp/>fmt,<sp/>##args);<sp/>\</highlight></codeline>
+<codeline lineno="231"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>LOGTYPE<sp/>&amp;<sp/>SYS_LOG_TYPE_CONSOLE)<sp/>\</highlight></codeline>
+<codeline lineno="232"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOGF_LOG_PRINT(COLOR_NRM,<sp/>&quot;INFO&quot;,<sp/>fmt,<sp/>##args);<sp/>\</highlight></codeline>
+<codeline lineno="233"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}while(0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="234"><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="235"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSLOG_INFO(fmt,<sp/>args...)<sp/>{<sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="236"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="237" refid="group__SYSFRAMEWORK__LOG_1ga2993334cae7892a7c110d8b2b88fc201" refkind="member"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SYS_LOG_DEBUG<sp/>//<sp/>level<sp/>7</highlight></codeline>
+<codeline lineno="239"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSLOG_DEBUG(fmt,<sp/>args...)<sp/>\</highlight></codeline>
+<codeline lineno="240"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="241" refid="group__SYSFRAMEWORK__LOG_1ga63dc622c071f44545ca9372d6b1b7958" refkind="member"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>SYS_LOG_DEBUG<sp/>&gt;<sp/>LOGLEVEL)<sp/>\</highlight></codeline>
+<codeline lineno="242"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;<sp/><sp/>\</highlight></codeline>
+<codeline lineno="243"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(LOGTYPE<sp/>&amp;<sp/>SYS_LOG_TYPE_FILE)<sp/>\</highlight></codeline>
+<codeline lineno="244"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>syslog(LOG_DEBUG,<sp/>fmt,<sp/>##args);<sp/>\</highlight></codeline>
+<codeline lineno="245"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>LOGTYPE<sp/>&amp;<sp/>SYS_LOG_TYPE_CONSOLE)<sp/>\</highlight></codeline>
+<codeline lineno="246"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOGF_LOG_PRINT(COLOR_NRM,<sp/>&quot;DEBUG&quot;,<sp/>fmt,<sp/>##args);<sp/>\</highlight></codeline>
+<codeline lineno="247"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}while(0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="248"><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="249"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYSLOG_DEBUG(fmt,<sp/>args...)<sp/>{<sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="250"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="251"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//_LTQ_DEBUG_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structqos__cfg" kind="struct" prot="public">
+    <compoundname>qos_cfg</compoundname>
+    <includes refid="qosal__queue__api_8h" local="no">qosal_queue_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structqos__cfg_1a249977e1be92f8e9725e755a52065828" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t qos_cfg::ena</definition>
+        <argsstring></argsstring>
+        <name>ena</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Overall QoS enable flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="30" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__cfg_1acad8e74b9b0261e29631422506b0d73f" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t qos_cfg::us_ena</definition>
+        <argsstring></argsstring>
+        <name>us_ena</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>QoS enable flag for upstream (LAN-WAN) direction </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="31" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__cfg_1a59c290fbf8b95e2f08674c8d3565531d" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t qos_cfg::ds_ena</definition>
+        <argsstring></argsstring>
+        <name>ds_ena</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>QoS enable flag for downstream (WAN-LAN) direction </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="32" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__cfg_1a382d14c25eaeaf4f01950a06336314ba" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t qos_cfg::log_level</definition>
+        <argsstring></argsstring>
+        <name>log_level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Log enable flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="34" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__cfg_1a6e170fd5d9d374ad405021dae66c7f93" prot="public" static="no" mutable="no">
+        <type><ref refid="group__FAPI__QOS__GENERAL_1gaf8da7b968cb9659aef1acb8c79ff7250" kindref="member">log_type_t</ref></type>
+        <definition>log_type_t qos_cfg::log_type</definition>
+        <argsstring></argsstring>
+        <name>log_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Log type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="35" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__cfg_1aafe2164e01390853b819a90181ca1c22" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char qos_cfg::log_file[MAX_NAME_LEN]</definition>
+        <argsstring>[MAX_NAME_LEN]</argsstring>
+        <name>log_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Log file name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="36" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__cfg_1aca196127a157dc22a75c9fc1a9abb124" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t qos_cfg::def_wan_dscp</definition>
+        <argsstring></argsstring>
+        <name>def_wan_dscp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DSCP value for unclassified traffic in upstream (LAN-WAN) direction </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="37" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__cfg_1a79c7b6853d2eb702f01a5f9412acc887" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t qos_cfg::wmm_ena</definition>
+        <argsstring></argsstring>
+        <name>wmm_ena</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WMM QoS enable flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="38" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__cfg_1af61eb747637f5d2f4db1d09362b8b9f4" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t qos_cfg::mgmt_ena</definition>
+        <argsstring></argsstring>
+        <name>mgmt_ena</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Management traffic prioritization enable flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="39" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__cfg_1a61020b43790df2ef68593160680ebc5d" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t qos_cfg::wan_port_rate_limit</definition>
+        <argsstring></argsstring>
+        <name>wan_port_rate_limit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Limit rate of WAN interface/port </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="40" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__cfg_1a34a24e71cc74a83288bc2dc9d2d05be1" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char qos_cfg::version[64]</definition>
+        <argsstring>[64]</argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="41" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>QoS general configuration data structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="29" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="29" bodyend="42"/>
+    <listofallmembers>
+      <member refid="structqos__cfg_1aca196127a157dc22a75c9fc1a9abb124" prot="public" virt="non-virtual"><scope>qos_cfg</scope><name>def_wan_dscp</name></member>
+      <member refid="structqos__cfg_1a59c290fbf8b95e2f08674c8d3565531d" prot="public" virt="non-virtual"><scope>qos_cfg</scope><name>ds_ena</name></member>
+      <member refid="structqos__cfg_1a249977e1be92f8e9725e755a52065828" prot="public" virt="non-virtual"><scope>qos_cfg</scope><name>ena</name></member>
+      <member refid="structqos__cfg_1aafe2164e01390853b819a90181ca1c22" prot="public" virt="non-virtual"><scope>qos_cfg</scope><name>log_file</name></member>
+      <member refid="structqos__cfg_1a382d14c25eaeaf4f01950a06336314ba" prot="public" virt="non-virtual"><scope>qos_cfg</scope><name>log_level</name></member>
+      <member refid="structqos__cfg_1a6e170fd5d9d374ad405021dae66c7f93" prot="public" virt="non-virtual"><scope>qos_cfg</scope><name>log_type</name></member>
+      <member refid="structqos__cfg_1af61eb747637f5d2f4db1d09362b8b9f4" prot="public" virt="non-virtual"><scope>qos_cfg</scope><name>mgmt_ena</name></member>
+      <member refid="structqos__cfg_1acad8e74b9b0261e29631422506b0d73f" prot="public" virt="non-virtual"><scope>qos_cfg</scope><name>us_ena</name></member>
+      <member refid="structqos__cfg_1a34a24e71cc74a83288bc2dc9d2d05be1" prot="public" virt="non-virtual"><scope>qos_cfg</scope><name>version</name></member>
+      <member refid="structqos__cfg_1a61020b43790df2ef68593160680ebc5d" prot="public" virt="non-virtual"><scope>qos_cfg</scope><name>wan_port_rate_limit</name></member>
+      <member refid="structqos__cfg_1a79c7b6853d2eb702f01a5f9412acc887" prot="public" virt="non-virtual"><scope>qos_cfg</scope><name>wmm_ena</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

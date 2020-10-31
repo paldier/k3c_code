@@ -1,0 +1,66 @@
+\hypertarget{structMCAST__MEMBER__t}{\section{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t Struct Reference}
+\label{structMCAST__MEMBER__t}\index{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t@{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t}}
+}
+
+
+Structure describing multicast membership configuration.  
+
+
+
+
+{\ttfamily \#include $<$fapi\-\_\-mcast.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{structMCAST__MEMBER__t_af64a5251fc8af6ac16052e9d8d97ae51}{intf\-Name} \mbox{[}\hyperlink{group__FAPI__MCAST_gaa55207000cd9168578be60cca21141e6}{I\-F\-S\-I\-Z\-E}\mbox{]}
+\item 
+char \hyperlink{structMCAST__MEMBER__t_ab0297b5fb862c50e7624b0df5162b4fa}{rx\-Intf\-Name} \mbox{[}\hyperlink{group__FAPI__MCAST_gaa55207000cd9168578be60cca21141e6}{I\-F\-S\-I\-Z\-E}\mbox{]}
+\item 
+\hyperlink{structipaddr__t}{ipaddr\-\_\-t} \hyperlink{structMCAST__MEMBER__t_abdec041f2d9705e2f9b3dfb0140040ad}{group\-I\-P}
+\item 
+\hyperlink{structipaddr__t}{ipaddr\-\_\-t} \hyperlink{structMCAST__MEMBER__t_a02d8c40017220d42cb82938036e7da3b}{src\-I\-P}
+\item 
+unsigned int \hyperlink{structMCAST__MEMBER__t_a451fba306b8ff40473c5927a05e299f6}{proto}
+\item 
+unsigned int \hyperlink{structMCAST__MEMBER__t_acaa4ac9a1eb240ab6c1328f754c3628d}{s\-Port}
+\item 
+unsigned int \hyperlink{structMCAST__MEMBER__t_a07ede5f961dc4deae13a5f799c6610ba}{d\-Port}
+\item 
+unsigned char \hyperlink{structMCAST__MEMBER__t_a4ce6350f2ca6f1b97c4d12cab85f3a71}{macaddr} \mbox{[}E\-T\-H\-\_\-\-A\-L\-E\-N\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure describing multicast membership configuration. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structMCAST__MEMBER__t_a07ede5f961dc4deae13a5f799c6610ba}{\index{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t@{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t}!d\-Port@{d\-Port}}
+\index{d\-Port@{d\-Port}!MCAST_MEMBER_t@{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t}}
+\subsubsection[{d\-Port}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t\-::d\-Port}}\label{structMCAST__MEMBER__t_a07ede5f961dc4deae13a5f799c6610ba}
+U\-D\-P Destination Port \hypertarget{structMCAST__MEMBER__t_abdec041f2d9705e2f9b3dfb0140040ad}{\index{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t@{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t}!group\-I\-P@{group\-I\-P}}
+\index{group\-I\-P@{group\-I\-P}!MCAST_MEMBER_t@{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t}}
+\subsubsection[{group\-I\-P}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ipaddr\-\_\-t} M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t\-::group\-I\-P}}\label{structMCAST__MEMBER__t_abdec041f2d9705e2f9b3dfb0140040ad}
+Destination I\-P (G\-A) -\/ v4 or v6 \hypertarget{structMCAST__MEMBER__t_af64a5251fc8af6ac16052e9d8d97ae51}{\index{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t@{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t}!intf\-Name@{intf\-Name}}
+\index{intf\-Name@{intf\-Name}!MCAST_MEMBER_t@{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t}}
+\subsubsection[{intf\-Name}]{\setlength{\rightskip}{0pt plus 5cm}char M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t\-::intf\-Name\mbox{[}{\bf I\-F\-S\-I\-Z\-E}\mbox{]}}}\label{structMCAST__MEMBER__t_af64a5251fc8af6ac16052e9d8d97ae51}
+L\-A\-N/\-W\-L\-A\-N Member Net\-Device \hypertarget{structMCAST__MEMBER__t_a4ce6350f2ca6f1b97c4d12cab85f3a71}{\index{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t@{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t}!macaddr@{macaddr}}
+\index{macaddr@{macaddr}!MCAST_MEMBER_t@{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t}}
+\subsubsection[{macaddr}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t\-::macaddr\mbox{[}E\-T\-H\-\_\-\-A\-L\-E\-N\mbox{]}}}\label{structMCAST__MEMBER__t_a4ce6350f2ca6f1b97c4d12cab85f3a71}
+L\-A\-N/\-W\-L\-A\-N Client M\-A\-C Address \hypertarget{structMCAST__MEMBER__t_a451fba306b8ff40473c5927a05e299f6}{\index{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t@{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t}!proto@{proto}}
+\index{proto@{proto}!MCAST_MEMBER_t@{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t}}
+\subsubsection[{proto}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t\-::proto}}\label{structMCAST__MEMBER__t_a451fba306b8ff40473c5927a05e299f6}
+Protocol Number \hypertarget{structMCAST__MEMBER__t_ab0297b5fb862c50e7624b0df5162b4fa}{\index{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t@{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t}!rx\-Intf\-Name@{rx\-Intf\-Name}}
+\index{rx\-Intf\-Name@{rx\-Intf\-Name}!MCAST_MEMBER_t@{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t}}
+\subsubsection[{rx\-Intf\-Name}]{\setlength{\rightskip}{0pt plus 5cm}char M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t\-::rx\-Intf\-Name\mbox{[}{\bf I\-F\-S\-I\-Z\-E}\mbox{]}}}\label{structMCAST__MEMBER__t_ab0297b5fb862c50e7624b0df5162b4fa}
+W\-A\-N Member Net\-Device \hypertarget{structMCAST__MEMBER__t_acaa4ac9a1eb240ab6c1328f754c3628d}{\index{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t@{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t}!s\-Port@{s\-Port}}
+\index{s\-Port@{s\-Port}!MCAST_MEMBER_t@{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t}}
+\subsubsection[{s\-Port}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t\-::s\-Port}}\label{structMCAST__MEMBER__t_acaa4ac9a1eb240ab6c1328f754c3628d}
+U\-D\-P Source Port \hypertarget{structMCAST__MEMBER__t_a02d8c40017220d42cb82938036e7da3b}{\index{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t@{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t}!src\-I\-P@{src\-I\-P}}
+\index{src\-I\-P@{src\-I\-P}!MCAST_MEMBER_t@{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t}}
+\subsubsection[{src\-I\-P}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ipaddr\-\_\-t} M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t\-::src\-I\-P}}\label{structMCAST__MEMBER__t_a02d8c40017220d42cb82938036e7da3b}
+Source I\-P -\/ v4 or v6 (optional) 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fapi__mcast_8h}{fapi\-\_\-mcast.\-h}\end{DoxyCompactItemize}

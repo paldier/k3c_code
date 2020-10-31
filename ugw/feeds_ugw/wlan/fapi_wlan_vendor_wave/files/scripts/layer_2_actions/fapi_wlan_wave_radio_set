@@ -1,0 +1,98 @@
+#!/bin/sh
+# Configure Radio parameters
+# Needed objects: Radio, Radio.X_LANTIQ_COM_Vendor
+
+# Source library script
+[ ! "$FAPI_WLAN_WAVE_INIT_PLATFORM" ] && . /tmp/wlan_wave/fapi_wlan_wave_init_platform.sh
+
+print2log DBG "running fapi_wlan_wave_radio_modify: args: $*"
+
+interface_name=$1
+
+# If interface name is not supplied, exit script
+check_input_param "fapi_wlan_wave_radio_modify" "interface_name" "$interface_name"
+
+timestamp "fapi_wlan_wave_radio_modify:$interface_name:begin"
+
+# DEBUG: TODO: REMOVE
+#cp ${IN_CONF} ${WAVE_TMP}/in_conf_radio_set
+
+# Map the objects indexes to the received objects in the in.conf file
+radio_index=`map_param_index Object $RADIO_OBJECT`
+radio_vendor_index=`map_param_index Object $RADIO_VENDOR_OBJECT`
+
+# If only CoCPower was changed, no need to restart the interface
+only_coc_power_changed=`check_only_coc_power_changed`
+
+if [ "$only_coc_power_changed" = "yes" ]; then
+	# Set the CoCPower OTF parameter
+	if [ -z "$radio_vendor_index" ]; then
+		coc_power=`get_conf_param CoCPower $radio_index $interface_name`
+	elif [ -z "$radio_index" ]; then
+		coc_power=`get_conf_param CoCPower $radio_vendor_index $interface_name $radio_vendor_index`
+	else
+		coc_power=`get_conf_param CoCPower $radio_index $interface_name $radio_vendor_index`
+	fi
+
+	# Set CoCPower in driver
+	$ETC_PATH/fapi_wlan_wave_driver_api.tcl DriverParamSet $interface_name CoCPower "$coc_power"
+else
+	# The list of the radio scripts parameters that we configure on the driver configuration file
+	radio_scripts_params="WLSEnabled
+	Channel
+	ChannelBonding
+	UpperLowerChannelBonding
+	ShortCyclicPrefixTx
+	PowerSelection
+	hRadarEna
+	Country
+	NetworkMode
+	RTSThreshold
+	LongRetryLimit
+	BeaconPeriod
+	DTIMPeriod
+	ShortPreamble
+	AocsRestrictCh
+	CoCPower
+	n2040CoexThreshold
+	CoexActTrshold
+	nObssScanInt
+	UpDebugLevel
+	FwLoggerSeverity
+	RTLoggerEnabled
+	FWDebugEnabled
+	Debug_SoftwareWatchdogEnable
+	pCoCEna
+	n2040CoexEna"
+	
+	# Stop all the Radio interfaces by killing hostapd
+	(. $ETC_PATH/fapi_wlan_wave_init_hostapd.sh stop_radio $interface_name)
+	
+	# Configure the radio driver parameters
+	if [ -n "$radio_index" ]; then
+		configure_driver_params "$interface_name" "$radio_index" "$radio_scripts_params" "${WAVE_TMP}/driver_api_radio_params_to_set_${interface_name}" "$radio_vendor_index"
+	elif [ -n "$radio_vendor_index" ]; then
+		configure_driver_params "$interface_name" "$radio_vendor_index" "$radio_scripts_params" "${WAVE_TMP}/driver_api_radio_params_to_set_${interface_name}"
+	fi
+		
+	# Update the FW recovery parameters in the temp conf file
+	[ -n "$radio_vendor_index" ] && save_recovery_params $radio_vendor_index $interface_name
+fi
+
+# Update the CoC parameters in the temp conf file
+[ -n "$radio_vendor_index" ] && save_coc_params $radio_vendor_index $interface_name
+
+# Save the channel number from Radio to a temp conf file for each radio
+[ -n "$radio_index" ] && save_channel_params $radio_index $interface_name
+
+# Create the output configuration file
+cat /dev/null > ${OUT_CONF}
+
+# Configuration is completed successfully
+update_conf_out "wlan_configuration_status" "success"
+
+# DEBUG: TODO: REMOVE
+#cp ${OUT_CONF} ${WAVE_TMP}/out_conf_radio_set
+
+print2log DBG "fapi_wlan_wave_radio_modify: Done"
+timestamp "fapi_wlan_wave_radio_modify:$interface_name:done"

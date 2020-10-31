@@ -1,0 +1,99 @@
+#!/bin/sh
+
+# Return the AccessPoint AC Stats
+# Needed object: AccessPoint.AC.Stats
+
+# Source library script
+[ ! "$FAPI_WLAN_WAVE_INIT_PLATFORM" ] && . /tmp/wlan_wave/fapi_wlan_wave_init_platform.sh
+
+print2log DBG "running fapi_wlan_wave_wmm_ap_stats_query: args: $*"
+
+interface_name=$1
+
+# If interface name is not supplied, exit script
+check_input_param "fapi_wlan_wave_wmm_ap_stats_query" "interface_name" "$interface_name"
+
+timestamp "fapi_wlan_wave_wmm_ap_stats_query:$interface_name:begin"
+
+wlanInitIncomplete=`check_if_is_ready $interface_name`
+[ "$wlanInitIncomplete" = "1" ] && exit
+
+# DEBUG: TODO: REMOVE
+#cp ${IN_CONF} ${WAVE_TMP}/in_conf_wmm_ap_stats
+
+# Map the objects indexes to the received objects in the in.conf file
+next_object_index=`get_next_object_index`
+ac_stats_be_index=$next_object_index && next_object_index=$((next_object_index+1))
+ac_stats_bk_index=$next_object_index && next_object_index=$((next_object_index+1))
+ac_stats_vi_index=$next_object_index && next_object_index=$((next_object_index+1))
+ac_stats_vo_index=$next_object_index && next_object_index=$((next_object_index+1))
+
+# Function to read all the stats for a given AC
+read_ac_stats() {
+	ac_name=$1
+	
+	eval ${ac_name}_bytes_sent_successfully=0
+	eval ${ac_name}_bytes_received=0
+	eval ${ac_name}_packets_transmitted=0
+	eval ${ac_name}_packets_received=0
+	eval ${ac_name}_errors_sent=0
+	eval ${ac_name}_errors_received=0
+	eval ${ac_name}_discard_packets_sent=0
+	eval ${ac_name}_discard_packets_received=0
+	eval ${ac_name}_retrans_count=0
+	eval ${ac_name}_out_qlen_histogram=0
+	
+	# TODO: how to read and return AC stats?
+}
+
+# Function to write the AC stats to the out.conf file
+set_ac_stats() {
+	ac_name=$1
+	ac_index=$2
+
+	eval bytes_sent_successfully=\${${ac_name}_bytes_sent_successfully}
+	eval bytes_received=\${${ac_name}_bytes_received}
+	eval packets_transmitted=\${${ac_name}_packets_transmitted}
+	eval packets_received=${ac_name}_packets_received}
+	eval errors_sent=\${${ac_name}_errors_sent}
+	eval errors_received=\${${ac_name}_errors_received}
+	eval discard_packets_sent=\${${ac_name}_discard_packets_sent}
+	eval discard_packets_received=\${${ac_name}_discard_packets_received}
+	eval retrans_count=\${${ac_name}_retrans_count}
+	eval out_qlen_histogram=\${${ac_name}_out_qlen_histogram}
+		
+	update_conf_out "Object_${ac_index}" "$ACCESSPOINT_AC_STATS_OBJECT"
+	update_conf_out "BytesSent_${ac_index}" "$bytes_sent_successfully"
+	update_conf_out "BytesReceived_${ac_index}" "$bytes_received"
+	update_conf_out "PacketsSent_${ac_index}" "$packets_transmitted"
+	update_conf_out "PacketsReceived_${ac_index}" "$packets_received"
+	update_conf_out "ErrorsSent_${ac_index}" "$errors_sent"
+	update_conf_out "ErrorsReceived_${ac_index}" "$errors_received"
+	update_conf_out "DiscardPacketsSent_${ac_index}" "$discard_packets_sent"
+	update_conf_out "DiscardPacketsReceived_${ac_index}" "$discard_packets_received"
+	update_conf_out "RetransCount_${ac_index}" "$retrans_count"
+	update_conf_out "OutQLenHistogram_${ac_index}" "$out_qlen_histogram"
+}
+
+# Read from the driver all the AccessPoint.AC.Stats statistics
+read_ac_stats be
+read_ac_stats bk
+read_ac_stats vi
+read_ac_stats vo
+
+# Create the output configuration file and set the statistics in it
+cat /dev/null > ${OUT_CONF}
+
+set_ac_stats be $ac_stats_be_index
+set_ac_stats bk $ac_stats_bk_index
+set_ac_stats vi $ac_stats_vi_index
+set_ac_stats vo $ac_stats_vo_index
+
+# Configuration is completed successfully
+update_conf_out "wlan_configuration_status" "success"
+
+# DEBUG: TODO: REMOVE
+#cp ${OUT_CONF} ${WAVE_TMP}/out_conf_wmm_ap_stats
+
+print2log DBG "fapi_wlan_wave_wmm_ap_stats_query done"
+timestamp "fapi_wlan_wave_wmm_ap_stats_query:$interface_name:done"

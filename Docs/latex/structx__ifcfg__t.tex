@@ -1,0 +1,56 @@
+\hypertarget{structx__ifcfg__t}{\section{x\-\_\-ifcfg\-\_\-t Struct Reference}
+\label{structx__ifcfg__t}\index{x\-\_\-ifcfg\-\_\-t@{x\-\_\-ifcfg\-\_\-t}}
+}
+
+
+Qo\-S interface mapping structure for interface process communication.  
+
+
+
+
+{\ttfamily \#include $<$qosal\-\_\-queue\-\_\-api.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint64\-\_\-t \hyperlink{structx__ifcfg__t_a8fd8c601b8624f82b34eb96673726d48}{ui\-Flags}
+\item 
+char \hyperlink{structx__ifcfg__t_aac5a55bd377922f0fd0f56f6b0b4ab43}{ifnames} \mbox{[}20\mbox{]}\mbox{[}\hyperlink{group__FAPI__QOS__GENERAL_ga53a5c7c867e818bc8b6dea3105a90f62}{M\-A\-X\-\_\-\-I\-F\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+char \hyperlink{structx__ifcfg__t_accff1ffe5db8d5f6d96b007b8bff2157}{base\-\_\-ifnames} \mbox{[}20\mbox{]}\mbox{[}\hyperlink{group__FAPI__QOS__GENERAL_ga53a5c7c867e818bc8b6dea3105a90f62}{M\-A\-X\-\_\-\-I\-F\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+char \hyperlink{structx__ifcfg__t_a09e6a73488b8c4dd93a4202fe11f954e}{logical\-\_\-base} \mbox{[}20\mbox{]}\mbox{[}\hyperlink{group__FAPI__QOS__GENERAL_ga53a5c7c867e818bc8b6dea3105a90f62}{M\-A\-X\-\_\-\-I\-F\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+\hyperlink{group__FAPI__QOS__GENERAL_ga23c1893cfe6a7875c1a418338c6f09ad}{iftype\-\_\-t} \hyperlink{structx__ifcfg__t_a465fac74e7e1a3c4a255e7ad550c7fd2}{ifgroup}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{structx__ifcfg__t_ad6a9705c42a0090aa7ed0d4a6b9b1a55}{num\-\_\-entries}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Qo\-S interface mapping structure for interface process communication. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structx__ifcfg__t_accff1ffe5db8d5f6d96b007b8bff2157}{\index{x\-\_\-ifcfg\-\_\-t@{x\-\_\-ifcfg\-\_\-t}!base\-\_\-ifnames@{base\-\_\-ifnames}}
+\index{base\-\_\-ifnames@{base\-\_\-ifnames}!x_ifcfg_t@{x\-\_\-ifcfg\-\_\-t}}
+\subsubsection[{base\-\_\-ifnames}]{\setlength{\rightskip}{0pt plus 5cm}char x\-\_\-ifcfg\-\_\-t\-::base\-\_\-ifnames\mbox{[}20\mbox{]}\mbox{[}{\bf M\-A\-X\-\_\-\-I\-F\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}}}\label{structx__ifcfg__t_accff1ffe5db8d5f6d96b007b8bff2157}
+List of base interface names \hypertarget{structx__ifcfg__t_a465fac74e7e1a3c4a255e7ad550c7fd2}{\index{x\-\_\-ifcfg\-\_\-t@{x\-\_\-ifcfg\-\_\-t}!ifgroup@{ifgroup}}
+\index{ifgroup@{ifgroup}!x_ifcfg_t@{x\-\_\-ifcfg\-\_\-t}}
+\subsubsection[{ifgroup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf iftype\-\_\-t} x\-\_\-ifcfg\-\_\-t\-::ifgroup}}\label{structx__ifcfg__t_a465fac74e7e1a3c4a255e7ad550c7fd2}
+Interface category \hypertarget{structx__ifcfg__t_aac5a55bd377922f0fd0f56f6b0b4ab43}{\index{x\-\_\-ifcfg\-\_\-t@{x\-\_\-ifcfg\-\_\-t}!ifnames@{ifnames}}
+\index{ifnames@{ifnames}!x_ifcfg_t@{x\-\_\-ifcfg\-\_\-t}}
+\subsubsection[{ifnames}]{\setlength{\rightskip}{0pt plus 5cm}char x\-\_\-ifcfg\-\_\-t\-::ifnames\mbox{[}20\mbox{]}\mbox{[}{\bf M\-A\-X\-\_\-\-I\-F\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}}}\label{structx__ifcfg__t_aac5a55bd377922f0fd0f56f6b0b4ab43}
+List of interface names \hypertarget{structx__ifcfg__t_a09e6a73488b8c4dd93a4202fe11f954e}{\index{x\-\_\-ifcfg\-\_\-t@{x\-\_\-ifcfg\-\_\-t}!logical\-\_\-base@{logical\-\_\-base}}
+\index{logical\-\_\-base@{logical\-\_\-base}!x_ifcfg_t@{x\-\_\-ifcfg\-\_\-t}}
+\subsubsection[{logical\-\_\-base}]{\setlength{\rightskip}{0pt plus 5cm}char x\-\_\-ifcfg\-\_\-t\-::logical\-\_\-base\mbox{[}20\mbox{]}\mbox{[}{\bf M\-A\-X\-\_\-\-I\-F\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}}}\label{structx__ifcfg__t_a09e6a73488b8c4dd93a4202fe11f954e}
+List of logical base interface names \hypertarget{structx__ifcfg__t_ad6a9705c42a0090aa7ed0d4a6b9b1a55}{\index{x\-\_\-ifcfg\-\_\-t@{x\-\_\-ifcfg\-\_\-t}!num\-\_\-entries@{num\-\_\-entries}}
+\index{num\-\_\-entries@{num\-\_\-entries}!x_ifcfg_t@{x\-\_\-ifcfg\-\_\-t}}
+\subsubsection[{num\-\_\-entries}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} x\-\_\-ifcfg\-\_\-t\-::num\-\_\-entries}}\label{structx__ifcfg__t_ad6a9705c42a0090aa7ed0d4a6b9b1a55}
+Number of interfaces under given interface category \hypertarget{structx__ifcfg__t_a8fd8c601b8624f82b34eb96673726d48}{\index{x\-\_\-ifcfg\-\_\-t@{x\-\_\-ifcfg\-\_\-t}!ui\-Flags@{ui\-Flags}}
+\index{ui\-Flags@{ui\-Flags}!x_ifcfg_t@{x\-\_\-ifcfg\-\_\-t}}
+\subsubsection[{ui\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t x\-\_\-ifcfg\-\_\-t\-::ui\-Flags}}\label{structx__ifcfg__t_a8fd8c601b8624f82b34eb96673726d48}
+Operational flags 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qosal__queue__api_8h}{qosal\-\_\-queue\-\_\-api.\-h}\end{DoxyCompactItemize}

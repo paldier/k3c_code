@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view >
+    <header>
+    <image>images/icons/multicast.png</image>
+        <name>Bonding</name>
+        <description>Display Bond Interface Status</description>
+    </header>
+    <object name="Device.X_LANTIQ_COM_Bonding.BondInterface.1" viewtype="form" title="Bond Interface">
+        <row><col><parameter  name="Name"  required="false" access="readonly" Value="bond0" type="string" webname="Name" ></parameter></col></row>
+        <row><col><parameter  name="Enable"  type="toggle" webname="Enable" ></parameter></col></row> 
+        <row><col><parameter  name="Mode"  type="dropdown" validvalues="Balance-rr,Active-backup,Balance-xor,Broadcast,Balance-tlb,Balance-alb" webname="Bond Mode" ></parameter></col></row> 
+        <parameter  name="Modify"  action="post" routeurl="Apply($event)" type="submitbutton" webname="Apply"></parameter>     
+    </object>    
+</view>

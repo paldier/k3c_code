@@ -1,0 +1,1926 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="ugw__common_8h" kind="file">
+    <compoundname>ugw_common.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes refid="ugw__defs_8h" local="yes">ugw_defs.h</includes>
+    <includes local="yes">ugw_objmsg.h</includes>
+    <includes refid="ugw__proto_8h" local="yes">ugw_proto.h</includes>
+    <includes local="no">libubus.h</includes>
+    <includes local="no">libubox/blobmsg_json.h</includes>
+    <includes local="no">libubox/blobmsg.h</includes>
+    <incdepgraph>
+      <node id="218">
+        <label>help_defs.h</label>
+        <link refid="help__defs_8h"/>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+      </node>
+      <node id="234">
+        <label>stdarg.h</label>
+      </node>
+      <node id="225">
+        <label>list.h</label>
+      </node>
+      <node id="224">
+        <label>help_structs.h</label>
+        <link refid="help__structs_8h"/>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+      </node>
+      <node id="230">
+        <label>help_proto.h</label>
+        <link refid="help__proto_8h"/>
+        <childnode refid="224" relation="include">
+        </childnode>
+      </node>
+      <node id="215">
+        <label>stdint.h</label>
+      </node>
+      <node id="232">
+        <label>stdlib.h</label>
+      </node>
+      <node id="221">
+        <label>ugw_proto.h</label>
+        <link refid="ugw__proto_8h"/>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+      </node>
+      <node id="226">
+        <label>help_objlist.h</label>
+        <link refid="help__objlist_8h_source"/>
+        <childnode refid="227" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="230" relation="include">
+        </childnode>
+        <childnode refid="231" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+      </node>
+      <node id="222">
+        <label>ugw_enums.h</label>
+        <link refid="ugw__enums_8h"/>
+        <childnode refid="219" relation="include">
+        </childnode>
+      </node>
+      <node id="223">
+        <label>ugw_structs.h</label>
+        <link refid="ugw__structs_8h"/>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+      </node>
+      <node id="216">
+        <label>ugw_defs.h</label>
+        <link refid="ugw__defs_8h"/>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+      </node>
+      <node id="217">
+        <label>syslog.h</label>
+      </node>
+      <node id="231">
+        <label>help_debug.h</label>
+        <link refid="help__debug_8h"/>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+      </node>
+      <node id="228">
+        <label>string.h</label>
+      </node>
+      <node id="220">
+        <label>ugw_objmsg.h</label>
+      </node>
+      <node id="237">
+        <label>help_error.h</label>
+        <link refid="help__error_8h"/>
+      </node>
+      <node id="239">
+        <label>libubox/blobmsg_json.h</label>
+      </node>
+      <node id="219">
+        <label>help_enums.h</label>
+        <link refid="help__enums_8h"/>
+      </node>
+      <node id="214">
+        <label>ugw_common.h</label>
+        <link refid="ugw_common.h"/>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+      </node>
+      <node id="236">
+        <label>time.h</label>
+      </node>
+      <node id="235">
+        <label>sys/time.h</label>
+      </node>
+      <node id="240">
+        <label>libubox/blobmsg.h</label>
+      </node>
+      <node id="227">
+        <label>stdio.h</label>
+      </node>
+      <node id="233">
+        <label>help_logging.h</label>
+        <link refid="help__logging_8h"/>
+        <childnode refid="227" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="235" relation="include">
+        </childnode>
+        <childnode refid="236" relation="include">
+        </childnode>
+      </node>
+      <node id="229">
+        <label>inttypes.h</label>
+      </node>
+      <node id="238">
+        <label>libubus.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structname__value__t" prot="public">name_value_t</innerclass>
+    <innerclass refid="structParamMap__t" prot="public">ParamMap_t</innerclass>
+    <innerclass refid="structx__LTQ__Param" prot="public">x_LTQ_Param</innerclass>
+    <innerclass refid="structpolldInfo" prot="public">polldInfo</innerclass>
+    <innerclass refid="structPolldResp" prot="public">PolldResp</innerclass>
+    <innerclass refid="structWsdData" prot="public">WsdData</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__LIBHELP_1ga87909ff79ce67a556f60ca606544e57d" prot="public" static="no">
+        <name>PARAM_MAP_NAME</name>
+        <initializer>&quot;xParamMap&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>param map name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="37" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__POLLD_1gac79d24ad3b52565290d3fbd22a47498f" prot="public" static="no">
+        <name>FOR_EACH_TIMER_ONLY</name>
+        <param><defname>__pxSrc</defname></param>
+        <param><defname>__pxParam</defname></param>
+        <initializer>list_for_each_entry(__pxParam,&amp;(__pxSrc-&gt;xPlist),xPlist) \</initializer>
+        <briefdescription>
+<para>Macro used to loop through timerlist. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">__pxSrc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to pxTimerList </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">__pxParam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer pxTimerTmp, used to copy the actual pxTimerList values </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="196" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__POLLD_1ga8d9ee84002519619a100089e8bd1a3ad" prot="public" static="no">
+        <name>DELETE_TIMER_NODE</name>
+        <param><defname>__pxNode</defname></param>
+        <initializer>do { <ref refid="group__SYSFRAMEWORK__LOG_1ga8ce0b241ee6ed787655fc6c683610cfa" kindref="member">LOGF_LOG_INFO</ref>(&quot;Deleting : %p Timer Node\n&quot;, pxTimerTmp); list_del(&amp;__pxNode-&gt;xPlist); <ref refid="group__LIBHELP_1gad8118b0746b34f72d8b9a150290716e5" kindref="member">HELP_FREE</ref>(__pxNode); } while(0);</initializer>
+        <briefdescription>
+<para>Free up the timer linked list. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">__pxNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to free </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="203" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__LIBHELP_1gaf878e044f6bcefab8a0bfc6468814811" prot="public" static="no">
+        <name>x_LTQ_Types</name>
+        <enumvalue id="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811af7bbcb8a6976b950c4d4371f3ee8a730" prot="public">
+          <name>LTQ_PARAM_TYPE_OBJ_LIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Objlist type </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811ac0fb9e74a657c608d24ed8266508024f" prot="public">
+          <name>LTQ_PARAM_TYPE_UINT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Unsigned int type </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811add9f44ccc630268e8fae17cdc49d5f3c" prot="public">
+          <name>LTQ_PARAM_TYPE_INT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Int type </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a5d1da7a589eedf42f68ccc702022a501" prot="public">
+          <name>LTQ_PARAM_TYPE_SHORT_INT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Short int type </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a3439aa96f78cca52ed69ab8c47b14865" prot="public">
+          <name>LTQ_PARAM_TYPE_USHORT_INT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Ushort int type </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811ac0de381358d323732335f0b242da4993" prot="public">
+          <name>LTQ_PARAM_TYPE_ULONG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Ulong type </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a3c6de02b9b1390c84d87eab266b13d11" prot="public">
+          <name>LTQ_PARAM_TYPE_LONG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Short int type </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811abc1f5be586c390a92c2b0836d004617a" prot="public">
+          <name>LTQ_PARAM_TYPE_CHAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Char type </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a1a5bf35441a752858ec6095840ab5a36" prot="public">
+          <name>LTQ_PARAM_TYPE_UCHAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Uchar type </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a2b209ca682063d25b55cbaa5c4b49972" prot="public">
+          <name>LTQ_PARAM_TYPE_FLOAT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Float type </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811ae55ada5c0acfb7cd4db758db66715e9f" prot="public">
+          <name>LTQ_PARAM_TYPE_BOOL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Bool type </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a3cd925d097dbb85317b159abd56bad93" prot="public">
+          <name>LTQ_PARAM_TYPE_ENUM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ENUM type </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a1d3dbfbf8a44738de201ac500f496f83" prot="public">
+          <name>LTQ_PARAM_TYPE_HEX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>HEX type </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a4c338e29ee28a9764c5e50c05bee0204" prot="public">
+          <name>LTQ_PARAM_TYPE_STR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>String type </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811aa0d084e1103f1400b632bfc4e0c7e8df" prot="public">
+          <name>LTQ_PARAM_TYPE_DATETIME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Datetime type </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a92c3af8fd9e67a1cc40fa40d49dcec20" prot="public">
+          <name>LTQ_PARAM_TYPE_STRUCT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Struct type </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum defining various data types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="42" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="42" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__SYSFRAMEWORK__POLLD_1gae10b07f2d0feb103db7fe4cfd192e5af" prot="public" static="no">
+        <name>RequestType</name>
+        <enumvalue id="group__SYSFRAMEWORK__POLLD_1ggae10b07f2d0feb103db7fe4cfd192e5afa63e66fe0a1e1de6cfed3c85a9aa48315" prot="public">
+          <name>REQTYPE_TIMER_ADD</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Add new timer </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__SYSFRAMEWORK__POLLD_1ggae10b07f2d0feb103db7fe4cfd192e5afa08e0354be826a836f72ebfa716a7d290" prot="public">
+          <name>REQTYPE_TIMER_DEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Delete existing timer value </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__SYSFRAMEWORK__POLLD_1ggae10b07f2d0feb103db7fe4cfd192e5afa3a3504998275abee398a70197a8bf6e4" prot="public">
+          <name>REQTYPE_TIMER_MOD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Modify existing timer value </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum containing the type of request for polld. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="119" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="119" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__SYSFRAMEWORK__POLLD_1ga8d3aaea1dc4569e14bc3b498c3131b2a" prot="public" static="no">
+        <name>TimerRecurence</name>
+        <enumvalue id="group__SYSFRAMEWORK__POLLD_1gga8d3aaea1dc4569e14bc3b498c3131b2aa295266347c0bdf8dcd25d42a03275c79" prot="public">
+          <name>TIMERRECURENCE_ONCE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Add new timer </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__SYSFRAMEWORK__POLLD_1gga8d3aaea1dc4569e14bc3b498c3131b2aacfa2040c602a9b9afe857229cc05d3ad" prot="public">
+          <name>TIMERRECURENCE_RECURRING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>recurring timer </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum containing timeout for once or repeatedly. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="128" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="128" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__LIBHELP_1ga3a023c0c27667e78ae521eb64f1c7c81" prot="public" static="no">
+        <name>ParamType</name>
+        <enumvalue id="group__LIBHELP_1gga3a023c0c27667e78ae521eb64f1c7c81ae0d1ddb68d36dac7d96890a82b354573" prot="public">
+          <name>PARAM_TYPE_INT32</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga3a023c0c27667e78ae521eb64f1c7c81a9f6b1fdf4907d0ed01921dc42e40ad39" prot="public">
+          <name>PARAM_TYPE_STRING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum containing data types supported to construct blob message. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="211" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="211" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__LIBHELP_1ga21d5e8f8cdaa838586b31007df0a950b" prot="public" static="no">
+        <name>ActionType</name>
+        <enumvalue id="group__LIBHELP_1gga21d5e8f8cdaa838586b31007df0a950ba4645d70cb9bb2228f230d601f477639d" prot="public">
+          <name>ACTION_STOP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Stop polling operation for servd </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__LIBHELP_1gga21d5e8f8cdaa838586b31007df0a950bad18d9bd6c0a4eced8d31c7b1c6b9dd16" prot="public">
+          <name>ACTION_START</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Start polling operation for servd </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum containing the actions sent from web to wsd forwarded to servd. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="360" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="360" bodyend="363"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" prot="public" static="no">
+        <type>struct <ref refid="structpolldInfo" kindref="compound">polldInfo</ref></type>
+        <definition>typedef struct polldInfo  PolldTimeInfo</definition>
+        <argsstring></argsstring>
+        <name>PolldTimeInfo</name>
+        <briefdescription>
+<para>Contains the timer fields for polld. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="107" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__SYSFRAMEWORK__POLLD_1gab66601607b9776a27d87bcfc0b024b6f" prot="public" static="no">
+        <type>struct <ref refid="structPolldResp" kindref="compound">PolldResp</ref></type>
+        <definition>typedef struct PolldResp  PolldRespCode</definition>
+        <argsstring></argsstring>
+        <name>PolldRespCode</name>
+        <briefdescription>
+<para>Contains the response code for Callbacks of polld. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="114" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__SYSFRAMEWORK__POLLD_1gae320b4db14b8f6d6c2cb985921722afa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref> *</type>
+        <definition>PolldTimeInfo* help_createTimerList</definition>
+        <argsstring>(void)</argsstring>
+        <name>help_createTimerList</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Function to create head node for polld timer list. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Head node pointer on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="137" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SYSFRAMEWORK__POLLD_1gaf539f6e7bd349a8e5f3203efda7448f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void help_delTimerList</definition>
+        <argsstring>(IN PolldTimeInfo **pxTimerList)</argsstring>
+        <name>help_delTimerList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref> **</type>
+          <declname>pxTimerList</declname>
+        </param>
+        <briefdescription>
+<para>Function to delete the polld timer linked list. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxTimerList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Head pointer of timerlinked list </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Head node pointer on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="144" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SYSFRAMEWORK__POLLD_1ga7b5d0762e28e4e09406a75548c61bb4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void help_printTimerList</definition>
+        <argsstring>(IN PolldTimeInfo *pxTimerList)</argsstring>
+        <name>help_printTimerList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref> *</type>
+          <declname>pxTimerList</declname>
+        </param>
+        <briefdescription>
+<para>Function to print polld timer linked list. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxTimerList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Head pointer of timer linked list </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Prints timer linkedlist values on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="151" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SYSFRAMEWORK__POLLD_1ga8de5216d3d5e3b7b979c6fc189d35ade" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_addTimerList</definition>
+        <argsstring>(OUT PolldTimeInfo *pxTimerList, IN PolldTimeInfo *pxTimeInfo)</argsstring>
+        <name>help_addTimerList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref> *</type>
+          <declname>pxTimerList</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref> *</type>
+          <declname>pxTimeInfo</declname>
+        </param>
+        <briefdescription>
+<para>Function to add a new timer node in polld timer linked list. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pxTimerList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Head pointer of polld timer linked list </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxTimeInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Polld timer structure to be added </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Success on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="159" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SYSFRAMEWORK__POLLD_1gab17830ba31bb4e46a053646e6fca23f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ubusMsgToPolld</definition>
+        <argsstring>(IN MainOper eOperation, IN MsgHeader *pxDynMsg, OUT MsgHeader *pxOutputMsg, IN PolldTimeInfo *pxTimerList)</argsstring>
+        <name>ubusMsgToPolld</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__LIBHELP_1ga0cdba030aaa0bd18b24dbf19b06877a0" kindref="member">MainOper</ref></type>
+          <declname>eOperation</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxDynMsg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxOutputMsg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref> *</type>
+          <declname>pxTimerList</declname>
+        </param>
+        <briefdescription>
+<para>Function to send ubus message to polld. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">eOperation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operation such as GET </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxDynMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message header contains objList and <ref refid="structParamList" kindref="compound">ParamList</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pxOutputMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message header contains objList and <ref refid="structParamList" kindref="compound">ParamList</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxTimerList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Struct contains timer info </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Success on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="169" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SYSFRAMEWORK__POLLD_1ga631a79daf4414553f01214f9f51d3b94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_objListToBlobPolld</definition>
+        <argsstring>(OUT struct blob_buf *buf, IN MsgHeader *pxMsg, IN struct ubus_context *ctx, IN struct ubus_request_data *req, IN PolldTimeInfo *pxTimerList)</argsstring>
+        <name>help_objListToBlobPolld</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> struct blob_buf *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxMsg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct ubus_context *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct ubus_request_data *</type>
+          <declname>req</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref> *</type>
+          <declname>pxTimerList</declname>
+        </param>
+        <briefdescription>
+<para>Function to convert objlist and polld timers to blob message. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blob attribute structure </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>message header contains objList and <ref refid="structParamList" kindref="compound">ParamList</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer contains ubus context </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contains ubus request data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxTimerList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contains polld timer info </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Success on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="180" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SYSFRAMEWORK__POLLD_1ga6146742ce8a6c2a48d3ed56d5ba96e55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_blobToObjListPolld</definition>
+        <argsstring>(IN struct blob_attr *msg, OUT MsgHeader *pxMsg, OUT PolldTimeInfo *pxTimerInfo)</argsstring>
+        <name>help_blobToObjListPolld</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct blob_attr *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxMsg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref> *</type>
+          <declname>pxTimerInfo</declname>
+        </param>
+        <briefdescription>
+<para>Function to convert blob message to objList and polld timers. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contains blob attribute </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pxMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message header contains objList and <ref refid="structParamList" kindref="compound">ParamList</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pxTimerInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contains polld time info </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Success on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="189" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga150ff6f76ba6396d5e81bc584bac0ae8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t enumMapGet</definition>
+        <argsstring>(name_value_t enum_nv[], int32_t iSize, char *trVal, int32_t *uiId, int32_t iSel)</argsstring>
+        <name>enumMapGet</name>
+        <param>
+          <type><ref refid="structname__value__t" kindref="compound">name_value_t</ref></type>
+          <declname>enum_nv</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+          <declname>iSize</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>trVal</declname>
+        </param>
+        <param>
+          <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref> *</type>
+          <declname>uiId</declname>
+        </param>
+        <param>
+          <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+          <declname>iSel</declname>
+        </param>
+        <briefdescription>
+<para>API for converting string format of enum to integer and vice-versa. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">enum_nv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Enumeration look-up having string to integer mapping </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">iSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of enum_nv </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">trVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Corresponding string value for enumeration value in uiId </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">uiId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Corresponding integer value for enumeration value in trVal </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">iSel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Select string to integer or integer to string lookup </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="223" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga08300bca1af4dcd87c17484ba5423465" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t help_objlistToStructConv</definition>
+        <argsstring>(ObjList *pxObj, void *pxStruct, x_LTQ_Param xParamDetail[], int32_t iSize)</argsstring>
+        <name>help_objlistToStructConv</name>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxObj</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pxStruct</declname>
+        </param>
+        <param>
+          <type><ref refid="structx__LTQ__Param" kindref="compound">x_LTQ_Param</ref></type>
+          <declname>xParamDetail</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+          <declname>iSize</declname>
+        </param>
+        <briefdescription>
+<para>API for converting name-value pairs coming from servd into C structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to name-value pair list </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pxStruct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to structure which will be filled with corresponding values from pxObj </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">xParamDetail</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter-offset map for specified structure </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">iSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of map entries in xParamDetail </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>UGW_SUCCESS on successful / UGW_FAILURE on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="232" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga28a2489527017209b1597af38de0486c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t help_structToObjlistConv</definition>
+        <argsstring>(ObjList *pxObj, void *pxStruct, x_LTQ_Param xParamDetail[], int32_t iSize)</argsstring>
+        <name>help_structToObjlistConv</name>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxObj</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pxStruct</declname>
+        </param>
+        <param>
+          <type><ref refid="structx__LTQ__Param" kindref="compound">x_LTQ_Param</ref></type>
+          <declname>xParamDetail</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+          <declname>iSize</declname>
+        </param>
+        <briefdescription>
+<para>API for converting name-value pairs coming from servd into C structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to name-value pair list </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pxStruct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to structure which will be filled with corresponding values from pxObj </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">xParamDetail</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter-offset map for specified structure </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">iSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of map entries in xParamDetail </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>UGW_SUCCESS / UGW_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="241" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gabde6cd1678f5635e93a21caa32652427" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t help_structToObjlistMapping</definition>
+        <argsstring>(ObjList *pxTmpObj, void *pxStruct, x_LTQ_Param xParamDetail[])</argsstring>
+        <name>help_structToObjlistMapping</name>
+        <param>
+          <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxTmpObj</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>pxStruct</declname>
+        </param>
+        <param>
+          <type><ref refid="structx__LTQ__Param" kindref="compound">x_LTQ_Param</ref></type>
+          <declname>xParamDetail</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>API for Updating the Oject- params values coming from servd with the corresponding value from C structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to name-value pair list which will be filled with corresponding values from pxStruct </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pxStruct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to structure which holds the fapi values </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">xParamDetail</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter-offset map for specified structure </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>UGW_SUCCESS / UGW_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="251" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gae446d514164f23d3e91f7170e9fc973b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> char *</type>
+        <definition>OUT char* HELP_STRDUP</definition>
+        <argsstring>(IN char *pcInStr)</argsstring>
+        <name>HELP_STRDUP</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcInStr</declname>
+        </param>
+        <briefdescription>
+<para>Function to perform strdup functionality. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pcInStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Copy string </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Strdup String on successful / NULL on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="256" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga1ec415f0fca441424045a6af058be412" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>OUT int32_t HELP_STRDUP_FREE</definition>
+        <argsstring>(IN char *pcInStr)</argsstring>
+        <name>HELP_STRDUP_FREE</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcInStr</declname>
+        </param>
+        <briefdescription>
+<para>Function to free strdup allocated memory. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pcInStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Free pointer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>UGW_SUCCESS on successful / UGW_FAILURE on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="262" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gaa326c5a055a6ea61eba5c165005fc5b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* HELP_STRNCPY</definition>
+        <argsstring>(INOUT char *pcDest, IN const char *pcSrc, IN size_t nDestSize)</argsstring>
+        <name>HELP_STRNCPY</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref> char *</type>
+          <declname>pcDest</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcSrc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> size_t</type>
+          <declname>nDestSize</declname>
+        </param>
+        <briefdescription>
+<para>Function to perform safe strncpy. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pcDest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to destination buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcSrc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to source buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">nDestSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of destination </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to destination string on successful / NULL on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="270" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gaa84cc97acac4c77866e70fc850a1c670" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* HELP_STRNCAT</definition>
+        <argsstring>(INOUT char *pcDest, IN const char *pcSrc, IN size_t nDestSize)</argsstring>
+        <name>HELP_STRNCAT</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref> char *</type>
+          <declname>pcDest</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcSrc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> size_t</type>
+          <declname>nDestSize</declname>
+        </param>
+        <briefdescription>
+<para>Function to perform safe strncat. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pcDest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to destination buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcSrc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to source buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">nDestSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of destination </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to destination string on successful / NULL on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="279" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gac08fb726326e0ccf6dff05f97c251b93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int HELP_STRCMP</definition>
+        <argsstring>(IN const char *pcStr1, IN const char *pcStr2)</argsstring>
+        <name>HELP_STRCMP</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcStr1</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcStr2</declname>
+        </param>
+        <briefdescription>
+<para>Function for string comparision. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pcStr1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String 1 for comparision </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcStr2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String 2 for comparision </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>UGW_SUCCESS on successful / different -ve values on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="287" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gac0126ae1cda6789711a261d98607dc7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* HELP_STRCHR</definition>
+        <argsstring>(INOUT char *pcStr, int nChar)</argsstring>
+        <name>HELP_STRCHR</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref> char *</type>
+          <declname>pcStr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nChar</declname>
+        </param>
+        <briefdescription>
+<para>Function for finding a character in a string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pcStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input string </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">nChar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Character to be searched for in the string </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to character on successful / NULL on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="295" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gaf5844e281e1aaceb45769c5e891aebdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* HELP_STRSTR</definition>
+        <argsstring>(INOUT char *pcHayStack, IN char *pcNeedle)</argsstring>
+        <name>HELP_STRSTR</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref> char *</type>
+          <declname>pcHayStack</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcNeedle</declname>
+        </param>
+        <briefdescription>
+<para>Function to search for substring in a string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pcHayStack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Big string </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcNeedle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sub string </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to substring on successful / NULL on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="303" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga836960ef80323486284e33eff0b4cc53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* HELP_STRTOK_R</definition>
+        <argsstring>(IN char *pcStr, const char *pcDelimiters, char **ppcSavePtr)</argsstring>
+        <name>HELP_STRTOK_R</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcStr</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pcDelimiters</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>ppcSavePtr</declname>
+        </param>
+        <briefdescription>
+<para>Function to tokenize a string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pcStr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input string with tokens </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcDelimiters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of tokens </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ppcSavePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to char* where pointer to next token is stored for internal use by the function </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to next token on successful / NULL on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="312" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga58565b7c016691926c9934bb01d229d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>OUT int32_t help_sendUbusMessage</definition>
+        <argsstring>(IN struct blob_buf *pxBlob, IN char *psUbusObject, IN char *psUbusMethod)</argsstring>
+        <name>help_sendUbusMessage</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct blob_buf *</type>
+          <declname>pxBlob</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>psUbusObject</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>psUbusMethod</declname>
+        </param>
+        <briefdescription>
+<para>Function to send the ubus message to Ubus registered daemons. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>IN]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pxBlob Pointer to the blob message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IN]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>psUbusObject Name of the ubus registered daemon </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IN]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>psUbusMethod Name of the method to be handled in the ubus registered daemon(psUbusObject) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>UGW_SUCCESS on successful / UGW_FAILURE on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="319" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga3e86e9fd4343561b04243ea633884245" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t help_constructBlobMessageFromParamList</definition>
+        <argsstring>(OUT struct blob_buf *pxBlob, IN ParamList *pxParamList)</argsstring>
+        <name>help_constructBlobMessageFromParamList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> struct blob_buf *</type>
+          <declname>pxBlob</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structParamList" kindref="compound">ParamList</ref> *</type>
+          <declname>pxParamList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="321" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga242aaca591fbcd4134b5ff1e7e6dea57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t help_constructParamListFromBlob</definition>
+        <argsstring>(IN struct blob_attr *pxBlob, OUT ParamList *pxParamList)</argsstring>
+        <name>help_constructParamListFromBlob</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct blob_attr *</type>
+          <declname>pxBlob</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="structParamList" kindref="compound">ParamList</ref> *</type>
+          <declname>pxParamList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="323" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga261979784ac90d847a858902830b1f46" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> void</type>
+        <definition>static OUT void HELP_ONLY_PARAM_SET_WITH_TYPE</definition>
+        <argsstring>(IN void *pxParam, IN const char *pcParamName, IN const char *pcParamValue, IN uint32_t unParamFlag)</argsstring>
+        <name>HELP_ONLY_PARAM_SET_WITH_TYPE</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> void *</type>
+          <declname>pxParam</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcParamName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcParamValue</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unParamFlag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="325" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="325" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga4a7a71c496e62d5e1ec8a24973c1a9f1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>static OUT int32_t HELP_SEND_UBUS_MESSAGE</definition>
+        <argsstring>(IN struct blob_buf *pxBlob, IN char *psUbusObject, IN char *psUbusMethod)</argsstring>
+        <name>HELP_SEND_UBUS_MESSAGE</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct blob_buf *</type>
+          <declname>pxBlob</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>psUbusObject</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>psUbusMethod</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="330" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="330" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gabb2ccf2926e67e5816a52f9894647f1d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>static OUT int32_t HELP_CONSTRUCT_BLOB_FROM_PARAMLIST</definition>
+        <argsstring>(OUT struct blob_buf *pxBlob, IN ParamList *pxParamList)</argsstring>
+        <name>HELP_CONSTRUCT_BLOB_FROM_PARAMLIST</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> struct blob_buf *</type>
+          <declname>pxBlob</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structParamList" kindref="compound">ParamList</ref> *</type>
+          <declname>pxParamList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="335" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="335" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gaaacfc41ea257f64ab9453ff64cc3097b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>static OUT int32_t HELP_CONSTRUCT_PARAMLIST_FROM_BLOB</definition>
+        <argsstring>(IN struct blob_attr *pxBlob, OUT ParamList *pxParamList)</argsstring>
+        <name>HELP_CONSTRUCT_PARAMLIST_FROM_BLOB</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct blob_attr *</type>
+          <declname>pxBlob</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="structParamList" kindref="compound">ParamList</ref> *</type>
+          <declname>pxParamList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="339" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="339" bodyend="342"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gaa999ef740ca00cb4498ad024c0c4082b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>static OUT int32_t HELP_CONSTRUCT_SERVD_BLOB_FROM_NOTIFY</definition>
+        <argsstring>(OUT struct blob_buf *pxBlob, IN NotifyObjData *pxNotify)</argsstring>
+        <name>HELP_CONSTRUCT_SERVD_BLOB_FROM_NOTIFY</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> struct blob_buf *</type>
+          <declname>pxBlob</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structNotifyObjData" kindref="compound">NotifyObjData</ref> *</type>
+          <declname>pxNotify</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="344" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="344" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga6087cb7a580f2e2a97386b7f9ea82416" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>static OUT int32_t HELP_CONSTRUCT_SERVD_NOTIFY_FROM_BLOB</definition>
+        <argsstring>(IN struct blob_attr *pxBlob, OUT NotifyObjData *pxNotify)</argsstring>
+        <name>HELP_CONSTRUCT_SERVD_NOTIFY_FROM_BLOB</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct blob_attr *</type>
+          <declname>pxBlob</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="structNotifyObjData" kindref="compound">NotifyObjData</ref> *</type>
+          <declname>pxNotify</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="349" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="349" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga53ced793bbf6127fefac2604a5d60040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t help_WsdDataToBlob</definition>
+        <argsstring>(struct blob_buf *buf, WsdData *pxWsdData)</argsstring>
+        <name>help_WsdDataToBlob</name>
+        <param>
+          <type>struct blob_buf *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type><ref refid="structWsdData" kindref="compound">WsdData</ref> *</type>
+          <declname>pxWsdData</declname>
+        </param>
+        <briefdescription>
+<para>Function to covert websocket data to blobmsg. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to fill notify struct </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxWsdData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Notification Object list </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Buf filled with <ref refid="structWsdData" kindref="compound">WsdData</ref> struct on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="381" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gaac423bf955bd0d2e1d82355d68ec9b00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t help_blobToWsdData</definition>
+        <argsstring>(struct blob_attr *msg, WsdData *pxWsdData)</argsstring>
+        <name>help_blobToWsdData</name>
+        <param>
+          <type>struct blob_attr *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type><ref refid="structWsdData" kindref="compound">WsdData</ref> *</type>
+          <declname>pxWsdData</declname>
+        </param>
+        <briefdescription>
+<para>Function to covert blob msg to websocket data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blob msg </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxWsdData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Notification list </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structWsdData" kindref="compound">WsdData</ref> structure is filled on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="388" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga2c531fc3603622626fb9c1f7b5cdad4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t help_sendStatusToWeb</definition>
+        <argsstring>(uint32_t unNotifyId, unsigned char ucType, char *pcMessage)</argsstring>
+        <name>help_sendStatusToWeb</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>unNotifyId</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>ucType</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>pcMessage</declname>
+        </param>
+        <briefdescription>
+<para>Function to send status messages through ubus to wsd and web. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">unNotifyId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Notify id to identify wsd proto </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ucType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sync/Async notification </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcMessage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the messages string </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>on UGW_SUCCESS on successful / UGW_FAILURE on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="396" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>File contains prototypes and associated data structures that are used across multiple SLs. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2015</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lantiq<sp/>Beteiligungs-GmbH<sp/>&amp;<sp/>Co.<sp/>KG</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lilienthalstrasse<sp/>15,<sp/>85579<sp/>Neubiberg,<sp/>Germany<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>For<sp/>licensing<sp/>information,<sp/>see<sp/>the<sp/>file<sp/>&apos;LICENSE&apos;<sp/>in<sp/>the<sp/>root<sp/>folder<sp/>of</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>software<sp/>module.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>*****************************************************************************<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>File<sp/>Name<sp/><sp/><sp/><sp/>:<sp/><sp/>ugw_common.h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Description<sp/><sp/>:<sp/>Common<sp/>function<sp/>prototypes<sp/>and<sp/>associated<sp/>data<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>structures<sp/>that<sp/>are<sp/>used<sp/>across<sp/>multiple<sp/>SLs<sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor">#ifndef<sp/>_UGW_COMMON_H</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_UGW_COMMON_H</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">/*<sp/>@{<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ugw__defs_8h" kindref="compound">ugw_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ugw_objmsg.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ugw__proto_8h" kindref="compound">ugw_proto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libubus.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libubox/blobmsg_json.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libubox/blobmsg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="group__LIBHELP_1ga87909ff79ce67a556f60ca606544e57d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PARAM_MAP_NAME<sp/>&quot;xParamMap&quot;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="group__LIBHELP_1gaf878e044f6bcefab8a0bfc6468814811" refkind="member"><highlight class="preprocessor">typedef<sp/>enum<sp/>{</highlight></codeline>
+<codeline lineno="43" refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811af7bbcb8a6976b950c4d4371f3ee8a730" refkind="member"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811af7bbcb8a6976b950c4d4371f3ee8a730" kindref="member">LTQ_PARAM_TYPE_OBJ_LIST</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811ac0fb9e74a657c608d24ed8266508024f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811ac0fb9e74a657c608d24ed8266508024f" kindref="member">LTQ_PARAM_TYPE_UINT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811add9f44ccc630268e8fae17cdc49d5f3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811add9f44ccc630268e8fae17cdc49d5f3c" kindref="member">LTQ_PARAM_TYPE_INT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a5d1da7a589eedf42f68ccc702022a501" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a5d1da7a589eedf42f68ccc702022a501" kindref="member">LTQ_PARAM_TYPE_SHORT_INT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a3439aa96f78cca52ed69ab8c47b14865" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a3439aa96f78cca52ed69ab8c47b14865" kindref="member">LTQ_PARAM_TYPE_USHORT_INT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811ac0de381358d323732335f0b242da4993" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811ac0de381358d323732335f0b242da4993" kindref="member">LTQ_PARAM_TYPE_ULONG</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a3c6de02b9b1390c84d87eab266b13d11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a3c6de02b9b1390c84d87eab266b13d11" kindref="member">LTQ_PARAM_TYPE_LONG</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811abc1f5be586c390a92c2b0836d004617a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811abc1f5be586c390a92c2b0836d004617a" kindref="member">LTQ_PARAM_TYPE_CHAR</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51" refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a1a5bf35441a752858ec6095840ab5a36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a1a5bf35441a752858ec6095840ab5a36" kindref="member">LTQ_PARAM_TYPE_UCHAR</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52" refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a2b209ca682063d25b55cbaa5c4b49972" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a2b209ca682063d25b55cbaa5c4b49972" kindref="member">LTQ_PARAM_TYPE_FLOAT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811ae55ada5c0acfb7cd4db758db66715e9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811ae55ada5c0acfb7cd4db758db66715e9f" kindref="member">LTQ_PARAM_TYPE_BOOL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54" refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a3cd925d097dbb85317b159abd56bad93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a3cd925d097dbb85317b159abd56bad93" kindref="member">LTQ_PARAM_TYPE_ENUM</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55" refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a1d3dbfbf8a44738de201ac500f496f83" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a1d3dbfbf8a44738de201ac500f496f83" kindref="member">LTQ_PARAM_TYPE_HEX</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a4c338e29ee28a9764c5e50c05bee0204" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a4c338e29ee28a9764c5e50c05bee0204" kindref="member">LTQ_PARAM_TYPE_STR</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811aa0d084e1103f1400b632bfc4e0c7e8df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811aa0d084e1103f1400b632bfc4e0c7e8df" kindref="member">LTQ_PARAM_TYPE_DATETIME</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a92c3af8fd9e67a1cc40fa40d49dcec20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ggaf878e044f6bcefab8a0bfc6468814811a92c3af8fd9e67a1cc40fa40d49dcec20" kindref="member">LTQ_PARAM_TYPE_STRUCT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}<sp/><ref refid="group__LIBHELP_1gaf878e044f6bcefab8a0bfc6468814811" kindref="member">x_LTQ_Types</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="structname__value__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66" refid="structname__value__t_1a44c775e34e1e8a5a0d6423c67d5e3a1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>name[<ref refid="group__LIBHELP_1gaac5d922b6e3eb48b7ba829979fd73ae2" kindref="member">MAX_LEN_PARAM_NAME</ref>];<sp/></highlight></codeline>
+<codeline lineno="67" refid="structname__value__t_1a6cc6005c6235e34827f015d95783d249" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/><ref refid="structname__value__t_1a6cc6005c6235e34827f015d95783d249" kindref="member">value</ref>;<sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}<sp/><ref refid="structname__value__t" kindref="compound">name_value_t</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="structParamMap__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75" refid="structParamMap__t_1ae3063cc84993cd6d6e79aee82aaf1891" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structParamMap__t_1ae3063cc84993cd6d6e79aee82aaf1891" kindref="member">nParamInc</ref>;<sp/></highlight></codeline>
+<codeline lineno="76" refid="structParamMap__t_1a1090a97475ebe9b49695eb1f11f55356" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structParamMap__t_1a1090a97475ebe9b49695eb1f11f55356" kindref="member">nParamExc</ref>;<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}<sp/><ref refid="structParamMap__t" kindref="compound">ParamMap_t</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="structx__LTQ__Param" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83" refid="structx__LTQ__Param_1a6023ecf10fd4bdcafa9c291a29229355" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>acParamName[<ref refid="group__LIBHELP_1gaac5d922b6e3eb48b7ba829979fd73ae2" kindref="member">MAX_LEN_PARAM_NAME</ref>];<sp/></highlight></codeline>
+<codeline lineno="84" refid="structx__LTQ__Param_1abefad4567c0bd0638661ab6c294ba978" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structx__LTQ__Param_1abefad4567c0bd0638661ab6c294ba978" kindref="member">uiId</ref>;<sp/></highlight></codeline>
+<codeline lineno="85" refid="structx__LTQ__Param_1a6418a8dffa891b6afd5caad55569b076" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structx__LTQ__Param_1a6418a8dffa891b6afd5caad55569b076" kindref="member">uiType</ref>;</highlight></codeline>
+<codeline lineno="86" refid="structx__LTQ__Param_1a654550468915b45a7b78e570e741baf2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structx__LTQ__Param_1a654550468915b45a7b78e570e741baf2" kindref="member">unOffset</ref>;<sp/></highlight></codeline>
+<codeline lineno="87" refid="structx__LTQ__Param_1a8353f8dff855f22890e656ef2683cf14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structname__value__t" kindref="compound">name_value_t</ref><sp/>*<ref refid="structx__LTQ__Param_1a8353f8dff855f22890e656ef2683cf14" kindref="member">nvLookUp</ref>;<sp/></highlight></codeline>
+<codeline lineno="88" refid="structx__LTQ__Param_1a33e8fa5cc148e6b0aa51cf67423d0d4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structx__LTQ__Param_1a33e8fa5cc148e6b0aa51cf67423d0d4e" kindref="member">unLookUpSize</ref>;<sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}<sp/><ref refid="structx__LTQ__Param" kindref="compound">x_LTQ_Param</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="comment">/*<sp/>@{<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>########################<sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>polld<sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/><sp/><sp/>#######################*/</highlight></codeline>
+<codeline lineno="101" refid="structpolldInfo" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpolldInfo" kindref="compound">polldInfo</ref><sp/>{</highlight></codeline>
+<codeline lineno="102" refid="structpolldInfo_1acf3be94a68302552eed37fe8ab74ee07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpolldInfo_1acf3be94a68302552eed37fe8ab74ee07" kindref="member">unRequest_type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103" refid="structpolldInfo_1aa560623f9e58a960842720b570f7ca78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpolldInfo_1aa560623f9e58a960842720b570f7ca78" kindref="member">unOccurrence</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104" refid="structpolldInfo_1a0574a5c222aea42a88fea3fe8360f910" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpolldInfo_1a0574a5c222aea42a88fea3fe8360f910" kindref="member">unTimeOut</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>unReferenceCount;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*&lt;<sp/>Number<sp/>of<sp/>parameters<sp/>associated<sp/>with<sp/>this<sp/>timer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="structpolldInfo_1a8613886ff61c141e5d5e36b2d40f709d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ga73f73d414f252ff46652f16495641187" kindref="member">ListHead</ref><sp/><ref refid="structpolldInfo_1a8613886ff61c141e5d5e36b2d40f709d" kindref="member">xPlist</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}<sp/><ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="structPolldResp" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structPolldResp" kindref="compound">PolldResp</ref>{</highlight></codeline>
+<codeline lineno="113" refid="structPolldResp_1ac9a283fa3aab2c01be0027cb5dd66e48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structPolldResp_1ac9a283fa3aab2c01be0027cb5dd66e48" kindref="member">nRespCode</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}<sp/><ref refid="group__SYSFRAMEWORK__POLLD_1gab66601607b9776a27d87bcfc0b024b6f" kindref="member">PolldRespCode</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="group__SYSFRAMEWORK__POLLD_1gae10b07f2d0feb103db7fe4cfd192e5af" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="120" refid="group__SYSFRAMEWORK__POLLD_1ggae10b07f2d0feb103db7fe4cfd192e5afa63e66fe0a1e1de6cfed3c85a9aa48315" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__SYSFRAMEWORK__POLLD_1ggae10b07f2d0feb103db7fe4cfd192e5afa63e66fe0a1e1de6cfed3c85a9aa48315" kindref="member">REQTYPE_TIMER_ADD</ref><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="121" refid="group__SYSFRAMEWORK__POLLD_1ggae10b07f2d0feb103db7fe4cfd192e5afa08e0354be826a836f72ebfa716a7d290" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__SYSFRAMEWORK__POLLD_1ggae10b07f2d0feb103db7fe4cfd192e5afa08e0354be826a836f72ebfa716a7d290" kindref="member">REQTYPE_TIMER_DEL</ref>,<sp/></highlight></codeline>
+<codeline lineno="122" refid="group__SYSFRAMEWORK__POLLD_1ggae10b07f2d0feb103db7fe4cfd192e5afa3a3504998275abee398a70197a8bf6e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__SYSFRAMEWORK__POLLD_1ggae10b07f2d0feb103db7fe4cfd192e5afa3a3504998275abee398a70197a8bf6e4" kindref="member">REQTYPE_TIMER_MOD</ref><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}<sp/><ref refid="group__SYSFRAMEWORK__POLLD_1gae10b07f2d0feb103db7fe4cfd192e5af" kindref="member">RequestType</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="group__SYSFRAMEWORK__POLLD_1ga8d3aaea1dc4569e14bc3b498c3131b2a" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="129" refid="group__SYSFRAMEWORK__POLLD_1gga8d3aaea1dc4569e14bc3b498c3131b2aa295266347c0bdf8dcd25d42a03275c79" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__SYSFRAMEWORK__POLLD_1gga8d3aaea1dc4569e14bc3b498c3131b2aa295266347c0bdf8dcd25d42a03275c79" kindref="member">TIMERRECURENCE_ONCE</ref><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="130" refid="group__SYSFRAMEWORK__POLLD_1gga8d3aaea1dc4569e14bc3b498c3131b2aacfa2040c602a9b9afe857229cc05d3ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__SYSFRAMEWORK__POLLD_1gga8d3aaea1dc4569e14bc3b498c3131b2aacfa2040c602a9b9afe857229cc05d3ad" kindref="member">TIMERRECURENCE_RECURRING</ref><sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}<sp/><ref refid="group__SYSFRAMEWORK__POLLD_1ga8d3aaea1dc4569e14bc3b498c3131b2a" kindref="member">TimerRecurence</ref>;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><ref refid="structpolldInfo" kindref="compound">PolldTimeInfo</ref><sp/>*<ref refid="group__SYSFRAMEWORK__POLLD_1gae320b4db14b8f6d6c2cb985921722afa" kindref="member">help_createTimerList</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__SYSFRAMEWORK__POLLD_1gaf539f6e7bd349a8e5f3203efda7448f4" kindref="member">help_delTimerList</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structpolldInfo" kindref="compound">PolldTimeInfo</ref><sp/>**pxTimerList);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__SYSFRAMEWORK__POLLD_1ga7b5d0762e28e4e09406a75548c61bb4c" kindref="member">help_printTimerList</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structpolldInfo" kindref="compound">PolldTimeInfo</ref><sp/>*pxTimerList);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__SYSFRAMEWORK__POLLD_1ga8de5216d3d5e3b7b979c6fc189d35ade" kindref="member">help_addTimerList</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="structpolldInfo" kindref="compound">PolldTimeInfo</ref><sp/>*pxTimerList,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structpolldInfo" kindref="compound">PolldTimeInfo</ref><sp/>*pxTimeInfo);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__SYSFRAMEWORK__POLLD_1gab17830ba31bb4e46a053646e6fca23f4" kindref="member">ubusMsgToPolld</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="group__LIBHELP_1ga0cdba030aaa0bd18b24dbf19b06877a0" kindref="member">MainOper</ref><sp/>eOperation,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*pxDynMsg,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*pxOutputMsg,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structpolldInfo" kindref="compound">PolldTimeInfo</ref><sp/>*pxTimerList);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__SYSFRAMEWORK__POLLD_1ga631a79daf4414553f01214f9f51d3b94" kindref="member">help_objListToBlobPolld</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>blob_buf<sp/>*buf,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*pxMsg,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>ubus_context<sp/>*ctx,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>ubus_request_data<sp/>*req,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structpolldInfo" kindref="compound">PolldTimeInfo</ref><sp/>*pxTimerList);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__SYSFRAMEWORK__POLLD_1ga6146742ce8a6c2a48d3ed56d5ba96e55" kindref="member">help_blobToObjListPolld</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>blob_attr<sp/>*msg,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*pxMsg,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="structpolldInfo" kindref="compound">PolldTimeInfo</ref><sp/>*pxTimerInfo);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196" refid="group__SYSFRAMEWORK__POLLD_1gac79d24ad3b52565290d3fbd22a47498f" refkind="member"><highlight class="preprocessor">#define<sp/><sp/>FOR_EACH_TIMER_ONLY(__pxSrc,__pxParam)\</highlight></codeline>
+<codeline lineno="197"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list_for_each_entry(__pxParam,&amp;(__pxSrc-&gt;xPlist),xPlist)<sp/>\</highlight></codeline>
+<codeline lineno="198"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="199"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="203" refid="group__SYSFRAMEWORK__POLLD_1ga8d9ee84002519619a100089e8bd1a3ad" refkind="member"><highlight class="preprocessor">#define<sp/>DELETE_TIMER_NODE(__pxNode)<sp/>do<sp/>{<sp/>LOGF_LOG_INFO(&quot;Deleting<sp/>:<sp/>%p<sp/>Timer<sp/>Node\n&quot;,<sp/>pxTimerTmp);<sp/>list_del(&amp;__pxNode-&gt;xPlist);<sp/>HELP_FREE(__pxNode);<sp/>}<sp/>while(0);</highlight></codeline>
+<codeline lineno="204"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>@}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="comment">/*<sp/>@{<sp/>*/</highlight></codeline>
+<codeline lineno="211" refid="group__LIBHELP_1ga3a023c0c27667e78ae521eb64f1c7c81" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PARAM_TYPE_INT32,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PARAM_TYPE_STRING</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}<sp/><ref refid="group__LIBHELP_1ga3a023c0c27667e78ae521eb64f1c7c81" kindref="member">ParamType</ref>;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/><ref refid="group__LIBHELP_1ga150ff6f76ba6396d5e81bc584bac0ae8" kindref="member">enumMapGet</ref>(<ref refid="structname__value__t" kindref="compound">name_value_t</ref><sp/>enum_nv[],<sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/>iSize,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*trVal,<sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/>*uiId,<sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/>iSel);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/><ref refid="group__LIBHELP_1ga08300bca1af4dcd87c17484ba5423465" kindref="member">help_objlistToStructConv</ref>(<ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxObj,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pxStruct,<sp/><ref refid="structx__LTQ__Param" kindref="compound">x_LTQ_Param</ref><sp/>xParamDetail[],<sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/>iSize);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/><ref refid="group__LIBHELP_1ga28a2489527017209b1597af38de0486c" kindref="member">help_structToObjlistConv</ref>(<ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxObj,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pxStruct,<sp/><ref refid="structx__LTQ__Param" kindref="compound">x_LTQ_Param</ref><sp/>xParamDetail[],<sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/>iSize);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/><ref refid="group__LIBHELP_1gabde6cd1678f5635e93a21caa32652427" kindref="member">help_structToObjlistMapping</ref>(<ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxTmpObj,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pxStruct,<sp/><ref refid="structx__LTQ__Param" kindref="compound">x_LTQ_Param</ref><sp/>xParamDetail[]);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><sp/><ref refid="group__LIBHELP_1gae446d514164f23d3e91f7170e9fc973b" kindref="member">HELP_STRDUP</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>pcInStr);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/><sp/><ref refid="group__LIBHELP_1ga1ec415f0fca441424045a6af058be412" kindref="member">HELP_STRDUP_FREE</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>pcInStr);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="group__LIBHELP_1gaa326c5a055a6ea61eba5c165005fc5b6" kindref="member">HELP_STRNCPY</ref>(<ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pcDest,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pcSrc,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nDestSize);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="group__LIBHELP_1gaa84cc97acac4c77866e70fc850a1c670" kindref="member">HELP_STRNCAT</ref>(<ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pcDest,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pcSrc,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>nDestSize);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1gac08fb726326e0ccf6dff05f97c251b93" kindref="member">HELP_STRCMP</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pcStr1,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pcStr2);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="group__LIBHELP_1gac0126ae1cda6789711a261d98607dc7a" kindref="member">HELP_STRCHR</ref>(<ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pcStr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nChar);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="group__LIBHELP_1gaf5844e281e1aaceb45769c5e891aebdd" kindref="member">HELP_STRSTR</ref>(<ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pcHayStack,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pcNeedle);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="group__LIBHELP_1ga836960ef80323486284e33eff0b4cc53" kindref="member">HELP_STRTOK_R</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pcStr,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pcDelimiters,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>ppcSavePtr);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/><ref refid="group__LIBHELP_1ga58565b7c016691926c9934bb01d229d2" kindref="member">help_sendUbusMessage</ref><sp/>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>blob_buf<sp/>*pxBlob,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*psUbusObject,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*psUbusMethod);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/>help_constructBlobMessageFromParamList(<ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>blob_buf<sp/>*<sp/>pxBlob,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structParamList" kindref="compound">ParamList</ref><sp/>*<sp/>pxParamList);</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/>help_constructParamListFromBlob(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>blob_attr<sp/>*pxBlob,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="structParamList" kindref="compound">ParamList</ref><sp/>*pxParamList);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/>HELP_ONLY_PARAM_SET_WITH_TYPE(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pxParam,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcParamName,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcParamValue,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unParamFlag)</highlight></codeline>
+<codeline lineno="326"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1gaf0d77d8d7790407c0115675a2c562c39" kindref="member">help_paramListOnly</ref><sp/>(pxParam,<sp/>pcParamName,<sp/><ref refid="group__LIBHELP_1ga7f24a1abca37046fc42297fdefe88335" kindref="member">NO_ARG_VALUE</ref>,<sp/>pcParamValue,<sp/>unParamFlag);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/>HELP_SEND_UBUS_MESSAGE(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>blob_buf<sp/>*pxBlob,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*psUbusObject,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*psUbusMethod)</highlight></codeline>
+<codeline lineno="331"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga58565b7c016691926c9934bb01d229d2" kindref="member">help_sendUbusMessage</ref><sp/>(pxBlob,<sp/>psUbusObject,<sp/>psUbusMethod);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/>HELP_CONSTRUCT_BLOB_FROM_PARAMLIST<sp/>(<ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>blob_buf<sp/>*pxBlob,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structParamList" kindref="compound">ParamList</ref><sp/>*pxParamList)</highlight></codeline>
+<codeline lineno="336"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>help_constructBlobMessageFromParamList(pxBlob,<sp/>pxParamList);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/>HELP_CONSTRUCT_PARAMLIST_FROM_BLOB<sp/>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>blob_attr<sp/>*pxBlob,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="structParamList" kindref="compound">ParamList</ref><sp/>*pxParamList)</highlight></codeline>
+<codeline lineno="340"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>help_constructParamListFromBlob(pxBlob,<sp/>pxParamList);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/>HELP_CONSTRUCT_SERVD_BLOB_FROM_NOTIFY<sp/>(<ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>blob_buf<sp/>*pxBlob,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structNotifyObjData" kindref="compound">NotifyObjData</ref><sp/>*pxNotify)</highlight></codeline>
+<codeline lineno="345"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1gab966addd9ba1b125401c02a4c29cdf7b" kindref="member">help_notifyListToBlob</ref>(pxBlob,<sp/>pxNotify);</highlight></codeline>
+<codeline lineno="347"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/>HELP_CONSTRUCT_SERVD_NOTIFY_FROM_BLOB<sp/>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>blob_attr<sp/>*pxBlob,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="structNotifyObjData" kindref="compound">NotifyObjData</ref><sp/>*pxNotify)</highlight></codeline>
+<codeline lineno="350"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga586354ddaf797ab49619492959d24970" kindref="member">help_blobToNotifyList</ref>(pxBlob,<sp/>pxNotify);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>########################<sp/></highlight></codeline>
+<codeline lineno="355"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wsd<sp/></highlight></codeline>
+<codeline lineno="356"><highlight class="comment"><sp/><sp/><sp/>#######################*/</highlight></codeline>
+<codeline lineno="360" refid="group__LIBHELP_1ga21d5e8f8cdaa838586b31007df0a950b" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="361" refid="group__LIBHELP_1gga21d5e8f8cdaa838586b31007df0a950ba4645d70cb9bb2228f230d601f477639d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga21d5e8f8cdaa838586b31007df0a950ba4645d70cb9bb2228f230d601f477639d" kindref="member">ACTION_STOP</ref><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="362" refid="group__LIBHELP_1gga21d5e8f8cdaa838586b31007df0a950bad18d9bd6c0a4eced8d31c7b1c6b9dd16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1gga21d5e8f8cdaa838586b31007df0a950bad18d9bd6c0a4eced8d31c7b1c6b9dd16" kindref="member">ACTION_START</ref><sp/>=<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="363"><highlight class="normal">}<sp/><ref refid="group__LIBHELP_1ga21d5e8f8cdaa838586b31007df0a950b" kindref="member">ActionType</ref>;</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368" refid="structWsdData" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="369" refid="structWsdData_1a349311d9b1b3775f0a2e34fba656b8a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><ref refid="structWsdData_1a349311d9b1b3775f0a2e34fba656b8a9" kindref="member">nWSProto</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="370" refid="structWsdData_1aca064594dec04944d586de98018175e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ga21d5e8f8cdaa838586b31007df0a950b" kindref="member">ActionType</ref><sp/><ref refid="structWsdData_1aca064594dec04944d586de98018175e7" kindref="member">eWsdAction</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="371" refid="structWsdData_1a9047f519a025fe4b44967b7728839e8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structWsdData_1a9047f519a025fe4b44967b7728839e8e" kindref="member">nTimer</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="372" refid="structWsdData_1a4050bfba1723b70da1250285635feec3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structWsdData_1a4050bfba1723b70da1250285635feec3" kindref="member">nInstance</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="373" refid="structWsdData_1a3232d4832bfa0ff6d0cf6d34aede399a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/><ref refid="structWsdData_1a3232d4832bfa0ff6d0cf6d34aede399a" kindref="member">xMsgHdr</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="374"><highlight class="normal">}<sp/><ref refid="structWsdData" kindref="compound">WsdData</ref>;</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/><ref refid="group__LIBHELP_1ga53ced793bbf6127fefac2604a5d60040" kindref="member">help_WsdDataToBlob</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>blob_buf<sp/>*buf,<sp/><ref refid="structWsdData" kindref="compound">WsdData</ref><sp/>*pxWsdData);</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/><ref refid="group__LIBHELP_1gaac423bf955bd0d2e1d82355d68ec9b00" kindref="member">help_blobToWsdData</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>blob_attr<sp/>*msg,<sp/><ref refid="structWsdData" kindref="compound">WsdData</ref><sp/>*pxWsdData);</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/><ref refid="group__LIBHELP_1ga2c531fc3603622626fb9c1f7b5cdad4e" kindref="member">help_sendStatusToWeb</ref>(uint32_t<sp/>unNotifyId,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ucType,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcMessage);</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>#ifndef<sp/>_UGW_COMMON_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h"/>
+  </compounddef>
+</doxygen>

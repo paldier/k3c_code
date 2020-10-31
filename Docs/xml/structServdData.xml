@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structServdData" kind="struct" prot="public">
+    <compoundname>ServdData</compoundname>
+    <includes refid="ugw__structs_8h" local="no">ugw_structs.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structServdData_1af9ec758f5ce6532d5da3ad544c27b335" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t ServdData::unSid</definition>
+        <argsstring></argsstring>
+        <name>unSid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign Service Id </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" line="71" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structServdData_1aee9c93a802703e621f33bd4e065716bb" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ServdData::unMainOper</definition>
+        <argsstring></argsstring>
+        <name>unMainOper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>INIT/GET/MODIFY/NOTIFY/UNINIT|ROLLBACK|FACTORY RESET|BACKUP|RESTORE|REBOOT|FW_UPGRADE </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" line="72" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structServdData_1adc9da01914ccc12e73810e813a5a48e2" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ServdData::unOwner</definition>
+        <argsstring></argsstring>
+        <name>unOwner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WEB | TR069 | UPnP | CLI | OTHER </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" line="73" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structServdData_1ac66a4b645c210b527cd3f940a5b81397" prot="public" static="no" mutable="no">
+        <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+        <definition>ObjList* ServdData::pxObjList</definition>
+        <argsstring></argsstring>
+        <name>pxObjList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="structObjList" kindref="compound">ObjList</ref> data from CAL to SL </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" line="74" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structServdData_1a6532e82f2c4113c509596c7908942ccd" prot="public" static="no" mutable="no">
+        <type><ref refid="structNotifyObjData" kindref="compound">NotifyObjData</ref></type>
+        <definition>NotifyObjData ServdData::xNotify</definition>
+        <argsstring></argsstring>
+        <name>xNotify</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional Notify list that can be filled by SL to ServD </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" line="75" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structServdData_1a0de42c741a9493a88dc7e12b80607c83" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ServdData::nStatus</definition>
+        <argsstring></argsstring>
+        <name>nStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operation status from SL SUCCESS/FAIL </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" line="76" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Servd to provide Data to Service Libraries. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="192">
+        <label>ParamList</label>
+        <link refid="structParamList"/>
+      </node>
+      <node id="193">
+        <label>ObjList</label>
+        <link refid="structObjList"/>
+        <childnode refid="192" relation="usage">
+          <edgelabel>xParamList</edgelabel>
+        </childnode>
+      </node>
+      <node id="191">
+        <label>NotifyObjData</label>
+        <link refid="structNotifyObjData"/>
+        <childnode refid="192" relation="usage">
+          <edgelabel>pxParamList</edgelabel>
+        </childnode>
+      </node>
+      <node id="190">
+        <label>ServdData</label>
+        <link refid="structServdData"/>
+        <childnode refid="191" relation="usage">
+          <edgelabel>xNotify</edgelabel>
+        </childnode>
+        <childnode refid="193" relation="usage">
+          <edgelabel>pxObjList</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" line="70" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" bodystart="70" bodyend="77"/>
+    <listofallmembers>
+      <member refid="structServdData_1a0de42c741a9493a88dc7e12b80607c83" prot="public" virt="non-virtual"><scope>ServdData</scope><name>nStatus</name></member>
+      <member refid="structServdData_1ac66a4b645c210b527cd3f940a5b81397" prot="public" virt="non-virtual"><scope>ServdData</scope><name>pxObjList</name></member>
+      <member refid="structServdData_1aee9c93a802703e621f33bd4e065716bb" prot="public" virt="non-virtual"><scope>ServdData</scope><name>unMainOper</name></member>
+      <member refid="structServdData_1adc9da01914ccc12e73810e813a5a48e2" prot="public" virt="non-virtual"><scope>ServdData</scope><name>unOwner</name></member>
+      <member refid="structServdData_1af9ec758f5ce6532d5da3ad544c27b335" prot="public" virt="non-virtual"><scope>ServdData</scope><name>unSid</name></member>
+      <member refid="structServdData_1a6532e82f2c4113c509596c7908942ccd" prot="public" virt="non-virtual"><scope>ServdData</scope><name>xNotify</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

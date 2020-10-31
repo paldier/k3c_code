@@ -1,0 +1,61 @@
+#!/bin/sh
+
+if [ ! "$ENVLOADED" ]; then
+        if [ -r /etc/rc.conf ]; then
+                . /etc/rc.conf 2> /dev/null
+                ENVLOADED="1"
+        fi
+fi
+
+if [ ! "$CONFIGLOADED" ]; then
+        if [ -r /etc/rc.d/config.sh ]; then
+                . /etc/rc.d/config.sh 2>/dev/null
+                CONFIGLOADED="1"
+        fi
+fi
+
+RA_IF=""
+WLAN_VENDOR_NAME=""
+find_vendor_from_index() {
+  eval radioCpeId='$'wlmn_${1}_radioCpeId
+  if [ "$radioCpeId" = "1" ]; then
+     radioPrefix=0
+  elif [ "$radioCpeId" = "2" ]; then
+     radioPrefix=1
+  fi
+  eval WLAN_VENDOR_NAME='$'wlss_$radioPrefix'_prefixScript'
+  #echo "WLAN_VENDOR_NAME: $WLAN_VENDOR_NAME"
+}
+find_ra_if_from_index() {
+   eval CPEID='$'wlmn_${1}'_cpeId'
+   ra_dev=`/usr/sbin/status_oper GET "RA_MAP" "$CPEID"`
+   RA_IF=${ra_dev:2}
+   #echo "RA_IF $RA_IF "
+}
+
+#	eval radioEnable='$'wlphy_${IFNUM}_radioEnable
+#        if [ "$radioEnable" = "0" ]; then
+#                echo "Radio is not up"
+#                iwpriv ra0 set RadioOn=0
+                i=0
+                eval wlan_main_Count='$'wlan_main_Count
+                while [ $i -lt $wlan_main_Count ]
+                do
+                 find_vendor_from_index $i
+                  if [ "$WLAN_VENDOR_NAME" = "ra" ]; then
+                     find_ra_if_from_index $i
+                     if [ "${RA_IF}" != "" ]; then
+                             ifconfig ra${RA_IF} down
+                     fi
+                  fi
+                  i=`expr $i + 1`
+                done
+#	fi
+
+#	ifconfig ra2 down
+#	ifconfig ra1 down
+#	ifconfig ra0 down
+	/etc/rc.d/ra_wlan_ap_start $1
+	#iwpriv ra0 set $Comm_line
+	#iwpriv ra1 set $Comm_line
+	#iwpriv ra2 set $Comm_line

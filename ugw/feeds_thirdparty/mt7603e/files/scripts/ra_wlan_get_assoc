@@ -1,0 +1,122 @@
+#!/bin/sh
+OUTPUT="/tmp/cmd_output"
+flush_output()
+{
+	echo "" > "$OUTPUT"
+}
+SED="/bin/sed"
+
+if [ ! "$ENVLOADED" ]; then
+	if [ -r /etc/rc.conf ]; then
+		 . /etc/rc.conf 2> /dev/null
+		ENVLOADED="1"
+	fi
+fi
+
+if [ ! "$CONFIGLOADED" ]; then
+	if [ -r /etc/rc.d/config.sh ]; then
+		. /etc/rc.d/config.sh 2>/dev/null
+		CONFIGLOADED="1"
+	fi
+fi
+
+RA_IF=""
+find_ra_if_from_index() {
+   eval CPEID='$'wlmn_${1}'_cpeId'
+   ra_dev=`/usr/sbin/status_oper GET "RA_MAP" "$CPEID"`
+   RA_IF=${ra_dev:2}
+}
+echo "hsur current ralink_inf_idx is ${RA_IF}"
+find_ra_if_from_index $1
+
+if [ "$CONFIG_FEATURE_WIRELESS" = "1" ]; then
+   # Get wlan associate client
+
+
+   #Invoked without any args i.e.  wlan_get_assoc
+   your_mac_table_file=/ramdisk/tmp/mac_table
+   rm -f ${your_mac_table_file}
+   iwpriv ra${RA_IF} ar9_show get_mac_table >> ${your_mac_table_file}
+
+
+   #LINES=`wc -l $your_mac_table_file | awk '{print $1}'` #get total lines of mac_table file
+
+   #LINES=`expr $LINES - 3` # Real mac_addr count
+   #echo "assoc_count=\"$LINES\""
+   #current_line=3
+   #for (( i=0; i<$LINES; i=i+1 ))
+   #do	
+   #	current_line=`expr $i + 3`	
+   #	Mac_Addr=$(sed -n "${current_line}p" $your_state_file  | cut -d ' ' -f 1)
+   #	echo "mac_$i=$Mac_Addr"
+   #done
+
+   line=3
+   assoc_count=0
+   Mac_Addr=$(sed -n "${line}p" $your_mac_table_file | cut -d " " -f 1)
+   while  [ ${Mac_Addr} ] ;
+   do
+	   ApIdx=$(sed -n "${line}p" $your_mac_table_file | cut -d " " -f 3)
+	   
+	   if [ "$ApIdx" = "${RA_IF}" ]; then		
+		
+           assoc_count=`expr ${assoc_count} + 1`
+	   	
+	   fi
+           #assoc_count=`expr ${assoc_count} + 1`
+	   line=`expr ${line} + 1`
+           Mac_Addr=`sed -n "${line}p"  $your_mac_table_file  | cut -d " " -f 1`
+   done
+
+   if [ "$assoc_count" = "0" ]; then
+	   echo "assoc_count=\"$assoc_count\""
+   else
+	   echo "assoc_count=\"$assoc_count\""
+	   line=3
+	   assoc_count=0
+	   Mac_Addr=`sed -n "${line}p" $your_mac_table_file | cut -d " " -f 1`
+	   while  [ ${Mac_Addr} ] ;
+	   do
+		ApIdx=$(sed -n "${line}p" $your_mac_table_file | cut -d " " -f 3)
+	   
+		if [ "$ApIdx" = "${RA_IF}" ]; then
+         MAC_Addr_1=`echo $Mac_Addr | cut -c 1-2`
+         MAC_Addr_2=`echo $Mac_Addr | cut -c 3-4`
+         MAC_Addr_3=`echo $Mac_Addr | cut -c 5-6`
+         MAC_Addr_4=`echo $Mac_Addr | cut -c 7-8`
+         MAC_Addr_5=`echo $Mac_Addr | cut -c 9-10`
+         MAC_Addr_6=`echo $Mac_Addr | cut -c 11-12`
+         echo "mac_$assoc_count=\"$MAC_Addr_1:$MAC_Addr_2:$MAC_Addr_3:$MAC_Addr_4:$MAC_Addr_5:$MAC_Addr_6\""
+	 #Search /proc/net/arp
+	 arp_file=/proc/net/arp
+	 MAC_ADDR="$MAC_Addr_1:$MAC_Addr_2:$MAC_Addr_3:$MAC_Addr_4:$MAC_Addr_5:$MAC_Addr_6"
+	 #echo "MAC_ADDR $MAC_ADDR"
+	 IP_ADDR=$(grep -i "$MAC_ADDR" $arp_file | cut -d " " -f 1)
+	 if [ "$IP_ADDR" = "" ]; then
+		   echo "ip_$assoc_count=\"0.0.0.0\""
+	 else
+		echo "ip_$assoc_count=\"$IP_ADDR\""
+	 fi
+	 #
+	 Auth=$(sed -n "${line}p" $your_mac_table_file | cut -d " " -f 12)
+	 if [ "$Auth" = "1" ] || [ "$Auth" = "2" ]; then
+		   #echo "ip_$assoc_count=\"0.0.0.0\""
+		   echo "auth_$assoc_count=\"1\""
+	 else
+		   echo "auth_$assoc_count=\"0\""
+	 fi
+		   Rate=$(sed -n "${line}p" $your_mac_table_file | cut -d " " -f 15)
+		   echo "rate_$assoc_count=\"$Rate\""
+         echo "wpa2UCcipher_$assoc_count=\"0\""
+         echo "wpa2MCcipher_$assoc_count=\"0\""
+         echo "wpa2PMK_$assoc_count=\"0\""
+		   assoc_count=`expr ${assoc_count} + 1`
+		   line=`expr ${line} + 1`
+		   Mac_Addr=`sed -n "${line}p"  $your_mac_table_file  | cut -d " " -f 1`
+         else
+            line=`expr ${line} + 1`
+            Mac_Addr=`sed -n "${line}p"  $your_mac_table_file  | cut -d " " -f 1`
+		fi
+	   done
+   fi
+fi

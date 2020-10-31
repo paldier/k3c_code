@@ -1,0 +1,351 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structcl__eth__match__t" kind="struct" prot="public">
+    <compoundname>cl_eth_match_t</compoundname>
+    <includes refid="qosal__cl__api_8h" local="no">qosal_cl_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcl__eth__match__t_1ae43f837598b60d97a57d81de1cb4b229" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t cl_eth_match_t::eth_type</definition>
+        <argsstring></argsstring>
+        <name>eth_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ethernet Protocol Type. A value of -1 means no match required </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="661" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="661" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1a94740ba14b1c385c4cd0c09d80eaa0b5" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_eth_match_t::eth_type_exclude</definition>
+        <argsstring></argsstring>
+        <name>eth_type_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether to exclude the specified Ethernet Type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="663" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="663" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1a003c22e665dee4d5c3db4d94505b5b4c" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a66634143db08bebe9b46ab4cb1fc6fd3" kindref="member">int16_t</ref></type>
+        <definition>int16_t cl_eth_match_t::dsap</definition>
+        <argsstring></argsstring>
+        <name>dsap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>802.2 DSAP if 802.2 hdr exists. A value of -1 means not needed to match </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="665" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="665" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1a52ecb236f565b9ec088e0e917bf425f3" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t cl_eth_match_t::dsap_exclude</definition>
+        <argsstring></argsstring>
+        <name>dsap_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether to exclude/invert DSAP match </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="667" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="667" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1af5927252a40f04d6aa2ef8104ec8ea88" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a66634143db08bebe9b46ab4cb1fc6fd3" kindref="member">int16_t</ref></type>
+        <definition>int16_t cl_eth_match_t::ssap</definition>
+        <argsstring></argsstring>
+        <name>ssap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>802.2 SSAP if 802.2 hdr exists </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="669" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="669" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1a410d143164a36bfb7ba1bf7ad0895e89" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t cl_eth_match_t::ssap_exclude</definition>
+        <argsstring></argsstring>
+        <name>ssap_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether to exclude/invert DSAP match </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="670" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="670" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1aa4091325594c6a27181f4be25be09b88" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t cl_eth_match_t::llc_control</definition>
+        <argsstring></argsstring>
+        <name>llc_control</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LLC Control field </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="672" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="672" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1afc8ec2cea0ef5c13a10b7dcdf4b50158" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_eth_match_t::llc_control_exclude</definition>
+        <argsstring></argsstring>
+        <name>llc_control_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Exclude Flag or Invert match </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="673" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="673" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1a78e975708b3e168c80094896dc2fb022" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t cl_eth_match_t::oui</definition>
+        <argsstring></argsstring>
+        <name>oui</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SNAP OUI field </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="674" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="674" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1adf4f05c03331311fd8b093be5b42eb6a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_eth_match_t::oui_exclude</definition>
+        <argsstring></argsstring>
+        <name>oui_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Exclude Flag or Invert match </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="675" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="675" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1a96a22755831c1d3251676ee7063e1c07" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a66634143db08bebe9b46ab4cb1fc6fd3" kindref="member">int16_t</ref></type>
+        <definition>int16_t cl_eth_match_t::prio</definition>
+        <argsstring></argsstring>
+        <name>prio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>802.1D Annex H or 802.1Q Priority. -1 means no match required </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="676" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="676" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1a239951c73fc57983cfbedbb886ba5dcc" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t cl_eth_match_t::prio_exclude</definition>
+        <argsstring></argsstring>
+        <name>prio_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Exclude Flag or Invert match for prio </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="678" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="678" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1ae82737ae0d02ba92f5196a9d1a2b4e60" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a66634143db08bebe9b46ab4cb1fc6fd3" kindref="member">int16_t</ref></type>
+        <definition>int16_t cl_eth_match_t::vlanid</definition>
+        <argsstring></argsstring>
+        <name>vlanid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>VLAN Id value, -1 means no match required </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="680" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="680" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1a72b9fe10cf00c934df759909399a399e" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t cl_eth_match_t::vlanid_exclude</definition>
+        <argsstring></argsstring>
+        <name>vlanid_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Exclude Flag or Invert match for VLAN tag field </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="682" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="682" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1aa59030fe883d3341c9d323cb53b3cb59" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t cl_eth_match_t::vlan_dei</definition>
+        <argsstring></argsstring>
+        <name>vlan_dei</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Match against DEI field of VLAN tag. -1 means ignore for match purpose </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="684" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="684" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1ad4acd32623bc522bf2810a3f0198de04" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t cl_eth_match_t::vlan_dei_exclude</definition>
+        <argsstring></argsstring>
+        <name>vlan_dei_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Exclude Flag or Invert match for vlan_dei </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="686" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="686" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1af8ba880b8b5c93e090977755b2bb39de" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a66634143db08bebe9b46ab4cb1fc6fd3" kindref="member">int16_t</ref></type>
+        <definition>int16_t cl_eth_match_t::inner_prio</definition>
+        <argsstring></argsstring>
+        <name>inner_prio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>802.1Q Priority of inner VLAN header. -1 means no match required </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="688" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="688" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1ae8b56ca5dc1129b254498de569086f00" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t cl_eth_match_t::inner_prio_exclude</definition>
+        <argsstring></argsstring>
+        <name>inner_prio_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Exclude Flag or Invert match for prio </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="690" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="690" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1a4cde4e74ac7e5b305a893159f6de939c" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a66634143db08bebe9b46ab4cb1fc6fd3" kindref="member">int16_t</ref></type>
+        <definition>int16_t cl_eth_match_t::inner_vlanid</definition>
+        <argsstring></argsstring>
+        <name>inner_vlanid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>VLAN Id value in inner VLAN header, -1 means no match required </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="692" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="692" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1a43a9949e1abef1fa0669c88782fdcd9d" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t cl_eth_match_t::inner_vlanid_exclude</definition>
+        <argsstring></argsstring>
+        <name>inner_vlanid_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Exclude Flag or Invert match for inner VLAN tag field </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="694" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="694" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1a2dc088ea60a83a9842881c6f7700eb76" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t cl_eth_match_t::inner_vlan_dei</definition>
+        <argsstring></argsstring>
+        <name>inner_vlan_dei</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Match against DEI field of VLAN tag. -1 means ignore for match purpose </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="696" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="696" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1ae6eb57d9d1bf6ac87e020af2ba603be0" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t cl_eth_match_t::inner_vlan_dei_exclude</definition>
+        <argsstring></argsstring>
+        <name>inner_vlan_dei_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Exclude Flag or Invert match for vlan_dei </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="698" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="698" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__eth__match__t_1a288c8e7ff8257e915cca4b3de17b4c9d" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__param__in__ex__t" kindref="compound">cl_param_in_ex_t</ref></type>
+        <definition>cl_param_in_ex_t cl_eth_match_t::param_in_ex</definition>
+        <argsstring></argsstring>
+        <name>param_in_ex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bit-map to indicate included and excluded parameters of Ethernet header </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="700" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="700" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Ethernet Header Match fields structure - does not include MAC address fields. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="33">
+        <label>cl_param_in_ex_t</label>
+        <link refid="structcl__param__in__ex__t"/>
+      </node>
+      <node id="32">
+        <label>cl_eth_match_t</label>
+        <link refid="structcl__eth__match__t"/>
+        <childnode refid="33" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="660" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="660" bodyend="701"/>
+    <listofallmembers>
+      <member refid="structcl__eth__match__t_1a003c22e665dee4d5c3db4d94505b5b4c" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>dsap</name></member>
+      <member refid="structcl__eth__match__t_1a52ecb236f565b9ec088e0e917bf425f3" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>dsap_exclude</name></member>
+      <member refid="structcl__eth__match__t_1ae43f837598b60d97a57d81de1cb4b229" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>eth_type</name></member>
+      <member refid="structcl__eth__match__t_1a94740ba14b1c385c4cd0c09d80eaa0b5" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>eth_type_exclude</name></member>
+      <member refid="structcl__eth__match__t_1af8ba880b8b5c93e090977755b2bb39de" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>inner_prio</name></member>
+      <member refid="structcl__eth__match__t_1ae8b56ca5dc1129b254498de569086f00" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>inner_prio_exclude</name></member>
+      <member refid="structcl__eth__match__t_1a2dc088ea60a83a9842881c6f7700eb76" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>inner_vlan_dei</name></member>
+      <member refid="structcl__eth__match__t_1ae6eb57d9d1bf6ac87e020af2ba603be0" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>inner_vlan_dei_exclude</name></member>
+      <member refid="structcl__eth__match__t_1a4cde4e74ac7e5b305a893159f6de939c" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>inner_vlanid</name></member>
+      <member refid="structcl__eth__match__t_1a43a9949e1abef1fa0669c88782fdcd9d" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>inner_vlanid_exclude</name></member>
+      <member refid="structcl__eth__match__t_1aa4091325594c6a27181f4be25be09b88" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>llc_control</name></member>
+      <member refid="structcl__eth__match__t_1afc8ec2cea0ef5c13a10b7dcdf4b50158" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>llc_control_exclude</name></member>
+      <member refid="structcl__eth__match__t_1a78e975708b3e168c80094896dc2fb022" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>oui</name></member>
+      <member refid="structcl__eth__match__t_1adf4f05c03331311fd8b093be5b42eb6a" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>oui_exclude</name></member>
+      <member refid="structcl__eth__match__t_1a288c8e7ff8257e915cca4b3de17b4c9d" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>param_in_ex</name></member>
+      <member refid="structcl__eth__match__t_1a96a22755831c1d3251676ee7063e1c07" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>prio</name></member>
+      <member refid="structcl__eth__match__t_1a239951c73fc57983cfbedbb886ba5dcc" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>prio_exclude</name></member>
+      <member refid="structcl__eth__match__t_1af5927252a40f04d6aa2ef8104ec8ea88" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>ssap</name></member>
+      <member refid="structcl__eth__match__t_1a410d143164a36bfb7ba1bf7ad0895e89" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>ssap_exclude</name></member>
+      <member refid="structcl__eth__match__t_1aa59030fe883d3341c9d323cb53b3cb59" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>vlan_dei</name></member>
+      <member refid="structcl__eth__match__t_1ad4acd32623bc522bf2810a3f0198de04" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>vlan_dei_exclude</name></member>
+      <member refid="structcl__eth__match__t_1ae82737ae0d02ba92f5196a9d1a2b4e60" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>vlanid</name></member>
+      <member refid="structcl__eth__match__t_1a72b9fe10cf00c934df759909399a399e" prot="public" virt="non-virtual"><scope>cl_eth_match_t</scope><name>vlanid_exclude</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

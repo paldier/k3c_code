@@ -1,0 +1,136 @@
+\hypertarget{dsl__fapi_8h}{\section{dsl\-\_\-fapi.\-h File Reference}
+\label{dsl__fapi_8h}\index{dsl\-\_\-fapi.\-h@{dsl\-\_\-fapi.\-h}}
+}
+
+
+File contains the structure and function definitions for D\-S\-L functionality. The objects definitions are based on T\-R-\/181 definitions.  
+
+
+{\ttfamily \#include \char`\"{}dsl\-\_\-fapi\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$stdbool.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}fapi\-\_\-sys\-\_\-common.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdsl__fapi__line__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-obj}
+\item 
+struct \hyperlink{structdsl__fapi__line__stats__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-obj}
+\item 
+struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj}
+\item 
+struct \hyperlink{structdsl__fapi__line__test__params__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-test\-\_\-params\-\_\-obj}
+\item 
+struct \hyperlink{structdsl__fapi__channel__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-obj}
+\item 
+struct \hyperlink{structdsl__fapi__channel__stats__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj}
+\item 
+struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj}
+\item 
+struct \hyperlink{structdsl__fapi__x__lantiq__com__config__obj}{dsl\-\_\-fapi\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-obj}
+\item 
+struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx}
+\item 
+struct \hyperlink{structfapi__global__vars}{fapi\-\_\-global\-\_\-vars}
+\item 
+struct \hyperlink{structfapi__shmem__data}{fapi\-\_\-shmem\-\_\-data}
+\item 
+struct \hyperlink{structfapi__shmem}{fapi\-\_\-shmem}
+\item 
+struct \hyperlink{structfapi__dsl__init__parameter}{fapi\-\_\-dsl\-\_\-init\-\_\-parameter}
+\item 
+struct \hyperlink{structfapi__dsl__init__parameter__box}{fapi\-\_\-dsl\-\_\-init\-\_\-parameter\-\_\-box}
+\item 
+struct \hyperlink{structfapi__dsl__init__cfg}{fapi\-\_\-dsl\-\_\-init\-\_\-cfg}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \{ \hyperlink{group__FAPI__DSL_gga6a68d961535e6f7aa239751763131a70a86b665546ec20b43571b0d828acf309b}{F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-E\-R\-R\-O\-R} = -\/1, 
+\hyperlink{group__FAPI__DSL_gga6a68d961535e6f7aa239751763131a70a7eb73193aa8bbe9c3dac32625afa7930}{F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-S\-U\-C\-C\-E\-S\-S} = 0, 
+\hyperlink{group__FAPI__DSL_gga6a68d961535e6f7aa239751763131a70a970d91f80d2a68ab271d778404fb4542}{F\-A\-P\-I\-\_\-\-D\-S\-L\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-W\-A\-R\-N\-I\-N\-G} = 1000
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ \hyperlink{group__FAPI__DSL_ga97a5a099ffdeed990806cc76f87e1dd1}{fapi\-\_\-dsl\-\_\-open} (unsigned int entity)
+\item 
+struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ \hyperlink{group__FAPI__DSL_gafdf9b16c3deb7606d7ac9b1bd0e28b55}{fapi\-\_\-dsl\-\_\-context\-\_\-get} (int entity)
+\item 
+void \hyperlink{group__FAPI__DSL_ga1b948f298a5b6cadd7fb70f6094f8ce9}{fapi\-\_\-dsl\-\_\-context\-\_\-free} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gaeb6ffcb5ef5d02e719b6479a15a3df4e}{fapi\-\_\-dsl\-\_\-close} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gaabeecfee55120db4952c21aedf4126c6}{fapi\-\_\-dsl\-\_\-init} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structfapi__dsl__init__cfg}{fapi\-\_\-dsl\-\_\-init\-\_\-cfg} $\ast$cfg)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga6db762b72c1f0d2c2d4144f517f7b46d}{fapi\-\_\-dsl\-\_\-uninit} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga18621a794c8d271291a7eb9dc7f593bb}{fapi\-\_\-dsl\-\_\-line\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__line__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga3a38e7977ea6636741d1bf5f7c5a1bf1}{fapi\-\_\-dsl\-\_\-line\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__line__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga8b69e9043c7560f016f288ff4d503cef}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__line__stats__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga7ce6e1d555dbdd48708d4b5f761998d9}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__line__stats__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga5df23a7c34a81f29959eadae638d8464}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-total\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga69af95fa3467bad5acdb5d4156b379d4}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-total\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga20bb0212d6e16d711068b1c99803eb62}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-showtime\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga4dd2db2d5055e8d393f0683b286ac883}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-showtime\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga4723935e967f7789a3d44db21f3a407e}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gac4cafc674b7543bc08e7bb82450b2245}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga9f7d43e38ed54800ff6508eecc503511}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-current\-\_\-day\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gaf6a1f45e9dd5b8af61b25b17d9d9ce43}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-current\-\_\-day\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga735da13abce1e87ea66d972db590f8d9}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gae1d90b50a2166be4d8679438d71045dd}{fapi\-\_\-dsl\-\_\-line\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__line__stats__interval__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga78485df8d97915a39de9002c00a92dbd}{fapi\-\_\-dsl\-\_\-line\-\_\-test\-\_\-params\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__line__test__params__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-test\-\_\-params\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga05a9932df17850cc4c198150b5912dce}{fapi\-\_\-dsl\-\_\-line\-\_\-test\-\_\-params\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__line__test__params__obj}{dsl\-\_\-fapi\-\_\-line\-\_\-test\-\_\-params\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga73a2b7430190378d727446880250d9bb}{fapi\-\_\-dsl\-\_\-channel\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__channel__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gade76bf5f68ad4fad63a5189eab1b3a17}{fapi\-\_\-dsl\-\_\-channel\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__channel__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga09a5f81b49d36ad57136c6e29b06d27d}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__channel__stats__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga30e905b23b61cfcea70a8f294aeebfc0}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__channel__stats__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gae9f992ac21af5b5c53c24e49ffa0f278}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-total\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gaa8989ed2cc50cd6031d2382f016745ca}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-total\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gaed59fd0e238164b60d08fd2fd5b72325}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-showtime\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga4d6bef3ba50c1235c988ab410c0c24ca}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-showtime\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gae6d0226b0a0f6628c4d2e1adb2b2213d}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gaebb4cacdd2171b543ef75bf1f94e5604}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-last\-\_\-showtime\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga78c49035d7f7ea738af2b83fae3b3880}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-current\-\_\-day\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga73a901eeec71eba652a8ae0e44060a48}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-current\-\_\-day\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gaadd656408568e4b0075043258431a31d}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga3e8c60a91933658b6c1823419f025200}{fapi\-\_\-dsl\-\_\-channel\-\_\-stats\-\_\-quarter\-\_\-hour\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__channel__stats__interval__obj}{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_ga796584ea1348650374f19b51d7e53f4b}{fapi\-\_\-dsl\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-get} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, struct \hyperlink{structdsl__fapi__x__lantiq__com__config__obj}{dsl\-\_\-fapi\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-obj} $\ast$obj)
+\item 
+enum \hyperlink{group__FAPI__DSL_ga6a68d961535e6f7aa239751763131a70}{fapi\-\_\-dsl\-\_\-status} \hyperlink{group__FAPI__DSL_gac5b57da774a1ecb2bf814c12d22e29a9}{fapi\-\_\-dsl\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-set} (struct \hyperlink{structfapi__dsl__ctx}{fapi\-\_\-dsl\-\_\-ctx} $\ast$ctx, const struct \hyperlink{structdsl__fapi__x__lantiq__com__config__obj}{dsl\-\_\-fapi\-\_\-x\-\_\-lantiq\-\_\-com\-\_\-config\-\_\-obj} $\ast$obj)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File contains the structure and function definitions for D\-S\-L functionality. The objects definitions are based on T\-R-\/181 definitions. 

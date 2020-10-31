@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structcl__ipaddr__match__t" kind="struct" prot="public">
+    <compoundname>cl_ipaddr_match_t</compoundname>
+    <includes refid="qosal__cl__api_8h" local="no">qosal_cl_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcl__ipaddr__match__t_1a3579a408f626c12e0e7187b68a599d8e" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char cl_ipaddr_match_t::ipaddr[IP_ADDRSTRLEN]</definition>
+        <argsstring>[IP_ADDRSTRLEN]</argsstring>
+        <name>ipaddr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>IPv4 or IPv6 address </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="619" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="619" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__ipaddr__match__t_1af1c611cf5751752aac9df3b4451436f0" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char cl_ipaddr_match_t::mask[IP_ADDRSTRLEN]</definition>
+        <argsstring>[IP_ADDRSTRLEN]</argsstring>
+        <name>mask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mask of IPv4 or IPv6 addr </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="620" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="620" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__ipaddr__match__t_1a6a25abdb21cb01ef165f545730b69547" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_ipaddr_match_t::exclude</definition>
+        <argsstring></argsstring>
+        <name>exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Exclude Flag or Invert match </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="621" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="621" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>IP Address Match fields structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="616" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="616" bodyend="622"/>
+    <listofallmembers>
+      <member refid="structcl__ipaddr__match__t_1a6a25abdb21cb01ef165f545730b69547" prot="public" virt="non-virtual"><scope>cl_ipaddr_match_t</scope><name>exclude</name></member>
+      <member refid="structcl__ipaddr__match__t_1a3579a408f626c12e0e7187b68a599d8e" prot="public" virt="non-virtual"><scope>cl_ipaddr_match_t</scope><name>ipaddr</name></member>
+      <member refid="structcl__ipaddr__match__t_1af1c611cf5751752aac9df3b4451436f0" prot="public" virt="non-virtual"><scope>cl_ipaddr_match_t</scope><name>mask</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

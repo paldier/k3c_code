@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structfapi__dsl__init__cfg" kind="struct" prot="public">
+    <compoundname>fapi_dsl_init_cfg</compoundname>
+    <includes refid="dsl__fapi_8h" local="no">dsl_fapi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfapi__dsl__init__cfg_1a73d68155aaf0185a49347278b3a07990" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structfapi__dsl__init__parameter__box" kindref="compound">fapi_dsl_init_parameter_box</ref></type>
+        <definition>struct fapi_dsl_init_parameter_box fapi_dsl_init_cfg::params</definition>
+        <argsstring></argsstring>
+        <name>params</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1015" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="1022" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Structure that includes configuration parameter. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="90">
+        <label>fapi_dsl_init_parameter</label>
+        <link refid="structfapi__dsl__init__parameter"/>
+      </node>
+      <node id="88">
+        <label>fapi_dsl_init_cfg</label>
+        <link refid="structfapi__dsl__init__cfg"/>
+        <childnode refid="89" relation="usage">
+          <edgelabel>params</edgelabel>
+        </childnode>
+      </node>
+      <node id="89">
+        <label>fapi_dsl_init_parameter_box</label>
+        <link refid="structfapi__dsl__init__parameter__box"/>
+        <childnode refid="90" relation="usage">
+          <edgelabel>array</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1021" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="1021" bodyend="1023"/>
+    <listofallmembers>
+      <member refid="structfapi__dsl__init__cfg_1a73d68155aaf0185a49347278b3a07990" prot="public" virt="non-virtual"><scope>fapi_dsl_init_cfg</scope><name>params</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

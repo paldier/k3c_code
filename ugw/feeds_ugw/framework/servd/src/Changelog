@@ -1,0 +1,120 @@
+-------------------------------------------------------------------------------
+  version 1.7.0.0  | 2016-08-23 |
+-------------------------------------------------------------------------------
+NEW: Add servd_callOtherSlFunc API which allows SL's to expose their internal function pointers and other SL's can use them via SERVD_GET_OTHER_SL_FUNCTION("<sl name>", FUNCTION_INDEX) [UGW_SW-4401]
+
+-------------------------------------------------------------------------------
+  version 1.6.1.0  | 2016-08-10 |
+-------------------------------------------------------------------------------
+CHG: Increase Transaction timeout value in ServD for WLAN SL to complete a larger modify operation as a temporary change [UGW_SW-8704]
+
+-------------------------------------------------------------------------------
+  version 1.6.0.0  | 2016-03-18 |
+-------------------------------------------------------------------------------
+NEW: Expose INIT and UNINIT methods over UBUS for external calls [UGW_SW-4401]
+
+-------------------------------------------------------------------------------
+  version 1.5.4.0  | 2016-03-04 |
+-------------------------------------------------------------------------------
+CHG: Call SiD re-apply to DB with a SIGUSR2 signal (Invoked by CSD incase of DB corrupt and failsafe) [UGW_SW-4401]
+
+-------------------------------------------------------------------------------
+  version 1.5.3.0  | 2016-01-28 |
+-------------------------------------------------------------------------------
+CHG: Fork WLAN SL if CPUs are > 1 [UGW_SW-6022]
+
+-------------------------------------------------------------------------------
+  version 1.5.2.2  | 2016-01-27 |
+-------------------------------------------------------------------------------
+CHG: Disable SIGCHLD handling as uloop handles it. [UGW_SW-4401]
+CHG: Update SL initated reboot of system from ServD from Notify Sync/Async method [UGW_SW-6127]
+
+-------------------------------------------------------------------------------
+  version 1.5.0.0  | 2016-01-19 |
+-------------------------------------------------------------------------------
+NEW: Add SL initated reboot of system from ServD from Modify method [UGW_SW-6127]
+
+-------------------------------------------------------------------------------
+  version 1.4.4.0  | 2015-11-11 |
+-------------------------------------------------------------------------------
+CHG: Servd optimizations update [UGW_SW-6022]
+CHG: Bootup optimizations: Fork sl_wlan init from servd (Temporary change only) [UGW_SW-6022]
+
+-------------------------------------------------------------------------------
+  version 1.4.3.0  | 2015-10-29 |
+-------------------------------------------------------------------------------
+CHG: Update for doxygen text and review comments [UGW_SW-4401]
+CHG: Update license headers in servd [UGW_SW-4401]
+CHG: Fine tune Error codes [UGW_SW-5905]
+FIX: Fix a bug in Servd dependency list manipulation:- Ignore end dot in objects while comparing [UGW_SW-4401]
+
+-------------------------------------------------------------------------------
+  version 1.4.2.0  | 2015-10-20 |
+-------------------------------------------------------------------------------
+CHG: Remove init_ugwframework script copy from servd feed [UGW_SW-5682, UGW_SW-4402]
+CHG: Update SERVD_GETVALUE_FROM_DB API to get from Servd's local cache by optional Object operations [UGW_SW-5531]
+
+-------------------------------------------------------------------------------
+  version 1.4.1.0  | 2015-09-25 |
+-------------------------------------------------------------------------------
+FIX: Revert uloop_done in child [UGW_SW-4401]
+CHG: Update print log [UGW_SW-4401]
+CHG: Activate state update, validate MsgHeader with leafnode attributes, Add option.dumpmsg option. [UGW_SW-5502, UGW_SW-4401]
+
+-------------------------------------------------------------------------------
+  version 1.4.0.0  | 2015-09-15 |
+-------------------------------------------------------------------------------
+NEW: Enable support for Web Socket Daemon special Get method in Servd [UGW_SW-5539]
+FIX: Servd process handler: Activate state return - bugfix [UGW_SW-5502]
+CHG: Persist Servd's options.fork across reboot [UGW_SW-4401]
+
+-------------------------------------------------------------------------------
+  version 1.3.0.0  | 2015-09-05 |
+-------------------------------------------------------------------------------
+NEW: Send All INIT completed notification from Servd, Persist Servd's loglevel's across reboot, minor fixes to config file, minor updates to notify_defs. [UGW_SW-5538, UGW_SW-4401]
+NEW: Add modify.fwupgrade method, increase timeout for upgrade operation via modify [UGW_SW-5533]
+NEW: Add get from local cache API in Servd to SL's: SERVD_GETVALUE_FROM_CACHE(pxObj) [UGW_SW-5531]
+
+-------------------------------------------------------------------------------
+  version 1.2.0.0  | 2015-09-01 |
+-------------------------------------------------------------------------------
+NEW: Add activate state support in servd [UGW_SW-5502]
+NEW: Add new methods [UGW_SW-4401]
+
+-------------------------------------------------------------------------------
+  version 1.1.3.0  | 2015-08-08 |
+-------------------------------------------------------------------------------
+CHG: Update for Klockwork fix [UGW_SW-4401]
+
+-------------------------------------------------------------------------------
+  version 1.1.2.0  | 2015-07-05 |
+-------------------------------------------------------------------------------
+CHG: Updates for logging API's.
+
+-------------------------------------------------------------------------------
+  version 1.1.1.0  | 2015-07-01 |
+-------------------------------------------------------------------------------
+CHG: Update servd for re-ordering get/modify sl calls based on Sid
+
+-------------------------------------------------------------------------------
+  version 1.1.0.0  | 2015-06-01 |
+-------------------------------------------------------------------------------
+NEW: Change servd's library data to a hash table [UGW_SW-4401]
+NEW: Add firstboot check [UGW_SW-4401]
+NEW: Add start order based on .start flag [UGW_SW-4401]
+
+-------------------------------------------------------------------------------
+  version 1.0.2.0  | 2015-03-21 |
+-------------------------------------------------------------------------------
+CHG: CAL function update [UGW_SW-4401]
+CHG: SYNC notification handlers [UGW_SW-4401]
+
+-------------------------------------------------------------------------------
+  version 1.0.1.0  | 2014-12-1 |
+-------------------------------------------------------------------------------
+CHG: CAL function update [UGW_SW-4401]
+
+-------------------------------------------------------------------------------
+  version 1.0.0.0  | 2014-09-30 |
+-------------------------------------------------------------------------------
+NEW: Initial Servd checkin [UGW_SW-4401]

@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Source library script
+[ ! "$FAPI_WLAN_WAVE_INIT_PLATFORM" ] && . /tmp/wlan_wave/fapi_wlan_wave_init_platform.sh
+
+print2log DBG "fapi_wlan_wave_restart: args: $*"
+
+timestamp "fapi_wlan_wave_restart:begin"
+
+$ETC_PATH/fapi_wlan_wave_hw_uninit
+$ETC_PATH/fapi_wlan_wave_hw_init
+# TODO: add start commands
+
+print2log DBG "fapi_wlan_wave_restart done"
+
+timestamp "fapi_wlan_wave_restart:done"
+

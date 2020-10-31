@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__FAPI__MCAST" kind="group">
+    <compoundname>FAPI_MCAST</compoundname>
+    <title>Multicast</title>
+    <innerclass refid="structipaddr__t" prot="public">ipaddr_t</innerclass>
+    <innerclass refid="structMCAST__MEMBER__t" prot="public">MCAST_MEMBER_t</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__FAPI__MCAST_1ga723256dea8a6fd9c487829bc1ed6f911" prot="public" static="no">
+        <name>ptype_t</name>
+        <enumvalue id="group__FAPI__MCAST_1gga723256dea8a6fd9c487829bc1ed6f911acfc4c1053c60b6cc2a7776c60969f31f" prot="public">
+          <name>IPV4</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>IPv4 type </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__MCAST_1gga723256dea8a6fd9c487829bc1ed6f911aff712168361fe68b2bb6193df4977d3c" prot="public">
+          <name>IPV6</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>IPv6 type </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__MCAST_1gga723256dea8a6fd9c487829bc1ed6f911aef2863a469df3ea6871d640e3669a2f2" prot="public">
+          <name>INVALID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid type </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>enumerations for protocol types : IPV4,IPV6 and INVALID </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="58" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" bodystart="58" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__FAPI__MCAST_1gafbac858165d5e50aa73d570f1126d239" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_mch_add_entry</definition>
+        <argsstring>(MCAST_MEMBER_t *mch_mem)</argsstring>
+        <name>fapi_mch_add_entry</name>
+        <param>
+          <type><ref refid="structMCAST__MEMBER__t" kindref="compound">MCAST_MEMBER_t</ref> *</type>
+          <declname>mch_mem</declname>
+        </param>
+        <briefdescription>
+<para>This FAPI perform ADD i.e it informs MC-Helper module about new Join request received by mcastd . </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Structure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>containing multicast membership configuration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="102" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__MCAST_1ga6286c923439cc8e19147947793d93b5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_mch_update_entry</definition>
+        <argsstring>(MCAST_MEMBER_t *mch_mem)</argsstring>
+        <name>fapi_mch_update_entry</name>
+        <param>
+          <type><ref refid="structMCAST__MEMBER__t" kindref="compound">MCAST_MEMBER_t</ref> *</type>
+          <declname>mch_mem</declname>
+        </param>
+        <briefdescription>
+<para>This FAPI perform Update i.e it informs MC-Helper module about Join request for already playing group is received by mcastd . </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Structure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>containing multicast membership configuration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="109" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__MCAST_1ga5bcc01589f050c9a2ab598448541409e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_mch_del_entry</definition>
+        <argsstring>(MCAST_MEMBER_t *mch_mem)</argsstring>
+        <name>fapi_mch_del_entry</name>
+        <param>
+          <type><ref refid="structMCAST__MEMBER__t" kindref="compound">MCAST_MEMBER_t</ref> *</type>
+          <declname>mch_mem</declname>
+        </param>
+        <briefdescription>
+<para>This FAPI perform DELETE i.e it informs MC-Helper module about Leave request received by mcastd . </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Structure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>containing multicast membership configuration </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__MCAST_1ga273dfc7cf664728003a52ec6956baf58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_mch_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>fapi_mch_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This FAPI perform initilization i.e it insmod mcast_helper and create /dev/mcast device . </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="120" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__MCAST_1ga2bbfa1785e9b2b44cdcc3ed12497aa45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int fapi_mch_uninit</definition>
+        <argsstring>(void)</argsstring>
+        <name>fapi_mch_uninit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This FAPI perform uninitilization i.e it rmmod mcast_helper . </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>FAPI_SUCCESS / FAPI_FAILURE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="125" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__FAPI__MCAST_1gaa55207000cd9168578be60cca21141e6" prot="public" static="no">
+        <name>IFSIZE</name>
+        <initializer>20</initializer>
+        <briefdescription>
+<para>Maximum interface name size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="40" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__MCAST_1gaeafdc97c74222a08b365112551cffbf6" prot="public" static="no">
+        <name>FAPI_SUCCESS</name>
+        <initializer>0x0</initializer>
+        <briefdescription>
+<para>FAPI_SUCCESS return value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="46" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__MCAST_1gadd29db80cc155c0bada779381354aead" prot="public" static="no">
+        <name>FAPI_FAILURE</name>
+        <initializer>0x1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="52" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>It is split between user space application and kernel module, offering a seamless integration of Multicast functionality with other modules. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

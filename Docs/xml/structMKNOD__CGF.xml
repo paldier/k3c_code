@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structMKNOD__CGF" kind="struct" prot="public">
+    <compoundname>MKNOD_CGF</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structMKNOD__CGF_1a3d498d202f1beaf62eebd7d61cdffbb4" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char MKNOD_CGF::DevName[64]</definition>
+        <argsstring>[64]</argsstring>
+        <name>DevName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="381" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="381" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMKNOD__CGF_1aef912afbb0b9fa87d5ad1d80697c419b" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t MKNOD_CGF::unMajorNo</definition>
+        <argsstring></argsstring>
+        <name>unMajorNo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="382" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="382" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMKNOD__CGF_1a1c134159815e0139ca9f1958c6fae6dd" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t MKNOD_CGF::unMinorNo</definition>
+        <argsstring></argsstring>
+        <name>unMinorNo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="383" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="383" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMKNOD__CGF_1a5d0dfedc6411883f77a3c6fc75a641ed" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t MKNOD_CGF::unDevNo</definition>
+        <argsstring></argsstring>
+        <name>unDevNo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="384" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="384" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="380" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="380" bodyend="385"/>
+    <listofallmembers>
+      <member refid="structMKNOD__CGF_1a3d498d202f1beaf62eebd7d61cdffbb4" prot="public" virt="non-virtual"><scope>MKNOD_CGF</scope><name>DevName</name></member>
+      <member refid="structMKNOD__CGF_1a5d0dfedc6411883f77a3c6fc75a641ed" prot="public" virt="non-virtual"><scope>MKNOD_CGF</scope><name>unDevNo</name></member>
+      <member refid="structMKNOD__CGF_1aef912afbb0b9fa87d5ad1d80697c419b" prot="public" virt="non-virtual"><scope>MKNOD_CGF</scope><name>unMajorNo</name></member>
+      <member refid="structMKNOD__CGF_1a1c134159815e0139ca9f1958c6fae6dd" prot="public" virt="non-virtual"><scope>MKNOD_CGF</scope><name>unMinorNo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

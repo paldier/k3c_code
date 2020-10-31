@@ -1,0 +1,5 @@
+与本文档同级目录下的各目录说明：
+Docs/  :包含intel UGW-7.1.1 SDK开发相关的API文档
+Images/  :包含一些SDK自带的编译产物
+ugw/  :该目录包含所有intel对openwrt chaos calmer 15.05版本的patch，也可以说是UGW-7.1.1软件包的全部。
+	UGW SDK不同于brcm和mtk等厂商提供的SDK，它没有直接把patch打在openwrt源码上之后，打包成SDK，而是以patch的形式给出。从ugw-prepare-all.sh脚本中可以看出是如何将这些patch打到openwrt源码上的。

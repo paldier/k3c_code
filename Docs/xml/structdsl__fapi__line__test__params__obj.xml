@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structdsl__fapi__line__test__params__obj" kind="struct" prot="public">
+    <compoundname>dsl_fapi_line_test_params_obj</compoundname>
+    <includes refid="dsl__fapi_8h" local="no">dsl_fapi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1aa26cbe2bda655479cb8e69914432baba" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_test_params_obj::hlogg_ds</definition>
+        <argsstring></argsstring>
+        <name>hlogg_ds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of sub-carriers per sub-carrier group in the downstream direction for <ref refid="structdsl__fapi__line__test__params__obj_1a5f64a314b926de0db42b37c794f14daf" kindref="member">hlogps_ds</ref>. Valid values are 1, 2, 4, and 8. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para><simplesectsep/><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to 1. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="416" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1accedc3faf0cb39a02ecbcb39635b1cf4" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_test_params_obj::hlogg_us</definition>
+        <argsstring></argsstring>
+        <name>hlogg_us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of sub-carriers per sub-carrier group in the upstream direction for <ref refid="structdsl__fapi__line__test__params__obj_1a7d6db75c174584b2fdc5ab0e8ee3d499" kindref="member">hlogps_us</ref>. Valid values are 1, 2, 4, and 8.</para><para><simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para><simplesectsep/><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to 1. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="423" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1a5f64a314b926de0db42b37c794f14daf" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_test_params_obj::hlogps_ds[2562]</definition>
+        <argsstring>[2562]</argsstring>
+        <name>hlogps_ds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Comma-separated list (maximum list length 2559) of strings. Indicates the downstream logarithmic line characteristics per sub-carrier group. The maximum number of elements is 256 for G.992.3, and 512 for G.992.5. For G.993.2, the number of elements will depend on the value of HLOGGds but will not exceed 512. Interpretation of the values is as defined in ITU-T Rec. G.997.1. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para><simplesectsep/><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to None. </para><simplesectsep/><para>hlogps_ds is measured during initialization and is not updated during Showtime. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="433" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="433" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1a7d6db75c174584b2fdc5ab0e8ee3d499" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_test_params_obj::hlogps_us[2562]</definition>
+        <argsstring>[2562]</argsstring>
+        <name>hlogps_us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Comma-separated list (maximum list length 2559) of strings. Indicates the upstream logarithmic line characteristics per sub-carrier group. The maximum number of elements is 64 for G.992.3 and G.992.5. For G.993.2, the number of elements will depend on the value of HLOGGus but will not exceed 512. Interpretation of the values is as defined in ITU-T Rec. G.997.1. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para><simplesectsep/><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to None. </para><simplesectsep/><para>hlogps_us is measured during initialization and is not updated during Showtime. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="443" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="443" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1af530199f0de8204228c7df7ddd8436f7" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_test_params_obj::hlogmt_ds</definition>
+        <argsstring></argsstring>
+        <name>hlogmt_ds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates the number of symbols over which <ref refid="structdsl__fapi__line__test__params__obj_1a5f64a314b926de0db42b37c794f14daf" kindref="member">hlogps_ds</ref> was measured. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para><simplesectsep/><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to 0. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="448" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="448" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1a55959d1ae7fc886d4d9e282f33f23f09" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_test_params_obj::hlogmt_us</definition>
+        <argsstring></argsstring>
+        <name>hlogmt_us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates the number of symbols over which <ref refid="structdsl__fapi__line__test__params__obj_1a7d6db75c174584b2fdc5ab0e8ee3d499" kindref="member">hlogps_us</ref> was measured. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para><simplesectsep/><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to 0. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="453" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="453" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1a365fb061aee0314c538b0158145bcc46" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_test_params_obj::qlng_ds</definition>
+        <argsstring></argsstring>
+        <name>qlng_ds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of sub-carriers per sub-carrier group in the downstream direction for <ref refid="structdsl__fapi__line__test__params__obj_1ae4b24cb005ff35e5a582b46249891085" kindref="member">qlnps_ds</ref>. Valid values are 1, 2, 4, and 8. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para><simplesectsep/><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to 1. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="459" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="459" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1a308e439c5c561eda195fa95aee84505f" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_test_params_obj::qlng_us</definition>
+        <argsstring></argsstring>
+        <name>qlng_us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of sub-carriers per sub-carrier group in the upstream direction for <ref refid="structdsl__fapi__line__test__params__obj_1a07497d9f33930bf1ab615c4ee4b5ed59" kindref="member">qlnps_us</ref>. Valid values are 1, 2, 4, and 8. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para><simplesectsep/><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to 1. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="465" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="465" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1ae4b24cb005ff35e5a582b46249891085" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_test_params_obj::qlnps_ds[2049]</definition>
+        <argsstring>[2049]</argsstring>
+        <name>qlnps_ds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Comma-separated list (maximum list length 2047) of integers. Indicates the downstream quiet line noise per subcarrier group. The maximum number of elements is 256 for G.992.3 and G.992.5. For G.993.2, the number of elements will depend on the value of QLNGds but will not exceed 512. Interpretation of the values is as defined in ITU-T Rec. G.997.1. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para><simplesectsep/><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to None. </para><simplesectsep/><para>qlnps_ds is measured during initialization and is not updated during Showtime. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="475" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="475" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1a07497d9f33930bf1ab615c4ee4b5ed59" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_test_params_obj::qlnps_us[2049]</definition>
+        <argsstring>[2049]</argsstring>
+        <name>qlnps_us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Comma-separated list (maximum list length 2047) of strings. Indicates the upstream quiet line noise per subcarrier group. The maximum number of elements is 64 for G.992.3 and G.992.5. For G.993.2, the number of elements will depend on the value of QLNGus but will not exceed 512. Interpretation of the values is as defined in ITU-T Rec. G.997.1. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para><simplesectsep/><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to None. </para><simplesectsep/><para>qlnps_us is measured during initialization and is not updated during Showtime. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="485" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="485" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1a8c4cb97cde0a44a01190da61bb2191d2" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_test_params_obj::qlnmt_ds</definition>
+        <argsstring></argsstring>
+        <name>qlnmt_ds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates the number of symbols over which <ref refid="structdsl__fapi__line__test__params__obj_1ae4b24cb005ff35e5a582b46249891085" kindref="member">qlnps_ds</ref> was measured. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para><simplesectsep/><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to 0. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="490" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="490" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1a58aaec5d828de778148762eccb6e0a03" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_test_params_obj::qlnmt_us</definition>
+        <argsstring></argsstring>
+        <name>qlnmt_us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates the number of symbols over which <ref refid="structdsl__fapi__line__test__params__obj_1a07497d9f33930bf1ab615c4ee4b5ed59" kindref="member">qlnps_us</ref> was measured. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para><simplesectsep/><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to 0. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="495" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="495" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1a6bc1ac31ab8f8c3f7d2b7734b176b920" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_test_params_obj::snrg_ds</definition>
+        <argsstring></argsstring>
+        <name>snrg_ds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of sub-carriers per sub-carrier group in the downstream direction for <ref refid="structdsl__fapi__line__test__params__obj_1a31f5916b0efd18693c30ac5ab6bf95e0" kindref="member">snrps_ds</ref>. Valid values are 1, 2, 4, and 8. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para><simplesectsep/><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to 1. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="501" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="501" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1aab1050460405b591f11366b8f0109e52" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_test_params_obj::snrg_us</definition>
+        <argsstring></argsstring>
+        <name>snrg_us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of sub-carriers per sub-carrier group in the upstream direction for <ref refid="structdsl__fapi__line__test__params__obj_1a2bb54209cc9ef6b6e17b57b723e59293" kindref="member">snrps_us</ref>. Valid values are 1, 2, 4, and 8. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para><simplesectsep/><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to 1. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="507" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="507" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1a31f5916b0efd18693c30ac5ab6bf95e0" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_test_params_obj::snrps_ds[2049]</definition>
+        <argsstring>[2049]</argsstring>
+        <name>snrps_ds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Comma-separated list (maximum list length 2047) of integers. Indicates the downstream SNR per subcarrier group. The maximum number of elements is 256 for G.992.3, and 512 for G.992.5. For G.993.2, the number of elements will depend on the value of snrg_ds but will not exceed 512. Interpretation of the values is as defined in ITU-T Rec. G.997.1. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para><simplesectsep/><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to None. </para><simplesectsep/><para>snrps_ds is first measured during initialization and is updated during Showtime. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="516" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="516" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1a2bb54209cc9ef6b6e17b57b723e59293" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_test_params_obj::snrps_us[2049]</definition>
+        <argsstring>[2049]</argsstring>
+        <name>snrps_us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Comma-separated list (maximum list length 2047) of strings. Indicates the upstream SNR per subcarrier group. The maximum number of elements is 64 for G.992.3 and G.992.5. For G.993.2, the number of elements will depend on the value of snrg_us but will not exceed 512. Interpretation of the values is as defined in ITU-T Rec. G.997.1. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para><simplesectsep/><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to None. </para><simplesectsep/><para>snrps_us is first measured during initialization and is updated during Showtime. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="525" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="525" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1a4fac6ebeb3e66e201680646e0118d406" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_test_params_obj::snrmt_ds</definition>
+        <argsstring></argsstring>
+        <name>snrmt_ds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates the number of symbols over which snrps_ds was measured. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para><simplesectsep/><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to 0. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="530" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="530" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1adbbfa69841615a3fcd552726cc18a6a2" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_test_params_obj::snrmt_us</definition>
+        <argsstring></argsstring>
+        <name>snrmt_us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates the number of symbols over which <ref refid="structdsl__fapi__line__test__params__obj_1a2bb54209cc9ef6b6e17b57b723e59293" kindref="member">snrps_us</ref> was measured. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para><simplesectsep/><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to 0. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="535" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="535" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1a35ceece146111cad9955e33a28c721ec" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_test_params_obj::latn_ds[24]</definition>
+        <argsstring>[24]</argsstring>
+        <name>latn_ds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Comma-separated list (maximum list length 24) of strings. Indicates the downstream line attenuation per usable band, as computed during initialization. Number of elements is dependent on the number of downstream bands but will exceed one only for G.993.2. Interpretation of latn_ds is as defined in ITU-T Rec. G.997.1. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="541" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="541" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1a1c23bf6bcf03cfbe5fe720fa3d471742" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_test_params_obj::latn_us[24]</definition>
+        <argsstring>[24]</argsstring>
+        <name>latn_us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Comma-separated list (maximum list length 24) of strings. Indicates the upstream line attenuation per usable band, as computed during initialization. Number of elements is dependent on the number of upstream bands but will exceed one only for G.993.2. Interpretation of latn_us is as defined in ITU-T Rec. G.997.1. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="547" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="547" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1ad5c0172d2a20781c58dbcb72a41871fa" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_test_params_obj::satn_ds[24]</definition>
+        <argsstring>[24]</argsstring>
+        <name>satn_ds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Comma-separated list (maximum list length 24) of strings. Indicates the downstream signal attenuation per usable band, as computed during the L0 (i.e., Showtime) state. Number of elements is dependent on the number of downstream bands but will exceed one only for G.993.2. Interpretation of satn_ds is as defined in ITU-T Rec. G.997.1. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="553" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="553" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__test__params__obj_1a6445be0f67ecc319197734403e442b76" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_test_params_obj::satn_us[24]</definition>
+        <argsstring>[24]</argsstring>
+        <name>satn_us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Comma-separated list (maximum list length 24) of strings. Indicates the upstream signal attenuation per usable band, as computed during the L0 (i.e., Showtime) state. Number of elements is dependent on the number of downstream bands but will exceed one only for G.993.2. Interpretation of satn_us is as defined in ITU-T Rec. G.997.1. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="559" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="559" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>DSL Line TestParams object declaration, based on TR-181 definitions. </para>    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="410" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="410" bodyend="560"/>
+    <listofallmembers>
+      <member refid="structdsl__fapi__line__test__params__obj_1aa26cbe2bda655479cb8e69914432baba" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>hlogg_ds</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1accedc3faf0cb39a02ecbcb39635b1cf4" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>hlogg_us</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1af530199f0de8204228c7df7ddd8436f7" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>hlogmt_ds</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1a55959d1ae7fc886d4d9e282f33f23f09" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>hlogmt_us</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1a5f64a314b926de0db42b37c794f14daf" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>hlogps_ds</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1a7d6db75c174584b2fdc5ab0e8ee3d499" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>hlogps_us</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1a35ceece146111cad9955e33a28c721ec" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>latn_ds</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1a1c23bf6bcf03cfbe5fe720fa3d471742" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>latn_us</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1a365fb061aee0314c538b0158145bcc46" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>qlng_ds</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1a308e439c5c561eda195fa95aee84505f" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>qlng_us</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1a8c4cb97cde0a44a01190da61bb2191d2" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>qlnmt_ds</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1a58aaec5d828de778148762eccb6e0a03" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>qlnmt_us</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1ae4b24cb005ff35e5a582b46249891085" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>qlnps_ds</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1a07497d9f33930bf1ab615c4ee4b5ed59" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>qlnps_us</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1ad5c0172d2a20781c58dbcb72a41871fa" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>satn_ds</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1a6445be0f67ecc319197734403e442b76" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>satn_us</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1a6bc1ac31ab8f8c3f7d2b7734b176b920" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>snrg_ds</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1aab1050460405b591f11366b8f0109e52" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>snrg_us</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1a4fac6ebeb3e66e201680646e0118d406" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>snrmt_ds</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1adbbfa69841615a3fcd552726cc18a6a2" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>snrmt_us</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1a31f5916b0efd18693c30ac5ab6bf95e0" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>snrps_ds</name></member>
+      <member refid="structdsl__fapi__line__test__params__obj_1a2bb54209cc9ef6b6e17b57b723e59293" prot="public" virt="non-virtual"><scope>dsl_fapi_line_test_params_obj</scope><name>snrps_us</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,240 @@
+#!/bin/sh
+
+
+
+if [ ! "$ENVLOADED" ]; then
+	if [ -r /etc/rc.conf ]; then
+		 . /etc/rc.conf 2> /dev/null
+		ENVLOADED="1"
+	fi
+fi
+
+if [ ! "$CONFIGLOADED" ]; then
+	if [ -r /etc/rc.d/config.sh ]; then
+		. /etc/rc.d/config.sh 2>/dev/null
+		CONFIGLOADED="1"
+	fi
+fi
+
+
+if [ "$CONFIG_FEATURE_WIRELESS" = "1" ]; then
+	#Insert wireless module, independent from configuration state
+   insmod /lib/modules/`uname -r`/rt5592ap.ko >/dev/null 2>&1
+
+	mkdir -p /ramdisk/etc/Wireless/RT2860AP/	
+	rm -f /ramdisk/etc/Wireless/RT2860AP/RT2860AP.dat
+	WLAN_START_CONF="/ramdisk/etc/Wireless/RT2860AP/RT2860AP.dat"
+	TEMP_FILE="/ramdisk/tmp/temp_file"
+
+	echo "#The word of \"Default\" must not be removed" >> ${WLAN_START_CONF}
+	echo "Default" >> ${WLAN_START_CONF}
+	echo "CountryRegion=5" >> ${WLAN_START_CONF}
+	echo "CountryRegionABand=7" >> ${WLAN_START_CONF}
+	echo "CountryCode=US" >> ${WLAN_START_CONF}
+	echo "BssidNum=8" >> ${WLAN_START_CONF}
+	echo "SSID1=MyAP" >> ${WLAN_START_CONF}
+	echo "SSID2=" >> ${WLAN_START_CONF}
+	echo "SSID3=" >> ${WLAN_START_CONF}
+	echo "SSID4=" >> ${WLAN_START_CONF}
+	echo "WirelessMode=9" >> ${WLAN_START_CONF}
+	echo "TxRate=0" >> ${WLAN_START_CONF}
+	echo "Channel=11" >> ${WLAN_START_CONF}	
+	echo "BasicRate=15" >> ${WLAN_START_CONF}
+	echo "BeaconPeriod=100" >> ${WLAN_START_CONF}
+	echo "DtimPeriod=1" >> ${WLAN_START_CONF}
+	echo "TxPower=100" >> ${WLAN_START_CONF}
+	#echo "WiFiTest=0" >> ${WLAN_START_CONF}
+	echo "DisableOLBC=0" >> ${WLAN_START_CONF}
+	echo "BGProtection=0" >> ${WLAN_START_CONF}
+	echo "MaxStaNum=0" >> ${WLAN_START_CONF}
+	#echo "TxAntenna=" >> ${WLAN_START_CONF}
+	#echo "RxAntenna=" >> ${WLAN_START_CONF}
+	echo "TxPreamble=0" >> ${WLAN_START_CONF}
+	echo "RTSThreshold=2347" >> ${WLAN_START_CONF}
+	echo "FragThreshold=2346" >> ${WLAN_START_CONF}
+	echo "TxBurst=1" >> ${WLAN_START_CONF}
+	echo "PktAggregate=0" >> ${WLAN_START_CONF}
+	echo "TurboRate=0" >> ${WLAN_START_CONF}
+	echo "WmmCapable=0" >> ${WLAN_START_CONF}
+	echo "APSDCapable=0" >> ${WLAN_START_CONF}
+	echo "APAifsn=3;7;1;1" >> ${WLAN_START_CONF}
+	echo "APCwmin=4;4;3;2" >> ${WLAN_START_CONF}
+	echo "APCwmax=6;10;4;3" >> ${WLAN_START_CONF}
+	echo "APTxop=0;0;94;47" >> ${WLAN_START_CONF}
+	echo "APACM=0;0;0;0" >> ${WLAN_START_CONF}
+	echo "BSSAifsn=3;7;2;2" >> ${WLAN_START_CONF}
+	echo "BSSCwmin=4;4;3;2" >> ${WLAN_START_CONF}
+	echo "BSSCwmax=10;10;4;3" >> ${WLAN_START_CONF}
+	echo "BSSTxop=0;0;94;47" >> ${WLAN_START_CONF}
+	echo "BSSACM=0;0;0;0" >> ${WLAN_START_CONF}
+	echo "AckPolicy=0;0;0;0" >> ${WLAN_START_CONF}
+	echo "NoForwarding=0;0;0" >> ${WLAN_START_CONF}
+	echo "NoForwardingBTNBSSID=0" >> ${WLAN_START_CONF}
+	echo "HideSSID=0;0;0" >> ${WLAN_START_CONF}
+	echo "StationKeepAlive=0" >> ${WLAN_START_CONF}
+	echo "ShortSlot=1" >> ${WLAN_START_CONF}
+	echo "AutoChannelSelect=0" >> ${WLAN_START_CONF}
+	#echo "MaxTxPowerLevel=16" >> ${WLAN_START_CONF}
+	echo "IEEE8021X=0" >> ${WLAN_START_CONF}
+	echo "IEEE80211H=0" >> ${WLAN_START_CONF}
+	echo "CSPeriod=10" >> ${WLAN_START_CONF}
+	echo "PreAuth=0;0;0" >> ${WLAN_START_CONF}
+	echo "AuthMode=OPEN" >> ${WLAN_START_CONF}
+	echo "EncrypType=NONE" >> ${WLAN_START_CONF}
+	echo "RekeyInterval=0" >> ${WLAN_START_CONF}
+	echo "RekeyMethod=DISABLE" >> ${WLAN_START_CONF}
+	echo "PMKCachePeriod=10" >> ${WLAN_START_CONF}
+	#echo "WPAPSK=test_passphrase_for_ap_in_personal_mode;passphrase;NEW_PASS_PHRASE" >> ${WLAN_START_CONF}
+	echo "WPAPSK1=test_passphrase_for_ap_in_personal_mode" >> ${WLAN_START_CONF}
+	echo "WPAPSK2=test_passphrase_for_ap_in_personal_mode" >> ${WLAN_START_CONF}
+	echo "WPAPSK3=test_passphrase_for_ap_in_personal_mode" >> ${WLAN_START_CONF}
+	echo "WPAPSK4=test_passphrase_for_ap_in_personal_mode" >> ${WLAN_START_CONF}
+	echo "DefaultKeyID=1" >> ${WLAN_START_CONF}
+	echo "Key1Type=0" >> ${WLAN_START_CONF}
+	#echo "Key1Str=123456789abcdef0123456789a;abcdefghijklm;new_wep_key_1" >> ${WLAN_START_CONF}
+	echo "Key1Str=123456789abcdef0123456789a" >> ${WLAN_START_CONF}
+	echo "Key1Str=123456789abcdef0123456789a" >> ${WLAN_START_CONF}
+	echo "Key1Str=123456789abcdef0123456789a" >> ${WLAN_START_CONF}
+	echo "Key2Type=0" >> ${WLAN_START_CONF}
+	echo "Key2Str=23456789abcdef0123456789ab;*************;new_wep_key_2" >> ${WLAN_START_CONF}
+	echo "Key3Type=0" >> ${WLAN_START_CONF}
+	echo "Key3Str=3456789abcdef0123456789abc;*************;new_wep_key_3" >> ${WLAN_START_CONF}
+	echo "Key4Type=0" >> ${WLAN_START_CONF}
+	echo "Key4Str=456789abcdef0123456789abcd;*************;new_wep_key_4" >> ${WLAN_START_CONF}
+	echo "HSCounter=0" >> ${WLAN_START_CONF}
+	echo "AccessPolicy0=0" >> ${WLAN_START_CONF}
+	echo "AccessControlList0=" >> ${WLAN_START_CONF}
+	echo "AccessPolicy1=0" >> ${WLAN_START_CONF}
+	echo "AccessControlList1=" >> ${WLAN_START_CONF}
+	echo "AccessPolicy2=0" >> ${WLAN_START_CONF}
+	echo "AccessControlList2=" >> ${WLAN_START_CONF}
+	echo "AccessPolicy3=0" >> ${WLAN_START_CONF}
+	echo "AccessControlList3=" >> ${WLAN_START_CONF}
+	echo "WdsEnable=0" >> ${WLAN_START_CONF}
+	echo "WdsEncrypType=NONE" >> ${WLAN_START_CONF}
+	echo "WdsList=" >> ${WLAN_START_CONF}
+	echo "WdsKey=" >> ${WLAN_START_CONF}
+	echo "RADIUS_Server=" >> ${WLAN_START_CONF}
+	echo "RADIUS_Port=1812" >> ${WLAN_START_CONF}
+	echo "RADIUS_Key=ralink" >> ${WLAN_START_CONF}
+	echo "own_ip_addr=" >> ${WLAN_START_CONF}
+	echo "Ethifname=eth0" >> ${WLAN_START_CONF}
+	echo "WscConfMode=0" >> ${WLAN_START_CONF}
+	echo "WscConfStatus=1" >> ${WLAN_START_CONF}
+	echo "IdsEnable=0" >> ${WLAN_START_CONF}
+	echo "AuthFloodThreshold=32" >> ${WLAN_START_CONF}
+	echo "AssocReqFloodThreshold=32" >> ${WLAN_START_CONF}
+	echo "ReassocReqFloodThreshold=32" >> ${WLAN_START_CONF}
+	echo "ProbeReqFloodThreshold=32" >> ${WLAN_START_CONF}
+	echo "DisassocFloodThreshold=32" >> ${WLAN_START_CONF}
+	echo "DeauthFloodThreshold=32" >> ${WLAN_START_CONF}
+	echo "EapReqFooldThreshold=32" >> ${WLAN_START_CONF}
+	echo "HT_HTC=0" >> ${WLAN_START_CONF}
+	echo "HT_RDG=0" >> ${WLAN_START_CONF}
+	echo "HT_EXTCHA=0" >> ${WLAN_START_CONF}
+	echo "HT_LinkAdapt=0" >> ${WLAN_START_CONF}
+	echo "HT_OpMode=0" >> ${WLAN_START_CONF}
+	echo "HT_MpduDensity=5" >> ${WLAN_START_CONF}
+	echo "HT_BW=1" >> ${WLAN_START_CONF}
+	echo "HT_AutoBA=1" >> ${WLAN_START_CONF}
+	echo "HT_AMSDU=0" >> ${WLAN_START_CONF}
+	echo "HT_BAWinSize=64" >> ${WLAN_START_CONF}
+	echo "HT_GI=1" >> ${WLAN_START_CONF}
+	echo "HT_MCS=33" >> ${WLAN_START_CONF}
+  #echo "Debug=0" >> ${WLAN_START_CONF}
+
+   board_mac=`/usr/sbin/upgrade mac_get 0` # this is a hack - set and get mac address from lan web page also uses does same
+   if [ -z "${board_mac}" ]; then
+   board_mac=`/usr/sbin/status_oper GET dev_info mac_addr`
+   fi
+
+   board_mac1=`echo $board_mac | cut -d ":" -f 1`
+   board_mac2=`echo $board_mac | cut -d ":" -f 2`
+   board_mac3=`echo $board_mac | cut -d ":" -f 3`
+   board_mac4=`echo $board_mac | cut -d ":" -f 4`
+   board_mac5=`echo $board_mac | cut -d ":" -f 5`
+   board_mac6=`echo $board_mac | cut -d ":" -f 6`
+
+   board_mac61=`echo $board_mac6 | cut -c1`
+   if [ $board_mac61 = "a" -o $board_mac61 = "A" ]; then
+   board_mac61=10
+   elif [ $board_mac61 = "b" -o $board_mac61 = "B" ]; then
+   board_mac61=11
+   elif [ $board_mac61 = "c" -o $board_mac61 = "C" ]; then
+   board_mac61=12
+   elif [ $board_mac61 = "d" -o $board_mac61 = "D" ]; then
+   board_mac61=13
+   elif [ $board_mac61 = "e" -o $board_mac61 = "E" ]; then
+   board_mac61=14
+   elif [ $board_mac61 = "f" -o $board_mac61 = "F" ]; then
+   board_mac61=15
+   fi
+
+   board_mac62=`echo $board_mac6 | cut -c2`
+   if [ $board_mac62 = "a" -o $board_mac62 = "A" ]; then
+   board_mac62=10
+   elif [ $board_mac62 = "b" -o $board_mac62 = "B" ]; then
+   board_mac62=11
+   elif [ $board_mac62 = "c" -o $board_mac62 = "C" ]; then
+   board_mac62=12
+   elif [ $board_mac62 = "d" -o $board_mac62 = "D" ]; then
+   board_mac62=13
+   elif [ $board_mac62 = "e" -o $board_mac62 = "E" ]; then
+   board_mac62=14
+   elif [ $board_mac62 = "f" -o $board_mac62 = "F" ]; then
+   board_mac62=15
+   fi
+   board_mac62=`expr $board_mac62 + 1`
+
+   tmp=`expr $board_mac62 % 4`
+   while [ $tmp -ne 0 ];
+   do
+      board_mac62=`expr $board_mac62 + 1`
+      tmp=`expr $board_mac62 % 4`
+   done
+
+   if [ $board_mac62 -gt 15 ]; then
+      board_mac61=`expr $board_mac61 + 1`
+      board_mac62=`expr $board_mac62 % 16`
+   fi
+
+   if [ $board_mac61 -eq 10 ]; then
+      board_mac61=A
+   elif [ $board_mac61 -eq 11 ]; then
+      board_mac61=B
+   elif [ $board_mac61 -eq 12 ]; then
+      board_mac61=C
+   elif [ $board_mac61 -eq 13 ]; then
+      board_mac61=D
+   elif [ $board_mac61 -eq 14 ]; then
+      board_mac61=E
+   elif [ $board_mac61 -eq 15 ]; then
+      board_mac61=F
+   fi
+
+   if [ $board_mac62 -eq 10 ]; then
+      board_mac62=A
+   elif [ $board_mac62 -eq 11 ]; then
+      board_mac62=B
+   elif [ $board_mac62 -eq 12 ]; then
+      board_mac62=C
+   elif [ $board_mac62 -eq 13 ]; then
+      board_mac62=D
+   elif [ $board_mac62 -eq 14 ]; then
+      board_mac62=E
+   elif [ $board_mac62 -eq 15 ]; then
+      board_mac62=F
+   fi
+
+   board_mac12="$board_mac2$board_mac1"
+   board_mac34="$board_mac4$board_mac3"
+   board_mac56="$board_mac61$board_mac62$board_mac5"
+
+   /sbin/ifconfig ra0 up >/dev/null 2>&1
+   iwpriv ra0 e2p 4=$board_mac12 >/dev/null 2>&1
+   iwpriv ra0 e2p 6=$board_mac34 >/dev/null 2>&1
+   iwpriv ra0 e2p 8=$board_mac56 >/dev/null 2>&1
+   /sbin/ifconfig ra0 down >/dev/null 2>&1
+   rmmod rt5592ap >/dev/null 2>&1
+   insmod /lib/modules/`uname -r`/rt5592ap.ko >/dev/null 2>&1
+fi

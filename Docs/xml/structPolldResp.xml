@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structPolldResp" kind="struct" prot="public">
+    <compoundname>PolldResp</compoundname>
+    <includes refid="ugw__common_8h" local="no">ugw_common.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structPolldResp_1ac9a283fa3aab2c01be0027cb5dd66e48" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PolldResp::nRespCode</definition>
+        <argsstring></argsstring>
+        <name>nRespCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fault response </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="113" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains the response code for Callbacks of polld. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="112" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="112" bodyend="114"/>
+    <listofallmembers>
+      <member refid="structPolldResp_1ac9a283fa3aab2c01be0027cb5dd66e48" prot="public" virt="non-virtual"><scope>PolldResp</scope><name>nRespCode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__LIBCAL" kind="group">
+    <compoundname>LIBCAL</compoundname>
+    <title>Common Adaptation Layer</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__LIBCAL_1gae3a199f14f16bdc4294dc90a98d26389" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cal_getValue</definition>
+        <argsstring>(INOUT MsgHeader *pxObj)</argsstring>
+        <name>cal_getValue</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxObj</declname>
+        </param>
+        <briefdescription>
+<para>API to get the values of parameters in the given object, their SID and OID from the DB and real time statistics from the system. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">pxObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Get the parameter values </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Parameter Value: To get the values, fill the MsgHeader-&gt;unSubOper=SOPT_OBJVALUE, MsgHeader-&gt;pObjType as type <ref refid="structObjList" kindref="compound">ObjList</ref> and fill the expected value names as Input <linebreak/>
+ The Output value returned is the <ref refid="structObjList" kindref="compound">ObjList</ref> with values filled for the requested parameters </para><simplesectsep/><para>Parameter Attributes: To get the values, fill the MsgHeader-&gt;unSubOper=SOPT_OBJATTR, MsgHeader-&gt;pObjType as type <ref refid="structObjAttrList" kindref="compound">ObjAttrList</ref> and fill the expected value names as Input <linebreak/>
+ The Output value is <ref refid="structObjAttrList" kindref="compound">ObjAttrList</ref> with validation attribute values filled for the requested parameters </para></simplesect>
+<simplesect kind="return"><para>UGW_SUCCESS on success / ERROR Code on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/cal.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBCAL_1ga886e5f6e932794f73ee4b9c985ad609d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cal_setValue</definition>
+        <argsstring>(INOUT MsgHeader *pxObjList)</argsstring>
+        <name>cal_setValue</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxObjList</declname>
+        </param>
+        <briefdescription>
+<para>API to set the value(s) for parameter(s) in one or multiple objects in the System. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">pxObjList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sets the Name, Id and values for the list of objects and parameters to be set </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>For Input, fill the MsgHeader-&gt;unSubOper=SOPT_OBJVALUE, MsgHeader-&gt;pObjType as type <ref refid="structObjList" kindref="compound">ObjList</ref> and fill in the name value pairs to be set. <linebreak/>
+ The Output <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> is filled only if the SET operation fails. The <ref refid="structObjList" kindref="compound">ObjList</ref> contains the list of failed object/parameter and eror string in the parameter name and value fields respectively. </para></simplesect>
+<simplesect kind="return"><para>UGW_SUCCESS on success / ERROR Code on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/cal.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBCAL_1ga2490637f30536869ccdf1694639a011a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cal_getValueFromDb</definition>
+        <argsstring>(INOUT MsgHeader *pxObj)</argsstring>
+        <name>cal_getValueFromDb</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxObj</declname>
+        </param>
+        <briefdescription>
+<para>API to get the values of parameters in an object, their OID, SID and dynamic attribute information from the DB only. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">pxObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gets the list of objects and parameters with name of values that need to be fetched </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>UGW_SUCCESS on success / ERROR Code on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/cal.h" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBCAL_1ga95a08176db1a7c26f079e822b3c00f6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cal_setValueToDb</definition>
+        <argsstring>(IN MsgHeader *pxObjList)</argsstring>
+        <name>cal_setValueToDb</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxObjList</declname>
+        </param>
+        <briefdescription>
+<para>API to set the value(s) for parameter(s) in one or multiple objects to the DB. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObjList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sets the Name, Id and values for the desired list of objects and parameters </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>UGW_SUCCESS on success / ERROR Code on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/cal.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBCAL_1ga1d47677aa96d141afef95e4ba948d235" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cal_updatePeriodicValues</definition>
+        <argsstring>(INOUT MsgHeader *pxMsg)</argsstring>
+        <name>cal_updatePeriodicValues</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxMsg</declname>
+        </param>
+        <briefdescription>
+<para>API to fetch the values of parameters from SL and set it to DB. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>If the object contains no parameters, then all the parameters of that object will be fetched </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">pxMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fetches parameter values and sets it to DB. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>For Input, fill the MsgHeader-&gt;unSubOper=SOPT_OBJVALUE, MsgHeader-&gt;pObjType as type <ref refid="structObjList" kindref="compound">ObjList</ref> and fill the expected value names <linebreak/>
+ The Output <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> is filled only if the SET to DB fails. The <ref refid="structObjList" kindref="compound">ObjList</ref> contains the list of failed object/parameter and eror string in the parameter name and value fields respectively. </para></simplesect>
+<simplesect kind="return"><para>UGW_SUCCESS on success / UGW_FAILURE on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/cal.h" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBCAL_1gad84cebd364884a0d3e3447065174a191" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cal_sendMsgToPolld</definition>
+        <argsstring>(IN MsgHeader *pxMsg, IN PolldTimeInfo *pPolldTime)</argsstring>
+        <name>cal_sendMsgToPolld</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxMsg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref> *</type>
+          <declname>pPolldTime</declname>
+        </param>
+        <briefdescription>
+<para>API to send the object(s) and timer(s) to polld. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message header contains objList and <ref refid="structParamList" kindref="compound">ParamList</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pPolldTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contains polld timer info </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>UGW_SUCCESS on success / UGW_FAILURE on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/cal.h" line="84" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>CAL is the common interface for the management entities (web, UpnP, CLI, CWMP) to the database and the system to enable interaction. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1554 @@
+\hypertarget{group__LIBSCAPI}{\section{System Configuration A\-P\-I}
+\label{group__LIBSCAPI}\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}}
+}
+
+
+S\-C\-A\-P\-I manages the platform-\/specific parts of the system. It offers both command line interfaces and equivalent I\-O\-C\-T\-Ls to configure the Linux system.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__LIBSCAPI_ga289ed7b7b67faf20a531abe400857729}{scapi\-\_\-traceroute} (char $\ast$args, int pkt\-\_\-size, Trace\-Route\-Resp\-\_\-\-D $\ast$p\-Trace\-Route\-Resp)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I traceroute A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gafa94602629980ae15611c822b2d65b76}{scapi\-\_\-kill\-All} (char $\ast$pc\-Process\-Name, int n\-Signal)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I killall A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gace833fc332d0cef672723322f36e0556}{scapi\-\_\-ping} (char $\ast$address, \hyperlink{commondefs_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32} timeout, int num\-\_\-ping, \hyperlink{commondefs_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I ping A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga57fa1c0b6d7d59978b07f47b98e2490d}{scapi\-\_\-ping6} (char $\ast$address, \hyperlink{commondefs_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32} timeout, int num\-\_\-ping, \hyperlink{commondefs_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I ping6 A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga85560fcfad682a73dfcf4742d4871b22}{scapi\-\_\-rmmod} (char $\ast$pc\-Module\-Name, int n\-Options)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I rmmod A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gaed31c6ca40eeecd43ea695d593258db0}{scapi\-\_\-insmod} (const char $\ast$pc\-Module\-Path, const char $\ast$pc\-Options)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I insmod A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga50b96871349c8314bccbd750f9d188e0}{scapi\-\_\-nslookup} (N\-S\-L\-O\-O\-K\-U\-P\-\_\-\-D\-I\-A\-G\-\_\-\-D $\ast$px\-N\-S\-Lookup\-Query, N\-S\-Lookup\-Resp\-\_\-\-D $\ast$px\-N\-S\-Lookup\-Resp, R\-E\-S\-U\-L\-T\-\_\-\-D $\ast$px\-Result)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I nslookup A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gab079cbd4f17a96e543e97f5d7af50513}{scapi\-\_\-dumplease} (char $\ast$file, struct dump\-\_\-lease\-\_\-info $\ast$$\ast$lease\-\_\-info, int $\ast$no\-\_\-entry)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I dumpleases A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga98953633f9849c3fdf33b2bd3cf31ac3}{scapi\-\_\-reboot} (void)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I reboot A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga08d58b39a0a3ab6958cf8dcee10671db}{scapi\-\_\-copy} (const char $\ast$pc\-To, const char $\ast$pc\-From)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I copy A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga5557b8c55bcfe7c834799ca0520b2646}{scapi\-\_\-get\-Ifc\-Ipaddr} (char $\ast$pc\-Ifname, char $\ast$pc\-Ip)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get I\-P address A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga39521d2bdf8e334fb6cfc2f2387db048}{scapi\-\_\-set\-Ifc\-Ipaddr} (char $\ast$pc\-Ifname, char $\ast$pc\-Ip)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set ipaddress A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gacf3633d781f172085ef8b3cc9f6b0895}{scapi\-\_\-get\-Ifc\-Netmask} (char $\ast$pc\-Ifname, char $\ast$pc\-Netmask)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get netmask A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga827cb8b0a3261864c8e9713e4a11811a}{scapi\-\_\-set\-Ifc\-Netmask} (char $\ast$pc\-Ifname, char $\ast$pc\-Netmask)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set netmask A\-P\-I. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_ga113427e9b1ddeff247c9763bba1d290b}{scapi\-\_\-is\-Valid\-Mac\-Address} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} const char $\ast$pc\-Mac)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I Validate mac address A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gab5a6e10094f75c159af44fb737716b4f}{scapi\-\_\-get\-Ifc\-Macaddr} (char $\ast$pc\-Ifname, char $\ast$pc\-Mac)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get mac address A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga71e47b374afd08937e11f18fe596c4b3}{scapi\-\_\-set\-Ifc\-Macaddr} (char $\ast$pc\-Ifname, char $\ast$pc\-Mac, int n\-Octet\-Inc)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set mac address A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gae895fa6a4d2b397c2d49a1375bf2f119}{scapi\-\_\-get\-Ifc\-Tx\-Queuelen} (char $\ast$pc\-Ifname, int $\ast$pn\-Txqueuelen)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get transmission queue length. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gae3bb4db75186283a07ee938d94cfb23c}{scapi\-\_\-set\-Ifc\-Tx\-Queuelen} (char $\ast$pc\-Ifname, int n\-Txqueuelen)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set transmission queue length A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gacc9fa7f6bbdb45fb3ba4646b4066ebff}{scapi\-\_\-get\-Ifc\-Updown} (char $\ast$pc\-Ifname, bool $\ast$status)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get interface up/down A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga28f976179cd1eb7eadd80ba74cf7e848}{scapi\-\_\-set\-Ifc\-Updown} (char $\ast$pc\-Ifname, bool updown)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set interface up/down A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga07e5af1112c4658d6353327d85ba072f}{scapi\-\_\-vlan\-Add} (char $\ast$pc\-If\-Name, int n\-Vlan)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I vlan add A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gad625eecd5667aa2a577c3289d66af424}{scapi\-\_\-vlan\-Del} (char $\ast$pc\-If\-Name)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I vlan delete A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga788b9cadef95c0d86975d5d03b4a7488}{scapi\-\_\-set\-Vlan\-Name\-Type} (char $\ast$pc\-If\-Name, int n\-Name\-Type)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set vlan name type A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga8a567c87af232111f763d8bd8bc17d06}{scapi\-\_\-set\-Vlan\-Flag} (char $\ast$pc\-If\-Name, int n\-Flag)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set vlan flag A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga55e05f270adc1039675a9305916ba0d0}{scapi\-\_\-set\-Vlan\-Egress\-Ingress\-Map} (char $\ast$pc\-If\-Name, int n\-Priority, int n\-Vlan\-Qos)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I vlan set egress ingress map A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gacdcd8e423d7350ec74378fd2a2011719}{scapi\-\_\-ifconfig\-Stats} (char $\ast$name, I\-N\-T\-E\-R\-F\-A\-C\-E $\ast$if\-\_\-list)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get ifconfig stats A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gad3ed6f8beac4e5b6a2f741954b34de8a}{scapi\-\_\-br\-Add} (char $\ast$br)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I bridge add A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gaa8658773cabf7e5ffab8ba01525ee47c}{scapi\-\_\-br\-Del} (char $\ast$br)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I bridge delete A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga2fe5f31dda118f9eac944e980220da06}{scapi\-\_\-br\-Add\-If} (char $\ast$br, char $\ast$ifname)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I add bridge interface A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga9f03621f153baf4e8f7c07b60f424cc8}{scapi\-\_\-br\-Del\-If} (char $\ast$br, char $\ast$ifname)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I delete bridge interface A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga7bc08b9ef6ddf900e1c769fbaa45c901}{scapi\-\_\-br\-Set\-Stp} (char $\ast$br, bool option)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set S\-T\-P A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga4262c7bab5a11e4ff58349f308349213}{scapi\-\_\-br\-Set\-Prio} (char $\ast$br, unsigned int br\-\_\-option)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set bridge priority A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gab8c21189881838ec3596d8956b068b31}{scapi\-\_\-br\-Set\-Hello} (char $\ast$br, char $\ast$time)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set hello A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga9ddf86b95c70abcfa8cad7d79f73a2c1}{scapi\-\_\-br\-Set\-Age} (char $\ast$br, char $\ast$time)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I bridge age set A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga4819417103d7213480c4895019bb761b}{scapi\-\_\-br\-Fwd\-Delay} (char $\ast$br, char $\ast$time)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set bridge farward delay time. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga0c4032990e2f19416c39956f877a48d4}{scapi\-\_\-br\-Set\-Max\-Age} (char $\ast$br, char $\ast$time)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set bridge max age A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gaf2ea63b8ead54825b1f7ae60425669f8}{scapi\-\_\-get\-Next\-Macaddr} (char $\ast$pc\-Ifname, char $\ast$pc\-Mac)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I gets next M\-A\-C address A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gac163d2a89b481e84dab2403c965afd07}{scapi\-\_\-remove\-Next\-Macaddr} (char $\ast$pc\-Ifname)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I remove next M\-A\-C address A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga477a4bf30a51d9575789a099087b385f}{scapi\-\_\-spawn} (char $\ast$pc\-Buf, int n\-Blocking\-Flag, int $\ast$pn\-Child\-Exit\-Status)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I spawn A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gae17d91c15bab261cbca5eab865a33c04}{scapi\-\_\-route\-Add} (char $\ast$pc\-Dest, char $\ast$pc\-Gateway, char $\ast$pc\-Genmask, char $\ast$pc\-Dev, int n\-Metric)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I route add A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga85ded79b138f685c518beef3bdb65f84}{scapi\-\_\-route\-Del} (char $\ast$pc\-Dest, char $\ast$pc\-Gateway, char $\ast$pc\-Genmask, char $\ast$pc\-Dev)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I route delete A\-P\-I. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__LIBSCAPI_ga87279a7efdc7be321ae3d1dfb96caeb8}{scapi\-\_\-get\-\_\-process\-\_\-name} (pid\-\_\-t process\-\_\-num)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get process name A\-P\-I. \end{DoxyCompactList}\item 
+\hypertarget{group__LIBSCAPI_ga464b08f3a322019c77a7eb50968c47ed}{\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_ga464b08f3a322019c77a7eb50968c47ed}{Control\-D\-Ctl} (e\-Control\-D\-Option\-\_\-t e\-Control\-D\-Option, Control\-D\-Args\-\_\-t $\ast$px\-Control\-D\-Args)}\label{group__LIBSCAPI_ga464b08f3a322019c77a7eb50968c47ed}
+
+\begin{DoxyCompactList}\small\item\em A\-P\-I for command line utility of controld. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_gaffb61bb464f6359d31a433b1a7085dd5}{scapi\-\_\-procd\-Spawn} (char $\ast$pc\-Action, Procd\-Obj $\ast$px\-Procd\-Obj)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I procd spawn A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga0e74d65cb49b1de637607af1bf0ba66b}{scapi\-\_\-get\-Meminfo} (Mem\-Info $\ast$px\-Info)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get memory information A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gaf7547717eb0842457c303a2f079f3b5b}{scapi\-\_\-get\-C\-P\-U\-Info} (C\-P\-U\-Info $\ast$x\-Info)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get C\-P\-U information A\-P\-I. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_ga3a8bf8a55d5fc2cd7d22466af7f544ed}{scapi\-\_\-get\-Hardware\-Version} (char $\ast$pc\-Hw\-Ver)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get Hardware Version A\-P\-I. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_ga7b0c5f4426883487e40715e2e80137dd}{scapi\-\_\-get\-Model\-Name} (char $\ast$pc\-Model\-Name)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get Model Name A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gada7b44505a6113fbe3ee3d3e16109141}{scapi\-\_\-get\-Arp\-Table} (arp\-Table\-\_\-t $\ast$px\-Arp\-Table)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get arp table A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga90a839943087b6d1cd03f16c38ab97aa}{scapi\-\_\-get\-Mac\-Table} (mac\-Table\-\_\-t $\ast$px\-Mac\-Table, char $\ast$p\-Int\-Face)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get M\-A\-C table A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga986c35abd592dd612aeb0afce832a5a6}{scapi\-\_\-encryption} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-In\-File, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-Pass\-Wd, \hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} char $\ast$pc\-Out\-File)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I encrypt file. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gaf86de8cb1dc3a743e67a0a8140d6b14b}{scapi\-\_\-decryption} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-In\-File, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-Pass\-Wd, \hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} char $\ast$pc\-Out\-File)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I decrypt file. \end{DoxyCompactList}\item 
+Procd\-Param\-List $\ast$ \hyperlink{group__LIBSCAPI_ga485c4155bc5825315bea2b48e564f209}{scapi\-\_\-set\-Procd\-Param\-List} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} Procd\-Param\-List $\ast$px\-Param\-List, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} const char $\ast$pc\-Param\-Name, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} const char $\ast$pc\-Param\-Value)
+\begin{DoxyCompactList}\small\item\em This function is used to create procd param list. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga25df7b3956934b110ea0596aefee803d}{scapi\-\_\-initialize\-Procd\-Obj} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} Procd\-Obj $\ast$px\-Procd\-Obj)
+\begin{DoxyCompactList}\small\item\em This function used to initialize the Procd obj to default. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{group__LIBSCAPI_ga5d1fae8311998344b32130a904886732}{scapi\-\_\-create\-Procd\-Param} (void)
+\begin{DoxyCompactList}\small\item\em function to allocate memory for Procd param list \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_gaf70610523fb08f08924d3e09b050d3e3}{scapi\-\_\-start\-Crond} (void)
+\begin{DoxyCompactList}\small\item\em Wrapper function to start crond daemon. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_ga5b3df75bbd9125de226ca44482d63e88}{scapi\-\_\-stop\-Crond} (void)
+\begin{DoxyCompactList}\small\item\em Wrapper function to stop crond daemon. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_ga3984100e53609ea9aba1ded81f9bb476}{scapi\-\_\-restart\-Crond} (void)
+\begin{DoxyCompactList}\small\item\em Wrapper function to Restart crond daemon. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_ga49ce95cc0f908512851b5b37ac23bf8e}{scapi\-\_\-set\-Cronjob} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-Min, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-Hour, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-Day\-Of\-Mon, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-Month, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-Day\-Of\-Week, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-Command, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} n\-Action)
+\begin{DoxyCompactList}\small\item\em Write to the configuration file with given inputs. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_ga565ea74979c591cfdb75700accdbda44}{scapi\-\_\-get\-Base\-Mac} (char $\ast$pc\-Mac)
+\begin{DoxyCompactList}\small\item\em function to get mac address \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\-C\-A\-P\-I manages the platform-\/specific parts of the system. It offers both command line interfaces and equivalent I\-O\-C\-T\-Ls to configure the Linux system. 
+
+\subsection{Function Documentation}
+\hypertarget{group__LIBSCAPI_gad3ed6f8beac4e5b6a2f741954b34de8a}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-br\-Add@{scapi\-\_\-br\-Add}}
+\index{scapi\-\_\-br\-Add@{scapi\-\_\-br\-Add}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-br\-Add}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-br\-Add (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{br}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gad3ed6f8beac4e5b6a2f741954b34de8a}
+
+
+S\-C\-A\-P\-I bridge add A\-P\-I. 
+
+A\-P\-I to add a new bridge
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em br} & Bridge name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga2fe5f31dda118f9eac944e980220da06}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-br\-Add\-If@{scapi\-\_\-br\-Add\-If}}
+\index{scapi\-\_\-br\-Add\-If@{scapi\-\_\-br\-Add\-If}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-br\-Add\-If}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-br\-Add\-If (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{br, }
+\item[{char $\ast$}]{ifname}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga2fe5f31dda118f9eac944e980220da06}
+
+
+S\-C\-A\-P\-I add bridge interface A\-P\-I. 
+
+A\-P\-I to add a new bridge interface
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em br} & Bridge name \\
+\hline
+\mbox{\tt in}  & {\em ifname} & Interface name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gaa8658773cabf7e5ffab8ba01525ee47c}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-br\-Del@{scapi\-\_\-br\-Del}}
+\index{scapi\-\_\-br\-Del@{scapi\-\_\-br\-Del}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-br\-Del}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-br\-Del (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{br}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gaa8658773cabf7e5ffab8ba01525ee47c}
+
+
+S\-C\-A\-P\-I bridge delete A\-P\-I. 
+
+A\-P\-I to delete a bridge
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em br} & Bridge name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value depending on the type of error in case of failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga9f03621f153baf4e8f7c07b60f424cc8}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-br\-Del\-If@{scapi\-\_\-br\-Del\-If}}
+\index{scapi\-\_\-br\-Del\-If@{scapi\-\_\-br\-Del\-If}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-br\-Del\-If}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-br\-Del\-If (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{br, }
+\item[{char $\ast$}]{ifname}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga9f03621f153baf4e8f7c07b60f424cc8}
+
+
+S\-C\-A\-P\-I delete bridge interface A\-P\-I. 
+
+A\-P\-I to delete a bridge interface
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em br} & Bridge name \\
+\hline
+\mbox{\tt in}  & {\em ifname} & Interface name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga4819417103d7213480c4895019bb761b}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-br\-Fwd\-Delay@{scapi\-\_\-br\-Fwd\-Delay}}
+\index{scapi\-\_\-br\-Fwd\-Delay@{scapi\-\_\-br\-Fwd\-Delay}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-br\-Fwd\-Delay}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-br\-Fwd\-Delay (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{br, }
+\item[{char $\ast$}]{time}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga4819417103d7213480c4895019bb761b}
+
+
+S\-C\-A\-P\-I set bridge farward delay time. 
+
+A\-P\-I to set time spent in each of the Listening and Learning states before the Forwarding state is entered
+
+
+\begin{DoxyParams}{Parameters}
+{\em br} & Bridge interface name \\
+\hline
+{\em time} & Time in seconds\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga9ddf86b95c70abcfa8cad7d79f73a2c1}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-br\-Set\-Age@{scapi\-\_\-br\-Set\-Age}}
+\index{scapi\-\_\-br\-Set\-Age@{scapi\-\_\-br\-Set\-Age}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-br\-Set\-Age}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-br\-Set\-Age (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{br, }
+\item[{char $\ast$}]{time}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga9ddf86b95c70abcfa8cad7d79f73a2c1}
+
+
+S\-C\-A\-P\-I bridge age set A\-P\-I. 
+
+The aging time is the number of seconds a M\-A\-C-\/address will be kept in the forwarding database, after having received a packet from this M\-A\-C address.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em br} & Bridge interface name \\
+\hline
+\mbox{\tt in}  & {\em time} & Time in seconds\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/\-E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gab8c21189881838ec3596d8956b068b31}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-br\-Set\-Hello@{scapi\-\_\-br\-Set\-Hello}}
+\index{scapi\-\_\-br\-Set\-Hello@{scapi\-\_\-br\-Set\-Hello}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-br\-Set\-Hello}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-br\-Set\-Hello (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{br, }
+\item[{char $\ast$}]{time}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gab8c21189881838ec3596d8956b068b31}
+
+
+S\-C\-A\-P\-I set hello A\-P\-I. 
+
+A\-P\-I to send hello packets every 'time' secs which are used to communicate information about the topology throughout the entire Bridged Local Area Network
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em br} & Bridge interface name \\
+\hline
+\mbox{\tt in}  & {\em time} & Time in seconds\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga0c4032990e2f19416c39956f877a48d4}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-br\-Set\-Max\-Age@{scapi\-\_\-br\-Set\-Max\-Age}}
+\index{scapi\-\_\-br\-Set\-Max\-Age@{scapi\-\_\-br\-Set\-Max\-Age}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-br\-Set\-Max\-Age}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-br\-Set\-Max\-Age (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{br, }
+\item[{char $\ast$}]{time}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga0c4032990e2f19416c39956f877a48d4}
+
+
+S\-C\-A\-P\-I set bridge max age A\-P\-I. 
+
+A\-P\-I to set the maximum message age. If the last seen (received) hello packet is more than this number of seconds old, the bridge in question will start the takeover procedure in attempt to become the Root Bridge itself
+
+
+\begin{DoxyParams}{Parameters}
+{\em br} & bridge interface name \\
+\hline
+{\em time} & Time\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga4262c7bab5a11e4ff58349f308349213}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-br\-Set\-Prio@{scapi\-\_\-br\-Set\-Prio}}
+\index{scapi\-\_\-br\-Set\-Prio@{scapi\-\_\-br\-Set\-Prio}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-br\-Set\-Prio}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-br\-Set\-Prio (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{br, }
+\item[{unsigned int}]{br\-\_\-option}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga4262c7bab5a11e4ff58349f308349213}
+
+
+S\-C\-A\-P\-I set bridge priority A\-P\-I. 
+
+A\-P\-I to set the bridge's relative priority. The bridge with the lowest priority will be elected as the root bridge
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em br} & Bridge interface name \\
+\hline
+\mbox{\tt in}  & {\em br\-\_\-option} & Priority value option\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga7bc08b9ef6ddf900e1c769fbaa45c901}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-br\-Set\-Stp@{scapi\-\_\-br\-Set\-Stp}}
+\index{scapi\-\_\-br\-Set\-Stp@{scapi\-\_\-br\-Set\-Stp}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-br\-Set\-Stp}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-br\-Set\-Stp (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{br, }
+\item[{bool}]{option}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga7bc08b9ef6ddf900e1c769fbaa45c901}
+
+
+S\-C\-A\-P\-I set S\-T\-P A\-P\-I. 
+
+A\-P\-I to enable/disable bridge S\-T\-P
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em br} & Bridge name \\
+\hline
+\mbox{\tt in}  & {\em option} & Option to enable/disable\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga08d58b39a0a3ab6958cf8dcee10671db}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-copy@{scapi\-\_\-copy}}
+\index{scapi\-\_\-copy@{scapi\-\_\-copy}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-copy}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-copy (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{pc\-To, }
+\item[{const char $\ast$}]{pc\-From}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga08d58b39a0a3ab6958cf8dcee10671db}
+
+
+S\-C\-A\-P\-I copy A\-P\-I. 
+
+A\-P\-I that copies content of one file to another
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em pc\-To} & Destination file name (with path) \\
+\hline
+\mbox{\tt in}  & {\em pc\-From} & Source file name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga5d1fae8311998344b32130a904886732}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-create\-Procd\-Param@{scapi\-\_\-create\-Procd\-Param}}
+\index{scapi\-\_\-create\-Procd\-Param@{scapi\-\_\-create\-Procd\-Param}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-create\-Procd\-Param}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ scapi\-\_\-create\-Procd\-Param (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga5d1fae8311998344b32130a904886732}
+
+
+function to allocate memory for Procd param list 
+
+\begin{DoxyReturn}{Returns}
+Parameter list ptr 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gaf86de8cb1dc3a743e67a0a8140d6b14b}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-decryption@{scapi\-\_\-decryption}}
+\index{scapi\-\_\-decryption@{scapi\-\_\-decryption}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-decryption}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-decryption (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N} char $\ast$}]{pc\-In\-File, }
+\item[{{\bf I\-N} char $\ast$}]{pc\-Pass\-Wd, }
+\item[{{\bf O\-U\-T} char $\ast$}]{pc\-Out\-File}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gaf86de8cb1dc3a743e67a0a8140d6b14b}
+
+
+S\-C\-A\-P\-I decrypt file. 
+
+S\-C\-A\-P\-I to decrypt the file with given password
+
+
+\begin{DoxyParams}{Parameters}
+{\em I\-N\mbox{]}} & pc\-In\-File file to decrypt \\
+\hline
+{\em I\-N\mbox{]}} & pc\-Pass\-Wd password key \\
+\hline
+{\em O\-U\-T\mbox{]}} & pc\-Out\-File output file name to decrypt in.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+U\-G\-W\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / U\-G\-W\-\_\-\-F\-A\-I\-L\-U\-R\-E on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gab079cbd4f17a96e543e97f5d7af50513}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-dumplease@{scapi\-\_\-dumplease}}
+\index{scapi\-\_\-dumplease@{scapi\-\_\-dumplease}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-dumplease}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-dumplease (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file, }
+\item[{struct dump\-\_\-lease\-\_\-info $\ast$$\ast$}]{lease\-\_\-info, }
+\item[{int $\ast$}]{no\-\_\-entry}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gab079cbd4f17a96e543e97f5d7af50513}
+
+
+S\-C\-A\-P\-I dumpleases A\-P\-I. 
+
+A\-P\-I to get D\-H\-C\-P leases info
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em file} & File name where lease info is stored \\
+\hline
+\mbox{\tt out}  & {\em dump\-\_\-lease\-\_\-info} & Struct that contains lease info set by A\-P\-I \\
+\hline
+\mbox{\tt out}  & {\em no\-\_\-entry} & Pointer to buffer which contains 'no. of lease entries' result set by the A\-P\-I \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga986c35abd592dd612aeb0afce832a5a6}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-encryption@{scapi\-\_\-encryption}}
+\index{scapi\-\_\-encryption@{scapi\-\_\-encryption}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-encryption}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-encryption (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N} char $\ast$}]{pc\-In\-File, }
+\item[{{\bf I\-N} char $\ast$}]{pc\-Pass\-Wd, }
+\item[{{\bf O\-U\-T} char $\ast$}]{pc\-Out\-File}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga986c35abd592dd612aeb0afce832a5a6}
+
+
+S\-C\-A\-P\-I encrypt file. 
+
+S\-C\-A\-P\-I to encrypt the file with given password
+
+
+\begin{DoxyParams}{Parameters}
+{\em I\-N\mbox{]}} & pc\-In\-File file to encrypt \\
+\hline
+{\em I\-N\mbox{]}} & pc\-Pass\-Wd password key \\
+\hline
+{\em O\-U\-T\mbox{]}} & pc\-Out\-File output file name to encrypt to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+U\-G\-W\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / U\-G\-W\-\_\-\-F\-A\-I\-L\-U\-R\-E on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga87279a7efdc7be321ae3d1dfb96caeb8}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-get\-\_\-process\-\_\-name@{scapi\-\_\-get\-\_\-process\-\_\-name}}
+\index{scapi\-\_\-get\-\_\-process\-\_\-name@{scapi\-\_\-get\-\_\-process\-\_\-name}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-get\-\_\-process\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ scapi\-\_\-get\-\_\-process\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{pid\-\_\-t}]{process\-\_\-num}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga87279a7efdc7be321ae3d1dfb96caeb8}
+
+
+S\-C\-A\-P\-I get process name A\-P\-I. 
+
+A\-P\-I to get process name when P\-I\-D is provided
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em process\-\_\-num} & P\-I\-D \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gada7b44505a6113fbe3ee3d3e16109141}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-get\-Arp\-Table@{scapi\-\_\-get\-Arp\-Table}}
+\index{scapi\-\_\-get\-Arp\-Table@{scapi\-\_\-get\-Arp\-Table}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-get\-Arp\-Table}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-get\-Arp\-Table (
+\begin{DoxyParamCaption}
+\item[{arp\-Table\-\_\-t $\ast$}]{px\-Arp\-Table}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gada7b44505a6113fbe3ee3d3e16109141}
+
+
+S\-C\-A\-P\-I get arp table A\-P\-I. 
+
+S\-C\-A\-P\-I to get A\-R\-P table A\-P\-I
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em px\-Arp\-Table} & Pointer to struct that contains A\-R\-P entries set by A\-P\-I \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+U\-G\-W\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / U\-G\-W\-\_\-\-F\-A\-I\-L\-U\-R\-E on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga565ea74979c591cfdb75700accdbda44}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-get\-Base\-Mac@{scapi\-\_\-get\-Base\-Mac}}
+\index{scapi\-\_\-get\-Base\-Mac@{scapi\-\_\-get\-Base\-Mac}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-get\-Base\-Mac}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} scapi\-\_\-get\-Base\-Mac (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Mac}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga565ea74979c591cfdb75700accdbda44}
+
+
+function to get mac address 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Mac} & mac address holder. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mac address on U\-G\-W\-\_\-\-S\-U\-C\-C\-E\-S\-S or the error code. 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gaf7547717eb0842457c303a2f079f3b5b}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-get\-C\-P\-U\-Info@{scapi\-\_\-get\-C\-P\-U\-Info}}
+\index{scapi\-\_\-get\-C\-P\-U\-Info@{scapi\-\_\-get\-C\-P\-U\-Info}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-get\-C\-P\-U\-Info}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-get\-C\-P\-U\-Info (
+\begin{DoxyParamCaption}
+\item[{C\-P\-U\-Info $\ast$}]{x\-Info}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gaf7547717eb0842457c303a2f079f3b5b}
+
+
+S\-C\-A\-P\-I get C\-P\-U information A\-P\-I. 
+
+A\-P\-I to get C\-P\-U information from proc entries
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x\-Info} & pointer to struct that contains memory info set by A\-P\-I \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/\-E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga3a8bf8a55d5fc2cd7d22466af7f544ed}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-get\-Hardware\-Version@{scapi\-\_\-get\-Hardware\-Version}}
+\index{scapi\-\_\-get\-Hardware\-Version@{scapi\-\_\-get\-Hardware\-Version}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-get\-Hardware\-Version}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} scapi\-\_\-get\-Hardware\-Version (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Hw\-Ver}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga3a8bf8a55d5fc2cd7d22466af7f544ed}
+
+
+S\-C\-A\-P\-I get Hardware Version A\-P\-I. 
+
+A\-P\-I to get Hardware Version information from proc entries 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em char} & pointer which contains Hardware Version set by A\-P\-I \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S in case of success, -\/\-E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E in case of failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga5557b8c55bcfe7c834799ca0520b2646}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-get\-Ifc\-Ipaddr@{scapi\-\_\-get\-Ifc\-Ipaddr}}
+\index{scapi\-\_\-get\-Ifc\-Ipaddr@{scapi\-\_\-get\-Ifc\-Ipaddr}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-get\-Ifc\-Ipaddr}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-get\-Ifc\-Ipaddr (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Ifname, }
+\item[{char $\ast$}]{pc\-Ip}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga5557b8c55bcfe7c834799ca0520b2646}
+
+
+S\-C\-A\-P\-I get I\-P address A\-P\-I. 
+
+A\-P\-I that gets I\-P address of an interface
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Ifname} & Interface name \\
+\hline
+\mbox{\tt out}  & {\em pc\-Ip} & Pointer to buffer which holds I\-P address returned by the A\-P\-I\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gab5a6e10094f75c159af44fb737716b4f}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-get\-Ifc\-Macaddr@{scapi\-\_\-get\-Ifc\-Macaddr}}
+\index{scapi\-\_\-get\-Ifc\-Macaddr@{scapi\-\_\-get\-Ifc\-Macaddr}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-get\-Ifc\-Macaddr}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-get\-Ifc\-Macaddr (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Ifname, }
+\item[{char $\ast$}]{pc\-Mac}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gab5a6e10094f75c159af44fb737716b4f}
+
+
+S\-C\-A\-P\-I get mac address A\-P\-I. 
+
+A\-P\-I that gets mac address of an interface
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Ifname} & Interface name \\
+\hline
+\mbox{\tt out}  & {\em pc\-Mac} & Pointer to buffer which holds mac address returned by the A\-P\-I\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gacf3633d781f172085ef8b3cc9f6b0895}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-get\-Ifc\-Netmask@{scapi\-\_\-get\-Ifc\-Netmask}}
+\index{scapi\-\_\-get\-Ifc\-Netmask@{scapi\-\_\-get\-Ifc\-Netmask}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-get\-Ifc\-Netmask}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-get\-Ifc\-Netmask (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Ifname, }
+\item[{char $\ast$}]{pc\-Netmask}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gacf3633d781f172085ef8b3cc9f6b0895}
+
+
+S\-C\-A\-P\-I get netmask A\-P\-I. 
+
+A\-P\-I that gets netmask of an interface
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Ifname} & Interface name \\
+\hline
+\mbox{\tt out}  & {\em pc\-Netmask} & Pointer to buffer which holds netmask address returned by the A\-P\-I\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gae895fa6a4d2b397c2d49a1375bf2f119}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-get\-Ifc\-Tx\-Queuelen@{scapi\-\_\-get\-Ifc\-Tx\-Queuelen}}
+\index{scapi\-\_\-get\-Ifc\-Tx\-Queuelen@{scapi\-\_\-get\-Ifc\-Tx\-Queuelen}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-get\-Ifc\-Tx\-Queuelen}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-get\-Ifc\-Tx\-Queuelen (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Ifname, }
+\item[{int $\ast$}]{pn\-Txqueuelen}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gae895fa6a4d2b397c2d49a1375bf2f119}
+
+
+S\-C\-A\-P\-I get transmission queue length. 
+
+A\-P\-I that gets transmission queue length of an interface
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Ifname} & Interface name \\
+\hline
+\mbox{\tt out}  & {\em pn\-Txqueuelen} & Pointer to queue length result\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gacc9fa7f6bbdb45fb3ba4646b4066ebff}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-get\-Ifc\-Updown@{scapi\-\_\-get\-Ifc\-Updown}}
+\index{scapi\-\_\-get\-Ifc\-Updown@{scapi\-\_\-get\-Ifc\-Updown}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-get\-Ifc\-Updown}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-get\-Ifc\-Updown (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Ifname, }
+\item[{bool $\ast$}]{status}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gacc9fa7f6bbdb45fb3ba4646b4066ebff}
+
+
+S\-C\-A\-P\-I get interface up/down A\-P\-I. 
+
+A\-P\-I to get up/down status of an interface
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Ifname} & Interface name that you want to get status \\
+\hline
+\mbox{\tt out}  & {\em status} & pointer to up/down status result\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga90a839943087b6d1cd03f16c38ab97aa}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-get\-Mac\-Table@{scapi\-\_\-get\-Mac\-Table}}
+\index{scapi\-\_\-get\-Mac\-Table@{scapi\-\_\-get\-Mac\-Table}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-get\-Mac\-Table}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-get\-Mac\-Table (
+\begin{DoxyParamCaption}
+\item[{mac\-Table\-\_\-t $\ast$}]{px\-Mac\-Table, }
+\item[{char $\ast$}]{p\-Int\-Face}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga90a839943087b6d1cd03f16c38ab97aa}
+
+
+S\-C\-A\-P\-I get M\-A\-C table A\-P\-I. 
+
+A\-P\-I to fetch M\-A\-C table of an interface
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em mac\-Table} & Pointer to struct which contains M\-A\-C entries set by A\-P\-I \\
+\hline
+\mbox{\tt in}  & {\em p\-Int\-Face} & Interface name\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+U\-G\-W\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / U\-G\-W\-\_\-\-F\-A\-I\-L\-U\-R\-E on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga0e74d65cb49b1de637607af1bf0ba66b}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-get\-Meminfo@{scapi\-\_\-get\-Meminfo}}
+\index{scapi\-\_\-get\-Meminfo@{scapi\-\_\-get\-Meminfo}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-get\-Meminfo}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-get\-Meminfo (
+\begin{DoxyParamCaption}
+\item[{Mem\-Info $\ast$}]{px\-Info}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga0e74d65cb49b1de637607af1bf0ba66b}
+
+
+S\-C\-A\-P\-I get memory information A\-P\-I. 
+
+A\-P\-I to get memory information from proc entries
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x\-Info} & pointer to struct that contains memory info set by A\-P\-I \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/\-E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga7b0c5f4426883487e40715e2e80137dd}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-get\-Model\-Name@{scapi\-\_\-get\-Model\-Name}}
+\index{scapi\-\_\-get\-Model\-Name@{scapi\-\_\-get\-Model\-Name}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-get\-Model\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} scapi\-\_\-get\-Model\-Name (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Model\-Name}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga7b0c5f4426883487e40715e2e80137dd}
+
+
+S\-C\-A\-P\-I get Model Name A\-P\-I. 
+
+A\-P\-I to get Model Name information from config.\-sh entries 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em char} & pointer which contains Model Name set by A\-P\-I \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S in case of success, -\/\-E\-X\-I\-T\-\_\-\-F\-A\-I\-L\-U\-R\-E in case of failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gaf2ea63b8ead54825b1f7ae60425669f8}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-get\-Next\-Macaddr@{scapi\-\_\-get\-Next\-Macaddr}}
+\index{scapi\-\_\-get\-Next\-Macaddr@{scapi\-\_\-get\-Next\-Macaddr}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-get\-Next\-Macaddr}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-get\-Next\-Macaddr (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Ifname, }
+\item[{char $\ast$}]{pc\-Mac}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gaf2ea63b8ead54825b1f7ae60425669f8}
+
+
+S\-C\-A\-P\-I gets next M\-A\-C address A\-P\-I. 
+
+A\-P\-I that generates a M\-A\-C address for an interface by properly incrementing the base M\-A\-C address without any conflicts (with M\-A\-C addresses of other interfaces) 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Ifname} & Interface name for which a M\-A\-C address should be generated \\
+\hline
+\mbox{\tt in}  & {\em pc\-Mac} & Pointer to a buffer where generated M\-A\-C address will be stored\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gacdcd8e423d7350ec74378fd2a2011719}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-ifconfig\-Stats@{scapi\-\_\-ifconfig\-Stats}}
+\index{scapi\-\_\-ifconfig\-Stats@{scapi\-\_\-ifconfig\-Stats}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-ifconfig\-Stats}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-ifconfig\-Stats (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{I\-N\-T\-E\-R\-F\-A\-C\-E $\ast$}]{if\-\_\-list}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gacdcd8e423d7350ec74378fd2a2011719}
+
+
+S\-C\-A\-P\-I get ifconfig stats A\-P\-I. 
+
+A\-P\-I to get statistics of a given interface extracted from /proc/net/dev
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & Interface name \\
+\hline
+\mbox{\tt out}  & {\em if\-\_\-list} & Pointer to struct which contains stats set by A\-P\-I\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga25df7b3956934b110ea0596aefee803d}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-initialize\-Procd\-Obj@{scapi\-\_\-initialize\-Procd\-Obj}}
+\index{scapi\-\_\-initialize\-Procd\-Obj@{scapi\-\_\-initialize\-Procd\-Obj}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-initialize\-Procd\-Obj}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-initialize\-Procd\-Obj (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N} Procd\-Obj $\ast$}]{px\-Procd\-Obj}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga25df7b3956934b110ea0596aefee803d}
+
+
+This function used to initialize the Procd obj to default. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em I\-N\mbox{]}} & px\-Procd\-Obj Pointer to the Procd\-Obj structure for the initialization \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gaed31c6ca40eeecd43ea695d593258db0}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-insmod@{scapi\-\_\-insmod}}
+\index{scapi\-\_\-insmod@{scapi\-\_\-insmod}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-insmod}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-insmod (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{pc\-Module\-Path, }
+\item[{const char $\ast$}]{pc\-Options}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gaed31c6ca40eeecd43ea695d593258db0}
+
+
+S\-C\-A\-P\-I insmod A\-P\-I. 
+
+A\-P\-I to insert a kernel module
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Module\-Path} & Module name that you want to insert \\
+\hline
+\mbox{\tt in}  & {\em pc\-Options} & Options string that you want to specify while inserting a module. Supports same options as that of commandline utility\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga113427e9b1ddeff247c9763bba1d290b}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-is\-Valid\-Mac\-Address@{scapi\-\_\-is\-Valid\-Mac\-Address}}
+\index{scapi\-\_\-is\-Valid\-Mac\-Address@{scapi\-\_\-is\-Valid\-Mac\-Address}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-is\-Valid\-Mac\-Address}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} scapi\-\_\-is\-Valid\-Mac\-Address (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N} const char $\ast$}]{pc\-Mac}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga113427e9b1ddeff247c9763bba1d290b}
+
+
+S\-C\-A\-P\-I Validate mac address A\-P\-I. 
+
+A\-P\-I that Validates mac address format.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Mac} & Mac\-Address to be Validated\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gafa94602629980ae15611c822b2d65b76}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-kill\-All@{scapi\-\_\-kill\-All}}
+\index{scapi\-\_\-kill\-All@{scapi\-\_\-kill\-All}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-kill\-All}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-kill\-All (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Process\-Name, }
+\item[{int}]{n\-Signal}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gafa94602629980ae15611c822b2d65b76}
+
+
+S\-C\-A\-P\-I killall A\-P\-I. 
+
+Sends specified signal to all the processes with specified name 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Process\-Name} & Process name \\
+\hline
+\mbox{\tt in}  & {\em n\-Signal} & Signal number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga50b96871349c8314bccbd750f9d188e0}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-nslookup@{scapi\-\_\-nslookup}}
+\index{scapi\-\_\-nslookup@{scapi\-\_\-nslookup}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-nslookup}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-nslookup (
+\begin{DoxyParamCaption}
+\item[{N\-S\-L\-O\-O\-K\-U\-P\-\_\-\-D\-I\-A\-G\-\_\-\-D $\ast$}]{px\-N\-S\-Lookup\-Query, }
+\item[{N\-S\-Lookup\-Resp\-\_\-\-D $\ast$}]{px\-N\-S\-Lookup\-Resp, }
+\item[{R\-E\-S\-U\-L\-T\-\_\-\-D $\ast$}]{px\-Result}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga50b96871349c8314bccbd750f9d188e0}
+
+
+S\-C\-A\-P\-I nslookup A\-P\-I. 
+
+A\-P\-I to query name servers to retrieve resource records
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em px\-N\-S\-Lookup\-Query} & Structure which contains query information \\
+\hline
+\mbox{\tt out}  & {\em px\-N\-S\-Lookup\-Resp} & Pointer to struct which contains response information \\
+\hline
+\mbox{\tt out}  & {\em px\-Result} & Pointer to R\-E\-S\-U\-L\-T\-\_\-\-D array which contains entries of retrieved information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+U\-G\-W\-\_\-\-S\-U\-C\-C\-E\-S\-S on success, U\-G\-W\-\_\-\-F\-A\-I\-L\-U\-R\-E on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gace833fc332d0cef672723322f36e0556}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-ping@{scapi\-\_\-ping}}
+\index{scapi\-\_\-ping@{scapi\-\_\-ping}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-ping}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-ping (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{address, }
+\item[{{\bf uint32}}]{timeout, }
+\item[{int}]{num\-\_\-ping, }
+\item[{{\bf uint32}}]{size}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gace833fc332d0cef672723322f36e0556}
+
+
+S\-C\-A\-P\-I ping A\-P\-I. 
+
+Pings an address
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em address} & Address that you want to ping to \\
+\hline
+\mbox{\tt in}  & {\em timeout} & Time out \\
+\hline
+\mbox{\tt in}  & {\em num\-\_\-ping} & Number of pings \\
+\hline
+\mbox{\tt in}  & {\em size} & Size of the packet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+U\-G\-W\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / U\-G\-W\-\_\-\-F\-A\-I\-L\-U\-R\-E on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga57fa1c0b6d7d59978b07f47b98e2490d}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-ping6@{scapi\-\_\-ping6}}
+\index{scapi\-\_\-ping6@{scapi\-\_\-ping6}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-ping6}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-ping6 (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{address, }
+\item[{{\bf uint32}}]{timeout, }
+\item[{int}]{num\-\_\-ping, }
+\item[{{\bf uint32}}]{size}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga57fa1c0b6d7d59978b07f47b98e2490d}
+
+
+S\-C\-A\-P\-I ping6 A\-P\-I. 
+
+A\-P\-I to ping an I\-Pv6 address
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em address} & I\-Pv6 address string \\
+\hline
+\mbox{\tt in}  & {\em timeout} & Time out \\
+\hline
+\mbox{\tt in}  & {\em num\-\_\-ping} & Number of pings \\
+\hline
+\mbox{\tt in}  & {\em size} & Size of the packet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+U\-G\-W\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / U\-G\-W\-\_\-\-F\-A\-I\-L\-U\-R\-E on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gaffb61bb464f6359d31a433b1a7085dd5}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-procd\-Spawn@{scapi\-\_\-procd\-Spawn}}
+\index{scapi\-\_\-procd\-Spawn@{scapi\-\_\-procd\-Spawn}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-procd\-Spawn}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} scapi\-\_\-procd\-Spawn (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Action, }
+\item[{Procd\-Obj $\ast$}]{px\-Procd\-Obj}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gaffb61bb464f6359d31a433b1a7085dd5}
+
+
+S\-C\-A\-P\-I procd spawn A\-P\-I. 
+
+A\-P\-I to spawn a process through procd
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Action} & Action to be done on the process. Start/\-Stop \\
+\hline
+\mbox{\tt in}  & {\em px\-Procd\-Obj} & Pointer to Procd\-Obj, which is used to construct the Ubus message\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+U\-G\-W\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / U\-G\-W\-\_\-\-F\-A\-I\-L\-U\-R\-E on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga98953633f9849c3fdf33b2bd3cf31ac3}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-reboot@{scapi\-\_\-reboot}}
+\index{scapi\-\_\-reboot@{scapi\-\_\-reboot}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-reboot}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-reboot (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga98953633f9849c3fdf33b2bd3cf31ac3}
+
+
+S\-C\-A\-P\-I reboot A\-P\-I. 
+
+A\-P\-I that reboots the system gracefully by performing a sync before bringing the system down \begin{DoxyReturn}{Returns}
+Won't return 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gac163d2a89b481e84dab2403c965afd07}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-remove\-Next\-Macaddr@{scapi\-\_\-remove\-Next\-Macaddr}}
+\index{scapi\-\_\-remove\-Next\-Macaddr@{scapi\-\_\-remove\-Next\-Macaddr}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-remove\-Next\-Macaddr}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-remove\-Next\-Macaddr (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Ifname}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gac163d2a89b481e84dab2403c965afd07}
+
+
+S\-C\-A\-P\-I remove next M\-A\-C address A\-P\-I. 
+
+A\-P\-I that removes the entry of generated M\-A\-C address for an interface from the config file
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Ifname} & Interface name of the entry to deleted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga3984100e53609ea9aba1ded81f9bb476}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-restart\-Crond@{scapi\-\_\-restart\-Crond}}
+\index{scapi\-\_\-restart\-Crond@{scapi\-\_\-restart\-Crond}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-restart\-Crond}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} scapi\-\_\-restart\-Crond (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga3984100e53609ea9aba1ded81f9bb476}
+
+
+Wrapper function to Restart crond daemon. 
+
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S or the error code. 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga85560fcfad682a73dfcf4742d4871b22}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-rmmod@{scapi\-\_\-rmmod}}
+\index{scapi\-\_\-rmmod@{scapi\-\_\-rmmod}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-rmmod}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-rmmod (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Module\-Name, }
+\item[{int}]{n\-Options}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga85560fcfad682a73dfcf4742d4871b22}
+
+
+S\-C\-A\-P\-I rmmod A\-P\-I. 
+
+A\-P\-I to remove kernel modules
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Module\-Name} & Module name that you want to remove \\
+\hline
+\mbox{\tt in}  & {\em n\-Options} & Options flag while removing a module\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gae17d91c15bab261cbca5eab865a33c04}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-route\-Add@{scapi\-\_\-route\-Add}}
+\index{scapi\-\_\-route\-Add@{scapi\-\_\-route\-Add}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-route\-Add}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-route\-Add (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Dest, }
+\item[{char $\ast$}]{pc\-Gateway, }
+\item[{char $\ast$}]{pc\-Genmask, }
+\item[{char $\ast$}]{pc\-Dev, }
+\item[{int}]{n\-Metric}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gae17d91c15bab261cbca5eab865a33c04}
+
+
+S\-C\-A\-P\-I route add A\-P\-I. 
+
+A\-P\-I to add an entry into kernel's routing table
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Dest} & Address of destination network or host \\
+\hline
+\mbox{\tt in}  & {\em pc\-Gateway} & Gateway address \\
+\hline
+\mbox{\tt in}  & {\em pc\-Genmask} & Netmask address \\
+\hline
+\mbox{\tt in}  & {\em pc\-Dev} & Interface name \\
+\hline
+\mbox{\tt in}  & {\em n\-Metric} & Metric associated with a route. Distance to the target (counted in hops) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga85ded79b138f685c518beef3bdb65f84}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-route\-Del@{scapi\-\_\-route\-Del}}
+\index{scapi\-\_\-route\-Del@{scapi\-\_\-route\-Del}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-route\-Del}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-route\-Del (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Dest, }
+\item[{char $\ast$}]{pc\-Gateway, }
+\item[{char $\ast$}]{pc\-Genmask, }
+\item[{char $\ast$}]{pc\-Dev}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga85ded79b138f685c518beef3bdb65f84}
+
+
+S\-C\-A\-P\-I route delete A\-P\-I. 
+
+A\-P\-I to delete an entry from kernel's routing table
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Dest} & Address of destination network or host \\
+\hline
+\mbox{\tt in}  & {\em pc\-Gateway} & Address of gateway \\
+\hline
+\mbox{\tt in}  & {\em pc\-Genmask} & Address of netmask \\
+\hline
+\mbox{\tt in}  & {\em pc\-Dev} & Interface name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga49ce95cc0f908512851b5b37ac23bf8e}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-set\-Cronjob@{scapi\-\_\-set\-Cronjob}}
+\index{scapi\-\_\-set\-Cronjob@{scapi\-\_\-set\-Cronjob}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-set\-Cronjob}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} scapi\-\_\-set\-Cronjob (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N} char $\ast$}]{pc\-Min, }
+\item[{{\bf I\-N} char $\ast$}]{pc\-Hour, }
+\item[{{\bf I\-N} char $\ast$}]{pc\-Day\-Of\-Mon, }
+\item[{{\bf I\-N} char $\ast$}]{pc\-Month, }
+\item[{{\bf I\-N} char $\ast$}]{pc\-Day\-Of\-Week, }
+\item[{{\bf I\-N} char $\ast$}]{pc\-Command, }
+\item[{{\bf I\-N} {\bf int32\-\_\-t}}]{n\-Action}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga49ce95cc0f908512851b5b37ac23bf8e}
+
+
+Write to the configuration file with given inputs. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Min} & Pointer to minutes. \\
+\hline
+\mbox{\tt in}  & {\em pc\-Hour} & Pointer to hour. \\
+\hline
+\mbox{\tt in}  & {\em pc\-Day\-Of\-Mon} & Pointer to Day of month. \\
+\hline
+\mbox{\tt in}  & {\em pc\-Month} & Pointer to month. \\
+\hline
+\mbox{\tt in}  & {\em pc\-Day\-Of\-Week} & Pointer to Day of week. \\
+\hline
+\mbox{\tt in}  & {\em pc\-Command} & Pointer to command to be executed. \\
+\hline
+\mbox{\tt in}  & {\em n\-Action} & Action to be performed. addition or deletion from a file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+U\-G\-W\-\_\-\-S\-U\-C\-C\-E\-S\-S or the error code. 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga39521d2bdf8e334fb6cfc2f2387db048}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-set\-Ifc\-Ipaddr@{scapi\-\_\-set\-Ifc\-Ipaddr}}
+\index{scapi\-\_\-set\-Ifc\-Ipaddr@{scapi\-\_\-set\-Ifc\-Ipaddr}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-set\-Ifc\-Ipaddr}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-set\-Ifc\-Ipaddr (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Ifname, }
+\item[{char $\ast$}]{pc\-Ip}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga39521d2bdf8e334fb6cfc2f2387db048}
+
+
+S\-C\-A\-P\-I set ipaddress A\-P\-I. 
+
+A\-P\-I that sets I\-P address of an interface
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Ifname} & Interface name \\
+\hline
+\mbox{\tt in}  & {\em pc\-Ip} & I\-P address string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga71e47b374afd08937e11f18fe596c4b3}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-set\-Ifc\-Macaddr@{scapi\-\_\-set\-Ifc\-Macaddr}}
+\index{scapi\-\_\-set\-Ifc\-Macaddr@{scapi\-\_\-set\-Ifc\-Macaddr}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-set\-Ifc\-Macaddr}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-set\-Ifc\-Macaddr (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Ifname, }
+\item[{char $\ast$}]{pc\-Mac, }
+\item[{int}]{n\-Octet\-Inc}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga71e47b374afd08937e11f18fe596c4b3}
+
+
+S\-C\-A\-P\-I set mac address A\-P\-I. 
+
+A\-P\-I that sets mac address of an interface along with optional octet increment
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Ifname} & Interface name \\
+\hline
+\mbox{\tt in}  & {\em pc\-Mac} & Mac address \\
+\hline
+\mbox{\tt in}  & {\em n\-Octet\-Inc} & Octet that you want to increment on the given mac address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga827cb8b0a3261864c8e9713e4a11811a}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-set\-Ifc\-Netmask@{scapi\-\_\-set\-Ifc\-Netmask}}
+\index{scapi\-\_\-set\-Ifc\-Netmask@{scapi\-\_\-set\-Ifc\-Netmask}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-set\-Ifc\-Netmask}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-set\-Ifc\-Netmask (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Ifname, }
+\item[{char $\ast$}]{pc\-Netmask}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga827cb8b0a3261864c8e9713e4a11811a}
+
+
+S\-C\-A\-P\-I set netmask A\-P\-I. 
+
+A\-P\-I that sets netmask value of an interface
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Ifname} & Interface name \\
+\hline
+\mbox{\tt in}  & {\em pc\-Netmask} & Netmask\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gae3bb4db75186283a07ee938d94cfb23c}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-set\-Ifc\-Tx\-Queuelen@{scapi\-\_\-set\-Ifc\-Tx\-Queuelen}}
+\index{scapi\-\_\-set\-Ifc\-Tx\-Queuelen@{scapi\-\_\-set\-Ifc\-Tx\-Queuelen}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-set\-Ifc\-Tx\-Queuelen}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-set\-Ifc\-Tx\-Queuelen (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Ifname, }
+\item[{int}]{n\-Txqueuelen}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gae3bb4db75186283a07ee938d94cfb23c}
+
+
+S\-C\-A\-P\-I set transmission queue length A\-P\-I. 
+
+A\-P\-I that sets transmission queue length of an interface
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Ifname} & Interface name \\
+\hline
+\mbox{\tt in}  & {\em n\-Txqueuelen} & Queue length\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga28f976179cd1eb7eadd80ba74cf7e848}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-set\-Ifc\-Updown@{scapi\-\_\-set\-Ifc\-Updown}}
+\index{scapi\-\_\-set\-Ifc\-Updown@{scapi\-\_\-set\-Ifc\-Updown}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-set\-Ifc\-Updown}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-set\-Ifc\-Updown (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Ifname, }
+\item[{bool}]{updown}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga28f976179cd1eb7eadd80ba74cf7e848}
+
+
+S\-C\-A\-P\-I set interface up/down A\-P\-I. 
+
+A\-P\-I to bring an interface up/down
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Ifname} & Interface name on which you want to perform up/down operation \\
+\hline
+\mbox{\tt in}  & {\em updown} & up/down value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga485c4155bc5825315bea2b48e564f209}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-set\-Procd\-Param\-List@{scapi\-\_\-set\-Procd\-Param\-List}}
+\index{scapi\-\_\-set\-Procd\-Param\-List@{scapi\-\_\-set\-Procd\-Param\-List}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-set\-Procd\-Param\-List}]{\setlength{\rightskip}{0pt plus 5cm}Procd\-Param\-List$\ast$ scapi\-\_\-set\-Procd\-Param\-List (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N} Procd\-Param\-List $\ast$}]{px\-Param\-List, }
+\item[{{\bf I\-N} const char $\ast$}]{pc\-Param\-Name, }
+\item[{{\bf I\-N} const char $\ast$}]{pc\-Param\-Value}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga485c4155bc5825315bea2b48e564f209}
+
+
+This function is used to create procd param list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em I\-N\mbox{]}} & px\-Param\-List Pointer to the Procd param list structure used to construct ubus command \\
+\hline
+{\em I\-N\mbox{]}} & pc\-Param\-Name Name of the parameter to be added \\
+\hline
+{\em I\-N\mbox{]}} & pc\-Param\-Value Value of the parameter to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the new paramlist on success / N\-U\-L\-L on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga55e05f270adc1039675a9305916ba0d0}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-set\-Vlan\-Egress\-Ingress\-Map@{scapi\-\_\-set\-Vlan\-Egress\-Ingress\-Map}}
+\index{scapi\-\_\-set\-Vlan\-Egress\-Ingress\-Map@{scapi\-\_\-set\-Vlan\-Egress\-Ingress\-Map}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-set\-Vlan\-Egress\-Ingress\-Map}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-set\-Vlan\-Egress\-Ingress\-Map (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-If\-Name, }
+\item[{int}]{n\-Priority, }
+\item[{int}]{n\-Vlan\-Qos}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga55e05f270adc1039675a9305916ba0d0}
+
+
+S\-C\-A\-P\-I vlan set egress ingress map A\-P\-I. 
+
+A\-P\-I to set egress and ingress map of a vlan interface
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-If\-Name} & Interface name \\
+\hline
+\mbox{\tt in}  & {\em n\-Priority} & Priority value \\
+\hline
+\mbox{\tt in}  & {\em n\-Vlan\-Qos} & Qos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga8a567c87af232111f763d8bd8bc17d06}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-set\-Vlan\-Flag@{scapi\-\_\-set\-Vlan\-Flag}}
+\index{scapi\-\_\-set\-Vlan\-Flag@{scapi\-\_\-set\-Vlan\-Flag}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-set\-Vlan\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-set\-Vlan\-Flag (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-If\-Name, }
+\item[{int}]{n\-Flag}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga8a567c87af232111f763d8bd8bc17d06}
+
+
+S\-C\-A\-P\-I set vlan flag A\-P\-I. 
+
+A\-P\-I to set a flag for a vlan interface
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-If\-Name} & Vlan interface name \\
+\hline
+\mbox{\tt in}  & {\em n\-Flag} & Flag to be set\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga788b9cadef95c0d86975d5d03b4a7488}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-set\-Vlan\-Name\-Type@{scapi\-\_\-set\-Vlan\-Name\-Type}}
+\index{scapi\-\_\-set\-Vlan\-Name\-Type@{scapi\-\_\-set\-Vlan\-Name\-Type}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-set\-Vlan\-Name\-Type}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-set\-Vlan\-Name\-Type (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-If\-Name, }
+\item[{int}]{n\-Name\-Type}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga788b9cadef95c0d86975d5d03b4a7488}
+
+
+S\-C\-A\-P\-I set vlan name type A\-P\-I. 
+
+A\-P\-I to determine how a vlan interface name will be formatted
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-If\-Name} & Interface name \\
+\hline
+\mbox{\tt in}  & {\em n\-Name\-Type} & Interface name type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga477a4bf30a51d9575789a099087b385f}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-spawn@{scapi\-\_\-spawn}}
+\index{scapi\-\_\-spawn@{scapi\-\_\-spawn}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-spawn}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-spawn (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-Buf, }
+\item[{int}]{n\-Blocking\-Flag, }
+\item[{int $\ast$}]{pn\-Child\-Exit\-Status}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga477a4bf30a51d9575789a099087b385f}
+
+
+S\-C\-A\-P\-I spawn A\-P\-I. 
+
+A\-P\-I to fork a new shell and carry out a given operation and collect exit status of the child process (of the shell)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-Buf} & Command to be executed by the shell \\
+\hline
+\mbox{\tt in}  & {\em n\-Blocking\-Flag} & Flag that determines if the command is blocking or non blocking \\
+\hline
+\mbox{\tt out}  & {\em pn\-Child\-Exit\-Status} & Exit status of the child process (of the shell) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+1. Spawn daemons in non-\/blocking mode. 
+
+2. Spawn utilities in blocking mode. For every utility which is executed in non-\/blocking, it is assumed that parent handles the S\-I\-G\-C\-H\-L\-D signal and does wait() or waitpid() in that signal handler. If not, then the child will stay as a zombie until parent exits 
+
+3. If int pointed by pn\-Child\-Exit\-Status is greater than 128, then it possibly means that the executed process (from shell) exited due to an unhandled signal. It is expected that the user programs spawned by this A\-P\-I doesn't do exit() with a value greater than or equal to 128 
+\end{DoxyNote}
+\hypertarget{group__LIBSCAPI_gaf70610523fb08f08924d3e09b050d3e3}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-start\-Crond@{scapi\-\_\-start\-Crond}}
+\index{scapi\-\_\-start\-Crond@{scapi\-\_\-start\-Crond}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-start\-Crond}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} scapi\-\_\-start\-Crond (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gaf70610523fb08f08924d3e09b050d3e3}
+
+
+Wrapper function to start crond daemon. 
+
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S or the error code. 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga5b3df75bbd9125de226ca44482d63e88}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-stop\-Crond@{scapi\-\_\-stop\-Crond}}
+\index{scapi\-\_\-stop\-Crond@{scapi\-\_\-stop\-Crond}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-stop\-Crond}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} scapi\-\_\-stop\-Crond (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga5b3df75bbd9125de226ca44482d63e88}
+
+
+Wrapper function to stop crond daemon. 
+
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S or the error code. 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_ga289ed7b7b67faf20a531abe400857729}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-traceroute@{scapi\-\_\-traceroute}}
+\index{scapi\-\_\-traceroute@{scapi\-\_\-traceroute}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-traceroute}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-traceroute (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{args, }
+\item[{int}]{pkt\-\_\-size, }
+\item[{Trace\-Route\-Resp\-\_\-\-D $\ast$}]{p\-Trace\-Route\-Resp}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga289ed7b7b67faf20a531abe400857729}
+
+
+S\-C\-A\-P\-I traceroute A\-P\-I. 
+
+Traces intermediate hops between host and destination
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em args} & Command line options similar to that of traceroute utility in a single string \\
+\hline
+\mbox{\tt in}  & {\em pkt\-\_\-size} & Size of each packet \\
+\hline
+\mbox{\tt out}  & {\em p\-Trace\-Route\-Resp} & Pointer to struct where results are stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This A\-P\-I will allocate a buffer for storing route hops which is pointed by 'px\-Route\-Hops' member of 'Trace\-Route\-Resp\-\_\-\-D'. It is the duty of the caller to free this. 
+\end{DoxyNote}
+\hypertarget{group__LIBSCAPI_ga07e5af1112c4658d6353327d85ba072f}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-vlan\-Add@{scapi\-\_\-vlan\-Add}}
+\index{scapi\-\_\-vlan\-Add@{scapi\-\_\-vlan\-Add}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-vlan\-Add}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-vlan\-Add (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-If\-Name, }
+\item[{int}]{n\-Vlan}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_ga07e5af1112c4658d6353327d85ba072f}
+
+
+S\-C\-A\-P\-I vlan add A\-P\-I. 
+
+A\-P\-I to add a vlan interface
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-If\-Name} & Interface name \\
+\hline
+\mbox{\tt in}  & {\em n\-Vlan} & Vlan number\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}
+\hypertarget{group__LIBSCAPI_gad625eecd5667aa2a577c3289d66af424}{\index{System Configuration A\-P\-I@{System Configuration A\-P\-I}!scapi\-\_\-vlan\-Del@{scapi\-\_\-vlan\-Del}}
+\index{scapi\-\_\-vlan\-Del@{scapi\-\_\-vlan\-Del}!System Configuration API@{System Configuration A\-P\-I}}
+\subsubsection[{scapi\-\_\-vlan\-Del}]{\setlength{\rightskip}{0pt plus 5cm}int scapi\-\_\-vlan\-Del (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{pc\-If\-Name}
+\end{DoxyParamCaption}
+)}}\label{group__LIBSCAPI_gad625eecd5667aa2a577c3289d66af424}
+
+
+S\-C\-A\-P\-I vlan delete A\-P\-I. 
+
+A\-P\-I to delete a vlan interface
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pc\-If\-Name} & Vlan interface name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\-X\-I\-T\-\_\-\-S\-U\-C\-C\-E\-S\-S on successful / -\/ve value (depending on the type of error) on failure 
+\end{DoxyReturn}

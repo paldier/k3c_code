@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structcl__action__policy__rt__t" kind="struct" prot="public">
+    <compoundname>cl_action_policy_rt_t</compoundname>
+    <includes refid="qosal__cl__api_8h" local="no">qosal_cl_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcl__action__policy__rt__t_1ae40238d575958ca5624f67fffc5bda51" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_action_policy_rt_t::enable</definition>
+        <argsstring></argsstring>
+        <name>enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether Policer is enabled </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="544" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="544" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__policy__rt__t_1ad03f755c9640e2ac211250c92bef5472" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char cl_action_policy_rt_t::name[MAX_QOS_NAME_LEN]</definition>
+        <argsstring>[MAX_QOS_NAME_LEN]</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Name or Alias of Policer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="545" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="545" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__policy__rt__t_1a31b6fdbc2d494bd6776d8c82db845494" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char cl_action_policy_rt_t::gw_ip[IP_ADDRSTRLEN]</definition>
+        <argsstring>[IP_ADDRSTRLEN]</argsstring>
+        <name>gw_ip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gateway IP address </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="546" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="546" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__policy__rt__t_1a6aa2133efd09dc7436c3841411995593" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char cl_action_policy_rt_t::dst_if[MAX_IF_NAME_LEN]</definition>
+        <argsstring>[MAX_IF_NAME_LEN]</argsstring>
+        <name>dst_if</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destination Egress I/f </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="547" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="547" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__policy__rt__t_1ada9b7857102fc1d05857d0cb0a066656" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t cl_action_policy_rt_t::metric</definition>
+        <argsstring></argsstring>
+        <name>metric</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Routing Metric </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="548" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="548" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classifer action Policy Routing data structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="543" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="543" bodyend="549"/>
+    <listofallmembers>
+      <member refid="structcl__action__policy__rt__t_1a6aa2133efd09dc7436c3841411995593" prot="public" virt="non-virtual"><scope>cl_action_policy_rt_t</scope><name>dst_if</name></member>
+      <member refid="structcl__action__policy__rt__t_1ae40238d575958ca5624f67fffc5bda51" prot="public" virt="non-virtual"><scope>cl_action_policy_rt_t</scope><name>enable</name></member>
+      <member refid="structcl__action__policy__rt__t_1a31b6fdbc2d494bd6776d8c82db845494" prot="public" virt="non-virtual"><scope>cl_action_policy_rt_t</scope><name>gw_ip</name></member>
+      <member refid="structcl__action__policy__rt__t_1ada9b7857102fc1d05857d0cb0a066656" prot="public" virt="non-virtual"><scope>cl_action_policy_rt_t</scope><name>metric</name></member>
+      <member refid="structcl__action__policy__rt__t_1ad03f755c9640e2ac211250c92bef5472" prot="public" virt="non-virtual"><scope>cl_action_policy_rt_t</scope><name>name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

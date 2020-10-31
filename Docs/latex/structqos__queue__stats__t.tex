@@ -1,0 +1,76 @@
+\hypertarget{structqos__queue__stats__t}{\section{qos\-\_\-queue\-\_\-stats\-\_\-t Struct Reference}
+\label{structqos__queue__stats__t}\index{qos\-\_\-queue\-\_\-stats\-\_\-t@{qos\-\_\-queue\-\_\-stats\-\_\-t}}
+}
+
+
+Qo\-S Queue statistics structure.  
+
+
+
+
+{\ttfamily \#include $<$qosal\-\_\-queue\-\_\-api.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{structqos__queue__stats__t_a86a3a95e8e4a3bfaa4a18adf7e0e774b}{name} \mbox{[}\hyperlink{group__FAPI__QOS__QUEUE_ga8c2658456d4f94c43de2b47e6cc488eb}{M\-A\-X\-\_\-\-Q\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+uint64\-\_\-t \hyperlink{structqos__queue__stats__t_a5aaa1719313d242fbf106e09efd46d6c}{rx\-\_\-pkt}
+\item 
+uint64\-\_\-t \hyperlink{structqos__queue__stats__t_a2a9787515b36cbc95cccb17ac22fd2eb}{rx\-\_\-bytes}
+\item 
+uint64\-\_\-t \hyperlink{structqos__queue__stats__t_a121b80595d3faab041d2aebb2fbc1e72}{tx\-\_\-pkt}
+\item 
+uint64\-\_\-t \hyperlink{structqos__queue__stats__t_a358b6a71b2faee13c4b52bfd86633aae}{tx\-\_\-bytes}
+\item 
+uint64\-\_\-t \hyperlink{structqos__queue__stats__t_a68c4ac994cb234e4d12b8d41c726b5be}{drop\-\_\-pkt}
+\item 
+uint64\-\_\-t \hyperlink{structqos__queue__stats__t_a86e9a12c3218b8a91d62a3da95b2daf8}{drop\-\_\-bytes}
+\item 
+uint64\-\_\-t \hyperlink{structqos__queue__stats__t_acda55406419650adc37794fe31f493b8}{occ\-\_\-pkt}
+\item 
+uint32\-\_\-t \hyperlink{structqos__queue__stats__t_afd0bb346239a46de8f7803b7d7bf7ec7}{occ\-\_\-pct}
+\item 
+uint32\-\_\-t \hyperlink{structqos__queue__stats__t_a151f189f991fa0564835e9e5c37bde29}{flags}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Qo\-S Queue statistics structure. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structqos__queue__stats__t_a86e9a12c3218b8a91d62a3da95b2daf8}{\index{qos\-\_\-queue\-\_\-stats\-\_\-t@{qos\-\_\-queue\-\_\-stats\-\_\-t}!drop\-\_\-bytes@{drop\-\_\-bytes}}
+\index{drop\-\_\-bytes@{drop\-\_\-bytes}!qos_queue_stats_t@{qos\-\_\-queue\-\_\-stats\-\_\-t}}
+\subsubsection[{drop\-\_\-bytes}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t qos\-\_\-queue\-\_\-stats\-\_\-t\-::drop\-\_\-bytes}}\label{structqos__queue__stats__t_a86e9a12c3218b8a91d62a3da95b2daf8}
+All bytes dropped by this queue \hypertarget{structqos__queue__stats__t_a68c4ac994cb234e4d12b8d41c726b5be}{\index{qos\-\_\-queue\-\_\-stats\-\_\-t@{qos\-\_\-queue\-\_\-stats\-\_\-t}!drop\-\_\-pkt@{drop\-\_\-pkt}}
+\index{drop\-\_\-pkt@{drop\-\_\-pkt}!qos_queue_stats_t@{qos\-\_\-queue\-\_\-stats\-\_\-t}}
+\subsubsection[{drop\-\_\-pkt}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t qos\-\_\-queue\-\_\-stats\-\_\-t\-::drop\-\_\-pkt}}\label{structqos__queue__stats__t_a68c4ac994cb234e4d12b8d41c726b5be}
+All packets dropped by this queue \hypertarget{structqos__queue__stats__t_a151f189f991fa0564835e9e5c37bde29}{\index{qos\-\_\-queue\-\_\-stats\-\_\-t@{qos\-\_\-queue\-\_\-stats\-\_\-t}!flags@{flags}}
+\index{flags@{flags}!qos_queue_stats_t@{qos\-\_\-queue\-\_\-stats\-\_\-t}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-queue\-\_\-stats\-\_\-t\-::flags}}\label{structqos__queue__stats__t_a151f189f991fa0564835e9e5c37bde29}
+Flags to indicate supported stats \hypertarget{structqos__queue__stats__t_a86a3a95e8e4a3bfaa4a18adf7e0e774b}{\index{qos\-\_\-queue\-\_\-stats\-\_\-t@{qos\-\_\-queue\-\_\-stats\-\_\-t}!name@{name}}
+\index{name@{name}!qos_queue_stats_t@{qos\-\_\-queue\-\_\-stats\-\_\-t}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}char qos\-\_\-queue\-\_\-stats\-\_\-t\-::name\mbox{[}{\bf M\-A\-X\-\_\-\-Q\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}}}\label{structqos__queue__stats__t_a86a3a95e8e4a3bfaa4a18adf7e0e774b}
+Name or Alias of the queue, if any, which maps to unique instance of qos\-\_\-queue\-\_\-cfg\-\_\-t object \hypertarget{structqos__queue__stats__t_afd0bb346239a46de8f7803b7d7bf7ec7}{\index{qos\-\_\-queue\-\_\-stats\-\_\-t@{qos\-\_\-queue\-\_\-stats\-\_\-t}!occ\-\_\-pct@{occ\-\_\-pct}}
+\index{occ\-\_\-pct@{occ\-\_\-pct}!qos_queue_stats_t@{qos\-\_\-queue\-\_\-stats\-\_\-t}}
+\subsubsection[{occ\-\_\-pct}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-queue\-\_\-stats\-\_\-t\-::occ\-\_\-pct}}\label{structqos__queue__stats__t_afd0bb346239a46de8f7803b7d7bf7ec7}
+Queue occupancy percentage \hypertarget{structqos__queue__stats__t_acda55406419650adc37794fe31f493b8}{\index{qos\-\_\-queue\-\_\-stats\-\_\-t@{qos\-\_\-queue\-\_\-stats\-\_\-t}!occ\-\_\-pkt@{occ\-\_\-pkt}}
+\index{occ\-\_\-pkt@{occ\-\_\-pkt}!qos_queue_stats_t@{qos\-\_\-queue\-\_\-stats\-\_\-t}}
+\subsubsection[{occ\-\_\-pkt}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t qos\-\_\-queue\-\_\-stats\-\_\-t\-::occ\-\_\-pkt}}\label{structqos__queue__stats__t_acda55406419650adc37794fe31f493b8}
+Queue occupancy packets \hypertarget{structqos__queue__stats__t_a2a9787515b36cbc95cccb17ac22fd2eb}{\index{qos\-\_\-queue\-\_\-stats\-\_\-t@{qos\-\_\-queue\-\_\-stats\-\_\-t}!rx\-\_\-bytes@{rx\-\_\-bytes}}
+\index{rx\-\_\-bytes@{rx\-\_\-bytes}!qos_queue_stats_t@{qos\-\_\-queue\-\_\-stats\-\_\-t}}
+\subsubsection[{rx\-\_\-bytes}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t qos\-\_\-queue\-\_\-stats\-\_\-t\-::rx\-\_\-bytes}}\label{structqos__queue__stats__t_a2a9787515b36cbc95cccb17ac22fd2eb}
+All bytes received by this queue \hypertarget{structqos__queue__stats__t_a5aaa1719313d242fbf106e09efd46d6c}{\index{qos\-\_\-queue\-\_\-stats\-\_\-t@{qos\-\_\-queue\-\_\-stats\-\_\-t}!rx\-\_\-pkt@{rx\-\_\-pkt}}
+\index{rx\-\_\-pkt@{rx\-\_\-pkt}!qos_queue_stats_t@{qos\-\_\-queue\-\_\-stats\-\_\-t}}
+\subsubsection[{rx\-\_\-pkt}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t qos\-\_\-queue\-\_\-stats\-\_\-t\-::rx\-\_\-pkt}}\label{structqos__queue__stats__t_a5aaa1719313d242fbf106e09efd46d6c}
+All packets received by this queue \hypertarget{structqos__queue__stats__t_a358b6a71b2faee13c4b52bfd86633aae}{\index{qos\-\_\-queue\-\_\-stats\-\_\-t@{qos\-\_\-queue\-\_\-stats\-\_\-t}!tx\-\_\-bytes@{tx\-\_\-bytes}}
+\index{tx\-\_\-bytes@{tx\-\_\-bytes}!qos_queue_stats_t@{qos\-\_\-queue\-\_\-stats\-\_\-t}}
+\subsubsection[{tx\-\_\-bytes}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t qos\-\_\-queue\-\_\-stats\-\_\-t\-::tx\-\_\-bytes}}\label{structqos__queue__stats__t_a358b6a71b2faee13c4b52bfd86633aae}
+All bytes trasmitted by this queue \hypertarget{structqos__queue__stats__t_a121b80595d3faab041d2aebb2fbc1e72}{\index{qos\-\_\-queue\-\_\-stats\-\_\-t@{qos\-\_\-queue\-\_\-stats\-\_\-t}!tx\-\_\-pkt@{tx\-\_\-pkt}}
+\index{tx\-\_\-pkt@{tx\-\_\-pkt}!qos_queue_stats_t@{qos\-\_\-queue\-\_\-stats\-\_\-t}}
+\subsubsection[{tx\-\_\-pkt}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t qos\-\_\-queue\-\_\-stats\-\_\-t\-::tx\-\_\-pkt}}\label{structqos__queue__stats__t_a121b80595d3faab041d2aebb2fbc1e72}
+All packets trasmitted by this queue 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qosal__queue__api_8h}{qosal\-\_\-queue\-\_\-api.\-h}\end{DoxyCompactItemize}

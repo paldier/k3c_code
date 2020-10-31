@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Main Page</title>
+    <detaileddescription>
+<sect1 id="index_1DISCLAIMER">
+<title>Legal Notice</title>
+<para>No license (express or implied, by estoppel or otherwise) to any intellectual property rights is granted by this document. Intel disclaims all warranties, including without limitation, the implied warranties of merchantability, fitness for a particular purpose, and non-infringement, as well as any warranty arising from course of performance, course of dealing, or usage in trade. <linebreak/>
+All information provided here is subject to change without notice. Intel may make changes to its test conditions and internal reliability goals at any time. Contact your Intel representative to obtain the latest Intel product specifications and road-maps. <linebreak/>
+The products described may contain design defects or errors known as errata which may cause the product to deviate from published specifications. Current characterized errata are available on request. <linebreak/>
+Software and workloads used in performance tests may have been optimized for performance only on Intel microprocessors. Performance tests, such as SYSmark and MobileMark, are measured using specific computer systems, components, software, operations and functions. Any change to any of those factors may cause the results to vary. You should consult other information and performance tests to assist you in fully evaluating your contemplated purchases, including the performance of that product when combined with other products. <linebreak/>
+AnyWAN™, CONVERGATE™, COSIC™, DSLTE™, DUALFALC™, DUSLIC™, ELIC™, EPIC™, FALC™, GEMINAX™, INCA™, ISAC™, IWORX™, OCTALFALC™, OCTAT™, QUADFALC™, SCOUT™, SEROCCO™, SICOFI™, SLIC™, SMINT™, SOCRATES™, VINAX™, TrustWorld™, VINETIC™, XWAY™, IBunnyPeople, Celeron, Celeron Inside, Centrino, Centrino logo, Chips, Core Inside, Dialogic, EtherExpress, ETOX, FlashFile, i386, i486, i960, iCOMP, InstantIP, Intel, Intel logo, Intel386, Intel486, Intel740, Intel® Media Processor CE 3100, Intel® Atom™ processor CE4100, Intel® Atom™ processor CE4200, Intel® Atom™ processor CE5300, IntelDX2, IntelDX4, IntelSX2, Intel Core, Intel Inside, Intel Inside logo, Intel. Leap ahead., Intel. Leap ahead. logo, Intel NetBurst, Intel NetMerge, Intel NetStructure, Intel SingleDriver, Intel SpeedStep, Intel StrataFlash, Intel Viiv, Intel XScale, IPLink, Itanium, Itanium Inside, MCS, MMX, MMX logo, Optimizer logo, OverDrive, Paragon, PDCharm, Pentium, Pentium II Xeon, Pentium III Xeon, Performance at Your Command, Pentium Inside, Puma, skoool, Sound Mark, The Computer Inside., The Journey Inside, VTune, Xeon, Xeon Inside and Xircom are trademarks of Intel Corporation in the U.S. and/or other countries. *Other names and brands may be claimed as the property of others. © 2015 Intel Corporation </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

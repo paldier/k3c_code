@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__FAPI__LTE" kind="group">
+    <compoundname>FAPI_LTE</compoundname>
+    <title>LTE</title>
+    <briefdescription>
+<para>Provides a set of functions, used to interact with LTE modems that provide ACM interfaces for setup with standard V.25ter (AT) commands. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

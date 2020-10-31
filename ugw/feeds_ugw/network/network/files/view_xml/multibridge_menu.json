@@ -1,0 +1,31 @@
+{
+    "menu": [
+        {
+            "name": "Advanced",
+            "id": "profile",
+            "childrens": [
+                {
+                    "name": "Multiple Bridge",
+                    "icon": "internet",
+                    "order": "1.1",
+                    "childrens": [
+                        {
+                            "name": "LAN VLAN",
+                            "order": "1",
+                            "viewtype": "tableform",
+                            "view": "vlantable",
+                            "childrens": []
+                        },
+                        {
+                            "name": "Bridges",
+                            "order": "2",
+                            "viewtype": "tableform",
+                            "view": "bridgetable",
+                            "childrens": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

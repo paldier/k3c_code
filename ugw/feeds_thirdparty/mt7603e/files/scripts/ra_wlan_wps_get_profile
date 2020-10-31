@@ -1,0 +1,87 @@
+#!/bin/sh
+
+
+
+if [ ! "$ENVLOADED" ]; then
+	if [ -r /etc/rc.conf ]; then
+		 . /etc/rc.conf 2> /dev/null
+		ENVLOADED="1"
+	fi
+fi
+
+if [ ! "$CONFIGLOADED" ]; then
+	if [ -r /etc/rc.d/config.sh ]; then
+		. /etc/rc.d/config.sh 2>/dev/null
+		CONFIGLOADED="1"
+	fi
+fi
+
+#echo "hsur current ralink_inf_idx is ${ralink_inf_idx}"
+RA_IF=""
+find_ra_if_from_index() {
+   eval CPEID='$'wlmn_${1}'_cpeId'
+   ra_dev=`/usr/sbin/status_oper GET "RA_MAP" "$CPEID"`
+   RA_IF=${ra_dev:2}
+}
+find_ra_if_from_index $1
+
+if [ "$CONFIG_FEATURE_WIRELESS" = "1" ]; then
+	TEMP_FILE="/ramdisk/tmp/wsc_profile"
+	
+   iwpriv ra${RA_IF} ar9_show get_wsc_profile > ${TEMP_FILE}
+
+   StartLine=3
+
+   CONFIGURED=$(sed -n "${StartLine}p" $TEMP_FILE | cut -d " " -f 0)
+   if [ "$CONFIGURED" = "" ]; then
+      echo "CONFIGURED=\"EMPTY\""
+   else
+      echo "CONFIGURED=\"$CONFIGURED\""
+   fi
+
+   TEMP=$(sed -n "${StartLine}p" $TEMP_FILE | cut -c 13-45 | cut -d " " -f 0)
+   
+   echo "SSID=\"$TEMP\""
+
+   TEMP=$(sed -n "${StartLine}p" $TEMP_FILE | cut -c 46-57 | cut -d " " -f 0)
+   if [ "$TEMP" = "OPEN" ]; then
+      echo "BEACON=\"0\""
+      echo "AUTH=\"0\""
+   elif [ "$TEMP" = "WPAPSK" ]; then
+      echo "BEACON=\"1\""
+      echo "AUTH=\"3\""
+   elif [ "$TEMP" = "WPA2PSK" ]; then
+      echo "BEACON=\"2\""
+      echo "AUTH=\"3\""
+   else
+      TEMP=$(sed -n "${StartLine}p" $TEMP_FILE | cut -c 46-58 | cut -d " " -f 0)
+      if [ "$TEMP" = "WPAPSKWPA2PSK" ]; then
+         echo "BEACON=\"3\""
+         echo "AUTH=\"3\""
+      fi
+   fi
+
+   TEMP=$(sed -n "${StartLine}p" $TEMP_FILE | cut -c 58-69 | cut -d " " -f 0)
+   if [ "$TEMP" = "NONE" ]; then
+      echo "ENCR=\"0\""
+   elif [ "$TEMP" = "TKIP" ]; then
+      echo "ENCR=\"2\""
+   elif [ "$TEMP" = "AES" ]; then
+      echo "ENCR=\"3\""
+   elif [ "$TEMP" = "TKIPAES" ]; then
+      echo "ENCR=\"4\""
+   else
+      TEMP=$(sed -n "${StartLine}p" $TEMP_FILE | cut -c 59-70 | cut -d " " -f 0)
+      if [ "$TEMP" = "TKIPAES" ]; then
+         echo "ENCR=\"4\""
+      fi
+   fi
+
+   TEMP=$(sed -n "${StartLine}p" $TEMP_FILE | cut -c 70-140 | cut -d " " -f 0)
+   if [ "$TEMP" = "" ]; then
+      TEMP=$(sed -n "${StartLine}p" $TEMP_FILE | cut -c 71-140 | cut -d " " -f 0)
+      echo "PSK=\"$TEMP\""
+   else
+      echo "PSK=\"$TEMP\""
+   fi
+fi

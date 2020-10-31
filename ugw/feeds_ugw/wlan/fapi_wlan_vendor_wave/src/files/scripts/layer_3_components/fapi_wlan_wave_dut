@@ -1,0 +1,58 @@
+#!/bin/sh
+
+# Source library script
+[ ! "$FAPI_WLAN_WAVE_INIT_PLATFORM" ] && . /tmp/wlan_wave/fapi_wlan_wave_init_platform.sh
+
+command=$1
+
+eeprom_partition=wlanconfig
+eeprom_tar=eeprom.tar.gz
+
+start_dut() {
+	return
+}
+
+stop_dut() {
+	return
+}
+
+dut_should_run() {
+	true
+}
+
+write_to_eeprom() {
+	print2log DBG "fapi_wlan_wave_dut: write to eeprom"
+	# Create tarball from eeprom bins
+	cd /tmp
+	tar czf $eeprom_tar cal_*.bin
+	if [ $? != 0 ]; then
+		print2log ALERT "fapi_wlan_wave_dut: failed to create $eeprom_tar"
+		return 1
+	fi
+	cd - > /dev/null
+
+	vol_mgmt update_calibration $eeprom_partition /tmp/$eeprom_tar
+	if [ $? != 0 ]; then
+		print2log ALERT "wave_wlan_init_eeprom: the partition $eeprom_partition doesn't exist and cannot be created"
+		return 1
+	fi
+	print2log DBG "fapi_wlan_wave_dut: Done write to eeprom"
+}
+
+case $command in
+	start)
+		start_dut
+    	;;
+	stop)
+		stop_dut
+		;;
+	should_run)
+		dut_should_run
+		;;
+	write)
+		write_to_eeprom
+		;;
+	*)
+		print2log WARNING "fapi_wlan_wave_dut: Unknown command=$command"
+		;;
+esac

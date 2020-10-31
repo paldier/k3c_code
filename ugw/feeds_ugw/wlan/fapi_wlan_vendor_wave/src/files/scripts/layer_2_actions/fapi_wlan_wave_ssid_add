@@ -1,0 +1,60 @@
+#!/bin/sh
+
+# Add a new VAP to the Wave radio
+# Needed objects: SSID
+
+# Source library script
+[ ! "$FAPI_WLAN_WAVE_INIT_PLATFORM" ] && . /tmp/wlan_wave/fapi_wlan_wave_init_platform.sh
+
+print2log DBG "running fapi_wlan_wave_ssid_add: args: $*"
+
+radio_name=$1
+
+# If interface name is not supplied, exit script
+check_input_param "fapi_wlan_wave_ssid_add" "radio_name" "$radio_name"
+
+# DEBUG: TODO: REMOVE
+#cp ${IN_CONF} ${WAVE_TMP}/in_conf_ssid_add
+
+# Map the object indexes to the received object in the in.conf file
+ssid_index=`map_param_index Object $SSID_OBJECT`
+
+# Check if call is to add new VAP or configure the first VAP (radio).
+# If hostapd conf file of the radio exists, it is call to add new VAP.
+vap_to_set=$radio_name
+if [ -e ${CONFIGS_PATH}/hostapd_${radio_name}.conf ]; then
+	vap_to_set=`find_next_vap_name $radio_name`
+	(. $ETC_PATH/fapi_wlan_wave_init_mbss.sh should_run $vap_to_set) && (. $ETC_PATH/fapi_wlan_wave_init_mbss.sh start $vap_to_set)
+fi
+# Set the MAC address of the interface
+# Check if the MAC of the VAP is already set, if so, don't set it again.
+current_vap_mac=`get_conf_param MACAddress $ssid_index $vap_to_set`
+(. $ETC_PATH/fapi_wlan_wave_set_mac_address.sh should_run $vap_to_set $current_vap_mac) && (. $ETC_PATH/fapi_wlan_wave_set_mac_address.sh start $vap_to_set $current_vap_mac)
+
+# Check if start failure file exists.
+if [ -e ${WAVE_TMP}/wave_${vap_to_set}_start_failure ]
+then
+	cat ${WAVE_TMP}/wave_${vap_to_set}_start_failure
+	echo "$vap_to_set failed:" >> $wave_start_failure
+	cat ${WAVE_TMP}/wave_${vap_to_set}_start_failure >> $wave_start_failure
+	rm ${WAVE_TMP}/wave_${vap_to_set}_start_failure
+else
+	# Create the output configuration file
+	cat /dev/null > ${OUT_CONF}
+	#  Update the name and MAC of the new VAP
+	update_conf_out "Object_${ssid_index}" "$SSID_OBJECT"
+	update_conf_out "Name_${ssid_index}" "$vap_to_set"
+	if [ -z "$current_vap_mac" ]; then
+		# Read the MAC of the interface from the file created by the set_mac script
+		. ${WAVE_TMP}/${vap_to_set}_mac
+		update_conf_out "MACAddress_${ssid_index}" "$new_vap_mac"
+		update_conf_out "BSSID_${ssid_index}" "$new_vap_mac"
+	fi
+	# Configuration is completed successfully
+	update_conf_out "wlan_configuration_status" "success"
+fi
+
+# DEBUG: TODO: REMOVE
+#cp ${OUT_CONF} ${WAVE_TMP}/out_conf_ssid_add
+
+print2log DBG "fapi_wlan_wave_ssid_add done" 

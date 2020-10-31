@@ -1,0 +1,41 @@
+\hypertarget{fapi__led_8h}{\section{fapi\-\_\-led.\-h File Reference}
+\label{fapi__led_8h}\index{fapi\-\_\-led.\-h@{fapi\-\_\-led.\-h}}
+}
+
+
+This File contains the Generic A\-P\-I's and common utility A\-P\-I's for all the S\-Ls to S\-E\-T/\-R\-E\-S\-E\-T the concerned L\-E\-D Attributes.  
+
+
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$ugw\-\_\-error.\-h$>$}\\*
+{\ttfamily \#include $<$ltq\-\_\-api\-\_\-include.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsNetDevAttr}{s\-Net\-Dev\-Attr}
+\begin{DoxyCompactList}\small\item\em Structure containing the L\-E\-D attributes for netdev trigger type. \end{DoxyCompactList}\item 
+struct \hyperlink{structsTimerAttr}{s\-Timer\-Attr}
+\begin{DoxyCompactList}\small\item\em Structure containing the L\-E\-D attributes for timer trigger type. \end{DoxyCompactList}\item 
+struct \hyperlink{structsDefaultAttr}{s\-Default\-Attr}
+\begin{DoxyCompactList}\small\item\em Structure containing the L\-E\-D attributes for timer trigger type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__FAPI__SYSTEM_ga5f99aa5077acffebe451d1268c69db58}{L\-E\-D\-Type} 
+\begin{DoxyCompactList}\small\item\em Enums for all the supported L\-E\-Ds. \end{DoxyCompactList}\item 
+enum \hyperlink{group__FAPI__SYSTEM_ga59b7f49353f2a99b6c22d2eaae0fe9e9}{Trigger\-Type} 
+\begin{DoxyCompactList}\small\item\em Enums for all supported enum types. \end{DoxyCompactList}\item 
+enum \hyperlink{group__FAPI__SYSTEM_gaa534ed76b07c3983382a53e00e53e94a}{Trigger\-Mode} 
+\begin{DoxyCompactList}\small\item\em Enums for possible mode types when trigger type is set to netdev. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__FAPI__SYSTEM_ga9d4d643a4ca87eb7be2f88afb184951d}{F\-A\-P\-I\-\_\-\-L\-E\-D\-Set\-Attribute} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{group__FAPI__SYSTEM_ga5f99aa5077acffebe451d1268c69db58}{L\-E\-D\-Type} led, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{group__FAPI__SYSTEM_ga59b7f49353f2a99b6c22d2eaae0fe9e9}{Trigger\-Type} trigger, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} void $\ast$Led\-Attr)
+\begin{DoxyCompactList}\small\item\em This is the L\-E\-D F\-A\-P\-I exposed to all the S\-L to set concerned L\-E\-Ds attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This File contains the Generic A\-P\-I's and common utility A\-P\-I's for all the S\-Ls to S\-E\-T/\-R\-E\-S\-E\-T the concerned L\-E\-D Attributes. 

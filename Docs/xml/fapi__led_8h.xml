@@ -1,0 +1,1445 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="fapi__led_8h" kind="file">
+    <compoundname>fapi_led.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes refid="ugw__error_8h" local="no">ugw_error.h</includes>
+    <includes local="no">ltq_api_include.h</includes>
+    <incdepgraph>
+      <node id="50">
+        <label>stdint.h</label>
+      </node>
+      <node id="48">
+        <label>stdlib.h</label>
+      </node>
+      <node id="53">
+        <label>ltq_api_include.h</label>
+      </node>
+      <node id="49">
+        <label>string.h</label>
+      </node>
+      <node id="52">
+        <label>help_error.h</label>
+        <link refid="help__error_8h"/>
+      </node>
+      <node id="46">
+        <label>fapi_led.h</label>
+        <link refid="fapi_led.h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>ugw_error.h</label>
+        <link refid="ugw__error_8h_source"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structsNetDevAttr" prot="public">sNetDevAttr</innerclass>
+    <innerclass refid="structsTimerAttr" prot="public">sTimerAttr</innerclass>
+    <innerclass refid="structsDefaultAttr" prot="public">sDefaultAttr</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga796e3eff41fd25727ce94420719263b6" prot="public" static="no">
+        <name>FAPI_LEDNAME_G6FLED0</name>
+        <initializer>&quot;g6fled0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="48" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga83cf8ea82d0b580176c496daf02caa7b" prot="public" static="no">
+        <name>FAPI_LEDNAME_G2LED0</name>
+        <initializer>&quot;g2led0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="49" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1gaf16882c8f61bc65e6a182382bf3d7b3f" prot="public" static="no">
+        <name>FAPI_LEDNAME_G3LED0</name>
+        <initializer>&quot;g3led0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="50" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1gaf728dda42cab303aa6251b2637bebf58" prot="public" static="no">
+        <name>FAPI_LEDNAME_G4LED0</name>
+        <initializer>&quot;g4led0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="51" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga3d3e5bb53783ec8156f6d55bb8778a3b" prot="public" static="no">
+        <name>FAPI_LEDNAME_G5LED0</name>
+        <initializer>&quot;g5led0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="52" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1gaa184e1f9039c3b861c5826f51917e714" prot="public" static="no">
+        <name>FAPI_LEDNAME_DECTLED</name>
+        <initializer>&quot;dect_led&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="53" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1gad144c4b48cbbcea0af1fbc6cd5659de6" prot="public" static="no">
+        <name>FAPI_LEDNAME_WIFI5GLED</name>
+        <initializer>&quot;wifi5g_led&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="54" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga3ed015e8b3d189a0192c7759c5b970ed" prot="public" static="no">
+        <name>FAPI_LEDNAME_VOIP1LED</name>
+        <initializer>&quot;voip1_led&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="55" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga08ac22c93f5f8e3dc0c49b9ad74687f5" prot="public" static="no">
+        <name>FAPI_LEDNAME_VOIP0LED</name>
+        <initializer>&quot;voip0_led&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="56" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga7be93dae59908c1e085f0155bea011ab" prot="public" static="no">
+        <name>FAPI_LEDNAME_LTELED</name>
+        <initializer>&quot;lte_led&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="57" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga4ff359fbab22106d990c969879a5c993" prot="public" static="no">
+        <name>FAPI_LEDNAME_WIFI2GLED</name>
+        <initializer>&quot;wifi2g_led&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="58" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1gafd4eed1dd53ea79f7041195dde64d7e1" prot="public" static="no">
+        <name>FAPI_LEDNAME_INTERNETLED</name>
+        <initializer>&quot;internet_led&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="59" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga1105e10891d3ec83bffc43447b28897e" prot="public" static="no">
+        <name>FAPI_LEDNAME_BROADBANDLED1</name>
+        <initializer>&quot;broadband_led1&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="60" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga8e0357e381613e55419d1574931bcb73" prot="public" static="no">
+        <name>FAPI_LEDNAME_BROADBANDLED</name>
+        <initializer>&quot;broadband_led&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="61" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga4ef35899c64dd457635289582b7b6d01" prot="public" static="no">
+        <name>FAPI_LEDNAME_LED16</name>
+        <initializer>&quot;led16&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="62" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga8dbe1c2696cadf1e502fc59bff2d486f" prot="public" static="no">
+        <name>FAPI_LEDNAME_LED17</name>
+        <initializer>&quot;led17&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="63" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1gabad60768f51b4a8776f12af410274ec4" prot="public" static="no">
+        <name>FAPI_LEDNAME_LED18</name>
+        <initializer>&quot;led18&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="64" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga6a93069f01254291518d596d85d9f8b3" prot="public" static="no">
+        <name>FAPI_LEDNAME_LED19</name>
+        <initializer>&quot;led19&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="65" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga74ab8b0396ad5ce43a7fa187400f4833" prot="public" static="no">
+        <name>FAPI_LEDNAME_LED20</name>
+        <initializer>&quot;led20&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="66" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1gafe45fdf7484845a8f12a945a426d47ac" prot="public" static="no">
+        <name>FAPI_LEDNAME_LED21</name>
+        <initializer>&quot;led21&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="67" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga4ae3d571d6c98bc42c21bcd9a7b93549" prot="public" static="no">
+        <name>FAPI_LEDNAME_LED22</name>
+        <initializer>&quot;led22&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="68" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1gaa7c67dc0498364698b68ba959381e0f0" prot="public" static="no">
+        <name>FAPI_LEDNAME_LED23</name>
+        <initializer>&quot;led23&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="69" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga65697e75d33cadf4651a7943ba06e429" prot="public" static="no">
+        <name>FAPI_LEDNAME_LED24</name>
+        <initializer>&quot;led24&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="70" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1gae3269c50cac4c85260552fd9bb8820c2" prot="public" static="no">
+        <name>FAPI_LEDNAME_LED25</name>
+        <initializer>&quot;led25&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="71" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1gad85474b9a438d48449d1951943ef12af" prot="public" static="no">
+        <name>FAPI_LEDNAME_LED26</name>
+        <initializer>&quot;led26&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="72" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga7f4a51271801a70de175332cee368cca" prot="public" static="no">
+        <name>FAPI_LEDNAME_LED27</name>
+        <initializer>&quot;led27&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="73" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1gac0e676af8fa736e16bcb80f53c013cf6" prot="public" static="no">
+        <name>FAPI_LEDNAME_LED28</name>
+        <initializer>&quot;led28&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="74" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga5e00c981884745acb3c53cb3e24ce11c" prot="public" static="no">
+        <name>FAPI_LEDNAME_LED29</name>
+        <initializer>&quot;led29&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="75" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1gad7725b2a6044a4bc2b32a8eb7352da9b" prot="public" static="no">
+        <name>FAPI_LEDNAME_LED30</name>
+        <initializer>&quot;led30&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="76" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga62afe721be9e73a643ebf26d30ce2cab" prot="public" static="no">
+        <name>FAPI_LEDNAME_LED31</name>
+        <initializer>&quot;led31&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="77" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1gabeb6e01c15506efe247718fcfcef72a3" prot="public" static="no">
+        <name>FAPI_LEDNAME_LED32</name>
+        <initializer>&quot;led32&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="78" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga460a3a02d3df66b938f64b191cac79ea" prot="public" static="no">
+        <name>FAPI_LEDNAME_LED33</name>
+        <initializer>&quot;led33&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="79" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga8bc67183fb381e77c2e3a6656be0d086" prot="public" static="no">
+        <name>FAPI_LEDNAME_WPSLED</name>
+        <initializer>&quot;wps_led&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="80" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga7bd2f536cd9754f0f13079ce886f2013" prot="public" static="no">
+        <name>TRIGGER_TYPE_NONE</name>
+        <initializer>&quot;NONE&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="146" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga2ea024eb0a215c23e518d5a3e0ff8368" prot="public" static="no">
+        <name>TRIGGER_TYPE_TIMER</name>
+        <initializer>&quot;timer&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="147" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1gae3848f72ccc1cacbf82b376354bfcca5" prot="public" static="no">
+        <name>TRIGGER_TYPE_NETDEV</name>
+        <initializer>&quot;netdev&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="148" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1gaa1fd3baeaf6645973c71e1ffd4d7e66f" prot="public" static="no">
+        <name>TRIGGER_TYPE_NANDDISK</name>
+        <initializer>&quot;nand-disk&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="149" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga6e0eaaf96eb203d00e54e567bc26ac44" prot="public" static="no">
+        <name>TRIGGER_TYPE_DEFAULT</name>
+        <initializer>&quot;default-on&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="150" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga1570da0f53568883f0b1d4e26eccc344" prot="public" static="no">
+        <name>TRIGGER_TYPE_HEARTBEAT</name>
+        <initializer>&quot;heartbeat&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="151" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga5b8e04730464e1e5fc583e2d48ebc969" prot="public" static="no">
+        <name>MAX_ATTR_LEN</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="152" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1gabdd33f362ae3bbdacb5de76473aa8a2f" prot="public" static="no">
+        <name>MAX_PATH_LEN</name>
+        <initializer>256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="153" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga480c69f0c61355b6063ca2fd3029bec5" prot="public" static="no">
+        <name>LED_DEFAULT_PATH</name>
+        <initializer>&quot;/sys/class/leds/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="154" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1gabedfee0398c743a94ca09a641e544a0b" prot="public" static="no">
+        <name>INVALID_DELAYON_ATTRIBUTE</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="155" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga42dd1b05cfda200663e961acaf9bf5b9" prot="public" static="no">
+        <name>INVALID_DELAYOFF_ATTRIBUTE</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="156" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga05ebc0973ce9db13cc6ec0297e318c87" prot="public" static="no">
+        <name>INVALID_BRIGHTNESS_ATTRIBUTE</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="157" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga3680454901bf9195caee4e5f6b6b1c05" prot="public" static="no">
+        <name>INVALID_LED_BLINK_ATTRIBUTE</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="158" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga734ae2e0dbee67ce6d8a54be2851ed3d" prot="public" static="no">
+        <name>INVALID_INTERVAL_ATTRIBUTE</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="159" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1gaa9b97517212a12bb36336ad3ce1b9671" prot="public" static="no">
+        <name>INVALID_LED_SOURCE_ATTRIBUTE</name>
+        <initializer>NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="160" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga148fc223ac80a3255dfa7d5981c447e7" prot="public" static="no">
+        <name>INVALID_DEV_NAME_ATTRIBUTE</name>
+        <initializer>NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="161" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga1714aebd3991dda28fc22d85f607ef49" prot="public" static="no">
+        <name>MAX_LED_BRIGHTNESS</name>
+        <initializer>255</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="162" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__SYSTEM_1ga0ee9db10dd0a275500004e597e11867d" prot="public" static="no">
+        <name>MAX_LED_BLINK_ATTRIBUTE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="163" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__FAPI__SYSTEM_1ga5f99aa5077acffebe451d1268c69db58" prot="public" static="no">
+        <name>LEDType</name>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58a98401792bb3116d245dc083720a365ec" prot="public">
+          <name>BROADBANDLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58a5e9744881b05f5e2030daac143049291" prot="public">
+          <name>BROADBANDLED1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58a1915a5337ccfbf1ccb801b0f9e33b2ca" prot="public">
+          <name>VOIP0LED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58aa66ca79789f6953f753bf681fc6e2bb7" prot="public">
+          <name>VOIP1LED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58a4e2e4461532451142c51bd94600e7760" prot="public">
+          <name>LTELED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58ade534d1babeed14ca1d5290cc5d3aed3" prot="public">
+          <name>INTERNETLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58ae21b1d0fe8c8d1b2f1063bcedd7f47b3" prot="public">
+          <name>WIFI2GLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58abd8a65d7b80bd7a702eb1896fdd90847" prot="public">
+          <name>WIFI5GLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58abecce4ed0eda8c02471472a5cdd5df9d" prot="public">
+          <name>DECTLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58a807da3e24d05a980c9efa83dae29c6aa" prot="public">
+          <name>WPSLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58ad08dfe2c41f2d59416c993086354c9b7" prot="public">
+          <name>G2LED0</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58a16cfb61497e200ee1cafd23cef72e050" prot="public">
+          <name>G3LED0</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58a1cee8e9df91d10c269a63b4ecde3c688" prot="public">
+          <name>G4LED0</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58aa7f77d2824341d349c5ba35d85987f97" prot="public">
+          <name>G5LED0</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58ae16e296dab0e685dcef015cd14b697a0" prot="public">
+          <name>G6FLED0</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58ac3be56b2c8614c25e3083f5cb02c4957" prot="public">
+          <name>LED16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58a2d64d2cfd9ef5c6db08d669af0d15d39" prot="public">
+          <name>LED17</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58a1d4521877c908e50a6a722a6e9fffa25" prot="public">
+          <name>LED18</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58a883bd923f496b946080d154b2eed2cea" prot="public">
+          <name>LED19</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58a7af390bf29068a573cc8ee924148509e" prot="public">
+          <name>LED20</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58ae9da4e315bfbc8c186748e13755e82f9" prot="public">
+          <name>LED21</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58a93460aff54f38baa4409b8c847b799b8" prot="public">
+          <name>LED22</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58a8a55d962e6d05454c2b8b45c4fbf564d" prot="public">
+          <name>LED23</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58a319b8a42224e1b82e4b6637a07ccf684" prot="public">
+          <name>LED24</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58a96597d53edb21f20930dd63074f28c8f" prot="public">
+          <name>LED25</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58aed8010d093a01742c4e5f44d52009dea" prot="public">
+          <name>LED26</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58afab124f72fc7231cc93338b2b5495a37" prot="public">
+          <name>LED27</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58ace7c0e7f57482ce5a8e2ce8b4f45146b" prot="public">
+          <name>LED28</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58a50f67b85b6711575f2aa4c423aa18918" prot="public">
+          <name>LED29</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58a4de37f7dc24cbee0f1aebc2dfcdef55c" prot="public">
+          <name>LED30</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58ac6ed81021d883c1d9f81d8f46e03b85c" prot="public">
+          <name>LED31</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58a75e9977bde7283d8ed40787273f6cbc9" prot="public">
+          <name>LED32</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58ab248237f7cf04d5ed00249db1c348fc4" prot="public">
+          <name>LED33</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga5f99aa5077acffebe451d1268c69db58ac46bf17aafd9ec253a1c298a10e67269" prot="public">
+          <name>MAX_LED_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enums for all the supported LEDs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="85" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="85" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__FAPI__SYSTEM_1ga527bfd1a86584280ea4bb3f8a1f8d523" prot="public" static="no">
+        <name>PlatformType</name>
+        <enumvalue id="group__FAPI__SYSTEM_1gga527bfd1a86584280ea4bb3f8a1f8d523aac8a49b38be30b365d9baf4f87e64d1a" prot="public">
+          <name>GRX350</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga527bfd1a86584280ea4bb3f8a1f8d523af95a979b8a41d5df15db9e86f4ce3cea" prot="public">
+          <name>XRX330</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga527bfd1a86584280ea4bb3f8a1f8d523a96edd06bdf1ddf804ce3cb529bd0d889" prot="public">
+          <name>XRX200</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga527bfd1a86584280ea4bb3f8a1f8d523a975ecb1f2e0a7a273768a9d189224e5d" prot="public">
+          <name>MAX_PLATFORM_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="134" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="134" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__FAPI__SYSTEM_1ga59b7f49353f2a99b6c22d2eaae0fe9e9" prot="public" static="no">
+        <name>TriggerType</name>
+        <enumvalue id="group__FAPI__SYSTEM_1gga59b7f49353f2a99b6c22d2eaae0fe9e9adf3957d927a001a105a48ba04a25389a" prot="public">
+          <name>TRIGGER_NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga59b7f49353f2a99b6c22d2eaae0fe9e9a62af3f756389ecd1f8d34c3a66d7a027" prot="public">
+          <name>TRIGGER_TIMER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga59b7f49353f2a99b6c22d2eaae0fe9e9aa8a95064f08be803277571553c08c3d3" prot="public">
+          <name>TRIGGER_NETDEV</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga59b7f49353f2a99b6c22d2eaae0fe9e9a2996609058140fbd61aad32f9c07a257" prot="public">
+          <name>TRIGGER_NANDDISK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga59b7f49353f2a99b6c22d2eaae0fe9e9a667cd93e33aa1f3c977fbb6313c1bd31" prot="public">
+          <name>TRIGGER_HEARTBEAT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga59b7f49353f2a99b6c22d2eaae0fe9e9a22713c6eb982567c6df7008f861eec21" prot="public">
+          <name>TRIGGER_DEFAULT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1gga59b7f49353f2a99b6c22d2eaae0fe9e9a07e9591c0f9da1406a4c2039360fb6a8" prot="public">
+          <name>TRIGGER_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enums for all supported enum types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="169" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="169" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__FAPI__SYSTEM_1gaa534ed76b07c3983382a53e00e53e94a" prot="public" static="no">
+        <name>TriggerMode</name>
+        <enumvalue id="group__FAPI__SYSTEM_1ggaa534ed76b07c3983382a53e00e53e94aa7d8e30272e45a031b14236e792bc601c" prot="public">
+          <name>LED_TRIGGER_MODE_LINK</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1ggaa534ed76b07c3983382a53e00e53e94aa6ad7cdca6fdb03b0b9e85a1ff451a03a" prot="public">
+          <name>LED_TRIGGER_MODE_RX</name>
+          <initializer>= 0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1ggaa534ed76b07c3983382a53e00e53e94aa637a8771b86706c6227338a638121af4" prot="public">
+          <name>LED_TRIGGER_MODE_TX</name>
+          <initializer>= 0x04</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__SYSTEM_1ggaa534ed76b07c3983382a53e00e53e94aab8769d9aedc803cc86afc69c5a7a10a8" prot="public">
+          <name>LED_INVALID_TRIGGER_MODE</name>
+          <initializer>= 0x08</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enums for possible mode types when trigger type is set to netdev. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="183" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" bodystart="183" bodyend="188"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__FAPI__SYSTEM_1ga9d4d643a4ca87eb7be2f88afb184951d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int FAPI_LEDSetAttribute</definition>
+        <argsstring>(IN LEDType led, IN TriggerType trigger, IN void *LedAttr)</argsstring>
+        <name>FAPI_LEDSetAttribute</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__FAPI__SYSTEM_1ga5f99aa5077acffebe451d1268c69db58" kindref="member">LEDType</ref></type>
+          <declname>led</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__FAPI__SYSTEM_1ga59b7f49353f2a99b6c22d2eaae0fe9e9" kindref="member">TriggerType</ref></type>
+          <declname>trigger</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> void *</type>
+          <declname>LedAttr</declname>
+        </param>
+        <briefdescription>
+<para>This is the LED FAPI exposed to all the SL to set concerned LEDs attributes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">LedType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum specifying the LED type for which sl needs to set the attributes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">triggerType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum specifying the trigger type for the concerned LED. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">LedAttr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the LED attributes parameters needed to be set for concerned LED. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">NONE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="227" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__SYSTEM_1ga41ad7e10f143346530f71ebc63b0ec3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LED_TriggerNone</definition>
+        <argsstring>(IN LEDType led, IN void *LedAttr)</argsstring>
+        <name>LED_TriggerNone</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__FAPI__SYSTEM_1ga5f99aa5077acffebe451d1268c69db58" kindref="member">LEDType</ref></type>
+          <declname>led</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> void *</type>
+          <declname>LedAttr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="228" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__SYSTEM_1gaa4d59e609472bc97b67b9d14728f6142" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LED_TriggerTimer</definition>
+        <argsstring>(IN LEDType led, IN void *LedAttr)</argsstring>
+        <name>LED_TriggerTimer</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__FAPI__SYSTEM_1ga5f99aa5077acffebe451d1268c69db58" kindref="member">LEDType</ref></type>
+          <declname>led</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> void *</type>
+          <declname>LedAttr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="229" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__SYSTEM_1ga3f42969ad44a226e0b8ef3f36767c73b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LED_TriggerNetDev</definition>
+        <argsstring>(IN LEDType led, IN void *LedAttr)</argsstring>
+        <name>LED_TriggerNetDev</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__FAPI__SYSTEM_1ga5f99aa5077acffebe451d1268c69db58" kindref="member">LEDType</ref></type>
+          <declname>led</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> void *</type>
+          <declname>LedAttr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="230" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__SYSTEM_1ga662013b9a90d5b3ed9548fd9e1ff48df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LED_TriggerGeneric</definition>
+        <argsstring>(IN LEDType led, IN char *pTrigger, IN void *LedAttr)</argsstring>
+        <name>LED_TriggerGeneric</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__FAPI__SYSTEM_1ga5f99aa5077acffebe451d1268c69db58" kindref="member">LEDType</ref></type>
+          <declname>led</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pTrigger</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> void *</type>
+          <declname>LedAttr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="231" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__SYSTEM_1ga2f833602e3d765ff8facd86aa6756b5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LED_SetAttribute</definition>
+        <argsstring>(char *pFilepath, char *pattr)</argsstring>
+        <name>LED_SetAttribute</name>
+        <param>
+          <type>char *</type>
+          <declname>pFilepath</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>pattr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="232" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__SYSTEM_1gacfd2f52c44cd04a24708584b2472c2b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LED_GetName</definition>
+        <argsstring>(IN LEDType led, OUT char *LEDName)</argsstring>
+        <name>LED_GetName</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__FAPI__SYSTEM_1ga5f99aa5077acffebe451d1268c69db58" kindref="member">LEDType</ref></type>
+          <declname>led</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> char *</type>
+          <declname>LEDName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="233" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__SYSTEM_1ga473880b7cb6cdbcd8ff102b934c22dad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LED_GetInfo</definition>
+        <argsstring>(IN LEDType led, OUT char *Name, OUT int *PlatformType)</argsstring>
+        <name>LED_GetInfo</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__FAPI__SYSTEM_1ga5f99aa5077acffebe451d1268c69db58" kindref="member">LEDType</ref></type>
+          <declname>led</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> int *</type>
+          <declname>PlatformType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="234" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__SYSTEM_1ga096296ef7fe51ac385dfa144e8d56f85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LED_GetPlatformInfo</definition>
+        <argsstring>(OUT char *pName)</argsstring>
+        <name>LED_GetPlatformInfo</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> char *</type>
+          <declname>pName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h" line="235" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This File contains the Generic API&apos;s and common utility API&apos;s for all the SLs to SET/RESET the concerned LED Attributes. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2015</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lantiq<sp/>Beteiligungs-GmbH<sp/>&amp;<sp/>Co.<sp/>KG</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>For<sp/>licensing<sp/>information,<sp/>see<sp/>the<sp/>file<sp/>&apos;LICENSE&apos;<sp/>in<sp/>the<sp/>root<sp/>folder<sp/>of</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>this<sp/>software<sp/>module.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">******************************************************************************/</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">/*<sp/>@{<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ugw_error.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ltq_api_include.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Name<sp/>of<sp/>all<sp/>the<sp/>Led<sp/>Types<sp/>present<sp/>on<sp/>the<sp/>GRX350<sp/>board<sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>This<sp/>name<sp/>will<sp/>be<sp/>used<sp/>to<sp/>create<sp/>corresponding<sp/>LED<sp/>path<sp/>*</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>for<sp/>FAPI<sp/>APIs.<sp/>For<sp/>e.g<sp/>broadband_led1<sp/>will<sp/>have<sp/>an<sp/>entry*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>in<sp/>/sys/class/leds/broadband_led1.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>PLATFORM_XRX750</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_GRX750_LEDNAME_FXS1LED<sp/><sp/><sp/><sp/><sp/>&quot;FXS_1_LED&quot;</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_GRX750_LEDNAME_FXS2LED<sp/><sp/><sp/><sp/><sp/>&quot;FXS_2_LED&quot;</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_GRX750_LEDNAME_SFPLED<sp/><sp/><sp/><sp/><sp/><sp/>&quot;SFP_LED&quot;</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_GRX750_LEDNAME_VDSL1LED<sp/><sp/><sp/><sp/>&quot;VDSL_1_LED&quot;</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_GRX750_LEDNAME_VDSL2LED<sp/><sp/><sp/><sp/>&quot;VDSL_2_LED&quot;</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_GRX750_LEDNAME_WIFI24GLED<sp/><sp/>&quot;WIFI_24G_LED&quot;</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_GRX750_LEDNAME_WIFI5G1LED<sp/><sp/>&quot;WIFI_5G_1_LED&quot;</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_GRX750_LEDNAME_LTELED<sp/><sp/><sp/><sp/><sp/><sp/>&quot;LTE_LED&quot;</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_GRX750_LEDNAME_POWERLED<sp/><sp/><sp/><sp/>&quot;POWER_LED&quot;</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_GRX750_LEDNAME_WIFI5G2LED<sp/><sp/>&quot;WIFI_5G_2_LED&quot;</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_HVP_LEDNAME_RED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;havenPark_red&quot;</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_HVP_LEDNAME_BLUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;havenPark_blue&quot;</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_HVP_LEDNAME_GREEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;havenPark_green&quot;</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_G6FLED0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;g6fled0&quot;</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_G2LED0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;g2led0&quot;</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_G3LED0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;g3led0&quot;</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_G4LED0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;g4led0&quot;</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_G5LED0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;g5led0&quot;</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_DECTLED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;dect_led&quot;</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_WIFI5GLED<sp/><sp/><sp/><sp/><sp/><sp/>&quot;wifi5g_led&quot;</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_VOIP1LED<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;voip1_led&quot;</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_VOIP0LED<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;voip0_led&quot;</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LTELED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;lte_led&quot;</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_WIFI2GLED<sp/><sp/><sp/><sp/><sp/><sp/>&quot;wifi2g_led&quot;</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_INTERNETLED<sp/><sp/><sp/><sp/>&quot;internet_led&quot;</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_BROADBANDLED1<sp/><sp/>&quot;broadband_led1&quot;</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_BROADBANDLED<sp/><sp/><sp/>&quot;broadband_led&quot;</highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LED16<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;led16&quot;</highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LED17<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;led17&quot;</highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LED18<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;led18&quot;</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LED19<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;led19&quot;</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LED20<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;led20&quot;</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LED21<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;led21&quot;</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LED22<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;led22&quot;</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LED23<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;led23&quot;</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LED24<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;led24&quot;</highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LED25<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;led25&quot;</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LED26<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;led26&quot;</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LED27<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;led27&quot;</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LED28<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;led28&quot;</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LED29<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;led29&quot;</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LED30<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;led30&quot;</highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LED31<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;led31&quot;</highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LED32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;led32&quot;</highlight></codeline>
+<codeline lineno="79"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_LED33<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;led33&quot;</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FAPI_LEDNAME_WPSLED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;wps_led&quot;</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="85" refid="group__FAPI__SYSTEM_1ga5f99aa5077acffebe451d1268c69db58" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BROADBANDLED,<sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BROADBANDLED1,<sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VOIP0LED,<sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VOIP1LED,<sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LTELED,<sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INTERNETLED,<sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WIFI2GLED,<sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WIFI5GLED,<sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DECTLED,<sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WPSLED,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>G2LED0,<sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>G3LED0,<sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>G4LED0,<sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>G5LED0,<sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>G6FLED0,<sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED16,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED17,<sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED18,<sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED19,<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED20,<sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED21,<sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED22,<sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED23,<sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED24,<sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED25,<sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED26,<sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED27,<sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED28,<sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED29,<sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED30,<sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED31,<sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED32,<sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED33,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>PLATFORM_XRX750</highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FXS1LED,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FXS2LED,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SFPLED,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VDSL1LED,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VDSL2LED,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WIFI5G2LED,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>POWERLED,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HVPRED,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HVPBLUE,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HVPGREEN,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="131"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MAX_LED_TYPE,<sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}<sp/><ref refid="group__FAPI__SYSTEM_1ga5f99aa5077acffebe451d1268c69db58" kindref="member">LEDType</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GRX350,<sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>XRX330,<sp/></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>XRX200,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>PLATFORM_XRX750</highlight></codeline>
+<codeline lineno="139"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GRX750,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HVP,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="142"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MAX_PLATFORM_TYPE<sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}<sp/>PlatformType;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>All<sp/>supported<sp/>trigger<sp/>types<sp/>for<sp/>the<sp/>LEDs<sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRIGGER_TYPE_NONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;NONE&quot;</highlight></codeline>
+<codeline lineno="147"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TRIGGER_TYPE_TIMER<sp/><sp/><sp/><sp/><sp/><sp/>&quot;timer&quot;</highlight></codeline>
+<codeline lineno="148"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TRIGGER_TYPE_NETDEV<sp/><sp/><sp/><sp/><sp/>&quot;netdev&quot;</highlight></codeline>
+<codeline lineno="149"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TRIGGER_TYPE_NANDDISK<sp/><sp/><sp/>&quot;nand-disk&quot;</highlight></codeline>
+<codeline lineno="150"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TRIGGER_TYPE_DEFAULT<sp/><sp/><sp/><sp/>&quot;default-on&quot;</highlight></codeline>
+<codeline lineno="151"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TRIGGER_TYPE_HEARTBEAT<sp/><sp/>&quot;heartbeat&quot;</highlight></codeline>
+<codeline lineno="152"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MAX_ATTR_LEN<sp/>128</highlight></codeline>
+<codeline lineno="153"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MAX_PATH_LEN<sp/>256</highlight></codeline>
+<codeline lineno="154"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>LED_DEFAULT_PATH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/sys/class/leds/&quot;</highlight></codeline>
+<codeline lineno="155"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INVALID_DELAYON_ATTRIBUTE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-1</highlight></codeline>
+<codeline lineno="156"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INVALID_DELAYOFF_ATTRIBUTE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-1</highlight></codeline>
+<codeline lineno="157"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INVALID_BRIGHTNESS_ATTRIBUTE<sp/><sp/><sp/><sp/><sp/><sp/>-1</highlight></codeline>
+<codeline lineno="158"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INVALID_LED_BLINK_ATTRIBUTE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>-1</highlight></codeline>
+<codeline lineno="159"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INVALID_INTERVAL_ATTRIBUTE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-1</highlight></codeline>
+<codeline lineno="160"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INVALID_LED_SOURCE_ATTRIBUTE<sp/><sp/><sp/><sp/><sp/><sp/>NULL</highlight></codeline>
+<codeline lineno="161"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>INVALID_DEV_NAME_ATTRIBUTE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL</highlight></codeline>
+<codeline lineno="162"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MAX_LED_BRIGHTNESS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>255</highlight></codeline>
+<codeline lineno="163"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MAX_LED_BLINK_ATTRIBUTE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight></codeline>
+<codeline lineno="164"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="169" refid="group__FAPI__SYSTEM_1ga59b7f49353f2a99b6c22d2eaae0fe9e9" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TRIGGER_NONE,<sp/></highlight><highlight class="comment">/*<sp/>trigger<sp/>type<sp/>NONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TRIGGER_TIMER,<sp/></highlight><highlight class="comment">/*<sp/>Trigger<sp/>type<sp/>timer<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TRIGGER_NETDEV,<sp/></highlight><highlight class="comment">/*<sp/>Trigger<sp/>Type<sp/>netdev<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TRIGGER_NANDDISK,<sp/></highlight><highlight class="comment">/*<sp/>Trigger<sp/>type<sp/>nand-disk<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TRIGGER_HEARTBEAT,<sp/></highlight><highlight class="comment">/*<sp/>Trigger<sp/>type<sp/>heartbeat<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TRIGGER_DEFAULT,<sp/></highlight><highlight class="comment">/*<sp/>Trigger<sp/>Type<sp/>default-on<sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TRIGGER_MAX,<sp/></highlight><highlight class="comment">/*<sp/>Trigger<sp/>Type<sp/>UNKNOWN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}<sp/><ref refid="group__FAPI__SYSTEM_1ga59b7f49353f2a99b6c22d2eaae0fe9e9" kindref="member">TriggerType</ref>;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="183" refid="group__FAPI__SYSTEM_1gaa534ed76b07c3983382a53e00e53e94a" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED_TRIGGER_MODE_LINK<sp/>=<sp/>0x01,<sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED_TRIGGER_MODE_RX<sp/>=<sp/>0x02,<sp/></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED_TRIGGER_MODE_TX<sp/>=<sp/>0x04,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED_INVALID_TRIGGER_MODE<sp/>=<sp/>0x08</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">}<sp/><ref refid="group__FAPI__SYSTEM_1gaa534ed76b07c3983382a53e00e53e94a" kindref="member">TriggerMode</ref>;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="195" refid="structsNetDevAttr" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref><sp/>unMode;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>When<sp/>trigger<sp/>type<sp/>is<sp/>set<sp/>o<sp/>netdev,<sp/>we<sp/>need<sp/>to<sp/>specify<sp/>this.<sp/>This<sp/>means<sp/>LED<sp/>is<sp/>supposed<sp/>to<sp/>be<sp/>set<sp/>ON/OFF<sp/>on<sp/>link/rx/tx<sp/>activity<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="commondefs_8h_1a66634143db08bebe9b46ab4cb1fc6fd3" kindref="member">int16_t</ref><sp/>nBrightness;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>To<sp/>set<sp/>LED<sp/>OFF<sp/>and<sp/>ON<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/>nInterval;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>DevName[MAX_ATTR_LEN];</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">}<sp/><ref refid="structsNetDevAttr" kindref="compound">sNetDevAttr</ref>;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="206" refid="structsTimerAttr" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="commondefs_8h_1a66634143db08bebe9b46ab4cb1fc6fd3" kindref="member">int16_t</ref><sp/>nBrightness;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>To<sp/>set<sp/>LED<sp/>OFF<sp/>and<sp/>ON<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/>nDelayOn;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>How<sp/>long<sp/>(in<sp/>milliseconds)<sp/>the<sp/>LED<sp/>should<sp/>be<sp/>on<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/>nDelayOff;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>How<sp/>long<sp/>(in<sp/>milliseconds)<sp/>the<sp/>LED<sp/>should<sp/>be<sp/>off<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal">}<sp/><ref refid="structsTimerAttr" kindref="compound">sTimerAttr</ref>;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="216" refid="structsDefaultAttr" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="commondefs_8h_1a66634143db08bebe9b46ab4cb1fc6fd3" kindref="member">int16_t</ref><sp/>nBrightness;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>To<sp/>set<sp/>LED<sp/>OFF<sp/>and<sp/>ON<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}<sp/><ref refid="structsDefaultAttr" kindref="compound">sDefaultAttr</ref>;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="227"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__FAPI__SYSTEM_1ga9d4d643a4ca87eb7be2f88afb184951d" kindref="member">FAPI_LEDSetAttribute</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="group__FAPI__SYSTEM_1ga5f99aa5077acffebe451d1268c69db58" kindref="member">LEDType</ref><sp/>led,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="group__FAPI__SYSTEM_1ga59b7f49353f2a99b6c22d2eaae0fe9e9" kindref="member">TriggerType</ref><sp/>trigger,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*LedAttr);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LED_TriggerNone(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="group__FAPI__SYSTEM_1ga5f99aa5077acffebe451d1268c69db58" kindref="member">LEDType</ref><sp/>led,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*LedAttr);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LED_TriggerTimer(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="group__FAPI__SYSTEM_1ga5f99aa5077acffebe451d1268c69db58" kindref="member">LEDType</ref><sp/>led,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*LedAttr);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LED_TriggerNetDev(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="group__FAPI__SYSTEM_1ga5f99aa5077acffebe451d1268c69db58" kindref="member">LEDType</ref><sp/>led,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*LedAttr);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LED_TriggerGeneric(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="group__FAPI__SYSTEM_1ga5f99aa5077acffebe451d1268c69db58" kindref="member">LEDType</ref><sp/>led,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pTrigger,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*LedAttr);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LED_SetAttribute(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pFilepath,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pattr);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LED_GetName(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="group__FAPI__SYSTEM_1ga5f99aa5077acffebe451d1268c69db58" kindref="member">LEDType</ref><sp/>led,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*LEDName);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LED_GetInfo(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="group__FAPI__SYSTEM_1ga5f99aa5077acffebe451d1268c69db58" kindref="member">LEDType</ref><sp/>led,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Name,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*PlatformType);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LED_GetPlatformInfo(<ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pName);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_led.h"/>
+  </compounddef>
+</doxygen>

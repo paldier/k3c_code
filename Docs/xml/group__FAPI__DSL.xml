@@ -1,0 +1,1438 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__FAPI__DSL" kind="group">
+    <compoundname>FAPI_DSL</compoundname>
+    <title>DSL FAPI</title>
+    <innerclass refid="structdsl__fapi__line__obj" prot="public">dsl_fapi_line_obj</innerclass>
+    <innerclass refid="structdsl__fapi__line__stats__obj" prot="public">dsl_fapi_line_stats_obj</innerclass>
+    <innerclass refid="structdsl__fapi__line__stats__interval__obj" prot="public">dsl_fapi_line_stats_interval_obj</innerclass>
+    <innerclass refid="structdsl__fapi__line__test__params__obj" prot="public">dsl_fapi_line_test_params_obj</innerclass>
+    <innerclass refid="structdsl__fapi__channel__obj" prot="public">dsl_fapi_channel_obj</innerclass>
+    <innerclass refid="structdsl__fapi__channel__stats__obj" prot="public">dsl_fapi_channel_stats_obj</innerclass>
+    <innerclass refid="structdsl__fapi__channel__stats__interval__obj" prot="public">dsl_fapi_channel_stats_interval_obj</innerclass>
+    <innerclass refid="structdsl__fapi__x__lantiq__com__config__obj" prot="public">dsl_fapi_x_lantiq_com_config_obj</innerclass>
+    <innerclass refid="structfapi__dsl__ctx" prot="public">fapi_dsl_ctx</innerclass>
+    <innerclass refid="structfapi__global__vars" prot="public">fapi_global_vars</innerclass>
+    <innerclass refid="structfapi__shmem__data" prot="public">fapi_shmem_data</innerclass>
+    <innerclass refid="structfapi__shmem" prot="public">fapi_shmem</innerclass>
+    <innerclass refid="structfapi__dsl__init__parameter" prot="public">fapi_dsl_init_parameter</innerclass>
+    <innerclass refid="structfapi__dsl__init__parameter__box" prot="public">fapi_dsl_init_parameter_box</innerclass>
+    <innerclass refid="structfapi__dsl__init__cfg" prot="public">fapi_dsl_init_cfg</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" prot="public" static="no">
+        <name>fapi_dsl_status</name>
+        <enumvalue id="group__FAPI__DSL_1gga6a68d961535e6f7aa239751763131a70a86b665546ec20b43571b0d828acf309b" prot="public">
+          <name>FAPI_DSL_STATUS_ERROR</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Common error </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__DSL_1gga6a68d961535e6f7aa239751763131a70a7eb73193aa8bbe9c3dac32625afa7930" prot="public">
+          <name>FAPI_DSL_STATUS_SUCCESS</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Success </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__DSL_1gga6a68d961535e6f7aa239751763131a70a970d91f80d2a68ab271d778404fb4542" prot="public">
+          <name>FAPI_DSL_STATUS_WARNING</name>
+          <initializer>= 1000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Warning group </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The FAPI library context contains global information. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="929" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="929" bodyend="936"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__FAPI__DSL_1ga97a5a099ffdeed990806cc76f87e1dd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+        <definition>struct fapi_dsl_ctx* fapi_dsl_open</definition>
+        <argsstring>(unsigned int entity)</argsstring>
+        <name>fapi_dsl_open</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function opens DSL FAPI context.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>VRX device number.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>DSL FAPI context on successful, NULL if an error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1035" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1gafdf9b16c3deb7606d7ac9b1bd0e28b55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+        <definition>struct fapi_dsl_ctx* fapi_dsl_context_get</definition>
+        <argsstring>(int entity)</argsstring>
+        <name>fapi_dsl_context_get</name>
+        <param>
+          <type>int</type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function returns the requested DSL FAPI context.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entity number of DSL context </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>DSL FAPI context on successful, NULL if no open context is available. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1046" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga1b948f298a5b6cadd7fb70f6094f8ce9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fapi_dsl_context_free</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx)</argsstring>
+        <name>fapi_dsl_context_free</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function releases the requested DSL FAPI context.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Fapi context to be released </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1gaeb6ffcb5ef5d02e719b6479a15a3df4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_close</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx)</argsstring>
+        <name>fapi_dsl_close</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function closes DSL FAPI context.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer reference for internal FAPI context.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>DSL FAPI context on successful, NULL if an error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_init</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, const struct fapi_dsl_init_cfg *cfg)</argsstring>
+        <name>fapi_dsl_init</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structfapi__dsl__init__cfg" kindref="compound">fapi_dsl_init_cfg</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes the DSL Subsystem.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer reference for internal FAPI context. On initialization call, this pointer should be given as NULL; it returns the handle that needs to be stored within upper layer (SL) and is used for any successive FAPI function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the configuration parameters that needs to be applied.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga6db762b72c1f0d2c2d4144f517f7b46d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_uninit</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx)</argsstring>
+        <name>fapi_dsl_uninit</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function exits/shutdown the DSL Subsystem.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative if an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga18621a794c8d271291a7eb9dc7f593bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_line_get</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, struct dsl_fapi_line_obj *obj)</argsstring>
+        <name>fapi_dsl_line_get</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdsl__fapi__line__obj" kindref="compound">dsl_fapi_line_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads data from DSL Line object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL line object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative if an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga3a38e7977ea6636741d1bf5f7c5a1bf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_line_set</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, const struct dsl_fapi_line_obj *obj)</argsstring>
+        <name>fapi_dsl_line_set</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structdsl__fapi__line__obj" kindref="compound">dsl_fapi_line_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes data to DSL Line object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Line object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative if an error (where -1 is a common error) and positive if a warning. In case of an error or warning, please refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga8b69e9043c7560f016f288ff4d503cef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_line_stats_get</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, struct dsl_fapi_line_stats_obj *obj)</argsstring>
+        <name>fapi_dsl_line_stats_get</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdsl__fapi__line__stats__obj" kindref="compound">dsl_fapi_line_stats_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads data from DSL Line Stats object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Line Stats object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative if an error (where -1 is a common error) and positive if a warning. In case of an error or warning, please refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga7ce6e1d555dbdd48708d4b5f761998d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_line_stats_set</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, const struct dsl_fapi_line_stats_obj *obj)</argsstring>
+        <name>fapi_dsl_line_stats_set</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structdsl__fapi__line__stats__obj" kindref="compound">dsl_fapi_line_stats_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes data to DSL Line Stats object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Line Stats object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, please refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga5df23a7c34a81f29959eadae638d8464" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_line_stats_total_get</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, struct dsl_fapi_line_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_line_stats_total_get</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdsl__fapi__line__stats__interval__obj" kindref="compound">dsl_fapi_line_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads data from DSL Line Stats Total object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Line Stats Total object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, please refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga69af95fa3467bad5acdb5d4156b379d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_line_stats_total_set</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, const struct dsl_fapi_line_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_line_stats_total_set</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structdsl__fapi__line__stats__interval__obj" kindref="compound">dsl_fapi_line_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes data to DSL Line Stats Total object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Line Stats Total object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga20bb0212d6e16d711068b1c99803eb62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_line_stats_showtime_get</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, struct dsl_fapi_line_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_line_stats_showtime_get</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdsl__fapi__line__stats__interval__obj" kindref="compound">dsl_fapi_line_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads data from DSL Line Stats Showtime object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Line Stats Showtime object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga4dd2db2d5055e8d393f0683b286ac883" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_line_stats_showtime_set</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, const struct dsl_fapi_line_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_line_stats_showtime_set</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structdsl__fapi__line__stats__interval__obj" kindref="compound">dsl_fapi_line_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes data to DSL Line Stats Showtime object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Line Stats Showtime object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga4723935e967f7789a3d44db21f3a407e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_line_stats_last_showtime_get</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, struct dsl_fapi_line_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_line_stats_last_showtime_get</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdsl__fapi__line__stats__interval__obj" kindref="compound">dsl_fapi_line_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads data from DSL Line Stats LastShowtime object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Line Stats LastShowtime object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1gac4cafc674b7543bc08e7bb82450b2245" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_line_stats_last_showtime_set</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, const struct dsl_fapi_line_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_line_stats_last_showtime_set</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structdsl__fapi__line__stats__interval__obj" kindref="compound">dsl_fapi_line_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes data to DSL Line Stats LastShowtime object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Line Stats LastShowtime object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga9f7d43e38ed54800ff6508eecc503511" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_line_stats_current_day_get</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, struct dsl_fapi_line_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_line_stats_current_day_get</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdsl__fapi__line__stats__interval__obj" kindref="compound">dsl_fapi_line_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads data from DSL Line Stats CurrentDay object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Line Stats CurrentDay object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retruns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1gaf6a1f45e9dd5b8af61b25b17d9d9ce43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_line_stats_current_day_set</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, const struct dsl_fapi_line_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_line_stats_current_day_set</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structdsl__fapi__line__stats__interval__obj" kindref="compound">dsl_fapi_line_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes data to DSL Line Stats CurrentDay object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Line Stats CurrentDay object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga735da13abce1e87ea66d972db590f8d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_line_stats_quarter_hour_get</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, struct dsl_fapi_line_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_line_stats_quarter_hour_get</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdsl__fapi__line__stats__interval__obj" kindref="compound">dsl_fapi_line_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads data from DSL Line Stats QuarterHour object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Line Stats QuarterHour object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retruns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1gae1d90b50a2166be4d8679438d71045dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_line_stats_quarter_hour_set</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, const struct dsl_fapi_line_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_line_stats_quarter_hour_set</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structdsl__fapi__line__stats__interval__obj" kindref="compound">dsl_fapi_line_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes data to DSL Line Stats QuarterHour object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Line Stats QuarterHour object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga78485df8d97915a39de9002c00a92dbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_line_test_params_get</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, struct dsl_fapi_line_test_params_obj *obj)</argsstring>
+        <name>fapi_dsl_line_test_params_get</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdsl__fapi__line__test__params__obj" kindref="compound">dsl_fapi_line_test_params_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads data from DSL Line TestParams object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Line TestParams object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retrusn 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga05a9932df17850cc4c198150b5912dce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_line_test_params_set</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, const struct dsl_fapi_line_test_params_obj *obj)</argsstring>
+        <name>fapi_dsl_line_test_params_set</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structdsl__fapi__line__test__params__obj" kindref="compound">dsl_fapi_line_test_params_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes data to DSL Line TestParams object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Line TestParams object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga73a2b7430190378d727446880250d9bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_channel_get</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, struct dsl_fapi_channel_obj *obj)</argsstring>
+        <name>fapi_dsl_channel_get</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdsl__fapi__channel__obj" kindref="compound">dsl_fapi_channel_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads data from DSL Channel object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Channel object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1gade76bf5f68ad4fad63a5189eab1b3a17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_channel_set</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, const struct dsl_fapi_channel_obj *obj)</argsstring>
+        <name>fapi_dsl_channel_set</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structdsl__fapi__channel__obj" kindref="compound">dsl_fapi_channel_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes data to DSL Channel object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Channel object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga09a5f81b49d36ad57136c6e29b06d27d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_channel_stats_get</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, struct dsl_fapi_channel_stats_obj *obj)</argsstring>
+        <name>fapi_dsl_channel_stats_get</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdsl__fapi__channel__stats__obj" kindref="compound">dsl_fapi_channel_stats_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads data from DSL Channel Stats object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Channel Stats object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga30e905b23b61cfcea70a8f294aeebfc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_channel_stats_set</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, const struct dsl_fapi_channel_stats_obj *obj)</argsstring>
+        <name>fapi_dsl_channel_stats_set</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structdsl__fapi__channel__stats__obj" kindref="compound">dsl_fapi_channel_stats_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes data to DSL Channel Stats object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Channel Stats object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retruns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1gae9f992ac21af5b5c53c24e49ffa0f278" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_channel_stats_total_get</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, struct dsl_fapi_channel_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_channel_stats_total_get</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdsl__fapi__channel__stats__interval__obj" kindref="compound">dsl_fapi_channel_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads data from DSL Channel Stats Total object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Channel Stats Total object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1gaa8989ed2cc50cd6031d2382f016745ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_channel_stats_total_set</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, const struct dsl_fapi_channel_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_channel_stats_total_set</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structdsl__fapi__channel__stats__interval__obj" kindref="compound">dsl_fapi_channel_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes data to DSL Channel Stats Total object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Channel Stats Total object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1gaed59fd0e238164b60d08fd2fd5b72325" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_channel_stats_showtime_get</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, struct dsl_fapi_channel_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_channel_stats_showtime_get</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdsl__fapi__channel__stats__interval__obj" kindref="compound">dsl_fapi_channel_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads data from DSL Channel Stats Showtime object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Channel Stats Showtime object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retruns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga4d6bef3ba50c1235c988ab410c0c24ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_channel_stats_showtime_set</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, const struct dsl_fapi_channel_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_channel_stats_showtime_set</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structdsl__fapi__channel__stats__interval__obj" kindref="compound">dsl_fapi_channel_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes data to DSL Channel Stats Showtime object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Channel Stats Showtime object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retruns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1gae6d0226b0a0f6628c4d2e1adb2b2213d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_channel_stats_last_showtime_get</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, struct dsl_fapi_channel_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_channel_stats_last_showtime_get</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdsl__fapi__channel__stats__interval__obj" kindref="compound">dsl_fapi_channel_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads data from DSL Channel Stats LastShowtime object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Channel Stats LastShowtime object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retruns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer to error codes which are defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1gaebb4cacdd2171b543ef75bf1f94e5604" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_channel_stats_last_showtime_set</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, const struct dsl_fapi_channel_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_channel_stats_last_showtime_set</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structdsl__fapi__channel__stats__interval__obj" kindref="compound">dsl_fapi_channel_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes data to DSL Channel Stats LastShowtime object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Channel Stats LastShowtime object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga78c49035d7f7ea738af2b83fae3b3880" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_channel_stats_current_day_get</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, struct dsl_fapi_channel_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_channel_stats_current_day_get</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdsl__fapi__channel__stats__interval__obj" kindref="compound">dsl_fapi_channel_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads data from DSL Channel Stats CurrentDay object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Channel Stats CurrentDay object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retruns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga73a901eeec71eba652a8ae0e44060a48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_channel_stats_current_day_set</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, const struct dsl_fapi_channel_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_channel_stats_current_day_set</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structdsl__fapi__channel__stats__interval__obj" kindref="compound">dsl_fapi_channel_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes data to DSL Channel Stats CurrentDay object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Channel Stats CurrentDay object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1gaadd656408568e4b0075043258431a31d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_channel_stats_quarter_hour_get</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, struct dsl_fapi_channel_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_channel_stats_quarter_hour_get</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdsl__fapi__channel__stats__interval__obj" kindref="compound">dsl_fapi_channel_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads data from DSL Channel Stats QuarterHour object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL Channel Stats QuarterHour object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retruns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga3e8c60a91933658b6c1823419f025200" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_channel_stats_quarter_hour_set</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, const struct dsl_fapi_channel_stats_interval_obj *obj)</argsstring>
+        <name>fapi_dsl_channel_stats_quarter_hour_set</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structdsl__fapi__channel__stats__interval__obj" kindref="compound">dsl_fapi_channel_stats_interval_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes data to DSL Channel Stats QuarterHour object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel Stats QuarterHour object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1ga796584ea1348650374f19b51d7e53f4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_x_lantiq_com_config_get</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, struct dsl_fapi_x_lantiq_com_config_obj *obj)</argsstring>
+        <name>fapi_dsl_x_lantiq_com_config_get</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structdsl__fapi__x__lantiq__com__config__obj" kindref="compound">dsl_fapi_x_lantiq_com_config_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads data from DSL X_LANTIQ_COM_Config object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL X_LANTIQ_COM_Config object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>retruns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__DSL_1gac5b57da774a1ecb2bf814c12d22e29a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group__FAPI__DSL_1ga6a68d961535e6f7aa239751763131a70" kindref="member">fapi_dsl_status</ref></type>
+        <definition>enum fapi_dsl_status fapi_dsl_x_lantiq_com_config_set</definition>
+        <argsstring>(struct fapi_dsl_ctx *ctx, const struct dsl_fapi_x_lantiq_com_config_obj *obj)</argsstring>
+        <name>fapi_dsl_x_lantiq_com_config_set</name>
+        <param>
+          <type>struct <ref refid="structfapi__dsl__ctx" kindref="compound">fapi_dsl_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const struct <ref refid="structdsl__fapi__x__lantiq__com__config__obj" kindref="compound">dsl_fapi_x_lantiq_com_config_obj</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes data to DSL X_LANTIQ_COM_Config object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>FAPI handle (context) that was initialized during and returned to calling instance within context of <ref refid="group__FAPI__DSL_1gaabeecfee55120db4952c21aedf4126c6" kindref="member">fapi_dsl_init</ref> function call.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DSL X_LANTIQ_COM_Config object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns 0 on successful, negative on an error (where -1 is a common error) and positive if a warning. In case of an error or warning, refer the error codes defined within DSL CPE API by DSL_Error_t type. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="1054" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__FAPI__DSL_1gad48f09c5a3c36d949aefde2cf245aa07" prot="public" static="no">
+        <name>DSL_CPE_FAPI_ENTITIES</name>
+        <initializer>(DSL_CPE_MAX_DEVICE_NUMBER * DSL_CPE_LINES_PER_DEVICE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="38" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__DSL_1ga2aca778443833711670058a8655ada6a" prot="public" static="no">
+        <name>DSL_FAPI_SHMEM_CTX_CNT</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="905" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="905" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Provides functions to get or set the configurations for DSL entity through the interaction between the DSL SL and FAPI. </para>    </briefdescription>
+    <detaileddescription>
+<para>Lists the entire modules from the FAPI_DSL group. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

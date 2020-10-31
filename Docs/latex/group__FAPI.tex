@@ -1,0 +1,29 @@
+\hypertarget{group__FAPI}{\section{Functional A\-P\-I (F\-A\-P\-I)}
+\label{group__FAPI}\index{Functional A\-P\-I (\-F\-A\-P\-I)@{Functional A\-P\-I (\-F\-A\-P\-I)}}
+}
+
+
+F\-A\-P\-I provides an interface to manage platform specific system configure. Each module is offered in the form of C libraries and can be integrated with any framework.  
+
+
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__FAPI__SYSTEM}{System}
+\begin{DoxyCompactList}\small\item\em Provides functions for system configuration based abstracting hardware type and capabilities to higher layer A\-P\-Is and processes. It provides System and Ethernet F\-A\-P\-I. \end{DoxyCompactList}\item 
+\hyperlink{group__FAPI__DSL}{D\-S\-L F\-A\-P\-I}
+\begin{DoxyCompactList}\small\item\em Provides functions to get or set the configurations for D\-S\-L entity through the interaction between the D\-S\-L S\-L and F\-A\-P\-I. \end{DoxyCompactList}\item 
+\hyperlink{group__FAPI__WLAN}{Wi\-Fi}
+\begin{DoxyCompactList}\small\item\em Provides functions to initialize Wi-\/\-Fi radio, and configure security, Hot-\/spot, S\-S\-I\-D, W\-M\-M, etc. \end{DoxyCompactList}\item 
+\hyperlink{group__FAPI__LTE}{L\-T\-E}
+\begin{DoxyCompactList}\small\item\em Provides a set of functions, used to interact with L\-T\-E modems that provide A\-C\-M interfaces for setup with standard V.\-25ter (A\-T) commands. \end{DoxyCompactList}\item 
+\hyperlink{group__FAPI__MCAST}{Multicast}
+\begin{DoxyCompactList}\small\item\em It is split between user space application and kernel module, offering a seamless integration of Multicast functionality with other modules. \end{DoxyCompactList}\item 
+\hyperlink{group__FAPI__QOS}{Quality of Service}
+\begin{DoxyCompactList}\small\item\em Qo\-S F\-A\-P\-I abstracts the complexity of where to add certain Qo\-S objects. It uses unix domain socket based I\-P\-C mechanism to submit A\-P\-I request to Qo\-S daemon. \end{DoxyCompactList}\item 
+\hyperlink{group__TAPI}{Voice (\-T\-A\-P\-I)}
+\begin{DoxyCompactList}\small\item\em Provides interface to initialize, configure various Telephony features. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+F\-A\-P\-I provides an interface to manage platform specific system configure. Each module is offered in the form of C libraries and can be integrated with any framework. 

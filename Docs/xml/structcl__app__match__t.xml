@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structcl__app__match__t" kind="struct" prot="public">
+    <compoundname>cl_app_match_t</compoundname>
+    <includes refid="qosal__cl__api_8h" local="no">qosal_cl_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcl__app__match__t_1ab514d0ca0def2e9a568e3007d0fb91c7" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t cl_app_match_t::app_id</definition>
+        <argsstring></argsstring>
+        <name>app_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Application Protocol Id </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="750" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="750" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__app__match__t_1a72a78aa05541db433b06bb5128a11ca7" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t cl_app_match_t::app_id_exclude</definition>
+        <argsstring></argsstring>
+        <name>app_id_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Exclude flag/ Invert App match </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="751" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="751" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__app__match__t_1a8847ab7f98f9790cae0ff81b77ccae83" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a66634143db08bebe9b46ab4cb1fc6fd3" kindref="member">int16_t</ref></type>
+        <definition>int16_t cl_app_match_t::subproto_id</definition>
+        <argsstring></argsstring>
+        <name>subproto_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Application Sub-Protocol Id </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="753" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="753" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__app__match__t_1aa808b2fdd35ed55f21630678bdf1e599" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a66634143db08bebe9b46ab4cb1fc6fd3" kindref="member">int16_t</ref></type>
+        <definition>int16_t cl_app_match_t::subproto_id_exclude</definition>
+        <argsstring></argsstring>
+        <name>subproto_id_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Exclude flag/Invert Sub Protocol match </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="754" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="754" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__app__match__t_1a5084baee848246640f5affd79c04da3e" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__param__in__ex__t" kindref="compound">cl_param_in_ex_t</ref></type>
+        <definition>cl_param_in_ex_t cl_app_match_t::param_in_ex</definition>
+        <argsstring></argsstring>
+        <name>param_in_ex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bit-map to indicate included and excluded parameters of Application </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="756" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="756" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Application Match fields structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="27">
+        <label>cl_param_in_ex_t</label>
+        <link refid="structcl__param__in__ex__t"/>
+      </node>
+      <node id="26">
+        <label>cl_app_match_t</label>
+        <link refid="structcl__app__match__t"/>
+        <childnode refid="27" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="749" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="749" bodyend="757"/>
+    <listofallmembers>
+      <member refid="structcl__app__match__t_1ab514d0ca0def2e9a568e3007d0fb91c7" prot="public" virt="non-virtual"><scope>cl_app_match_t</scope><name>app_id</name></member>
+      <member refid="structcl__app__match__t_1a72a78aa05541db433b06bb5128a11ca7" prot="public" virt="non-virtual"><scope>cl_app_match_t</scope><name>app_id_exclude</name></member>
+      <member refid="structcl__app__match__t_1a5084baee848246640f5affd79c04da3e" prot="public" virt="non-virtual"><scope>cl_app_match_t</scope><name>param_in_ex</name></member>
+      <member refid="structcl__app__match__t_1a8847ab7f98f9790cae0ff81b77ccae83" prot="public" virt="non-virtual"><scope>cl_app_match_t</scope><name>subproto_id</name></member>
+      <member refid="structcl__app__match__t_1aa808b2fdd35ed55f21630678bdf1e599" prot="public" virt="non-virtual"><scope>cl_app_match_t</scope><name>subproto_id_exclude</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

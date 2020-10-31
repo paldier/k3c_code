@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structObjList" kind="struct" prot="public">
+    <compoundname>ObjList</compoundname>
+    <includes refid="help__structs_8h" local="no">help_structs.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structObjList_1aa8e6af61ee6cc0ab577074e55b3aa1dd" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ObjList::sObjName[MAX_LEN_OBJNAME]</definition>
+        <argsstring>[MAX_LEN_OBJNAME]</argsstring>
+        <name>sObjName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Object Name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="107" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structObjList_1a450648612115440cad362b3a31a1e1df" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t ObjList::unSid</definition>
+        <argsstring></argsstring>
+        <name>unSid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Corresponding Service Id </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="108" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structObjList_1ac83adce2eb39530e198b835134744ce7" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t ObjList::unOid</definition>
+        <argsstring></argsstring>
+        <name>unOid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Object Id </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="109" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structObjList_1a74aa7207a30c674333067077083e43d4" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ObjList::unObjOper</definition>
+        <argsstring></argsstring>
+        <name>unObjOper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Object Operation ADD, DELETE, MODIFY, etc </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="110" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structObjList_1ac19269ddfee19096edfdf8ff4fa3d8a9" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t ObjList::unObjFlag</definition>
+        <argsstring></argsstring>
+        <name>unObjFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Object flag for access, dynamic, etc </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="111" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structObjList_1a9de5f33293ccef1f9fc9b9ef3bf1c358" prot="public" static="no" mutable="no">
+        <type><ref refid="structParamList" kindref="compound">ParamList</ref></type>
+        <definition>ParamList ObjList::xParamList</definition>
+        <argsstring></argsstring>
+        <name>xParamList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Name Value Pair </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="112" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structObjList_1afc09cd5ee68143c7785a56e4915b42a1" prot="public" static="no" mutable="no">
+        <type><ref refid="group__LIBHELP_1ga73f73d414f252ff46652f16495641187" kindref="member">ListHead</ref></type>
+        <definition>ListHead ObjList::xOlist</definition>
+        <argsstring></argsstring>
+        <name>xOlist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Traverse List </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="113" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains the (objname, sid, oid, paramlist) that are passed in related functions and Callbacks. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="130">
+        <label>ParamList</label>
+        <link refid="structParamList"/>
+      </node>
+      <node id="129">
+        <label>ObjList</label>
+        <link refid="structObjList"/>
+        <childnode refid="130" relation="usage">
+          <edgelabel>xParamList</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" line="106" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h" bodystart="105" bodyend="114"/>
+    <listofallmembers>
+      <member refid="structObjList_1aa8e6af61ee6cc0ab577074e55b3aa1dd" prot="public" virt="non-virtual"><scope>ObjList</scope><name>sObjName</name></member>
+      <member refid="structObjList_1ac19269ddfee19096edfdf8ff4fa3d8a9" prot="public" virt="non-virtual"><scope>ObjList</scope><name>unObjFlag</name></member>
+      <member refid="structObjList_1a74aa7207a30c674333067077083e43d4" prot="public" virt="non-virtual"><scope>ObjList</scope><name>unObjOper</name></member>
+      <member refid="structObjList_1ac83adce2eb39530e198b835134744ce7" prot="public" virt="non-virtual"><scope>ObjList</scope><name>unOid</name></member>
+      <member refid="structObjList_1a450648612115440cad362b3a31a1e1df" prot="public" virt="non-virtual"><scope>ObjList</scope><name>unSid</name></member>
+      <member refid="structObjList_1afc09cd5ee68143c7785a56e4915b42a1" prot="public" virt="non-virtual"><scope>ObjList</scope><name>xOlist</name></member>
+      <member refid="structObjList_1a9de5f33293ccef1f9fc9b9ef3bf1c358" prot="public" virt="non-virtual"><scope>ObjList</scope><name>xParamList</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view viewid="multibridge">
+    <helptext></helptext>
+    <header>
+    <image>images/icons/multicast.png</image>
+        <name>Bridges</name>
+        <description>Display Bridge Interfaces</description>
+    </header>
+    <object name="Device.Bridging.Bridge.*" viewtype="table" title="Bridge" icon="multicast">
+        <parameter  name="Enable"  type="string" webname="Enable" ></parameter>
+        <parameter  name="X_LANTIQ_COM_Name"  type="string" webname="Name" ></parameter>
+        <parameter  name="X_LANTIQ_COM_BridgeMembers"  type="string"  webname="Bridge Members" ></parameter>
+        <parameter  name="Add"  action="post" routeurl="formToOpen('bridgeform')"  type="button" webname="Add"></parameter>
+        <parameter name="edit" webname="Edit" type="button" routeurl="edit($event,'bridgeform')" action="post"/>
+        <parameter name="delete" webname="delete" type="button" action="post"/>
+    </object>    
+</view>

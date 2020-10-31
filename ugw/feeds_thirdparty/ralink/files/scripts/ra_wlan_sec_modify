@@ -1,0 +1,311 @@
+#!/bin/sh
+
+if [ ! "$ENVLOADED" ]; then
+	if [ -r /etc/rc.conf ]; then
+		 . /etc/rc.conf 2> /dev/null
+		ENVLOADED="1"
+	fi
+fi
+
+if [ ! "$CONFIGLOADED" ]; then
+	if [ -r /etc/rc.d/config.sh ]; then
+		. /etc/rc.d/config.sh 2>/dev/null
+		CONFIGLOADED="1"
+	fi
+fi
+
+echo "ra_wlan_sec_modify ${1}" > /tmp/ra_wlan_sec_modify_file #Modify output file name
+
+RA_IF=""
+find_ra_if_from_index() {
+   eval CPEID='$'wlmn_${1}'_cpeId'
+   ra_dev=`/usr/sbin/status_oper GET "RA_MAP" "$CPEID"`
+   RA_IF=${ra_dev:2}
+   #echo "ATH_IF $ATH_IF "
+}
+
+find_ra_if_from_index $1
+echo "hsur current ralink_inf_idx is ${RA_IF}"
+
+        eval APNAME=ra${RA_IF}
+        eval cpeId='$'wlmn_${1}_cpeId
+        eval RADIOCPEID='$'wlmn_${1}_radioCpeId
+
+        if [ "$RADIOCPEID" = "1" ]; then
+            IFNUM=0
+        elif [ "$RADIOCPEID" = "2" ]; then
+            IFNUM=1
+        fi
+
+if [ "$CONFIG_FEATURE_WIRELESS" = "1" ]; then
+   # After sourcing rc.conf - read out the settings.
+
+	# e.g. WLAN_AUTH 
+	#	OPEN
+	#	SHARED
+	#	WPA_PSK
+	#	WPA2_PSK
+	#	WPA_WPA2_MIXED
+
+	# e.g. WLAN_ENCR 
+	#	NONE
+	#	WEP
+	#	TKIP
+	#	AES
+	#	TKIPAES_MIXED
+
+	eval pcpe_id='$'wlmn_${1}_cpeId #I think it should cpeId
+	eval Beacon_type='$'wlsec_${1}_beaconType	
+	eval encr_type='$'wlsec_${1}_encrType
+	eval auth_type='$'wlsec_${1}_authType	
+	eval WLAN_KEY_USED='$'wlsec_${1}_wepKeyIndx
+	eval Wep_key_type='$'wlsec_${1}_wepKeyType
+
+	WLAN_KEY_USED=`expr $WLAN_KEY_USED + 1`  #Ralink is 1~4
+
+
+	if [ "$Wep_key_type" = "0" ]; then # ascii key
+		Wep_key_type=1 #Ralink definition different with infineon.
+	else
+		Wep_key_type=0
+	fi
+
+	#echo $Wep_key_type_0
+	#echo $Wep_key_type_1
+	#echo $pcpe_id_0
+	#echo $pcpe_id_1	
+	#echo $Basic_auth_type_0
+	#echo $Basic_auth_type_1
+	#echo $Basic_encr_type_0
+	#echo $Basic_encr_type_1
+	#echo $Beacon_type_0
+	#echo $Beacon_type_1
+	#echo $Wpa_auth_type_0
+	#echo $Wpa_auth_type_1
+	#echo $Wpa_encr_type_0
+	#echo $Wpa_encr_type_1
+	#echo $WLAN_KEY_USED_0
+	#echo $WLAN_KEY_USED_1
+
+	eval WLAN_KEY1='$'wlwep${pcpe_id}_0_key
+	eval WLAN_KEY2='$'wlwep${pcpe_id}_1_key
+	eval WLAN_KEY3='$'wlwep${pcpe_id}_2_key
+	eval WLAN_KEY4='$'wlwep${pcpe_id}_3_key	
+
+	eval pskFlag='$'wlpsk${pcpe_id}_0_pskFlag #passPhrase or psk
+	if [ "$pskFlag" = "0" ]; then
+		eval WPAPSK='$'wlpsk${pcpe_id}_0_passPhrase
+	else
+		eval WPAPSK='$'wlpsk${pcpe_id}_0_psk
+	fi	
+
+	#echo $WLAN_KEY1_0
+	#echo $WLAN_KEY2_0
+	#echo $WLAN_KEY3_0
+	#echo $WLAN_KEY4_0
+
+	#echo $WLAN_KEY1_1
+	#echo $WLAN_KEY2_1
+	#echo $WLAN_KEY3_1
+	#echo $WLAN_KEY4_1
+
+	if [ "$Beacon_type" = "0" ]; then # Basic
+		echo "Basic Beacon Type"
+		if [ "$auth_type" = "0" ]; then # open
+			echo "Open Authnetication"
+			WLAN_AUTH="OPEN"
+		elif [ "$auth_type" = "1" ]; then #shared-wepkey
+			echo "Shared WEP Key Authentication"
+			WLAN_AUTH="SHARED"
+		fi
+
+		if [ "$encr_type" = "0" ]; then
+			echo "Open Encryption"
+			WLAN_ENCR="NONE"
+		elif [ "$encr_type" = "1" ]; then #WEP Key encryption
+			echo "Shared WEP Key Encryption"
+			WLAN_ENCR="WEP"
+		fi
+	elif [ "$Beacon_type" = "1" ]; then # WPA 
+		echo "WPA Type of Security"
+		if [ "$auth_type" = "3" ]; then # PSK/Passphrase
+			echo "PSK or Passphrase Authnetication"
+			WLAN_AUTH="WPAPSK"
+		elif [ "$auth_type" = "2" ]; then 
+			echo "WPA-Entrprise Authnetication"
+			WLAN_AUTH="WPA"
+		else
+			echo "Wrong AuthMode"
+		fi
+
+		if [ "$encr_type" = "2" ]; then  #TKIP Encryption 
+			echo "WPA TKIP Encryptiion"
+			WLAN_ENCR="TKIP"    #WPA-TKIP
+		elif [ "$encr_type" = "3" ]; then  #AES Encryption 
+         		echo "WPA AES Encryptiion"
+			WLAN_ENCR="AES"    #WPA-AES
+		elif [ "$encr_type" = "4" ]; then  #TKIP-AES Encryption 
+			echo "WPA TKIP-AES Mixed Encryptiion"
+			WLAN_ENCR="TKIPAES"    #WPA-AES-TKIP
+		else
+			echo "wrong setting"
+		fi
+
+	elif [ "$Beacon_type" = "2" ]; then # WPA2 
+		echo "WPA2 Type of Security"
+		if [ "$auth_type" = "3" ]; then # PSK/Passphrase
+			echo "WPA2 PSK or Passphrase Authnetication"
+			WLAN_AUTH="WPA2PSK"
+		elif [ "$auth_type" = "2" ]; then 
+			echo "WPA2-Entrprise Authnetication"
+			WLAN_AUTH="WPA2"
+		else
+			echo "Wrong AuthMode"
+		fi
+
+		if [ "$encr_type" = "2" ]; then  #TKIP Encryption 
+			echo "WPA2 TKIP Encryptiion"
+			WLAN_ENCR="TKIP"    #WPA2-TKIP
+		elif [ "$encr_type" = "3" ]; then  #AES Encryption 
+			echo "WPA2 AES Encryptiion"
+			WLAN_ENCR="AES"    #WPA2-AES
+		elif [ "$encr_type" = "4" ] ; then  #TKIP-AES Encryption 
+			echo "WPA2 TKIP-AES Mixed Encryptiion"
+			WLAN_ENCR="TKIPAES"    #WPA2-AES-TKIP
+		else
+			echo "wrong setting"
+		fi	
+	
+	elif [ "$Beacon_type" = "3" ]; then # WPA-WPA2 
+		echo "WPA-WPA2 Type of Security"
+		if [ "$auth_type" = "3" ]; then # PSK/Passphrase
+			echo "WPA_WPA2 PSK or Passphrase Authnetication"
+			WLAN_AUTH="WPAPSKWPA2PSK"
+		elif [ "$auth_type" = "2" ]; then 
+			echo "WPAWPA2-Entrprise Authnetication"
+			WLAN_AUTH="WPA1WPA2"
+		else
+			echo "RADIUS"
+		fi
+
+		if [ "$encr_type" = "2" ]; then  #TKIP Encryption 
+			echo "WPA2 TKIP Encryptiion"
+			WLAN_ENCR="TKIP"    #WPA_WPA2-TKIP
+		elif [ "$encr_type" = "3" ]; then  #AES Encryption 
+			echo "WPA2 AES Encryptiion"
+			WLAN_ENCR="AES"    #WPA_WPA2-AES
+		elif [ "$encr_type" = "4" ]; then  #TKIP-AES Encryption 
+			echo "WPA2 TKIP-AES Mixed Encryptiion"
+			WLAN_ENCR="TKIPAES"    #WPA_WPA2-AES-TKIP
+		else
+			echo "wrong setting"
+		fi
+	else
+    		echo "Wrong Beacon Type"
+	fi
+
+	#Check if RADIUS
+	if [ "$Beacon_type" = "2" ] || [ "$Beacon_type" = "3" ]; then #WPA2 & WPAWPA2
+		if [ "$auth_type" = "2" ]; then
+			eval PreAuth='$'wl1x_${1}_wpa2PreAuthEna
+			Comm_Line='set PreAuth='$PreAuth
+	   		iwpriv ra${RA_IF} $Comm_Line
+			echo "iwpriv ra${RA_IF} $Comm_Line"
+
+			eval temp='$'wl1x_${1}_grpKeyEna
+			if [ "$temp" = "1" ]; then
+				Comm_Line='set RekeyMethod=TIME'	   			
+			else
+				Comm_Line='set RekeyMethod=NONE'
+			fi
+			iwpriv ra${RA_IF} $Comm_Line
+			echo "iwpriv ra${RA_IF} $Comm_Line"
+
+			eval Rekey_Intvl='$'wl1x_${1}_grpKeyIntvl
+			Comm_Line='set RekeyInterval='$Rekey_Intvl
+	   		iwpriv ra${RA_IF} $Comm_Line
+			echo "iwpriv ra${RA_IF} $Comm_Line"
+		fi
+	fi
+	if [ "$Beacon_type" = "1" ] || [ "$Beacon_type" = "2" ] || [ "$Beacon_type" = "3" ]; then
+		if [ "$auth_type" = "2" ]; then
+			eval Radius_Srv='$'wl1x_${1}_radiusIP
+			eval Radius_Port='$'wl1x_${1}_radiusPort
+			eval Radius_Sec='$'wl1x_${1}_radiusSecret
+
+			Comm_Line='set RADIUS_Server='$Radius_Srv
+	   		iwpriv ra${RA_IF} $Comm_Line
+			echo "iwpriv ra${RA_IF} $Comm_Line"
+
+			Comm_Line='set RADIUS_Port='$Radius_Port
+	   		iwpriv ra${RA_IF} $Comm_Line
+			echo "iwpriv ra${RA_IF} $Comm_Line"
+
+			Comm_Line='set RADIUS_Key='$Radius_Sec
+	   		iwpriv ra${RA_IF} $Comm_Line
+			echo "iwpriv ra${RA_IF} $Comm_Line"
+
+			Comm_Line='set own_ip_addr='$lan_main_0_ipAddr
+	   		iwpriv ra${RA_IF} $Comm_Line
+			echo "iwpriv ra${RA_IF} $Comm_Line"
+		fi
+	fi
+	Comm_Line='set AuthMode='$WLAN_AUTH
+	   iwpriv ra${RA_IF} $Comm_Line
+	   echo "iwpriv ra${RA_IF} $Comm_Line"
+
+	Comm_Line='set EncrypType='$WLAN_ENCR	
+	   iwpriv ra${RA_IF} $Comm_Line
+	   echo "iwpriv ra${RA_IF} $Comm_Line"
+
+	Comm_Line='set IEEE8021X=0'	
+	   iwpriv ra${RA_IF} $Comm_Line
+	   echo "iwpriv ra${RA_IF} $Comm_Line"
+
+
+	if [ "$encr_type" = "1" ]; then #WEP
+	
+		eval KeyStr='$'WLAN_KEY${WLAN_KEY_USED}
+		Comm_Line='set Key'${WLAN_KEY_USED}'='${KeyStr} #iwpriv use Key?=xxxxx, not Key?Str.
+		   iwpriv ra${RA_IF} $Comm_Line # iwpriv ra0 set Key1Str=1234567890
+		   echo "iwpriv ra${RA_IF} $Comm_Line"	
+
+		Comm_Line='set DefaultKeyID='${WLAN_KEY_USED}
+		   iwpriv ra${RA_IF} $Comm_Line # iwpriv ra0 set DefaultKeyID=1
+		   echo "iwpriv ra${RA_IF} $Comm_Line"	
+
+	elif [ "$encr_type" = "2" ] || [ "$encr_type" = "3" ] || [ "$encr_type" = "4" ]; then
+		if [ "$auth_type" = "3" ]; then # PSK/Passphrase
+			eval Value='$'wlmn_${1}_ssid
+			Comm_Line='set SSID='$Value		
+			iwpriv ra${RA_IF} $Comm_Line
+			echo "iwpriv ra${RA_IF} $Comm_Line"		
+
+			Comm_Line='set WPAPSK='$WPAPSK
+			iwpriv ra${RA_IF} $Comm_Line # iwpriv ra0 set WPAPSK=12345678
+			echo "iwpriv ra${RA_IF} $Comm_Line"
+	
+			Comm_Line='set DefaultKeyID=2'		
+			iwpriv ra${RA_IF} $Comm_Line # Must set to 2
+			echo "iwpriv ra${RA_IF} $Comm_Line"
+		fi
+	fi
+
+	Comm_Line='set WscConfStatus=2'
+	iwpriv ra${RA_IF} $Comm_Line
+	echo "iwpriv ra${RA_IF} $Comm_Line"
+
+	eval Value='$'wlmn_${1}_ssid
+	Comm_Line='set SSID='$Value	
+	iwpriv ra${RA_IF} $Comm_Line
+	echo "iwpriv ra${RA_IF} $Comm_Line"
+
+	#restart rt2860apd
+	#if [ "$Beacon_type" = "1" ] || [ "$Beacon_type" = "2" ] || [ "$Beacon_type" = "3" ]; then
+	#	if [ "$auth_type" = "2" ]; then
+#			echo "restart rt2860apd"
+#			killall rt2860apd
+#			/tmp/rt2860apd &
+	#	fi
+	#fi
+fi

@@ -1,0 +1,48 @@
+\hypertarget{ugw__proto_8h}{\section{ugw\-\_\-proto.\-h File Reference}
+\label{ugw__proto_8h}\index{ugw\-\_\-proto.\-h@{ugw\-\_\-proto.\-h}}
+}
+
+
+File contains common A\-P\-I prototypes used across all modules the software.  
+
+
+{\ttfamily \#include \char`\"{}ugw\-\_\-defs.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ugw\-\_\-enums.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ugw\-\_\-structs.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$help\-\_\-objlist.\-h$>$}\\*
+{\ttfamily \#include $<$libubus.\-h$>$}\\*
+{\ttfamily \#include $<$libubox/blobmsg\-\_\-json.\-h$>$}\\*
+{\ttfamily \#include $<$libubox/blobmsg.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct ubus\-\_\-context $\ast$ \hyperlink{group__LIBHELP_ga81ac150329a4e82ad30558b867ad0828}{help\-\_\-ubus\-Connect} (void)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to create a ubus context. \end{DoxyCompactList}\item 
+void \hyperlink{group__LIBHELP_ga6c839b6d873e24028182e5387eca83c4}{help\-\_\-ubus\-Disconnect} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} struct ubus\-\_\-context $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to disconnect/close an ubus context. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBHELP_gabb0748732cfccc4fb74ddd3cee171572}{help\-\_\-blob\-To\-Obj\-List} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} struct blob\-\_\-attr $\ast$msg, \hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Msg\-Object)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to extract the ubus blob message and fill the \hyperlink{structObjList}{Obj\-List} data structure. This function is invoked upon receipt of a message over the ubus. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBHELP_ga5da4d9d671463059f4ce4cd30c8fd90b}{help\-\_\-obj\-List\-To\-Blob} (\hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} struct blob\-\_\-buf $\ast$buf, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Msg\-Object, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} struct ubus\-\_\-context $\ast$ctx, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} struct ubus\-\_\-request\-\_\-data $\ast$req)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to prepare the ubus blob message from the \hyperlink{structObjList}{Obj\-List} data structure. This function is invoked before a message is sent over the ubus. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBHELP_ga885540becf5f14940ae69d4073a113d7}{help\-\_\-send\-Msg\-To\-Server} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Req\-Msg, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} ubus\-\_\-data\-\_\-handler\-\_\-t fn\-Call\-Bak, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} const char $\ast$pc\-Server\-Name, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} const char $\ast$pc\-Oper, \hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Res\-Msg\-Header)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to send msg to server, which is registered with U\-B\-U\-S\-D. \end{DoxyCompactList}\item 
+void \hyperlink{group__LIBHELP_ga00b927a438c136375f70a2e062eab555}{help\-\_\-print\-Msg} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Msg)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to dump/print the Object Info from the provided Object List. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBHELP_ga8ab66f60c643be4c0de6ad9e7287b43a}{help\-\_\-get\-Json\-Format} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Msg, \hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} char $\ast$$\ast$ppc\-Buf)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to dump/print the Object Info from the provided Object List in json format. \end{DoxyCompactList}\item 
+void \hyperlink{group__LIBHELP_ga3b684ce7a446cc28018661076c8e94a6}{help\-\_\-del\-Msg} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Msg, bool n\-Flag)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to free the object info from the Object List structure. \end{DoxyCompactList}\item 
+void \hyperlink{group__LIBHELP_gae81adde4b1a780815aae81ca185cc266}{help\-\_\-\-Ret\-St\-Blob\-Msg} (\hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} struct blob\-\_\-buf $\ast$buf, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} int n\-Status)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to send a response message to the C\-A\-L module if the received request was for addition or deletion of an object. \end{DoxyCompactList}\item 
+long \hyperlink{group__LIBHELP_gaeae18a7c6d97384f30fd7ddbfc6c37d9}{help\-\_\-get\-Diff\-Time} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} struct timeval $\ast$starttime, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} struct timeval $\ast$finishtime)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to measure time taken in milliseconds of any exection. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBHELP_ga586354ddaf797ab49619492959d24970}{help\-\_\-blob\-To\-Notify\-List} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} struct blob\-\_\-attr $\ast$msg, \hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} \hyperlink{structNotifyObjData}{Notify\-Obj\-Data} $\ast$px\-Notify)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to covert blob msg to notify list. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBHELP_gab966addd9ba1b125401c02a4c29cdf7b}{help\-\_\-notify\-List\-To\-Blob} (\hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} struct blob\-\_\-buf $\ast$buf, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{structNotifyObjData}{Notify\-Obj\-Data} $\ast$px\-Notify)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to covert notify list to blobmsg. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBHELP_gaaad2bd9ad957d8d3c4a28932f377ec1e}{help\-\_\-get\-Msg\-Type} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} struct blob\-\_\-attr $\ast$head, \hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} unsigned int len)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to get msg type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File contains common A\-P\-I prototypes used across all modules the software. 

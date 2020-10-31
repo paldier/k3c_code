@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct__ifcfg__t" kind="struct" prot="public">
+    <compoundname>_ifcfg_t</compoundname>
+    <includes refid="fapi__sys__common_8h" local="no">fapi_sys_common.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__ifcfg__t_1a2455a022e6423ced6a03d61447920650" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char _ifcfg_t::ifName[PPA_IF_NAME_SIZE]</definition>
+        <argsstring>[PPA_IF_NAME_SIZE]</argsstring>
+        <name>ifName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="329" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="329" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__ifcfg__t_1afeca1aeb599ae41188a64ba63012e952" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char _ifcfg_t::baseifName[PPA_IF_NAME_SIZE]</definition>
+        <argsstring>[PPA_IF_NAME_SIZE]</argsstring>
+        <name>baseifName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="330" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__ifcfg__t_1ad1d087e075e80ed5ebe2b8412a745c52" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool _ifcfg_t::wanIf_flag</definition>
+        <argsstring></argsstring>
+        <name>wanIf_flag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="331" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="331" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure defining interfaces added to PPA. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="328" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="328" bodyend="332"/>
+    <listofallmembers>
+      <member refid="struct__ifcfg__t_1afeca1aeb599ae41188a64ba63012e952" prot="public" virt="non-virtual"><scope>_ifcfg_t</scope><name>baseifName</name></member>
+      <member refid="struct__ifcfg__t_1a2455a022e6423ced6a03d61447920650" prot="public" virt="non-virtual"><scope>_ifcfg_t</scope><name>ifName</name></member>
+      <member refid="struct__ifcfg__t_1ad1d087e075e80ed5ebe2b8412a745c52" prot="public" virt="non-virtual"><scope>_ifcfg_t</scope><name>wanIf_flag</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

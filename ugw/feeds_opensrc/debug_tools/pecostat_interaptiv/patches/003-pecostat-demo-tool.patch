@@ -1,0 +1,120 @@
+--- old/pecostat_noIRQ.c	2014-04-24 22:23:54.000000000 +0530
++++ new/pecostat_noIRQ.c	2015-07-29 18:37:30.315888000 +0530
+@@ -97,12 +97,12 @@
+ static int pecostat_device_open(struct inode *, struct file *);
+ static int pecostat_device_release(struct inode *, struct file *);
+ static loff_t pecostat_device_llseek(struct file *, loff_t, int);
+-static ssize_t pecostat_device_read(struct file *, char *, size_t, loff_t *);
++ssize_t pecostat_device_read(struct file *, char *, size_t, loff_t *);
+  static void read_vp_registers(void*);
+  static void cm_info(void);
+  static void read_cmcntrs(void);
+  static void set_new_events(void);
+-static ssize_t pecostat_device_write(struct file*,const char*,size_t,loff_t*);
++ssize_t pecostat_device_write(struct file*,const char*,size_t,loff_t*);
+  static void save_current_events(void);
+ 
+ static void restore_counters(void);
+@@ -126,15 +126,16 @@
+ #define VPE0_MASK    1
+ #define VPE1_MASK    2
+ 
+-
+-static int Device_Open = 0;	/* Is device open?  
+-				 * Used to prevent multiple access to device */
+ static unsigned Proctype;
+ static unsigned Prid;
+ static int VPEmask;
+-static short Ntc0, Ntc1, Ntc, Npc0, Npc, Pct, Nvp;
++static short Ntc0, Ntc1, Npc0, Pct;
++short Nvp,Ntc,Npc;
++unsigned char CCRes[MIPS_MAX_VPS];
++int Device_Open = 0;    /* Is device open?  
++                                 * Used to prevent multiple access to device */
++
+ static short Pct_array[MIPS_MAX_VPS], Npc_array[MIPS_MAX_VPS], Nvpe_array[MIPS_MAX_VPS], VPE_ID[MIPS_MAX_VPS], Ntc_array[MIPS_MAX_VPS], Npc_core[MIPS_MAX_VPS];
+-static unsigned char CCRes[MIPS_MAX_VPS];
+ static unsigned long Count[MIPS_MAX_VPS];
+ static unsigned int Config1[MIPS_MAX_VPS];
+ static unsigned int Config2[MIPS_MAX_VPS];
+@@ -385,7 +386,7 @@
+  * Called when a process, which already opened the dev file, attempts to
+  * read from it. The "read" action depends on the "Pecostat_position".
+  */
+-static ssize_t pecostat_device_read(
++ssize_t pecostat_device_read(
+                                struct file *filp,/* see include/linux/fs.h */
+                                char *buffer,	 /* buffer to fill with data */
+                                size_t length, /* length of the buffer */
+@@ -452,8 +453,14 @@
+         pcinfo.ncore = Ncore;
+         pcinfo.cm_npc = CM_npc;
+         pcinfo.flags = 0;
+-
+-        copy_to_user(buffer, &pcinfo, length);
++				if(filp != NULL)
++				{
++					copy_to_user(buffer, &pcinfo, length);
++				}
++				else
++				{
++					memcpy(buffer, &pcinfo, length);
++				}
+         return length;
+     }
+ 
+@@ -503,8 +510,14 @@
+         printk("\n");
+     }
+ #endif
+-
+-    copy_to_user(buffer, Extencount, length);
++		if(filp != NULL)
++		{
++			copy_to_user(buffer, Extencount, length);
++		}
++		else
++		{
++			memcpy(buffer, Extencount, length);
++		}
+ 
+     /*
+      * Increment the CurrentEvent, and set the next event
+@@ -519,7 +532,7 @@
+  * Called when a process writes to dev file. The transferred information
+  * helps to build the requested events list.
+  */
+-static ssize_t
++ssize_t
+ pecostat_device_write(struct file *filp,
+                     const char *buffer,
+                     size_t length,
+@@ -551,7 +564,14 @@
+     if (EventBuffer != NULL)
+         kfree(EventBuffer);
+     EventBuffer = (unsigned char *)kmalloc(length, GFP_KERNEL);
+-    copy_from_user(EventBuffer, buffer, length);
++		if(filp != NULL)
++		{
++			copy_from_user(EventBuffer, buffer, length);
++		}
++		else
++		{
++			memcpy(EventBuffer, buffer, length);
++		}
+     psip = (PECOSTAT_INFO *)EventBuffer;
+ 
+     EventsCount = psip->events_count;
+@@ -1961,3 +1981,12 @@
+ 
+ module_init(pecostat_init);
+ module_exit(pecostat_exit);
++
++EXPORT_SYMBOL(pecostat_device_read);
++EXPORT_SYMBOL(pecostat_device_write);
++EXPORT_SYMBOL(Ntc);
++EXPORT_SYMBOL(CCRes);
++EXPORT_SYMBOL(Device_Open);
++EXPORT_SYMBOL(Nvp);
++EXPORT_SYMBOL(Npc);
++

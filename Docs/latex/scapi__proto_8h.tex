@@ -1,0 +1,145 @@
+\hypertarget{scapi__proto_8h}{\section{scapi\-\_\-proto.\-h File Reference}
+\label{scapi__proto_8h}\index{scapi\-\_\-proto.\-h@{scapi\-\_\-proto.\-h}}
+}
+
+
+File contains the A\-P\-I prototypes defined for system config A\-P\-I.  
+
+
+{\ttfamily \#include $<$ctype.\-h$>$}\\*
+{\ttfamily \#include $<$stdbool.\-h$>$}\\*
+{\ttfamily \#include $<$sys/msg.\-h$>$}\\*
+{\ttfamily \#include $<$arpa/inet.\-h$>$}\\*
+{\ttfamily \#include $<$netinet/in.\-h$>$}\\*
+{\ttfamily \#include $<$net/if\-\_\-arp.\-h$>$}\\*
+{\ttfamily \#include $<$sys/stat.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__LIBSCAPI_ga289ed7b7b67faf20a531abe400857729}{scapi\-\_\-traceroute} (char $\ast$args, int pkt\-\_\-size, Trace\-Route\-Resp\-\_\-\-D $\ast$p\-Trace\-Route\-Resp)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I traceroute A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gafa94602629980ae15611c822b2d65b76}{scapi\-\_\-kill\-All} (char $\ast$pc\-Process\-Name, int n\-Signal)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I killall A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gace833fc332d0cef672723322f36e0556}{scapi\-\_\-ping} (char $\ast$address, \hyperlink{commondefs_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32} timeout, int num\-\_\-ping, \hyperlink{commondefs_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I ping A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga57fa1c0b6d7d59978b07f47b98e2490d}{scapi\-\_\-ping6} (char $\ast$address, \hyperlink{commondefs_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32} timeout, int num\-\_\-ping, \hyperlink{commondefs_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32} size)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I ping6 A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga85560fcfad682a73dfcf4742d4871b22}{scapi\-\_\-rmmod} (char $\ast$pc\-Module\-Name, int n\-Options)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I rmmod A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gaed31c6ca40eeecd43ea695d593258db0}{scapi\-\_\-insmod} (const char $\ast$pc\-Module\-Path, const char $\ast$pc\-Options)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I insmod A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga50b96871349c8314bccbd750f9d188e0}{scapi\-\_\-nslookup} (N\-S\-L\-O\-O\-K\-U\-P\-\_\-\-D\-I\-A\-G\-\_\-\-D $\ast$px\-N\-S\-Lookup\-Query, N\-S\-Lookup\-Resp\-\_\-\-D $\ast$px\-N\-S\-Lookup\-Resp, R\-E\-S\-U\-L\-T\-\_\-\-D $\ast$px\-Result)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I nslookup A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gab079cbd4f17a96e543e97f5d7af50513}{scapi\-\_\-dumplease} (char $\ast$file, struct dump\-\_\-lease\-\_\-info $\ast$$\ast$lease\-\_\-info, int $\ast$no\-\_\-entry)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I dumpleases A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga98953633f9849c3fdf33b2bd3cf31ac3}{scapi\-\_\-reboot} (void)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I reboot A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga08d58b39a0a3ab6958cf8dcee10671db}{scapi\-\_\-copy} (const char $\ast$pc\-To, const char $\ast$pc\-From)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I copy A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga5557b8c55bcfe7c834799ca0520b2646}{scapi\-\_\-get\-Ifc\-Ipaddr} (char $\ast$pc\-Ifname, char $\ast$pc\-Ip)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get I\-P address A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga39521d2bdf8e334fb6cfc2f2387db048}{scapi\-\_\-set\-Ifc\-Ipaddr} (char $\ast$pc\-Ifname, char $\ast$pc\-Ip)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set ipaddress A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gacf3633d781f172085ef8b3cc9f6b0895}{scapi\-\_\-get\-Ifc\-Netmask} (char $\ast$pc\-Ifname, char $\ast$pc\-Netmask)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get netmask A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga827cb8b0a3261864c8e9713e4a11811a}{scapi\-\_\-set\-Ifc\-Netmask} (char $\ast$pc\-Ifname, char $\ast$pc\-Netmask)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set netmask A\-P\-I. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_ga113427e9b1ddeff247c9763bba1d290b}{scapi\-\_\-is\-Valid\-Mac\-Address} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} const char $\ast$pc\-Mac)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I Validate mac address A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gab5a6e10094f75c159af44fb737716b4f}{scapi\-\_\-get\-Ifc\-Macaddr} (char $\ast$pc\-Ifname, char $\ast$pc\-Mac)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get mac address A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga71e47b374afd08937e11f18fe596c4b3}{scapi\-\_\-set\-Ifc\-Macaddr} (char $\ast$pc\-Ifname, char $\ast$pc\-Mac, int n\-Octet\-Inc)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set mac address A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gae895fa6a4d2b397c2d49a1375bf2f119}{scapi\-\_\-get\-Ifc\-Tx\-Queuelen} (char $\ast$pc\-Ifname, int $\ast$pn\-Txqueuelen)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get transmission queue length. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gae3bb4db75186283a07ee938d94cfb23c}{scapi\-\_\-set\-Ifc\-Tx\-Queuelen} (char $\ast$pc\-Ifname, int n\-Txqueuelen)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set transmission queue length A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gacc9fa7f6bbdb45fb3ba4646b4066ebff}{scapi\-\_\-get\-Ifc\-Updown} (char $\ast$pc\-Ifname, bool $\ast$status)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get interface up/down A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga28f976179cd1eb7eadd80ba74cf7e848}{scapi\-\_\-set\-Ifc\-Updown} (char $\ast$pc\-Ifname, bool updown)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set interface up/down A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga07e5af1112c4658d6353327d85ba072f}{scapi\-\_\-vlan\-Add} (char $\ast$pc\-If\-Name, int n\-Vlan)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I vlan add A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gad625eecd5667aa2a577c3289d66af424}{scapi\-\_\-vlan\-Del} (char $\ast$pc\-If\-Name)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I vlan delete A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga788b9cadef95c0d86975d5d03b4a7488}{scapi\-\_\-set\-Vlan\-Name\-Type} (char $\ast$pc\-If\-Name, int n\-Name\-Type)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set vlan name type A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga8a567c87af232111f763d8bd8bc17d06}{scapi\-\_\-set\-Vlan\-Flag} (char $\ast$pc\-If\-Name, int n\-Flag)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set vlan flag A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga55e05f270adc1039675a9305916ba0d0}{scapi\-\_\-set\-Vlan\-Egress\-Ingress\-Map} (char $\ast$pc\-If\-Name, int n\-Priority, int n\-Vlan\-Qos)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I vlan set egress ingress map A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gacdcd8e423d7350ec74378fd2a2011719}{scapi\-\_\-ifconfig\-Stats} (char $\ast$name, I\-N\-T\-E\-R\-F\-A\-C\-E $\ast$if\-\_\-list)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get ifconfig stats A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gad3ed6f8beac4e5b6a2f741954b34de8a}{scapi\-\_\-br\-Add} (char $\ast$br)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I bridge add A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gaa8658773cabf7e5ffab8ba01525ee47c}{scapi\-\_\-br\-Del} (char $\ast$br)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I bridge delete A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga2fe5f31dda118f9eac944e980220da06}{scapi\-\_\-br\-Add\-If} (char $\ast$br, char $\ast$ifname)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I add bridge interface A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga9f03621f153baf4e8f7c07b60f424cc8}{scapi\-\_\-br\-Del\-If} (char $\ast$br, char $\ast$ifname)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I delete bridge interface A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga7bc08b9ef6ddf900e1c769fbaa45c901}{scapi\-\_\-br\-Set\-Stp} (char $\ast$br, bool option)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set S\-T\-P A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga4262c7bab5a11e4ff58349f308349213}{scapi\-\_\-br\-Set\-Prio} (char $\ast$br, unsigned int br\-\_\-option)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set bridge priority A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gab8c21189881838ec3596d8956b068b31}{scapi\-\_\-br\-Set\-Hello} (char $\ast$br, char $\ast$time)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set hello A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga9ddf86b95c70abcfa8cad7d79f73a2c1}{scapi\-\_\-br\-Set\-Age} (char $\ast$br, char $\ast$time)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I bridge age set A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga4819417103d7213480c4895019bb761b}{scapi\-\_\-br\-Fwd\-Delay} (char $\ast$br, char $\ast$time)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set bridge farward delay time. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga0c4032990e2f19416c39956f877a48d4}{scapi\-\_\-br\-Set\-Max\-Age} (char $\ast$br, char $\ast$time)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I set bridge max age A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gaf2ea63b8ead54825b1f7ae60425669f8}{scapi\-\_\-get\-Next\-Macaddr} (char $\ast$pc\-Ifname, char $\ast$pc\-Mac)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I gets next M\-A\-C address A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gac163d2a89b481e84dab2403c965afd07}{scapi\-\_\-remove\-Next\-Macaddr} (char $\ast$pc\-Ifname)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I remove next M\-A\-C address A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga477a4bf30a51d9575789a099087b385f}{scapi\-\_\-spawn} (char $\ast$pc\-Buf, int n\-Blocking\-Flag, int $\ast$pn\-Child\-Exit\-Status)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I spawn A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gae17d91c15bab261cbca5eab865a33c04}{scapi\-\_\-route\-Add} (char $\ast$pc\-Dest, char $\ast$pc\-Gateway, char $\ast$pc\-Genmask, char $\ast$pc\-Dev, int n\-Metric)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I route add A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga85ded79b138f685c518beef3bdb65f84}{scapi\-\_\-route\-Del} (char $\ast$pc\-Dest, char $\ast$pc\-Gateway, char $\ast$pc\-Genmask, char $\ast$pc\-Dev)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I route delete A\-P\-I. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__LIBSCAPI_ga87279a7efdc7be321ae3d1dfb96caeb8}{scapi\-\_\-get\-\_\-process\-\_\-name} (pid\-\_\-t process\-\_\-num)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get process name A\-P\-I. \end{DoxyCompactList}\item 
+\hypertarget{group__LIBSCAPI_ga464b08f3a322019c77a7eb50968c47ed}{\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_ga464b08f3a322019c77a7eb50968c47ed}{Control\-D\-Ctl} (e\-Control\-D\-Option\-\_\-t e\-Control\-D\-Option, Control\-D\-Args\-\_\-t $\ast$px\-Control\-D\-Args)}\label{group__LIBSCAPI_ga464b08f3a322019c77a7eb50968c47ed}
+
+\begin{DoxyCompactList}\small\item\em A\-P\-I for command line utility of controld. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_gaffb61bb464f6359d31a433b1a7085dd5}{scapi\-\_\-procd\-Spawn} (char $\ast$pc\-Action, Procd\-Obj $\ast$px\-Procd\-Obj)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I procd spawn A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga0e74d65cb49b1de637607af1bf0ba66b}{scapi\-\_\-get\-Meminfo} (Mem\-Info $\ast$px\-Info)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get memory information A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gaf7547717eb0842457c303a2f079f3b5b}{scapi\-\_\-get\-C\-P\-U\-Info} (C\-P\-U\-Info $\ast$x\-Info)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get C\-P\-U information A\-P\-I. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_ga3a8bf8a55d5fc2cd7d22466af7f544ed}{scapi\-\_\-get\-Hardware\-Version} (char $\ast$pc\-Hw\-Ver)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get Hardware Version A\-P\-I. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_ga7b0c5f4426883487e40715e2e80137dd}{scapi\-\_\-get\-Model\-Name} (char $\ast$pc\-Model\-Name)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get Model Name A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gada7b44505a6113fbe3ee3d3e16109141}{scapi\-\_\-get\-Arp\-Table} (arp\-Table\-\_\-t $\ast$px\-Arp\-Table)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get arp table A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga90a839943087b6d1cd03f16c38ab97aa}{scapi\-\_\-get\-Mac\-Table} (mac\-Table\-\_\-t $\ast$px\-Mac\-Table, char $\ast$p\-Int\-Face)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I get M\-A\-C table A\-P\-I. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga986c35abd592dd612aeb0afce832a5a6}{scapi\-\_\-encryption} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-In\-File, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-Pass\-Wd, \hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} char $\ast$pc\-Out\-File)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I encrypt file. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_gaf86de8cb1dc3a743e67a0a8140d6b14b}{scapi\-\_\-decryption} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-In\-File, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-Pass\-Wd, \hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} char $\ast$pc\-Out\-File)
+\begin{DoxyCompactList}\small\item\em S\-C\-A\-P\-I decrypt file. \end{DoxyCompactList}\item 
+Procd\-Param\-List $\ast$ \hyperlink{group__LIBSCAPI_ga485c4155bc5825315bea2b48e564f209}{scapi\-\_\-set\-Procd\-Param\-List} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} Procd\-Param\-List $\ast$px\-Param\-List, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} const char $\ast$pc\-Param\-Name, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} const char $\ast$pc\-Param\-Value)
+\begin{DoxyCompactList}\small\item\em This function is used to create procd param list. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBSCAPI_ga25df7b3956934b110ea0596aefee803d}{scapi\-\_\-initialize\-Procd\-Obj} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} Procd\-Obj $\ast$px\-Procd\-Obj)
+\begin{DoxyCompactList}\small\item\em This function used to initialize the Procd obj to default. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{group__LIBSCAPI_ga5d1fae8311998344b32130a904886732}{scapi\-\_\-create\-Procd\-Param} (void)
+\begin{DoxyCompactList}\small\item\em function to allocate memory for Procd param list \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_gaf70610523fb08f08924d3e09b050d3e3}{scapi\-\_\-start\-Crond} (void)
+\begin{DoxyCompactList}\small\item\em Wrapper function to start crond daemon. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_ga5b3df75bbd9125de226ca44482d63e88}{scapi\-\_\-stop\-Crond} (void)
+\begin{DoxyCompactList}\small\item\em Wrapper function to stop crond daemon. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_ga3984100e53609ea9aba1ded81f9bb476}{scapi\-\_\-restart\-Crond} (void)
+\begin{DoxyCompactList}\small\item\em Wrapper function to Restart crond daemon. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_ga49ce95cc0f908512851b5b37ac23bf8e}{scapi\-\_\-set\-Cronjob} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-Min, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-Hour, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-Day\-Of\-Mon, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-Month, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-Day\-Of\-Week, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-Command, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} n\-Action)
+\begin{DoxyCompactList}\small\item\em Write to the configuration file with given inputs. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__LIBSCAPI_ga565ea74979c591cfdb75700accdbda44}{scapi\-\_\-get\-Base\-Mac} (char $\ast$pc\-Mac)
+\begin{DoxyCompactList}\small\item\em function to get mac address \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File contains the A\-P\-I prototypes defined for system config A\-P\-I. 

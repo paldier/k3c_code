@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structx__LTQ__Param" kind="struct" prot="public">
+    <compoundname>x_LTQ_Param</compoundname>
+    <includes refid="ugw__common_8h" local="no">ugw_common.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structx__LTQ__Param_1a6023ecf10fd4bdcafa9c291a29229355" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char x_LTQ_Param::acParamName[MAX_LEN_PARAM_NAME]</definition>
+        <argsstring>[MAX_LEN_PARAM_NAME]</argsstring>
+        <name>acParamName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Name of the param </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="83" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx__LTQ__Param_1abefad4567c0bd0638661ab6c294ba978" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t x_LTQ_Param::uiId</definition>
+        <argsstring></argsstring>
+        <name>uiId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Param id </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="84" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx__LTQ__Param_1a6418a8dffa891b6afd5caad55569b076" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t x_LTQ_Param::uiType</definition>
+        <argsstring></argsstring>
+        <name>uiType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Param type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="85" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx__LTQ__Param_1a654550468915b45a7b78e570e741baf2" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t x_LTQ_Param::unOffset</definition>
+        <argsstring></argsstring>
+        <name>unOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Offset </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="86" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx__LTQ__Param_1a8353f8dff855f22890e656ef2683cf14" prot="public" static="no" mutable="no">
+        <type><ref refid="structname__value__t" kindref="compound">name_value_t</ref> *</type>
+        <definition>name_value_t* x_LTQ_Param::nvLookUp</definition>
+        <argsstring></argsstring>
+        <name>nvLookUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Look up table for enums, maximum 16 values for an enum </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="87" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx__LTQ__Param_1a33e8fa5cc148e6b0aa51cf67423d0d4e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t x_LTQ_Param::unLookUpSize</definition>
+        <argsstring></argsstring>
+        <name>unLookUpSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Size of look up table for enums </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="88" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines the parameter-offset map for each structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="206">
+        <label>x_LTQ_Param</label>
+        <link refid="structx__LTQ__Param"/>
+        <childnode refid="207" relation="usage">
+          <edgelabel>nvLookUp</edgelabel>
+        </childnode>
+      </node>
+      <node id="207">
+        <label>name_value_t</label>
+        <link refid="structname__value__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="82" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="82" bodyend="89"/>
+    <listofallmembers>
+      <member refid="structx__LTQ__Param_1a6023ecf10fd4bdcafa9c291a29229355" prot="public" virt="non-virtual"><scope>x_LTQ_Param</scope><name>acParamName</name></member>
+      <member refid="structx__LTQ__Param_1a8353f8dff855f22890e656ef2683cf14" prot="public" virt="non-virtual"><scope>x_LTQ_Param</scope><name>nvLookUp</name></member>
+      <member refid="structx__LTQ__Param_1abefad4567c0bd0638661ab6c294ba978" prot="public" virt="non-virtual"><scope>x_LTQ_Param</scope><name>uiId</name></member>
+      <member refid="structx__LTQ__Param_1a6418a8dffa891b6afd5caad55569b076" prot="public" virt="non-virtual"><scope>x_LTQ_Param</scope><name>uiType</name></member>
+      <member refid="structx__LTQ__Param_1a33e8fa5cc148e6b0aa51cf67423d0d4e" prot="public" virt="non-virtual"><scope>x_LTQ_Param</scope><name>unLookUpSize</name></member>
+      <member refid="structx__LTQ__Param_1a654550468915b45a7b78e570e741baf2" prot="public" virt="non-virtual"><scope>x_LTQ_Param</scope><name>unOffset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

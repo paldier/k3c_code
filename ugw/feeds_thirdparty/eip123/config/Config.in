@@ -1,0 +1,50 @@
+config BUILD_IA_ONLY
+	bool
+  prompt "build image authenticator only"
+  default ""
+  help
+      Select it when we want to support only IA
+
+config RAM_CAPACITY
+	hex
+	prompt "configure the total ram"
+	default "0x20000000"
+	help
+			input the total ram capacity here
+
+config PHYS_RAM_OFFSET
+	hex
+	prompt "configure the ram start address"
+	default "0x20000000"
+	help
+			input the ram start address here
+
+config TEST_TSS
+	bool
+	prompt "Test the tss using sample app"
+	depends on !BUILD_IA_ONLY
+	default n
+	help
+		test the tss app using the test app, uses the top 1MB RAM of TEP
+
+config DRM_NORMAL_FLOW
+	bool
+	prompt "Use the normal DDK flow"
+  depends on !BUILD_IA_ONLY
+  default n
+  help
+    use the ddk flow for DRM streaming rather than optimised version
+
+config DRM_FLUSH
+	bool 
+	prompt "use the cache flush function in DDK for DRM flow"
+	depends on DRM_NORMAL_FLOW
+	help
+		use the cache flush function for normal DRM flow, if needed
+
+config UPDATE_OTP_ROLLBACK_ID
+	bool
+	prompt "update chip Anti Rollback ID"
+	default n
+	help
+		update chip Anti Rollback ID when image rollback id is greater than current id

@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structRMONGet__t" kind="struct" prot="public">
+    <compoundname>RMONGet_t</compoundname>
+    <includes refid="fapi__sys__common_8h" local="no">fapi_sys_common.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structRMONGet__t_1ad49ce0a03181db91ccfdc34dcca141fa" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t RMONGet_t::DropEvents</definition>
+        <argsstring></argsstring>
+        <name>DropEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="284" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRMONGet__t_1ad95dde3b8c58203a5e2d6e6d0e275ce3" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t RMONGet_t::RxBytes</definition>
+        <argsstring></argsstring>
+        <name>RxBytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="285" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRMONGet__t_1a6bfad17632ee92c5eaa77be4af8643b5" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t RMONGet_t::TxBytes</definition>
+        <argsstring></argsstring>
+        <name>TxBytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="286" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRMONGet__t_1a607eee470a935241c24624753176fa73" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t RMONGet_t::RxPackets</definition>
+        <argsstring></argsstring>
+        <name>RxPackets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="287" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRMONGet__t_1a5a58348022782295629af740cd7f611f" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t RMONGet_t::TxPackets</definition>
+        <argsstring></argsstring>
+        <name>TxPackets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="288" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRMONGet__t_1a3aff38c2f09f6810bf05e6a71de35265" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t RMONGet_t::BroadcastPackets</definition>
+        <argsstring></argsstring>
+        <name>BroadcastPackets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="289" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRMONGet__t_1a3cf49ca2bb85c9b10c9d54bc26a6e769" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t RMONGet_t::MulticastPackets</definition>
+        <argsstring></argsstring>
+        <name>MulticastPackets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="290" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRMONGet__t_1a0c0d3d2af2a90339300aaec050ca0be1" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t RMONGet_t::CRCErroredPackets</definition>
+        <argsstring></argsstring>
+        <name>CRCErroredPackets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="291" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRMONGet__t_1a0c72b5eb2132d4fdcc97ec980745c744" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t RMONGet_t::UndersizePackets</definition>
+        <argsstring></argsstring>
+        <name>UndersizePackets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="292" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRMONGet__t_1a82b1df0b805a59ccc011605aee96a6f6" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t RMONGet_t::OversizePackets</definition>
+        <argsstring></argsstring>
+        <name>OversizePackets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="293" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRMONGet__t_1a34dec102db101ad15f9887f22c0ee234" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t RMONGet_t::Packets64Bytes</definition>
+        <argsstring></argsstring>
+        <name>Packets64Bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="294" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRMONGet__t_1a9306a719ea1cc67525deb97db7f76b8f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t RMONGet_t::Packets65to127Bytes</definition>
+        <argsstring></argsstring>
+        <name>Packets65to127Bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="295" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRMONGet__t_1ab66569374fd750ec70030108bace9a45" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t RMONGet_t::Packets128to255Bytes</definition>
+        <argsstring></argsstring>
+        <name>Packets128to255Bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="296" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRMONGet__t_1acafa64429c1b86e0d49950ea9c436ed2" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t RMONGet_t::Packets256to511Bytes</definition>
+        <argsstring></argsstring>
+        <name>Packets256to511Bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="297" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRMONGet__t_1a81d5dbcc5927bd6c6e574ce42d89181d" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t RMONGet_t::Packets512to1023Bytes</definition>
+        <argsstring></argsstring>
+        <name>Packets512to1023Bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="298" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRMONGet__t_1ae1ecff4c3dc2e96713f8670084c64330" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t RMONGet_t::Packets1024to1518Bytes</definition>
+        <argsstring></argsstring>
+        <name>Packets1024to1518Bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="299" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure describing switch RMON parameters. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="283" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="283" bodyend="300"/>
+    <listofallmembers>
+      <member refid="structRMONGet__t_1a3aff38c2f09f6810bf05e6a71de35265" prot="public" virt="non-virtual"><scope>RMONGet_t</scope><name>BroadcastPackets</name></member>
+      <member refid="structRMONGet__t_1a0c0d3d2af2a90339300aaec050ca0be1" prot="public" virt="non-virtual"><scope>RMONGet_t</scope><name>CRCErroredPackets</name></member>
+      <member refid="structRMONGet__t_1ad49ce0a03181db91ccfdc34dcca141fa" prot="public" virt="non-virtual"><scope>RMONGet_t</scope><name>DropEvents</name></member>
+      <member refid="structRMONGet__t_1a3cf49ca2bb85c9b10c9d54bc26a6e769" prot="public" virt="non-virtual"><scope>RMONGet_t</scope><name>MulticastPackets</name></member>
+      <member refid="structRMONGet__t_1a82b1df0b805a59ccc011605aee96a6f6" prot="public" virt="non-virtual"><scope>RMONGet_t</scope><name>OversizePackets</name></member>
+      <member refid="structRMONGet__t_1ae1ecff4c3dc2e96713f8670084c64330" prot="public" virt="non-virtual"><scope>RMONGet_t</scope><name>Packets1024to1518Bytes</name></member>
+      <member refid="structRMONGet__t_1ab66569374fd750ec70030108bace9a45" prot="public" virt="non-virtual"><scope>RMONGet_t</scope><name>Packets128to255Bytes</name></member>
+      <member refid="structRMONGet__t_1acafa64429c1b86e0d49950ea9c436ed2" prot="public" virt="non-virtual"><scope>RMONGet_t</scope><name>Packets256to511Bytes</name></member>
+      <member refid="structRMONGet__t_1a81d5dbcc5927bd6c6e574ce42d89181d" prot="public" virt="non-virtual"><scope>RMONGet_t</scope><name>Packets512to1023Bytes</name></member>
+      <member refid="structRMONGet__t_1a34dec102db101ad15f9887f22c0ee234" prot="public" virt="non-virtual"><scope>RMONGet_t</scope><name>Packets64Bytes</name></member>
+      <member refid="structRMONGet__t_1a9306a719ea1cc67525deb97db7f76b8f" prot="public" virt="non-virtual"><scope>RMONGet_t</scope><name>Packets65to127Bytes</name></member>
+      <member refid="structRMONGet__t_1ad95dde3b8c58203a5e2d6e6d0e275ce3" prot="public" virt="non-virtual"><scope>RMONGet_t</scope><name>RxBytes</name></member>
+      <member refid="structRMONGet__t_1a607eee470a935241c24624753176fa73" prot="public" virt="non-virtual"><scope>RMONGet_t</scope><name>RxPackets</name></member>
+      <member refid="structRMONGet__t_1a6bfad17632ee92c5eaa77be4af8643b5" prot="public" virt="non-virtual"><scope>RMONGet_t</scope><name>TxBytes</name></member>
+      <member refid="structRMONGet__t_1a5a58348022782295629af740cd7f611f" prot="public" virt="non-virtual"><scope>RMONGet_t</scope><name>TxPackets</name></member>
+      <member refid="structRMONGet__t_1a0c72b5eb2132d4fdcc97ec980745c744" prot="public" virt="non-virtual"><scope>RMONGet_t</scope><name>UndersizePackets</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

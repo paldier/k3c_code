@@ -1,0 +1,26 @@
+diff -Naur ../RT5592AP_wifi_v2715_DPA_20121207/common/cmm_info.c RT5592AP_wifi_v2715_DPA_20121207/common/cmm_info.c
+--- ../RT5592AP_wifi_v2715_DPA_20121207/common/cmm_info.c	2014-05-14 20:02:59.000000000 +0530
++++ RT5592AP_wifi_v2715_DPA_20121207/common/cmm_info.c	2014-05-14 20:11:19.000000000 +0530
+@@ -999,7 +999,7 @@
+                                                             pAd->pDirectpathCb, PPA_F_DIRECTPATH_REGISTER|PPA_F_DIRECTPATH_ETH_IF);
+                                 }
+ 
+-				if(status==IFX_SUCCESS)
++				if(status==PPA_SUCCESS)
+ 				{
+ 					pAd->g_if_id[bssid]=g_if_id;
+ 					DBGPRINT(RT_DEBUG_TRACE, ("register INF_AMAZON_SE_PPA success :ret:%d id:%d:%d\n",status,pAd->g_if_id,g_if_id));
+diff -Naur ../RT5592AP_wifi_v2715_DPA_20121207/include/os/rt_linux.h RT5592AP_wifi_v2715_DPA_20121207/include/os/rt_linux.h
+--- ../RT5592AP_wifi_v2715_DPA_20121207/include/os/rt_linux.h	2014-05-14 20:02:59.000000000 +0530
++++ RT5592AP_wifi_v2715_DPA_20121207/include/os/rt_linux.h	2014-05-14 20:10:57.000000000 +0530
+@@ -40,8 +40,8 @@
+ #include <net/iw_handler.h>
+ 
+ #ifdef INF_PPA_SUPPORT
+-#include <net/ifx_ppa_api.h>
+-#include <net/ifx_ppa_hook.h>
++#include <net/ppa_api.h>
++#include <net/ppa_hook.h>
+ #endif /* INF_PPA_SUPPORT */
+ 
+ /* load firmware */

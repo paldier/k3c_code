@@ -1,0 +1,32 @@
+{
+  "BondMode" : [
+                                { 
+                                  "name": "Balance-rr", 
+                                "id": "0" 
+                                }, 
+                                { 
+                                  "name": "Active Backup", 
+                                "id": "1" 
+                                }, 
+                                { 
+                                  "name": "Balance-XOR", 
+                                  "id": "2" 
+                                } ,
+				{ 
+                                  "name": "Broadcast", 
+                                "id": "3" 
+                                }, 
+                                { 
+                                  "name": "802.3ad", 
+                                "id": "4" 
+                                }, 
+                                { 
+                                  "name": "Balance-TLB", 
+                                  "id": "5" 
+                                } ,
+				{ 
+                                  "name": "Balance-ALB", 
+                                "id": "6" 
+                                } 
+                ]
+}

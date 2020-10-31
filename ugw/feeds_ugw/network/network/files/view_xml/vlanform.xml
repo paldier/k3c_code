@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view viewid="lanvlanform">
+<helptext></helptext>
+    <header>
+    <image>images/icons/multicast.png</image>
+        <name>LAN VLAN</name>
+        <description>Edit LAN VLAN configuration</description>
+    </header>
+    <object name="Device.Ethernet.VLANTermination.*" viewtype="form"  icon="settings-1" title="Settings">
+        <row><col><parameter  name="VLANID"  type="number" webname="VLAN" ></parameter></col></row>
+        <parameter  name="LowerLayers" type="dropdown" url="cgi_get_filterbyfirstparamval?Object=Device.X_LANTIQ_COM_NwHardware.LANGroup&amp;Enable=true&amp;InterfaceName=" webname="LAN Interface" ></parameter>
+        <parameter  name="Add"  action="post" routeurl="Apply($event,'vlantable')" type="submitbutton" webname="Apply"></parameter>  
+    </object>  
+</view>

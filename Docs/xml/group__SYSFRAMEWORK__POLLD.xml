@@ -1,0 +1,435 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__SYSFRAMEWORK__POLLD" kind="group">
+    <compoundname>SYSFRAMEWORK_POLLD</compoundname>
+    <title>Polling</title>
+    <innerclass refid="structpolldInfo" prot="public">polldInfo</innerclass>
+    <innerclass refid="structPolldResp" prot="public">PolldResp</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__SYSFRAMEWORK__POLLD_1gae10b07f2d0feb103db7fe4cfd192e5af" prot="public" static="no">
+        <name>RequestType</name>
+        <enumvalue id="group__SYSFRAMEWORK__POLLD_1ggae10b07f2d0feb103db7fe4cfd192e5afa63e66fe0a1e1de6cfed3c85a9aa48315" prot="public">
+          <name>REQTYPE_TIMER_ADD</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Add new timer </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__SYSFRAMEWORK__POLLD_1ggae10b07f2d0feb103db7fe4cfd192e5afa08e0354be826a836f72ebfa716a7d290" prot="public">
+          <name>REQTYPE_TIMER_DEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Delete existing timer value </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__SYSFRAMEWORK__POLLD_1ggae10b07f2d0feb103db7fe4cfd192e5afa3a3504998275abee398a70197a8bf6e4" prot="public">
+          <name>REQTYPE_TIMER_MOD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Modify existing timer value </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum containing the type of request for polld. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="119" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="119" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__SYSFRAMEWORK__POLLD_1ga8d3aaea1dc4569e14bc3b498c3131b2a" prot="public" static="no">
+        <name>TimerRecurence</name>
+        <enumvalue id="group__SYSFRAMEWORK__POLLD_1gga8d3aaea1dc4569e14bc3b498c3131b2aa295266347c0bdf8dcd25d42a03275c79" prot="public">
+          <name>TIMERRECURENCE_ONCE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Add new timer </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__SYSFRAMEWORK__POLLD_1gga8d3aaea1dc4569e14bc3b498c3131b2aacfa2040c602a9b9afe857229cc05d3ad" prot="public">
+          <name>TIMERRECURENCE_RECURRING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>recurring timer </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum containing timeout for once or repeatedly. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="128" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="128" bodyend="131"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" prot="public" static="no">
+        <type>struct <ref refid="structpolldInfo" kindref="compound">polldInfo</ref></type>
+        <definition>typedef struct polldInfo  PolldTimeInfo</definition>
+        <argsstring></argsstring>
+        <name>PolldTimeInfo</name>
+        <briefdescription>
+<para>Contains the timer fields for polld. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="107" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__SYSFRAMEWORK__POLLD_1gab66601607b9776a27d87bcfc0b024b6f" prot="public" static="no">
+        <type>struct <ref refid="structPolldResp" kindref="compound">PolldResp</ref></type>
+        <definition>typedef struct PolldResp  PolldRespCode</definition>
+        <argsstring></argsstring>
+        <name>PolldRespCode</name>
+        <briefdescription>
+<para>Contains the response code for Callbacks of polld. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="114" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__SYSFRAMEWORK__POLLD_1gae320b4db14b8f6d6c2cb985921722afa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref> *</type>
+        <definition>PolldTimeInfo* help_createTimerList</definition>
+        <argsstring>(void)</argsstring>
+        <name>help_createTimerList</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Function to create head node for polld timer list. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Head node pointer on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="137" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SYSFRAMEWORK__POLLD_1gaf539f6e7bd349a8e5f3203efda7448f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void help_delTimerList</definition>
+        <argsstring>(IN PolldTimeInfo **pxTimerList)</argsstring>
+        <name>help_delTimerList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref> **</type>
+          <declname>pxTimerList</declname>
+        </param>
+        <briefdescription>
+<para>Function to delete the polld timer linked list. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxTimerList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Head pointer of timerlinked list </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Head node pointer on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="144" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SYSFRAMEWORK__POLLD_1ga7b5d0762e28e4e09406a75548c61bb4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void help_printTimerList</definition>
+        <argsstring>(IN PolldTimeInfo *pxTimerList)</argsstring>
+        <name>help_printTimerList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref> *</type>
+          <declname>pxTimerList</declname>
+        </param>
+        <briefdescription>
+<para>Function to print polld timer linked list. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxTimerList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Head pointer of timer linked list </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Prints timer linkedlist values on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="151" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SYSFRAMEWORK__POLLD_1ga8de5216d3d5e3b7b979c6fc189d35ade" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_addTimerList</definition>
+        <argsstring>(OUT PolldTimeInfo *pxTimerList, IN PolldTimeInfo *pxTimeInfo)</argsstring>
+        <name>help_addTimerList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref> *</type>
+          <declname>pxTimerList</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref> *</type>
+          <declname>pxTimeInfo</declname>
+        </param>
+        <briefdescription>
+<para>Function to add a new timer node in polld timer linked list. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pxTimerList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Head pointer of polld timer linked list </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxTimeInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Polld timer structure to be added </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Success on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="159" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SYSFRAMEWORK__POLLD_1gab17830ba31bb4e46a053646e6fca23f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ubusMsgToPolld</definition>
+        <argsstring>(IN MainOper eOperation, IN MsgHeader *pxDynMsg, OUT MsgHeader *pxOutputMsg, IN PolldTimeInfo *pxTimerList)</argsstring>
+        <name>ubusMsgToPolld</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__LIBHELP_1ga0cdba030aaa0bd18b24dbf19b06877a0" kindref="member">MainOper</ref></type>
+          <declname>eOperation</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxDynMsg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxOutputMsg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref> *</type>
+          <declname>pxTimerList</declname>
+        </param>
+        <briefdescription>
+<para>Function to send ubus message to polld. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">eOperation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operation such as GET </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxDynMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message header contains objList and <ref refid="structParamList" kindref="compound">ParamList</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pxOutputMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message header contains objList and <ref refid="structParamList" kindref="compound">ParamList</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxTimerList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Struct contains timer info </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Success on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="169" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SYSFRAMEWORK__POLLD_1ga631a79daf4414553f01214f9f51d3b94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_objListToBlobPolld</definition>
+        <argsstring>(OUT struct blob_buf *buf, IN MsgHeader *pxMsg, IN struct ubus_context *ctx, IN struct ubus_request_data *req, IN PolldTimeInfo *pxTimerList)</argsstring>
+        <name>help_objListToBlobPolld</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> struct blob_buf *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxMsg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct ubus_context *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct ubus_request_data *</type>
+          <declname>req</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref> *</type>
+          <declname>pxTimerList</declname>
+        </param>
+        <briefdescription>
+<para>Function to convert objlist and polld timers to blob message. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blob attribute structure </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>message header contains objList and <ref refid="structParamList" kindref="compound">ParamList</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer contains ubus context </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contains ubus request data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxTimerList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contains polld timer info </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Success on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="180" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SYSFRAMEWORK__POLLD_1ga6146742ce8a6c2a48d3ed56d5ba96e55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_blobToObjListPolld</definition>
+        <argsstring>(IN struct blob_attr *msg, OUT MsgHeader *pxMsg, OUT PolldTimeInfo *pxTimerInfo)</argsstring>
+        <name>help_blobToObjListPolld</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct blob_attr *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxMsg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref> *</type>
+          <declname>pxTimerInfo</declname>
+        </param>
+        <briefdescription>
+<para>Function to convert blob message to objList and polld timers. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contains blob attribute </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pxMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message header contains objList and <ref refid="structParamList" kindref="compound">ParamList</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pxTimerInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contains polld time info </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Success on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="189" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__SYSFRAMEWORK__POLLD_1gac79d24ad3b52565290d3fbd22a47498f" prot="public" static="no">
+        <name>FOR_EACH_TIMER_ONLY</name>
+        <param><defname>__pxSrc</defname></param>
+        <param><defname>__pxParam</defname></param>
+        <initializer>list_for_each_entry(__pxParam,&amp;(__pxSrc-&gt;xPlist),xPlist) \</initializer>
+        <briefdescription>
+<para>Macro used to loop through timerlist. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">__pxSrc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to pxTimerList </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">__pxParam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer pxTimerTmp, used to copy the actual pxTimerList values </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="196" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__POLLD_1ga8d9ee84002519619a100089e8bd1a3ad" prot="public" static="no">
+        <name>DELETE_TIMER_NODE</name>
+        <param><defname>__pxNode</defname></param>
+        <initializer>do { <ref refid="group__SYSFRAMEWORK__LOG_1ga8ce0b241ee6ed787655fc6c683610cfa" kindref="member">LOGF_LOG_INFO</ref>(&quot;Deleting : %p Timer Node\n&quot;, pxTimerTmp); list_del(&amp;__pxNode-&gt;xPlist); <ref refid="group__LIBHELP_1gad8118b0746b34f72d8b9a150290716e5" kindref="member">HELP_FREE</ref>(__pxNode); } while(0);</initializer>
+        <briefdescription>
+<para>Free up the timer linked list. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">__pxNode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to free </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="203" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Polld daemon provides polling framework for the system. It is capable of performing polling operation either at dynamic object or param level. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

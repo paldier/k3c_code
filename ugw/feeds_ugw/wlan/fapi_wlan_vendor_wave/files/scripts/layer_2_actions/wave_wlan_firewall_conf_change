@@ -1,0 +1,165 @@
+#!/bin/sh
+
+# Defines
+if [ ! "$MTLK_INIT_PLATFORM" ]; then
+        . /tmp/mtlk_init_platform.sh
+fi
+
+print2log DBG "running wave_wlan_firewall_conf_change, args: $*"	
+
+##############################################
+safe_rc_conf_validation()
+{
+    /usr/sbin/syscfg_lock $CONFIGS_PATH/rc.conf "
+    ret=0
+    # Verify rc.conf sanity
+    /usr/sbin/rcconf_chk $CONFIGS_PATH/rc.conf
+    error=\$?
+    if [ \$error -ne 0 ]
+    then
+        echo host_api: Critical error at rc.conf file sanity > /dev/console
+        exit 1
+    fi
+    `grep "^wlhs2f" $CONFIGS_PATH/rc.conf >  /tmp/l2f.conf_$$`
+    # close lock, release file:
+    "
+    #error in sanity?
+    ret=$?
+    return $ret
+}
+
+# Need to use rc.conf parameters.
+# safe copy of rc.conf to tmp file
+safe_rc_conf_validation
+
+ret_val=$?
+if [ $ret_val = 0 ]
+then
+	# safely source rc.conf copy.
+	. /tmp/l2f.conf_$$
+	rm /tmp/l2f.conf_$$
+else
+	# failed to safe access rc.conf
+	print2log ERR "ERROR in mtlk_init_hosrapd.sh: could not source rc.conf, exit."
+	exit
+fi
+##############################################
+
+rule_index=$1
+action=$2
+# Get apIndex:
+eval apIndex=\${wlhs2f_${rule_index}_pcpeId}
+#decrement to get the interface (pcpeId is apIndex+1)
+let apIndex=$apIndex-1 
+eval rule_number=\${wlhs2f_${rule_index}_cpeId}
+
+timestamp "wave_wlan_firewall_conf_change:$apIndex:begin"
+
+wlan=`find_wave_if_from_index $apIndex`
+print2log HS20 "wave_wlan_firewall_conf_change: rule_index=$rule_index, apIndex=$apIndex, wlan=$wlan, rule_number=$rule_number"
+
+# Remove rule_index and action from function input
+shift
+shift
+
+### Here's a few examples of L2 Firewall rule setting through command line/script:
+###   Block ping from ingress interface lan0.0:
+###                   wlan_l2f_ctrl.sh add wlan0.0 1 -a logdeny -i lan0.0 -p 1
+###   Block multicast packets destined to 192.168.10.2:
+###                   wlan_l2f_ctrl.sh add wlan0.1 3 -a deny -dip 192.168.10.2 -t mc
+###   Block broadcast packets from udp port 67
+###                   wlan_l2f_ctrl.sh add wlan0.0 2 -a logdeny -t bc -sp 67
+
+case $action in
+	remove)
+		$ETC_PATH/wave_wifi_l2f_ctrl.sh remove $wlan $rule_number
+	;;
+	add | modify)
+		# Prepare the data:
+		eval tmp_val=\${wlhs2f_${rule_index}_action}
+		case $tmp_val in
+		0)
+			value="-a accept"
+		;;
+		1)
+			value="-a deny"
+		;;
+		2)
+			value="-a logaccept"
+		;;
+		3)
+			value="-a logdeny"
+		;;
+		esac
+
+		eval tmp_val=\${wlhs2f_${rule_index}_ingressIface}
+		if [ -n "$tmp_val" ]
+		then
+			value="${value} -i $tmp_val"
+		fi
+
+		eval tmp_val=\${wlhs2f_${rule_index}_protocol}
+		if [ "$tmp_val" != "0" ]
+		then
+			value="${value} -p $tmp_val"
+		fi
+
+		eval tmp_val=\${wlhs2f_${rule_index}_srcMac}
+		if [ -n "$tmp_val" ]
+		then
+			value="${value} -s $tmp_val"
+		fi
+
+		eval tmp_val=\${wlhs2f_${rule_index}_dstMac}
+		if [ -n "$tmp_val" ]
+		then
+			value="${value} -d $tmp_val"
+		fi
+
+		# Prepare the data:
+		eval tmp_val=\${wlhs2f_${rule_index}_packetType}
+		case $tmp_val in
+		# 0) all (val=0) is the defaults, no need to add "-t all"
+		1)
+			value="${value} -t uc"
+		;;
+		2)
+			value="${value} -t mc"
+		;;
+		3)
+			value="${value} -t bc"
+		;;
+		esac
+
+		eval tmp_val=\${wlhs2f_${rule_index}_srcIp}
+		if [ -n "$tmp_val" ]
+		then
+			value="${value} -sip $tmp_val"
+		fi
+
+		eval tmp_val=\${wlhs2f_${rule_index}_dstIp}
+		if [ -n "$tmp_val" ]
+		then
+			value="${value} -dip $tmp_val"
+		fi
+
+		eval tmp_val=\${wlhs2f_${rule_index}_srcPort}
+		if [ -n "$tmp_val" ]
+		then
+			value="${value} -sp $tmp_val"
+		fi
+
+		eval tmp_val=\${wlhs2f_${rule_index}_dstPort}
+		if [ -n "$tmp_val" ]
+		then
+			value="${value} -dp $tmp_val"
+		fi
+		print2log HS20 "wave_wlan_firewall_conf_change: write value = $value"
+		$ETC_PATH/wave_wifi_l2f_ctrl.sh $action $wlan $rule_number "$value"
+	;;
+esac
+
+
+print2log DBG "wave_wlan_firewall_conf_change done"
+timestamp "wave_wlan_firewall_conf_change:$apIndex:done"
+

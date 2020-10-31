@@ -1,0 +1,1 @@
+all: liblanservices.so

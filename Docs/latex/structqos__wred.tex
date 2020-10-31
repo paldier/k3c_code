@@ -1,0 +1,66 @@
+\hypertarget{structqos__wred}{\section{qos\-\_\-wred Struct Reference}
+\label{structqos__wred}\index{qos\-\_\-wred@{qos\-\_\-wred}}
+}
+
+
+Qo\-S W\-R\-E\-D Drop configuration structure.  
+
+
+
+
+{\ttfamily \#include $<$qosal\-\_\-queue\-\_\-api.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t \hyperlink{structqos__wred_ad24e5f107f4f64ef4db622e8d456b65c}{weight}
+\item 
+uint32\-\_\-t \hyperlink{structqos__wred_ac49810c9d53aa8638bcdd24a2ec13d7f}{min\-\_\-th0}
+\item 
+uint32\-\_\-t \hyperlink{structqos__wred_a348045f227c28243a2399d45db0d144c}{max\-\_\-th0}
+\item 
+uint32\-\_\-t \hyperlink{structqos__wred_acc7d45f6204665b61a572a8ab338a5da}{max\-\_\-p0}
+\item 
+uint32\-\_\-t \hyperlink{structqos__wred_a0a66c03609dbfb8e9cd41605c4f1343d}{min\-\_\-th1}
+\item 
+uint32\-\_\-t \hyperlink{structqos__wred_ae7542f270e832e26f5bd6cc1abd5b75c}{max\-\_\-th1}
+\item 
+uint32\-\_\-t \hyperlink{structqos__wred_a10a26159a7b75615c704cf85a53201b6}{max\-\_\-p1}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Qo\-S W\-R\-E\-D Drop configuration structure. 
+
+\begin{DoxyRemark}{Remarks}
+If R\-E\-D, then this is same as W\-R\-E\-D Curve 0 only configuration 
+\end{DoxyRemark}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structqos__wred_acc7d45f6204665b61a572a8ab338a5da}{\index{qos\-\_\-wred@{qos\-\_\-wred}!max\-\_\-p0@{max\-\_\-p0}}
+\index{max\-\_\-p0@{max\-\_\-p0}!qos_wred@{qos\-\_\-wred}}
+\subsubsection[{max\-\_\-p0}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-wred\-::max\-\_\-p0}}\label{structqos__wred_acc7d45f6204665b61a572a8ab338a5da}
+Maximum Drop Probability \% at max\-\_\-th0 for W\-R\-E\-D Curve 0 \hypertarget{structqos__wred_a10a26159a7b75615c704cf85a53201b6}{\index{qos\-\_\-wred@{qos\-\_\-wred}!max\-\_\-p1@{max\-\_\-p1}}
+\index{max\-\_\-p1@{max\-\_\-p1}!qos_wred@{qos\-\_\-wred}}
+\subsubsection[{max\-\_\-p1}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-wred\-::max\-\_\-p1}}\label{structqos__wred_a10a26159a7b75615c704cf85a53201b6}
+Maximum Drop Probability \% at max\-\_\-th1 for W\-R\-E\-D Curve 1 \hypertarget{structqos__wred_a348045f227c28243a2399d45db0d144c}{\index{qos\-\_\-wred@{qos\-\_\-wred}!max\-\_\-th0@{max\-\_\-th0}}
+\index{max\-\_\-th0@{max\-\_\-th0}!qos_wred@{qos\-\_\-wred}}
+\subsubsection[{max\-\_\-th0}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-wred\-::max\-\_\-th0}}\label{structqos__wred_a348045f227c28243a2399d45db0d144c}
+Maximum Threshold for W\-R\-E\-D Curve 0 in \% of qlen \hypertarget{structqos__wred_ae7542f270e832e26f5bd6cc1abd5b75c}{\index{qos\-\_\-wred@{qos\-\_\-wred}!max\-\_\-th1@{max\-\_\-th1}}
+\index{max\-\_\-th1@{max\-\_\-th1}!qos_wred@{qos\-\_\-wred}}
+\subsubsection[{max\-\_\-th1}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-wred\-::max\-\_\-th1}}\label{structqos__wred_ae7542f270e832e26f5bd6cc1abd5b75c}
+Maximum Threshold for W\-R\-E\-D Curve 1 in \% of qlen \hypertarget{structqos__wred_ac49810c9d53aa8638bcdd24a2ec13d7f}{\index{qos\-\_\-wred@{qos\-\_\-wred}!min\-\_\-th0@{min\-\_\-th0}}
+\index{min\-\_\-th0@{min\-\_\-th0}!qos_wred@{qos\-\_\-wred}}
+\subsubsection[{min\-\_\-th0}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-wred\-::min\-\_\-th0}}\label{structqos__wred_ac49810c9d53aa8638bcdd24a2ec13d7f}
+Minimum Threshold for W\-R\-E\-D Curve 0 in \% of qlen \hypertarget{structqos__wred_a0a66c03609dbfb8e9cd41605c4f1343d}{\index{qos\-\_\-wred@{qos\-\_\-wred}!min\-\_\-th1@{min\-\_\-th1}}
+\index{min\-\_\-th1@{min\-\_\-th1}!qos_wred@{qos\-\_\-wred}}
+\subsubsection[{min\-\_\-th1}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-wred\-::min\-\_\-th1}}\label{structqos__wred_a0a66c03609dbfb8e9cd41605c4f1343d}
+Minimum Threshold for W\-R\-E\-D Curve 1 in \% of qlen \hypertarget{structqos__wred_ad24e5f107f4f64ef4db622e8d456b65c}{\index{qos\-\_\-wred@{qos\-\_\-wred}!weight@{weight}}
+\index{weight@{weight}!qos_wred@{qos\-\_\-wred}}
+\subsubsection[{weight}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-wred\-::weight}}\label{structqos__wred_ad24e5f107f4f64ef4db622e8d456b65c}
+Weighting factor for Q\-A\-V\-G calculation 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qosal__queue__api_8h}{qosal\-\_\-queue\-\_\-api.\-h}\end{DoxyCompactItemize}

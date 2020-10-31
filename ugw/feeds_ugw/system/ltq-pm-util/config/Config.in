@@ -1,0 +1,47 @@
+config LTQ_PM_UTIL_USER_FLAGS
+	depends on PACKAGE_ltq-pm-util
+	string "Additional CFLAGS"
+	default ""
+	help
+		Additional CFLAGS for compilation (for developers)
+		(e.g -O0) 
+
+choice
+	prompt "cpu frequency scaling"
+	default LTQ_CPUFREQ_DISABLED
+	help
+	  Define the load dependend cpu frequency scaling.
+
+	config LTQ_CPUFREQ_ENABLED
+		bool "enable dynamic cpu frequency scaling"
+		help
+		  Set governor to LANTIQGOV and enable Sub System Control.
+
+	config LTQ_CPUFREQ_DISABLED
+		bool "disable dynamic cpu frequency scaling"
+		help
+		  Set governor to USERSPACE and disable Sub System Control.
+endchoice 
+
+choice
+	prompt "dynamic voltage scaling"
+	default LTQ_DVS_DISABLED
+	help
+	  Define if dynamic core voltage scaling is active or not.
+	  Only the digital core voltage will be scaled depending on the
+	  speed grade of the current device.
+
+	config LTQ_DVS_ENABLED
+		bool "enable dynamic voltage scaling"
+		help
+		  Depending on the speed grade of the device, which will be checked
+		  during boot-up, a specific digital core voltage will be set via
+		  an I2C controlable dcdc.
+
+	config LTQ_DVS_DISABLED
+		bool "disable dynamic voltage scaling"
+		help
+		  I2C control of the dcdc is disabled(default) and the core
+		  voltage is defined by the hardware settings.
+endchoice 
+

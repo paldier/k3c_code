@@ -1,0 +1,30 @@
+\hypertarget{cal_8h}{\section{cal.\-h File Reference}
+\label{cal_8h}\index{cal.\-h@{cal.\-h}}
+}
+
+
+File contains structure and function definitions for C\-A\-L functionalities. C\-A\-L provides a set of A\-P\-Is that allow the get/set of data from the database for different modules across the system.  
+
+
+{\ttfamily \#include $<$ugw\-\_\-objmsg.\-h$>$}\\*
+{\ttfamily \#include $<$ugw\-\_\-proto.\-h$>$}\\*
+{\ttfamily \#include $<$capi.\-h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__LIBCAL_gae3a199f14f16bdc4294dc90a98d26389}{cal\-\_\-get\-Value} (\hyperlink{group__LIBHELP_ga62766f3ea8784d1db62df989f8f33d2d}{I\-N\-O\-U\-T} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Obj)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to get the values of parameters in the given object, their S\-I\-D and O\-I\-D from the D\-B and real time statistics from the system. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBCAL_ga886e5f6e932794f73ee4b9c985ad609d}{cal\-\_\-set\-Value} (\hyperlink{group__LIBHELP_ga62766f3ea8784d1db62df989f8f33d2d}{I\-N\-O\-U\-T} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Obj\-List)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to set the value(s) for parameter(s) in one or multiple objects in the System. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBCAL_ga2490637f30536869ccdf1694639a011a}{cal\-\_\-get\-Value\-From\-Db} (\hyperlink{group__LIBHELP_ga62766f3ea8784d1db62df989f8f33d2d}{I\-N\-O\-U\-T} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Obj)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to get the values of parameters in an object, their O\-I\-D, S\-I\-D and dynamic attribute information from the D\-B only. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBCAL_ga95a08176db1a7c26f079e822b3c00f6d}{cal\-\_\-set\-Value\-To\-Db} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Obj\-List)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to set the value(s) for parameter(s) in one or multiple objects to the D\-B. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBCAL_ga1d47677aa96d141afef95e4ba948d235}{cal\-\_\-update\-Periodic\-Values} (\hyperlink{group__LIBHELP_ga62766f3ea8784d1db62df989f8f33d2d}{I\-N\-O\-U\-T} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Msg)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to fetch the values of parameters from S\-L and set it to D\-B. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBCAL_gad84cebd364884a0d3e3447065174a191}{cal\-\_\-send\-Msg\-To\-Polld} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{structMsgHeader}{Msg\-Header} $\ast$px\-Msg, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} \hyperlink{group__SYSFRAMEWORK__POLLD_gaac3d35d6a6150660580f1c201baf5ca9}{Polld\-Time\-Info} $\ast$p\-Polld\-Time)
+\begin{DoxyCompactList}\small\item\em A\-P\-I to send the object(s) and timer(s) to polld. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File contains structure and function definitions for C\-A\-L functionalities. C\-A\-L provides a set of A\-P\-Is that allow the get/set of data from the database for different modules across the system. 

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structx__qoscfg__t" kind="struct" prot="public">
+    <compoundname>x_qoscfg_t</compoundname>
+    <includes refid="qosal__queue__api_8h" local="no">qosal_queue_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structx__qoscfg__t_1ac098e70da1453dadcbfd90d71821dd58" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t x_qoscfg_t::uiflags</definition>
+        <argsstring></argsstring>
+        <name>uiflags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operational flags </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="354" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="354" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx__qoscfg__t_1a3171bbbcee1d1bc312a211c41073f183" prot="public" static="no" mutable="no">
+        <type><ref refid="group__FAPI__QOS__GENERAL_1gabfc98fb0c7c5226badf1eb79b4ab6e2b" kindref="member">qos_cfg_t</ref></type>
+        <definition>qos_cfg_t x_qoscfg_t::qoscfg</definition>
+        <argsstring></argsstring>
+        <name>qoscfg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>QOS general configuration structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="355" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="355" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>QoS Queue General configuration structure used for inter process communication. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="216">
+        <label>qos_cfg</label>
+        <link refid="structqos__cfg"/>
+      </node>
+      <node id="215">
+        <label>x_qoscfg_t</label>
+        <link refid="structx__qoscfg__t"/>
+        <childnode refid="216" relation="usage">
+          <edgelabel>qoscfg</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="353" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="353" bodyend="356"/>
+    <listofallmembers>
+      <member refid="structx__qoscfg__t_1a3171bbbcee1d1bc312a211c41073f183" prot="public" virt="non-virtual"><scope>x_qoscfg_t</scope><name>qoscfg</name></member>
+      <member refid="structx__qoscfg__t_1ac098e70da1453dadcbfd90d71821dd58" prot="public" virt="non-virtual"><scope>x_qoscfg_t</scope><name>uiflags</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

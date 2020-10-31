@@ -1,0 +1,429 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structcl__match__filter__t" kind="struct" prot="public">
+    <compoundname>cl_match_filter_t</compoundname>
+    <includes refid="qosal__cl__api_8h" local="no">qosal_cl_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcl__match__filter__t_1abb961ab5e05074003112e334646955b8" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_match_filter_t::enable</definition>
+        <argsstring></argsstring>
+        <name>enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether Filter is enabled </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="763" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="763" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1ae03c1c223e9dc94b6f91c665f604b1d2" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_match_filter_t::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operational status of the filter. Only valid on GET </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="764" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="764" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1afc0fa04b66e0e2e9427b6f0ef139fafe" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char cl_match_filter_t::name[MAX_CL_NAME_LEN]</definition>
+        <argsstring>[MAX_CL_NAME_LEN]</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Name or Alias of the classifier </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="766" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="766" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1ae41a40e7a69a752ce76c02052af28d81" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_match_filter_t::order</definition>
+        <argsstring></argsstring>
+        <name>order</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ordered location of the classifier </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="768" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="768" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1ad3385b677ff9b1d4590d8b3efd4be874" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_match_filter_t::owner</definition>
+        <argsstring></argsstring>
+        <name>owner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enumerated value of who is doing the operation Possible owners can be: TR-069, Web GUI, CLI, System, BaseRules </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="769" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="769" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1ab37ad5c104db0aa7323f66093a822f5c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_match_filter_t::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Following flags can be kept as per filter structure: CL_FILTER_MODIFIED : Modified after being originally added CL_FILTER_MODIFIED_OTHER : Modified by an entity other than the owner </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="771" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="771" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1a9d90c29a97a7f4c430dfbdf6c40fc9c7" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__dhcp__match__t" kindref="compound">cl_dhcp_match_t</ref></type>
+        <definition>cl_dhcp_match_t cl_match_filter_t::src_dhcp</definition>
+        <argsstring></argsstring>
+        <name>src_dhcp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DHCP Classifier based filter fields for Pkt Src </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="775" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="775" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1af34f72c117557e50b1d5fb3bf0aa1733" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__dhcp__match__t" kindref="compound">cl_dhcp_match_t</ref></type>
+        <definition>cl_dhcp_match_t cl_match_filter_t::dst_dhcp</definition>
+        <argsstring></argsstring>
+        <name>dst_dhcp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DHCP Classifier based filter fields for Pkt Dst </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="776" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="776" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1af705c456c2a3101586b302755ca75960" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char cl_match_filter_t::rx_if[MAX_IF_NAME_LEN]</definition>
+        <argsstring>[MAX_IF_NAME_LEN]</argsstring>
+        <name>rx_if</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rx Interface name. Null string means any interface </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="777" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="777" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1aadf5eab7cdde955d01c44945629d8137" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t cl_match_filter_t::rx_if_exclude</definition>
+        <argsstring></argsstring>
+        <name>rx_if_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Exclude /invert match of specificed rx_if field </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="779" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="779" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1a9301f7b0a961e65e0dd20ff9dd430288" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char cl_match_filter_t::tx_if[MAX_IF_NAME_LEN]</definition>
+        <argsstring>[MAX_IF_NAME_LEN]</argsstring>
+        <name>tx_if</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tx Interface name. Null string means any interface </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="781" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="781" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1a38f3b37d5e0e8e7a6e4d8a38a91a4d30" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t cl_match_filter_t::tx_if_exclude</definition>
+        <argsstring></argsstring>
+        <name>tx_if_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Exclude /invert match of specificed Tx_if field </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="783" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="783" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1ad4fd6c5bb8a5e61910b1542677c86b98" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__macaddr__match__t" kindref="compound">cl_macaddr_match_t</ref></type>
+        <definition>cl_macaddr_match_t cl_match_filter_t::dst_mac</definition>
+        <argsstring></argsstring>
+        <name>dst_mac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Match against Dst MAC address of pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="785" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="785" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1ac4b0153044c639dc1e4baea491f30636" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__macaddr__match__t" kindref="compound">cl_macaddr_match_t</ref></type>
+        <definition>cl_macaddr_match_t cl_match_filter_t::src_mac</definition>
+        <argsstring></argsstring>
+        <name>src_mac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Match against Src MAC address of pkt </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="787" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="787" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1a5ae577cb62beb21526852c690c114daf" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__eth__match__t" kindref="compound">cl_eth_match_t</ref></type>
+        <definition>cl_eth_match_t cl_match_filter_t::ethhdr</definition>
+        <argsstring></argsstring>
+        <name>ethhdr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Match against Ethernet header fields </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="789" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="789" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1a346a191513fe31bcadd310ffa61a6ec3" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__ip__5tuple__match__t" kindref="compound">cl_ip_5tuple_match_t</ref></type>
+        <definition>cl_ip_5tuple_match_t cl_match_filter_t::outer_ip</definition>
+        <argsstring></argsstring>
+        <name>outer_ip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>IP 5-tuple match for Outer IP header </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="791" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="791" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1a4c6b0da49677eba7fea7787b01ad0623" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__ip__5tuple__match__t" kindref="compound">cl_ip_5tuple_match_t</ref></type>
+        <definition>cl_ip_5tuple_match_t cl_match_filter_t::inner_ip</definition>
+        <argsstring></argsstring>
+        <name>inner_ip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>IP 5-tuple match for Inner IP header </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="793" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="793" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1afcf3c38c71289d28a01fe1092010a2a2" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__ip__match__t" kindref="compound">cl_ip_match_t</ref></type>
+        <definition>cl_ip_match_t cl_match_filter_t::iphdr</definition>
+        <argsstring></argsstring>
+        <name>iphdr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Match against other IP header fields </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="795" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="795" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1a67500b532d5be44ad701432e07d06f6f" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__tcp__match__t" kindref="compound">cl_tcp_match_t</ref></type>
+        <definition>cl_tcp_match_t cl_match_filter_t::tcphdr</definition>
+        <argsstring></argsstring>
+        <name>tcphdr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Match against other TCP header fields </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="797" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="797" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1ae968b9a6e2eaa31437509679e6c7c5c9" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__app__match__t" kindref="compound">cl_app_match_t</ref></type>
+        <definition>cl_app_match_t cl_match_filter_t::app</definition>
+        <argsstring></argsstring>
+        <name>app</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Application based classifier </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="798" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="798" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1ab5de4e65d81db7ec44acc42904e43d58" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char cl_match_filter_t::l7_proto[MAX_L7_PROTO_NAME_LEN]</definition>
+        <argsstring>[MAX_L7_PROTO_NAME_LEN]</argsstring>
+        <name>l7_proto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Layer7 protocol name, like ftp,sip etc </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="799" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="799" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__match__filter__t_1ac581a74dab7bf535f92e833056f01b0c" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__param__in__ex__t" kindref="compound">cl_param_in_ex_t</ref></type>
+        <definition>cl_param_in_ex_t cl_match_filter_t::param_in_ex</definition>
+        <argsstring></argsstring>
+        <name>param_in_ex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bit-map to indicate included and excluded parameters of main filter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="800" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="800" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classifer Match fields structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="54">
+        <label>cl_ip_5tuple_match_t</label>
+        <link refid="structcl__ip__5tuple__match__t"/>
+        <childnode refid="50" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+        <childnode refid="55" relation="usage">
+          <edgelabel>dst_ip</edgelabel>
+          <edgelabel>src_ip</edgelabel>
+        </childnode>
+        <childnode refid="56" relation="usage">
+          <edgelabel>src_port</edgelabel>
+          <edgelabel>dst_port</edgelabel>
+        </childnode>
+      </node>
+      <node id="52">
+        <label>cl_tcp_match_t</label>
+        <link refid="structcl__tcp__match__t"/>
+        <childnode refid="50" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+      <node id="50">
+        <label>cl_param_in_ex_t</label>
+        <link refid="structcl__param__in__ex__t"/>
+      </node>
+      <node id="48">
+        <label>cl_match_filter_t</label>
+        <link refid="structcl__match__filter__t"/>
+        <childnode refid="49" relation="usage">
+          <edgelabel>app</edgelabel>
+        </childnode>
+        <childnode refid="50" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+        <childnode refid="51" relation="usage">
+          <edgelabel>ethhdr</edgelabel>
+        </childnode>
+        <childnode refid="52" relation="usage">
+          <edgelabel>tcphdr</edgelabel>
+        </childnode>
+        <childnode refid="53" relation="usage">
+          <edgelabel>dst_dhcp</edgelabel>
+          <edgelabel>src_dhcp</edgelabel>
+        </childnode>
+        <childnode refid="54" relation="usage">
+          <edgelabel>outer_ip</edgelabel>
+          <edgelabel>inner_ip</edgelabel>
+        </childnode>
+        <childnode refid="57" relation="usage">
+          <edgelabel>dst_mac</edgelabel>
+          <edgelabel>src_mac</edgelabel>
+        </childnode>
+        <childnode refid="58" relation="usage">
+          <edgelabel>iphdr</edgelabel>
+        </childnode>
+      </node>
+      <node id="58">
+        <label>cl_ip_match_t</label>
+        <link refid="structcl__ip__match__t"/>
+        <childnode refid="50" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+      <node id="55">
+        <label>cl_ipaddr_match_t</label>
+        <link refid="structcl__ipaddr__match__t"/>
+      </node>
+      <node id="57">
+        <label>cl_macaddr_match_t</label>
+        <link refid="structcl__macaddr__match__t"/>
+        <childnode refid="50" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+      <node id="49">
+        <label>cl_app_match_t</label>
+        <link refid="structcl__app__match__t"/>
+        <childnode refid="50" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+      <node id="53">
+        <label>cl_dhcp_match_t</label>
+        <link refid="structcl__dhcp__match__t"/>
+        <childnode refid="50" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+      <node id="51">
+        <label>cl_eth_match_t</label>
+        <link refid="structcl__eth__match__t"/>
+        <childnode refid="50" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+      <node id="56">
+        <label>cl_port_match_t</label>
+        <link refid="structcl__port__match__t"/>
+        <childnode refid="50" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="762" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="762" bodyend="801"/>
+    <listofallmembers>
+      <member refid="structcl__match__filter__t_1ae968b9a6e2eaa31437509679e6c7c5c9" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>app</name></member>
+      <member refid="structcl__match__filter__t_1af34f72c117557e50b1d5fb3bf0aa1733" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>dst_dhcp</name></member>
+      <member refid="structcl__match__filter__t_1ad4fd6c5bb8a5e61910b1542677c86b98" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>dst_mac</name></member>
+      <member refid="structcl__match__filter__t_1abb961ab5e05074003112e334646955b8" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>enable</name></member>
+      <member refid="structcl__match__filter__t_1a5ae577cb62beb21526852c690c114daf" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>ethhdr</name></member>
+      <member refid="structcl__match__filter__t_1ab37ad5c104db0aa7323f66093a822f5c" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>flags</name></member>
+      <member refid="structcl__match__filter__t_1a4c6b0da49677eba7fea7787b01ad0623" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>inner_ip</name></member>
+      <member refid="structcl__match__filter__t_1afcf3c38c71289d28a01fe1092010a2a2" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>iphdr</name></member>
+      <member refid="structcl__match__filter__t_1ab5de4e65d81db7ec44acc42904e43d58" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>l7_proto</name></member>
+      <member refid="structcl__match__filter__t_1afc0fa04b66e0e2e9427b6f0ef139fafe" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>name</name></member>
+      <member refid="structcl__match__filter__t_1ae41a40e7a69a752ce76c02052af28d81" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>order</name></member>
+      <member refid="structcl__match__filter__t_1a346a191513fe31bcadd310ffa61a6ec3" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>outer_ip</name></member>
+      <member refid="structcl__match__filter__t_1ad3385b677ff9b1d4590d8b3efd4be874" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>owner</name></member>
+      <member refid="structcl__match__filter__t_1ac581a74dab7bf535f92e833056f01b0c" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>param_in_ex</name></member>
+      <member refid="structcl__match__filter__t_1af705c456c2a3101586b302755ca75960" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>rx_if</name></member>
+      <member refid="structcl__match__filter__t_1aadf5eab7cdde955d01c44945629d8137" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>rx_if_exclude</name></member>
+      <member refid="structcl__match__filter__t_1a9d90c29a97a7f4c430dfbdf6c40fc9c7" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>src_dhcp</name></member>
+      <member refid="structcl__match__filter__t_1ac4b0153044c639dc1e4baea491f30636" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>src_mac</name></member>
+      <member refid="structcl__match__filter__t_1ae03c1c223e9dc94b6f91c665f604b1d2" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>status</name></member>
+      <member refid="structcl__match__filter__t_1a67500b532d5be44ad701432e07d06f6f" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>tcphdr</name></member>
+      <member refid="structcl__match__filter__t_1a9301f7b0a961e65e0dd20ff9dd430288" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>tx_if</name></member>
+      <member refid="structcl__match__filter__t_1a38f3b37d5e0e8e7a6e4d8a38a91a4d30" prot="public" virt="non-virtual"><scope>cl_match_filter_t</scope><name>tx_if_exclude</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

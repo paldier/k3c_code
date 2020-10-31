@@ -1,0 +1,35 @@
+diff -Naur ../RT5592AP_wifi_v2715_DPA_20121207/os/linux/config.mk RT5592AP_wifi_v2715_DPA_20121207/os/linux/config.mk
+--- ../RT5592AP_wifi_v2715_DPA_20121207/os/linux/config.mk	2013-11-19 11:18:51.000000000 +0530
++++ RT5592AP_wifi_v2715_DPA_20121207/os/linux/config.mk	2013-11-19 11:23:39.000000000 +0530
+@@ -10,16 +10,16 @@
+ HAS_XLINK=n
+ 
+ # Support WSC function
+-HAS_WSC=n
+-HAS_WSC_V2=n
+-HAS_WSC_LED=n
++HAS_WSC=y
++HAS_WSC_V2=y
++HAS_WSC_LED=y
+ 
+ 
+ # Support LLTD function
+ HAS_LLTD=n
+ 
+ # Support WDS function
+-HAS_WDS=n
++HAS_WDS=y
+ 
+ # Support AP-Client function
+ HAS_APCLI=n
+@@ -863,8 +863,8 @@
+ endif
+ 
+ ifeq ($(PLATFORM),INF_VR9)
+-CFLAGS := -I$(RT28xx_DIR)/include $(WFLAGS) -Wundef -fno-strict-aliasing -fno-common -fno-pic -ffreestanding -Os -fomit-frame-pointer -G 0 -mno-abicalls -fno-pic -pipe -msoft-float  -mabi=32 -mlong-calls -march=mips32r2 -march=mips32r2 -Wa,-32 -Wa,-march=mips32r2 -Wa,-mips32r2 -Wa,--trap -I$(LINUX_SRC)/include/asm-mips/mach-generic
+-export CFLAGS
++EXTRA_CFLAGS := -I$(RT28xx_DIR)/include $(WFLAGS) -Wundef -fno-strict-aliasing -fno-common -fno-pic -ffreestanding -Os -fomit-frame-pointer -G 0 -mno-abicalls -fno-pic -pipe -msoft-float  -mabi=32 -mlong-calls -march=mips32r2 -march=mips32r2 -Wa,-32 -Wa,-march=mips32r2 -Wa,-mips32r2 -Wa,--trap -I$(LINUX_SRC)/include/asm-mips/mach-generic
++export EXTRA_CFLAGS
+ endif
+ 
+ ifeq ($(PLATFORM),BRCM_6358)

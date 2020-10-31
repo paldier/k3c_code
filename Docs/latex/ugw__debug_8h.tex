@@ -1,0 +1,41 @@
+\hypertarget{ugw__debug_8h}{\section{ugw\-\_\-debug.\-h File Reference}
+\label{ugw__debug_8h}\index{ugw\-\_\-debug.\-h@{ugw\-\_\-debug.\-h}}
+}
+
+
+File contains structs, defines, macros related to memory debugging utility.  
+
+
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}ulogging.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ugw\-\_\-defs.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ugw\-\_\-error.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structDEBUG}{D\-E\-B\-U\-G}
+\begin{DoxyCompactList}\small\item\em Keeps track of allocated and freed memory details. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__LIBHELP_ga43233afd4834731532bc5411f87448a9}{typedef struct \hyperlink{structDEBUG}{D\-E\-B\-U\-G} \hyperlink{group__LIBHELP_ga43233afd4834731532bc5411f87448a9}{Mem\-Dbg\-Util}}\label{group__LIBHELP_ga43233afd4834731532bc5411f87448a9}
+
+\begin{DoxyCompactList}\small\item\em Keeps track of allocated and freed memory details. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__LIBHELP_ga5023cc64b68b2569abc5b0a576839963}{help\-\_\-mem\-Info} (void)
+\begin{DoxyCompactList}\small\item\em Function to dump allocated and freed memory details. \end{DoxyCompactList}\item 
+\hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} void $\ast$ \hyperlink{group__LIBHELP_gad69e4cc1b0997b751beff9531e3b858b}{help\-\_\-calloc} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} uint32\-\_\-t un\-Num, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} uint32\-\_\-t un\-Size, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-File, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} uint32\-\_\-t un\-Line)
+\begin{DoxyCompactList}\small\item\em Function to allocate the memory with calloc. \end{DoxyCompactList}\item 
+\hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} void $\ast$ \hyperlink{group__LIBHELP_ga042b2a9f517209fe6c474f02456cab20}{help\-\_\-malloc} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} uint32\-\_\-t un\-Size, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-File, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} uint32\-\_\-t un\-Line)
+\begin{DoxyCompactList}\small\item\em Function to allocate the memory with malloc. \end{DoxyCompactList}\item 
+\hyperlink{group__LIBHELP_gaec78e7a9e90a406a56f859ee456e8eae}{O\-U\-T} void $\ast$ \hyperlink{group__LIBHELP_ga31a678674884400ad5f6b17eda22ee74}{help\-\_\-realloc} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} void $\ast$ptr, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} uint32\-\_\-t un\-Size, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-File, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} uint32\-\_\-t un\-Line)
+\begin{DoxyCompactList}\small\item\em Function is used to allocate the memory with realloc. \end{DoxyCompactList}\item 
+int \hyperlink{group__LIBHELP_ga119da297e15f5e43ef6d6ed4aabddd41}{help\-\_\-free} (\hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} void $\ast$ptr, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} char $\ast$pc\-File, \hyperlink{group__LIBHELP_gac2bbd6d630a06a980d9a92ddb9a49928}{I\-N} uint32\-\_\-t un\-Line)
+\begin{DoxyCompactList}\small\item\em Function to free the memory with free. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File contains structs, defines, macros related to memory debugging utility. 

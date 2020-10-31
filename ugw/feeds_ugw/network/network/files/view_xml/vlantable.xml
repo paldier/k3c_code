@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view viewid="lanvlan">
+    <helptext></helptext>
+    <header>
+    <image>images/icons/multicast.png</image>
+        <name>LAN VLAN</name>
+        <description>LAN VLAN configuration. Please avoid deletion of VLAN on eth1/ptm0/nasx.</description>
+    </header>
+    <object name="Device.Ethernet.VLANTermination.*" viewtype="table"  icon="settings-1" title="Settings">
+        <parameter  name="Enable"  type="string" webname="Enable" ></parameter>
+        <parameter  name="Name"  type="string" webname="Name" ></parameter>
+        <parameter  name="VLANID"  type="string" webname="VLAN" ></parameter>
+        <parameter  name="Add"  action="post" routeurl="formToOpen('vlanform')"  type="button" webname="Add"/>
+        <parameter name="delete" webname="delete" type="button" action="post"/>
+    </object>    
+</view>

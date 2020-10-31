@@ -1,0 +1,695 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structdsl__fapi__line__obj" kind="struct" prot="public">
+    <compoundname>dsl_fapi_line_obj</compoundname>
+    <includes refid="dsl__fapi_8h" local="no">dsl_fapi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a1df3e86a3e373ccb8088d7512fe4ca2d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dsl_fapi_line_obj::enable</definition>
+        <argsstring></argsstring>
+        <name>enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enables or disables the DSL line This parameter is based on ifAdminStatus from [RFC2863] <simplesect kind="note"><para>marked as W (write) within TR-181 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="47" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1ac7cdd7ccd0685ff5b39a134416eb3dec" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_obj::status[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current operational state of the DSL line (see [Section 4.2.2/TR-181i2]). This parameter is based on ifOperStatus from [RFC2863] Enumeration of<itemizedlist>
+<listitem><para>Up</para></listitem><listitem><para>Down</para></listitem><listitem><para>Unknown (not used)</para></listitem><listitem><para>Dormant (not used)</para></listitem><listitem><para>NotPresent (not used)</para></listitem><listitem><para>LowerLayerDown (not used)</para></listitem><listitem><para>Error </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="58" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1abbf14e370be31a02b4d46c2e0bafba17" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dsl_fapi_line_obj::upstream</definition>
+        <argsstring></argsstring>
+        <name>upstream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates whether the interface points towards the Internet (true) or towards End Devices (false). This parameter is always returned as true </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="61" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a8af792db1176f3c9644c38306f881f4f" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_obj::firmware_version[64]</definition>
+        <argsstring>[64]</argsstring>
+        <name>firmware_version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A string identifying the version of the modem firmware currently installed for this interface. This is applicable only when the modem firmware is separable from the overall CPE software </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="64" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a0aafbe991c821849398cef04fe2c01aa" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_obj::link_status[20]</definition>
+        <argsstring>[20]</argsstring>
+        <name>link_status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Status of the DSL physical link. Enumeration of<itemizedlist>
+<listitem><para>Up</para></listitem><listitem><para>Initializing</para></listitem><listitem><para>EstablishingLink</para></listitem><listitem><para>NoSignal (not used, upper layer handling)</para></listitem><listitem><para>Disabled</para></listitem><listitem><para>Error </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="72" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1abc227e8ac4ba23bb87f65e9099dc0f65" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_obj::standards_supported[512]</definition>
+        <argsstring>[512]</argsstring>
+        <name>standards_supported</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List items indicate which DSL standards and recommendations are supported by the Line instance. Comma-separated list of strings. Each list item is an enumeration of<itemizedlist>
+<listitem><para>T1.413</para></listitem><listitem><para>ETSI_101_388</para></listitem><listitem><para>G.992.1_Annex_A</para></listitem><listitem><para>G.992.1_Annex_B</para></listitem><listitem><para>G.992.1_Annex_C (not supported)</para></listitem><listitem><para>G.992.2_Annex_A</para></listitem><listitem><para>G.992.2_Annex_B (not supported)</para></listitem><listitem><para>G.992.2_Annex_C (not supported)</para></listitem><listitem><para>G.992.3_Annex_A</para></listitem><listitem><para>G.992.3_Annex_B</para></listitem><listitem><para>G.992.4_Annex_A</para></listitem><listitem><para>G.992.3_Annex_I</para></listitem><listitem><para>G.992.3_Annex_J</para></listitem><listitem><para>G.992.4_Annex_I (not supported)</para></listitem><listitem><para>G.992.3_Annex_L</para></listitem><listitem><para>G.992.3_Annex_M</para></listitem><listitem><para>G.992.5_Annex_A</para></listitem><listitem><para>G.992.5_Annex_B</para></listitem><listitem><para>G.992.5_Annex_I</para></listitem><listitem><para>G.992.5_Annex_J</para></listitem><listitem><para>G.992.5_Annex_M</para></listitem><listitem><para>G.993.2_Annex_A</para></listitem><listitem><para>G.993.2_Annex_B</para></listitem><listitem><para>G.993.2_Annex_C <simplesect kind="note"><para>In G.997.1, this parameter is called &quot;xDSL Transmission system capabilities&quot;. See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="101" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1af8a2b118576e853690ab301ce3d05c63" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char dsl_fapi_line_obj::xtse[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>xtse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This configuration parameter defines the transmission system types to be allowed by the xTU on this Line instance. Each bit is 0 if not allowed or 1 if allowed, as defined for the xTU transmission system enabling (XTSE) in ITU-T G.997.1 <simplesect kind="note"><para>This parameter is defined as xDSL Transmission system enabling (XTSE) in ITU-T G.997.1. For a full definition, see Clause 7.3.1.1.1 of ITU-T Recommendation [G.997.1] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="107" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a264efe2323db92c69fe2b7d3213918c3" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_obj::standard_used[20]</definition>
+        <argsstring>[20]</argsstring>
+        <name>standard_used</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The value MUST be a member of the list reported by the <ref refid="structdsl__fapi__line__obj_1abc227e8ac4ba23bb87f65e9099dc0f65" kindref="member">standards_supported</ref> parameter. Indicates the standard that the Line instance is using for the connection. <simplesect kind="note"><para>In G.997.1, this parameter is called &quot;xDSL Transmission system&quot;. See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="112" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1ac3b19b16fda0753232eef0d9c9fcb624" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char dsl_fapi_line_obj::xtse_used[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>xtse_used</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This parameter indicates which DSL standard and recommendation are currently in use by the Line instance. Only one bit is set, as defined for the xTU transmission system enabling (XTSE) in ITU-T G.997.1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="115" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a7149428e5bd71db580fb32510c8636a1" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_obj::line_encoding[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>line_encoding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The line encoding method used in establishing the Layer 1 DSL connection between the CPE and the DSLAM. This parameter is always returned as &quot;DMT&quot; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="118" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a59c5f2224ed0757a95e6ebde1d37e560" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_obj::allowed_profiles[40]</definition>
+        <argsstring>[40]</argsstring>
+        <name>allowed_profiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List items indicate which VDSL2 profiles are allowed on the line. Comma-separated list of strings. Each list item is an enumeration of<itemizedlist>
+<listitem><para>8a</para></listitem><listitem><para>8b</para></listitem><listitem><para>8c</para></listitem><listitem><para>8d</para></listitem><listitem><para>12a</para></listitem><listitem><para>12b</para></listitem><listitem><para>17a</para></listitem><listitem><para>17b</para></listitem><listitem><para>30a <simplesect kind="note"><para>In G.997.1, this parameter is called PROFILES. See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="132" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a6561ecbfe02e86e5bd2c3ff382bfbd48" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_obj::current_profile[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>current_profile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The value MUST be a member of the list reported by the <ref refid="structdsl__fapi__line__obj_1a59c5f2224ed0757a95e6ebde1d37e560" kindref="member">allowed_profiles</ref> parameter. Or else be an empty string. Indicates which VDSL2 profile is currently in use on the line </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="135" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a68ff1d736ad8367e195bd2d616a5db96" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_obj::power_management_state[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>power_management_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The power management state of the line. Enumeration of<itemizedlist>
+<listitem><para>L0</para></listitem><listitem><para>L1</para></listitem><listitem><para>L2</para></listitem><listitem><para>L3</para></listitem><listitem><para>L4 (not supported) <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para></simplesect>
+</para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="143" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a5c1ff715c2f106c556ce842423b9e4d5" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_obj::success_failure_cause</definition>
+        <argsstring></argsstring>
+        <name>success_failure_cause</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The success failure cause of the initialization. An enumeration of the following integer values<itemizedlist>
+<listitem><para>0: Successful</para></listitem><listitem><para>1: Configuration error This error occurs with inconsistencies in configuration parameters, e.g. when the line is initialized in an xDSL Transmission system where an xTU does not support the configured Maximum Delay or the configured Minimum or Maximum Data Rate for one or more bearer channels</para></listitem><listitem><para>2: Configuration not feasible on the line This error occurs if the Minimum Data Rate cannot be reached on the line with the Minimum Noise Margin, Maximum PSD level, Maximum Delay and Maximum Bit Error Ratio for one or more bearer channels</para></listitem><listitem><para>3: Communication problem This error occurs, for example, due to corrupted messages or bad syntax messages or if no common mode can be selected in the G.994.1 handshaking procedure or due to a timeout</para></listitem><listitem><para>4: No peer xTU detected This error occurs if the peer xTU is not powered or not connected or if the line is too long to allow detection of a peer xTU</para></listitem><listitem><para>5: Any other or unknown Initialization Failure cause <simplesect kind="note"><para>In G.997.1, this parameter is called &quot;Initialization success/failure cause&quot; See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="164" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a1b028b5780559bbff623c43f64c9221d" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_obj::last_state_transmitted_downstream</definition>
+        <argsstring></argsstring>
+        <name>last_state_transmitted_downstream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This parameter represents the last successful transmitted initialization state in the downstream direction in the last full initialization performed on the line. Initialization states are defined in the individual xDSL Recommendations and are counted from 0 (if G.994.1 is used) or 1 (if G.994.1 is not used) up to Showtime This parameter needs to be interpreted along with the xDSL Transmission System This parameter is available only when, after a failed full initialization, the line diagnostics procedures are activated on the line <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="172" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1abb97dc2b4546129f3f3843fb29134e41" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_obj::last_state_transmitted_upstream</definition>
+        <argsstring></argsstring>
+        <name>last_state_transmitted_upstream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This parameter represents the last successful transmitted initialization state in the upstream direction in the last full initialization performed on the line. Initialization states are defined in the individual xDSL Recommendations and are counted from 0 (if G.994.1 is used) or 1 (if G.994.1 is not used) up to Showtime. This parameter needs to be interpreted along with the xDSL Transmission System. This parameter is available only when, after a failed full initialization, the line diagnostics procedures are activated on the line. <simplesect kind="note"><para>See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="180" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a7dc65fd86cd6cf3f31266f8ef3000e72" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_obj::us0_mask</definition>
+        <argsstring></argsstring>
+        <name>us0_mask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates the allowed VDSL2 US0 PSD masks for Annex A operation Bit mask as specified in ITU-T Recommendation G.997.1 <simplesect kind="note"><para>Note: For a VDSL2-capable multimode device operating in a mode other than VDSL2, the value of this parameter SHOULD be set to 0 </para><simplesectsep/><para>See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="186" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a57a4eae0070c86f939ecdd97d5e79120" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dsl_fapi_line_obj::trellis_ds</definition>
+        <argsstring></argsstring>
+        <name>trellis_ds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reports whether trellis coding is enabled in the downstream direction A value of 1 indicates that trellis coding is in use, and a value of 0 indicates that the trellis is disabled <simplesect kind="note"><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to -1 </para><simplesectsep/><para>See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="193" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1abb8859a3b3856147be87ac8e0ae7e49a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dsl_fapi_line_obj::trellis_us</definition>
+        <argsstring></argsstring>
+        <name>trellis_us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reports whether trellis coding is enabled in the upstream direction. A value of 1 indicates that trellis coding is in use, and a value of 0 indicates that the trellis is disabled <simplesect kind="note"><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to -1 </para><simplesectsep/><para>See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="200" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a847673509738e19ead5a23922316be96" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_obj::act_snr_mode_ds</definition>
+        <argsstring></argsstring>
+        <name>act_snr_mode_ds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reports whether the OPTIONAL virtual noise mechanism is in use in the downstream direction. A value of 1 indicates the virtual noise mechanism is not in use, and a value of 2 indicates the virtual noise mechanism is in use <simplesect kind="note"><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to 0 </para><simplesectsep/><para>See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="207" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a52ceef229b988f92bff6977fd32fc143" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_obj::act_snr_mode_us</definition>
+        <argsstring></argsstring>
+        <name>act_snr_mode_us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reports whether the OPTIONAL virtual noise mechanism is in use in the upstream direction. A value of 1 indicates the virtual noise mechanism is not in use, and a value of 2 indicates the virtual noise mechanism is in use <simplesect kind="note"><para>For a multimode device operating in a mode in which this parameter does not apply, the value of this parameter SHOULD be set to 0 </para><simplesectsep/><para>See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="214" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1adc1ce69a9211c94934ec7762608d8db7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dsl_fapi_line_obj::line_number</definition>
+        <argsstring></argsstring>
+        <name>line_number</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Signifies the line pair that the modem is using to connection LineNumber = 1 is the innermost pair </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="217" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a77393004674703f57ced05902108019d" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_obj::upstream_max_bit_rate</definition>
+        <argsstring></argsstring>
+        <name>upstream_max_bit_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current maximum attainable data rate upstream (expressed in Kbps) <simplesect kind="note"><para>This parameter is related to the G.997.1 parameter ATTNDRus, which is measured in bits/s </para><simplesectsep/><para>See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="221" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a4e2dded4c31f6f40d1fa1a978e6ed1ec" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_obj::downstream_max_bit_rate</definition>
+        <argsstring></argsstring>
+        <name>downstream_max_bit_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current maximum attainable data rate downstream (expressed in Kbps) <simplesect kind="note"><para>This parameter is related to the G.997.1 parameter ATTNDRds, which is measured in bits/s </para><simplesectsep/><para>See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="225" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1aa16c906c255a409649f2b710d359d6b6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dsl_fapi_line_obj::upstream_noise_margin</definition>
+        <argsstring></argsstring>
+        <name>upstream_noise_margin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current signal-to-noise ratio margin (expressed in 0.1dB) in the upstream direction <simplesect kind="note"><para>In G.997.1, this parameter is called SNRMus </para><simplesectsep/><para>See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="229" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1ac5cafce7d8f514b83612e26792e71ebb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dsl_fapi_line_obj::downstream_noise_margin</definition>
+        <argsstring></argsstring>
+        <name>downstream_noise_margin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current signal-to-noise ratio margin (expressed in 0.1dB) in the downstream direction <simplesect kind="note"><para>In G.997.1, this parameter is called SNRMds </para><simplesectsep/><para>See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="233" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a8298962b9eab965d69375c8dc8689c38" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_obj::snr_mpb_us[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>snr_mpb_us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Comma-separated list (maximum list length 24) of strings. Indicates the current signal-to-noise ratio margin of each upstream band <simplesect kind="note"><para>Interpretation of the values is as defined in ITU-T Rec. G.997.1 </para><simplesectsep/><para>See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="238" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a7e443ec40d324e5b435873f8e8823d69" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_obj::snr_mpb_ds[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>snr_mpb_ds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Comma-separated list (maximum list length 24) of strings. Indicates the current signal-to-noise ratio margin of each downstream band. <simplesect kind="note"><para>Interpretation of the values is as defined in ITU-T Rec. G.997.1 </para><simplesectsep/><para>See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="243" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a2bea256ab435b5989d286358c95ca2af" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dsl_fapi_line_obj::upstream_power</definition>
+        <argsstring></argsstring>
+        <name>upstream_power</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current output power at the CPE&apos;s DSL line (expressed in 0.1dBmV) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="245" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a0d774a195b98a307a8d847d6ffe1860f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dsl_fapi_line_obj::downstream_power</definition>
+        <argsstring></argsstring>
+        <name>downstream_power</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current received power at the CPE&apos;s DSL line (expressed in 0.1dBmV) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="247" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a84427f6c66bdf205931732cee9c63bb1" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char dsl_fapi_line_obj::xtur_vendor[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>xtur_vendor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>xTU-R vendor identifier as defined in G.994.1 and T1.413. In the case of G.994.1 this corresponds to the four-octet provider code, which MUST be represented as eight hexadecimal digits. <simplesect kind="note"><para>This parameter is OPTIONAL at the G and S/T interfaces in G.997.1 Amendment 1 </para><simplesectsep/><para>If the parameter is implemented but no value is available, it MUST have the value &quot;00000000&quot; </para><simplesectsep/><para>In G.997.1, this parameter is called &quot;xTU-R G.994.1 Vendor ID&quot; </para><simplesectsep/><para>See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="255" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a54e206c0e002258adc6f36b24f5603ef" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char dsl_fapi_line_obj::xtur_country[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>xtur_country</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>T.35 country code of the xTU-R vendor as defined in G.994.1, where the two-octet value defined in G.994.1 MUST be represented as four hexadecimal digits <simplesect kind="note"><para>This parameter is OPTIONAL at the G and S/T interfaces in G.997.1 Amendment 1 </para><simplesectsep/><para>If the parameter is implemented but no value is available, it MUST have the value &quot;0000&quot; </para><simplesectsep/><para>In G.997.1, this parameter is called &quot;xTU-R G.994.1 Vendor ID&quot; </para><simplesectsep/><para>See ITU-T Recommendation [G.997.1] </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="262" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1af1e0f2fc8496273a912920ee28c6c2f0" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_obj::xtur_ansi_std</definition>
+        <argsstring></argsstring>
+        <name>xtur_ansi_std</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>xTU-R T1.413 Revision Number as defined in T1.413 Issue 2 <simplesect kind="note"><para>When T1.413 modulation is not in use, the parameter value SHOULD be 0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="265" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a032c67a14b74d170a3bec92612000df2" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_obj::xtur_ansi_rev</definition>
+        <argsstring></argsstring>
+        <name>xtur_ansi_rev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>xTU-R Vendor Revision Number as defined in T1.413 Issue 2. <simplesect kind="note"><para>When T1.413 modulation is not in use, the parameter value SHOULD be 0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="268" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1afe00cbdc588c0de8572cd43779cd1961" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_obj::xtuc_vendor[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>xtuc_vendor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>xTU-C vendor identifier as defined in G.994.1 and T1.413. In the case of G.994.1 this corresponds to the four-octet provider code, which MUST be represented as eight hexadecimal digits <simplesect kind="note"><para>This parameter is OPTIONAL at the G and S/T interfaces in G.997.1 Amendment 1 </para><simplesectsep/><para>If the parameter is implemented but no value is available, it MUST have the value &quot;00000000&quot; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="274" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a8dae64b04014ddddf8cc044844eba5ec" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short dsl_fapi_line_obj::xtuc_country[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>xtuc_country</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>T.35 country code of the xTU-C vendor as defined in G.994.1, where the two-octet value defined in G.994.1 MUST be represented as four hexadecimal digits. <simplesect kind="note"><para>This parameter is OPTIONAL at the G and S/T interfaces in G.997.1 Amendment 1. </para><simplesectsep/><para>If the parameter is implemented but no value is available, it MUST have the value &quot;0000&quot;. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="279" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a4a559c7aaa78e041ad41fdd131348baf" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_obj::xtuc_ansi_std</definition>
+        <argsstring></argsstring>
+        <name>xtuc_ansi_std</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>xTU-C T1.413 Revision Number as defined in T1.413 Issue 2. <simplesect kind="note"><para>When T1.413 modulation is not in use, the parameter value SHOULD be 0. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="282" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a177b8d1be46871b866c0728df3f74545" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_obj::xtuc_ansi_rev</definition>
+        <argsstring></argsstring>
+        <name>xtuc_ansi_rev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>xTU-C Vendor Revision Number as defined in T1.413 Issue 2. <simplesect kind="note"><para>When T1.413 modulation is not in use, the parameter value SHOULD be 0. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="285" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1ae81094c7b07809194b99fac381bb297e" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_obj::upbokler_pb[26]</definition>
+        <argsstring>[26]</argsstring>
+        <name>upbokler_pb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Comma-separated list of unsigned integers (value 0 to 1280, or 2047). VTU-R estimated upstream power back-off electrical length per band. This parameter is a vector of UPBO electrical length per-band estimates for each supported downstream band, expressed in 0.1 dB at 1 MHz (kl0) calculated by the VTU-R, based on separate measurements in the supported downstream bands. The value of each list element ranges from 0 to 128 dB in steps of 0.1 dB, with special value 204.7 which indicates that the estimate is greater than 128 dB. This parameter is required for the alternative electrical length estimation method (ELE-M1). The value of each list element is coded as an unsigned 16 bit number in the range 0 (coded as 0) to 128 dB (coded as 1280) in steps of 0.1 dB.</para><para><simplesect kind="note"><para>This parameter is defined as UPBOKLE-R-pb in Clause 7.5.1.23.4 of ITU-T Recommendation [G.997.1]. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="297" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a690fe932966a61e91cf60cc3142ffbbc" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char dsl_fapi_line_obj::rxthrsh_ds[26]</definition>
+        <argsstring>[26]</argsstring>
+        <name>rxthrsh_ds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>UPBO downstream receiver signal level threshold. This parameter reports the downstream received signal level threshold value used in the alternative electrical length estimation method (ELE-M1). This parameter represents an offset from -100 dBm/Hz, and ranges from -64 dB to 0 dB in steps of 0.1 dB. The value is coded as a 16 bit number in the range -64 (coded as -640) to 0 dB (coded as 0) in steps of 0.1 dB.</para><para><simplesect kind="note"><para>See ITU-T Recommendation [G.997.1]. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="305" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a7d571cdd52039fe9bc2e7399548dc7b0" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_obj::act_ra_mode_ds</definition>
+        <argsstring></argsstring>
+        <name>act_ra_mode_ds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This parameter indicates the actual active rate adaptation mode in the downstream direction.<itemizedlist>
+<listitem><para>1: the link is operating in RA-MODE 1 (MANUAL).</para></listitem><listitem><para>2: the link is operating in RA-MODE 2 (AT_INIT).</para></listitem><listitem><para>3: the link is operating in RA-MODE 3 (DYNAMIC).</para></listitem><listitem><para>4: the link is operating in RA-MODE 4 (DYNAMIC with SOS). <simplesect kind="note"><para>This parameter is defined as ACT-RA-MODEds in Clause 7.5.1.33.1 of ITU-T Recommendation [G.997.1]. </para></simplesect>
+</para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="312" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="312" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a56f462732df95fbff30dcd2664d2a599" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_obj::act_ra_mode_us</definition>
+        <argsstring></argsstring>
+        <name>act_ra_mode_us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This parameter indicates the actual active rate adaptation mode in the upstream direction.<itemizedlist>
+<listitem><para>1: the link is operating in RA-MODE 1 (MANUAL).</para></listitem><listitem><para>2: the link is operating in RA-MODE 2 (AT_INIT).</para></listitem><listitem><para>3: the link is operating in RA-MODE 3 (DYNAMIC).</para></listitem><listitem><para>4: the link is operating in RA-MODE 4 (DYNAMIC with SOS). <simplesect kind="note"><para>This parameter is defined as ACT-RA-MODEus in Clause 7.5.1.33.2 of ITU-T Recommendation [G.997.1]. </para></simplesect>
+</para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="319" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a5f17749bee44180af66d7b9d25795d34" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_obj::snr_mroc_us</definition>
+        <argsstring></argsstring>
+        <name>snr_mroc_us</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This parameter reports the actual signal-to-noise margin of the robust overhead channel (ROC) in the upstream direction (expressed in 0.1 dB). The format is identical to the format of the line status parameter SNRM margin (upstream_noise_margin). <simplesect kind="note"><para>This parameter is defined as SNRM-ROC-us in Clause 7.5.1.35.2 ITU-T Recommendation [G.997.1]. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="324" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1af0ca7939507cc4cd14d361b2fabc6700" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dsl_fapi_line_obj::upstream_attenuation</definition>
+        <argsstring></argsstring>
+        <name>upstream_attenuation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current upstream signal loss (expressed in 0.1dB). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="326" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__obj_1a16af7c5196fe68ba1d39bcc6108a48d7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dsl_fapi_line_obj::downstream_attenuation</definition>
+        <argsstring></argsstring>
+        <name>downstream_attenuation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current downstream signal loss (expressed in 0.1dB). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="328" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>DSL Line object declaration, based on TR-181 definitions </para>    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="43" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="43" bodyend="329"/>
+    <listofallmembers>
+      <member refid="structdsl__fapi__line__obj_1a7d571cdd52039fe9bc2e7399548dc7b0" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>act_ra_mode_ds</name></member>
+      <member refid="structdsl__fapi__line__obj_1a56f462732df95fbff30dcd2664d2a599" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>act_ra_mode_us</name></member>
+      <member refid="structdsl__fapi__line__obj_1a847673509738e19ead5a23922316be96" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>act_snr_mode_ds</name></member>
+      <member refid="structdsl__fapi__line__obj_1a52ceef229b988f92bff6977fd32fc143" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>act_snr_mode_us</name></member>
+      <member refid="structdsl__fapi__line__obj_1a59c5f2224ed0757a95e6ebde1d37e560" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>allowed_profiles</name></member>
+      <member refid="structdsl__fapi__line__obj_1a6561ecbfe02e86e5bd2c3ff382bfbd48" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>current_profile</name></member>
+      <member refid="structdsl__fapi__line__obj_1a16af7c5196fe68ba1d39bcc6108a48d7" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>downstream_attenuation</name></member>
+      <member refid="structdsl__fapi__line__obj_1a4e2dded4c31f6f40d1fa1a978e6ed1ec" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>downstream_max_bit_rate</name></member>
+      <member refid="structdsl__fapi__line__obj_1ac5cafce7d8f514b83612e26792e71ebb" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>downstream_noise_margin</name></member>
+      <member refid="structdsl__fapi__line__obj_1a0d774a195b98a307a8d847d6ffe1860f" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>downstream_power</name></member>
+      <member refid="structdsl__fapi__line__obj_1a1df3e86a3e373ccb8088d7512fe4ca2d" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>enable</name></member>
+      <member refid="structdsl__fapi__line__obj_1a8af792db1176f3c9644c38306f881f4f" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>firmware_version</name></member>
+      <member refid="structdsl__fapi__line__obj_1a1b028b5780559bbff623c43f64c9221d" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>last_state_transmitted_downstream</name></member>
+      <member refid="structdsl__fapi__line__obj_1abb97dc2b4546129f3f3843fb29134e41" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>last_state_transmitted_upstream</name></member>
+      <member refid="structdsl__fapi__line__obj_1a7149428e5bd71db580fb32510c8636a1" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>line_encoding</name></member>
+      <member refid="structdsl__fapi__line__obj_1adc1ce69a9211c94934ec7762608d8db7" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>line_number</name></member>
+      <member refid="structdsl__fapi__line__obj_1a0aafbe991c821849398cef04fe2c01aa" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>link_status</name></member>
+      <member refid="structdsl__fapi__line__obj_1a68ff1d736ad8367e195bd2d616a5db96" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>power_management_state</name></member>
+      <member refid="structdsl__fapi__line__obj_1a690fe932966a61e91cf60cc3142ffbbc" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>rxthrsh_ds</name></member>
+      <member refid="structdsl__fapi__line__obj_1a7e443ec40d324e5b435873f8e8823d69" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>snr_mpb_ds</name></member>
+      <member refid="structdsl__fapi__line__obj_1a8298962b9eab965d69375c8dc8689c38" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>snr_mpb_us</name></member>
+      <member refid="structdsl__fapi__line__obj_1a5f17749bee44180af66d7b9d25795d34" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>snr_mroc_us</name></member>
+      <member refid="structdsl__fapi__line__obj_1a264efe2323db92c69fe2b7d3213918c3" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>standard_used</name></member>
+      <member refid="structdsl__fapi__line__obj_1abc227e8ac4ba23bb87f65e9099dc0f65" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>standards_supported</name></member>
+      <member refid="structdsl__fapi__line__obj_1ac7cdd7ccd0685ff5b39a134416eb3dec" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>status</name></member>
+      <member refid="structdsl__fapi__line__obj_1a5c1ff715c2f106c556ce842423b9e4d5" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>success_failure_cause</name></member>
+      <member refid="structdsl__fapi__line__obj_1a57a4eae0070c86f939ecdd97d5e79120" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>trellis_ds</name></member>
+      <member refid="structdsl__fapi__line__obj_1abb8859a3b3856147be87ac8e0ae7e49a" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>trellis_us</name></member>
+      <member refid="structdsl__fapi__line__obj_1ae81094c7b07809194b99fac381bb297e" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>upbokler_pb</name></member>
+      <member refid="structdsl__fapi__line__obj_1abbf14e370be31a02b4d46c2e0bafba17" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>upstream</name></member>
+      <member refid="structdsl__fapi__line__obj_1af0ca7939507cc4cd14d361b2fabc6700" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>upstream_attenuation</name></member>
+      <member refid="structdsl__fapi__line__obj_1a77393004674703f57ced05902108019d" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>upstream_max_bit_rate</name></member>
+      <member refid="structdsl__fapi__line__obj_1aa16c906c255a409649f2b710d359d6b6" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>upstream_noise_margin</name></member>
+      <member refid="structdsl__fapi__line__obj_1a2bea256ab435b5989d286358c95ca2af" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>upstream_power</name></member>
+      <member refid="structdsl__fapi__line__obj_1a7dc65fd86cd6cf3f31266f8ef3000e72" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>us0_mask</name></member>
+      <member refid="structdsl__fapi__line__obj_1af8a2b118576e853690ab301ce3d05c63" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>xtse</name></member>
+      <member refid="structdsl__fapi__line__obj_1ac3b19b16fda0753232eef0d9c9fcb624" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>xtse_used</name></member>
+      <member refid="structdsl__fapi__line__obj_1a177b8d1be46871b866c0728df3f74545" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>xtuc_ansi_rev</name></member>
+      <member refid="structdsl__fapi__line__obj_1a4a559c7aaa78e041ad41fdd131348baf" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>xtuc_ansi_std</name></member>
+      <member refid="structdsl__fapi__line__obj_1a8dae64b04014ddddf8cc044844eba5ec" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>xtuc_country</name></member>
+      <member refid="structdsl__fapi__line__obj_1afe00cbdc588c0de8572cd43779cd1961" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>xtuc_vendor</name></member>
+      <member refid="structdsl__fapi__line__obj_1a032c67a14b74d170a3bec92612000df2" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>xtur_ansi_rev</name></member>
+      <member refid="structdsl__fapi__line__obj_1af1e0f2fc8496273a912920ee28c6c2f0" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>xtur_ansi_std</name></member>
+      <member refid="structdsl__fapi__line__obj_1a54e206c0e002258adc6f36b24f5603ef" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>xtur_country</name></member>
+      <member refid="structdsl__fapi__line__obj_1a84427f6c66bdf205931732cee9c63bb1" prot="public" virt="non-virtual"><scope>dsl_fapi_line_obj</scope><name>xtur_vendor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

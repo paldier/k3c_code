@@ -1,0 +1,96 @@
+#!/bin/sh
+#
+# Copyright (c) 2013 Qualcomm Atheros, Inc..
+#
+# All Rights Reserved.
+# Qualcomm Atheros Confidential and Proprietary.
+#
+
+# We don't want to start ART2 automatically at boot time as we want the
+# default to be a working user configuration.
+# At the end of the boot process, the user can start art using:
+# /etc/ath/qdart start
+
+
+# Notes:
+# 1. QDART is available from Beeliner on
+# 2. By default, wifi0 is for 5G radio, wifi1 is for 2.4G radio, that is decided by driver code
+# 3. For QCA reference board, caldata can be stored in FLASH,
+#    while for thirdparty reference board, caldata might not be stored in FLASH,
+#    but this script provides the reference for solution of FLASH caldata
+
+wifi_index=$2
+
+
+start_wlan() {
+	/etc/rc.d/rc.tools up
+}
+
+
+stop_wlan() {
+	/etc/rc.d/rc.tools down
+}
+
+
+start_qcmbr() {
+	local l_wifi_index=$1
+	/sbin/Qcmbr -instance ${l_wifi_index} -pcie ${l_wifi_index} -console &
+}
+
+
+stop_qcmbr() {
+	ps -e | grep Qcmbr | grep -v grep | tr -s ' ' | cut -f 2 -d ' ' | xargs kill -9
+}
+
+
+start() {
+
+	local l_wifi_index=0xf
+
+	if [ ! -n "$1" ] ; then
+		echo "Please assign wifi index!"
+		exit
+	else
+		l_wifi_index=$1
+		echo "You will calibrate wifi${l_wifi_index}."
+	fi
+
+# Reference for when and only AH_CAL_IN_FLASH_PCI is enabled
+#	local mtd_name = $2
+#	ln -s /dev/${mtd_name} /dev/caldata
+
+	start_wlan
+	start_qcmbr ${l_wifi_index}
+}
+
+
+stop() {
+	stop_qcmbr
+	stop_wlan
+}
+
+
+help() {
+	cat <<EOF
+
+qdart <command> <index> <mtd_name>
+	command    : start or stop
+	index      : 0 for wifi0, 1 for wifi1
+	mtd_name   : name string of mtd block for caldata
+		     (optional) only required when AH_CAL_IN_FLASH_PCI is enabled
+For example: 
+To calibrate wifi0 and then save caldata to /dev/mtdblock6, run 'qdart start 0 mtdblock6'
+
+EOF
+}
+
+
+if [ "$1" = start  ]; then 
+	start ${wifi_index}
+else
+	if [ "$1" = stop  ]; then 
+		stop
+	else
+		help
+	fi
+fi

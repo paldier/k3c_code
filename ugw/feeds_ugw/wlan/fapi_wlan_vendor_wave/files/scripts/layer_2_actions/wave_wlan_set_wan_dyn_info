@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# Defines
+if [ ! "$MTLK_INIT_PLATFORM" ]; then
+        . /tmp/mtlk_init_platform.sh
+fi
+
+print2log DBG "running wave_wlan_set_dyn_wan_info, args: $*"	
+
+apIndex=$1
+action_or_data=$2
+
+timestamp "wave_wlan_set_dyn_wan_info:$apIndex:begin"
+
+# Get corresponding wlan network interface from mapping file
+wlan=`find_wave_if_from_index $apIndex`
+
+
+if [ "$action_or_data" = "enable" ] || [ "$action_or_data" = "disable" ]
+then
+	$ETC_PATH/wmdctrl.sh $action_or_data $wlan
+else
+	print2log HS20 "wave_wlan_set_dyn_wan_info: write WAN Metrics=$action_or_data in hostapd.conf and to hostapd"
+	# write data in hostapd.conf
+	param_found=`grep -c "hs20_wan_metrics" /tmp/hostapd_wlan0.conf`
+	if [ $param_found -gt 0 ]
+	then
+		sed -i 's/^hs20_wan_metrics=.*/hs20_wan_metrics='$action_or_data'/' $CONFIGS_PATH/hostapd_$wlan.conf
+	else
+		echo "hs20_wan_metrics=$action_or_data" >> $CONFIGS_PATH/hostapd_$wlan.conf
+	fi
+	# set directly in hostapd bss database
+	/tmp/hostapd_cli -i $wlan update_wan_metrics $action_or_data
+fi
+
+print2log DBG "wave_wlan_set_dyn_wan_info done"
+timestamp "wave_wlan_set_dyn_wan_info:$apIndex:done"
+

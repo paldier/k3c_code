@@ -1,0 +1,23 @@
+config LTQ_PPMD_USER_FLAGS
+	depends on PACKAGE_ltq-ppmd
+	string "Additional CFLAGS"
+	default ""
+	help
+		Additional CFLAGS for compilation (for developers)
+		(--enable-debug) 
+config LTQ_TEMP_EMER_SHUT_DOWN
+	bool "enable emergency shut down"
+	default n 
+	help
+	  In case the temperature limit for the chip (default 125°C) is reached,
+	  the PPMD will trigger a system reboot.
+
+config LTQ_SCALE_DOWN_ON_HIGH_TEMP
+	bool "enable frequency down scaling on high temperature"
+	default n 
+	help
+	  In case pre defined temperature thresholds are reached,
+	  the PPMD will trigger a frequency down scaling to the next lower power state.
+          If the temperature falls back under the given threshold the frequency
+          will be increased again.
+

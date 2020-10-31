@@ -1,0 +1,5 @@
+config FEATURE_MULTI_BRIDGE
+	bool 'Enable multi bridge support'
+        default n
+	help
+	  To enable multiple birdging support.

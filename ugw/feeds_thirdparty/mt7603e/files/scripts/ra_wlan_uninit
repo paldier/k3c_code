@@ -1,0 +1,58 @@
+#!/bin/sh
+
+if [ ! "$ENVLOADED" ]; then
+        if [ -r /etc/rc.conf ]; then
+                 . /etc/rc.conf 2> /dev/null
+                ENVLOADED="1"
+        fi
+fi
+
+if [ ! "$CONFIGLOADED" ]; then
+        if [ -r /etc/rc.d/config.sh ]; then
+                . /etc/rc.d/config.sh 2>/dev/null
+                CONFIGLOADED="1"
+        fi
+fi
+
+if [ "$CONFIG_FEATURE_WIRELESS" = "1" ]; then # [
+    ##
+    ## Get the name of the bridge. WE ARE ASSUMING ONLY ONE FOR NOW
+    ##
+
+    BRNAME=`brctl show | grep -v bridge | cut -b 1-4`
+
+    ##
+    ## Check for a kill all
+    ##
+    VAPLIST=`ifconfig | grep ra | cut -b 1-3`
+    WDSLIST=`ifconfig | grep wds | cut -b 1-4`
+
+    if [ "${VAPLIST}" != "" ]; then
+
+        for i in $VAPLIST
+        do
+            brctl delif $BRNAME $i
+            #
+            # Bring the interface down
+            #
+            ifconfig $i down
+        done
+	
+	if [ "${WDSLIST}" != "" ]; then
+		for i in $WDSLIST
+        	do
+	            brctl delif $BRNAME $i
+		    #
+	            # Bring the WDS interface down
+        	    #
+	            ifconfig $i down
+	        done
+	fi
+
+    fi
+
+	rmmod mt7603e
+    sleep 1
+
+    rm -rf /ramdisk/etc/Wireless/RT2860AP/RT2860AP.dat
+fi # ]

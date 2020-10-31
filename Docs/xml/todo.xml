@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="todo" kind="page">
+    <compoundname>todo</compoundname>
+    <title>Todo List</title>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term><anchor id="todo_1_todo000001"/>File <ref refid="fapi__wlan_8h" kindref="compound">fapi_wlan.h</ref>  </term></varlistentry>
+<listitem><para>Need to add APIs for VAP add/delete  </para></listitem>
+<varlistentry><term><anchor id="todo_1_todo000003"/>Member <ref refid="group__FAPI__WLAN_1ga3c9607a74d5a97b65b23bc6dd25957cc" kindref="member">fapi_wlan_assoc_devices_query</ref>  (const char *ifname, <ref refid="structObjList" kindref="compound">ObjList</ref> *wlObj, unsigned int flags)</term></varlistentry>
+<listitem><para>Do we want to separate to API for getting a list of Associated devices and a different API for statistics? </para></listitem>
+<varlistentry><term><anchor id="todo_1_todo000004"/>Member <ref refid="group__FAPI__WLAN_1gacb2e814f3c8f28731b578dec9fb8424d" kindref="member">fapi_wlan_assoc_devices_stats_query</ref>  (const char *ifname, <ref refid="structObjList" kindref="compound">ObjList</ref> *wlObj, unsigned int flags)</term></varlistentry>
+<listitem><para>This doesn&apos;t follow the common API of fapi_wlan. Do we need this? If so, clean up the API - get MAC in object, and pass interface name  </para></listitem>
+<varlistentry><term><anchor id="todo_1_todo000009"/>Member <ref refid="group__FAPI__WLAN_1gaaf73570c24d2fd4d244e8498bb91952b" kindref="member">fapi_wlan_hotspot_set</ref>  (const char *ifname, <ref refid="structObjList" kindref="compound">ObjList</ref> *wlObj, unsigned int flags)</term></varlistentry>
+<listitem><para>define objects for HS20. Pass a list of objects for HS20 config.  </para></listitem>
+<varlistentry><term><anchor id="todo_1_todo000011"/>Member <ref refid="group__FAPI__WLAN__MTK_1ga4090a67332a33634f88ce8ee4c82196e" kindref="member">fapi_wlan_mtk_assoc_devices_query</ref>  (const char *iface, <ref refid="structObjList" kindref="compound">ObjList</ref> *wlObj, unsigned int flags)</term></varlistentry>
+<listitem><para>Do we want to separate to API for getting a list of Associated devices and a different API for statistics? </para></listitem>
+<varlistentry><term><anchor id="todo_1_todo000010"/>Member <ref refid="group__FAPI__WLAN__MTK_1ga4a9587395749e39648a991f1390a30a2" kindref="member">fapi_wlan_mtk_wps_set</ref>  (const char *iface, <ref refid="structObjList" kindref="compound">ObjList</ref> *wlObj, unsigned int flags)</term></varlistentry>
+<listitem><para>Accept a list to include the WPS vendor parameters (which object?)  </para></listitem>
+<varlistentry><term><anchor id="todo_1_todo000008"/>Member <ref refid="group__FAPI__WLAN_1gaf7b35fbc48c273637fafb13bbe2318fa" kindref="member">fapi_wlan_wds_set</ref>  (const char *ifname, <ref refid="structObjList" kindref="compound">ObjList</ref> *wlObj, unsigned int flags)</term></varlistentry>
+<listitem><para>1. What is the object to pass </para><para>2. WDS will be implemented at a future time based on one of several possible specs. This API can be skipped for now.  </para></listitem>
+<varlistentry><term><anchor id="todo_1_todo000006"/>Member <ref refid="group__FAPI__WLAN_1ga337ef7e43df8d59e4607600c0daeb00b" kindref="member">fapi_wlan_wmm_sta_get</ref>  (const char *ifname, <ref refid="structObjList" kindref="compound">ObjList</ref> *wlObj, unsigned int flags)</term></varlistentry>
+<listitem><para>tbd can this fapi accept a list of four objects for BE, BK, VI, VO?  </para></listitem>
+<varlistentry><term><anchor id="todo_1_todo000005"/>Member <ref refid="group__FAPI__WLAN_1gaffc71927094b8d03aa95d9bdeb5bb63d" kindref="member">fapi_wlan_wmm_sta_set</ref>  (const char *ifname, <ref refid="structObjList" kindref="compound">ObjList</ref> *wlObj, unsigned int flags)</term></varlistentry>
+<listitem><para>tbd Do we need APIs for STA WMM objects? if so, what object to pass?  </para></listitem>
+<varlistentry><term><anchor id="todo_1_todo000007"/>Member <ref refid="group__FAPI__WLAN_1gac70302d8dcc43f12fb4e25cf00b33ea6" kindref="member">fapi_wlan_wmm_sta_stats_query</ref>  (const char *ifname, <ref refid="structObjList" kindref="compound">ObjList</ref> *wlObj, unsigned int flags)</term></varlistentry>
+<listitem><para>can this fapi accept a list of four objects for BE, BK, VI, VO?  </para></listitem>
+<varlistentry><term><anchor id="todo_1_todo000002"/>Member <ref refid="group__FAPI__WLAN_1gab50168998ee227f14a464feb0585f37c" kindref="member">fapi_wlan_wps_set</ref>  (const char *ifname, <ref refid="structObjList" kindref="compound">ObjList</ref> *wlObj, unsigned int flags)</term></varlistentry>
+<listitem><para>Accept a list to include the WPS vendor parameters (which object?) </para></listitem>
+</variablelist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

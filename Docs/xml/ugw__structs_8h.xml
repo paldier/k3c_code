@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="ugw__structs_8h" kind="file">
+    <compoundname>ugw_structs.h</compoundname>
+    <includes refid="help__structs_8h" local="no">help_structs.h</includes>
+    <includes refid="ugw__enums_8h" local="yes">ugw_enums.h</includes>
+    <includes refid="ugw__defs_8h" local="yes">ugw_defs.h</includes>
+    <includedby refid="ugw__proto_8h" local="yes">ugw_proto.h</includedby>
+    <incdepgraph>
+      <node id="323">
+        <label>help_defs.h</label>
+        <link refid="help__defs_8h"/>
+        <childnode refid="324" relation="include">
+        </childnode>
+        <childnode refid="325" relation="include">
+        </childnode>
+        <childnode refid="322" relation="include">
+        </childnode>
+      </node>
+      <node id="326">
+        <label>list.h</label>
+      </node>
+      <node id="321">
+        <label>help_structs.h</label>
+        <link refid="help__structs_8h"/>
+        <childnode refid="322" relation="include">
+        </childnode>
+        <childnode refid="323" relation="include">
+        </childnode>
+        <childnode refid="326" relation="include">
+        </childnode>
+      </node>
+      <node id="324">
+        <label>stdint.h</label>
+      </node>
+      <node id="327">
+        <label>ugw_enums.h</label>
+        <link refid="ugw__enums_8h"/>
+        <childnode refid="322" relation="include">
+        </childnode>
+      </node>
+      <node id="320">
+        <label>ugw_structs.h</label>
+        <link refid="ugw_structs.h"/>
+        <childnode refid="321" relation="include">
+        </childnode>
+        <childnode refid="327" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+      </node>
+      <node id="328">
+        <label>ugw_defs.h</label>
+        <link refid="ugw__defs_8h"/>
+        <childnode refid="324" relation="include">
+        </childnode>
+        <childnode refid="325" relation="include">
+        </childnode>
+        <childnode refid="323" relation="include">
+        </childnode>
+      </node>
+      <node id="325">
+        <label>syslog.h</label>
+      </node>
+      <node id="322">
+        <label>help_enums.h</label>
+        <link refid="help__enums_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="330">
+        <label>ugw_proto.h</label>
+        <link refid="ugw__proto_8h"/>
+        <childnode refid="331" relation="include">
+        </childnode>
+        <childnode refid="332" relation="include">
+        </childnode>
+      </node>
+      <node id="329">
+        <label>ugw_structs.h</label>
+        <link refid="ugw_structs.h"/>
+        <childnode refid="330" relation="include">
+        </childnode>
+      </node>
+      <node id="332">
+        <label>ugw_common.h</label>
+        <link refid="ugw__common_8h"/>
+      </node>
+      <node id="331">
+        <label>cal.h</label>
+        <link refid="cal_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structMsgHeader" prot="public">MsgHeader</innerclass>
+    <innerclass refid="structRespCode" prot="public">RespCode</innerclass>
+    <innerclass refid="structNotifyObjData" prot="public">NotifyObjData</innerclass>
+    <innerclass refid="structServdData" prot="public">ServdData</innerclass>
+    <briefdescription>
+<para>File contains the data structures common across all modules in UGW software. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2015</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lantiq<sp/>Beteiligungs-GmbH<sp/>&amp;<sp/>Co.<sp/>KG</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lilienthalstrasse<sp/>15,<sp/>85579<sp/>Neubiberg,<sp/>Germany<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>For<sp/>licensing<sp/>information,<sp/>see<sp/>the<sp/>file<sp/>&apos;LICENSE&apos;<sp/>in<sp/>the<sp/>root<sp/>folder<sp/>of</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>software<sp/>module.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>*****************************************************************************<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>File<sp/>Name<sp/><sp/><sp/><sp/>:<sp/><sp/>ugw_structs.h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Description<sp/><sp/>:<sp/>Common<sp/>Library<sp/>contains<sp/>functions,<sp/>defines,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>structs,<sp/>enums<sp/>used<sp/>across<sp/>the<sp/>modules<sp/>like<sp/>CAL,<sp/>CAPI,*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CSD,<sp/>Servd,<sp/>and<sp/>Management<sp/>Entities<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor">#ifndef<sp/>_UGW_STRUCTS_H</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_UGW_STRUCTS_H</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="help__structs_8h" kindref="compound">help_structs.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ugw__enums_8h" kindref="compound">ugw_enums.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ugw__defs_8h" kindref="compound">ugw_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="comment">/*<sp/>@{<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="structMsgHeader" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39" refid="structMsgHeader_1a669c6f42a4b2f1b5ceb28e5e8ecb689d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structMsgHeader_1a669c6f42a4b2f1b5ceb28e5e8ecb689d" kindref="member">unMainOper</ref>;</highlight></codeline>
+<codeline lineno="40" refid="structMsgHeader_1a23764d626c84a4f847c356e9a0c154ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structMsgHeader_1a23764d626c84a4f847c356e9a0c154ed" kindref="member">unSubOper</ref>;</highlight></codeline>
+<codeline lineno="41" refid="structMsgHeader_1a10f7c7b6792d6280e8efca09dd9bdcbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structMsgHeader_1a10f7c7b6792d6280e8efca09dd9bdcbf" kindref="member">unOwner</ref>;</highlight></codeline>
+<codeline lineno="42" refid="structMsgHeader_1a6b8c97c2b81c02938508b180a4af8360" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/><ref refid="structMsgHeader_1a6b8c97c2b81c02938508b180a4af8360" kindref="member">nFlag</ref>;</highlight></codeline>
+<codeline lineno="43" refid="structMsgHeader_1a9012032bb9a4daaa98536c941394da2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/><ref refid="structMsgHeader_1a9012032bb9a4daaa98536c941394da2c" kindref="member">unMsgSize</ref>;</highlight></codeline>
+<codeline lineno="44" refid="structMsgHeader_1a72b10e80b8417cde7c83d543b0cfed71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structMsgHeader_1a72b10e80b8417cde7c83d543b0cfed71" kindref="member">pObjType</ref><sp/>;<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}<ref refid="structMsgHeader" kindref="compound">MsgHeader</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="structRespCode" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53" refid="structRespCode_1aea2e71950b13707509aab2dd03625dd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sName[<ref refid="group__LIBHELP_1ga635a84c0e3ae6e922f824064a006500d" kindref="member">MAX_LEN_OBJNAME</ref>];</highlight></codeline>
+<codeline lineno="54" refid="structRespCode_1a0bcc90ea9ac8680b6c9ba98644e70f1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structRespCode_1a0bcc90ea9ac8680b6c9ba98644e70f1f" kindref="member">RespCode</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}<ref refid="structRespCode" kindref="compound">RespCode</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="structNotifyObjData" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62" refid="structNotifyObjData_1ae893026ee94e65614ead5178f71ac485" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="structNotifyObjData_1ae893026ee94e65614ead5178f71ac485" kindref="member">unNotifyId</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63" refid="structNotifyObjData_1a1d1a9ff0a7887106467b7ea9002c9940" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structNotifyObjData_1a1d1a9ff0a7887106467b7ea9002c9940" kindref="member">ucType</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="structNotifyObjData_1ae0b88ded42248e172ca4dfde653478aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structParamList" kindref="compound">ParamList</ref><sp/>*<ref refid="structNotifyObjData_1ae0b88ded42248e172ca4dfde653478aa" kindref="member">pxParamList</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}<sp/><ref refid="structNotifyObjData" kindref="compound">NotifyObjData</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="structServdData" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71" refid="structServdData_1af9ec758f5ce6532d5da3ad544c27b335" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structServdData_1af9ec758f5ce6532d5da3ad544c27b335" kindref="member">unSid</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="structServdData_1aee9c93a802703e621f33bd4e065716bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structServdData_1aee9c93a802703e621f33bd4e065716bb" kindref="member">unMainOper</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73" refid="structServdData_1adc9da01914ccc12e73810e813a5a48e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structServdData_1adc9da01914ccc12e73810e813a5a48e2" kindref="member">unOwner</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="structServdData_1ac66a4b645c210b527cd3f940a5b81397" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="structServdData_1ac66a4b645c210b527cd3f940a5b81397" kindref="member">pxObjList</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="structServdData_1a6532e82f2c4113c509596c7908942ccd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structNotifyObjData" kindref="compound">NotifyObjData</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structServdData_1a6532e82f2c4113c509596c7908942ccd" kindref="member">xNotify</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76" refid="structServdData_1a0de42c741a9493a88dc7e12b80607c83" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structServdData_1a0de42c741a9493a88dc7e12b80607c83" kindref="member">nStatus</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}<sp/><ref refid="structServdData" kindref="compound">ServdData</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//#ifndef<sp/>_UGW_STRUCTS_H</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h"/>
+  </compounddef>
+</doxygen>

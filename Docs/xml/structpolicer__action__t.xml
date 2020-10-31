@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structpolicer__action__t" kind="struct" prot="public">
+    <compoundname>policer_action_t</compoundname>
+    <includes refid="qosal__cl__api_8h" local="no">qosal_cl_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpolicer__action__t_1aba06d862c7402db050b118d8b2ce5806" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t policer_action_t::null</definition>
+        <argsstring></argsstring>
+        <name>null</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>No Policer action </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="508" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="508" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolicer__action__t_1a88142da078f1f4a4fc58d237fe1c4f72" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t policer_action_t::drop</definition>
+        <argsstring></argsstring>
+        <name>drop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Drop packet </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="509" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="509" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolicer__action__t_1a6ea36f2d6f975b01d8c47c12240056eb" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t policer_action_t::dscp</definition>
+        <argsstring></argsstring>
+        <name>dscp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mark DSCP value </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="510" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="510" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolicer__action__t_1a85f7392c987b5c828a2ac57c29ec8438" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t policer_action_t::pcp</definition>
+        <argsstring></argsstring>
+        <name>pcp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mark Ethernet Priority/PCP </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="511" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="511" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolicer__action__t_1a7363bf3022ed06fc1c65a1cbd8cd9669" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t policer_action_t::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Which Policer Actions are configured </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="512" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="512" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Policer Action data structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="507" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="507" bodyend="513"/>
+    <listofallmembers>
+      <member refid="structpolicer__action__t_1a88142da078f1f4a4fc58d237fe1c4f72" prot="public" virt="non-virtual"><scope>policer_action_t</scope><name>drop</name></member>
+      <member refid="structpolicer__action__t_1a6ea36f2d6f975b01d8c47c12240056eb" prot="public" virt="non-virtual"><scope>policer_action_t</scope><name>dscp</name></member>
+      <member refid="structpolicer__action__t_1a7363bf3022ed06fc1c65a1cbd8cd9669" prot="public" virt="non-virtual"><scope>policer_action_t</scope><name>flags</name></member>
+      <member refid="structpolicer__action__t_1aba06d862c7402db050b118d8b2ce5806" prot="public" virt="non-virtual"><scope>policer_action_t</scope><name>null</name></member>
+      <member refid="structpolicer__action__t_1a85f7392c987b5c828a2ac57c29ec8438" prot="public" virt="non-virtual"><scope>policer_action_t</scope><name>pcp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

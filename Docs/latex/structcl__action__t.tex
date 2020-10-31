@@ -1,0 +1,66 @@
+\hypertarget{structcl__action__t}{\section{cl\-\_\-action\-\_\-t Struct Reference}
+\label{structcl__action__t}\index{cl\-\_\-action\-\_\-t@{cl\-\_\-action\-\_\-t}}
+}
+
+
+Classifier Action Data structure.  
+
+
+
+
+{\ttfamily \#include $<$qosal\-\_\-cl\-\_\-api.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\-\_\-t \hyperlink{structcl__action__t_a0ef7b8638843204cfa3dd74c26ab20a0}{flags}
+\item 
+uint32\-\_\-t \hyperlink{structcl__action__t_ad988ca7593a7db02a0336ca43823e713}{tc}
+\item 
+uint32\-\_\-t \hyperlink{structcl__action__t_a38aa686bf4ea526cd44a6956b95391ff}{drop}
+\item 
+uint32\-\_\-t \hyperlink{structcl__action__t_ad1d7d787f8308358001d3e7a7a38e569}{dscp}
+\item 
+uint32\-\_\-t \hyperlink{structcl__action__t_a0be5ab503978c3b1df4db2e0bb6cfa3e}{accl}
+\item 
+\hyperlink{structcl__action__vlan__t}{cl\-\_\-action\-\_\-vlan\-\_\-t} \hyperlink{structcl__action__t_a68aff443f2f8b721c811659a53ab81a2}{vlan}
+\item 
+\hyperlink{structcl__action__policer__t}{cl\-\_\-action\-\_\-policer\-\_\-t} \hyperlink{structcl__action__t_a9a133ee1bbff2b44eb4cf39b5fd47950}{policer}
+\item 
+\hyperlink{structcl__action__policy__rt__t}{cl\-\_\-action\-\_\-policy\-\_\-rt\-\_\-t} \hyperlink{structcl__action__t_a99f7a05dd6c2ea8da703b93d501c8808}{policy\-\_\-rt}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classifier Action Data structure. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structcl__action__t_a0be5ab503978c3b1df4db2e0bb6cfa3e}{\index{cl\-\_\-action\-\_\-t@{cl\-\_\-action\-\_\-t}!accl@{accl}}
+\index{accl@{accl}!cl_action_t@{cl\-\_\-action\-\_\-t}}
+\subsubsection[{accl}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t cl\-\_\-action\-\_\-t\-::accl}}\label{structcl__action__t_a0be5ab503978c3b1df4db2e0bb6cfa3e}
+For Acceleration action support \hypertarget{structcl__action__t_a38aa686bf4ea526cd44a6956b95391ff}{\index{cl\-\_\-action\-\_\-t@{cl\-\_\-action\-\_\-t}!drop@{drop}}
+\index{drop@{drop}!cl_action_t@{cl\-\_\-action\-\_\-t}}
+\subsubsection[{drop}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t cl\-\_\-action\-\_\-t\-::drop}}\label{structcl__action__t_a38aa686bf4ea526cd44a6956b95391ff}
+Drop packet action for firewall \hypertarget{structcl__action__t_ad1d7d787f8308358001d3e7a7a38e569}{\index{cl\-\_\-action\-\_\-t@{cl\-\_\-action\-\_\-t}!dscp@{dscp}}
+\index{dscp@{dscp}!cl_action_t@{cl\-\_\-action\-\_\-t}}
+\subsubsection[{dscp}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t cl\-\_\-action\-\_\-t\-::dscp}}\label{structcl__action__t_ad1d7d787f8308358001d3e7a7a38e569}
+New D\-S\-C\-P value to remark \hypertarget{structcl__action__t_a0ef7b8638843204cfa3dd74c26ab20a0}{\index{cl\-\_\-action\-\_\-t@{cl\-\_\-action\-\_\-t}!flags@{flags}}
+\index{flags@{flags}!cl_action_t@{cl\-\_\-action\-\_\-t}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t cl\-\_\-action\-\_\-t\-::flags}}\label{structcl__action__t_a0ef7b8638843204cfa3dd74c26ab20a0}
+Following actions can be specified, and if the action is modified C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-T\-C C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-D\-R\-O\-P C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-D\-S\-C\-P C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-V\-L\-A\-N C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-P\-O\-L\-I\-C\-E\-R C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-P\-O\-L\-I\-C\-Y\-R\-T C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D \-: Modified after being originally added C\-L\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D\-\_\-\-O\-T\-H\-E\-R \-: Modified by an entity other than the owner \hypertarget{structcl__action__t_a9a133ee1bbff2b44eb4cf39b5fd47950}{\index{cl\-\_\-action\-\_\-t@{cl\-\_\-action\-\_\-t}!policer@{policer}}
+\index{policer@{policer}!cl_action_t@{cl\-\_\-action\-\_\-t}}
+\subsubsection[{policer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-action\-\_\-policer\-\_\-t} cl\-\_\-action\-\_\-t\-::policer}}\label{structcl__action__t_a9a133ee1bbff2b44eb4cf39b5fd47950}
+Policer action \hypertarget{structcl__action__t_a99f7a05dd6c2ea8da703b93d501c8808}{\index{cl\-\_\-action\-\_\-t@{cl\-\_\-action\-\_\-t}!policy\-\_\-rt@{policy\-\_\-rt}}
+\index{policy\-\_\-rt@{policy\-\_\-rt}!cl_action_t@{cl\-\_\-action\-\_\-t}}
+\subsubsection[{policy\-\_\-rt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-action\-\_\-policy\-\_\-rt\-\_\-t} cl\-\_\-action\-\_\-t\-::policy\-\_\-rt}}\label{structcl__action__t_a99f7a05dd6c2ea8da703b93d501c8808}
+Policy routing/forwarding action on the packet \hypertarget{structcl__action__t_ad988ca7593a7db02a0336ca43823e713}{\index{cl\-\_\-action\-\_\-t@{cl\-\_\-action\-\_\-t}!tc@{tc}}
+\index{tc@{tc}!cl_action_t@{cl\-\_\-action\-\_\-t}}
+\subsubsection[{tc}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t cl\-\_\-action\-\_\-t\-::tc}}\label{structcl__action__t_ad988ca7593a7db02a0336ca43823e713}
+Mark Traffic Class action \hypertarget{structcl__action__t_a68aff443f2f8b721c811659a53ab81a2}{\index{cl\-\_\-action\-\_\-t@{cl\-\_\-action\-\_\-t}!vlan@{vlan}}
+\index{vlan@{vlan}!cl_action_t@{cl\-\_\-action\-\_\-t}}
+\subsubsection[{vlan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-action\-\_\-vlan\-\_\-t} cl\-\_\-action\-\_\-t\-::vlan}}\label{structcl__action__t_a68aff443f2f8b721c811659a53ab81a2}
+V\-L\-A\-N P\-C\-P value and/or V\-L\-A\-N Id remark 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qosal__cl__api_8h}{qosal\-\_\-cl\-\_\-api.\-h}\end{DoxyCompactItemize}

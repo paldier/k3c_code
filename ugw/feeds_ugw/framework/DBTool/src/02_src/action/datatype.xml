@@ -1,0 +1,2873 @@
+<root>
+  <dataType name="IPAddress">
+    <description>IP address, i.e. IPv4 address (or IPv4 subnet mask) or IPv6 address.
+All IPv4 addresses and subnet masks MUST be represented as strings in IPv4 dotted-decimal notation.  Here are some examples of valid IPv4 address textual representations:
+* 216.52.29.100
+* 192.168.1.254
+All IPv6 addresses MUST be represented using any of the 3 standard textual representations defined in {{bibref|RFC4291}} Sections 2.2.1, 2.2.2 and 2.2.3.  Both lower-case and upper-case letters can be used, but use of lower-case letters is RECOMMENDED.  Here are some examples of valid IPv6 address textual representations:
+* 1080:0:0:800:ba98:3210:11aa:12dd
+* 1080::800:ba98:3210:11aa:12dd
+* 0:0:0:0:0:0:13.1.68.3
+IPv6 addresses MUST NOT include zone identifiers. Zone identifiers are discussed in {{bibref|RFC4007|Section 6}}.
+Unspecified or inapplicable addresses (or IPv4 subnet masks) MUST be represented as empty strings unless otherwise specified by the parameter definition.</description>
+    <string>
+      <size maxLength="45"/>
+    </string>
+  </dataType>
+  <dataType name="IPv4Address" base="IPAddress">
+    <description>IPv4 address (or subnet mask).
+Can be any IPv4 address that is permitted by the ''IPAddress'' data type.</description>
+    <size maxLength="15"/>
+  </dataType>
+  <dataType name="IPv6Address" base="IPAddress">
+    <description>IPv6 address.
+Can be any IPv6 address that is permitted by the ''IPAddress'' data type.</description>
+  </dataType>
+  <dataType name="IPPrefix">
+    <description>IPv4 or IPv6 routing prefix in Classless Inter-Domain Routing (CIDR) notation {{bibref|RFC4632}}. This is specified as an IP address followed by an appended "/n" suffix, where ''n'' (the prefix size) is an integer in the range 0-32 (for IPv4) or 0-128 (for IPv6) that indicates the number of (leftmost) '1' bits of the routing prefix. 
+* IPv4 example: 192.168.1.0/24
+* IPv6 example: 2001:edff:fe6a:f76::/64
+If the IP address part is unspecified or inapplicable, it MUST be {{empty}} unless otherwise specified by the parameter definition.  In this case the IP prefix will be of the form "/n".
+If the entire IP prefix is unspecified or inapplicable, it MUST be {{empty}} unless otherwise specified by the parameter definition.</description>
+    <string>
+      <size maxLength="49"/>
+    </string>
+  </dataType>
+  <dataType name="IPv4Prefix" base="IPPrefix">
+    <description>IPv4 address prefix. 
+Can be any IPv4 prefix that is permitted by the ''IPPrefix'' data type.</description>
+    <size maxLength="18"/>
+  </dataType>
+  <dataType name="IPv6Prefix" base="IPPrefix">
+    <description>IPv6 address prefix.
+Can be any IPv6 prefix that is permitted by the ''IPPrefix'' data type.</description>
+  </dataType>
+  <dataType name="MACAddress">
+    <description>All MAC addresses are represented as strings of 12 hexadecimal digits (digits 0-9, letters A-F or a-f) displayed as six pairs of digits separated by colons.  Unspecified or inapplicable MAC addresses MUST be represented as empty strings unless otherwise specified by the parameter definition.</description>
+    <string>
+      <size maxLength="17"/>
+      <pattern value=""/>
+      <pattern value="([0-9A-Fa-f][0-9A-Fa-f]:){5}([0-9A-Fa-f][0-9A-Fa-f])"/>
+    </string>
+  </dataType>
+  <dataType name="StatsCounter32">
+    <description>A 32-bit statistics parameter, e.g. a byte counter.
+This data type SHOULD NOT be used for statistics parameters whose values might become greater than the maximum value that can be represented as an ''unsignedInt'' (i.e. 0xffffffff, referred to below as ''maxval''). ''StatsCounter64'' SHOULD be used for such parameters.
+The value ''maxval'' indicates that no data is available for this parameter.  In the unlikely event that the actual value of the statistic is ''maxval'', the CPE SHOULD return ''maxval - 1''.
+The actual value of the statistic might be greater than ''maxval''. Such values SHOULD wrap around through zero.
+The term ''packet'' is to be interpreted as the transmission unit appropriate to the protocol layer in question, e.g. an IP packet or an Ethernet frame.</description>
+    <unsignedInt>
+    </unsignedInt>
+  </dataType>
+  <dataType name="StatsCounter64">
+    <description>A 64-bit statistics parameter, e.g. a byte counter.
+This data type SHOULD be used for all statistics parameters whose values might become greater than the maximum value that can be represented as an ''unsignedInt''.
+The maximum value that can be represented as an ''unsignedLong'' (i.e. 0xffffffffffffffff) indicates that no data is available for this parameter.
+The term ''packet'' is to be interpreted as the transmission unit appropriate to the protocol layer in question, e.g. an IP packet or an Ethernet frame.</description>
+    <unsignedLong>
+    </unsignedLong>
+  </dataType>
+  <dataType name="Alias">
+    <description>
+A non-volatile handle used to reference this instance. Alias provides a mechanism for an ACS to label this instance for future reference.
+If the CPE supports the Alias-based Addressing feature as defined in {{bibref|TR-069a4|3.6.1}} and described in {{bibref|TR-069a4|Appendix II}}, the following mandatory constraints MUST be enforced:
+*Its value MUST NOT be empty.
+*Its value MUST start with a letter.
+*If its value is not assigned by the ACS, it MUST start with a "cpe-" prefix.
+*The CPE MUST NOT change the parameter value.
+    </description>
+    <string>
+      <size maxLength="64"/>
+    </string>
+  </dataType>
+  <dataType name="Dbm1000">
+    <description>The value is measured in ''dBm/1000'', i.e. the value divided by 1000 is dB relative to 1 mW.  For example, -12345 means -12.345 dBm, 0 means 0 dBm (1 mW) and 12345 means 12.345 dBm.</description>
+    <int>
+    </int>
+  </dataType>
+  <dataType name="UUID">
+    <description>
+      Universally Unique Identifier.  See {{bibref|RFC4122}}.
+    </description>
+    <string>
+      <size minLength="36" maxLength="36"/>
+      <pattern value="[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}"/>
+    </string>
+  </dataType>
+  <dataType name="IEEE_EUI64">
+    <description>The IEEE EUI 64-bit identifier as defined in {{bibref|EUI64}}. The IEEE defined 64-bit extended unique identifier (EUI-64) is a concatenation of:
+* The 24-bit (OUI-24) or 36-bit (OUI-36) company_id value assigned by the IEEE Registration Authority (IEEE-RA), and
+* The extension identifier (40 bits for OUI-24 or 28 bits for OUI-36) assigned by the organization with that company_id assignment.
+    </description>
+    <string>
+      <size maxLength="23"/>
+      <pattern value=""/>
+      <pattern value="([0-9A-Fa-f][0-9A-Fa-f]:){7}([0-9A-Fa-f][0-9A-Fa-f])"/>
+    </string>
+  </dataType>
+  <dataType name="ZigBeeNetworkAddress">
+    <description>The ZigBee 16-bit network address (NWK) as defined in {{bibref|ZigBee2007}}. The address is assigned to a device by the network layer and used by the network layer for routing messages between devices.
+    </description>
+    <string>
+      <size maxLength="4"/>
+      <pattern value=""/>
+      <pattern value="([0-9A-Fa-f]){4}"/>
+    </string>
+  </dataType>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="UUID"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Dbm1000">
+    <range minInclusive="-65536" maxInclusive="65534" step="2"/>
+  </dataType>
+  <dataType ref="Dbm1000">
+    <range minInclusive="-127000" maxInclusive="0" step="500"/>
+  </dataType>
+  <dataType ref="Dbm1000">
+    <range minInclusive="-127000" maxInclusive="0" step="500"/>
+  </dataType>
+  <dataType ref="Dbm1000">
+    <range minInclusive="-127000" maxInclusive="0" step="500"/>
+  </dataType>
+  <dataType ref="Dbm1000">
+    <range minInclusive="-63500" maxInclusive="63500" step="500"/>
+  </dataType>
+  <dataType ref="Dbm1000">
+    <range minInclusive="-63500" maxInclusive="63500" step="500"/>
+  </dataType>
+  <dataType ref="Alias"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="Alias"/>
+  <dataType ref="StatsCounter64">
+    <units value="bytes"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="bytes"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="StatsCounter64">
+    <units value="bytes"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="bytes"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="Alias"/>
+  <dataType ref="IEEE_EUI64"/>
+  <dataType ref="ZigBeeNetworkAddress"/>
+  <dataType ref="StatsCounter64">
+    <units value="bytes"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="bytes"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="ZigBee packets"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="ZigBee packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="ZigBee packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="ZigBee packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="ZigBee packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="ZigBee packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="ZigBee packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="ZigBee packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="ZigBee packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="ZigBee packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="ZigBee packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="ZigBee packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="ZigBee packets"/>
+  </dataType>
+  <dataType ref="IEEE_EUI64"/>
+  <dataType ref="ZigBeeNetworkAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IEEE_EUI64"/>
+  <dataType ref="ZigBeeNetworkAddress"/>
+  <dataType ref="IEEE_EUI64"/>
+  <dataType ref="ZigBeeNetworkAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IEEE_EUI64"/>
+  <dataType ref="IEEE_EUI64"/>
+  <dataType ref="ZigBeeNetworkAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="ZigBeeNetworkAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPPrefix"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPPrefix"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="IPv6Address"/>
+  <dataType ref="IPv6Address"/>
+  <dataType ref="IPv6Prefix"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPv6Address"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPv6Prefix"/>
+  <dataType ref="IPv6Prefix"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter64">
+    <units value="bytes"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="bytes"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="Alias"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="Alias"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="StatsCounter64">
+    <units value="bytes"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="bytes"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="Alias"/>
+  <dataType ref="StatsCounter64">
+    <units value="bytes"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="bytes"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="Alias"/>
+  <dataType ref="StatsCounter32">
+    <units value="messages"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="messages"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="bytes"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="bytes"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="Alias"/>
+  <dataType ref="StatsCounter64">
+    <units value="bytes"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="bytes"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter64">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="StatsCounter32">
+    <units value="packets"/>
+  </dataType>
+  <dataType ref="Alias"/>
+  <dataType ref="IPv6Prefix"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPv6Prefix"/>
+  <dataType ref="IPv4Prefix"/>
+  <dataType ref="Alias"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter64"/>
+  <dataType ref="StatsCounter32"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPv6Prefix"/>
+  <dataType ref="IPv6Address"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPv6Address"/>
+  <dataType ref="IPv6Prefix"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="IPv6Prefix"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPv6Address"/>
+  <dataType ref="IPv6Address"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPPrefix"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPPrefix"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="IPv6Address"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="Alias"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="Alias"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="IPv4Address"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPv6Address"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPv6Address"/>
+  <dataType ref="IPv6Address"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPv6Address"/>
+  <dataType ref="IPv6Address"/>
+  <dataType ref="IPv6Prefix"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="MACAddress"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="UUID"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPPrefix"/>
+  <dataType ref="IPAddress"/>
+  <dataType ref="IPPrefix"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <dataType ref="Alias"/>
+  <ProcessStateEnum>
+    <enumeration value="Running"/>
+    <enumeration value="Sleeping"/>
+    <enumeration value="Stopped"/>
+    <enumeration optional="true" value="Idle"/>
+    <enumeration optional="true" value="Uninterruptible"/>
+    <enumeration optional="true" value="Zombie"/>
+  </ProcessStateEnum>
+  <TemperatureSensorStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error"/>
+  </TemperatureSensorStatusEnum>
+  <NetworkPropertiesTCPImplementationEnum>
+    <enumeration value="Tahoe"/>
+    <enumeration value="Reno"/>
+    <enumeration value="New Reno"/>
+    <enumeration value="Vegas"/>
+  </NetworkPropertiesTCPImplementationEnum>
+  <ProcessorArchitectureEnum>
+    <enumeration value="arm"/>
+    <enumeration value="i386"/>
+    <enumeration value="m68010"/>
+    <enumeration value="m68k"/>
+    <enumeration value="mipseb"/>
+    <enumeration value="mipsel"/>
+    <enumeration value="powerpc"/>
+    <enumeration value="sh3eb"/>
+    <enumeration value="sh3el"/>
+    <enumeration value="x86_64"/>
+  </ProcessorArchitectureEnum>
+  <ProxierInfoProxyProtocolEnum>
+    <enumeration value="Z-Wave"/>
+    <enumeration value="ZigBee"/>
+    <enumeration value="UPnP-DM"/>
+    <enumeration value="ETSI-M2M"/>
+  </ProxierInfoProxyProtocolEnum>
+  <LocationSourceEnum>
+    <enumeration value="GPS"/>
+    <enumeration value="AGPS"/>
+    <enumeration value="Manual"/>
+    <enumeration value="External"/>
+  </LocationSourceEnum>
+  <LocationExternalProtocolEnum>
+    <enumeration value=""/>
+    <enumeration value="CWMP"/>
+    <enumeration value="OMA-DM"/>
+    <enumeration value="SNMP"/>
+    <enumeration value="UPnP"/>
+    <enumeration value="HELD"/>
+    <enumeration value="DHCPv4"/>
+    <enumeration value="DHCPv6"/>
+    <enumeration value="LLDP-MED"/>
+    <enumeration value="MLP"/>
+    <enumeration value="Other"/>
+  </LocationExternalProtocolEnum>
+  <ManagementServerInstanceModeEnum>
+    <enumeration value="InstanceNumber"/>
+    <enumeration value="InstanceAlias"/>
+  </ManagementServerInstanceModeEnum>
+  <ManagementServerSupportedConnReqMethodsEnum>
+    <enumeration value="HTTP"/>
+    <enumeration optional="true" value="STUN"/>
+    <enumeration optional="true" value="XMPP"/>
+  </ManagementServerSupportedConnReqMethodsEnum>
+  <ManagementServerHTTPCompressionSupportedEnum>
+    <enumeration value="GZIP"/>
+    <enumeration value="Compress"/>
+    <enumeration value="Deflate"/>
+  </ManagementServerHTTPCompressionSupportedEnum>
+  <ManagementServerLightweightNotificationProtocolsSupportedEnum>
+    <enumeration value="UDP"/>
+  </ManagementServerLightweightNotificationProtocolsSupportedEnum>
+  <AutonomousTransferCompletePolicyTransferTypeFilterEnum>
+    <enumeration value="Upload"/>
+    <enumeration value="Download"/>
+    <enumeration value="Both"/>
+  </AutonomousTransferCompletePolicyTransferTypeFilterEnum>
+  <AutonomousTransferCompletePolicyResultTypeFilterEnum>
+    <enumeration value="Success"/>
+    <enumeration value="Failure"/>
+    <enumeration value="Both"/>
+  </AutonomousTransferCompletePolicyResultTypeFilterEnum>
+  <AnnouncementStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </AnnouncementStatusEnum>
+  <GroupStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </GroupStatusEnum>
+  <QueryStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </QueryStatusEnum>
+  <DUStateChangeComplPolicyOperationTypeFilterEnum>
+    <enumeration value="Install"/>
+    <enumeration value="Update"/>
+    <enumeration value="Uninstall"/>
+  </DUStateChangeComplPolicyOperationTypeFilterEnum>
+  <DUStateChangeComplPolicyResultTypeFilterEnum>
+    <enumeration value="Success"/>
+    <enumeration value="Failure"/>
+    <enumeration value="Both"/>
+  </DUStateChangeComplPolicyResultTypeFilterEnum>
+  <DUStateChangeComplPolicyFaultCodeFilterEnum>
+    <enumeration value="9001"/>
+    <enumeration value="9003"/>
+    <enumeration value="9012"/>
+    <enumeration value="9013"/>
+    <enumeration value="9015"/>
+    <enumeration value="9016"/>
+    <enumeration value="9017"/>
+    <enumeration value="9018"/>
+    <enumeration value="9022"/>
+    <enumeration value="9023"/>
+    <enumeration value="9024"/>
+    <enumeration value="9025"/>
+    <enumeration value="9026"/>
+    <enumeration value="9027"/>
+    <enumeration value="9028"/>
+    <enumeration value="9029"/>
+    <enumeration value="9030"/>
+    <enumeration value="9031"/>
+    <enumeration value="9032"/>
+  </DUStateChangeComplPolicyFaultCodeFilterEnum>
+  <EmbeddedDeviceProxyProtocolEnum>
+    <enumeration value="Z-Wave"/>
+    <enumeration value="ZigBee"/>
+    <enumeration value="UPnP-DM"/>
+    <enumeration value="ETSI-M2M"/>
+  </EmbeddedDeviceProxyProtocolEnum>
+  <EmbeddedDeviceDiscoveryProtocolEnum>
+    <enumeration value="Z-Wave"/>
+    <enumeration value="ZigBee"/>
+    <enumeration value="UPnP"/>
+    <enumeration value="ETSI-M2M"/>
+  </EmbeddedDeviceDiscoveryProtocolEnum>
+  <EmbeddedDeviceCommandProcessedEnum>
+    <enumeration value="Pending"/>
+    <enumeration value="Retrying"/>
+    <enumeration value="Success"/>
+    <enumeration value="Error"/>
+  </EmbeddedDeviceCommandProcessedEnum>
+  <VirtualDeviceProxyProtocolEnum>
+    <enumeration value="Z-Wave"/>
+    <enumeration value="ZigBee"/>
+    <enumeration value="UPnP-DM"/>
+    <enumeration value="ETSI-M2M"/>
+  </VirtualDeviceProxyProtocolEnum>
+  <VirtualDeviceDiscoveryProtocolEnum>
+    <enumeration value="Z-Wave"/>
+    <enumeration value="ZigBee"/>
+    <enumeration value="UPnP"/>
+    <enumeration value="ETSI-M2M"/>
+  </VirtualDeviceDiscoveryProtocolEnum>
+  <TimeStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Unsynchronized"/>
+    <enumeration value="Synchronized"/>
+    <enumeration value="Error_FailedToSynchronize"/>
+    <enumeration optional="true" value="Error"/>
+  </TimeStatusEnum>
+  <RemoteAccessSupportedProtocolsEnum>
+    <enumeration value="HTTP"/>
+    <enumeration value="HTTPS"/>
+  </RemoteAccessSupportedProtocolsEnum>
+  <LineStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </LineStatusEnum>
+  <LineLinkStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Initializing"/>
+    <enumeration value="EstablishingLink"/>
+    <enumeration value="NoSignal"/>
+    <enumeration value="Disabled"/>
+    <enumeration optional="true" value="Error"/>
+  </LineLinkStatusEnum>
+  <LineStandardsSupportedEnum>
+    <enumeration value="G.992.1_Annex_A"/>
+    <enumeration value="G.992.1_Annex_B"/>
+    <enumeration value="G.992.1_Annex_C"/>
+    <enumeration value="T1.413"/>
+    <enumeration value="T1.413i2"/>
+    <enumeration value="ETSI_101_388"/>
+    <enumeration value="G.992.2"/>
+    <enumeration value="G.992.3_Annex_A"/>
+    <enumeration value="G.992.3_Annex_B"/>
+    <enumeration value="G.992.3_Annex_C"/>
+    <enumeration value="G.992.3_Annex_I"/>
+    <enumeration value="G.992.3_Annex_J"/>
+    <enumeration value="G.992.3_Annex_L"/>
+    <enumeration value="G.992.3_Annex_M"/>
+    <enumeration value="G.992.4"/>
+    <enumeration value="G.992.5_Annex_A"/>
+    <enumeration value="G.992.5_Annex_B"/>
+    <enumeration value="G.992.5_Annex_C"/>
+    <enumeration value="G.992.5_Annex_I"/>
+    <enumeration value="G.992.5_Annex_J"/>
+    <enumeration value="G.992.5_Annex_M"/>
+    <enumeration value="G.993.1"/>
+    <enumeration value="G.993.1_Annex_A"/>
+    <enumeration value="G.993.2_Annex_A"/>
+    <enumeration value="G.993.2_Annex_B"/>
+    <enumeration value="G.993.2_Annex_C"/>
+  </LineStandardsSupportedEnum>
+  <LineLineEncodingEnum>
+    <enumeration value="DMT"/>
+    <enumeration value="CAP"/>
+    <enumeration value="2B1Q"/>
+    <enumeration value="43BT"/>
+    <enumeration value="PAM"/>
+    <enumeration value="QAM"/>
+  </LineLineEncodingEnum>
+  <LineAllowedProfilesEnum>
+    <enumeration value="8a"/>
+    <enumeration value="8b"/>
+    <enumeration value="8c"/>
+    <enumeration value="8d"/>
+    <enumeration value="12a"/>
+    <enumeration value="12b"/>
+    <enumeration value="17a"/>
+    <enumeration value="17b"/>
+    <enumeration value="30a"/>
+  </LineAllowedProfilesEnum>
+  <LinePowerManagementStateEnum>
+    <enumeration value="L0"/>
+    <enumeration value="L1"/>
+    <enumeration value="L2"/>
+    <enumeration value="L3"/>
+    <enumeration value="L4"/>
+  </LinePowerManagementStateEnum>
+  <ChannelStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </ChannelStatusEnum>
+  <ChannelLinkEncapsulationSupportedEnum>
+    <enumeration value="G.992.3_Annex_K_ATM"/>
+    <enumeration value="G.992.3_Annex_K_PTM"/>
+    <enumeration value="G.993.2_Annex_K_ATM"/>
+    <enumeration value="G.993.2_Annex_K_PTM"/>
+    <enumeration value="G.994.1"/>
+  </ChannelLinkEncapsulationSupportedEnum>
+  <ChannelLinkEncapsulationUsedEnum>
+    <enumeration value="G.992.3_Annex_K_ATM"/>
+    <enumeration value="G.992.3_Annex_K_PTM"/>
+    <enumeration value="G.993.2_Annex_K_ATM"/>
+    <enumeration value="G.993.2_Annex_K_PTM"/>
+  </ChannelLinkEncapsulationUsedEnum>
+  <BondingGroupStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </BondingGroupStatusEnum>
+  <BondingGroupGroupStatusEnum>
+    <enumeration value="NoPeer"/>
+    <enumeration value="PeerPowerLoss"/>
+    <enumeration value="PeerBondSchemeMismatch"/>
+    <enumeration value="LowRate"/>
+  </BondingGroupGroupStatusEnum>
+  <BondingGroupBondSchemesSupportedEnum>
+    <enumeration value="ATM"/>
+    <enumeration value="Ethernet"/>
+    <enumeration value="TDIM"/>
+  </BondingGroupBondSchemesSupportedEnum>
+  <TotalFailureReasonsEnum>
+    <enumeration value="LowRate"/>
+    <enumeration value="ExcessiveDelay"/>
+    <enumeration value="InsufficientBuffers"/>
+    <enumeration value="Other"/>
+  </TotalFailureReasonsEnum>
+  <CurrentDayFailureReasonsEnum>
+    <enumeration value="LowRate"/>
+    <enumeration value="ExcessiveDelay"/>
+    <enumeration value="InsufficientBuffers"/>
+    <enumeration value="Other"/>
+  </CurrentDayFailureReasonsEnum>
+  <QuarterHourFailureReasonsEnum>
+    <enumeration value="LowRate"/>
+    <enumeration value="ExcessiveDelay"/>
+    <enumeration value="InsufficientBuffers"/>
+    <enumeration value="Other"/>
+  </QuarterHourFailureReasonsEnum>
+  <ADSLLineTestDiagnosticsStateEnum>
+    <enumeration access="readOnly" value="None"/>
+    <enumeration value="Requested"/>
+    <enumeration access="readOnly" value="Complete"/>
+    <enumeration access="readOnly" value="Error_Internal"/>
+    <enumeration access="readOnly" value="Error_Other"/>
+  </ADSLLineTestDiagnosticsStateEnum>
+  <InterfaceStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceStatusEnum>
+  <CellularRoamingStatusEnum>
+    <enumeration value="Home"/>
+    <enumeration value="Roaming"/>
+  </CellularRoamingStatusEnum>
+  <InterfaceStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceStatusEnum>
+  <InterfaceSupportedAccessTechnologiesEnum>
+    <enumeration value="GPRS"/>
+    <enumeration value="EDGE"/>
+    <enumeration value="UMTS"/>
+    <enumeration value="UMTSHSPA"/>
+    <enumeration value="CDMA2000OneX"/>
+    <enumeration value="CDMA2000HRPD"/>
+    <enumeration value="LTE"/>
+  </InterfaceSupportedAccessTechnologiesEnum>
+  <USIMStatusEnum>
+    <enumeration value="None"/>
+    <enumeration value="Available"/>
+    <enumeration value="Valid"/>
+    <enumeration value="Blocked"/>
+    <enumeration optional="true" value="Error"/>
+  </USIMStatusEnum>
+  <USIMPINCheckEnum>
+    <enumeration value="OnNetworkAccess"/>
+    <enumeration value="Reboot"/>
+    <enumeration value="Off"/>
+  </USIMPINCheckEnum>
+  <LinkStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </LinkStatusEnum>
+  <LinkLinkTypeEnum>
+    <enumeration value="EoA"/>
+    <enumeration value="IPoA"/>
+    <enumeration value="PPPoA"/>
+    <enumeration value="CIP"/>
+    <enumeration value="Unconfigured"/>
+  </LinkLinkTypeEnum>
+  <LinkEncapsulationEnum>
+    <enumeration value="LLC"/>
+    <enumeration value="VCMUX"/>
+  </LinkEncapsulationEnum>
+  <LinkAALEnum>
+    <enumeration value="AAL1"/>
+    <enumeration value="AAL2"/>
+    <enumeration value="AAL3"/>
+    <enumeration value="AAL4"/>
+    <enumeration value="AAL5"/>
+  </LinkAALEnum>
+  <QoSQoSClassEnum>
+    <enumeration value="UBR"/>
+    <enumeration value="CBR"/>
+    <enumeration value="GFR"/>
+    <enumeration value="VBR-nrt"/>
+    <enumeration value="VBR-rt"/>
+    <enumeration value="UBR+"/>
+    <enumeration value="ABR"/>
+  </QoSQoSClassEnum>
+  <F5LoopbackDiagnosticsStateEnum>
+    <enumeration access="readOnly" value="None"/>
+    <enumeration value="Requested"/>
+    <enumeration access="readOnly" value="Complete"/>
+    <enumeration access="readOnly" value="Error_Internal"/>
+    <enumeration access="readOnly" value="Error_Other"/>
+  </F5LoopbackDiagnosticsStateEnum>
+  <LinkStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </LinkStatusEnum>
+  <RMONStatsStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </RMONStatsStatusEnum>
+  <InterfaceStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceStatusEnum>
+  <InterfaceDuplexModeEnum>
+    <enumeration value="Half"/>
+    <enumeration value="Full"/>
+    <enumeration value="Auto"/>
+  </InterfaceDuplexModeEnum>
+  <LinkStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </LinkStatusEnum>
+  <VLANTerminationStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </VLANTerminationStatusEnum>
+  <InterfaceStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceStatusEnum>
+  <PortTypeEnum>
+    <enumeration value="Host"/>
+    <enumeration value="Hub"/>
+    <enumeration value="Device"/>
+  </PortTypeEnum>
+  <PortReceptacleEnum>
+    <enumeration value="Standard-A"/>
+    <enumeration value="Standard-B"/>
+    <enumeration value="Powered-B"/>
+    <enumeration value="Micro-AB"/>
+    <enumeration value="Micro-B"/>
+  </PortReceptacleEnum>
+  <PortRateEnum>
+    <enumeration value="Low"/>
+    <enumeration value="Full"/>
+    <enumeration value="High"/>
+    <enumeration value="Super"/>
+  </PortRateEnum>
+  <PortPowerEnum>
+    <enumeration value="Self"/>
+    <enumeration value="Bus"/>
+    <enumeration value="Unknown"/>
+  </PortPowerEnum>
+  <HostTypeEnum>
+    <enumeration value="OHCI"/>
+    <enumeration value="EHCI"/>
+    <enumeration value="UHCI"/>
+    <enumeration value="xHCI"/>
+  </HostTypeEnum>
+  <DeviceRateEnum>
+    <enumeration value="Low"/>
+    <enumeration value="Full"/>
+    <enumeration value="High"/>
+    <enumeration value="Super"/>
+  </DeviceRateEnum>
+  <InterfaceStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceStatusEnum>
+  <InterfacePossibleConnectionTypesEnum>
+    <enumeration value="Phone"/>
+    <enumeration value="Coax"/>
+  </InterfacePossibleConnectionTypesEnum>
+  <InterfacePossibleSpectralModesEnum>
+    <enumeration value="A"/>
+    <enumeration value="B"/>
+    <enumeration value="C"/>
+    <enumeration value="D"/>
+  </InterfacePossibleSpectralModesEnum>
+  <InterfaceMasterSelectionModeEnum>
+    <enumeration value="Automatic"/>
+    <enumeration value="ForceEndpoint"/>
+    <enumeration value="ForceMaster"/>
+  </InterfaceMasterSelectionModeEnum>
+  <FlowSpecStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </FlowSpecStatusEnum>
+  <FlowSpecFlowTypeEnum>
+    <enumeration value="CBR"/>
+    <enumeration value="VBR"/>
+    <enumeration value="VBR-NRT"/>
+    <enumeration value="BE"/>
+  </FlowSpecFlowTypeEnum>
+  <PHYThroughputDiagnosticsStateEnum>
+    <enumeration access="readOnly" value="None"/>
+    <enumeration value="Requested"/>
+    <enumeration access="readOnly" value="Complete"/>
+    <enumeration access="readOnly" value="Error_FailToEnableCert"/>
+    <enumeration access="readOnly" value="Error_CertCmdTimeout"/>
+    <enumeration access="readOnly" value="Error_UnknownErr"/>
+    <enumeration access="readOnly" value="Error_UnsupportedOpcode"/>
+    <enumeration access="readOnly" value="Error_InvalidParam"/>
+    <enumeration access="readOnly" value="Error_UnsupportedCmdSegment"/>
+    <enumeration access="readOnly" value="Error_UnsupportedDataGen"/>
+    <enumeration access="readOnly" value="Error_InvalidSequence"/>
+    <enumeration access="readOnly" value="Error_InvalidFrame"/>
+    <enumeration access="readOnly" value="Eror_InvalidOpcode"/>
+  </PHYThroughputDiagnosticsStateEnum>
+  <PHYThroughputPayloadTypeEnum>
+    <enumeration value="Pattern"/>
+    <enumeration value="IncrementByte"/>
+  </PHYThroughputPayloadTypeEnum>
+  <PerformanceMonitoringDiagnosticsStateEnum>
+    <enumeration access="readOnly" value="None"/>
+    <enumeration value="Requested"/>
+    <enumeration access="readOnly" value="Complete"/>
+    <enumeration access="readOnly" value="Error_SampleIntervalTooSmall"/>
+  </PerformanceMonitoringDiagnosticsStateEnum>
+  <InterfaceStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceStatusEnum>
+  <InterfaceStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceStatusEnum>
+  <InterfaceConnectionTypeEnum>
+    <enumeration value="Powerline"/>
+    <enumeration value="Phone"/>
+    <enumeration value="Coax"/>
+  </InterfaceConnectionTypeEnum>
+  <InterfaceMediumTypeEnum>
+    <enumeration value="PowerLineBaseband"/>
+    <enumeration value="PhoneLineBaseband"/>
+    <enumeration value="CoaxBaseband"/>
+    <enumeration value="CoaxRF"/>
+    <enumeration value="PlasticOpticalFiber"/>
+  </InterfaceMediumTypeEnum>
+  <SCInfoModesSupportedEnum>
+    <enumeration value="NN"/>
+    <enumeration value="NMK"/>
+  </SCInfoModesSupportedEnum>
+  <SCInfoMICSizeEnum>
+    <enumeration value="4-byte MIC"/>
+    <enumeration value="8-byte MIC"/>
+    <enumeration value="16-byte MIC"/>
+  </SCInfoMICSizeEnum>
+  <PHYThroughputDiagnosticsStateEnum>
+    <enumeration access="readOnly" value="None"/>
+    <enumeration value="Requested"/>
+    <enumeration access="readOnly" value="Complete"/>
+    <enumeration access="readOnly" value="Error"/>
+  </PHYThroughputDiagnosticsStateEnum>
+  <ResultLinkStateEnum>
+    <enumeration value="Direct"/>
+    <enumeration value="NonDirect"/>
+  </ResultLinkStateEnum>
+  <PerformanceMonitoringDiagnosticsStateEnum>
+    <enumeration access="readOnly" value="None"/>
+    <enumeration value="Requested"/>
+    <enumeration access="readOnly" value="Complete"/>
+    <enumeration access="readOnly" value="Error"/>
+  </PerformanceMonitoringDiagnosticsStateEnum>
+  <InterfaceStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceStatusEnum>
+  <InterfaceStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceStatusEnum>
+  <InterfaceNodeTypeEnum>
+    <enumeration value="AP"/>
+    <enumeration value="EP"/>
+  </InterfaceNodeTypeEnum>
+  <InterfaceEncryptionMethodEnum>
+    <enumeration value="None"/>
+    <enumeration value="DES"/>
+    <enumeration value="3DES"/>
+    <enumeration value="AES128"/>
+    <enumeration value="AES256"/>
+  </InterfaceEncryptionMethodEnum>
+  <InterfaceMeasurementDiagnosticsStateEnum>
+    <enumeration access="readOnly" value="None"/>
+    <enumeration value="Requested"/>
+    <enumeration access="readOnly" value="Complete"/>
+    <enumeration access="readOnly" value="Error_InvalidPort"/>
+  </InterfaceMeasurementDiagnosticsStateEnum>
+  <InterfaceMeasurementTypeEnum>
+    <enumeration value="SNR"/>
+    <enumeration value="CFR"/>
+  </InterfaceMeasurementTypeEnum>
+  <RadioStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </RadioStatusEnum>
+  <RadioSupportedFrequencyBandsEnum>
+    <enumeration value="2.4GHz"/>
+    <enumeration value="5GHz"/>
+  </RadioSupportedFrequencyBandsEnum>
+  <RadioSupportedStandardsEnum>
+    <enumeration value="a"/>
+    <enumeration value="b"/>
+    <enumeration value="g"/>
+    <enumeration value="n"/>
+    <enumeration value="ac"/>
+  </RadioSupportedStandardsEnum>
+  <RadioOperatingChannelBandwidthEnum>
+    <enumeration value="20MHz"/>
+    <enumeration value="40MHz"/>
+    <enumeration value="80MHz"/>
+    <enumeration value="160MHz"/>
+    <enumeration value="Auto"/>
+  </RadioOperatingChannelBandwidthEnum>
+  <RadioExtensionChannelEnum>
+    <enumeration value="AboveControlChannel"/>
+    <enumeration value="BelowControlChannel"/>
+    <enumeration value="Auto"/>
+  </RadioExtensionChannelEnum>
+  <RadioGuardIntervalEnum>
+    <enumeration value="400nsec"/>
+    <enumeration value="800nsec"/>
+    <enumeration value="Auto"/>
+  </RadioGuardIntervalEnum>
+  <RadioPreambleTypeEnum>
+    <enumeration value="short"/>
+    <enumeration value="long"/>
+    <enumeration value="auto"/>
+  </RadioPreambleTypeEnum>
+  <NeighboringWiFiDiagnosticDiagnosticsStateEnum>
+    <enumeration access="readOnly" value="None"/>
+    <enumeration value="Requested"/>
+    <enumeration access="readOnly" value="Completed"/>
+    <enumeration access="readOnly" value="Error"/>
+  </NeighboringWiFiDiagnosticDiagnosticsStateEnum>
+  <ResultModeEnum>
+    <enumeration value="AdHoc"/>
+    <enumeration value="Infrastructure"/>
+  </ResultModeEnum>
+  <ResultSecurityModeEnabledEnum>
+    <enumeration value="None"/>
+    <enumeration value="WEP"/>
+    <enumeration value="WPA"/>
+    <enumeration value="WPA2"/>
+    <enumeration value="WPA-WPA2"/>
+    <enumeration value="WPA-Enterprise"/>
+    <enumeration value="WPA2-Enterprise"/>
+    <enumeration value="WPA-WPA2-Enterprise"/>
+  </ResultSecurityModeEnabledEnum>
+  <ResultEncryptionModeEnum>
+    <enumeration value="TKIP"/>
+    <enumeration value="AES"/>
+  </ResultEncryptionModeEnum>
+  <ResultOperatingFrequencyBandEnum>
+    <enumeration value="2.4GHz"/>
+    <enumeration value="5GHz"/>
+  </ResultOperatingFrequencyBandEnum>
+  <ResultSupportedStandardsEnum>
+    <enumeration value="a"/>
+    <enumeration value="b"/>
+    <enumeration value="g"/>
+    <enumeration value="n"/>
+    <enumeration value="ac"/>
+  </ResultSupportedStandardsEnum>
+  <ResultOperatingChannelBandwidthEnum>
+    <enumeration value="20MHz"/>
+    <enumeration value="40MHz"/>
+    <enumeration value="80MHz"/>
+    <enumeration value="160MHz"/>
+    <enumeration value="Auto"/>
+  </ResultOperatingChannelBandwidthEnum>
+  <SSIDStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </SSIDStatusEnum>
+  <AccessPointStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </AccessPointStatusEnum>
+  <SecurityModesSupportedEnum>
+    <enumeration value="None"/>
+    <enumeration value="WEP-64"/>
+    <enumeration value="WEP-128"/>
+    <enumeration value="WPA-Personal"/>
+    <enumeration value="WPA2-Personal"/>
+    <enumeration value="WPA-WPA2-Personal"/>
+    <enumeration value="WPA-Enterprise"/>
+    <enumeration value="WPA2-Enterprise"/>
+    <enumeration value="WPA-WPA2-Enterprise"/>
+  </SecurityModesSupportedEnum>
+  <WPSConfigMethodsSupportedEnum>
+    <enumeration value="USBFlashDrive"/>
+    <enumeration value="Ethernet"/>
+    <enumeration value="ExternalNFCToken"/>
+    <enumeration value="IntegratedNFCToken"/>
+    <enumeration value="NFCInterface"/>
+    <enumeration value="PushButton"/>
+    <enumeration value="PIN"/>
+  </WPSConfigMethodsSupportedEnum>
+  <ACAccessCategoryEnum>
+    <enumeration value="BE"/>
+    <enumeration value="BK"/>
+    <enumeration value="VI"/>
+    <enumeration value="VO"/>
+  </ACAccessCategoryEnum>
+  <EndPointStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </EndPointStatusEnum>
+  <SecurityModesSupportedEnum>
+    <enumeration value="None"/>
+    <enumeration value="WEP-64"/>
+    <enumeration value="WEP-128"/>
+    <enumeration value="WPA-Personal"/>
+    <enumeration value="WPA2-Personal"/>
+    <enumeration value="WPA-WPA2-Personal"/>
+    <enumeration value="WPA-Enterprise"/>
+    <enumeration value="WPA2-Enterprise"/>
+    <enumeration value="WPA-WPA2-Enterprise"/>
+  </SecurityModesSupportedEnum>
+  <ProfileStatusEnum>
+    <enumeration value="Active"/>
+    <enumeration value="Available"/>
+    <enumeration optional="true" value="Error"/>
+    <enumeration value="Disabled"/>
+  </ProfileStatusEnum>
+  <WPSConfigMethodsSupportedEnum>
+    <enumeration value="USBFlashDrive"/>
+    <enumeration value="Ethernet"/>
+    <enumeration value="ExternalNFCToken"/>
+    <enumeration value="IntegratedNFCToken"/>
+    <enumeration value="NFCInterface"/>
+    <enumeration value="PushButton"/>
+    <enumeration value="PIN"/>
+  </WPSConfigMethodsSupportedEnum>
+  <ACAccessCategoryEnum>
+    <enumeration value="BE"/>
+    <enumeration value="BK"/>
+    <enumeration value="VI"/>
+    <enumeration value="VO"/>
+  </ACAccessCategoryEnum>
+  <InterfaceStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceStatusEnum>
+  <NodeDescriptorLogicalTypeEnum>
+    <enumeration value="ZC"/>
+    <enumeration value="ZR"/>
+    <enumeration value="ZED"/>
+  </NodeDescriptorLogicalTypeEnum>
+  <NodeDescriptorFrequencyBandEnum>
+    <enumeration value="868-868.6"/>
+    <enumeration value="902-928"/>
+    <enumeration value="2400-2483.5"/>
+  </NodeDescriptorFrequencyBandEnum>
+  <NodeDescriptorMACCapabilityEnum>
+    <enumeration value="AlternatePANCoordinator"/>
+    <enumeration value="FFD"/>
+    <enumeration value="MainsPowerSource"/>
+    <enumeration value="OnWhenIdle"/>
+    <enumeration value="SecureCommunication"/>
+  </NodeDescriptorMACCapabilityEnum>
+  <NodeDescriptorServerMaskEnum>
+    <enumeration value="PrimaryTrustCenter"/>
+    <enumeration value="PrimaryBindingTableCache"/>
+    <enumeration value="BackupBindingTableCache"/>
+    <enumeration value="PrimaryDiscoveryCache"/>
+    <enumeration value="BackupDiscoveryCache"/>
+    <enumeration value="NetworkManager"/>
+  </NodeDescriptorServerMaskEnum>
+  <NodeDescriptorDescriptorCapabilityEnum>
+    <enumeration value="ExtendedActiveEndpointListAvailable"/>
+    <enumeration value="ExtendedSimpleDescriptorListAvailable"/>
+  </NodeDescriptorDescriptorCapabilityEnum>
+  <PowerDescriptorCurrentPowerModeEnum>
+    <enumeration value="Synchronized"/>
+    <enumeration value="Periodic"/>
+    <enumeration value="Manual"/>
+  </PowerDescriptorCurrentPowerModeEnum>
+  <PowerDescriptorAvailablePowerSourceEnum>
+    <enumeration value="Constant"/>
+    <enumeration value="Rechargeable"/>
+    <enumeration value="Disposable"/>
+  </PowerDescriptorAvailablePowerSourceEnum>
+  <PowerDescriptorCurrentPowerSourceEnum>
+    <enumeration value="Constant"/>
+    <enumeration value="Rechargeable"/>
+    <enumeration value="Disposable"/>
+  </PowerDescriptorCurrentPowerSourceEnum>
+  <PowerDescriptorCurrentPowerSourceLevelEnum>
+    <enumeration value="Critical"/>
+    <enumeration value="33"/>
+    <enumeration value="66"/>
+    <enumeration value="100"/>
+  </PowerDescriptorCurrentPowerSourceLevelEnum>
+  <SecuritySecurityLevelEnum>
+    <enumeration value="None"/>
+    <enumeration value="MIC-32"/>
+    <enumeration value="MIC-64"/>
+    <enumeration value="MIC-128"/>
+    <enumeration value="ENC"/>
+    <enumeration value="ENC-MIC-32"/>
+    <enumeration value="ENC-MIC-64"/>
+    <enumeration value="ENC-MIC-128"/>
+  </SecuritySecurityLevelEnum>
+  <NeighborRelationshipEnum>
+    <enumeration value="Parent"/>
+    <enumeration value="Child"/>
+    <enumeration value="PrevChild"/>
+    <enumeration value="Sibling"/>
+    <enumeration value="None"/>
+  </NeighborRelationshipEnum>
+  <NeighborPermitJoinEnum>
+    <enumeration value="Accepting"/>
+    <enumeration value="NotAccepting"/>
+    <enumeration value="Unknown"/>
+  </NeighborPermitJoinEnum>
+  <RoutingTableStatusEnum>
+    <enumeration value="Active"/>
+    <enumeration value="DiscoveryUnderway"/>
+    <enumeration value="DiscoveryFailed"/>
+    <enumeration value="Inactive"/>
+    <enumeration value="ValidationUnderway"/>
+  </RoutingTableStatusEnum>
+  <BindingDestinationAddressModeEnum>
+    <enumeration value="Group"/>
+    <enumeration value="Endpoint"/>
+  </BindingDestinationAddressModeEnum>
+  <AreaNetworkStatusEnum>
+    <enumeration value="Indeterminate"/>
+    <enumeration value="InProgress"/>
+    <enumeration value="Success"/>
+    <enumeration value="Error"/>
+    <enumeration optional="true" value="Error_Timeout"/>
+  </AreaNetworkStatusEnum>
+  <BridgeStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </BridgeStatusEnum>
+  <BridgeStandardEnum>
+    <enumeration value="802.1D-2004"/>
+    <enumeration value="802.1Q-2005"/>
+    <enumeration value="802.1Q-2011"/>
+  </BridgeStandardEnum>
+  <PortStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </PortStatusEnum>
+  <PortTypeEnum>
+    <enumeration value="ProviderNetworkPort"/>
+    <enumeration value="CustomerNetworkPort"/>
+    <enumeration value="CustomerEdgePort"/>
+    <enumeration value="CustomerVLANPort"/>
+    <enumeration value="VLANUnawarePort"/>
+  </PortTypeEnum>
+  <PortPortStateEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Blocking"/>
+    <enumeration value="Listening"/>
+    <enumeration value="Learning"/>
+    <enumeration value="Forwarding"/>
+    <enumeration value="Broken"/>
+  </PortPortStateEnum>
+  <PortAcceptableFrameTypesEnum>
+    <enumeration value="AdmitAll"/>
+    <enumeration optional="true" value="AdmitOnlyVLANTagged"/>
+    <enumeration optional="true" value="AdmitOnlyPrioUntagged"/>
+  </PortAcceptableFrameTypesEnum>
+  <FilterStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </FilterStatusEnum>
+  <FilterDHCPTypeEnum>
+    <enumeration value="DHCPv4"/>
+    <enumeration value="DHCPv6"/>
+  </FilterDHCPTypeEnum>
+  <FilterSourceMACFromVendorClassIDModeEnum>
+    <enumeration value="Exact"/>
+    <enumeration value="Prefix"/>
+    <enumeration value="Suffix"/>
+    <enumeration value="Substring"/>
+  </FilterSourceMACFromVendorClassIDModeEnum>
+  <FilterDestMACFromVendorClassIDModeEnum>
+    <enumeration value="Exact"/>
+    <enumeration value="Prefix"/>
+    <enumeration value="Suffix"/>
+    <enumeration value="Substring"/>
+  </FilterDestMACFromVendorClassIDModeEnum>
+  <ProviderBridgeStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </ProviderBridgeStatusEnum>
+  <ProviderBridgeTypeEnum>
+    <enumeration value="S-VLAN"/>
+    <enumeration value="PE"/>
+  </ProviderBridgeTypeEnum>
+  <PPPSupportedNCPsEnum>
+    <enumeration value="ATCP"/>
+    <enumeration value="IPCP"/>
+    <enumeration value="IPXCP"/>
+    <enumeration value="NBFCP"/>
+    <enumeration value="IPv6CP"/>
+  </PPPSupportedNCPsEnum>
+  <InterfaceStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceStatusEnum>
+  <InterfaceConnectionStatusEnum>
+    <enumeration value="Unconfigured"/>
+    <enumeration value="Connecting"/>
+    <enumeration value="Authenticating"/>
+    <enumeration value="Connected"/>
+    <enumeration value="PendingDisconnect"/>
+    <enumeration value="Disconnecting"/>
+    <enumeration value="Disconnected"/>
+  </InterfaceConnectionStatusEnum>
+  <InterfaceLastConnectionErrorEnum>
+    <enumeration value="ERROR_NONE"/>
+    <enumeration value="ERROR_ISP_TIME_OUT"/>
+    <enumeration value="ERROR_COMMAND_ABORTED"/>
+    <enumeration value="ERROR_NOT_ENABLED_FOR_INTERNET"/>
+    <enumeration value="ERROR_BAD_PHONE_NUMBER"/>
+    <enumeration value="ERROR_USER_DISCONNECT"/>
+    <enumeration value="ERROR_ISP_DISCONNECT"/>
+    <enumeration value="ERROR_IDLE_DISCONNECT"/>
+    <enumeration value="ERROR_FORCED_DISCONNECT"/>
+    <enumeration value="ERROR_SERVER_OUT_OF_RESOURCES"/>
+    <enumeration value="ERROR_RESTRICTED_LOGON_HOURS"/>
+    <enumeration value="ERROR_ACCOUNT_DISABLED"/>
+    <enumeration value="ERROR_ACCOUNT_EXPIRED"/>
+    <enumeration value="ERROR_PASSWORD_EXPIRED"/>
+    <enumeration value="ERROR_AUTHENTICATION_FAILURE"/>
+    <enumeration value="ERROR_NO_DIALTONE"/>
+    <enumeration value="ERROR_NO_CARRIER"/>
+    <enumeration value="ERROR_NO_ANSWER"/>
+    <enumeration value="ERROR_LINE_BUSY"/>
+    <enumeration value="ERROR_UNSUPPORTED_BITSPERSECOND"/>
+    <enumeration value="ERROR_TOO_MANY_LINE_ERRORS"/>
+    <enumeration value="ERROR_IP_CONFIGURATION"/>
+    <enumeration value="ERROR_UNKNOWN"/>
+  </InterfaceLastConnectionErrorEnum>
+  <InterfaceEncryptionProtocolEnum>
+    <enumeration value="None"/>
+    <enumeration value="MPPE"/>
+  </InterfaceEncryptionProtocolEnum>
+  <InterfaceCompressionProtocolEnum>
+    <enumeration value="None"/>
+    <enumeration value="Van Jacobson"/>
+    <enumeration value="STAC LZS"/>
+  </InterfaceCompressionProtocolEnum>
+  <InterfaceAuthenticationProtocolEnum>
+    <enumeration value="PAP"/>
+    <enumeration value="CHAP"/>
+    <enumeration value="MS-CHAP"/>
+  </InterfaceAuthenticationProtocolEnum>
+  <InterfaceConnectionTriggerEnum>
+    <enumeration value="OnDemand"/>
+    <enumeration value="AlwaysOn"/>
+    <enumeration value="Manual"/>
+  </InterfaceConnectionTriggerEnum>
+  <IPIPv4StatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </IPIPv4StatusEnum>
+  <IPIPv6StatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </IPIPv6StatusEnum>
+  <InterfaceStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceStatusEnum>
+  <InterfaceTypeEnum>
+    <enumeration value="Normal"/>
+    <enumeration value="Loopback"/>
+    <enumeration value="Tunnel"/>
+    <enumeration value="Tunneled"/>
+  </InterfaceTypeEnum>
+  <IPv4AddressStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </IPv4AddressStatusEnum>
+  <IPv4AddressAddressingTypeEnum>
+    <enumeration value="DHCP"/>
+    <enumeration value="IKEv2"/>
+    <enumeration value="AutoIP"/>
+    <enumeration value="IPCP"/>
+    <enumeration value="Static"/>
+  </IPv4AddressAddressingTypeEnum>
+  <IPv6AddressStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </IPv6AddressStatusEnum>
+  <IPv6AddressIPAddressStatusEnum>
+    <enumeration value="Preferred"/>
+    <enumeration value="Deprecated"/>
+    <enumeration value="Invalid"/>
+    <enumeration value="Inaccessible"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Tentative"/>
+    <enumeration value="Duplicate"/>
+    <enumeration value="Optimistic"/>
+  </IPv6AddressIPAddressStatusEnum>
+  <IPv6AddressOriginEnum>
+    <enumeration value="AutoConfigured"/>
+    <enumeration value="DHCPv6"/>
+    <enumeration value="IKEv2"/>
+    <enumeration value="MAP"/>
+    <enumeration value="WellKnown"/>
+    <enumeration value="Static"/>
+  </IPv6AddressOriginEnum>
+  <IPv6PrefixStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </IPv6PrefixStatusEnum>
+  <IPv6PrefixPrefixStatusEnum>
+    <enumeration value="Preferred"/>
+    <enumeration value="Deprecated"/>
+    <enumeration value="Invalid"/>
+    <enumeration value="Inaccessible"/>
+    <enumeration value="Unknown"/>
+  </IPv6PrefixPrefixStatusEnum>
+  <IPv6PrefixOriginEnum>
+    <enumeration value="AutoConfigured"/>
+    <enumeration value="PrefixDelegation"/>
+    <enumeration value="RouterAdvertisement"/>
+    <enumeration value="WellKnown"/>
+    <enumeration value="Static"/>
+    <enumeration value="Child"/>
+  </IPv6PrefixOriginEnum>
+  <IPv6PrefixStaticTypeEnum>
+    <enumeration value="Static"/>
+    <enumeration access="readOnly" value="Inapplicable"/>
+    <enumeration value="PrefixDelegation"/>
+    <enumeration value="Child"/>
+  </IPv6PrefixStaticTypeEnum>
+  <ActivePortStatusEnum>
+    <enumeration value="LISTEN"/>
+    <enumeration value="ESTABLISHED"/>
+  </ActivePortStatusEnum>
+  <IPPingDiagnosticsStateEnum>
+    <enumeration access="readOnly" value="None"/>
+    <enumeration value="Requested"/>
+    <enumeration access="readOnly" value="Complete"/>
+    <enumeration access="readOnly" value="Error_CannotResolveHostName"/>
+    <enumeration access="readOnly" value="Error_NoRouteToHost"/>
+    <enumeration access="readOnly" value="Error_Internal"/>
+    <enumeration access="readOnly" value="Error_Other"/>
+  </IPPingDiagnosticsStateEnum>
+  <IPPingProtocolVersionEnum>
+    <enumeration value="Any"/>
+    <enumeration value="IPv4"/>
+    <enumeration value="IPv6"/>
+  </IPPingProtocolVersionEnum>
+  <TraceRouteDiagnosticsStateEnum>
+    <enumeration access="readOnly" value="None"/>
+    <enumeration value="Requested"/>
+    <enumeration access="readOnly" value="Complete"/>
+    <enumeration access="readOnly" value="Error_CannotResolveHostName"/>
+    <enumeration access="readOnly" value="Error_NoRouteToHost"/>
+    <enumeration access="readOnly" value="Error_MaxHopCountExceeded"/>
+    <enumeration access="readOnly" value="Error_Internal"/>
+    <enumeration access="readOnly" value="Error_Other"/>
+  </TraceRouteDiagnosticsStateEnum>
+  <TraceRouteProtocolVersionEnum>
+    <enumeration value="Any"/>
+    <enumeration value="IPv4"/>
+    <enumeration value="IPv6"/>
+  </TraceRouteProtocolVersionEnum>
+  <DownloadDiagnosticsDiagnosticsStateEnum>
+    <enumeration access="readOnly" value="None"/>
+    <enumeration value="Requested"/>
+    <enumeration access="readOnly" value="Completed"/>
+    <enumeration access="readOnly" value="Error_InitConnectionFailed"/>
+    <enumeration access="readOnly" value="Error_NoResponse"/>
+    <enumeration access="readOnly" value="Error_TransferFailed"/>
+    <enumeration access="readOnly" value="Error_PasswordRequestFailed"/>
+    <enumeration access="readOnly" value="Error_LoginFailed"/>
+    <enumeration access="readOnly" value="Error_NoTransferMode"/>
+    <enumeration access="readOnly" value="Error_NoPASV"/>
+    <enumeration access="readOnly" value="Error_IncorrectSize"/>
+    <enumeration access="readOnly" value="Error_Timeout"/>
+  </DownloadDiagnosticsDiagnosticsStateEnum>
+  <DownloadDiagnosticsDownloadTransportsEnum>
+    <enumeration value="HTTP"/>
+    <enumeration optional="true" value="FTP"/>
+  </DownloadDiagnosticsDownloadTransportsEnum>
+  <UploadDiagnosticsDiagnosticsStateEnum>
+    <enumeration access="readOnly" value="None"/>
+    <enumeration value="Requested"/>
+    <enumeration access="readOnly" value="Completed"/>
+    <enumeration access="readOnly" value="Error_InitConnectionFailed"/>
+    <enumeration access="readOnly" value="Error_NoResponse"/>
+    <enumeration access="readOnly" value="Error_PasswordRequestFailed"/>
+    <enumeration access="readOnly" value="Error_LoginFailed"/>
+    <enumeration access="readOnly" value="Error_NoTransferMode"/>
+    <enumeration access="readOnly" value="Error_NoPASV"/>
+    <enumeration access="readOnly" value="Error_NoCWD"/>
+    <enumeration access="readOnly" value="Error_NoSTOR"/>
+    <enumeration access="readOnly" value="Error_NoTransferComplete"/>
+  </UploadDiagnosticsDiagnosticsStateEnum>
+  <UploadDiagnosticsUploadTransportsEnum>
+    <enumeration value="HTTP"/>
+    <enumeration optional="true" value="FTP"/>
+  </UploadDiagnosticsUploadTransportsEnum>
+  <IPsecStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </IPsecStatusEnum>
+  <IPsecIKEv2SupportedEncryptionAlgorithmsEnum>
+    <enumeration value="DES"/>
+    <enumeration value="3DES"/>
+    <enumeration value="RC5"/>
+    <enumeration value="IDEA"/>
+    <enumeration value="CAST"/>
+    <enumeration value="BLOWFISH"/>
+    <enumeration value="3IDEA"/>
+    <enumeration value="AES-CBC"/>
+    <enumeration value="AES-CTR"/>
+    <enumeration value="AES-CCM-8"/>
+    <enumeration value="AES-CCM-12"/>
+    <enumeration value="AES-CCM-16"/>
+    <enumeration value="AES-GCM-8"/>
+    <enumeration value="AES-GCM-12"/>
+    <enumeration value="AES-GCM-16"/>
+    <enumeration value="CAMELLIA-CBC"/>
+  </IPsecIKEv2SupportedEncryptionAlgorithmsEnum>
+  <IPsecESPSupportedEncryptionAlgorithmsEnum>
+    <enumeration value="NULL"/>
+    <enumeration value="DES-IV64"/>
+    <enumeration value="DES"/>
+    <enumeration value="3DES"/>
+    <enumeration value="RC5"/>
+    <enumeration value="IDEA"/>
+    <enumeration value="CAST"/>
+    <enumeration value="BLOWFISH"/>
+    <enumeration value="3IDEA"/>
+    <enumeration value="DES-IV32"/>
+    <enumeration value="AES-CBC"/>
+    <enumeration value="AES-CTR"/>
+    <enumeration value="AES-CCM-8"/>
+    <enumeration value="AES-CCM-12"/>
+    <enumeration value="AES-CCM-16"/>
+    <enumeration value="AES-GCM-8"/>
+    <enumeration value="AES-GCM-12"/>
+    <enumeration value="AES-GCM-16"/>
+    <enumeration value="NULL-AUTH-AES-GMAC"/>
+    <enumeration value="CAMELLIA-CBC"/>
+    <enumeration value="CAMELLIA-CTR"/>
+    <enumeration value="CAMELLIA-CCM-8"/>
+    <enumeration value="CAMELLIA-CCM-12"/>
+    <enumeration value="CAMELLIA-CCM-16"/>
+  </IPsecESPSupportedEncryptionAlgorithmsEnum>
+  <IPsecIKEv2SupportedPseudoRandomFunctionsEnum>
+    <enumeration value="HMAC-MD5"/>
+    <enumeration value="HMAC-SHA1"/>
+    <enumeration value="HMAC-TIGER"/>
+    <enumeration value="AES-128-XCBC"/>
+    <enumeration value="HMAC-SHA2-256"/>
+    <enumeration value="HMAC-SHA2-384"/>
+    <enumeration value="HMAC-SHA2-512"/>
+    <enumeration value="AES-128-CMAC"/>
+  </IPsecIKEv2SupportedPseudoRandomFunctionsEnum>
+  <IPsecSupportedIntegrityAlgorithmsEnum>
+    <enumeration value="NONE"/>
+    <enumeration value="HMAC-MD5-96"/>
+    <enumeration value="HMAC-SHA1-96"/>
+    <enumeration value="DES-MAC"/>
+    <enumeration value="KPDK-MD5"/>
+    <enumeration value="AES-XCBC-96"/>
+    <enumeration value="HMAC-MD5-128"/>
+    <enumeration value="HMAC-SHA1-160"/>
+    <enumeration value="AES-CMAC-96"/>
+    <enumeration value="AES-128-GMAC"/>
+    <enumeration value="AES-192-GMAC"/>
+    <enumeration value="AES-256-GMAC"/>
+    <enumeration value="HMAC-SHA2-256-128"/>
+    <enumeration value="HMAC-SHA2-256-192"/>
+    <enumeration value="HMAC-SHA2-256-256"/>
+  </IPsecSupportedIntegrityAlgorithmsEnum>
+  <IPsecSupportedDiffieHellmanGroupTransformsEnum>
+    <enumeration value="NONE"/>
+    <enumeration value="MODP-768"/>
+    <enumeration value="MODP-1024"/>
+    <enumeration value="MODP-1536"/>
+    <enumeration value="MODP-2048"/>
+    <enumeration value="MODP-3072"/>
+    <enumeration value="MODP-4096"/>
+    <enumeration value="MODP-6144"/>
+    <enumeration value="MODP-8192"/>
+    <enumeration value="ECP-256"/>
+    <enumeration value="ECP-384"/>
+    <enumeration value="ECP-521"/>
+    <enumeration value="MODP-1024-PRIME-160"/>
+    <enumeration value="MODP-2048-PRIME-224"/>
+    <enumeration value="MODP-2048-PRIME-256"/>
+    <enumeration value="ECP-192"/>
+    <enumeration value="ECP-224"/>
+  </IPsecSupportedDiffieHellmanGroupTransformsEnum>
+  <FilterStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </FilterStatusEnum>
+  <FilterProcessingChoiceEnum>
+    <enumeration value="Discard"/>
+    <enumeration value="Bypass"/>
+    <enumeration value="Protect"/>
+  </FilterProcessingChoiceEnum>
+  <ProfileProtocolEnum>
+    <enumeration value="AH"/>
+    <enumeration value="ESP"/>
+  </ProfileProtocolEnum>
+  <ProfileDoNotFragmentEnum>
+    <enumeration value="Set"/>
+    <enumeration value="Clear"/>
+    <enumeration value="Copy"/>
+  </ProfileDoNotFragmentEnum>
+  <ProfileIKEv2SAExpiryActionEnum>
+    <enumeration value="Renegotiate"/>
+    <enumeration value="Delete"/>
+  </ProfileIKEv2SAExpiryActionEnum>
+  <ProfileChildSAExpiryActionEnum>
+    <enumeration value="Renegotiate"/>
+    <enumeration value="Delete"/>
+  </ProfileChildSAExpiryActionEnum>
+  <IKEv2SAStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration optional="true" value="Error"/>
+  </IKEv2SAStatusEnum>
+  <IKEv2SANATDetectedEnum>
+    <enumeration value="None"/>
+    <enumeration value="Local"/>
+    <enumeration value="Remote"/>
+    <enumeration value="Unsupported"/>
+  </IKEv2SANATDetectedEnum>
+  <ChildSAStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration optional="true" value="Error"/>
+  </ChildSAStatusEnum>
+  <TunnelStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </TunnelStatusEnum>
+  <TunnelKeepAlivePolicyEnum>
+    <enumeration value="ICMP"/>
+    <enumeration value="None"/>
+  </TunnelKeepAlivePolicyEnum>
+  <TunnelDeliveryHeaderProtocolEnum>
+    <enumeration value="IPv4"/>
+    <enumeration value="IPv6"/>
+  </TunnelDeliveryHeaderProtocolEnum>
+  <InterfaceStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceStatusEnum>
+  <InterfaceKeyIdentifierGenerationPolicyEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Provisioned"/>
+    <enumeration optional="true" value="CPE_Generated"/>
+  </InterfaceKeyIdentifierGenerationPolicyEnum>
+  <FilterStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </FilterStatusEnum>
+  <DomainStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </DomainStatusEnum>
+  <DomainTransportModeEnum>
+    <enumeration value="Encapsulation"/>
+    <enumeration value="Translation"/>
+  </DomainTransportModeEnum>
+  <RuleStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </RuleStatusEnum>
+  <RuleOriginEnum>
+    <enumeration value="DHCPv6"/>
+    <enumeration value="Static"/>
+  </RuleOriginEnum>
+  <InterfaceStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration value="Down"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="NotPresent"/>
+    <enumeration value="LowerLayerDown"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceStatusEnum>
+  <CaptivePortalStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_URLEmpty"/>
+    <enumeration optional="true" value="Error"/>
+  </CaptivePortalStatusEnum>
+  <RouterStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </RouterStatusEnum>
+  <IPv4ForwardingStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </IPv4ForwardingStatusEnum>
+  <IPv4ForwardingOriginEnum>
+    <enumeration value="DHCPv4"/>
+    <enumeration value="OSPF"/>
+    <enumeration value="IPCP"/>
+    <enumeration value="RIP"/>
+    <enumeration value="Static"/>
+  </IPv4ForwardingOriginEnum>
+  <IPv6ForwardingStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </IPv6ForwardingStatusEnum>
+  <IPv6ForwardingOriginEnum>
+    <enumeration value="DHCPv6"/>
+    <enumeration value="OSPF"/>
+    <enumeration value="RA"/>
+    <enumeration value="RIPng"/>
+    <enumeration value="Static"/>
+  </IPv6ForwardingOriginEnum>
+  <RIPSupportedModesEnum>
+    <enumeration value="Send"/>
+    <enumeration value="Receive"/>
+    <enumeration value="Both"/>
+  </RIPSupportedModesEnum>
+  <InterfaceSettingStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceSettingStatusEnum>
+  <InterfaceSettingStatusEnum>
+    <enumeration value="ForwardingEntryCreated"/>
+    <enumeration value="NoForwardingEntry"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceSettingStatusEnum>
+  <InterfaceSettingPreferredRouteFlagEnum>
+    <enumeration value="High"/>
+    <enumeration value="Medium"/>
+    <enumeration value="Low"/>
+  </InterfaceSettingPreferredRouteFlagEnum>
+  <InterfaceSettingStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceSettingStatusEnum>
+  <InterfaceSettingStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceSettingStatusEnum>
+  <InterfaceSettingAdvPreferredRouterFlagEnum>
+    <enumeration value="High"/>
+    <enumeration value="Medium"/>
+    <enumeration value="Low"/>
+  </InterfaceSettingAdvPreferredRouterFlagEnum>
+  <InterfaceSettingStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceSettingStatusEnum>
+  <InterfaceSettingStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </InterfaceSettingStatusEnum>
+  <InterfaceSettingEndpointAssignmentPrecedenceEnum>
+    <enumeration value="DHCPv6"/>
+    <enumeration value="Static"/>
+  </InterfaceSettingEndpointAssignmentPrecedenceEnum>
+  <InterfaceSettingEndpointAddressTypePrecedenceEnum>
+    <enumeration value="FQDN"/>
+    <enumeration value="IPv6Address"/>
+  </InterfaceSettingEndpointAddressTypePrecedenceEnum>
+  <InterfaceSettingOriginEnum>
+    <enumeration value="DHCPv6"/>
+    <enumeration value="Static"/>
+  </InterfaceSettingOriginEnum>
+  <ClassificationStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </ClassificationStatusEnum>
+  <ClassificationDHCPTypeEnum>
+    <enumeration value="DHCPv4"/>
+    <enumeration value="DHCPv6"/>
+  </ClassificationDHCPTypeEnum>
+  <ClassificationSourceVendorClassIDModeEnum>
+    <enumeration value="Exact"/>
+    <enumeration value="Prefix"/>
+    <enumeration value="Suffix"/>
+    <enumeration value="Substring"/>
+  </ClassificationSourceVendorClassIDModeEnum>
+  <ClassificationDestVendorClassIDModeEnum>
+    <enumeration value="Exact"/>
+    <enumeration value="Prefix"/>
+    <enumeration value="Suffix"/>
+    <enumeration value="Substring"/>
+  </ClassificationDestVendorClassIDModeEnum>
+  <AppStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </AppStatusEnum>
+  <FlowStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </FlowStatusEnum>
+  <PolicerStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </PolicerStatusEnum>
+  <PolicerPossibleMeterTypesEnum>
+    <enumeration value="SimpleTokenBucket"/>
+    <enumeration value="SingleRateThreeColor"/>
+    <enumeration value="TwoRateThreeColor"/>
+  </PolicerPossibleMeterTypesEnum>
+  <QueueStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </QueueStatusEnum>
+  <QueueDropAlgorithmEnum>
+    <enumeration value="RED"/>
+    <enumeration value="DT"/>
+    <enumeration value="WRED"/>
+    <enumeration value="BLUE"/>
+  </QueueDropAlgorithmEnum>
+  <QueueSchedulerAlgorithmEnum>
+    <enumeration value="WFQ"/>
+    <enumeration value="WRR"/>
+    <enumeration value="SP"/>
+  </QueueSchedulerAlgorithmEnum>
+  <QueueStatsStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error"/>
+  </QueueStatsStatusEnum>
+  <ShaperStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </ShaperStatusEnum>
+  <HostAddressSourceEnum>
+    <enumeration value="DHCP"/>
+    <enumeration value="Static"/>
+    <enumeration value="AutoIP"/>
+    <enumeration value="None"/>
+  </HostAddressSourceEnum>
+  <DNSSupportedRecordTypesEnum>
+    <enumeration value="A"/>
+    <enumeration value="AAAA"/>
+    <enumeration value="SRV"/>
+    <enumeration value="PTR"/>
+  </DNSSupportedRecordTypesEnum>
+  <ClientStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </ClientStatusEnum>
+  <ServerStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </ServerStatusEnum>
+  <ServerTypeEnum>
+    <enumeration status="deprecated" value="DHCP"/>
+    <enumeration value="DHCPv4"/>
+    <enumeration value="DHCPv6"/>
+    <enumeration value="RouterAdvertisement"/>
+    <enumeration value="IPCP"/>
+    <enumeration value="Static"/>
+  </ServerTypeEnum>
+  <RelayStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </RelayStatusEnum>
+  <ForwardingStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </ForwardingStatusEnum>
+  <ForwardingTypeEnum>
+    <enumeration status="deprecated" value="DHCP"/>
+    <enumeration value="DHCPv4"/>
+    <enumeration value="DHCPv6"/>
+    <enumeration value="RouterAdvertisement"/>
+    <enumeration value="IPCP"/>
+    <enumeration value="Static"/>
+  </ForwardingTypeEnum>
+  <NSLookupDiagnosticsDiagnosticsStateEnum>
+    <enumeration access="readOnly" value="None"/>
+    <enumeration value="Requested"/>
+    <enumeration access="readOnly" value="Complete"/>
+    <enumeration access="readOnly" value="Error_DNSServerNotResolved"/>
+    <enumeration access="readOnly" value="Error_Internal"/>
+    <enumeration access="readOnly" value="Error_Other"/>
+  </NSLookupDiagnosticsDiagnosticsStateEnum>
+  <ResultStatusEnum>
+    <enumeration value="Success"/>
+    <enumeration value="Error_DNSServerNotAvailable"/>
+    <enumeration value="Error_HostNameNotResolved"/>
+    <enumeration value="Error_Timeout"/>
+    <enumeration value="Error_Other"/>
+  </ResultStatusEnum>
+  <ResultAnswerTypeEnum>
+    <enumeration value="None"/>
+    <enumeration value="Authoritative"/>
+    <enumeration value="NonAuthoritative"/>
+  </ResultAnswerTypeEnum>
+  <ServiceTransportProtocolEnum>
+    <enumeration value="TCP"/>
+    <enumeration value="UDP"/>
+  </ServiceTransportProtocolEnum>
+  <ServiceStatusEnum>
+    <enumeration value="LeaseActive"/>
+    <enumeration value="GoodbyeReceived"/>
+    <enumeration value="LeaseExpired"/>
+  </ServiceStatusEnum>
+  <InterfaceSettingStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Enabled_NATForcedDisabled"/>
+    <enumeration value="Enabled_PortMappingDisabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration value="Error"/>
+  </InterfaceSettingStatusEnum>
+  <PortMappingStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </PortMappingStatusEnum>
+  <PortMappingProtocolEnum>
+    <enumeration value="TCP"/>
+    <enumeration value="UDP"/>
+  </PortMappingProtocolEnum>
+  <ClientStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </ClientStatusEnum>
+  <ClientTHIRDPARTYStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </ClientTHIRDPARTYStatusEnum>
+  <PCPProxyStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </PCPProxyStatusEnum>
+  <UPnPIWFStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </UPnPIWFStatusEnum>
+  <ServerStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Connecting"/>
+    <enumeration value="Error_Timeout"/>
+    <enumeration value="Error_HostNameNotResolved"/>
+    <enumeration value="Error_NetworkFailure"/>
+    <enumeration value="Error_NotAuthorized"/>
+    <enumeration value="Error_Unsupported"/>
+    <enumeration optional="true" value="Error"/>
+  </ServerStatusEnum>
+  <ServerOriginEnum>
+    <enumeration value="DHCPv4"/>
+    <enumeration value="DHCPv6"/>
+    <enumeration value="Static"/>
+  </ServerOriginEnum>
+  <ServerCapabilitiesEnum>
+    <enumeration value="NAT44"/>
+    <enumeration value="StatelessNAT64"/>
+    <enumeration value="StatefulNAT64"/>
+    <enumeration value="A+PPortRangeRouter"/>
+    <enumeration value="SupportsPORTSETOption"/>
+    <enumeration value="IPv4Firewall"/>
+    <enumeration value="IPv6Firewall"/>
+    <enumeration value="NPTv6"/>
+    <enumeration value="DSCPReMarkingFunction"/>
+    <enumeration value="FLOWDATAAwareFunction"/>
+    <enumeration value="ILNPTranslator"/>
+  </ServerCapabilitiesEnum>
+  <InboundMappingStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_PCPErrorCodeReceived"/>
+    <enumeration optional="true" value="Error"/>
+  </InboundMappingStatusEnum>
+  <InboundMappingOriginEnum>
+    <enumeration value="Internal"/>
+    <enumeration value="UPnP_IWF"/>
+    <enumeration value="PCP_Proxy"/>
+    <enumeration value="Static"/>
+  </InboundMappingOriginEnum>
+  <OutboundMappingStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_PCPErrorCodeReceived"/>
+    <enumeration optional="true" value="Error"/>
+  </OutboundMappingStatusEnum>
+  <OutboundMappingOriginEnum>
+    <enumeration value="Internal"/>
+    <enumeration value="UPnP_IWF"/>
+    <enumeration value="PCP_Proxy"/>
+    <enumeration value="Static"/>
+  </OutboundMappingOriginEnum>
+  <ClientStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </ClientStatusEnum>
+  <ClientDHCPStatusEnum>
+    <enumeration value="Init"/>
+    <enumeration value="Selecting"/>
+    <enumeration value="Requesting"/>
+    <enumeration value="Rebinding"/>
+    <enumeration value="Bound"/>
+    <enumeration value="Renewing"/>
+  </ClientDHCPStatusEnum>
+  <PoolStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </PoolStatusEnum>
+  <PoolVendorClassIDModeEnum>
+    <enumeration value="Exact"/>
+    <enumeration value="Prefix"/>
+    <enumeration value="Suffix"/>
+    <enumeration value="Substring"/>
+  </PoolVendorClassIDModeEnum>
+  <RelayStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration optional="true" value="Error"/>
+  </RelayStatusEnum>
+  <ForwardingStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </ForwardingStatusEnum>
+  <ForwardingVendorClassIDModeEnum>
+    <enumeration value="Exact"/>
+    <enumeration value="Prefix"/>
+    <enumeration value="Suffix"/>
+    <enumeration value="Substring"/>
+  </ForwardingVendorClassIDModeEnum>
+  <ClientStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </ClientStatusEnum>
+  <PoolStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </PoolStatusEnum>
+  <SupplicantStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </SupplicantStatusEnum>
+  <SupplicantPAEStateEnum>
+    <enumeration value="Disconnected"/>
+    <enumeration value="Logoff"/>
+    <enumeration value="Connecting"/>
+    <enumeration value="Authenticating"/>
+    <enumeration value="Authenticated"/>
+    <enumeration value="Held"/>
+    <enumeration value="Restart"/>
+    <enumeration value="ForceAuth"/>
+    <enumeration value="ForceUnauth"/>
+  </SupplicantPAEStateEnum>
+  <SupplicantAuthenticationCapabilitiesEnum>
+    <enumeration value="EAP-TLS"/>
+    <enumeration value="EAP-MD5"/>
+  </SupplicantAuthenticationCapabilitiesEnum>
+  <SupplicantStartFailurePolicyEnum>
+    <enumeration value="FailAuthentication"/>
+    <enumeration value="AssumeAuthentication"/>
+  </SupplicantStartFailurePolicyEnum>
+  <SupplicantAuthenticationSuccessPolicyEnum>
+    <enumeration value="NoAction"/>
+    <enumeration value="RenewConnection"/>
+  </SupplicantAuthenticationSuccessPolicyEnum>
+  <SmartCardReaderStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error"/>
+  </SmartCardReaderStatusEnum>
+  <SmartCardStatusEnum>
+    <enumeration value="None"/>
+    <enumeration value="Running"/>
+    <enumeration value="Error"/>
+  </SmartCardStatusEnum>
+  <SmartCardTypeEnum>
+    <enumeration value="CA"/>
+    <enumeration value="DRM"/>
+    <enumeration value="UICC"/>
+  </SmartCardTypeEnum>
+  <SmartCardApplicationEnum>
+    <enumeration value="SIM"/>
+    <enumeration value="USIM"/>
+    <enumeration value="ISIM"/>
+  </SmartCardApplicationEnum>
+  <RootDeviceStatusEnum>
+    <enumeration value="LeaseActive"/>
+    <enumeration value="LeaseExpired"/>
+    <enumeration value="ByebyeReceived"/>
+  </RootDeviceStatusEnum>
+  <DeviceStatusEnum>
+    <enumeration value="LeaseActive"/>
+    <enumeration value="LeaseExpired"/>
+    <enumeration value="ByebyeReceived"/>
+  </DeviceStatusEnum>
+  <ServiceStatusEnum>
+    <enumeration value="LeaseActive"/>
+    <enumeration value="LeaseExpired"/>
+    <enumeration value="ByebyeReceived"/>
+  </ServiceStatusEnum>
+  <ActionStatusFinalStatusEnum>
+    <enumeration value="SUCCESS"/>
+    <enumeration value="FAILURE"/>
+  </ActionStatusFinalStatusEnum>
+  <AreaNwkDeviceInfoInstanceStatusEnum>
+    <enumeration value="ASLEEP"/>
+    <enumeration value="AWAKE"/>
+  </AreaNwkDeviceInfoInstanceStatusEnum>
+  <SelfTestDiagnosticsDiagnosticsStateEnum>
+    <enumeration access="readOnly" value="None"/>
+    <enumeration value="Requested"/>
+    <enumeration access="readOnly" value="Complete"/>
+    <enumeration access="readOnly" value="Error_Internal"/>
+    <enumeration access="readOnly" value="Error_Other"/>
+  </SelfTestDiagnosticsDiagnosticsStateEnum>
+  <FirewallConfigEnum>
+    <enumeration value="High"/>
+    <enumeration value="Low"/>
+    <enumeration status="deprecated" value="Off"/>
+    <enumeration optional="true" value="Advanced"/>
+  </FirewallConfigEnum>
+  <FirewallTypeEnum>
+    <enumeration value="Stateless"/>
+    <enumeration value="Stateful"/>
+  </FirewallTypeEnum>
+  <LevelDefaultPolicyEnum>
+    <enumeration value="Drop"/>
+    <enumeration value="Accept"/>
+    <enumeration optional="true" value="Reject"/>
+  </LevelDefaultPolicyEnum>
+  <ChainCreatorEnum>
+    <enumeration value="Defaults"/>
+    <enumeration value="PortMapping"/>
+    <enumeration value="WANIPv6FirewallControl"/>
+    <enumeration value="ACS"/>
+    <enumeration value="UserInterface"/>
+    <enumeration value="Other"/>
+  </ChainCreatorEnum>
+  <RuleStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration optional="true" value="Error"/>
+  </RuleStatusEnum>
+  <RuleTargetEnum>
+    <enumeration value="Drop"/>
+    <enumeration value="Accept"/>
+    <enumeration optional="true" value="Reject"/>
+    <enumeration optional="true" value="Return"/>
+    <enumeration optional="true" value="TargetChain"/>
+  </RuleTargetEnum>
+  <SampleSetStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Trigger"/>
+  </SampleSetStatusEnum>
+  <ParameterSampleModeEnum>
+    <enumeration value="Current"/>
+    <enumeration value="Change"/>
+  </ParameterSampleModeEnum>
+  <ParameterCalculationModeEnum>
+    <enumeration value="Latest"/>
+    <enumeration value="Minimum"/>
+    <enumeration value="Maximum"/>
+    <enumeration value="Average"/>
+  </ParameterCalculationModeEnum>
+  <ExecEnvStatusEnum>
+    <enumeration value="Up"/>
+    <enumeration optional="true" value="Error"/>
+    <enumeration value="Disabled"/>
+  </ExecEnvStatusEnum>
+  <DeploymentUnitStatusEnum>
+    <enumeration value="Installing"/>
+    <enumeration value="Installed"/>
+    <enumeration value="Updating"/>
+    <enumeration value="Uninstalling"/>
+    <enumeration value="Uninstalled"/>
+  </DeploymentUnitStatusEnum>
+  <ExecutionUnitStatusEnum>
+    <enumeration value="Idle"/>
+    <enumeration value="Starting"/>
+    <enumeration value="Active"/>
+    <enumeration value="Stopping"/>
+  </ExecutionUnitStatusEnum>
+  <ExecutionUnitRequestedStateEnum>
+    <enumeration value="Idle"/>
+    <enumeration value="Active"/>
+  </ExecutionUnitRequestedStateEnum>
+  <ExecutionUnitExecutionFaultCodeEnum>
+    <enumeration value="NoFault"/>
+    <enumeration value="FailureOnStart"/>
+    <enumeration value="FailureOnAutoStart"/>
+    <enumeration value="FailureOnStop"/>
+    <enumeration value="FailureWhileActive"/>
+    <enumeration value="DependencyFailure"/>
+    <enumeration value="UnStartable"/>
+  </ExecutionUnitExecutionFaultCodeEnum>
+  <SupportedAlarmPerceivedSeverityEnum>
+    <enumeration value=""/>
+    <enumeration value="*"/>
+    <enumeration value="Cleared"/>
+    <enumeration value="Critical"/>
+    <enumeration value="Major"/>
+    <enumeration value="Minor"/>
+    <enumeration value="Warning"/>
+    <enumeration value="Indeterminate"/>
+  </SupportedAlarmPerceivedSeverityEnum>
+  <SupportedAlarmReportingMechanismEnum>
+    <enumeration value="0 Expedited"/>
+    <enumeration value="1 Queued"/>
+    <enumeration value="2 Logged"/>
+    <enumeration value="3 Disabled"/>
+  </SupportedAlarmReportingMechanismEnum>
+  <CurrentAlarmPerceivedSeverityEnum>
+    <enumeration value="Critical"/>
+    <enumeration value="Major"/>
+    <enumeration value="Minor"/>
+    <enumeration value="Warning"/>
+    <enumeration value="Indeterminate"/>
+  </CurrentAlarmPerceivedSeverityEnum>
+  <HistoryEventNotificationTypeEnum>
+    <enumeration value="NewAlarm"/>
+    <enumeration value="ChangedAlarm"/>
+    <enumeration value="ClearedAlarm"/>
+  </HistoryEventNotificationTypeEnum>
+  <HistoryEventPerceivedSeverityEnum>
+    <enumeration value="Cleared"/>
+    <enumeration value="Critical"/>
+    <enumeration value="Major"/>
+    <enumeration value="Minor"/>
+    <enumeration value="Warning"/>
+    <enumeration value="Indeterminate"/>
+  </HistoryEventPerceivedSeverityEnum>
+  <ExpeditedEventNotificationTypeEnum>
+    <enumeration value="NewAlarm"/>
+    <enumeration value="ChangedAlarm"/>
+    <enumeration value="ClearedAlarm"/>
+  </ExpeditedEventNotificationTypeEnum>
+  <ExpeditedEventPerceivedSeverityEnum>
+    <enumeration value="Cleared"/>
+    <enumeration value="Critical"/>
+    <enumeration value="Major"/>
+    <enumeration value="Minor"/>
+    <enumeration value="Warning"/>
+    <enumeration value="Indeterminate"/>
+  </ExpeditedEventPerceivedSeverityEnum>
+  <QueuedEventNotificationTypeEnum>
+    <enumeration value="NewAlarm"/>
+    <enumeration value="ChangedAlarm"/>
+    <enumeration value="ClearedAlarm"/>
+  </QueuedEventNotificationTypeEnum>
+  <QueuedEventPerceivedSeverityEnum>
+    <enumeration value="Cleared"/>
+    <enumeration value="Critical"/>
+    <enumeration value="Major"/>
+    <enumeration value="Minor"/>
+    <enumeration value="Warning"/>
+    <enumeration value="Indeterminate"/>
+  </QueuedEventPerceivedSeverityEnum>
+  <GPSScanStatusEnum>
+    <enumeration value="Indeterminate"/>
+    <enumeration value="InProgress"/>
+    <enumeration value="Success"/>
+    <enumeration value="Error"/>
+    <enumeration value="Error_TIMEOUT"/>
+  </GPSScanStatusEnum>
+  <ContinuousGPSStatusLocationTypeEnum>
+    <enumeration value="Real"/>
+    <enumeration value="Reference"/>
+  </ContinuousGPSStatusLocationTypeEnum>
+  <ApplicationPlatformStatusEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Enabled"/>
+    <enumeration value="Reset"/>
+    <enumeration value="Initializing"/>
+  </ApplicationPlatformStatusEnum>
+  <CapabilitiesAuthenticationMethodsSupportedEnum>
+    <enumeration value="Basic"/>
+    <enumeration value="Digest"/>
+    <enumeration value="DigitalSignature"/>
+  </CapabilitiesAuthenticationMethodsSupportedEnum>
+  <CapabilitiesAccessLevelsSupportedEnum>
+    <enumeration value="Guest"/>
+    <enumeration value="Standard"/>
+    <enumeration value="Restricted"/>
+    <enumeration value="Administrator"/>
+    <enumeration value="Debug"/>
+  </CapabilitiesAccessLevelsSupportedEnum>
+  <CapabilitiesSendSMSTargetAddressTypeEnum>
+    <enumeration value="TelUri"/>
+    <enumeration value="AnonymousReference"/>
+    <enumeration value="All"/>
+  </CapabilitiesSendSMSTargetAddressTypeEnum>
+  <CapabilitiesSendMMSTargetAddressTypeEnum>
+    <enumeration value="TelUri"/>
+    <enumeration value="AnonymousReference"/>
+    <enumeration value="All"/>
+  </CapabilitiesSendMMSTargetAddressTypeEnum>
+  <FemtoAwarenessQueueingEnum>
+    <enumeration value="FiFo"/>
+    <enumeration value="Priority"/>
+  </FemtoAwarenessQueueingEnum>
+  <SMSQueueingEnum>
+    <enumeration value="FiFo"/>
+    <enumeration value="Priority"/>
+  </SMSQueueingEnum>
+  <MMSQueueingEnum>
+    <enumeration value="FiFo"/>
+    <enumeration value="Priority"/>
+  </MMSQueueingEnum>
+  <TerminalLocationQueueingEnum>
+    <enumeration value="FiFo"/>
+    <enumeration value="Priority"/>
+  </TerminalLocationQueueingEnum>
+  <TerminalLocationQueryMobileLocationResponseAddressEnum>
+    <enumeration value="TelUri"/>
+    <enumeration value="AnonymousReference"/>
+  </TerminalLocationQueryMobileLocationResponseAddressEnum>
+  <FemtoAwarenessQueueStateEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Ready"/>
+    <enumeration value="Flushed"/>
+  </FemtoAwarenessQueueStateEnum>
+  <SMSQueueStateEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Ready"/>
+    <enumeration value="Flushed"/>
+  </SMSQueueStateEnum>
+  <MMSQueueStateEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Ready"/>
+    <enumeration value="Flushed"/>
+  </MMSQueueStateEnum>
+  <TerminalLocationQueueStateEnum>
+    <enumeration value="Disabled"/>
+    <enumeration value="Ready"/>
+    <enumeration value="Flushed"/>
+  </TerminalLocationQueueStateEnum>
+  <BulkDataStatusEnum>
+    <enumeration value="Enabled"/>
+    <enumeration value="Disabled"/>
+    <enumeration optional="true" value="Error"/>
+  </BulkDataStatusEnum>
+  <BulkDataProtocolsEnum>
+    <enumeration value="Streaming"/>
+    <enumeration value="File"/>
+  </BulkDataProtocolsEnum>
+  <BulkDataEncodingTypesEnum>
+    <enumeration value="XML"/>
+    <enumeration value="XDR"/>
+  </BulkDataEncodingTypesEnum>
+  <ConnectionStatusEnum>
+    <enumeration value="Enabled"/>
+    <enumeration value="Disabled"/>
+    <enumeration value="Unknown"/>
+    <enumeration value="Dormant"/>
+    <enumeration value="Connecting"/>
+    <enumeration value="ServerNotPresent"/>
+    <enumeration value="Error_Misconfigured"/>
+    <enumeration value="Error_AuthenticationFailure"/>
+    <enumeration optional="true" value="Error"/>
+  </ConnectionStatusEnum>
+  <ConnectionServerConnectAlgorithmEnum>
+    <enumeration value="DNS-SRV"/>
+    <enumeration value="ServerTable"/>
+  </ConnectionServerConnectAlgorithmEnum>
+</root>

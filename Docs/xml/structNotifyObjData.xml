@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structNotifyObjData" kind="struct" prot="public">
+    <compoundname>NotifyObjData</compoundname>
+    <includes refid="ugw__structs_8h" local="no">ugw_structs.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structNotifyObjData_1ae893026ee94e65614ead5178f71ac485" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int NotifyObjData::unNotifyId</definition>
+        <argsstring></argsstring>
+        <name>unNotifyId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Notify ID from SL </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" line="62" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structNotifyObjData_1a1d1a9ff0a7887106467b7ea9002c9940" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char NotifyObjData::ucType</definition>
+        <argsstring></argsstring>
+        <name>ucType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SYNC/ASYNC </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" line="63" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structNotifyObjData_1ae0b88ded42248e172ca4dfde653478aa" prot="public" static="no" mutable="no">
+        <type><ref refid="structParamList" kindref="compound">ParamList</ref> *</type>
+        <definition>ParamList* NotifyObjData::pxParamList</definition>
+        <argsstring></argsstring>
+        <name>pxParamList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Name Value Pair </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" line="64" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains the notification details. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="121">
+        <label>ParamList</label>
+        <link refid="structParamList"/>
+      </node>
+      <node id="120">
+        <label>NotifyObjData</label>
+        <link refid="structNotifyObjData"/>
+        <childnode refid="121" relation="usage">
+          <edgelabel>pxParamList</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" line="61" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" bodystart="60" bodyend="65"/>
+    <listofallmembers>
+      <member refid="structNotifyObjData_1ae0b88ded42248e172ca4dfde653478aa" prot="public" virt="non-virtual"><scope>NotifyObjData</scope><name>pxParamList</name></member>
+      <member refid="structNotifyObjData_1a1d1a9ff0a7887106467b7ea9002c9940" prot="public" virt="non-virtual"><scope>NotifyObjData</scope><name>ucType</name></member>
+      <member refid="structNotifyObjData_1ae893026ee94e65614ead5178f71ac485" prot="public" virt="non-virtual"><scope>NotifyObjData</scope><name>unNotifyId</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

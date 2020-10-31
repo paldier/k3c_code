@@ -1,0 +1,104 @@
+diff -Naur RT5592AP_wifi_v2715_DPA_20121207/include/os/rt_linux.h changed_driver/RT5592AP_wifi_v2715_DPA_20121207/include/os/rt_linux.h
+--- RT5592AP_wifi_v2715_DPA_20121207/include/os/rt_linux.h	2012-12-07 15:17:19.000000000 +0530
++++ changed_driver/RT5592AP_wifi_v2715_DPA_20121207/include/os/rt_linux.h	2014-01-02 16:31:06.518511000 +0530
+@@ -266,14 +266,21 @@
+  *	OS file operation related data structure definitions
+  ***********************************************************************************/
+ typedef struct file* RTMP_OS_FD;
+-
++#if LINUX_VERSION_CODE > KERNEL_VERSION(2,6,0)
++typedef struct _OS_FS_INFO_
++{
++        kuid_t                             fsuid;
++        kgid_t                             fsgid;
++        mm_segment_t    fs;
++} OS_FS_INFO;
++#else
+ typedef struct _OS_FS_INFO_
+ {
+ 	int				fsuid;
+ 	int				fsgid;
+ 	mm_segment_t	fs;
+ } OS_FS_INFO;
+-
++#endif
+ #define IS_FILE_OPEN_ERR(_fd) 	((_fd == NULL) || IS_ERR((_fd)))
+ 
+ 
+diff -Naur RT5592AP_wifi_v2715_DPA_20121207/os/linux/pci_main_dev.c changed_driver/RT5592AP_wifi_v2715_DPA_20121207/os/linux/pci_main_dev.c
+--- RT5592AP_wifi_v2715_DPA_20121207/os/linux/pci_main_dev.c	2012-12-07 15:17:18.000000000 +0530
++++ changed_driver/RT5592AP_wifi_v2715_DPA_20121207/os/linux/pci_main_dev.c	2014-01-02 16:40:58.758500000 +0530
+@@ -39,9 +39,13 @@
+ /* */
+ /*extern int rt28xx_close(IN struct net_device *net_dev); */
+ /*extern int rt28xx_open(struct net_device *net_dev); */
+-
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,8,0)
++static VOID rt2860_remove_one(struct pci_dev *pci_dev);
++static INT rt2860_probe(struct pci_dev *pci_dev, const struct pci_device_id  *ent);
++#else
+ static VOID __devexit rt2860_remove_one(struct pci_dev *pci_dev);
+ static INT __devinit rt2860_probe(struct pci_dev *pci_dev, const struct pci_device_id  *ent);
++#endif
+ static void __exit rt2860_cleanup_module(void);
+ static int __init rt2860_init_module(void);
+ 
+@@ -60,7 +64,11 @@
+ /* */
+ /* Ralink PCI device table, include all supported chipsets */
+ /* */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,8,0)
++static struct pci_device_id rt2860_pci_tbl[] =
++#else
+ static struct pci_device_id rt2860_pci_tbl[] __devinitdata =
++#endif
+ {
+ 	/* Do not remove this "default" device ID for bringing up empty efuse ! */
+ 	{PCI_DEVICE(NIC_PCI_VENDOR_ID, NIC3091_PCIe_DEVICE_ID)},
+@@ -107,11 +115,15 @@
+     name:       RTMP_DRV_NAME,
+     id_table:   rt2860_pci_tbl,
+     probe:      rt2860_probe,
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,8,0)
++    remove:     rt2860_remove_one,
++#else
+ #if LINUX_VERSION_CODE >= 0x20412
+     remove:     __devexit_p(rt2860_remove_one),
+ #else
+     remove:     __devexit(rt2860_remove_one),
+ #endif
++#endif
+ 
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,5,0)
+ #ifdef CONFIG_PM
+@@ -312,9 +324,15 @@
+ /* */
+ /* PCI device probe & initialization function */
+ /* */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,8,0)
++static INT  rt2860_probe(
++    IN  struct pci_dev              *pci_dev,
++    IN  const struct pci_device_id  *pci_id)
++#else
+ static INT __devinit   rt2860_probe(
+     IN  struct pci_dev              *pci_dev, 
+     IN  const struct pci_device_id  *pci_id)
++#endif
+ {
+ 	VOID 				*pAd = NULL;
+ 	struct  net_device	*net_dev;
+@@ -469,9 +487,13 @@
+ 	return -ENODEV; /* probe fail */
+ }
+ 
+-
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,8,0)
++static VOID rt2860_remove_one(
++    IN  struct pci_dev  *pci_dev)
++#else
+ static VOID __devexit rt2860_remove_one(
+     IN  struct pci_dev  *pci_dev)
++#endif
+ {
+ 	PNET_DEV	net_dev = pci_get_drvdata(pci_dev);
+ 	VOID		*pAd = NULL;

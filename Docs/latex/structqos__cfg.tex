@@ -1,0 +1,76 @@
+\hypertarget{structqos__cfg}{\section{qos\-\_\-cfg Struct Reference}
+\label{structqos__cfg}\index{qos\-\_\-cfg@{qos\-\_\-cfg}}
+}
+
+
+Qo\-S general configuration data structure.  
+
+
+
+
+{\ttfamily \#include $<$qosal\-\_\-queue\-\_\-api.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{structqos__cfg_a249977e1be92f8e9725e755a52065828}{ena}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{structqos__cfg_acad8e74b9b0261e29631422506b0d73f}{us\-\_\-ena}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{structqos__cfg_a59c290fbf8b95e2f08674c8d3565531d}{ds\-\_\-ena}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{structqos__cfg_a382d14c25eaeaf4f01950a06336314ba}{log\-\_\-level}
+\item 
+\hyperlink{group__FAPI__QOS__GENERAL_gaf8da7b968cb9659aef1acb8c79ff7250}{log\-\_\-type\-\_\-t} \hyperlink{structqos__cfg_a6e170fd5d9d374ad405021dae66c7f93}{log\-\_\-type}
+\item 
+char \hyperlink{structqos__cfg_aafe2164e01390853b819a90181ca1c22}{log\-\_\-file} \mbox{[}\hyperlink{group__FAPI__SYSTEM_gafd709f201d7643c3909621f620ea648a}{M\-A\-X\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+uint32\-\_\-t \hyperlink{structqos__cfg_aca196127a157dc22a75c9fc1a9abb124}{def\-\_\-wan\-\_\-dscp}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{structqos__cfg_a79c7b6853d2eb702f01a5f9412acc887}{wmm\-\_\-ena}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{structqos__cfg_af61eb747637f5d2f4db1d09362b8b9f4}{mgmt\-\_\-ena}
+\item 
+uint32\-\_\-t \hyperlink{structqos__cfg_a61020b43790df2ef68593160680ebc5d}{wan\-\_\-port\-\_\-rate\-\_\-limit}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Qo\-S general configuration data structure. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structqos__cfg_aca196127a157dc22a75c9fc1a9abb124}{\index{qos\-\_\-cfg@{qos\-\_\-cfg}!def\-\_\-wan\-\_\-dscp@{def\-\_\-wan\-\_\-dscp}}
+\index{def\-\_\-wan\-\_\-dscp@{def\-\_\-wan\-\_\-dscp}!qos_cfg@{qos\-\_\-cfg}}
+\subsubsection[{def\-\_\-wan\-\_\-dscp}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-cfg\-::def\-\_\-wan\-\_\-dscp}}\label{structqos__cfg_aca196127a157dc22a75c9fc1a9abb124}
+D\-S\-C\-P value for unclassified traffic in upstream (L\-A\-N-\/\-W\-A\-N) direction \hypertarget{structqos__cfg_a59c290fbf8b95e2f08674c8d3565531d}{\index{qos\-\_\-cfg@{qos\-\_\-cfg}!ds\-\_\-ena@{ds\-\_\-ena}}
+\index{ds\-\_\-ena@{ds\-\_\-ena}!qos_cfg@{qos\-\_\-cfg}}
+\subsubsection[{ds\-\_\-ena}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} qos\-\_\-cfg\-::ds\-\_\-ena}}\label{structqos__cfg_a59c290fbf8b95e2f08674c8d3565531d}
+Qo\-S enable flag for downstream (W\-A\-N-\/\-L\-A\-N) direction \hypertarget{structqos__cfg_a249977e1be92f8e9725e755a52065828}{\index{qos\-\_\-cfg@{qos\-\_\-cfg}!ena@{ena}}
+\index{ena@{ena}!qos_cfg@{qos\-\_\-cfg}}
+\subsubsection[{ena}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} qos\-\_\-cfg\-::ena}}\label{structqos__cfg_a249977e1be92f8e9725e755a52065828}
+Overall Qo\-S enable flag \hypertarget{structqos__cfg_aafe2164e01390853b819a90181ca1c22}{\index{qos\-\_\-cfg@{qos\-\_\-cfg}!log\-\_\-file@{log\-\_\-file}}
+\index{log\-\_\-file@{log\-\_\-file}!qos_cfg@{qos\-\_\-cfg}}
+\subsubsection[{log\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}char qos\-\_\-cfg\-::log\-\_\-file\mbox{[}{\bf M\-A\-X\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}\mbox{]}}}\label{structqos__cfg_aafe2164e01390853b819a90181ca1c22}
+Log file name \hypertarget{structqos__cfg_a382d14c25eaeaf4f01950a06336314ba}{\index{qos\-\_\-cfg@{qos\-\_\-cfg}!log\-\_\-level@{log\-\_\-level}}
+\index{log\-\_\-level@{log\-\_\-level}!qos_cfg@{qos\-\_\-cfg}}
+\subsubsection[{log\-\_\-level}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} qos\-\_\-cfg\-::log\-\_\-level}}\label{structqos__cfg_a382d14c25eaeaf4f01950a06336314ba}
+Log enable flag \hypertarget{structqos__cfg_a6e170fd5d9d374ad405021dae66c7f93}{\index{qos\-\_\-cfg@{qos\-\_\-cfg}!log\-\_\-type@{log\-\_\-type}}
+\index{log\-\_\-type@{log\-\_\-type}!qos_cfg@{qos\-\_\-cfg}}
+\subsubsection[{log\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log\-\_\-type\-\_\-t} qos\-\_\-cfg\-::log\-\_\-type}}\label{structqos__cfg_a6e170fd5d9d374ad405021dae66c7f93}
+Log type \hypertarget{structqos__cfg_af61eb747637f5d2f4db1d09362b8b9f4}{\index{qos\-\_\-cfg@{qos\-\_\-cfg}!mgmt\-\_\-ena@{mgmt\-\_\-ena}}
+\index{mgmt\-\_\-ena@{mgmt\-\_\-ena}!qos_cfg@{qos\-\_\-cfg}}
+\subsubsection[{mgmt\-\_\-ena}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} qos\-\_\-cfg\-::mgmt\-\_\-ena}}\label{structqos__cfg_af61eb747637f5d2f4db1d09362b8b9f4}
+Management traffic prioritization enable flag \hypertarget{structqos__cfg_acad8e74b9b0261e29631422506b0d73f}{\index{qos\-\_\-cfg@{qos\-\_\-cfg}!us\-\_\-ena@{us\-\_\-ena}}
+\index{us\-\_\-ena@{us\-\_\-ena}!qos_cfg@{qos\-\_\-cfg}}
+\subsubsection[{us\-\_\-ena}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} qos\-\_\-cfg\-::us\-\_\-ena}}\label{structqos__cfg_acad8e74b9b0261e29631422506b0d73f}
+Qo\-S enable flag for upstream (L\-A\-N-\/\-W\-A\-N) direction \hypertarget{structqos__cfg_a61020b43790df2ef68593160680ebc5d}{\index{qos\-\_\-cfg@{qos\-\_\-cfg}!wan\-\_\-port\-\_\-rate\-\_\-limit@{wan\-\_\-port\-\_\-rate\-\_\-limit}}
+\index{wan\-\_\-port\-\_\-rate\-\_\-limit@{wan\-\_\-port\-\_\-rate\-\_\-limit}!qos_cfg@{qos\-\_\-cfg}}
+\subsubsection[{wan\-\_\-port\-\_\-rate\-\_\-limit}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-cfg\-::wan\-\_\-port\-\_\-rate\-\_\-limit}}\label{structqos__cfg_a61020b43790df2ef68593160680ebc5d}
+Limit rate of W\-A\-N interface/port \hypertarget{structqos__cfg_a79c7b6853d2eb702f01a5f9412acc887}{\index{qos\-\_\-cfg@{qos\-\_\-cfg}!wmm\-\_\-ena@{wmm\-\_\-ena}}
+\index{wmm\-\_\-ena@{wmm\-\_\-ena}!qos_cfg@{qos\-\_\-cfg}}
+\subsubsection[{wmm\-\_\-ena}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} qos\-\_\-cfg\-::wmm\-\_\-ena}}\label{structqos__cfg_a79c7b6853d2eb702f01a5f9412acc887}
+W\-M\-M Qo\-S enable flag 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qosal__queue__api_8h}{qosal\-\_\-queue\-\_\-api.\-h}\end{DoxyCompactItemize}

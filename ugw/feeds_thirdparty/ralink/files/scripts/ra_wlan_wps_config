@@ -1,0 +1,57 @@
+#!/bin/sh
+
+
+
+if [ ! "$ENVLOADED" ]; then
+	if [ -r /etc/rc.conf ]; then
+		 . /etc/rc.conf 2> /dev/null
+		ENVLOADED="1"
+	fi
+fi
+
+if [ ! "$CONFIGLOADED" ]; then
+	if [ -r /etc/rc.d/config.sh ]; then
+		. /etc/rc.d/config.sh 2>/dev/null
+		CONFIGLOADED="1"
+	fi
+fi
+
+RA_IF=""
+find_ra_if_from_index() {
+   eval CPEID='$'wlmn_${1}'_cpeId'
+   ra_dev=`/usr/sbin/status_oper GET "RA_MAP" "$CPEID"`
+   RA_IF=${ra_dev:2}
+}
+find_ra_if_from_index $1
+echo "hsur current ralink_inf_idx is ${RA_IF}"
+
+if [ "$CONFIG_FEATURE_WIRELESS" = "1" ]; then
+	
+#	APNum=`expr ${1} + 1` #1 base
+	eval pcpe_id='$'wlmn_${1}_cpeId #I think it should cpeId
+	eval EnableWPS='$'wlwps${pcpe_id}_0_enable
+	eval EnableEnrollee='$'wlwps${pcpe_id}_0_enrolleeEna
+	eval ProxyEnable='$'wlwps${pcpe_id}_0_proxyEna
+	eval RegEnable='$'wlwps${pcpe_id}_0_intRegsEna
+	
+	iwpriv ra${RA_IF} set WscConfMode=0		
+	WscdPid=`cat  /var/run/wscd.pid.ra${RA_IF}`
+	kill -9 $WscdPid
+
+	ConfMode=0
+	if [ "$EnableEnrollee" = "1" ]; then
+		ConfMode=`expr $ConfMode + 1`		
+	fi
+	if [ "$ProxyEnable" = "1" ]; then
+		ConfMode=`expr $ConfMode + 2`
+	fi
+	if [ "$RegEnable" = "1" ]; then
+		ConfMode=`expr $ConfMode + 4`
+	fi
+	if [ "$EnableWPS" = "1" ]; then
+		iwpriv ra${RA_IF} set WscConfMode=$ConfMode # Enable all functions
+		echo "iwpriv ra"${RA_IF}" set WscConfMode="$ConfMode
+		/tmp/wscd -w /tmp -d 3 -m 1 -i ra${RA_IF} & #WSC_UPNP daemon
+	fi	
+   
+fi

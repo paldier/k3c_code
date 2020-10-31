@@ -1,0 +1,50 @@
+#!/bin/sh
+
+
+
+if [ ! "$ENVLOADED" ]; then
+	if [ -r /etc/rc.conf ]; then
+		 . /etc/rc.conf 2> /dev/null
+		ENVLOADED="1"
+	fi
+fi
+
+if [ ! "$CONFIGLOADED" ]; then
+	if [ -r /etc/rc.d/config.sh ]; then
+		. /etc/rc.d/config.sh 2>/dev/null
+		CONFIGLOADED="1"
+	fi
+fi
+
+RA_IF=""
+find_ra_if_from_index() {
+   eval CPEID='$'wlmn_${1}'_cpeId'
+   ra_dev=`/usr/sbin/status_oper GET "RA_MAP" "$CPEID"`
+   RA_IF=${ra_dev:2}
+}
+find_ra_if_from_index $1
+
+if [ "$CONFIG_FEATURE_WIRELESS" = "1" ]; then
+	
+	iwpriv ra${RA_IF} set_wsc_oob # reset to OOB
+
+	echo "SSID=${2}"
+	echo "SECURITY_KEY=${3}"
+
+	Comm_Line='set SSID='${2}	
+	iwpriv ra${RA_IF} $Comm_Line
+	echo "iwpriv ra${RA_IF} $Comm_Line"
+
+	Comm_Line='set WPAPSK='${3}
+	iwpriv ra${RA_IF} $Comm_Line
+	echo "iwpriv ra${RA_IF} $Comm_Line"
+
+	Comm_Line='set DefaultKeyID=2'		
+	iwpriv ra${RA_IF} $Comm_Line # Must set to 2
+	echo "iwpriv ra${RA_IF} $Comm_Line"
+
+	Comm_Line='set SSID='${2}	
+	iwpriv ra${RA_IF} $Comm_Line
+	echo "iwpriv ra${RA_IF} $Comm_Line"
+
+fi

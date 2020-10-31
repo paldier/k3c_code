@@ -1,0 +1,126 @@
+#!/bin/sh
+
+# Return the Radio Stats
+# Needed object: Radio.Stats
+
+# Source library script
+[ ! "$FAPI_WLAN_WAVE_INIT_PLATFORM" ] && . /tmp/wlan_wave/fapi_wlan_wave_init_platform.sh
+
+print2log DBG "running fapi_wlan_wave_radio_stats_query: args: $*"
+
+interface_name=$1
+
+# If interface name is not supplied, exit script
+check_input_param "fapi_wlan_wave_radio_stats_query" "interface_name" "$interface_name"
+
+timestamp "fapi_wlan_wave_radio_stats_query:$interface_name:begin"
+
+wlanInitIncomplete=`check_if_is_ready $interface_name`
+[ "$wlanInitIncomplete" = "1" ] && exit
+
+# DEBUG: TODO: REMOVE
+#cp ${IN_CONF} ${WAVE_TMP}/in_conf_radio_stats
+
+# Map the objects indexes to the received objects in the in.conf file
+radio_stats_index=`map_param_index Object $RADIO_STATS_OBJECT`
+
+# If an object that needs to be in the output conf wasn't in the input conf, set it with an index
+[ -z "$radio_stats_index" ] && radio_stats_index=`get_next_object_index`
+
+# Read from the driver all the Radio.Stats statistics
+# Read each value from all the VAPs and sum them for the Radio value.
+total_bytes_sent=0
+total_bytes_received=0
+total_packets_sent=0
+total_packets_received=0
+total_errors_sent=0
+total_errors_received=0
+total_discard_packets_sent=0
+total_discard_packets_received=0
+total_plcp_error_count=0
+total_fcs_error_count=0
+total_invalid_mac_count=0
+total_packets_other_received=0
+total_noise=0
+
+# Get the list of VAPs for this Radio
+ifconfig | grep $interface_name > ${WAVE_TMP}/ifconfig_res
+vaps_list=`get_interfaces_from_ifconfig ${WAVE_TMP}/ifconfig_res`
+for current_vap in $vaps_list; do
+	# Read statistics once, to temp files
+	api_wrapper get ifconfig $current_vap \> ${WAVE_TMP}/tmp_ifconfig
+	api_wrapper get ${BINDIR}/mtdump $current_vap WLANFlowStatus  -f ${BINDIR}/mtdump.mtidlc_WLANFlowStatus \> ${WAVE_TMP}/tmp_mtdump
+	# Delete first line from the mtdump results
+	sed -i '1d' ${WAVE_TMP}/tmp_mtdump
+
+	# Read statistics from mtdump results: for each line save the value and the text after "Number of" as a parameter name
+	while read value colon number of param1 param2 param3 param4; do
+		if [ -z $param3 ]
+		then
+			eval ${param1}_${param2}=${value}
+		else
+			eval ${param1}_${param2}_${param3}=${value}
+		fi
+	done < ${WAVE_TMP}/tmp_mtdump
+	
+	rx_packets_line=`grep "RX packets" ${WAVE_TMP}/tmp_ifconfig | xargs`
+	tx_packets_line=`grep "TX packets" ${WAVE_TMP}/tmp_ifconfig | xargs`
+
+	errors_received=${rx_packets_line#RX packets:*:}
+	errors_received=${errors_received%% *}
+	discard_packets_received=${rx_packets_line#RX packets:*:*:}
+	discard_packets_received=${discard_packets_received%% *}
+	errors_sent=${tx_packets_line#TX packets:*:}
+	errors_sent=${errors_sent%% *}
+	discard_packets_sent=${tx_packets_line#TX packets:*:*:}
+	discard_packets_sent=${discard_packets_sent%% *}
+	
+	# TODO: how to get the following stats (do we need them?)
+	plcp_header_error=0
+	fcs_error=0
+	invalid_mac_header=0
+	other_mac_received=0
+	vap_noise=0
+	
+	total_bytes_sent=$((total_bytes_sent+bytes_sent_successfully))
+	total_bytes_received=$((total_bytes_received+bytes_received))
+	total_packets_sent=$((total_packets_sent+packets_transmitted))
+	total_packets_received=$((total_packets_received+packets_received))
+	total_errors_sent=$((total_errors_sent+errors_sent))
+	total_errors_received=$((total_errors_received+errors_received))
+	total_discard_packets_sent=$((total_discard_packets_sent+discard_packets_sent))
+	total_discard_packets_received=$((total_discard_packets_received+discard_packets_received))
+	total_plcp_error_count=$((total_plcp_error_count+plcp_header_error))
+	total_fcs_error_count=$((total_fcs_error_count+fcs_error))
+	total_invalid_mac_count=$((total_invalid_mac_count+invalid_mac_header))
+	total_packets_other_received=$((total_packets_other_received+other_mac_received))
+	total_noise=$((total_noise+vap_noise))
+done
+rm -f ${WAVE_TMP}/tmp_ifconfig ${WAVE_TMP}/tmp_mtdump ${WAVE_TMP}/ifconfig_res
+
+# Create the output configuration file and set the capapabilities in it
+cat /dev/null > ${OUT_CONF}
+
+update_conf_out "Object_${radio_stats_index}" "$RADIO_STATS_OBJECT"
+update_conf_out "BytesSent_${radio_stats_index}" "$total_bytes_sent"
+update_conf_out "BytesReceived_${radio_stats_index}" "$total_bytes_received"
+update_conf_out "PacketsSent_${radio_stats_index}" "$total_packets_sent"
+update_conf_out "PacketsReceived_${radio_stats_index}" "$total_packets_received"
+update_conf_out "ErrorsSent_${radio_stats_index}" "$total_errors_sent"
+update_conf_out "ErrorsReceived_${radio_stats_index}" "$total_errors_received"
+update_conf_out "DiscardPacketsSent_${radio_stats_index}" "$total_discard_packets_sent"
+update_conf_out "DiscardPacketsReceived_${radio_stats_index}" "$total_discard_packets_received"
+update_conf_out "PLCPErrorCount_${radio_stats_index}" "$total_plcp_error_count"
+update_conf_out "FCSErrorCount_${radio_stats_index}" "$total_fcs_error_count"
+update_conf_out "InvalidMACCount_${radio_stats_index}" "$total_invalid_mac_count"
+update_conf_out "PacketsOtherReceived_${radio_stats_index}" "$total_packets_other_received"
+update_conf_out "Noise_${radio_stats_index}" "$total_noise"
+
+# Configuration is completed successfully
+update_conf_out "wlan_configuration_status" "success"
+
+# DEBUG: TODO: REMOVE
+#cp ${OUT_CONF} ${WAVE_TMP}/out_conf_radio_stats
+
+print2log DBG "fapi_wlan_wave_radio_stats_query done"
+timestamp "fapi_wlan_wave_radio_stats_query:$interface_name:done"

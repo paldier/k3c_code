@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <name>Device PPP</name>
+    <object name="Device.PPP.Interface.*" viewtype="table" title="PPP" >
+        <parameter name="Name" type="string" writable="true" webname="PPP Name " maxlen="64"></parameter>
+        <parameter name="LowerLayers" type="string" writable="true" webname="PPP LL " maxlen="64"></parameter>
+          <parameter  name="edit"  action="post"  routeurl="edit($event,'pppviewform')" type="button" webname="Edit" maxlen="64"></parameter>
+          <parameter  name="delete"  action="post"   type="button" webname="delete" maxlen="64"></parameter>
+       <parameter  name="Add"  action="post" routeurl="formToOpen('pppviewform')"  type="button" webname="Add" maxlen="64"></parameter>
+    </object>
+</view>
+

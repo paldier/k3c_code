@@ -1,0 +1,46 @@
+\hypertarget{structcl__macaddr__match__t}{\section{cl\-\_\-macaddr\-\_\-match\-\_\-t Struct Reference}
+\label{structcl__macaddr__match__t}\index{cl\-\_\-macaddr\-\_\-match\-\_\-t@{cl\-\_\-macaddr\-\_\-match\-\_\-t}}
+}
+
+
+M\-A\-C Address Match fields structure.  
+
+
+
+
+{\ttfamily \#include $<$qosal\-\_\-cl\-\_\-api.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{structcl__macaddr__match__t_a9ba77bbd538c732284e04b1ea1dc0a47}{mac\-\_\-addr} \mbox{[}\hyperlink{group__FAPI__QOS__CLASS_gaaee7f1d8ba9da4f019bf0068103e6672}{M\-A\-X\-\_\-\-M\-A\-C\-A\-D\-D\-R\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+char \hyperlink{structcl__macaddr__match__t_aa661f14e7e8588a53e6b25f5e64f24d6}{mac\-\_\-addr\-\_\-mask} \mbox{[}\hyperlink{group__FAPI__QOS__CLASS_gaaee7f1d8ba9da4f019bf0068103e6672}{M\-A\-X\-\_\-\-M\-A\-C\-A\-D\-D\-R\-\_\-\-L\-E\-N}\mbox{]}
+\item 
+uint32\-\_\-t \hyperlink{structcl__macaddr__match__t_abfcdb9a9949a2ba700c4eb5e2d334e30}{exclude}
+\item 
+\hyperlink{structcl__param__in__ex__t}{cl\-\_\-param\-\_\-in\-\_\-ex\-\_\-t} \hyperlink{structcl__macaddr__match__t_a8defd30e648caeb188f39a722ae47cdd}{param\-\_\-in\-\_\-ex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+M\-A\-C Address Match fields structure. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structcl__macaddr__match__t_abfcdb9a9949a2ba700c4eb5e2d334e30}{\index{cl\-\_\-macaddr\-\_\-match\-\_\-t@{cl\-\_\-macaddr\-\_\-match\-\_\-t}!exclude@{exclude}}
+\index{exclude@{exclude}!cl_macaddr_match_t@{cl\-\_\-macaddr\-\_\-match\-\_\-t}}
+\subsubsection[{exclude}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t cl\-\_\-macaddr\-\_\-match\-\_\-t\-::exclude}}\label{structcl__macaddr__match__t_abfcdb9a9949a2ba700c4eb5e2d334e30}
+Exclude Flag or Invert match \hypertarget{structcl__macaddr__match__t_a9ba77bbd538c732284e04b1ea1dc0a47}{\index{cl\-\_\-macaddr\-\_\-match\-\_\-t@{cl\-\_\-macaddr\-\_\-match\-\_\-t}!mac\-\_\-addr@{mac\-\_\-addr}}
+\index{mac\-\_\-addr@{mac\-\_\-addr}!cl_macaddr_match_t@{cl\-\_\-macaddr\-\_\-match\-\_\-t}}
+\subsubsection[{mac\-\_\-addr}]{\setlength{\rightskip}{0pt plus 5cm}char cl\-\_\-macaddr\-\_\-match\-\_\-t\-::mac\-\_\-addr\mbox{[}{\bf M\-A\-X\-\_\-\-M\-A\-C\-A\-D\-D\-R\-\_\-\-L\-E\-N}\mbox{]}}}\label{structcl__macaddr__match__t_a9ba77bbd538c732284e04b1ea1dc0a47}
+M\-A\-C address to match. Null string means ignore \hypertarget{structcl__macaddr__match__t_aa661f14e7e8588a53e6b25f5e64f24d6}{\index{cl\-\_\-macaddr\-\_\-match\-\_\-t@{cl\-\_\-macaddr\-\_\-match\-\_\-t}!mac\-\_\-addr\-\_\-mask@{mac\-\_\-addr\-\_\-mask}}
+\index{mac\-\_\-addr\-\_\-mask@{mac\-\_\-addr\-\_\-mask}!cl_macaddr_match_t@{cl\-\_\-macaddr\-\_\-match\-\_\-t}}
+\subsubsection[{mac\-\_\-addr\-\_\-mask}]{\setlength{\rightskip}{0pt plus 5cm}char cl\-\_\-macaddr\-\_\-match\-\_\-t\-::mac\-\_\-addr\-\_\-mask\mbox{[}{\bf M\-A\-X\-\_\-\-M\-A\-C\-A\-D\-D\-R\-\_\-\-L\-E\-N}\mbox{]}}}\label{structcl__macaddr__match__t_aa661f14e7e8588a53e6b25f5e64f24d6}
+M\-A\-C address mask. A mask of F\-F\-:\-F\-F\-:\-F\-F\-:\-F\-F\-:F\-F means mask is ignored. \hypertarget{structcl__macaddr__match__t_a8defd30e648caeb188f39a722ae47cdd}{\index{cl\-\_\-macaddr\-\_\-match\-\_\-t@{cl\-\_\-macaddr\-\_\-match\-\_\-t}!param\-\_\-in\-\_\-ex@{param\-\_\-in\-\_\-ex}}
+\index{param\-\_\-in\-\_\-ex@{param\-\_\-in\-\_\-ex}!cl_macaddr_match_t@{cl\-\_\-macaddr\-\_\-match\-\_\-t}}
+\subsubsection[{param\-\_\-in\-\_\-ex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-param\-\_\-in\-\_\-ex\-\_\-t} cl\-\_\-macaddr\-\_\-match\-\_\-t\-::param\-\_\-in\-\_\-ex}}\label{structcl__macaddr__match__t_a8defd30e648caeb188f39a722ae47cdd}
+Bit-\/map to indicate included and excluded parameters of M\-A\-C address 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qosal__cl__api_8h}{qosal\-\_\-cl\-\_\-api.\-h}\end{DoxyCompactItemize}

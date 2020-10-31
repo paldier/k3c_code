@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structqos__queue__stats__t" kind="struct" prot="public">
+    <compoundname>qos_queue_stats_t</compoundname>
+    <includes refid="qosal__queue__api_8h" local="no">qosal_queue_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structqos__queue__stats__t_1a86a3a95e8e4a3bfaa4a18adf7e0e774b" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char qos_queue_stats_t::name[MAX_Q_NAME_LEN]</definition>
+        <argsstring>[MAX_Q_NAME_LEN]</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Name or Alias of the queue, if any, which maps to unique instance of qos_queue_cfg_t object </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="285" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__queue__stats__t_1a5aaa1719313d242fbf106e09efd46d6c" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t qos_queue_stats_t::rx_pkt</definition>
+        <argsstring></argsstring>
+        <name>rx_pkt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>All packets received by this queue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="287" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__queue__stats__t_1a2a9787515b36cbc95cccb17ac22fd2eb" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t qos_queue_stats_t::rx_bytes</definition>
+        <argsstring></argsstring>
+        <name>rx_bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>All bytes received by this queue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="288" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__queue__stats__t_1a121b80595d3faab041d2aebb2fbc1e72" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t qos_queue_stats_t::tx_pkt</definition>
+        <argsstring></argsstring>
+        <name>tx_pkt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>All packets trasmitted by this queue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="289" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__queue__stats__t_1a358b6a71b2faee13c4b52bfd86633aae" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t qos_queue_stats_t::tx_bytes</definition>
+        <argsstring></argsstring>
+        <name>tx_bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>All bytes trasmitted by this queue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="290" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__queue__stats__t_1a68c4ac994cb234e4d12b8d41c726b5be" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t qos_queue_stats_t::drop_pkt</definition>
+        <argsstring></argsstring>
+        <name>drop_pkt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>All packets dropped by this queue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="291" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__queue__stats__t_1a86e9a12c3218b8a91d62a3da95b2daf8" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t qos_queue_stats_t::drop_bytes</definition>
+        <argsstring></argsstring>
+        <name>drop_bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>All bytes dropped by this queue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="292" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__queue__stats__t_1acda55406419650adc37794fe31f493b8" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t qos_queue_stats_t::occ_pkt</definition>
+        <argsstring></argsstring>
+        <name>occ_pkt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Queue occupancy packets </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="293" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__queue__stats__t_1afd0bb346239a46de8f7803b7d7bf7ec7" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t qos_queue_stats_t::occ_pct</definition>
+        <argsstring></argsstring>
+        <name>occ_pct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Queue occupancy percentage </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="294" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__queue__stats__t_1a151f189f991fa0564835e9e5c37bde29" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t qos_queue_stats_t::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flags to indicate supported stats </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="295" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>QoS Queue statistics structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="284" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="284" bodyend="296"/>
+    <listofallmembers>
+      <member refid="structqos__queue__stats__t_1a86e9a12c3218b8a91d62a3da95b2daf8" prot="public" virt="non-virtual"><scope>qos_queue_stats_t</scope><name>drop_bytes</name></member>
+      <member refid="structqos__queue__stats__t_1a68c4ac994cb234e4d12b8d41c726b5be" prot="public" virt="non-virtual"><scope>qos_queue_stats_t</scope><name>drop_pkt</name></member>
+      <member refid="structqos__queue__stats__t_1a151f189f991fa0564835e9e5c37bde29" prot="public" virt="non-virtual"><scope>qos_queue_stats_t</scope><name>flags</name></member>
+      <member refid="structqos__queue__stats__t_1a86a3a95e8e4a3bfaa4a18adf7e0e774b" prot="public" virt="non-virtual"><scope>qos_queue_stats_t</scope><name>name</name></member>
+      <member refid="structqos__queue__stats__t_1afd0bb346239a46de8f7803b7d7bf7ec7" prot="public" virt="non-virtual"><scope>qos_queue_stats_t</scope><name>occ_pct</name></member>
+      <member refid="structqos__queue__stats__t_1acda55406419650adc37794fe31f493b8" prot="public" virt="non-virtual"><scope>qos_queue_stats_t</scope><name>occ_pkt</name></member>
+      <member refid="structqos__queue__stats__t_1a2a9787515b36cbc95cccb17ac22fd2eb" prot="public" virt="non-virtual"><scope>qos_queue_stats_t</scope><name>rx_bytes</name></member>
+      <member refid="structqos__queue__stats__t_1a5aaa1719313d242fbf106e09efd46d6c" prot="public" virt="non-virtual"><scope>qos_queue_stats_t</scope><name>rx_pkt</name></member>
+      <member refid="structqos__queue__stats__t_1a358b6a71b2faee13c4b52bfd86633aae" prot="public" virt="non-virtual"><scope>qos_queue_stats_t</scope><name>tx_bytes</name></member>
+      <member refid="structqos__queue__stats__t_1a121b80595d3faab041d2aebb2fbc1e72" prot="public" virt="non-virtual"><scope>qos_queue_stats_t</scope><name>tx_pkt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

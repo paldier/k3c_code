@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structipaddr__t" kind="struct" prot="public">
+    <compoundname>ipaddr_t</compoundname>
+    <includes refid="fapi__mcast_8h" local="no">fapi_mcast.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structipaddr__t_1a6eee12f8c9cc3b1968e5d4e19e245d02" prot="public" static="no" mutable="no">
+        <type><ref refid="group__FAPI__MCAST_1ga723256dea8a6fd9c487829bc1ed6f911" kindref="member">ptype_t</ref></type>
+        <definition>ptype_t ipaddr_t::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>IP type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="72" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structipaddr__t_1a34c3670f4c9aebd0dc23618d2aa33e75" prot="public" static="no" mutable="no">
+        <type>struct in_addr</type>
+        <definition>struct in_addr ipaddr_t::ip4</definition>
+        <argsstring></argsstring>
+        <name>ip4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>IPv4 Address </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="72" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structipaddr__t_1a5dec2ea8a3e428df65eff5cc00ab527c" prot="public" static="no" mutable="no">
+        <type>struct in6_addr</type>
+        <definition>struct in6_addr ipaddr_t::ip6</definition>
+        <argsstring></argsstring>
+        <name>ip6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>IPv6 Address </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="72" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structipaddr__t_1a7fa5882ac008ad8cca38ed0bbf22d852" prot="public" static="no" mutable="no">
+        <type>union ipaddr_t::@0</type>
+        <definition>union ipaddr_t::@0  ipaddr_t::addr</definition>
+        <argsstring></argsstring>
+        <name>addr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="78" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure describing IP Address type. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" line="70" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_mcast.h" bodystart="70" bodyend="79"/>
+    <listofallmembers>
+      <member refid="structipaddr__t_1a7fa5882ac008ad8cca38ed0bbf22d852" prot="public" virt="non-virtual"><scope>ipaddr_t</scope><name>addr</name></member>
+      <member refid="structipaddr__t_1a34c3670f4c9aebd0dc23618d2aa33e75" prot="public" virt="non-virtual"><scope>ipaddr_t</scope><name>ip4</name></member>
+      <member refid="structipaddr__t_1a5dec2ea8a3e428df65eff5cc00ab527c" prot="public" virt="non-virtual"><scope>ipaddr_t</scope><name>ip6</name></member>
+      <member refid="structipaddr__t_1a6eee12f8c9cc3b1968e5d4e19e245d02" prot="public" virt="non-virtual"><scope>ipaddr_t</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,64 @@
+#!/bin/sh
+
+# Return the Radio capabilities
+# Needed object: AccessPoint, AccessPoint.Security, AccessPoint.WPS, AccessPoint.X_LANTIQ_COM_Vendor.WPS or no objects.
+
+# Source library script
+[ ! "$FAPI_WLAN_WAVE_INIT_PLATFORM" ] && . /tmp/wlan_wave/fapi_wlan_wave_init_platform.sh
+
+print2log DBG "running fapi_wlan_wave_capability_ap_query: args: $*"
+
+interface_name=$1
+
+# If interface name is not supplied, exit script
+check_input_param "fapi_wlan_wave_capability_ap_query" "interface_name" "$interface_name"
+
+timestamp "fapi_wlan_wave_capability_ap_query:$interface_name:begin"
+
+wlanInitIncomplete=`check_if_is_ready $interface_name`
+[ "$wlanInitIncomplete" = "1" ] && exit
+
+# DEBUG: TODO: REMOVE
+#cp ${IN_CONF} ${WAVE_TMP}/in_conf_ap_capabilities
+
+# Map the objects indexes to the received objects in the in.conf file
+accesspoint_index=`map_param_index Object $ACCESSPOINT_OBJECT`
+security_index=`map_param_index Object $ACCESSPOINT_SECURITY_OBJECT`
+wps_index=`map_param_index Object $ACCESSPOINT_WPS_OBJECT`
+wps_vendor_index=`map_param_index Object $ACCESSPOINT_WPS_VENDOR_OBJECT`
+
+# If an object that needs to be in the output conf wasn't in the input conf, set it with an index
+next_object_index=`get_next_object_index`
+[ -z "$accesspoint_index" ] && accesspoint_index=$next_object_index && next_object_index=$((next_object_index+1))
+[ -z "$security_index" ] && security_index=$next_object_index && next_object_index=$((next_object_index+1))
+[ -z "$wps_index" ] && wps_index=$next_object_index && next_object_index=$((next_object_index+1))
+[ -z "$wps_vendor_index" ] && wps_vendor_index=$next_object_index && next_object_index=$((next_object_index+1))
+
+# Accesspoint capabilities have hardcoded values.
+wmm_capability="true"
+uapsd_capability="true"
+modes_supported="None,WEP-64,WEP-128,WPA-Personal,WPA2-Personal,WPA-WPA2-Personal,WPA-Enterprise,WPA2-Enterprise,WPA-WPA2-Enterprise"
+config_methods_supported="PushButton,PIN" # These are only WPS1.0 methods. WPS2.0 methods appear in WPS.Vendor object.
+wps2_config_methods_supported="label,virtual_display,push_button,virtual_push_button"
+
+# Create the output configuration file and set the capapabilities in it
+cat /dev/null > ${OUT_CONF}
+
+update_conf_out "Object_${accesspoint_index}" "$ACCESSPOINT_OBJECT"
+update_conf_out "WMMCapability_${accesspoint_index}" "$wmm_capability"
+update_conf_out "UAPSDCapability_${accesspoint_index}" "$uapsd_capability"
+update_conf_out "Object_${security_index}" "$ACCESSPOINT_SECURITY_OBJECT"
+update_conf_out "ModesSupported_${security_index}" "$modes_supported"
+update_conf_out "Object_${wps_index}" "$ACCESSPOINT_WPS_OBJECT"
+update_conf_out "ConfigMethodsSupported_${wps_index}" "$config_methods_supported"
+update_conf_out "Object_${wps_vendor_index}" "$ACCESSPOINT_WPS_VENDOR_OBJECT"
+update_conf_out "WPS2ConfigMethodsSupported_${wps_index}" "$wps2_config_methods_supported"
+
+# Configuration is completed successfully
+update_conf_out "wlan_configuration_status" "success"
+
+# DEBUG: TODO: REMOVE
+#cp ${OUT_CONF} ${WAVE_TMP}/out_conf_ap_capabilities
+
+print2log DBG "fapi_wlan_wave_ap_capability_query done"
+timestamp "fapi_wlan_wave_ap_capability_query:$interface_name:done"

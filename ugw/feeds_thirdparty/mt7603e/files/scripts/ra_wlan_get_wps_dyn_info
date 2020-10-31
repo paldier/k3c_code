@@ -1,0 +1,63 @@
+#!/bin/sh
+
+
+if [ ! "$ENVLOADED" ]; then
+	if [ -r /etc/rc.conf ]; then
+		 . /etc/rc.conf 2> /dev/null
+		ENVLOADED="1"
+	fi
+fi
+
+if [ ! "$CONFIGLOADED" ]; then
+	if [ -r /etc/rc.d/config.sh ]; then
+		. /etc/rc.d/config.sh 2>/dev/null
+		CONFIGLOADED="1"
+	fi
+fi
+
+#echo "ra_wlan_sec_modify ${1}" > /tmp/ra_wlan_sec_modify_file #Modify output file name
+
+RA_IF=""
+find_ra_if_from_index() {
+   eval CPEID='$'wlmn_${1}'_cpeId'
+   ra_dev=`/usr/sbin/status_oper GET "RA_MAP" "$CPEID"`
+   RA_IF=${ra_dev:2}
+}
+find_ra_if_from_index $1
+
+#echo "hsur current ralink_inf_idx is ${ralink_inf_idx}"
+
+if [ "$CONFIG_FEATURE_WIRELESS" = "1" ]; then
+   #Invoked without any args i.e.  ra_wlan_get_radio_dyn_info
+
+   #echo "ra_wlan_get_radio_dyn_info" > /tmp/ra_wlan_get_radio_dyn_info_debug
+   
+   wps_dyn_info_file=/ramdisk/tmp/wps_dyn_info   
+   iwpriv ra0 ar9_show get_wps_dyn_info > ${wps_dyn_info_file}
+
+   if [ "${RA_IF}" = "0" ]; then
+	StartLine=3
+   elif [ "${RA_IF}" = "1" ]; then
+	StartLine=9
+   elif [ "${RA_IF}" = "2" ]; then
+	StartLine=15
+   fi
+   #byteTx=$(grep "ra0       Link encap:Ethernet  HWaddr " $your_state_file | cut -d ":" -f 2 | cut -d " " -f 2 | cut -d " " -f 2)
+   
+	UUID=$(sed -n "${StartLine}p" $wps_dyn_info_file | cut -d "=" -f 2 | cut -d " " -f 2)
+	StartLine=`expr ${StartLine} + 1`
+	wpsVersion=$(sed -n "${StartLine}p" $wps_dyn_info_file | cut -d "=" -f 2 | cut -d " " -f 2)
+	StartLine=`expr ${StartLine} + 1`
+	SetupLockedState=$(sed -n "${StartLine}p" $wps_dyn_info_file | cut -d "=" -f 2 | cut -d " " -f 2)
+	StartLine=`expr ${StartLine} + 1`
+	configState=$(sed -n "${StartLine}p" $wps_dyn_info_file | cut -d "=" -f 2 | cut -d " " -f 2)
+	StartLine=`expr ${StartLine} + 1`
+	lastConfigError=$(sed -n "${StartLine}p" $wps_dyn_info_file | cut -d "=" -f 2 | cut -d " " -f 2)
+
+   echo "UUID=\"$UUID\""
+   echo "wpsVersion=\"$wpsVersion\""
+   echo "SetupLockedState=\"$SetupLockedState\""
+   echo "configState=\"$configState\""
+   echo "lastConfigError=\"$lastConfigError\""
+   
+fi

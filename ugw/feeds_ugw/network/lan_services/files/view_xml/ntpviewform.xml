@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <header>
+        <name>System Time</name>
+        <description>Configuration to enable the device to sychronize the system time with that of the time servers.</description>
+    </header>
+    <object title="System Time" viewtype="form" >
+      <object name="Device.Time"  viewtype="form">
+        <parameter name="Enable"  type="checkbox" Value="1" webname="Enable" ></parameter> 
+        <parameter name="Status"  type="string"  webname="Status" maxlen="64" required="false" access="readonly"></parameter>
+        <parameter name="NTPServer1" type="string" webname="Server 1" maxlen="64"></parameter>
+        <parameter  name="NTPServer2"  type="string" webname="Server 2" maxlen="64"></parameter>
+        <parameter name="NTPServer3"  type="string" webname="Server 3" maxlen="64" required="false"></parameter>
+        <parameter name="NTPServer4"  type="string" webname="Server 4" maxlen="64" required="false"></parameter>
+        <parameter name="NTPServer5" type="string" webname="Server 5" maxlen="64" required="false"></parameter>
+        <parameter  name="CurrentLocalTime" type="string"  webname="Current Local Time (UTC)" maxlen="64" required="false" access="readonly"></parameter>
+        <parameter  name="LocalTimeZone" type="dropdown"  webname="Local Timezone" url="ntpview" ></parameter>
+        <parameter  name="Modify"  action="post" routeurl="Apply($event)" type="submitbutton" webname="Apply" ></parameter>
+        <parameter  name="Cancel" routeurl="reset()" action="post" type="submitbutton" webname="Reset" ></parameter>
+      </object>
+    </object>
+</view>
+

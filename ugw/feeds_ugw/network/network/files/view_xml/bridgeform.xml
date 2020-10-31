@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view viewid="multibridgeform">
+    <helptext></helptext>
+    <header>
+    <image>images/icons/multicast.png</image>
+        <name>Bridge</name>
+        <description>Edit Bridge configuration</description>
+    </header>
+    <object name="Device.Bridging.Bridge.*" viewtype="form"  icon="settings-1" title="Settings">
+         <parameter type="description" content='This page will only allow removal of LAN interfaces. To remove WAN interfaces go to Internet' > </parameter>
+        <parameter  name="X_LANTIQ_COM_BridgeMembers" type="multi-checkbox" url="cgi_get_filterbyfirstparamval?Object=Device.IP.Interface&amp;X_LANTIQ_COM_UpStream=false&amp;Name=&amp;Object=Device.X_LANTIQ_COM_NwHardware.WANConnection&amp;AddressType=Bridged&amp;ConnectionName=" webname="Bridge Members" ></parameter>
+        <parameter  name="Add" routeurl="Apply($event,'bridgetable')" type="submitbutton" webname="Apply"></parameter>  
+    </object>    
+</view>

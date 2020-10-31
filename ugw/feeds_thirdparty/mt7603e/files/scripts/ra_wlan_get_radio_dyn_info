@@ -1,0 +1,43 @@
+#!/bin/sh
+
+
+if [ ! "$ENVLOADED" ]; then
+	if [ -r /etc/rc.conf ]; then
+		 . /etc/rc.conf 2> /dev/null
+		ENVLOADED="1"
+	fi
+fi
+
+if [ ! "$CONFIGLOADED" ]; then
+	if [ -r /etc/rc.d/config.sh ]; then
+		. /etc/rc.d/config.sh 2>/dev/null
+		CONFIGLOADED="1"
+	fi
+fi
+
+if [ "$CONFIG_FEATURE_WIRELESS" = "1" ]; then
+   #Invoked without any args i.e.  ra_wlan_get_radio_dyn_info
+
+   echo "ra_wlan_get_radio_dyn_info" > /tmp/ra_wlan_get_radio_dyn_info_debug
+
+   iwconfig_file=/ramdisk/tmp/iwconfig_dyn_info
+   radio_dyn_info_file=/ramdisk/tmp/radio_dyn_info
+   rm -f ${iwconfig_file}
+   iwconfig ra0 >> ${iwconfig_file}
+   iwpriv ra0 ar9_show get_radio_dyn_info > ${radio_dyn_info_file}
+
+   #byteTx=$(grep "ra0       Link encap:Ethernet  HWaddr " $your_state_file | cut -d ":" -f 2 | cut -d " " -f 2 | cut -d " " -f 2)
+	
+   channel=$(grep "Mode:Managed  Channel" $iwconfig_file | cut -d "=" -f 2 | cut -d " " -f 1)
+	 GI=$(grep "guardIntvl" $radio_dyn_info_file | cut -d "=" -f 2 | cut -d " " -f 2)
+	 BW=$(grep "chanWidth" $radio_dyn_info_file | cut -d "=" -f 2 | cut -d " " -f 2)
+	 MCS=$(grep "MCS" $radio_dyn_info_file | cut -d "=" -f 2 | cut -d " " -f 2)
+	 status=$(grep "status" $radio_dyn_info_file | cut -d "=" -f 2 | cut -d " " -f 2)
+
+   echo "status=\"$status\""
+   echo "channelsInUse=\"\""
+   echo "channel=\"$channel\""
+   echo "chanWidth=\"$BW\""
+   echo "guardIntvl=\"$GI\""
+   echo "MCS=\"$MCS\""
+fi

@@ -1,0 +1,22 @@
+--- a/Host/Linux/Kernel/Usb/ue_cdc.c
++++ b/Host/Linux/Kernel/Usb/ue_cdc.c
+@@ -1549,10 +1549,18 @@
+ 		}
+ 	}
+ 
+-	// waiting for all pending urbs to complete?
++	// waiting for aill pending urbs to complete?
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(3,10,37))
+ 	if (dev->wait) {
++#else
++	if (waitqueue_active(&dev->wait)) {
++#endif
+ 		if ((dev->txq.qlen + dev->rxq.qlen + dev->done.qlen) == 0) {
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(3,10,37))
+ 			wake_up (dev->wait);
++#else
++			wake_up_all(&dev->wait);
++#endif
+ 		}
+ 
+ 	// or are we maybe short a few urbs?

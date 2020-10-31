@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_267b52101a7adc9020e581966dfa5912" kind="dir">
+    <compoundname>staging_dir</compoundname>
+    <innerdir refid="dir_ca602376166366fbd4b74153ebbe72d9">target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/"/>
+  </compounddef>
+</doxygen>

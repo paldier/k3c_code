@@ -1,0 +1,29 @@
+<Device Id="1000">
+  <PPP Writable="false" Alias="NA" Id="1">
+    <InterfaceNumberOfEntries Type="unsignedInt" Writable="false" Id="2">0</InterfaceNumberOfEntries>
+    <SupportedNCPs Type="string" Writable="false" MaxLen="256" Id="3" enums="ATCP,IPCP,IPXCP,NBFCP,IPv6CP">ATCP</SupportedNCPs>
+    <Interface Writable="true" Alias="true" Id="20" multiInst="yes" maxEntries="unbound" minEntries="1" >
+      <Enable Type="boolean" Writable="true" Id="21">false</Enable>
+      <Status Type="string" Writable="false" MaxLen="256" Id="22" enums="Up,Down,Unknown,Dormant,NotPresent,LowLayerDown,Error(OPTIONAL)">Up</Status>
+      <Alias Type="string" Writable="true" MaxLen="64" Id="23"/>
+      <Name Type="string" Writable="false" MaxLen="64" Id="24"/>
+      <Username Type="string" Writable="true" MaxLen="64" Id="28">admin</Username>
+      <Password Type="string" Writable="true" MaxLen="64" Id="29">admin</Password>
+      <interfaceStats Writable="false" Alias="NA" Id="4">
+       <BytesSent Type="unsignedLong" Writable="false" Id="5">0</BytesSent>
+       <BytesReceived Type="unsignedLong" Writable="false" Id="6">0</BytesReceived>
+     </interfaceStats>
+      <PPPoA Writable="false" Alias="NA" Id="54">
+        <SessionID Type="unsignedInt" Writable="false" Id="55">1</SessionID>
+        <ACName Type="string" Writable="true" MaxLen="256" Id="56"/>
+        <ServiceName Type="string" Writable="true" MaxLen="256" Id="57"/>
+      </PPPoA>
+    </Interface>
+  <PPPoATTTT Writable="false" Alias="NA" Id="54">
+        <SessionID Type="unsignedInt" Writable="false" Id="55">1</SessionID>
+        <ACName Type="string" Writable="true" MaxLen="256" Id="56"/>
+        <ServiceName Type="string" Writable="true" MaxLen="256" Id="57"/>
+  </PPPoATTTT>
+  </PPP>
+</Device>
+

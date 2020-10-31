@@ -1,0 +1,1121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__FAPI__QOS__QUEUE" kind="group">
+    <compoundname>FAPI_QOS_QUEUE</compoundname>
+    <title>Queuing</title>
+    <innerclass refid="structqos__shaper" prot="public">qos_shaper</innerclass>
+    <innerclass refid="structqos__wred" prot="public">qos_wred</innerclass>
+    <innerclass refid="structqos__drop__cfg" prot="public">qos_drop_cfg</innerclass>
+    <innerclass refid="structqos__queue__cfg" prot="public">qos_queue_cfg</innerclass>
+    <innerclass refid="structqos__queue__stats__t" prot="public">qos_queue_stats_t</innerclass>
+    <innerclass refid="structx__qapi__t" prot="public">x_qapi_t</innerclass>
+    <innerclass refid="structx__qoscfg__t" prot="public">x_qoscfg_t</innerclass>
+    <innerclass refid="structx__ifcfg__t" prot="public">x_ifcfg_t</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__FAPI__QOS__QUEUE_1ga1239e331f224c9a00c3047d30edaa939" prot="public" static="no">
+        <name>qos_sched_mode_t</name>
+        <enumvalue id="group__FAPI__QOS__QUEUE_1gga1239e331f224c9a00c3047d30edaa939ab36224a8020ac797bd5d288416b8a60c" prot="public">
+          <name>QOS_SCHED_SP</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Queue scheduling algorithm is strict priority </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__QUEUE_1gga1239e331f224c9a00c3047d30edaa939ad4c9d46debeaa176ead4f39ce6749586" prot="public">
+          <name>QOS_SCHED_WFQ</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Queue scheduling algorithm is weighted fair queuing </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>QoS Shaper Mode Configuration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="142" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="142" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__FAPI__QOS__QUEUE_1ga59365e8b97823ce54ac3e627abc95dd5" prot="public" static="no">
+        <name>qos_shaper_mode_t</name>
+        <enumvalue id="group__FAPI__QOS__QUEUE_1gga59365e8b97823ce54ac3e627abc95dd5aeaf9faef4573eeaba7034840720cce37" prot="public">
+          <name>QOS_SHAPER_NONE</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>No shaper assigned </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__QUEUE_1gga59365e8b97823ce54ac3e627abc95dd5a29fea50ad673068f3d2b59ba8676998e" prot="public">
+          <name>QOS_SHAPER_COLOR_BLIND</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Color blind </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__QUEUE_1gga59365e8b97823ce54ac3e627abc95dd5acc40218e63ca2f3fba38c8f98c9a0832" prot="public">
+          <name>QOS_SHAPER_TR_TCM</name>
+          <initializer>=2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Three-color marking </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__QUEUE_1gga59365e8b97823ce54ac3e627abc95dd5ad63abd52de51f0b633cab8c41633f249" prot="public">
+          <name>QOS_SHAPER_TR_TCM_RFC4115</name>
+          <initializer>=3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Three-color marking as in RFC4115 </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__QUEUE_1gga59365e8b97823ce54ac3e627abc95dd5a346472924caeb95880bc570c4b92118b" prot="public">
+          <name>QOS_SHAPER_LOOSE_COLOR_BLIND</name>
+          <initializer>=4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Loose color blind </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>QoS Shaper Mode Configuration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="151" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="151" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__FAPI__QOS__QUEUE_1gac3dd371b02e4e2ff5023eaa49dfd7aab" prot="public" static="no">
+        <name>qos_drop_mode_t</name>
+        <enumvalue id="group__FAPI__QOS__QUEUE_1ggac3dd371b02e4e2ff5023eaa49dfd7aabad633473386b40a2abf8c8bbaf6347b90" prot="public">
+          <name>QOS_DROP_TAIL</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Tail-drop </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__QUEUE_1ggac3dd371b02e4e2ff5023eaa49dfd7aaba52861308ec9d0b27383e658a4b1a2929" prot="public">
+          <name>QOS_DROP_RED</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Random early detection </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__QUEUE_1ggac3dd371b02e4e2ff5023eaa49dfd7aaba0ec07d74821ef58ed141af01e60a8d4f" prot="public">
+          <name>QOS_DROP_WRED</name>
+          <initializer>=2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Weighted random early detection </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__FAPI__QOS__QUEUE_1ggac3dd371b02e4e2ff5023eaa49dfd7aabafbbcf309cee7513222292d89a35de80b" prot="public">
+          <name>QOS_DROP_CODEL</name>
+          <initializer>=3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Controlled delay </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>QoS Queue drop Mode Configuration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="162" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="162" bodyend="167"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__FAPI__QOS__QUEUE_1ga05ce7ada7ae20b289d4e675ad099c8f0" prot="public" static="no">
+        <type>struct <ref refid="structqos__shaper" kindref="compound">qos_shaper</ref></type>
+        <definition>typedef struct qos_shaper qos_shaper_t</definition>
+        <argsstring></argsstring>
+        <name>qos_shaper_t</name>
+        <briefdescription>
+<para>QoS Shaper configuration structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="192" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__FAPI__QOS__QUEUE_1ga42b4d8fefa10f2b563d6151e772c6b3c" prot="public" static="no">
+        <type>struct <ref refid="structqos__wred" kindref="compound">qos_wred</ref></type>
+        <definition>typedef struct qos_wred qos_wred_t</definition>
+        <argsstring></argsstring>
+        <name>qos_wred_t</name>
+        <briefdescription>
+<para>QoS WRED Drop configuration structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="remark"><para>If RED, then this is same as WRED Curve 0 only configuration </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="208" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__FAPI__QOS__QUEUE_1ga5db7cfdc67250c1a25470eb030e4fccb" prot="public" static="no">
+        <type>struct <ref refid="structqos__drop__cfg" kindref="compound">qos_drop_cfg</ref></type>
+        <definition>typedef struct qos_drop_cfg qos_drop_cfg_t</definition>
+        <argsstring></argsstring>
+        <name>qos_drop_cfg_t</name>
+        <briefdescription>
+<para>QoS Queue Drop configuration structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="220" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__FAPI__QOS__QUEUE_1gaa27a8975bf3ed923f280f804086e1e4e" prot="public" static="no">
+        <type>struct <ref refid="structqos__queue__cfg" kindref="compound">qos_queue_cfg</ref></type>
+        <definition>typedef struct qos_queue_cfg  qos_queue_cfg_t</definition>
+        <argsstring></argsstring>
+        <name>qos_queue_cfg_t</name>
+        <briefdescription>
+<para>QoS Queue Configuration structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="267" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__FAPI__QOS__QUEUE_1gab200a6c190efb8ff569a9a83a2e2a39e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_queue_set</definition>
+        <argsstring>(char *ifname, qos_queue_cfg_t *q, uint32_t flags)</argsstring>
+        <name>fapi_qos_queue_set</name>
+        <param>
+          <type>char *</type>
+          <declname>ifname</declname>
+        </param>
+        <param>
+          <type><ref refid="group__FAPI__QOS__QUEUE_1gaa27a8975bf3ed923f280f804086e1e4e" kindref="member">qos_queue_cfg_t</ref> *</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Set QoS Queue Configuration - involves adding a new queue or modifying an existing queue, or deleting an existing queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ifname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of interface on which queue is to be added (egress or ingress) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Queue configuration to add, modify or delete </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies if Filter is to do one of the following:<itemizedlist>
+<listitem><para>QOS_OP_F_ADD</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<itemizedlist>
+<listitem><para>QOS_OP_F_MODIFY</para></listitem><listitem><para>QOS_OP_F_DELETE</para></listitem><listitem><para>QOS_Q_F_QUEUE_GENERIC_MODIFY</para></listitem><listitem><para>QOS_Q_F_QUEUE_DROP_MODIFY</para></listitem><listitem><para>QOS_Q_F_QUEUE_SCHED_MODIFY</para></listitem><listitem><para>QOS_Q_F_QUEUE_SHAPER_MODIFY</para></listitem><listitem><para>QOS_Q_F_QUEUE_SHAPER_DELETE <simplesect kind="return"><para>QueueId on successful / -1 on failure </para></simplesect>
+</para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="393" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__QOS__QUEUE_1ga727ee91ab59e9b90747c24ad946c08a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_queue_get</definition>
+        <argsstring>(char *ifname, char *queue_name, int32_t *num_queues, qos_queue_cfg_t **q, uint32_t flags)</argsstring>
+        <name>fapi_qos_queue_get</name>
+        <param>
+          <type>char *</type>
+          <declname>ifname</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>queue_name</declname>
+        </param>
+        <param>
+          <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref> *</type>
+          <declname>num_queues</declname>
+        </param>
+        <param>
+          <type><ref refid="group__FAPI__QOS__QUEUE_1gaa27a8975bf3ed923f280f804086e1e4e" kindref="member">qos_queue_cfg_t</ref> **</type>
+          <declname>q</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Get one of all QoS Queue Configuration on given interface. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ifname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of interface on which queue is to be queried (egress or ingress) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">queue_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of queue which is to be queried </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">num_queues</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of queues returned </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">q</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of Queue configuration of num_queues number of queues Caller must free the buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies if the Filter is to do one of the following:<itemizedlist>
+<listitem><para>QOS_OP_F_INGRESS - if ingress queues are to be retrieved, otherwise egress queues are retrieved </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on successful / -1 on failure </para></simplesect>
+<simplesect kind="remark"><para>if QueueId is -1, then all queues for if_name are returned (number of queues given by num_queues), else only queue given by queue_id is returned </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="414" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__QOS__QUEUE_1gadc2ed3ac56edaa5cdb56e65f6a737aec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_queue_stats_get</definition>
+        <argsstring>(char *ifname, char *queue_name, int32_t *num_queues, qos_queue_stats_t **qstats, uint32_t flags)</argsstring>
+        <name>fapi_qos_queue_stats_get</name>
+        <param>
+          <type>char *</type>
+          <declname>ifname</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>queue_name</declname>
+        </param>
+        <param>
+          <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref> *</type>
+          <declname>num_queues</declname>
+        </param>
+        <param>
+          <type><ref refid="structqos__queue__stats__t" kindref="compound">qos_queue_stats_t</ref> **</type>
+          <declname>qstats</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Get statistics of one or all Queues on given interface. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ifname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of interface on which queue is to be queried (egress or ingress) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">queue_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of queue for which statistics are to be queried </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">num_queues</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of queues returned </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">qstats</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of Queue statistics of num_queues number of queues Caller must free the buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies whether Filter is to do one of the following: QOS_OP_F_INGRESS - if ingress queues statistics are to be retrieved, otherwise egress queues statistics are retrieved </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on successful / -1 on failure </para></simplesect>
+<simplesect kind="remark"><para>if queue_name is not specified or NULL, then statistics of all queues for if_name are returned (number of queues given by num_queues), else only statistics of queue given by queue_name is returned </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="438" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__QOS__QUEUE_1ga689e45276a2ec8a97f4fdace1360aafa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_port_config_set</definition>
+        <argsstring>(char *ifname, qos_shaper_t *shaper, int32_t weight, int32_t priority, uint32_t flags)</argsstring>
+        <name>fapi_qos_port_config_set</name>
+        <param>
+          <type>char *</type>
+          <declname>ifname</declname>
+        </param>
+        <param>
+          <type><ref refid="group__FAPI__QOS__QUEUE_1ga05ce7ada7ae20b289d4e675ad099c8f0" kindref="member">qos_shaper_t</ref> *</type>
+          <declname>shaper</declname>
+        </param>
+        <param>
+          <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+          <declname>weight</declname>
+        </param>
+        <param>
+          <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+          <declname>priority</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Set Port QoS characteristics like rate shaper, and/or weight/priority if this port is cascaded into another scheduler. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ifname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of interface whose port QoS characteristics are to be configured </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">shaper</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Port shaper configuration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Port weight when port is cascaded into next stage scheduler. -1 means no weight, only priority </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Port priority when port is cascaded into next stage scheduler. -1 means no priority, only weight </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flags are defined as follows:<itemizedlist>
+<listitem><para>QOS_OP_F_ADD</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<itemizedlist>
+<listitem><para>QOS_OP_F_MODIFY</para></listitem><listitem><para>QOS_OP_F_DELETE <simplesect kind="return"><para>0 on successful / -1 on failure </para></simplesect>
+</para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="463" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__QOS__QUEUE_1gaa91cdf232e5ee1ffb8c0c501c743c694" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_port_config_get</definition>
+        <argsstring>(char *ifname, qos_shaper_t *shaper, int32_t *weight, int32_t *priority, uint32_t flags)</argsstring>
+        <name>fapi_qos_port_config_get</name>
+        <param>
+          <type>char *</type>
+          <declname>ifname</declname>
+        </param>
+        <param>
+          <type><ref refid="group__FAPI__QOS__QUEUE_1ga05ce7ada7ae20b289d4e675ad099c8f0" kindref="member">qos_shaper_t</ref> *</type>
+          <declname>shaper</declname>
+        </param>
+        <param>
+          <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref> *</type>
+          <declname>weight</declname>
+        </param>
+        <param>
+          <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref> *</type>
+          <declname>priority</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Get Port QoS characteristics like rate shaper, and/or weight/priority if this port is cascaded into another scheduler. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ifname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of interface whose port QoS characteristics are to be configured </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">shaper</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Port shaper configuration </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Port weight when port is cascaded into next stage scheduler. -1 means no weight, only priority </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">priority</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Port priority when port is cascaded into next stage scheduler. -1 means no priority, only weight </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flags are defined as follows:<itemizedlist>
+<listitem><para>QOS_OP_F_INGRESS : if port egress or ingress configuration is to be returned </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on successful / -1 on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="486" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__FAPI__QOS__QUEUE_1ga10ae649e4e386857ad8cadeb7e2e2e41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t fapi_qos_port_update</definition>
+        <argsstring>(char *ifname, uint32_t flags)</argsstring>
+        <name>fapi_qos_port_update</name>
+        <param>
+          <type>char *</type>
+          <declname>ifname</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Notification on port add or delete in the system from higher layers/system management. This allows qos_al to add/del queues from template files to system. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ifname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Interface which is to be added or deleted from QoS configuration of system </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flags are as as follows:<itemizedlist>
+<listitem><para>QOS_OP_F_ADD : Add QoS Port</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<itemizedlist>
+<listitem><para>QOS_OP_F_DELETE : Delete QoS Port <simplesect kind="return"><para>0 on successful / -1 on failure </para></simplesect>
+</para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="504" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gaa0fc84bf29249c2714352aabdc6872a1" prot="public" static="no">
+        <name>QOS_AL_Q_OK</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>QOS_AL_Q_OK. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="83" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga871827864df903f59809893e94a1a26a" prot="public" static="no">
+        <name>QOS_AL_Q_ERROR</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+<para>QOS_AL_Q_ERROR. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="86" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gaba233f88b964fa268be32daababb0ddb" prot="public" static="no">
+        <name>CL_ACTION_TC</name>
+        <initializer>0x1</initializer>
+        <briefdescription>
+<para>CL action traffic class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="91" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gaba07a1aea72eb2747e5b5328219a135a" prot="public" static="no">
+        <name>CL_ACTION_DROP</name>
+        <initializer>0x2</initializer>
+        <briefdescription>
+<para>Classifier action drop. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DROP is mutually exclusive with any other classifier action - all other actions could be combined on a packet </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="97" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga0ba89992e3bb42683abf9eae8abfe99a" prot="public" static="no">
+        <name>CL_ACTION_DSCP</name>
+        <initializer>0x4</initializer>
+        <briefdescription>
+<para>Classifier action remark DSCP value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="101" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gacef9c6146debb9509e70fbd128604fef" prot="public" static="no">
+        <name>CL_ACTION_VLAN</name>
+        <initializer>0x8</initializer>
+        <briefdescription>
+<para>Classifier action remark VLAN priority. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="105" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gaeb02670f38dbe11bb37a20b43404aa2f" prot="public" static="no">
+        <name>CL_ACTION_POLICER</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+<para>Classifier action policer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="109" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga6142d956017289f4fba2b8474a8590ae" prot="public" static="no">
+        <name>CL_ACTION_POLICY_ROUTE</name>
+        <initializer>0x20</initializer>
+        <briefdescription>
+<para>Classifier action policy route. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="113" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gab3a5eba054b613a8625f8ba2a1ff0b3d" prot="public" static="no">
+        <name>CL_ACTION_ACCELERATION</name>
+        <initializer>0x40</initializer>
+        <briefdescription>
+<para>Classifier action for accelerating session or not. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="117" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gad1a39bca2eca8c238c322b1f277e79ce" prot="public" static="no">
+        <name>CL_INT_IPT_CH_CREATED</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+<para>Classifier internal flag to indicate required chains in iptables created. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="121" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gace2d4f3d52f545638f8a3149e98c82fc" prot="public" static="no">
+        <name>CL_ACTION_TC_INGRESS</name>
+        <initializer>0x100</initializer>
+        <briefdescription>
+<para>Classifier TC marking action location (ingress/egress) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="125" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga8c2658456d4f94c43de2b47e6cc488eb" prot="public" static="no">
+        <name>MAX_Q_NAME_LEN</name>
+        <initializer>128</initializer>
+        <briefdescription>
+<para>MAX_Q_NAME_LEN. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="129" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga75e5a2112ac055521c4cb0e64b278be8" prot="public" static="no">
+        <name>MAX_TC_NUM</name>
+        <initializer>8</initializer>
+        <briefdescription>
+<para>MAX_TC_NUM. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="132" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gab80f9753502dd8a9811046d0c9436ca4" prot="public" static="no">
+        <name>QOS_DEFAULT_QUEUE_NAME</name>
+        <initializer>&quot;def_queue&quot;</initializer>
+        <briefdescription>
+<para>Default queue identifier; Queues with name as QOS_DEFAULT_QUEUE_NAME are considered default queues. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="137" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gaca804825b14c6e09547334ab4903f860" prot="public" static="no">
+        <name>QOS_SHAPER_F_PIR</name>
+        <initializer>0x00000002</initializer>
+        <briefdescription>
+<para>Peak shaper info configured. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="172" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga7aa727cd5a533da5d21f3cf9f814b936" prot="public" static="no">
+        <name>QOS_SHAPER_F_CIR</name>
+        <initializer>0x00000004</initializer>
+        <briefdescription>
+<para>Committed shaper info configured. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="176" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga7306e528452e4389e8c7a76dbbf3af64" prot="public" static="no">
+        <name>QOS_Q_F_INGRESS</name>
+        <initializer>0x00000001</initializer>
+        <briefdescription>
+<para>QoS queue operation related flags. </para>        </briefdescription>
+        <detaileddescription>
+<para>Ingress operation flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="225" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga34dba99f30e84ea75cab31c31f353fdf" prot="public" static="no">
+        <name>QOS_Q_F_MODIFIED</name>
+        <initializer>0x00000002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Modify operation flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="226" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga9a1077936ad9252e2a13501b25732c2e" prot="public" static="no">
+        <name>QOS_Q_F_MODIFIED_OTHER</name>
+        <initializer>0x00000004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Modify other operation flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="227" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gab3c92215e835050ca004780f75f95409" prot="public" static="no">
+        <name>QOS_Q_F_HW</name>
+        <initializer>0x00000008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hardware operation flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="228" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gad3de124faf55138ec673ff88700b70e9" prot="public" static="no">
+        <name>QOS_Q_F_CPU</name>
+        <initializer>0x00000010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Software operation flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="229" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga3daab7eabb364df508e0cffdafc716b1" prot="public" static="no">
+        <name>QOS_Q_F_DEFAULT</name>
+        <initializer>0x00000020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default Queue operation flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="230" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga23373ec976d76acc26ae4b7a13a5490e" prot="public" static="no">
+        <name>QOS_Q_F_SKIP_DEF_Q_CHK</name>
+        <initializer>0x00000040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default Queue check skip flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="231" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga3ff77637a60ecb38f8b370157f43ac4a" prot="public" static="no">
+        <name>QOS_Q_F_INT_Q</name>
+        <initializer>0x00000080</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Internal queue identification flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="232" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gaccc096a1afc94084de913a8de593cd7a" prot="public" static="no">
+        <name>QOS_Q_F_INGGRP1</name>
+        <initializer>0x00000100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ingress Queue Group-1 flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="233" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gab6da64324452e6385a5a045e438240cb" prot="public" static="no">
+        <name>QOS_Q_F_INGGRP2</name>
+        <initializer>0x00000200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ingress Queue Group-2 flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="234" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga1de29a6e534286eb607bf16191d8d94b" prot="public" static="no">
+        <name>QOS_Q_F_INGGRP3</name>
+        <initializer>0x00000400</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ingress Queue Group-3 flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="235" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga4f50900ef23e2fb31aeac3eb9932c8be" prot="public" static="no">
+        <name>QOS_Q_F_INGGRP4</name>
+        <initializer>0x00000800</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ingress Queue Group-4 flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="236" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga1ce6f7b2edbc2fb87b3e0bf2c2da231d" prot="public" static="no">
+        <name>QOS_Q_F_INGGRP5</name>
+        <initializer>0x00001000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ingress Queue Group-5 flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="237" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga5046759dc7d0ebae110694a9be334def" prot="public" static="no">
+        <name>QOS_Q_F_INGGRP6</name>
+        <initializer>0x00002000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ingress Queue Group-6 flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="238" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga30f059995ac6786208d944eb84f39fef" prot="public" static="no">
+        <name>QOS_Q_F_LINK_STATE_CHANGE</name>
+        <initializer>0x00004000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Configuration triggered from link state change </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="239" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga9a9a7fe4e0e98bd1a08c146a5ceea156" prot="public" static="no">
+        <name>QOS_Q_STAT_RX_PKT</name>
+        <initializer>0x00000001</initializer>
+        <briefdescription>
+<para>QoS queue statistics related flags. </para>        </briefdescription>
+        <detaileddescription>
+<para>Rx Packets support flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="272" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga1bc411916553d677f198bfe53a9d66e5" prot="public" static="no">
+        <name>QOS_Q_STAT_RX_BYTE</name>
+        <initializer>0x00000002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rx Bytes support flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="273" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gadb32e8befc0db998929b240570021e27" prot="public" static="no">
+        <name>QOS_Q_STAT_TX_PKT</name>
+        <initializer>0x00000004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tx Packets support flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="274" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gaae63033c6c8e70e7f6f44ffbcdfe2d98" prot="public" static="no">
+        <name>QOS_Q_STAT_TX_BYTE</name>
+        <initializer>0x00000008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tx Bytes support flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="275" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gad7742bbe991b93d5e2f2cb15f9368fd5" prot="public" static="no">
+        <name>QOS_Q_STAT_DROP_PKT</name>
+        <initializer>0x00000010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Drop Packets support flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="276" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga823c7487863f66b69788ca8f7a6ae5bc" prot="public" static="no">
+        <name>QOS_Q_STAT_DROP_BYTE</name>
+        <initializer>0x00000020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Drop Bytes support flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="277" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga039fef59e2d78c81c3208d48b592ca99" prot="public" static="no">
+        <name>QOS_Q_STAT_OCC_PKT</name>
+        <initializer>0x00000040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Queue Occupacny Packets support flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="278" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga08bb5276a8019c599b5dabec03ca9ce3" prot="public" static="no">
+        <name>QOS_Q_STAT_OCC_PCT</name>
+        <initializer>0x00000080</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Queue Occupacny Percentage support flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="279" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gaeb2dbdb4c944301060491384b675bb9c" prot="public" static="no">
+        <name>QOS_OP_F_ADD</name>
+        <initializer>0x00000001</initializer>
+        <briefdescription>
+<para>Queue add operation flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="302" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga7784ac1b56789390044395c968750dfb" prot="public" static="no">
+        <name>QOS_OP_F_MODIFY</name>
+        <initializer>0x00000002</initializer>
+        <briefdescription>
+<para>Queue modify operation flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="306" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gafa18a9d931c39c4ad229c5c9680522ec" prot="public" static="no">
+        <name>QOS_OP_F_DELETE</name>
+        <initializer>0x00000004</initializer>
+        <briefdescription>
+<para>Queue delete operation flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="310" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="310" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gae2e14dd5f31d858be56a4e8fd572390c" prot="public" static="no">
+        <name>QOS_OP_F_QUEUE_DROP</name>
+        <initializer>0x00000008</initializer>
+        <briefdescription>
+<para>Queue drop algorithm set operation flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="314" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="314" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga1a11fb7eb4bfd2abdf7ea9eaed0a3aac" prot="public" static="no">
+        <name>QOS_OP_F_QUEUE_SCHED</name>
+        <initializer>0x00000010</initializer>
+        <briefdescription>
+<para>Queue scheduler algorithm set operation flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="318" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga36afcc257c4b08f215030cc9dc02fbb7" prot="public" static="no">
+        <name>QOS_OP_F_QUEUE_SHAPER</name>
+        <initializer>0x00000020</initializer>
+        <briefdescription>
+<para>Queue shaper set operation flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="322" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="322" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gac13ebe36678ac81af0ea00dd884329dc" prot="public" static="no">
+        <name>QOS_OP_CFG_DUMP</name>
+        <initializer>0x00000040</initializer>
+        <briefdescription>
+<para>Dump QoS configuration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="326" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga3a8cc13f32a00ba1434b36b48dcea721" prot="public" static="no">
+        <name>QOS_OP_F_INGRESS</name>
+        <initializer>0x00000080</initializer>
+        <briefdescription>
+<para>Ingress operation flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="330" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1ga9c63e4ccaf612b2a696c39cf976b195a" prot="public" static="no">
+        <name>QOS_DONT_USE_DEF_CFG</name>
+        <initializer>0x00000100</initializer>
+        <briefdescription>
+<para>Flag to indicate not to use default general configuration during init. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="334" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="334" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__FAPI__QOS__QUEUE_1gadf648834273a3d52c664e55ca314fd96" prot="public" static="no">
+        <name>MAX_IFNAME_LEN</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="336" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Provides a set of API to create queue for an interface, configure shaper on a queue/port, etc. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

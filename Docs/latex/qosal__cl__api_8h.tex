@@ -1,0 +1,419 @@
+\hypertarget{qosal__cl__api_8h}{\section{qosal\-\_\-cl\-\_\-api.\-h File Reference}
+\label{qosal__cl__api_8h}\index{qosal\-\_\-cl\-\_\-api.\-h@{qosal\-\_\-cl\-\_\-api.\-h}}
+}
+
+
+File contains the related data structures and A\-P\-I for Qo\-S Classification functionality.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcl__param__in__ex__t}{cl\-\_\-param\-\_\-in\-\_\-ex\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Bit-\/map indication of fields selected or excluded of structure within which this structure is placed. \end{DoxyCompactList}\item 
+struct \hyperlink{structcl__action__vlan__t}{cl\-\_\-action\-\_\-vlan\-\_\-t}
+\begin{DoxyCompactList}\small\item\em V\-L\-A\-N action data structure for a classifier. \end{DoxyCompactList}\item 
+struct \hyperlink{structpolicer__action__t}{policer\-\_\-action\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Policer Action data structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structcl__action__policer__t}{cl\-\_\-action\-\_\-policer\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Classifer action Policer data structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structcl__action__policy__rt__t}{cl\-\_\-action\-\_\-policy\-\_\-rt\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Classifer action Policy Routing data structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structcl__action__t}{cl\-\_\-action\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Classifier Action Data structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structcl__dhcp__match__t}{cl\-\_\-dhcp\-\_\-match\-\_\-t}
+\begin{DoxyCompactList}\small\item\em D\-H\-C\-P match fields. \end{DoxyCompactList}\item 
+struct \hyperlink{structcl__ipaddr__match__t}{cl\-\_\-ipaddr\-\_\-match\-\_\-t}
+\begin{DoxyCompactList}\small\item\em I\-P Address Match fields structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structcl__port__match__t}{cl\-\_\-port\-\_\-match\-\_\-t}
+\begin{DoxyCompactList}\small\item\em T\-C\-P/\-U\-D\-P Port Match fields structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structcl__ip__5tuple__match__t}{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t}
+\begin{DoxyCompactList}\small\item\em 5-\/tuple I\-P Match fields structure \end{DoxyCompactList}\item 
+struct \hyperlink{structcl__macaddr__match__t}{cl\-\_\-macaddr\-\_\-match\-\_\-t}
+\begin{DoxyCompactList}\small\item\em M\-A\-C Address Match fields structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structcl__eth__match__t}{cl\-\_\-eth\-\_\-match\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Ethernet Header Match fields structure -\/ does not include M\-A\-C address fields. \end{DoxyCompactList}\item 
+struct \hyperlink{structcl__ip__match__t}{cl\-\_\-ip\-\_\-match\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Other I\-P header Classifer Match fields structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structcl__tcp__match__t}{cl\-\_\-tcp\-\_\-match\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Other T\-C\-P header Classifer Match fields structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structcl__app__match__t}{cl\-\_\-app\-\_\-match\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Application Match fields structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structcl__match__filter__t}{cl\-\_\-match\-\_\-filter\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Classifer Match fields structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structqos__class__cfg__t}{qos\-\_\-class\-\_\-cfg\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Classifier structure with action and filter combined. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga944555fb1618026c789f367d44f30af6}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga944555fb1618026c789f367d44f30af6}{Q\-O\-S\-\_\-\-A\-L\-\_\-\-C\-L\-\_\-\-O\-K}~0}\label{group__FAPI__QOS__CLASS_ga944555fb1618026c789f367d44f30af6}
+
+\begin{DoxyCompactList}\small\item\em Q\-O\-S\-\_\-\-A\-L\-\_\-\-C\-L\-\_\-\-O\-K. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gad320b1c6f6000c71b43a53d3f249a3c6}{\#define \hyperlink{group__FAPI__QOS__CLASS_gad320b1c6f6000c71b43a53d3f249a3c6}{Q\-O\-S\-\_\-\-A\-L\-\_\-\-C\-L\-\_\-\-E\-R\-R\-O\-R}~-\/1}\label{group__FAPI__QOS__CLASS_gad320b1c6f6000c71b43a53d3f249a3c6}
+
+\begin{DoxyCompactList}\small\item\em Q\-O\-S\-\_\-\-A\-L\-\_\-\-C\-L\-\_\-\-E\-R\-R\-O\-R. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga39f8c99d59e0239bca697d3fb01f7d7e}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga39f8c99d59e0239bca697d3fb01f7d7e}{C\-L\-\_\-\-O\-U\-T\-E\-R\-\_\-\-P\-C\-P\-\_\-\-M\-A\-R\-K}~0x1}\label{group__FAPI__QOS__CLASS_ga39f8c99d59e0239bca697d3fb01f7d7e}
+
+\begin{DoxyCompactList}\small\item\em C\-L remark outer V\-L\-A\-N header's priority. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaf3b63d816a81b4ecbe00738f6403eac1}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaf3b63d816a81b4ecbe00738f6403eac1}{C\-L\-\_\-\-V\-L\-A\-N\-\_\-\-O\-U\-T\-E\-R\-\_\-\-V\-L\-A\-N\-\_\-\-T\-A\-G}~0x2}\label{group__FAPI__QOS__CLASS_gaf3b63d816a81b4ecbe00738f6403eac1}
+
+\begin{DoxyCompactList}\small\item\em C\-L remark outer V\-L\-A\-N header's tag. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gad420a0fbcdfb3fcecbaac5f6dc92b53f}{\#define \hyperlink{group__FAPI__QOS__CLASS_gad420a0fbcdfb3fcecbaac5f6dc92b53f}{C\-L\-\_\-\-V\-L\-A\-N\-\_\-\-O\-U\-T\-E\-R\-\_\-\-V\-L\-A\-N\-\_\-\-U\-N\-T\-A\-G}~0x4}\label{group__FAPI__QOS__CLASS_gad420a0fbcdfb3fcecbaac5f6dc92b53f}
+
+\begin{DoxyCompactList}\small\item\em C\-L have no outer V\-L\-A\-N header. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gac702b6959dde9942bb7702da40d04d93}{\#define \hyperlink{group__FAPI__QOS__CLASS_gac702b6959dde9942bb7702da40d04d93}{C\-L\-\_\-\-V\-L\-A\-N\-\_\-\-I\-N\-N\-E\-R\-\_\-\-P\-C\-P\-\_\-\-M\-A\-R\-K}~0x8}\label{group__FAPI__QOS__CLASS_gac702b6959dde9942bb7702da40d04d93}
+
+\begin{DoxyCompactList}\small\item\em C\-L remark inner V\-L\-A\-N header's priority. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaacfffe406e5cd30cef8ccde173a3c214}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaacfffe406e5cd30cef8ccde173a3c214}{C\-L\-\_\-\-V\-L\-A\-N\-\_\-\-I\-N\-N\-E\-R\-\_\-\-V\-L\-A\-N\-\_\-\-T\-A\-G}~0x10}\label{group__FAPI__QOS__CLASS_gaacfffe406e5cd30cef8ccde173a3c214}
+
+\begin{DoxyCompactList}\small\item\em C\-L remark inner V\-L\-A\-N header's tag. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gae0ae5549de00595583468b138805db24}{\#define \hyperlink{group__FAPI__QOS__CLASS_gae0ae5549de00595583468b138805db24}{C\-L\-\_\-\-V\-L\-A\-N\-\_\-\-I\-N\-N\-E\-R\-\_\-\-V\-L\-A\-N\-\_\-\-U\-N\-T\-A\-G}~0x20}\label{group__FAPI__QOS__CLASS_gae0ae5549de00595583468b138805db24}
+
+\begin{DoxyCompactList}\small\item\em C\-L have no inner V\-L\-A\-N header. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__FAPI__QOS__CLASS_ga49bc0c5eb89e9a504cf3a6635beb7685}{C\-L\-\_\-\-P\-O\-L\-I\-C\-E\-R\-\_\-\-A\-C\-T\-I\-O\-N\-\_\-\-N\-U\-L\-L}~0x1
+\begin{DoxyCompactList}\small\item\em C\-L Policer Actions. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gacbdea39cbf4ab5d35d49219652c30987}{\#define \hyperlink{group__FAPI__QOS__CLASS_gacbdea39cbf4ab5d35d49219652c30987}{M\-A\-X\-\_\-\-Q\-O\-S\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}~128}\label{group__FAPI__QOS__CLASS_gacbdea39cbf4ab5d35d49219652c30987}
+
+\begin{DoxyCompactList}\small\item\em Maximum name length. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gab08625a5eeb8582d69b40054201d9116}{\#define \hyperlink{group__FAPI__QOS__CLASS_gab08625a5eeb8582d69b40054201d9116}{M\-A\-X\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-I\-D\-\_\-\-L\-E\-N}~128}\label{group__FAPI__QOS__CLASS_gab08625a5eeb8582d69b40054201d9116}
+
+\begin{DoxyCompactList}\small\item\em Maximum vendor id length. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga2f264f80b185aa3d6b10d73051b5ca33}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga2f264f80b185aa3d6b10d73051b5ca33}{M\-A\-X\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-I\-D\-\_\-\-V6\-\_\-\-L\-E\-N}~128}\label{group__FAPI__QOS__CLASS_ga2f264f80b185aa3d6b10d73051b5ca33}
+
+\begin{DoxyCompactList}\small\item\em Maximum vendor id V6 length. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaff8356674e70c7efac546eee41ed1651}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaff8356674e70c7efac546eee41ed1651}{M\-A\-X\-\_\-\-C\-L\-I\-E\-N\-T\-I\-D\-\_\-\-L\-E\-N}~128}\label{group__FAPI__QOS__CLASS_gaff8356674e70c7efac546eee41ed1651}
+
+\begin{DoxyCompactList}\small\item\em Maximum client id length. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga668aa676079b70d11fd2f1ef9044dcfb}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga668aa676079b70d11fd2f1ef9044dcfb}{M\-A\-X\-\_\-\-U\-S\-E\-R\-\_\-\-C\-L\-A\-S\-S\-I\-D\-\_\-\-L\-E\-N}~128}\label{group__FAPI__QOS__CLASS_ga668aa676079b70d11fd2f1ef9044dcfb}
+
+\begin{DoxyCompactList}\small\item\em Maximum user class id length. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga490480957ae3800d1b1af04261aea96f}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga490480957ae3800d1b1af04261aea96f}{M\-A\-X\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-I\-N\-F\-O\-\_\-\-L\-E\-N}~128}\label{group__FAPI__QOS__CLASS_ga490480957ae3800d1b1af04261aea96f}
+
+\begin{DoxyCompactList}\small\item\em Maximum vendor info length. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaaee7f1d8ba9da4f019bf0068103e6672}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaaee7f1d8ba9da4f019bf0068103e6672}{M\-A\-X\-\_\-\-M\-A\-C\-A\-D\-D\-R\-\_\-\-L\-E\-N}~32}\label{group__FAPI__QOS__CLASS_gaaee7f1d8ba9da4f019bf0068103e6672}
+
+\begin{DoxyCompactList}\small\item\em Maximum M\-A\-C address length. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga34277a18827d255a596f886d8a9f201b}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga34277a18827d255a596f886d8a9f201b}{M\-A\-X\-\_\-\-C\-L\-\_\-\-N\-A\-M\-E\-\_\-\-L\-E\-N}~32}\label{group__FAPI__QOS__CLASS_ga34277a18827d255a596f886d8a9f201b}
+
+\begin{DoxyCompactList}\small\item\em Maximum classifier name length. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga078fa167f6c71720c8ca3158564002ae}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga078fa167f6c71720c8ca3158564002ae}{M\-A\-X\-\_\-\-C\-L\-\_\-\-A\-P\-\_\-\-N\-A\-M\-E}~32}\label{group__FAPI__QOS__CLASS_ga078fa167f6c71720c8ca3158564002ae}
+
+\begin{DoxyCompactList}\small\item\em Maximum classifier A\-P name. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga684323e1ca3c7464366255d8ab239c18}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga684323e1ca3c7464366255d8ab239c18}{I\-P\-\_\-\-A\-D\-D\-R\-S\-T\-R\-L\-E\-N}~48}\label{group__FAPI__QOS__CLASS_ga684323e1ca3c7464366255d8ab239c18}
+
+\begin{DoxyCompactList}\small\item\em Maximum length of I\-P address in string form. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaac7b0ddf6094639bb919ac794ac2d330}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaac7b0ddf6094639bb919ac794ac2d330}{C\-L\-\_\-\-F\-I\-L\-T\-E\-R\-\_\-\-A\-D\-D}~0x00000001}\label{group__FAPI__QOS__CLASS_gaac7b0ddf6094639bb919ac794ac2d330}
+
+\begin{DoxyCompactList}\small\item\em Classifier add filter. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gafdfbe09ca8caf42dbc84ed653aeaac60}{\#define \hyperlink{group__FAPI__QOS__CLASS_gafdfbe09ca8caf42dbc84ed653aeaac60}{C\-L\-\_\-\-F\-I\-L\-T\-E\-R\-\_\-\-M\-O\-D\-I\-F\-Y}~0x00000002}\label{group__FAPI__QOS__CLASS_gafdfbe09ca8caf42dbc84ed653aeaac60}
+
+\begin{DoxyCompactList}\small\item\em Classifier modify filter. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gac84c68beb8c3aaa01c9b1c0ac7b705ef}{\#define \hyperlink{group__FAPI__QOS__CLASS_gac84c68beb8c3aaa01c9b1c0ac7b705ef}{C\-L\-\_\-\-F\-I\-L\-T\-E\-R\-\_\-\-D\-E\-L\-E\-T\-E}~0x00000004}\label{group__FAPI__QOS__CLASS_gac84c68beb8c3aaa01c9b1c0ac7b705ef}
+
+\begin{DoxyCompactList}\small\item\em Classifier delete filter. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga5e8a126e56a23d62244de2060d85af26}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga5e8a126e56a23d62244de2060d85af26}{C\-L\-\_\-\-F\-I\-L\-T\-E\-R\-\_\-\-D\-E\-L\-E\-T\-E\-\_\-\-E\-X\-A\-C\-T}~0x00000008}\label{group__FAPI__QOS__CLASS_ga5e8a126e56a23d62244de2060d85af26}
+
+\begin{DoxyCompactList}\small\item\em Classifier delete based on exact match filter. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gac47fb4e6357cbd771dae481fe0857c7f}{\#define \hyperlink{group__FAPI__QOS__CLASS_gac47fb4e6357cbd771dae481fe0857c7f}{C\-L\-\_\-\-F\-I\-L\-T\-E\-R\-\_\-\-G\-E\-T}~0x00000010}\label{group__FAPI__QOS__CLASS_gac47fb4e6357cbd771dae481fe0857c7f}
+
+\begin{DoxyCompactList}\small\item\em Classifier get filter. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga185fa2bd20155e1e60216d6779fb7f89}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga185fa2bd20155e1e60216d6779fb7f89}{C\-L\-\_\-\-F\-I\-L\-T\-E\-R\-\_\-\-L2\-L}~0x00000020}\label{group__FAPI__QOS__CLASS_ga185fa2bd20155e1e60216d6779fb7f89}
+
+\begin{DoxyCompactList}\small\item\em Classifier filter for L\-A\-N to L\-A\-N traffic. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga06379cb42607da89f88b00e60eb0bcdc}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga06379cb42607da89f88b00e60eb0bcdc}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-F\-I\-L\-T\-E\-R\-\_\-\-N\-A\-M\-E}~(1 $<$$<$ 0)}\label{group__FAPI__QOS__CLASS_ga06379cb42607da89f88b00e60eb0bcdc}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies classifier name set/unset in classifier-\/$>$filter structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga31069195eed72ec20aedae008b0a16d1}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga31069195eed72ec20aedae008b0a16d1}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-O\-R\-D\-E\-R\-\_\-\-N\-U\-M}~(1 $<$$<$ 1)}\label{group__FAPI__QOS__CLASS_ga31069195eed72ec20aedae008b0a16d1}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies classifier name set/unset in classifier-\/$>$filter structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga3b34c97ad93e5072f0cae73fee6908e0}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga3b34c97ad93e5072f0cae73fee6908e0}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-R\-C\-\_\-\-D\-H\-C\-P}~(1 $<$$<$ 2)}\label{group__FAPI__QOS__CLASS_ga3b34c97ad93e5072f0cae73fee6908e0}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies source D\-H\-C\-P options set/unset in classifier-\/$>$filter structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga0028efb302f028380111f918050cad46}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga0028efb302f028380111f918050cad46}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-R\-C\-\_\-\-D\-H\-C\-P\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-C\-L\-A\-S\-S\-\_\-\-I\-D}~(1 $<$$<$ 0)}\label{group__FAPI__QOS__CLASS_ga0028efb302f028380111f918050cad46}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies vendor field set/unset in classifier-\/$>$filter-\/$>$source D\-H\-C\-P structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga3f7f4f7a6ee13310e72b3754d5997c56}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga3f7f4f7a6ee13310e72b3754d5997c56}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-R\-C\-\_\-\-D\-H\-C\-P\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-C\-L\-A\-S\-S\-\_\-\-I\-D\-\_\-\-M\-O\-D\-E}~(1 $<$$<$ 1)}\label{group__FAPI__QOS__CLASS_ga3f7f4f7a6ee13310e72b3754d5997c56}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies vendor class mode field set/unset in classifier-\/$>$filter-\/$>$source D\-H\-C\-P structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaa26bc18556806690c47a2bc28d5bac3e}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaa26bc18556806690c47a2bc28d5bac3e}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-R\-C\-\_\-\-D\-H\-C\-P\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-C\-L\-A\-S\-S\-\_\-\-I\-D\-\_\-\-V6}~(1 $<$$<$ 2)}\label{group__FAPI__QOS__CLASS_gaa26bc18556806690c47a2bc28d5bac3e}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies vendor class field for I\-Pv6 set/unset in classifier-\/$>$filter-\/$>$source D\-H\-C\-P structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga0aaa52fa7cde16551a30df124ef509ac}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga0aaa52fa7cde16551a30df124ef509ac}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-R\-C\-\_\-\-D\-H\-C\-P\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-I\-D}~(1 $<$$<$ 3)}\label{group__FAPI__QOS__CLASS_ga0aaa52fa7cde16551a30df124ef509ac}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies client field set/unset in classifier-\/$>$filter-\/$>$source D\-H\-C\-P structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaf80d9e2de58e9144d4f429d8283f77c7}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaf80d9e2de58e9144d4f429d8283f77c7}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-R\-C\-\_\-\-D\-H\-C\-P\-\_\-\-U\-S\-E\-R\-\_\-\-C\-L\-A\-S\-S\-\_\-\-I\-D}~(1 $<$$<$ 4)}\label{group__FAPI__QOS__CLASS_gaf80d9e2de58e9144d4f429d8283f77c7}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies user class field set/unset in classifier-\/$>$filter-\/$>$source D\-H\-C\-P structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga44e475c1b6e51a6d395d2249252ad1f0}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga44e475c1b6e51a6d395d2249252ad1f0}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-R\-C\-\_\-\-D\-H\-C\-P\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-S\-P\-E\-C\-I\-F\-I\-C\-\_\-\-I\-N\-F\-O}~(1 $<$$<$ 5)}\label{group__FAPI__QOS__CLASS_ga44e475c1b6e51a6d395d2249252ad1f0}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies vendor specific field set/unset in classifier-\/$>$filter-\/$>$source D\-H\-C\-P structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gacc4d7564ff8092c59fc651f43f91a9c5}{\#define \hyperlink{group__FAPI__QOS__CLASS_gacc4d7564ff8092c59fc651f43f91a9c5}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-D\-S\-T\-\_\-\-D\-H\-C\-P}~(1 $<$$<$ 3)}\label{group__FAPI__QOS__CLASS_gacc4d7564ff8092c59fc651f43f91a9c5}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies destination D\-H\-C\-P options set/unset in classifier-\/$>$filter structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaa7afc34341b4479f37e8ca61d8b4ce04}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaa7afc34341b4479f37e8ca61d8b4ce04}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-D\-S\-T\-\_\-\-D\-H\-C\-P\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-C\-L\-A\-S\-S\-\_\-\-I\-D}~(1 $<$$<$ 0)}\label{group__FAPI__QOS__CLASS_gaa7afc34341b4479f37e8ca61d8b4ce04}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies vendor field set/unset in classifier-\/$>$filter-\/$>$destination D\-H\-C\-P structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gae2fbe779d7e55ee5a1e393de69300efe}{\#define \hyperlink{group__FAPI__QOS__CLASS_gae2fbe779d7e55ee5a1e393de69300efe}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-D\-S\-T\-\_\-\-D\-H\-C\-P\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-C\-L\-A\-S\-S\-\_\-\-I\-D\-\_\-\-M\-O\-D\-E}~(1 $<$$<$ 1)}\label{group__FAPI__QOS__CLASS_gae2fbe779d7e55ee5a1e393de69300efe}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies vendor class mode field set/unset in classifier-\/$>$filter-\/$>$destination D\-H\-C\-P structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga98fc67134bf609f750fe5d8dc3bfb211}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga98fc67134bf609f750fe5d8dc3bfb211}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-D\-S\-T\-\_\-\-D\-H\-C\-P\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-C\-L\-A\-S\-S\-\_\-\-I\-D\-\_\-\-V6}~(1 $<$$<$ 2)}\label{group__FAPI__QOS__CLASS_ga98fc67134bf609f750fe5d8dc3bfb211}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies vendor class field for I\-Pv6 set/unset in classifier-\/$>$filter-\/$>$destination D\-H\-C\-P structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gab53254a13641816f7df02e24bb5c2190}{\#define \hyperlink{group__FAPI__QOS__CLASS_gab53254a13641816f7df02e24bb5c2190}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-D\-S\-T\-\_\-\-D\-H\-C\-P\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-I\-D}~(1 $<$$<$ 3)}\label{group__FAPI__QOS__CLASS_gab53254a13641816f7df02e24bb5c2190}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies client field set/unset in classifier-\/$>$filter-\/$>$destination D\-H\-C\-P structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gab9727303c2c9296c4974bd50a1cf8021}{\#define \hyperlink{group__FAPI__QOS__CLASS_gab9727303c2c9296c4974bd50a1cf8021}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-D\-S\-T\-\_\-\-D\-H\-C\-P\-\_\-\-U\-S\-E\-R\-\_\-\-C\-L\-A\-S\-S\-\_\-\-I\-D}~(1 $<$$<$ 4)}\label{group__FAPI__QOS__CLASS_gab9727303c2c9296c4974bd50a1cf8021}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies user class field set/unset in classifier-\/$>$filter-\/$>$destination D\-H\-C\-P structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaf5982f892057e0893c6c3b414f4e26c8}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaf5982f892057e0893c6c3b414f4e26c8}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-D\-S\-T\-\_\-\-D\-H\-C\-P\-\_\-\-V\-E\-N\-D\-O\-R\-\_\-\-S\-P\-E\-C\-I\-F\-I\-C\-\_\-\-I\-N\-F\-O}~(1 $<$$<$ 5)}\label{group__FAPI__QOS__CLASS_gaf5982f892057e0893c6c3b414f4e26c8}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies vendor specific field set/unset in classifier-\/$>$filter-\/$>$destination D\-H\-C\-P structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaa41124ad13d035b5b4a60e2b206d983d}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaa41124ad13d035b5b4a60e2b206d983d}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-R\-X\-\_\-\-I\-F}~(1 $<$$<$ 4)}\label{group__FAPI__QOS__CLASS_gaa41124ad13d035b5b4a60e2b206d983d}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies source interface set/unset in classifier-\/$>$filter structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaa5014aaa57f7bcd2c4a79d91c6f00398}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaa5014aaa57f7bcd2c4a79d91c6f00398}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-X\-\_\-\-I\-F}~(1 $<$$<$ 5)}\label{group__FAPI__QOS__CLASS_gaa5014aaa57f7bcd2c4a79d91c6f00398}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies destination interface set/unset in classifier-\/$>$filter structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga42a1927852fd76fed3ebef06518f0c2b}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga42a1927852fd76fed3ebef06518f0c2b}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-R\-C\-\_\-\-M\-A\-C}~(1 $<$$<$ 6)}\label{group__FAPI__QOS__CLASS_ga42a1927852fd76fed3ebef06518f0c2b}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies source M\-A\-C address set/unset in classifier-\/$>$filter structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga81e277579480cd167a5f612873958a64}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga81e277579480cd167a5f612873958a64}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-R\-C\-\_\-\-M\-A\-C\-\_\-\-A\-D\-D\-R\-S}~(1 $<$$<$ 0)}\label{group__FAPI__QOS__CLASS_ga81e277579480cd167a5f612873958a64}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies M\-A\-C address set/unset in classifier-\/$>$filter-\/$>$source M\-A\-C structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaee00e97e2fcfdeb266ecb698829d665d}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaee00e97e2fcfdeb266ecb698829d665d}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-R\-C\-\_\-\-M\-A\-C\-\_\-\-M\-A\-S\-K}~(1 $<$$<$ 1)}\label{group__FAPI__QOS__CLASS_gaee00e97e2fcfdeb266ecb698829d665d}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies M\-A\-C address mask set/unset in classifier-\/$>$filter-\/$>$source M\-A\-C structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gadeac463ec45444644c63a7e5ce11157b}{\#define \hyperlink{group__FAPI__QOS__CLASS_gadeac463ec45444644c63a7e5ce11157b}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-D\-S\-T\-\_\-\-M\-A\-C}~(1 $<$$<$ 7)}\label{group__FAPI__QOS__CLASS_gadeac463ec45444644c63a7e5ce11157b}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies destination M\-A\-C address set/unset in classifier-\/$>$filter structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga1bc9053d7aedef717825617895133a45}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga1bc9053d7aedef717825617895133a45}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-D\-S\-T\-\_\-\-M\-A\-C\-\_\-\-A\-D\-D\-R\-S}~(1 $<$$<$ 0)}\label{group__FAPI__QOS__CLASS_ga1bc9053d7aedef717825617895133a45}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies M\-A\-C address set/unset in classifier-\/$>$filter-\/$>$destination M\-A\-C structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga62bbf91589988695683d25cbfcd76308}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga62bbf91589988695683d25cbfcd76308}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-D\-S\-T\-\_\-\-M\-A\-C\-\_\-\-M\-A\-S\-K}~(1 $<$$<$ 1)}\label{group__FAPI__QOS__CLASS_ga62bbf91589988695683d25cbfcd76308}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies M\-A\-C address mask set/unset in classifier-\/$>$filter-\/$>$destination M\-A\-C structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaa023578b2f6ba2c92206f9a0c956800e}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaa023578b2f6ba2c92206f9a0c956800e}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-E\-T\-H\-\_\-\-H\-D\-R}~(1 $<$$<$ 8)}\label{group__FAPI__QOS__CLASS_gaa023578b2f6ba2c92206f9a0c956800e}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies ethernet header options set/unset in classifier-\/$>$filter structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga3a634002ae24673cab216f1a95fb0358}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga3a634002ae24673cab216f1a95fb0358}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-E\-T\-H\-\_\-\-H\-D\-R\-\_\-\-T\-Y\-P\-E}~(1 $<$$<$ 0)}\label{group__FAPI__QOS__CLASS_ga3a634002ae24673cab216f1a95fb0358}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies type field set/unset in classifier-\/$>$filter-\/$>$ethernet header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga306a9085f7f3faba2b6b75cdcf3243a8}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga306a9085f7f3faba2b6b75cdcf3243a8}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-E\-T\-H\-\_\-\-H\-D\-R\-\_\-\-D\-S\-A\-P}~(1 $<$$<$ 1)}\label{group__FAPI__QOS__CLASS_ga306a9085f7f3faba2b6b75cdcf3243a8}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies type field set/unset in classifier-\/$>$filter-\/$>$ethernet header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gad097dc1979245aeaab1e242f5c5c34ee}{\#define \hyperlink{group__FAPI__QOS__CLASS_gad097dc1979245aeaab1e242f5c5c34ee}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-E\-T\-H\-\_\-\-H\-D\-R\-\_\-\-S\-S\-A\-P}~(1 $<$$<$ 2)}\label{group__FAPI__QOS__CLASS_gad097dc1979245aeaab1e242f5c5c34ee}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies type field set/unset in classifier-\/$>$filter-\/$>$ethernet header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaf021a287d12fba2a2f1d77204c297748}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaf021a287d12fba2a2f1d77204c297748}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-E\-T\-H\-\_\-\-H\-D\-R\-\_\-\-L\-L\-C\-\_\-\-C\-O\-N\-T\-R\-O\-L}~(1 $<$$<$ 3)}\label{group__FAPI__QOS__CLASS_gaf021a287d12fba2a2f1d77204c297748}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies type field set/unset in classifier-\/$>$filter-\/$>$ethernet header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga76f64d19269843dfa7c964b9087b220c}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga76f64d19269843dfa7c964b9087b220c}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-E\-T\-H\-\_\-\-H\-D\-R\-\_\-\-O\-U\-I}~(1 $<$$<$ 4)}\label{group__FAPI__QOS__CLASS_ga76f64d19269843dfa7c964b9087b220c}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies type field set/unset in classifier-\/$>$filter-\/$>$ethernet header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga06465865917637ebdc92b0d6aeef562a}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga06465865917637ebdc92b0d6aeef562a}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-E\-T\-H\-\_\-\-H\-D\-R\-\_\-\-P\-R\-I\-O}~(1 $<$$<$ 5)}\label{group__FAPI__QOS__CLASS_ga06465865917637ebdc92b0d6aeef562a}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies outer header header's V\-L\-A\-N priority field set/unset in classifier-\/$>$filter-\/$>$ethernet header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga3323c094841c5190b021c8948689fc96}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga3323c094841c5190b021c8948689fc96}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-E\-T\-H\-\_\-\-H\-D\-R\-\_\-\-V\-L\-A\-N\-I\-D}~(1 $<$$<$ 6)}\label{group__FAPI__QOS__CLASS_ga3323c094841c5190b021c8948689fc96}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies outer header's V\-L\-A\-N Id field set/unset in classifier-\/$>$filter-\/$>$ethernet header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaa817956ab230bff211f3fcdc230aa7bb}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaa817956ab230bff211f3fcdc230aa7bb}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-E\-T\-H\-\_\-\-H\-D\-R\-\_\-\-V\-L\-A\-N\-\_\-\-D\-E\-I}~(1 $<$$<$ 7)}\label{group__FAPI__QOS__CLASS_gaa817956ab230bff211f3fcdc230aa7bb}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies outer header's D\-E\-I field set/unset in classifier-\/$>$filter-\/$>$ethernet header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaea94f73aa52b7240d76ba7979e8f0908}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaea94f73aa52b7240d76ba7979e8f0908}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-E\-T\-H\-\_\-\-H\-D\-R\-\_\-\-I\-N\-N\-E\-R\-\_\-\-P\-R\-I\-O}~(1 $<$$<$ 8)}\label{group__FAPI__QOS__CLASS_gaea94f73aa52b7240d76ba7979e8f0908}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies inner header's V\-L\-A\-N priority field set/unset in classifier-\/$>$filter-\/$>$ethernet header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga290fa0019b1ff3a1f0bf72860538303b}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga290fa0019b1ff3a1f0bf72860538303b}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-E\-T\-H\-\_\-\-H\-D\-R\-\_\-\-I\-N\-N\-E\-R\-\_\-\-V\-L\-A\-N\-I\-D}~(1 $<$$<$ 9)}\label{group__FAPI__QOS__CLASS_ga290fa0019b1ff3a1f0bf72860538303b}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies inner header's V\-L\-A\-N Id field set/unset in classifier-\/$>$filter-\/$>$ethernet header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga084af8664bb692d9d459258f1aebf7f5}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga084af8664bb692d9d459258f1aebf7f5}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-E\-T\-H\-\_\-\-H\-D\-R\-\_\-\-I\-N\-N\-E\-R\-\_\-\-V\-L\-A\-N\-\_\-\-D\-E\-I}~(1 $<$$<$ 10)}\label{group__FAPI__QOS__CLASS_ga084af8664bb692d9d459258f1aebf7f5}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies inner header's V\-L\-A\-N D\-E\-I field set/unset in classifier-\/$>$filter-\/$>$ethernet header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga9de8f5051b3801ac096224790d765a07}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga9de8f5051b3801ac096224790d765a07}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-O\-U\-T\-E\-R\-\_\-\-I\-P}~(1 $<$$<$ 9)}\label{group__FAPI__QOS__CLASS_ga9de8f5051b3801ac096224790d765a07}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies outer I\-P header options set/unset in classifier-\/$>$filter structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga5b5e7049c7b80d793cf368ae3a7e1cc3}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga5b5e7049c7b80d793cf368ae3a7e1cc3}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-O\-U\-T\-E\-R\-\_\-\-I\-P\-\_\-\-S\-R\-C\-\_\-\-I\-P}~(1 $<$$<$ 0)}\label{group__FAPI__QOS__CLASS_ga5b5e7049c7b80d793cf368ae3a7e1cc3}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies source I\-P address field set/unset in classifier-\/$>$filter-\/$>$outer I\-P header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga25cff77fe5bd05d915622e881c839fc3}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga25cff77fe5bd05d915622e881c839fc3}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-O\-U\-T\-E\-R\-\_\-\-I\-P\-\_\-\-D\-S\-T\-\_\-\-I\-P}~(1 $<$$<$ 1)}\label{group__FAPI__QOS__CLASS_ga25cff77fe5bd05d915622e881c839fc3}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies destination I\-P address field set/unset in classifier-\/$>$filter-\/$>$outer I\-P header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gab1636333a476b82f43d834e25432382e}{\#define \hyperlink{group__FAPI__QOS__CLASS_gab1636333a476b82f43d834e25432382e}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-O\-U\-T\-E\-R\-\_\-\-I\-P\-\_\-\-S\-R\-C\-\_\-\-P\-O\-R\-T}~(1 $<$$<$ 2)}\label{group__FAPI__QOS__CLASS_gab1636333a476b82f43d834e25432382e}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies source port field set/unset in classifier-\/$>$filter-\/$>$outer I\-P header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gad605735a2ef44435aef61a57221ced3c}{\#define \hyperlink{group__FAPI__QOS__CLASS_gad605735a2ef44435aef61a57221ced3c}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-O\-U\-T\-E\-R\-\_\-\-I\-P\-\_\-\-D\-S\-T\-\_\-\-P\-O\-R\-T}~(1 $<$$<$ 3)}\label{group__FAPI__QOS__CLASS_gad605735a2ef44435aef61a57221ced3c}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies destination port field set/unset in classifier-\/$>$filter-\/$>$outer I\-P header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga8b476d0bf1917ff8fbc6e13a43c38662}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga8b476d0bf1917ff8fbc6e13a43c38662}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-O\-U\-T\-E\-R\-\_\-\-I\-P\-\_\-\-P\-R\-O\-T\-O}~(1 $<$$<$ 4)}\label{group__FAPI__QOS__CLASS_ga8b476d0bf1917ff8fbc6e13a43c38662}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies protocol field set/unset in classifier-\/$>$filter-\/$>$outer I\-P header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gad6d817b1390cdd0c968023a1e42e4dda}{\#define \hyperlink{group__FAPI__QOS__CLASS_gad6d817b1390cdd0c968023a1e42e4dda}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-I\-N\-N\-E\-R\-\_\-\-I\-P}~(1 $<$$<$ 10)}\label{group__FAPI__QOS__CLASS_gad6d817b1390cdd0c968023a1e42e4dda}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies inner I\-P header options set/unset in classifier-\/$>$filter structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga5fd6dd05766ea3c6ba0004e068533570}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga5fd6dd05766ea3c6ba0004e068533570}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-I\-N\-N\-E\-R\-\_\-\-I\-P\-\_\-\-S\-R\-C\-\_\-\-I\-P}~(1 $<$$<$ 0)}\label{group__FAPI__QOS__CLASS_ga5fd6dd05766ea3c6ba0004e068533570}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies source I\-P address field set/unset in classifier-\/$>$filter-\/$>$innter I\-P header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaea427f0d65c170b6ff19c2853f4103cc}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaea427f0d65c170b6ff19c2853f4103cc}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-I\-N\-N\-E\-R\-\_\-\-I\-P\-\_\-\-D\-S\-T\-\_\-\-I\-P}~(1 $<$$<$ 1)}\label{group__FAPI__QOS__CLASS_gaea427f0d65c170b6ff19c2853f4103cc}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies destination I\-P address field set/unset in classifier-\/$>$filter-\/$>$inner I\-P header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga5ba18b900992bae28b4d17deafcb477c}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga5ba18b900992bae28b4d17deafcb477c}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-I\-N\-N\-E\-R\-\_\-\-I\-P\-\_\-\-S\-R\-C\-\_\-\-P\-O\-R\-T}~(1 $<$$<$ 2)}\label{group__FAPI__QOS__CLASS_ga5ba18b900992bae28b4d17deafcb477c}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies source port field set/unset in classifier-\/$>$filter-\/$>$inner I\-P header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaf4e1e579a91bb86fdd5957b7b12c8874}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaf4e1e579a91bb86fdd5957b7b12c8874}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-I\-N\-N\-E\-R\-\_\-\-I\-P\-\_\-\-D\-S\-T\-\_\-\-P\-O\-R\-T}~(1 $<$$<$ 3)}\label{group__FAPI__QOS__CLASS_gaf4e1e579a91bb86fdd5957b7b12c8874}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies destination port field set/unset in classifier-\/$>$filter-\/$>$inner I\-P header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga8dc01954dd284e27b4d88ba16f01a858}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga8dc01954dd284e27b4d88ba16f01a858}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-I\-N\-N\-E\-R\-\_\-\-I\-P\-\_\-\-P\-R\-O\-T\-O}~(1 $<$$<$ 4)}\label{group__FAPI__QOS__CLASS_ga8dc01954dd284e27b4d88ba16f01a858}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies protocol field set/unset in classifier-\/$>$filter-\/$>$inner I\-P header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga4bb55299d7f6d2c30e22ad0b60ed6414}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga4bb55299d7f6d2c30e22ad0b60ed6414}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-I\-P\-\_\-\-H\-D\-R}~(1 $<$$<$ 11)}\label{group__FAPI__QOS__CLASS_ga4bb55299d7f6d2c30e22ad0b60ed6414}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies generic I\-P header fields set/unset in classifier-\/$>$filter structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga1eb07a962deae3b21034729a7849a214}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga1eb07a962deae3b21034729a7849a214}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-I\-P\-\_\-\-H\-D\-R\-\_\-\-L\-E\-N\-\_\-\-M\-I\-N}~(1 $<$$<$ 0)}\label{group__FAPI__QOS__CLASS_ga1eb07a962deae3b21034729a7849a214}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies length field set/unset in classifier-\/$>$filter-\/$>$generic I\-P header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga7d0581c861e827ee81124e0d0cb210c1}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga7d0581c861e827ee81124e0d0cb210c1}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-I\-P\-\_\-\-H\-D\-R\-\_\-\-L\-E\-N\-\_\-\-M\-A\-X}~(1 $<$$<$ 1)}\label{group__FAPI__QOS__CLASS_ga7d0581c861e827ee81124e0d0cb210c1}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies maximum length field set/unset in classifier-\/$>$filter-\/$>$generic I\-P header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga5af2e483d1bb74431d91f985d547e5ca}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga5af2e483d1bb74431d91f985d547e5ca}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-I\-P\-\_\-\-H\-D\-R\-\_\-\-D\-S\-C\-P}~(1 $<$$<$ 2)}\label{group__FAPI__QOS__CLASS_ga5af2e483d1bb74431d91f985d547e5ca}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies D\-S\-C\-P field set/unset in classifier-\/$>$filter-\/$>$generic I\-P header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gacf8a4fb4dc4dcda1832c1bd55ffbc602}{\#define \hyperlink{group__FAPI__QOS__CLASS_gacf8a4fb4dc4dcda1832c1bd55ffbc602}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-C\-P\-\_\-\-H\-D\-R}~(1 $<$$<$ 12)}\label{group__FAPI__QOS__CLASS_gacf8a4fb4dc4dcda1832c1bd55ffbc602}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies T\-C\-P header fields set/unset in classifier-\/$>$filter structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga687efbfecca4a115b554080f924dd061}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga687efbfecca4a115b554080f924dd061}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-C\-P\-\_\-\-H\-D\-R\-\_\-\-A\-C\-K}~(1 $<$$<$ 0)}\label{group__FAPI__QOS__CLASS_ga687efbfecca4a115b554080f924dd061}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies A\-C\-K flag field set/unset in classifier-\/$>$filter-\/$>$T\-C\-P header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gafc2f5f449c1d381846b0e241d7da1fec}{\#define \hyperlink{group__FAPI__QOS__CLASS_gafc2f5f449c1d381846b0e241d7da1fec}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-C\-P\-\_\-\-H\-D\-R\-\_\-\-S\-Y\-N}~(1 $<$$<$ 1)}\label{group__FAPI__QOS__CLASS_gafc2f5f449c1d381846b0e241d7da1fec}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies S\-Y\-N flag field set/unset in classifier-\/$>$filter-\/$>$T\-C\-P header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga181ee44f13f002b1dfc64b8ec8a6a6a1}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga181ee44f13f002b1dfc64b8ec8a6a6a1}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-C\-P\-\_\-\-H\-D\-R\-\_\-\-F\-I\-N}~(1 $<$$<$ 2)}\label{group__FAPI__QOS__CLASS_ga181ee44f13f002b1dfc64b8ec8a6a6a1}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies F\-I\-N flag field set/unset in classifier-\/$>$filter-\/$>$T\-C\-P header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaee769ff0e4ed6f075f9460c5db38f584}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaee769ff0e4ed6f075f9460c5db38f584}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-C\-P\-\_\-\-H\-D\-R\-\_\-\-R\-S\-T}~(1 $<$$<$ 3)}\label{group__FAPI__QOS__CLASS_gaee769ff0e4ed6f075f9460c5db38f584}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies R\-S\-T flag field set/unset in classifier-\/$>$filter-\/$>$T\-C\-P header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga15b580e26fcf1b37d7f8fba283801d09}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga15b580e26fcf1b37d7f8fba283801d09}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-C\-P\-\_\-\-H\-D\-R\-\_\-\-U\-R\-G}~(1 $<$$<$ 4)}\label{group__FAPI__QOS__CLASS_ga15b580e26fcf1b37d7f8fba283801d09}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies U\-R\-G flag field set/unset in classifier-\/$>$filter-\/$>$T\-C\-P header structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga6789c1000de15696d7e77f558f139bc5}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga6789c1000de15696d7e77f558f139bc5}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-P\-P}~(1 $<$$<$ 13)}\label{group__FAPI__QOS__CLASS_ga6789c1000de15696d7e77f558f139bc5}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies application protocol fields set/unset in classifier-\/$>$filter structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaa368194c8a40c03f937855657fdddd06}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaa368194c8a40c03f937855657fdddd06}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-P\-P\-\_\-\-I\-D}~(1 $<$$<$ 0)}\label{group__FAPI__QOS__CLASS_gaa368194c8a40c03f937855657fdddd06}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies Id set/unset in classifier-\/$>$filter-\/$>$application structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga72340257f9a1ba50df18c1b3de859e32}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga72340257f9a1ba50df18c1b3de859e32}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-S\-U\-B\-P\-R\-O\-T\-O\-\_\-\-I\-D}~(1 $<$$<$ 1)}\label{group__FAPI__QOS__CLASS_ga72340257f9a1ba50df18c1b3de859e32}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies sub-\/protocol Id set/unset in classifier-\/$>$filter-\/$>$application structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gac6e642aff7a8cd5de9f5fd71655f89f5}{\#define \hyperlink{group__FAPI__QOS__CLASS_gac6e642aff7a8cd5de9f5fd71655f89f5}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T}~(1 $<$$<$ 14)}\label{group__FAPI__QOS__CLASS_gac6e642aff7a8cd5de9f5fd71655f89f5}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies action fields set/unset in classifier-\/$>$filter structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaeb169b217ea7050e6231b2d4f5991fbf}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaeb169b217ea7050e6231b2d4f5991fbf}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-T\-C}~(1 $<$$<$ 0)}\label{group__FAPI__QOS__CLASS_gaeb169b217ea7050e6231b2d4f5991fbf}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies traffic class field set/unset in classifier-\/$>$action structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga4420d723c0be6b77b802c13ad30e7d8e}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga4420d723c0be6b77b802c13ad30e7d8e}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-D\-R\-O\-P}~(1 $<$$<$ 1)}\label{group__FAPI__QOS__CLASS_ga4420d723c0be6b77b802c13ad30e7d8e}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies drop field set/unset in classifier-\/$>$filter-\/$>$action structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga82e1bba9306ae8610e232bdf1fe8a65b}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga82e1bba9306ae8610e232bdf1fe8a65b}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-D\-S\-C\-P}~(1 $<$$<$ 2)}\label{group__FAPI__QOS__CLASS_ga82e1bba9306ae8610e232bdf1fe8a65b}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies D\-S\-C\-P remarking field set/unset in classifier-\/$>$action structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaa27a5868ebd8f7bb2fc9a51bd966aeb4}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaa27a5868ebd8f7bb2fc9a51bd966aeb4}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-V\-L\-A\-N}~(1 $<$$<$ 15)}\label{group__FAPI__QOS__CLASS_gaa27a5868ebd8f7bb2fc9a51bd966aeb4}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies V\-L\-A\-N action fields set/unset in classifier-\/$>$action structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaf0dc3807b76fe3deec00cd30970f6b52}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaf0dc3807b76fe3deec00cd30970f6b52}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-V\-L\-A\-N\-\_\-\-P\-C\-P}~(1 $<$$<$ 0)}\label{group__FAPI__QOS__CLASS_gaf0dc3807b76fe3deec00cd30970f6b52}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies outer header's V\-L\-A\-N priority remarking field set/unset in classifier-\/$>$action-\/$>$vlan structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga6780ee04618d1f8fc512db7f55223a72}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga6780ee04618d1f8fc512db7f55223a72}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-V\-L\-A\-N\-\_\-\-I\-D}~(1 $<$$<$ 1)}\label{group__FAPI__QOS__CLASS_ga6780ee04618d1f8fc512db7f55223a72}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies outer header's V\-L\-A\-N Id remarking field set/unset in classifier-\/$>$action-\/$>$vlan structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaf23dd4d1bf0d1f8a19026d91fa392a2a}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaf23dd4d1bf0d1f8a19026d91fa392a2a}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-V\-L\-A\-N\-\_\-\-P\-C\-P\-\_\-\-I\-N\-N\-E\-R}~(1 $<$$<$ 2)}\label{group__FAPI__QOS__CLASS_gaf23dd4d1bf0d1f8a19026d91fa392a2a}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies inner header's V\-L\-A\-N priority remarking field set/unset in classifier-\/$>$action-\/$>$vlan structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaf241e54eda720b4a3be21cc9ad3b1839}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaf241e54eda720b4a3be21cc9ad3b1839}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-V\-L\-A\-N\-\_\-\-I\-D\-\_\-\-I\-N\-N\-E\-R}~(1 $<$$<$ 3)}\label{group__FAPI__QOS__CLASS_gaf241e54eda720b4a3be21cc9ad3b1839}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies inner header's V\-L\-A\-N Id remarking field set/unset in classifier-\/$>$action-\/$>$vlan structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaf51cf704ebad97f348bd7c9daf9414ab}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaf51cf704ebad97f348bd7c9daf9414ab}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-P\-O\-L\-I\-C\-E\-R}~(1 $<$$<$ 16)}\label{group__FAPI__QOS__CLASS_gaf51cf704ebad97f348bd7c9daf9414ab}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies policer action fields set/unset in classifier-\/$>$action structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga946f94bb0ef9563bb4ce8f97c9f5a7d8}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga946f94bb0ef9563bb4ce8f97c9f5a7d8}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-P\-O\-L\-I\-C\-E\-R\-\_\-\-N\-A\-M\-E}~(1 $<$$<$ 0)}\label{group__FAPI__QOS__CLASS_ga946f94bb0ef9563bb4ce8f97c9f5a7d8}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies name field set/unset in classifier-\/$>$action-\/$>$policer structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga7fb0e5f90776eb832dffcd53ec162c6e}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga7fb0e5f90776eb832dffcd53ec162c6e}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-P\-O\-L\-I\-C\-E\-R\-\_\-\-M\-T\-R\-\_\-\-T\-Y\-P\-E}~(1 $<$$<$ 1)}\label{group__FAPI__QOS__CLASS_ga7fb0e5f90776eb832dffcd53ec162c6e}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies mtr type field set/unset in classifier-\/$>$action-\/$>$policer structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gacd76a4de3d2d681efd9ef60f3d7c2e01}{\#define \hyperlink{group__FAPI__QOS__CLASS_gacd76a4de3d2d681efd9ef60f3d7c2e01}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-P\-O\-L\-I\-C\-E\-R\-\_\-\-C\-R}~(1 $<$$<$ 2)}\label{group__FAPI__QOS__CLASS_gacd76a4de3d2d681efd9ef60f3d7c2e01}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies cr field set/unset in classifier-\/$>$action-\/$>$policer structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gac2a70466a6ce647a37cbf825e763fcba}{\#define \hyperlink{group__FAPI__QOS__CLASS_gac2a70466a6ce647a37cbf825e763fcba}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-P\-O\-L\-I\-C\-E\-R\-\_\-\-C\-B\-S}~(1 $<$$<$ 3)}\label{group__FAPI__QOS__CLASS_gac2a70466a6ce647a37cbf825e763fcba}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies cbs field set/unset in classifier-\/$>$action-\/$>$policer structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga12ae7333fcc141093798d79d9cfd9c58}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga12ae7333fcc141093798d79d9cfd9c58}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-P\-O\-L\-I\-C\-E\-R\-\_\-\-E\-B\-S}~(1 $<$$<$ 4)}\label{group__FAPI__QOS__CLASS_ga12ae7333fcc141093798d79d9cfd9c58}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies ebs field set/unset in classifier-\/$>$action-\/$>$policer structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaa4256bde3605ed2ac5cc85280638a25f}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaa4256bde3605ed2ac5cc85280638a25f}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-P\-O\-L\-I\-C\-E\-R\-\_\-\-P\-R}~(1 $<$$<$ 5)}\label{group__FAPI__QOS__CLASS_gaa4256bde3605ed2ac5cc85280638a25f}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies pr field set/unset in classifier-\/$>$action-\/$>$policer structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_gaf204365272441bc75697ef596cfc0d94}{\#define \hyperlink{group__FAPI__QOS__CLASS_gaf204365272441bc75697ef596cfc0d94}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-P\-O\-L\-I\-C\-E\-R\-\_\-\-P\-B\-S}~(1 $<$$<$ 6)}\label{group__FAPI__QOS__CLASS_gaf204365272441bc75697ef596cfc0d94}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies pbs field set/unset in classifier-\/$>$action-\/$>$policer structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga94b4e8ac023086bd663c21021b03f5f0}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga94b4e8ac023086bd663c21021b03f5f0}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-P\-O\-L\-I\-C\-Y\-R\-T}~(1 $<$$<$ 17)}\label{group__FAPI__QOS__CLASS_ga94b4e8ac023086bd663c21021b03f5f0}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies policy route fields set/unset in classifier-\/$>$action structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga923d2b6da24fe5f1e2357d4bdc59e838}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga923d2b6da24fe5f1e2357d4bdc59e838}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-P\-O\-L\-I\-C\-Y\-R\-T\-\_\-\-N\-A\-M\-E}~(1 $<$$<$ 0)}\label{group__FAPI__QOS__CLASS_ga923d2b6da24fe5f1e2357d4bdc59e838}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies name field set/unset in classifier-\/$>$action-\/$>$policy route structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga04076d7def16a0887142ca8a3624be06}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga04076d7def16a0887142ca8a3624be06}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-P\-O\-L\-I\-C\-Y\-R\-T\-\_\-\-G\-W\-\_\-\-I\-P}~(1 $<$$<$ 1)}\label{group__FAPI__QOS__CLASS_ga04076d7def16a0887142ca8a3624be06}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies gateway I\-P address field set/unset in classifier-\/$>$action-\/$>$policy route structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga177564364677ce11f27a8aeee185fa6b}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga177564364677ce11f27a8aeee185fa6b}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-P\-O\-L\-I\-C\-Y\-R\-T\-\_\-\-D\-S\-T\-\_\-\-I\-F}~(1 $<$$<$ 2)}\label{group__FAPI__QOS__CLASS_ga177564364677ce11f27a8aeee185fa6b}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies destination interface field set/unset in classifier-\/$>$action-\/$>$policy route structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga5c363c3cac4c58f9f7b1c71e2ecd9e9e}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga5c363c3cac4c58f9f7b1c71e2ecd9e9e}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-A\-C\-T\-\_\-\-P\-O\-L\-I\-C\-Y\-R\-T\-\_\-\-M\-E\-T\-R\-I\-C}~(1 $<$$<$ 3)}\label{group__FAPI__QOS__CLASS_ga5c363c3cac4c58f9f7b1c71e2ecd9e9e}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies metric field set/unset in classifier-\/$>$action-\/$>$policy route structure. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga5dc738a7d5021a3c639b5b8a9fa9237a}{\#define \hyperlink{group__FAPI__QOS__CLASS_ga5dc738a7d5021a3c639b5b8a9fa9237a}{C\-L\-S\-C\-F\-G\-\_\-\-P\-A\-R\-A\-M\-\_\-\-L7\-\_\-\-P\-R\-O\-T\-O}~(1 $<$$<$ 18)}\label{group__FAPI__QOS__CLASS_ga5dc738a7d5021a3c639b5b8a9fa9237a}
+
+\begin{DoxyCompactList}\small\item\em Bit-\/field that specifies layer7 protocol fields set/unset in classifier-\/$>$filter structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__FAPI__QOS__CLASS_ga320ad61e79289091e97378966fb083b3}{typedef enum \hyperlink{group__FAPI__QOS__CLASS_ga8cedc303de33c7b80f5f7ad0b93e360a}{cl\-\_\-meter\-\_\-type} \hyperlink{group__FAPI__QOS__CLASS_ga320ad61e79289091e97378966fb083b3}{cl\-\_\-meter\-\_\-type\-\_\-t}}\label{group__FAPI__QOS__CLASS_ga320ad61e79289091e97378966fb083b3}
+
+\begin{DoxyCompactList}\small\item\em Policer Meter Type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__FAPI__QOS__CLASS_ga8cedc303de33c7b80f5f7ad0b93e360a}{cl\-\_\-meter\-\_\-type} \{ \hyperlink{group__FAPI__QOS__CLASS_gga8cedc303de33c7b80f5f7ad0b93e360aa340459b223cd6b47515d690fe34aa84b}{C\-L\-\_\-\-M\-E\-T\-E\-R\-\_\-\-T\-O\-K\-E\-N\-\_\-\-B\-U\-C\-K\-E\-T} = 1, 
+\hyperlink{group__FAPI__QOS__CLASS_gga8cedc303de33c7b80f5f7ad0b93e360aae660340dc4cec61c4d5b8f4943aadd23}{C\-L\-\_\-\-M\-E\-T\-E\-R\-\_\-\-S\-R\-\_\-\-T\-C\-M} = 2, 
+\hyperlink{group__FAPI__QOS__CLASS_gga8cedc303de33c7b80f5f7ad0b93e360aa89493bbc9c0343b2353da7098a75ff6e}{C\-L\-\_\-\-M\-E\-T\-E\-R\-\_\-\-T\-R\-\_\-\-T\-C\-M} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Policer Meter Type. \end{DoxyCompactList}\item 
+enum \hyperlink{group__FAPI__QOS__CLASS_ga002c716c5dae6e4be5433e1f11659cdb}{str\-\_\-match\-\_\-mode\-\_\-t} \{ \hyperlink{group__FAPI__QOS__CLASS_gga002c716c5dae6e4be5433e1f11659cdbab938decc748980dc815bfdc9214c8b23}{S\-T\-R\-\_\-\-E\-X\-A\-C\-T\-\_\-\-M\-A\-T\-C\-H} =1, 
+\hyperlink{group__FAPI__QOS__CLASS_gga002c716c5dae6e4be5433e1f11659cdba326a87c36b59443443c5e9b8992dd7b9}{S\-T\-R\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-M\-A\-T\-C\-H} =2, 
+\hyperlink{group__FAPI__QOS__CLASS_gga002c716c5dae6e4be5433e1f11659cdba3c41c7b874c32b9510a6e71f183ddf42}{S\-T\-R\-\_\-\-S\-U\-F\-F\-I\-X\-\_\-\-M\-A\-T\-C\-H} =3, 
+\hyperlink{group__FAPI__QOS__CLASS_gga002c716c5dae6e4be5433e1f11659cdba837cc902e460a3cbf5cdee1d11054b99}{S\-T\-R\-\_\-\-S\-U\-B\-S\-T\-R\-I\-N\-G\-\_\-\-M\-A\-T\-C\-H} =4
+ \}
+\begin{DoxyCompactList}\small\item\em Types of String Match operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__CLASS_ga3a90a0d5b85be195a9b297281d8e1a18}{fapi\-\_\-qos\-\_\-classifier\-\_\-set} (\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} order, \hyperlink{structcl__match__filter__t}{cl\-\_\-match\-\_\-filter\-\_\-t} filter, \hyperlink{structcl__action__t}{cl\-\_\-action\-\_\-t} action, uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Set Qo\-S A\-L Classifier -\/ involves adding a new classifier, modifying an existing classifier, or deleting an existing classifier. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__CLASS_gade879fda083234b2979807784e36c779}{fapi\-\_\-qos\-\_\-classifier\-\_\-get} (uint32\-\_\-t order, \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} $\ast$num\-\_\-entries, \hyperlink{structcl__match__filter__t}{cl\-\_\-match\-\_\-filter\-\_\-t} $\ast$$\ast$filter, \hyperlink{structcl__action__t}{cl\-\_\-action\-\_\-t} $\ast$$\ast$action, uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Get Qo\-S A\-L Classifier -\/ Get one or more Classifiers at the position given by order. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__CLASS_ga3c3697dfc41749e8d9fd841b5f1956a8}{fapi\-\_\-qos\-\_\-app\-\_\-abs\-\_\-set} (char app\-\_\-name\mbox{[}\hyperlink{group__FAPI__QOS__CLASS_ga078fa167f6c71720c8ca3158564002ae}{M\-A\-X\-\_\-\-C\-L\-\_\-\-A\-P\-\_\-\-N\-A\-M\-E}\mbox{]}, \hyperlink{structcl__match__filter__t}{cl\-\_\-match\-\_\-filter\-\_\-t} $\ast$app\-\_\-filter, uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Set Qo\-S A\-L Interface Application Abstraction like S\-I\-P, R\-T\-S\-P etc. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__CLASS_ga77e65959565d3e5f5001e5ee57cde333}{fapi\-\_\-qos\-\_\-app\-\_\-abs\-\_\-get} (\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} app\-\_\-id, char $\ast$app\-\_\-name, \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} $\ast$num\-\_\-entries, \hyperlink{structcl__match__filter__t}{cl\-\_\-match\-\_\-filter\-\_\-t} $\ast$app\-\_\-filters, uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Get Qo\-S A\-L Interface Application Abstraction filters for applications like S\-I\-P, R\-T\-S\-P, etc. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__CLASS_ga73069be0721b9571ace92579e30feea7}{fapi\-\_\-qos\-\_\-if\-\_\-base\-\_\-set} (char $\ast$ifname, char $\ast$base\-\_\-ifname, char $\ast$logical\-\_\-base, uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Set Qo\-S A\-L base interface for an interface, such as, whether pppoe interface is configured above ptm0 or eth1 etc. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__CLASS_gab1e71b798f439d66fa747066f3a753df}{fapi\-\_\-qos\-\_\-if\-\_\-abs\-\_\-set} (\hyperlink{group__FAPI__QOS__GENERAL_ga23c1893cfe6a7875c1a418338c6f09ad}{iftype\-\_\-t} ifgroup, char $\ast$ifname, uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Set Qo\-S A\-L Interface Group Abstraction like L\-A\-N, W\-A\-N, W\-L\-A\-N -\/ involves adding a new interface to an interface group or deleting. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__CLASS_gaebc50747038b6379fb5f24d7079c5a17}{fapi\-\_\-qos\-\_\-if\-\_\-abs\-\_\-get} (\hyperlink{group__FAPI__QOS__GENERAL_ga23c1893cfe6a7875c1a418338c6f09ad}{iftype\-\_\-t} ifgroup, \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} $\ast$num\-\_\-entries, char $\ast$$\ast$ifname, uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Get Qo\-S A\-L Interface Group Abstraction member interfaces, such as for L\-A\-N, W\-A\-N, W\-L\-A\-N. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__CLASS_gaac69f14d85bced25e29b3bc7e1e481ba}{fapi\-\_\-qos\-\_\-dhcp\-\_\-abs\-\_\-set} (ip\-\_\-addr\-\_\-t ipaddr, \hyperlink{structcl__dhcp__match__t}{cl\-\_\-dhcp\-\_\-match\-\_\-t} $\ast$dhcp, uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Set Qo\-S A\-L Classifier D\-H\-C\-P Abstraction map -\/ add or delete. \end{DoxyCompactList}\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{group__FAPI__QOS__CLASS_ga28af7ded39657f9c0cd29f66fb4581dc}{fapi\-\_\-qos\-\_\-dhcp\-\_\-abs\-\_\-get} (\hyperlink{group__FAPI__QOS__GENERAL_ga23c1893cfe6a7875c1a418338c6f09ad}{iftype\-\_\-t} ifgroup, \hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} $\ast$num\-\_\-entries, char $\ast$dhcp\-\_\-arr, uint32\-\_\-t flags)
+\begin{DoxyCompactList}\small\item\em Get all D\-H\-C\-P Associations for a given I\-P address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File contains the related data structures and A\-P\-I for Qo\-S Classification functionality. 

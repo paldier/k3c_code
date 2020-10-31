@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Defines
+if [ ! "$MTLK_INIT_PLATFORM" ]; then
+        . /tmp/mtlk_init_platform.sh
+fi
+
+apIndex=$1
+mac_addr=$2
+
+# Get corresponding wlan network interface from mapping file
+wlan=`find_wave_if_from_index $apIndex`
+
+print2log DBG "running wave_wlan_send_qos_map_conf"
+timestamp "wave_wlan_send_qos_map_conf:$apIndex:begin"
+
+hostapd_cli -i $wlan send_qos_map_conf $mac_addr
+
+print2log DBG "wave_wlan_send_qos_map_conf done"
+timestamp "wave_wlan_send_qos_map_conf:$apIndex:done"

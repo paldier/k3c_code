@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structcl__action__vlan__t" kind="struct" prot="public">
+    <compoundname>cl_action_vlan_t</compoundname>
+    <includes refid="qosal__cl__api_8h" local="no">qosal_cl_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcl__action__vlan__t_1a544d3fe82906bb8ca55ed3a5122b9fa4" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_action_vlan_t::pcp</definition>
+        <argsstring></argsstring>
+        <name>pcp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>New VLAN PCP routing/forwarding action on the packet </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="498" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="498" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__vlan__t_1a04b2911e9e7e2f2b16d8488f924f441a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_action_vlan_t::vlan_id</definition>
+        <argsstring></argsstring>
+        <name>vlan_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Outer VLAN Id </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="499" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="499" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__vlan__t_1a9f3ffb7da0987a4e8080bb5cc3bf8122" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_action_vlan_t::inner_pcp</definition>
+        <argsstring></argsstring>
+        <name>inner_pcp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inner VLAN PCP value </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="500" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="500" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__vlan__t_1a2dda44d51a174c88c1a5200c7de1f3d1" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_action_vlan_t::inner_vlan_id</definition>
+        <argsstring></argsstring>
+        <name>inner_vlan_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inner VLAN Id </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="501" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="501" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__vlan__t_1ad947b4c233c844235c425401d48f90ab" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_action_vlan_t::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Which VLAN actions are specified </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="502" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="502" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>VLAN action data structure for a classifier. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="497" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="497" bodyend="503"/>
+    <listofallmembers>
+      <member refid="structcl__action__vlan__t_1ad947b4c233c844235c425401d48f90ab" prot="public" virt="non-virtual"><scope>cl_action_vlan_t</scope><name>flags</name></member>
+      <member refid="structcl__action__vlan__t_1a9f3ffb7da0987a4e8080bb5cc3bf8122" prot="public" virt="non-virtual"><scope>cl_action_vlan_t</scope><name>inner_pcp</name></member>
+      <member refid="structcl__action__vlan__t_1a2dda44d51a174c88c1a5200c7de1f3d1" prot="public" virt="non-virtual"><scope>cl_action_vlan_t</scope><name>inner_vlan_id</name></member>
+      <member refid="structcl__action__vlan__t_1a544d3fe82906bb8ca55ed3a5122b9fa4" prot="public" virt="non-virtual"><scope>cl_action_vlan_t</scope><name>pcp</name></member>
+      <member refid="structcl__action__vlan__t_1a04b2911e9e7e2f2b16d8488f924f441a" prot="public" virt="non-virtual"><scope>cl_action_vlan_t</scope><name>vlan_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

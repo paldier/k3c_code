@@ -1,0 +1,111 @@
+\hypertarget{structdsl__fapi__channel__stats__interval__obj}{\section{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj Struct Reference}
+\label{structdsl__fapi__channel__stats__interval__obj}\index{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj}}
+}
+
+
+{\ttfamily \#include $<$dsl\-\_\-fapi.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__stats__interval__obj_a731008204d97ec25bd89d3ac3c2ed7aa}{xtu\-\_\-rfec\-\_\-errors}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__stats__interval__obj_af819a585cceb04f1d9c95082442318e2}{xtu\-\_\-cfec\-\_\-errors}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__stats__interval__obj_ad9b8601436c226deb150bb49bb70ec2f}{xtu\-\_\-rhec\-\_\-errors}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__stats__interval__obj_ac0de9e7853f8afe8b8d55a683ab68da2}{xtu\-\_\-chec\-\_\-errors}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__stats__interval__obj_a87fec32ef4830259193a62bbe6639eaf}{xtu\-\_\-rcrc\-\_\-errors}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__stats__interval__obj_a20758418fd88fbef1953137ba98cc341}{xtu\-\_\-ccrc\-\_\-errors}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\-S\-L Channel total statistics object declaration, based on T\-R-\/181 definitions. D\-S\-L Channel showtime statistics object declaration, based on T\-R-\/181 definitions. D\-S\-L Channel last showtime statistics object declaration, based on T\-R-\/181 definitions. D\-S\-L Channel current day statistics object declaration, based on T\-R-\/181 definitions. D\-S\-L Channel current quarter hour object declaration, based on T\-R-\/181 definitions. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structdsl__fapi__channel__stats__interval__obj_a20758418fd88fbef1953137ba98cc341}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj}!xtu\-\_\-ccrc\-\_\-errors@{xtu\-\_\-ccrc\-\_\-errors}}
+\index{xtu\-\_\-ccrc\-\_\-errors@{xtu\-\_\-ccrc\-\_\-errors}!dsl_fapi_channel_stats_interval_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj}}
+\subsubsection[{xtu\-\_\-ccrc\-\_\-errors}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj\-::xtu\-\_\-ccrc\-\_\-errors}}\label{structdsl__fapi__channel__stats__interval__obj_a20758418fd88fbef1953137ba98cc341}
+Common data structure for the several objects.
+\begin{DoxyItemize}
+\item Stats.\-Total\-: Total number of C\-R\-C errors detected by the A\-T\-U-\/\-C.
+\item Stats.\-Showtime\-: Number of C\-R\-C errors detected by the A\-T\-U-\/\-C since the most recent D\-S\-L Showtime.
+\item Stats.\-Last\-Showtime\-: Number of C\-R\-C errors detected by the A\-T\-U-\/\-C since the second most recent D\-S\-L Showtime.
+\item Stats.\-Current\-Day\-: Number of C\-R\-C errors detected by the A\-T\-U-\/\-C since the second most recent D\-S\-L Showtime.
+\item Stats.\-Quarter\-Hour\-: Number of C\-R\-C errors detected by the A\-T\-U-\/\-C since the second most recent D\-S\-L Showtime. \begin{DoxyNote}{Note}
+(C\-V-\/\-C\-F\-E as defined in I\-T\-U-\/\-T Rec. \mbox{[}G.\-997.\-1\mbox{]}). 
+\end{DoxyNote}
+
+\end{DoxyItemize}\hypertarget{structdsl__fapi__channel__stats__interval__obj_af819a585cceb04f1d9c95082442318e2}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj}!xtu\-\_\-cfec\-\_\-errors@{xtu\-\_\-cfec\-\_\-errors}}
+\index{xtu\-\_\-cfec\-\_\-errors@{xtu\-\_\-cfec\-\_\-errors}!dsl_fapi_channel_stats_interval_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj}}
+\subsubsection[{xtu\-\_\-cfec\-\_\-errors}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj\-::xtu\-\_\-cfec\-\_\-errors}}\label{structdsl__fapi__channel__stats__interval__obj_af819a585cceb04f1d9c95082442318e2}
+Common data structure for the several objects.
+\begin{DoxyItemize}
+\item Stats.\-Total\-: Total number of F\-E\-C errors detected by the A\-T\-U-\/\-C.
+\item Stats.\-Showtime\-: Number of F\-E\-C errors detected by the A\-T\-U-\/\-C since the most recent D\-S\-L Showtime.
+\item Stats.\-Last\-Showtime\-: Number of F\-E\-C errors detected by the A\-T\-U-\/\-C since the second most recent D\-S\-L Showtime.
+\item Stats.\-Current\-Day\-: Number of F\-E\-C errors detected by the A\-T\-U-\/\-C since the second most recent D\-S\-L Showtime.
+\item Stats.\-Quarter\-Hour\-: Number of F\-E\-C errors detected by the A\-T\-U-\/\-C since the second most recent D\-S\-L Showtime. \begin{DoxyNote}{Note}
+(F\-E\-C-\/\-C\-F\-E as defined in I\-T\-U-\/\-T Rec. \mbox{[}G.\-997.\-1\mbox{]}). 
+\end{DoxyNote}
+
+\end{DoxyItemize}\hypertarget{structdsl__fapi__channel__stats__interval__obj_ac0de9e7853f8afe8b8d55a683ab68da2}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj}!xtu\-\_\-chec\-\_\-errors@{xtu\-\_\-chec\-\_\-errors}}
+\index{xtu\-\_\-chec\-\_\-errors@{xtu\-\_\-chec\-\_\-errors}!dsl_fapi_channel_stats_interval_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj}}
+\subsubsection[{xtu\-\_\-chec\-\_\-errors}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj\-::xtu\-\_\-chec\-\_\-errors}}\label{structdsl__fapi__channel__stats__interval__obj_ac0de9e7853f8afe8b8d55a683ab68da2}
+Common data structure for the several objects.
+\begin{DoxyItemize}
+\item Stats.\-Total\-: Total number of H\-E\-C errors detected by the A\-T\-U-\/\-C.
+\item Stats.\-Showtime\-: Number of H\-E\-C errors detected by the A\-T\-U-\/\-C since the most recent D\-S\-L Showtime.
+\item Stats.\-Last\-Showtime\-: Number of H\-E\-C errors detected by the A\-T\-U-\/\-C since the second most recent D\-S\-L Showtime.
+\item Stats.\-Current\-Day\-: Number of H\-E\-C errors detected by the A\-T\-U-\/\-C since the second most recent D\-S\-L Showtime.
+\item Stats.\-Quarter\-Hour\-: Number of H\-E\-C errors detected by the A\-T\-U-\/\-C since the second most recent D\-S\-L Showtime. \begin{DoxyNote}{Note}
+(H\-E\-C-\/\-P\-F\-E as defined in I\-T\-U-\/\-T Rec. \mbox{[}G.\-997.\-1\mbox{]}). 
+\end{DoxyNote}
+
+\end{DoxyItemize}\hypertarget{structdsl__fapi__channel__stats__interval__obj_a87fec32ef4830259193a62bbe6639eaf}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj}!xtu\-\_\-rcrc\-\_\-errors@{xtu\-\_\-rcrc\-\_\-errors}}
+\index{xtu\-\_\-rcrc\-\_\-errors@{xtu\-\_\-rcrc\-\_\-errors}!dsl_fapi_channel_stats_interval_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj}}
+\subsubsection[{xtu\-\_\-rcrc\-\_\-errors}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj\-::xtu\-\_\-rcrc\-\_\-errors}}\label{structdsl__fapi__channel__stats__interval__obj_a87fec32ef4830259193a62bbe6639eaf}
+Common data structure for the several objects.
+\begin{DoxyItemize}
+\item Stats.\-Total\-: Total number of C\-R\-C errors detected.
+\item Stats.\-Showtime\-: Number of C\-R\-C errors detected since the most recent D\-S\-L Showtime.
+\item Stats.\-Last\-Showtime\-: Number of C\-R\-C errors detected since the second most recent D\-S\-L Showtime.
+\item Stats.\-Current\-Day\-: Number of C\-R\-C errors detected since the second most recent D\-S\-L Showtime.
+\item Stats.\-Quarter\-Hour\-: Number of C\-R\-C errors detected since the second most recent D\-S\-L Showtime. \begin{DoxyNote}{Note}
+(C\-V-\/\-C as defined in I\-T\-U-\/\-T Rec. \mbox{[}G.\-997.\-1\mbox{]}). 
+\end{DoxyNote}
+
+\end{DoxyItemize}\hypertarget{structdsl__fapi__channel__stats__interval__obj_a731008204d97ec25bd89d3ac3c2ed7aa}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj}!xtu\-\_\-rfec\-\_\-errors@{xtu\-\_\-rfec\-\_\-errors}}
+\index{xtu\-\_\-rfec\-\_\-errors@{xtu\-\_\-rfec\-\_\-errors}!dsl_fapi_channel_stats_interval_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj}}
+\subsubsection[{xtu\-\_\-rfec\-\_\-errors}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj\-::xtu\-\_\-rfec\-\_\-errors}}\label{structdsl__fapi__channel__stats__interval__obj_a731008204d97ec25bd89d3ac3c2ed7aa}
+Common data structure for the several objects.
+\begin{DoxyItemize}
+\item Stats.\-Total\-: Total number of F\-E\-C errors detected.
+\item Stats.\-Showtime\-: Number of F\-E\-C errors detected since the most recent D\-S\-L Showtime.
+\item Stats.\-Last\-Showtime\-: Number of F\-E\-C errors detected since the second most recent D\-S\-L Showtime.
+\item Stats.\-Current\-Day\-: Number of F\-E\-C errors detected since the second most recent D\-S\-L Showtime.
+\item Stats.\-Quarter\-Hour\-: Number of F\-E\-C errors detected since the second most recent D\-S\-L Showtime. \begin{DoxyNote}{Note}
+(F\-E\-C-\/\-C as defined in I\-T\-U-\/\-T Rec. \mbox{[}G.\-997.\-1\mbox{]}). 
+\end{DoxyNote}
+
+\end{DoxyItemize}\hypertarget{structdsl__fapi__channel__stats__interval__obj_ad9b8601436c226deb150bb49bb70ec2f}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj}!xtu\-\_\-rhec\-\_\-errors@{xtu\-\_\-rhec\-\_\-errors}}
+\index{xtu\-\_\-rhec\-\_\-errors@{xtu\-\_\-rhec\-\_\-errors}!dsl_fapi_channel_stats_interval_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj}}
+\subsubsection[{xtu\-\_\-rhec\-\_\-errors}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-interval\-\_\-obj\-::xtu\-\_\-rhec\-\_\-errors}}\label{structdsl__fapi__channel__stats__interval__obj_ad9b8601436c226deb150bb49bb70ec2f}
+Common data structure for the several objects.
+\begin{DoxyItemize}
+\item Stats.\-Total\-: Total number of H\-E\-C errors detected.
+\item Stats.\-Showtime\-: Number of H\-E\-C errors detected since the most recent D\-S\-L Showtime.
+\item Stats.\-Last\-Showtime\-: Number of H\-E\-C errors detected since the second most recent D\-S\-L Showtime.
+\item Stats.\-Current\-Day\-: Number of H\-E\-C errors detected since the second most recent D\-S\-L Showtime.
+\item Stats.\-Quarter\-Hour\-: Number of H\-E\-C errors detected since the second most recent D\-S\-L Showtime. \begin{DoxyNote}{Note}
+(H\-E\-C-\/\-P as defined in I\-T\-U-\/\-T Rec. \mbox{[}G.\-997.\-1\mbox{]}). 
+\end{DoxyNote}
+
+\end{DoxyItemize}
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{dsl__fapi_8h}{dsl\-\_\-fapi.\-h}\end{DoxyCompactItemize}

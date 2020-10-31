@@ -1,0 +1,21 @@
+diff -Naur ../RT5592AP_wifi_v2715_DPA_20121207/os/linux/config.mk RT5592AP_wifi_v2715_DPA_20121207/os/linux/config.mk
+--- ../RT5592AP_wifi_v2715_DPA_20121207/os/linux/config.mk	2014-04-22 18:50:47.000000000 +0530
++++ RT5592AP_wifi_v2715_DPA_20121207/os/linux/config.mk	2014-04-22 18:52:43.000000000 +0530
+@@ -31,7 +31,7 @@
+ HAS_BLOCK_NET_IF=n
+ 
+ #Support IGMP-Snooping function.
+-HAS_IGMP_SNOOP_SUPPORT=n
++HAS_IGMP_SNOOP_SUPPORT=y
+ 
+ #Support DFS function
+ HAS_DFS_SUPPORT=n
+@@ -127,7 +127,7 @@
+ HAS_HOSTAPD_SUPPORT=n
+ 
+ #Support GreenAP function
+-HAS_GREENAP_SUPPORT=n
++HAS_GREENAP_SUPPORT=y
+ 
+ #Support MAC80211 LINUX-only function
+ #Please make sure the version for CFG80211.ko and MAC80211.ko is same as the one

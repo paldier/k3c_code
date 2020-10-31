@@ -1,0 +1,478 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structSysFapiCB" kind="struct" prot="public">
+    <compoundname>SysFapiCB</compoundname>
+    <includes refid="fapi__sys__common_8h" local="no">fapi_sys_common.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structSysFapiCB_1ab2bd82afc8e3d2690c0c0d53a2453d86" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t SysFapiCB::flag</definition>
+        <argsstring></argsstring>
+        <name>flag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="393" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="393" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1aba07855a1cdd9d4b9bafc1a466a407d5" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::wanSWO)(sys_cfg_t *)</definition>
+        <argsstring>)(sys_cfg_t *)</argsstring>
+        <name>wanSWO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="394" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="394" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a5b1d76fff4a1a2dca7e0ca18e0d17294" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::moduleLoad)(WAN_TYPE_t next_tc_mode)</definition>
+        <argsstring>)(WAN_TYPE_t next_tc_mode)</argsstring>
+        <name>moduleLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="395" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="395" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a39cdc2a59a0699d3cd0a836ba24ebe6b" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::moduleUnLoad)(WAN_TYPE_t next_tc_mode)</definition>
+        <argsstring>)(WAN_TYPE_t next_tc_mode)</argsstring>
+        <name>moduleUnLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="396" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="396" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a0c848ecbc9b21a6b623dcf7d2c8a20ba" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::ProcessorStat)(ProcessorCounter *xProcessorInfo)</definition>
+        <argsstring>)(ProcessorCounter *xProcessorInfo)</argsstring>
+        <name>ProcessorStat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="397" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a987d0345903af43c7d579ce89b9cf58d" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::SysInit)(void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>SysInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="398" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="398" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1aec109bb0abf76d13737db17ab2cf01d7" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::SysUnInit)(void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>SysUnInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="399" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a92170b7b6ac55b8106705e8dfd28bf38" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::ProcessorInit)(void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>ProcessorInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="400" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="400" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a45958a34f2abf66fa28b443026bd5997" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::ProcessorUnInit)(void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>ProcessorUnInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="401" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1acf84e7fb514f671c6ea1ef0949edbd9a" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::ppa_init)(PPAInit_cfg_t *ppaInit_Cfg)</definition>
+        <argsstring>)(PPAInit_cfg_t *ppaInit_Cfg)</argsstring>
+        <name>ppa_init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="402" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="402" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1aa81adabf025d6fc9701dbc52df800175" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::ppa_uninit)(void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>ppa_uninit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="403" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a6e8fc87af41a41fffbe0f9f30142d229" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::sysSet)(sys_cfg_t *)</definition>
+        <argsstring>)(sys_cfg_t *)</argsstring>
+        <name>sysSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="404" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a9d93dc575ed8db83ea7d1e44d5f5e352" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::sysGet)(sys_cfg_t *)</definition>
+        <argsstring>)(sys_cfg_t *)</argsstring>
+        <name>sysGet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="405" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a434291477eb7e765b8401a06ea751ccc" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::ppaAdd)(ifcfg_t *)</definition>
+        <argsstring>)(ifcfg_t *)</argsstring>
+        <name>ppaAdd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="406" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a19f4ab855544a06b2dc440a72ecd8f95" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::ppaDel)(ifcfg_t *)</definition>
+        <argsstring>)(ifcfg_t *)</argsstring>
+        <name>ppaDel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="407" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a5a7320e6802f310103385d40d6a22bbc" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::ppaHook)(PPA_CMD_ENABLE_INFO *)</definition>
+        <argsstring>)(PPA_CMD_ENABLE_INFO *)</argsstring>
+        <name>ppaHook</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="408" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a4de116dc24f05182ca652cf37d1b2d1c" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::SetLinkState)(int32_t, char *)</definition>
+        <argsstring>)(int32_t, char *)</argsstring>
+        <name>SetLinkState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="409" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1ae29cbaef6ff9eda14066f453e097029e" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::GetLinkState)(int32_t, PORTcfg_t *)</definition>
+        <argsstring>)(int32_t, PORTcfg_t *)</argsstring>
+        <name>GetLinkState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="410" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a05ee15f0b50ee130ee27a4f19475b36b" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::VLANCfgSet)(vlanCfg_t *)</definition>
+        <argsstring>)(vlanCfg_t *)</argsstring>
+        <name>VLANCfgSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="411" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1ab841c7e69a827c7bb15bf4eb96479fd5" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::RMONGet)(int32_t, RMONGet_t *)</definition>
+        <argsstring>)(int32_t, RMONGet_t *)</argsstring>
+        <name>RMONGet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="412" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1af5f6dbc06019a44c4311fd3f6fd8cb2d" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::getPortId)(char *)</definition>
+        <argsstring>)(char *)</argsstring>
+        <name>getPortId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="413" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1af6f7d0cadd5286340283790ba9bca889" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::setbrCfg)(char *, char *, char *, char *)</definition>
+        <argsstring>)(char *, char *, char *, char *)</argsstring>
+        <name>setbrCfg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="414" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1aff896525afa2bacd13e97f6b02a1964b" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::setPortStatus)(int32_t, int32_t)</definition>
+        <argsstring>)(int32_t, int32_t)</argsstring>
+        <name>setPortStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="415" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1ad8893a3c5269df788b7e7c4c5948d692" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::getPortStatus)(int32_t, PORTcfg_t *)</definition>
+        <argsstring>)(int32_t, PORTcfg_t *)</argsstring>
+        <name>getPortStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="416" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1ab2b99ca1678faae5a59de77223a9bfb8" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::setMaxRate)(int32_t, int32_t)</definition>
+        <argsstring>)(int32_t, int32_t)</argsstring>
+        <name>setMaxRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="417" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1ae0d66c011025b51855d0b6b710b46356" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::getMaxRate)(int32_t PortId, PORTcfg_t *port_get)</definition>
+        <argsstring>)(int32_t PortId, PORTcfg_t *port_get)</argsstring>
+        <name>getMaxRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="418" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a0c0b4174d802fae43bc47c7c1a7a6003" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::setDuplexMode)(int32_t, char *)</definition>
+        <argsstring>)(int32_t, char *)</argsstring>
+        <name>setDuplexMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="419" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a318e97e29463a1a2a1699fe2b18a2f6f" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::getDuplexMode)(int32_t, PORTcfg_t *)</definition>
+        <argsstring>)(int32_t, PORTcfg_t *)</argsstring>
+        <name>getDuplexMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="420" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="420" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a95de082a154d479ba1bbc67d2097eadc" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::EnMirror)(char *, char *)</definition>
+        <argsstring>)(char *, char *)</argsstring>
+        <name>EnMirror</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="421" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="421" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a9367e69b596efd18b7eb3ab2dc3f5583" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::disMirror)(char *, char *)</definition>
+        <argsstring>)(char *, char *)</argsstring>
+        <name>disMirror</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="422" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1ad5355474631635e8b1ed578530fdd9e3" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::cfgbrAccel)(brAccelCfg_t *BrAccelCfg)</definition>
+        <argsstring>)(brAccelCfg_t *BrAccelCfg)</argsstring>
+        <name>cfgbrAccel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="423" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a7ef2c2104f721bb6734dab0697e2aa36" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::SetInterfaceState)(InterfaceType, State)</definition>
+        <argsstring>)(InterfaceType, State)</argsstring>
+        <name>SetInterfaceState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="424" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSysFapiCB_1a75f27caab743c6c877253ac1eaeed5ad" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref>(*</type>
+        <definition>int32_t(* SysFapiCB::cfg_SwitchIOCTL)(int32_t, int32_t, void *)</definition>
+        <argsstring>)(int32_t, int32_t, void *)</argsstring>
+        <name>cfg_SwitchIOCTL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="425" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure definintions for fapi callback functions. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" line="392" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/fapi_sys_common.h" bodystart="392" bodyend="426"/>
+    <listofallmembers>
+      <member refid="structSysFapiCB_1a75f27caab743c6c877253ac1eaeed5ad" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>cfg_SwitchIOCTL</name></member>
+      <member refid="structSysFapiCB_1ad5355474631635e8b1ed578530fdd9e3" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>cfgbrAccel</name></member>
+      <member refid="structSysFapiCB_1a9367e69b596efd18b7eb3ab2dc3f5583" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>disMirror</name></member>
+      <member refid="structSysFapiCB_1a95de082a154d479ba1bbc67d2097eadc" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>EnMirror</name></member>
+      <member refid="structSysFapiCB_1ab2bd82afc8e3d2690c0c0d53a2453d86" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>flag</name></member>
+      <member refid="structSysFapiCB_1a318e97e29463a1a2a1699fe2b18a2f6f" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>getDuplexMode</name></member>
+      <member refid="structSysFapiCB_1ae29cbaef6ff9eda14066f453e097029e" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>GetLinkState</name></member>
+      <member refid="structSysFapiCB_1ae0d66c011025b51855d0b6b710b46356" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>getMaxRate</name></member>
+      <member refid="structSysFapiCB_1af5f6dbc06019a44c4311fd3f6fd8cb2d" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>getPortId</name></member>
+      <member refid="structSysFapiCB_1ad8893a3c5269df788b7e7c4c5948d692" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>getPortStatus</name></member>
+      <member refid="structSysFapiCB_1a5b1d76fff4a1a2dca7e0ca18e0d17294" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>moduleLoad</name></member>
+      <member refid="structSysFapiCB_1a39cdc2a59a0699d3cd0a836ba24ebe6b" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>moduleUnLoad</name></member>
+      <member refid="structSysFapiCB_1acf84e7fb514f671c6ea1ef0949edbd9a" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>ppa_init</name></member>
+      <member refid="structSysFapiCB_1aa81adabf025d6fc9701dbc52df800175" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>ppa_uninit</name></member>
+      <member refid="structSysFapiCB_1a434291477eb7e765b8401a06ea751ccc" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>ppaAdd</name></member>
+      <member refid="structSysFapiCB_1a19f4ab855544a06b2dc440a72ecd8f95" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>ppaDel</name></member>
+      <member refid="structSysFapiCB_1a5a7320e6802f310103385d40d6a22bbc" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>ppaHook</name></member>
+      <member refid="structSysFapiCB_1a92170b7b6ac55b8106705e8dfd28bf38" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>ProcessorInit</name></member>
+      <member refid="structSysFapiCB_1a0c848ecbc9b21a6b623dcf7d2c8a20ba" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>ProcessorStat</name></member>
+      <member refid="structSysFapiCB_1a45958a34f2abf66fa28b443026bd5997" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>ProcessorUnInit</name></member>
+      <member refid="structSysFapiCB_1ab841c7e69a827c7bb15bf4eb96479fd5" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>RMONGet</name></member>
+      <member refid="structSysFapiCB_1af6f7d0cadd5286340283790ba9bca889" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>setbrCfg</name></member>
+      <member refid="structSysFapiCB_1a0c0b4174d802fae43bc47c7c1a7a6003" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>setDuplexMode</name></member>
+      <member refid="structSysFapiCB_1a7ef2c2104f721bb6734dab0697e2aa36" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>SetInterfaceState</name></member>
+      <member refid="structSysFapiCB_1a4de116dc24f05182ca652cf37d1b2d1c" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>SetLinkState</name></member>
+      <member refid="structSysFapiCB_1ab2b99ca1678faae5a59de77223a9bfb8" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>setMaxRate</name></member>
+      <member refid="structSysFapiCB_1aff896525afa2bacd13e97f6b02a1964b" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>setPortStatus</name></member>
+      <member refid="structSysFapiCB_1a9d93dc575ed8db83ea7d1e44d5f5e352" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>sysGet</name></member>
+      <member refid="structSysFapiCB_1a987d0345903af43c7d579ce89b9cf58d" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>SysInit</name></member>
+      <member refid="structSysFapiCB_1a6e8fc87af41a41fffbe0f9f30142d229" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>sysSet</name></member>
+      <member refid="structSysFapiCB_1aec109bb0abf76d13737db17ab2cf01d7" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>SysUnInit</name></member>
+      <member refid="structSysFapiCB_1a05ee15f0b50ee130ee27a4f19475b36b" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>VLANCfgSet</name></member>
+      <member refid="structSysFapiCB_1aba07855a1cdd9d4b9bafc1a466a407d5" prot="public" virt="non-virtual"><scope>SysFapiCB</scope><name>wanSWO</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

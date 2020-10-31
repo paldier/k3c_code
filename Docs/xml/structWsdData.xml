@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structWsdData" kind="struct" prot="public">
+    <compoundname>WsdData</compoundname>
+    <includes refid="ugw__common_8h" local="no">ugw_common.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structWsdData_1a349311d9b1b3775f0a2e34fba656b8a9" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t WsdData::nWSProto</definition>
+        <argsstring></argsstring>
+        <name>nWSProto</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WebSocket Protocol ID </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="369" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="369" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structWsdData_1aca064594dec04944d586de98018175e7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__LIBHELP_1ga21d5e8f8cdaa838586b31007df0a950b" kindref="member">ActionType</ref></type>
+        <definition>ActionType WsdData::eWsdAction</definition>
+        <argsstring></argsstring>
+        <name>eWsdAction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>START/STOP </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="370" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="370" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structWsdData_1a9047f519a025fe4b44967b7728839e8e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t WsdData::nTimer</definition>
+        <argsstring></argsstring>
+        <name>nTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timer value in seconds </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="371" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="371" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structWsdData_1a4050bfba1723b70da1250285635feec3" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t WsdData::nInstance</definition>
+        <argsstring></argsstring>
+        <name>nInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Instance of the WSD connection </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="372" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structWsdData_1a3232d4832bfa0ff6d0cf6d34aede399a" prot="public" static="no" mutable="no">
+        <type><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref></type>
+        <definition>MsgHeader WsdData::xMsgHdr</definition>
+        <argsstring></argsstring>
+        <name>xMsgHdr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Message Header </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="373" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="373" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains the websocket data with Msg Header. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="201">
+        <label>WsdData</label>
+        <link refid="structWsdData"/>
+        <childnode refid="202" relation="usage">
+          <edgelabel>xMsgHdr</edgelabel>
+        </childnode>
+      </node>
+      <node id="202">
+        <label>MsgHeader</label>
+        <link refid="structMsgHeader"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" line="368" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_common.h" bodystart="368" bodyend="374"/>
+    <listofallmembers>
+      <member refid="structWsdData_1aca064594dec04944d586de98018175e7" prot="public" virt="non-virtual"><scope>WsdData</scope><name>eWsdAction</name></member>
+      <member refid="structWsdData_1a4050bfba1723b70da1250285635feec3" prot="public" virt="non-virtual"><scope>WsdData</scope><name>nInstance</name></member>
+      <member refid="structWsdData_1a9047f519a025fe4b44967b7728839e8e" prot="public" virt="non-virtual"><scope>WsdData</scope><name>nTimer</name></member>
+      <member refid="structWsdData_1a349311d9b1b3775f0a2e34fba656b8a9" prot="public" virt="non-virtual"><scope>WsdData</scope><name>nWSProto</name></member>
+      <member refid="structWsdData_1a3232d4832bfa0ff6d0cf6d34aede399a" prot="public" virt="non-virtual"><scope>WsdData</scope><name>xMsgHdr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

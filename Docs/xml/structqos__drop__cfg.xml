@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structqos__drop__cfg" kind="struct" prot="public">
+    <compoundname>qos_drop_cfg</compoundname>
+    <includes refid="qosal__queue__api_8h" local="no">qosal_queue_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structqos__drop__cfg_1a340f96cb4ea99e2bd2b0e07c56d0d174" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t qos_drop_cfg::enable</definition>
+        <argsstring></argsstring>
+        <name>enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether shaper is enabled </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="214" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__drop__cfg_1aaebe1a62494df9083589c0d339f8e96b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__FAPI__QOS__QUEUE_1gac3dd371b02e4e2ff5023eaa49dfd7aab" kindref="member">qos_drop_mode_t</ref></type>
+        <definition>qos_drop_mode_t qos_drop_cfg::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mode of Queue Drop - Taildrop, WRED </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="215" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__drop__cfg_1a9db647852861e7763da396270d1e1232" prot="public" static="no" mutable="no">
+        <type><ref refid="group__FAPI__QOS__QUEUE_1ga42b4d8fefa10f2b563d6151e772c6b3c" kindref="member">qos_wred_t</ref></type>
+        <definition>qos_wred_t qos_drop_cfg::wred</definition>
+        <argsstring></argsstring>
+        <name>wred</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WRED configuration of the queue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="217" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>QoS Queue Drop configuration structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="170">
+        <label>qos_drop_cfg</label>
+        <link refid="structqos__drop__cfg"/>
+        <childnode refid="171" relation="usage">
+          <edgelabel>wred</edgelabel>
+        </childnode>
+      </node>
+      <node id="171">
+        <label>qos_wred</label>
+        <link refid="structqos__wred"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="213" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="213" bodyend="220"/>
+    <listofallmembers>
+      <member refid="structqos__drop__cfg_1a340f96cb4ea99e2bd2b0e07c56d0d174" prot="public" virt="non-virtual"><scope>qos_drop_cfg</scope><name>enable</name></member>
+      <member refid="structqos__drop__cfg_1aaebe1a62494df9083589c0d339f8e96b" prot="public" virt="non-virtual"><scope>qos_drop_cfg</scope><name>mode</name></member>
+      <member refid="structqos__drop__cfg_1a9db647852861e7763da396270d1e1232" prot="public" virt="non-virtual"><scope>qos_drop_cfg</scope><name>wred</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

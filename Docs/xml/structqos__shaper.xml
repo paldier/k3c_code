@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structqos__shaper" kind="struct" prot="public">
+    <compoundname>qos_shaper</compoundname>
+    <includes refid="qosal__queue__api_8h" local="no">qosal_queue_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structqos__shaper_1acefce05f90c1f51f5a6bf24e5524b3c2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__FAPI__QOS__QUEUE_1ga59365e8b97823ce54ac3e627abc95dd5" kindref="member">qos_shaper_mode_t</ref></type>
+        <definition>qos_shaper_mode_t qos_shaper::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mode of Token Bucket shaper </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="182" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__shaper_1ad1b7efd18e5095785a39d68be0c78526" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t qos_shaper::enable</definition>
+        <argsstring></argsstring>
+        <name>enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether shaper is enabled </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="183" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__shaper_1a2c7152c0874f25897814ad448a31f5b5" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t qos_shaper::cir</definition>
+        <argsstring></argsstring>
+        <name>cir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Committed Information Rate in bytes/s </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="184" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__shaper_1a69e81808fcb80ba8189a672a27798bff" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t qos_shaper::cbs</definition>
+        <argsstring></argsstring>
+        <name>cbs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Committed Burst Size in bytes </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="185" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__shaper_1a09b81bffad8b09bd73100dbd781b2b3c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t qos_shaper::pir</definition>
+        <argsstring></argsstring>
+        <name>pir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Peak Information Rate in bytes/s </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="186" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__shaper_1a38f8330e5af78779bd61778d6495179a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t qos_shaper::pbs</definition>
+        <argsstring></argsstring>
+        <name>pbs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Peak Burst Size </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="187" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__shaper_1a02926e1c2b7380a30716b5c72b1057e1" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t qos_shaper::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flags define which shapers are enabled, as follows:<itemizedlist>
+<listitem><para>QOS_Q_F_INGRESS</para></listitem><listitem><para>QOS_SHAPER_F_PIR</para></listitem><listitem><para>QOS_SHAPER_F_CIR </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="188" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>QoS Shaper configuration structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="181" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="181" bodyend="192"/>
+    <listofallmembers>
+      <member refid="structqos__shaper_1a69e81808fcb80ba8189a672a27798bff" prot="public" virt="non-virtual"><scope>qos_shaper</scope><name>cbs</name></member>
+      <member refid="structqos__shaper_1a2c7152c0874f25897814ad448a31f5b5" prot="public" virt="non-virtual"><scope>qos_shaper</scope><name>cir</name></member>
+      <member refid="structqos__shaper_1ad1b7efd18e5095785a39d68be0c78526" prot="public" virt="non-virtual"><scope>qos_shaper</scope><name>enable</name></member>
+      <member refid="structqos__shaper_1a02926e1c2b7380a30716b5c72b1057e1" prot="public" virt="non-virtual"><scope>qos_shaper</scope><name>flags</name></member>
+      <member refid="structqos__shaper_1acefce05f90c1f51f5a6bf24e5524b3c2" prot="public" virt="non-virtual"><scope>qos_shaper</scope><name>mode</name></member>
+      <member refid="structqos__shaper_1a38f8330e5af78779bd61778d6495179a" prot="public" virt="non-virtual"><scope>qos_shaper</scope><name>pbs</name></member>
+      <member refid="structqos__shaper_1a09b81bffad8b09bd73100dbd781b2b3c" prot="public" virt="non-virtual"><scope>qos_shaper</scope><name>pir</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

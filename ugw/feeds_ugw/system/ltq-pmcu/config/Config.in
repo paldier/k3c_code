@@ -1,0 +1,21 @@
+config LTQ_PMCU_DEBUG
+	bool
+	prompt "Enable debug features"
+	default n
+	help 
+	  This option enables debug prints and set -O0 for no optimization during
+	  compilation for better debugging.
+
+config LTQ_PMCU_DEBUG_TEMP
+	bool
+	prompt "Enable temperature sensor degugging"
+	default y
+	help 
+	  This option enables the possibility to fake the temperature sensor
+	  output value for easier and faster debugging. If this option is set
+	  the temperature value will not taken from the hardware sensor anymore.
+	  Instead the value can be defined and easily changed via sys-fs. This
+	  can be used to quickly check the thermal SW control loop without
+	  heating and cooling up and down the chip many times.
+
+ 

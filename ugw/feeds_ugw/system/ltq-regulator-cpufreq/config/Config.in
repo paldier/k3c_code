@@ -1,0 +1,7 @@
+config LTQ_REGULATOR_CPUFREQ_DEBUG
+	bool
+	prompt "Enable debug prints"
+	default n
+	help 
+	  This option enables debug outputs of the regulator CPUFreq driver.
+ 

@@ -1,0 +1,66 @@
+\hypertarget{structqos__shaper}{\section{qos\-\_\-shaper Struct Reference}
+\label{structqos__shaper}\index{qos\-\_\-shaper@{qos\-\_\-shaper}}
+}
+
+
+Qo\-S Shaper configuration structure.  
+
+
+
+
+{\ttfamily \#include $<$qosal\-\_\-queue\-\_\-api.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__FAPI__QOS__QUEUE_ga59365e8b97823ce54ac3e627abc95dd5}{qos\-\_\-shaper\-\_\-mode\-\_\-t} \hyperlink{structqos__shaper_acefce05f90c1f51f5a6bf24e5524b3c2}{mode}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{structqos__shaper_ad1b7efd18e5095785a39d68be0c78526}{enable}
+\item 
+uint32\-\_\-t \hyperlink{structqos__shaper_a2c7152c0874f25897814ad448a31f5b5}{cir}
+\item 
+uint32\-\_\-t \hyperlink{structqos__shaper_a69e81808fcb80ba8189a672a27798bff}{cbs}
+\item 
+uint32\-\_\-t \hyperlink{structqos__shaper_a09b81bffad8b09bd73100dbd781b2b3c}{pir}
+\item 
+uint32\-\_\-t \hyperlink{structqos__shaper_a38f8330e5af78779bd61778d6495179a}{pbs}
+\item 
+uint32\-\_\-t \hyperlink{structqos__shaper_a02926e1c2b7380a30716b5c72b1057e1}{flags}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Qo\-S Shaper configuration structure. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structqos__shaper_a69e81808fcb80ba8189a672a27798bff}{\index{qos\-\_\-shaper@{qos\-\_\-shaper}!cbs@{cbs}}
+\index{cbs@{cbs}!qos_shaper@{qos\-\_\-shaper}}
+\subsubsection[{cbs}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-shaper\-::cbs}}\label{structqos__shaper_a69e81808fcb80ba8189a672a27798bff}
+Committed Burst Size in bytes \hypertarget{structqos__shaper_a2c7152c0874f25897814ad448a31f5b5}{\index{qos\-\_\-shaper@{qos\-\_\-shaper}!cir@{cir}}
+\index{cir@{cir}!qos_shaper@{qos\-\_\-shaper}}
+\subsubsection[{cir}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-shaper\-::cir}}\label{structqos__shaper_a2c7152c0874f25897814ad448a31f5b5}
+Committed Information Rate in bytes/s \hypertarget{structqos__shaper_ad1b7efd18e5095785a39d68be0c78526}{\index{qos\-\_\-shaper@{qos\-\_\-shaper}!enable@{enable}}
+\index{enable@{enable}!qos_shaper@{qos\-\_\-shaper}}
+\subsubsection[{enable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} qos\-\_\-shaper\-::enable}}\label{structqos__shaper_ad1b7efd18e5095785a39d68be0c78526}
+Whether shaper is enabled \hypertarget{structqos__shaper_a02926e1c2b7380a30716b5c72b1057e1}{\index{qos\-\_\-shaper@{qos\-\_\-shaper}!flags@{flags}}
+\index{flags@{flags}!qos_shaper@{qos\-\_\-shaper}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-shaper\-::flags}}\label{structqos__shaper_a02926e1c2b7380a30716b5c72b1057e1}
+Flags define which shapers are enabled, as follows\-:
+\begin{DoxyItemize}
+\item Q\-O\-S\-\_\-\-Q\-\_\-\-F\-\_\-\-I\-N\-G\-R\-E\-S\-S
+\item Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-F\-\_\-\-P\-I\-R
+\item Q\-O\-S\-\_\-\-S\-H\-A\-P\-E\-R\-\_\-\-F\-\_\-\-C\-I\-R 
+\end{DoxyItemize}\hypertarget{structqos__shaper_acefce05f90c1f51f5a6bf24e5524b3c2}{\index{qos\-\_\-shaper@{qos\-\_\-shaper}!mode@{mode}}
+\index{mode@{mode}!qos_shaper@{qos\-\_\-shaper}}
+\subsubsection[{mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf qos\-\_\-shaper\-\_\-mode\-\_\-t} qos\-\_\-shaper\-::mode}}\label{structqos__shaper_acefce05f90c1f51f5a6bf24e5524b3c2}
+Mode of Token Bucket shaper \hypertarget{structqos__shaper_a38f8330e5af78779bd61778d6495179a}{\index{qos\-\_\-shaper@{qos\-\_\-shaper}!pbs@{pbs}}
+\index{pbs@{pbs}!qos_shaper@{qos\-\_\-shaper}}
+\subsubsection[{pbs}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-shaper\-::pbs}}\label{structqos__shaper_a38f8330e5af78779bd61778d6495179a}
+Peak Burst Size \hypertarget{structqos__shaper_a09b81bffad8b09bd73100dbd781b2b3c}{\index{qos\-\_\-shaper@{qos\-\_\-shaper}!pir@{pir}}
+\index{pir@{pir}!qos_shaper@{qos\-\_\-shaper}}
+\subsubsection[{pir}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-shaper\-::pir}}\label{structqos__shaper_a09b81bffad8b09bd73100dbd781b2b3c}
+Peak Information Rate in bytes/s 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qosal__queue__api_8h}{qosal\-\_\-queue\-\_\-api.\-h}\end{DoxyCompactItemize}

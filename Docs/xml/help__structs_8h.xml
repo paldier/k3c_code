@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="help__structs_8h" kind="file">
+    <compoundname>help_structs.h</compoundname>
+    <includes refid="help__enums_8h" local="yes">help_enums.h</includes>
+    <includes refid="help__defs_8h" local="yes">help_defs.h</includes>
+    <includes local="yes">list.h</includes>
+    <includedby refid="fapi__wlan_8h" local="yes">fapi_wlan.h</includedby>
+    <includedby refid="help__proto_8h" local="yes">help_proto.h</includedby>
+    <includedby refid="ugw__structs_8h" local="no">ugw_structs.h</includedby>
+    <incdepgraph>
+      <node id="189">
+        <label>help_defs.h</label>
+        <link refid="help__defs_8h"/>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+      </node>
+      <node id="192">
+        <label>list.h</label>
+      </node>
+      <node id="187">
+        <label>help_structs.h</label>
+        <link refid="help_structs.h"/>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+      </node>
+      <node id="190">
+        <label>stdint.h</label>
+      </node>
+      <node id="191">
+        <label>syslog.h</label>
+      </node>
+      <node id="188">
+        <label>help_enums.h</label>
+        <link refid="help__enums_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="193">
+        <label>help_structs.h</label>
+        <link refid="help_structs.h"/>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+      </node>
+      <node id="195">
+        <label>help_proto.h</label>
+        <link refid="help__proto_8h"/>
+        <childnode refid="196" relation="include">
+        </childnode>
+      </node>
+      <node id="197">
+        <label>ugw_proto.h</label>
+        <link refid="ugw__proto_8h"/>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+      </node>
+      <node id="196">
+        <label>help_objlist.h</label>
+        <link refid="help__objlist_8h_source"/>
+        <childnode refid="197" relation="include">
+        </childnode>
+      </node>
+      <node id="200">
+        <label>ugw_structs.h</label>
+        <link refid="ugw__structs_8h"/>
+        <childnode refid="197" relation="include">
+        </childnode>
+      </node>
+      <node id="194">
+        <label>fapi_wlan.h</label>
+        <link refid="fapi__wlan_8h"/>
+      </node>
+      <node id="199">
+        <label>ugw_common.h</label>
+        <link refid="ugw__common_8h"/>
+      </node>
+      <node id="198">
+        <label>cal.h</label>
+        <link refid="cal_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structParamAttrList" prot="public">ParamAttrList</innerclass>
+    <innerclass refid="structObjAttrList" prot="public">ObjAttrList</innerclass>
+    <innerclass refid="structParamACSList" prot="public">ParamACSList</innerclass>
+    <innerclass refid="structObjACSList" prot="public">ObjACSList</innerclass>
+    <innerclass refid="structParamList" prot="public">ParamList</innerclass>
+    <innerclass refid="structObjList" prot="public">ObjList</innerclass>
+    <briefdescription>
+<para>File contains the data structures common across all modules in UGW software. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2015</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lantiq<sp/>Beteiligungs-GmbH<sp/>&amp;<sp/>Co.<sp/>KG</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lilienthalstrasse<sp/>15,<sp/>85579<sp/>Neubiberg,<sp/>Germany<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>For<sp/>licensing<sp/>information,<sp/>see<sp/>the<sp/>file<sp/>&apos;LICENSE&apos;<sp/>in<sp/>the<sp/>root<sp/>folder<sp/>of</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>software<sp/>module.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>*****************************************************************************<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>File<sp/>Name<sp/><sp/><sp/><sp/>:<sp/><sp/>help_structs.h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Description<sp/><sp/>:<sp/>Common<sp/>Library<sp/>contains<sp/>functions,<sp/>defines,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>structs,<sp/>enums<sp/>used<sp/>across<sp/>the<sp/>modules<sp/>like<sp/>CAL,<sp/>CAPI,*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CSD,<sp/>Servd,<sp/>and<sp/>Management<sp/>Entities<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor">#ifndef<sp/>_HELP_STRUCTS_H</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_HELP_STRUCTS_H</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="help__enums_8h" kindref="compound">help_enums.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="help__defs_8h" kindref="compound">help_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;list.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="comment">/*<sp/>@{<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="structParamAttrList" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39" refid="structParamAttrList_1a4f361455c9f6518e7571b7dcd37799d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sParamName[<ref refid="group__LIBHELP_1gaac5d922b6e3eb48b7ba829979fd73ae2" kindref="member">MAX_LEN_PARAM_NAME</ref>];<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="structParamAttrList_1a2053def555ac67f0e39742cdd467cec5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sParamProfile[<ref refid="group__LIBHELP_1ga7b87580b87e217a2cc87a362a19c91e5" kindref="member">MAX_LEN_PROFILENAME</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="structParamAttrList_1a279353c868f69304db1ab9e0620dd08a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sParamWebName[<ref refid="group__LIBHELP_1gad283ffd6255aeb7b05ce1ed512a81102" kindref="member">MAX_LEN_WEBNAME</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="structParamAttrList_1a75dc56c3f70323a05748c59882e8203e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sParamValidVal[<ref refid="group__LIBHELP_1ga121f77f1d2f8588180ca5a258fe36765" kindref="member">MAX_LEN_VALID_VALUE</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="structParamAttrList_1a626d8635ccd1c07d4e04a938ad880035" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sParamValue[<ref refid="group__LIBHELP_1ga1b79b737d896845c1c07d942ffbfe3fa" kindref="member">MAX_LEN_PARAM_VALUE</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="structParamAttrList_1ae51e6c2f62b765283184b01d5cabc4d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structParamAttrList_1ae51e6c2f62b765283184b01d5cabc4d8" kindref="member">unMinVal</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="structParamAttrList_1a990542ae05c218ca1bcbb2b12bd1880d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structParamAttrList_1a990542ae05c218ca1bcbb2b12bd1880d" kindref="member">unMaxVal</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="structParamAttrList_1adb113fb2072819c1cbccf7316f05bc0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structParamAttrList_1adb113fb2072819c1cbccf7316f05bc0c" kindref="member">unMinLen</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="structParamAttrList_1a47232c322bb7aa44bc8281de097b0126" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structParamAttrList_1a47232c322bb7aa44bc8281de097b0126" kindref="member">unMaxLen</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="structParamAttrList_1a8188e3f7aa3c97eda168df546152e0ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structParamAttrList_1a8188e3f7aa3c97eda168df546152e0ae" kindref="member">unParamFlag</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="structParamAttrList_1a7eece3633e85108272b7629c06100271" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ga73f73d414f252ff46652f16495641187" kindref="member">ListHead</ref><sp/><ref refid="structParamAttrList_1a7eece3633e85108272b7629c06100271" kindref="member">xPlist</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}<ref refid="structParamAttrList" kindref="compound">ParamAttrList</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="structObjAttrList" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58" refid="structObjAttrList_1af9bfa58adec27663f9c06da24304fd49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sObjName[<ref refid="group__LIBHELP_1ga635a84c0e3ae6e922f824064a006500d" kindref="member">MAX_LEN_OBJNAME</ref>];<sp/></highlight></codeline>
+<codeline lineno="59" refid="structObjAttrList_1af1cd26ab3f2b8c069dd248f1afff6ba9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sObjWebName[<ref refid="group__LIBHELP_1gad283ffd6255aeb7b05ce1ed512a81102" kindref="member">MAX_LEN_WEBNAME</ref>];<sp/></highlight></codeline>
+<codeline lineno="60" refid="structObjAttrList_1a2cbeec81b9de69d1f22715be64840a56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structObjAttrList_1a2cbeec81b9de69d1f22715be64840a56" kindref="member">unObjAttr</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61" refid="structObjAttrList_1a5178ea2319b79b81dfe12b57625e1996" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structParamAttrList" kindref="compound">ParamAttrList</ref><sp/><ref refid="structObjAttrList_1a5178ea2319b79b81dfe12b57625e1996" kindref="member">xParamAttrList</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62" refid="structObjAttrList_1ae251d2a8abb6aefd017e82d986a65e8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ga73f73d414f252ff46652f16495641187" kindref="member">ListHead</ref><sp/><ref refid="structObjAttrList_1ae251d2a8abb6aefd017e82d986a65e8b" kindref="member">xOlist</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}<ref refid="structObjAttrList" kindref="compound">ObjAttrList</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="structParamACSList" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71" refid="structParamACSList_1a6f10f6d98eee67fbe3467a96d1b4568b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sParamName[<ref refid="group__LIBHELP_1gaac5d922b6e3eb48b7ba829979fd73ae2" kindref="member">MAX_LEN_PARAM_NAME</ref>];<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="structParamACSList_1a6360e9d86e6060e2c030288ca13f7975" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sParamValue[<ref refid="group__LIBHELP_1ga1b79b737d896845c1c07d942ffbfe3fa" kindref="member">MAX_LEN_PARAM_VALUE</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73" refid="structParamACSList_1a91e0b1df78a7d043503337e3c149c7fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structParamACSList_1a91e0b1df78a7d043503337e3c149c7fa" kindref="member">unParamFlag</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="structParamACSList_1a519fcf46a0947e661e022ebfbb4af1e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ga73f73d414f252ff46652f16495641187" kindref="member">ListHead</ref><sp/><ref refid="structParamACSList_1a519fcf46a0947e661e022ebfbb4af1e8" kindref="member">xPlist</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}<ref refid="structParamACSList" kindref="compound">ParamACSList</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="structObjACSList" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82" refid="structObjACSList_1a5a1925a2876def6021fd40ee97408e9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sObjName[<ref refid="group__LIBHELP_1ga635a84c0e3ae6e922f824064a006500d" kindref="member">MAX_LEN_OBJNAME</ref>];<sp/></highlight></codeline>
+<codeline lineno="83" refid="structObjACSList_1a16665051fe33c9451c7c5a1dc30c5ec6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structObjACSList_1a16665051fe33c9451c7c5a1dc30c5ec6" kindref="member">unObjOper</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84" refid="structObjACSList_1a20243515414dc476a03d3b437b54cb58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structObjACSList_1a20243515414dc476a03d3b437b54cb58" kindref="member">unObjFlag</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85" refid="structObjACSList_1acb11fa2a0af21d974914dae699be33a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structParamACSList" kindref="compound">ParamACSList</ref><sp/><ref refid="structObjACSList_1acb11fa2a0af21d974914dae699be33a0" kindref="member">xParamAcsList</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86" refid="structObjACSList_1a24b267f9dc8ae7bc18775991d5391c05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ga73f73d414f252ff46652f16495641187" kindref="member">ListHead</ref><sp/><ref refid="structObjACSList_1a24b267f9dc8ae7bc18775991d5391c05" kindref="member">xOlist</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}<ref refid="structObjACSList" kindref="compound">ObjACSList</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="structParamList" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95" refid="structParamList_1a2705606e7fccfd011246eda4370cb8f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sParamName[<ref refid="group__LIBHELP_1gaac5d922b6e3eb48b7ba829979fd73ae2" kindref="member">MAX_LEN_PARAM_NAME</ref>];<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96" refid="structParamList_1a0de8a21274ebfa45ff846cd53e5079fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sParamValue[<ref refid="group__LIBHELP_1ga1b79b737d896845c1c07d942ffbfe3fa" kindref="member">MAX_LEN_PARAM_VALUE</ref>];<sp/><sp/></highlight></codeline>
+<codeline lineno="97" refid="structParamList_1a84f52fb3f1b8ea341ccf0ebbb7e562f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref><sp/><ref refid="structParamList_1a84f52fb3f1b8ea341ccf0ebbb7e562f6" kindref="member">unParamId</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98" refid="structParamList_1a36893c4507f528c478b7f22e0b1277a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structParamList_1a36893c4507f528c478b7f22e0b1277a4" kindref="member">unParamFlag</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99" refid="structParamList_1ab46066381446f338d777c744f01d0955" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ga73f73d414f252ff46652f16495641187" kindref="member">ListHead</ref><sp/><ref refid="structParamList_1ab46066381446f338d777c744f01d0955" kindref="member">xPlist</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}<ref refid="structParamList" kindref="compound">ParamList</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="structObjList" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="107" refid="structObjList_1aa8e6af61ee6cc0ab577074e55b3aa1dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sObjName[<ref refid="group__LIBHELP_1ga635a84c0e3ae6e922f824064a006500d" kindref="member">MAX_LEN_OBJNAME</ref>];<sp/></highlight></codeline>
+<codeline lineno="108" refid="structObjList_1a450648612115440cad362b3a31a1e1df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref><sp/><ref refid="structObjList_1a450648612115440cad362b3a31a1e1df" kindref="member">unSid</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109" refid="structObjList_1ac83adce2eb39530e198b835134744ce7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref><sp/><ref refid="structObjList_1ac83adce2eb39530e198b835134744ce7" kindref="member">unOid</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110" refid="structObjList_1a74aa7207a30c674333067077083e43d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structObjList_1a74aa7207a30c674333067077083e43d4" kindref="member">unObjOper</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111" refid="structObjList_1ac19269ddfee19096edfdf8ff4fa3d8a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structObjList_1ac19269ddfee19096edfdf8ff4fa3d8a9" kindref="member">unObjFlag</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112" refid="structObjList_1a9de5f33293ccef1f9fc9b9ef3bf1c358" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structParamList" kindref="compound">ParamList</ref><sp/><ref refid="structObjList_1a9de5f33293ccef1f9fc9b9ef3bf1c358" kindref="member">xParamList</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113" refid="structObjList_1afc09cd5ee68143c7785a56e4915b42a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ga73f73d414f252ff46652f16495641187" kindref="member">ListHead</ref><sp/><ref refid="structObjList_1afc09cd5ee68143c7785a56e4915b42a1" kindref="member">xOlist</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}<ref refid="structObjList" kindref="compound">ObjList</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//#ifndef<sp/>_HELP_STRUCTS_H</highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_structs.h"/>
+  </compounddef>
+</doxygen>

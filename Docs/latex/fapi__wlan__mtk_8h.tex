@@ -1,0 +1,61 @@
+\hypertarget{fapi__wlan__mtk_8h}{\section{fapi\-\_\-wlan\-\_\-mtk.\-h File Reference}
+\label{fapi__wlan__mtk_8h}\index{fapi\-\_\-wlan\-\_\-mtk.\-h@{fapi\-\_\-wlan\-\_\-mtk.\-h}}
+}
+
+
+Header file for F\-A\-P\-I 3p vendor Media\-Tek.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga855acd474011bfafa43fcd60f19677f7}{fapi\-\_\-wlan\-\_\-mtk\-\_\-hw\-\_\-init} (\hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to initialize W\-L\-A\-N Radios. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga2263cdf663761a72e9ef34b0737fed5a}{fapi\-\_\-wlan\-\_\-mtk\-\_\-hw\-\_\-uninit} (\hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to Uninitialize W\-L\-A\-N Radios. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga072e397577e8156a5d657f5ba0f188ef}{fapi\-\_\-wlan\-\_\-mtk\-\_\-capability\-\_\-query} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to query W\-L\-A\-N capability of underlying W\-L\-A\-N Radio. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_gaa410cf97e2163b3db5bbc0e26b601ed0}{fapi\-\_\-wlan\-\_\-mtk\-\_\-radio\-\_\-set} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to set W\-L\-A\-N Radio Info. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_gaa345bef0cb71602644034ff5c749b9c2}{fapi\-\_\-wlan\-\_\-mtk\-\_\-radio\-\_\-stats\-\_\-query} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to get W\-L\-A\-N Radio Statistics. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga4786caff1c55d1d5b100ce774c00c1a2}{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-add} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to add a W\-L\-A\-N S\-S\-I\-D interface, i.\-e. to create a V\-A\-P. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_gae7220c3b8286cca502ea1b49cee1be89}{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-delete} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to remove a W\-L\-A\-N S\-S\-I\-D interface, i.\-e. to delete a V\-A\-P. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga71e67cab797b2c5a7c5e9d086fe17d60}{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-set} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to set S\-S\-I\-D in W\-L\-A\-N S\-S\-I\-D Object. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga363651e024fe759b03f0e4a5ac303061}{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-get} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to get W\-L\-A\-N S\-S\-I\-D Info, e.\-g. current configuration. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_gaefaafba9a63bf363c844f1b456529f9b}{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-stats\-\_\-query} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to get W\-L\-A\-N S\-S\-I\-D Statistics. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga5bdf8123e40ea7b9ba2fd55b389b9c21}{fapi\-\_\-wlan\-\_\-mtk\-\_\-ap\-\_\-set} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to set W\-L\-A\-N Access\-Point Object. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga1f8ce919749a5229575658b633824197}{fapi\-\_\-wlan\-\_\-mtk\-\_\-ap\-\_\-get} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to get W\-L\-A\-N Access\-Point Info, e.\-g. current configuration. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga5415fb361f93510ba11c63c22052a8a0}{fapi\-\_\-wlan\-\_\-mtk\-\_\-security\-\_\-set} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to set W\-L\-A\-N Security Object (Device.\-Wifi.\-Access\-Point.\-Security). \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga3a4145145bf426f0b94c37ab1593efb8}{fapi\-\_\-wlan\-\_\-mtk\-\_\-security\-\_\-get} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to get W\-L\-A\-N Security Info. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga4a9587395749e39648a991f1390a30a2}{fapi\-\_\-wlan\-\_\-mtk\-\_\-wps\-\_\-set} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to set W\-L\-A\-N W\-P\-S Object (Device.\-Wifi.\-Access\-Point.\-W\-P\-S). \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_gab8668d80972efa350233ceb8488d8646}{fapi\-\_\-wlan\-\_\-mtk\-\_\-wps\-\_\-get} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to get W\-L\-A\-N W\-P\-S Info. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga4090a67332a33634f88ce8ee4c82196e}{fapi\-\_\-wlan\-\_\-mtk\-\_\-assoc\-\_\-devices\-\_\-query} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to get all associated stations information. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga8f6373889d77d98b133e979536b1b537}{execute\-\_\-config\-\_\-in} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, const char $\ast$script\-Name, bool $\ast$obj\-Array)
+\begin{DoxyCompactList}\small\item\em This function is used to create a config.\-in file for the F\-A\-P\-I scripts layer and call the appropriate script. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_gac0e3dab1382570b830571575cdfab26a}{parse\-\_\-config\-\_\-out} (\hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, bool $\ast$obj\-Array)
+\begin{DoxyCompactList}\small\item\em This function is used for parsing the output configuration file that was created by the script layer. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_gaddcf86d264b43cf438190c97fe1afc52}{ltq\-\_\-mtk\-\_\-sh\-\_\-helper} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, const char $\ast$script\-Name)
+\begin{DoxyCompactList}\small\item\em ltq\-\_\-mtk\-\_\-sh\-\_\-helper is the main function of this module, mostly responsible to intermediate between the F\-A\-P\-I wlan layer and the scripts layer. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_gad7f8b0c392ec8cca25a3595449ba177f}{index\-Handler} (char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Helper function that removes the index suffix from the string and returns it as integer. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_gaf0c15e2098bea9b34e939dde2e025657}{convert\-\_\-str\-\_\-to\-\_\-hex} (char $\ast$hex\-\_\-value, const char $\ast$value)
+\begin{DoxyCompactList}\small\item\em convert\-\_\-str\-\_\-to\-\_\-hex helper function that converts string to A\-S\-C\-I\-I hex string. \end{DoxyCompactList}\item 
+void \hyperlink{group__FAPI__WLAN__MTK_ga1bcf6721352838d23bd13ac5e99368a2}{remove\-\_\-new\-\_\-line} (char $\ast$s)
+\begin{DoxyCompactList}\small\item\em remove\-\_\-new\-\_\-line remove new line from string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for F\-A\-P\-I 3p vendor Media\-Tek. 

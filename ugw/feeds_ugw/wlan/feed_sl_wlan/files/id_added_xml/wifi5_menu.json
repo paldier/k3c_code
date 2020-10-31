@@ -1,0 +1,80 @@
+{
+    "menu": [
+        {
+            "name": "Basic",
+            "id": "home",
+            "childrens": [
+                {
+                    "name": "WiFi 5GHz",
+                    "icon": "wireless",
+                    "order": "3",
+                    "viewtype": "tableform",
+                    "view": "wifi5_basic",
+                    "childrens": []
+                }
+            ]
+        },
+        {
+            "name": "Advanced",
+            "id": "profile",
+            "childrens": [
+                {
+                    "name": "WiFi 5GHz",
+                    "icon": "wireless",
+                    "order": "5",
+                    "childrens": [
+                        {
+                            "name": "Advanced",
+                            "order": "1",
+                            "viewtype": "tableform",
+                            "view": "wifi5_advanced",
+                            "childrens": []
+                        },
+                        {
+                            "name": "SSIDs",
+                            "order": "2",
+                            "viewtype": "tableform",
+                            "view": "adv5_ssid",
+                            "childrens": []
+                        },
+                        {
+                            "name": "WPS",
+                            "order": "3",
+                            "viewtype": "tableform",
+                            "view": "adv5_wps",
+                            "childrens": []
+                        },
+                        {
+                            "name": "MAC Filtering",
+                            "order": "4",
+                            "viewtype": "tableform",
+                            "view": "adv5_macFiltering",
+                            "childrens": []
+                        },
+                        {
+                            "name": "WDS",
+                            "order": "5",
+                            "viewtype": "custom",
+                            "view": "wds5page",
+                            "childrens": []
+                        },
+                        {
+                            "name": "Statistics",
+                            "order": "7",
+                            "viewtype": "tableform",
+                            "view": "adv5_statistics",
+                            "childrens": []
+                        },
+                        {
+                            "name": "WLAN Logger",
+                            "order": "8",
+                            "viewtype": "tableform",
+                            "view": "wifi5_wlanLogger",
+                            "childrens": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

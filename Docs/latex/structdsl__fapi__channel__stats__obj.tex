@@ -1,0 +1,61 @@
+\hypertarget{structdsl__fapi__channel__stats__obj}{\section{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj Struct Reference}
+\label{structdsl__fapi__channel__stats__obj}\index{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj}}
+}
+
+
+{\ttfamily \#include $<$dsl\-\_\-fapi.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__stats__obj_a40d5d021d50f908b763acf052b70d532}{total\-\_\-start}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__stats__obj_ab49f9ff4bdff8cb3538236a8ce128f4b}{showtime\-\_\-start}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__stats__obj_a7ebc0d2400a363971384bca8c17ac803}{last\-\_\-showtime\-\_\-start}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__stats__obj_a92ac5b795668274a880a3f2e71cf3f99}{current\-\_\-day\-\_\-start}
+\item 
+unsigned int \hyperlink{structdsl__fapi__channel__stats__obj_aaa1e938c3a0d66c370fd3c49b178f907}{quarter\-\_\-hour\-\_\-start}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+D\-S\-L Channel Stats object declaration, based on T\-R-\/181 definitions. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structdsl__fapi__channel__stats__obj_a92ac5b795668274a880a3f2e71cf3f99}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj}!current\-\_\-day\-\_\-start@{current\-\_\-day\-\_\-start}}
+\index{current\-\_\-day\-\_\-start@{current\-\_\-day\-\_\-start}!dsl_fapi_channel_stats_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj}}
+\subsubsection[{current\-\_\-day\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj\-::current\-\_\-day\-\_\-start}}\label{structdsl__fapi__channel__stats__obj_a92ac5b795668274a880a3f2e71cf3f99}
+The Number of seconds since the beginning of the period used for collection of Current\-Day statistics. Statistics S\-H\-O\-U\-L\-D continue to be accumulated across C\-P\-E reboots, though this might not always be possible. \begin{DoxyNote}{Note}
+current\-\_\-day\-\_\-start S\-H\-O\-U\-L\-D N\-O\-T be reset when the interface statistics are reset via an interface disable / enable cycle. 
+\end{DoxyNote}
+\hypertarget{structdsl__fapi__channel__stats__obj_a7ebc0d2400a363971384bca8c17ac803}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj}!last\-\_\-showtime\-\_\-start@{last\-\_\-showtime\-\_\-start}}
+\index{last\-\_\-showtime\-\_\-start@{last\-\_\-showtime\-\_\-start}!dsl_fapi_channel_stats_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj}}
+\subsubsection[{last\-\_\-showtime\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj\-::last\-\_\-showtime\-\_\-start}}\label{structdsl__fapi__channel__stats__obj_a7ebc0d2400a363971384bca8c17ac803}
+The Number of seconds since the second most recent D\-S\-L Showtime-\/the beginning of the period used for collection of Last\-Showtime statistics. If the C\-P\-E has not retained information about the second most recent Showtime (e.\-g., on reboot), the start of Last\-Showtime statistics M\-A\-Y temporarily coincide with the start of Showtime statistics. \begin{DoxyNote}{Note}
+last\-\_\-showtime\-\_\-start S\-H\-O\-U\-L\-D N\-O\-T be reset when the interface statistics are reset via an interface disable / enable cycle. 
+\end{DoxyNote}
+\hypertarget{structdsl__fapi__channel__stats__obj_aaa1e938c3a0d66c370fd3c49b178f907}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj}!quarter\-\_\-hour\-\_\-start@{quarter\-\_\-hour\-\_\-start}}
+\index{quarter\-\_\-hour\-\_\-start@{quarter\-\_\-hour\-\_\-start}!dsl_fapi_channel_stats_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj}}
+\subsubsection[{quarter\-\_\-hour\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj\-::quarter\-\_\-hour\-\_\-start}}\label{structdsl__fapi__channel__stats__obj_aaa1e938c3a0d66c370fd3c49b178f907}
+The Number of seconds since the beginning of the period used for collection of Quarter\-Hour statistics. Statistics S\-H\-O\-U\-L\-D continue to be accumulated across C\-P\-E reboots, though this might not always be possible. \begin{DoxyNote}{Note}
+quarter\-\_\-hour\-\_\-start S\-H\-O\-U\-L\-D N\-O\-T be reset when the interface statistics are reset via an interface disable / enable cycle. 
+\end{DoxyNote}
+\hypertarget{structdsl__fapi__channel__stats__obj_ab49f9ff4bdff8cb3538236a8ce128f4b}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj}!showtime\-\_\-start@{showtime\-\_\-start}}
+\index{showtime\-\_\-start@{showtime\-\_\-start}!dsl_fapi_channel_stats_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj}}
+\subsubsection[{showtime\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj\-::showtime\-\_\-start}}\label{structdsl__fapi__channel__stats__obj_ab49f9ff4bdff8cb3538236a8ce128f4b}
+The Number of seconds since the most recent D\-S\-L Showtime -\/ the beginning of the period used for collection of Showtime statistics. Showtime is defined as successful completion of the D\-S\-L link establishment process. The Showtime statistics are those collected since the most recent establishment of the D\-S\-L link. \begin{DoxyNote}{Note}
+showtime\-\_\-start S\-H\-O\-U\-L\-D N\-O\-T be reset when the interface statistics are reset via an interface disable / enable cycle. 
+\end{DoxyNote}
+\hypertarget{structdsl__fapi__channel__stats__obj_a40d5d021d50f908b763acf052b70d532}{\index{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj}!total\-\_\-start@{total\-\_\-start}}
+\index{total\-\_\-start@{total\-\_\-start}!dsl_fapi_channel_stats_obj@{dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj}}
+\subsubsection[{total\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int dsl\-\_\-fapi\-\_\-channel\-\_\-stats\-\_\-obj\-::total\-\_\-start}}\label{structdsl__fapi__channel__stats__obj_a40d5d021d50f908b763acf052b70d532}
+The Number of seconds since the beginning of the period used for collection of Total statistics. Statistics S\-H\-O\-U\-L\-D continue to be accumulated across C\-P\-E reboots, though this might not always be possible. \begin{DoxyNote}{Note}
+total\-\_\-start S\-H\-O\-U\-L\-D N\-O\-T be reset when the interface statistics are reset via an interface disable / enable cycle. 
+\end{DoxyNote}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{dsl__fapi_8h}{dsl\-\_\-fapi.\-h}\end{DoxyCompactItemize}

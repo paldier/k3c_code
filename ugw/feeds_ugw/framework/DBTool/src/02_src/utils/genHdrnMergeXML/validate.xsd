@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Device" type="deviceType"/>
+	<xs:element name="Object" type="objType"/>
+	<xs:element name="Parameter" type="paramType"/>
+
+	<xs:complexType name="deviceType">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="Object"/>
+			<xs:element ref="Parameter"/>
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:complexType name="objType">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="Object"/>
+			<xs:element ref="Parameter"/>
+		</xs:choice>
+		<!-- Add all valid attributes for 'Object' type here -->
+		<xs:attribute name="access" use="required"/>
+		<xs:attribute name="maxEntries" use="optional"/>
+		<xs:attribute name="minEntries" use="required"/>
+		<xs:anyAttribute processContents="lax" />
+	</xs:complexType>       
+
+	<xs:complexType name="paramType" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="Object"/>
+			<xs:element ref="Parameter"/>
+		</xs:choice>            
+		<xs:attribute name="access" use="required">
+			<xs:simpleType>
+				<!-- 'access' attribute can take only
+				     either of below values -->
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="readOnly" />
+					<xs:enumeration value="readWrite" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="maxLength" use="optional"/>
+		<xs:attribute name="syntax" use="required"/>
+		<xs:attribute name="profile" use="optional"/>
+		<xs:anyAttribute processContents="lax" />
+	</xs:complexType>       
+</xs:schema>

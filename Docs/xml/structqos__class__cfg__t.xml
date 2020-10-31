@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structqos__class__cfg__t" kind="struct" prot="public">
+    <compoundname>qos_class_cfg_t</compoundname>
+    <includes refid="qosal__cl__api_8h" local="no">qosal_cl_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structqos__class__cfg__t_1a50dc761ffcaa6824d69e2be6d451b711" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__match__filter__t" kindref="compound">cl_match_filter_t</ref></type>
+        <definition>cl_match_filter_t qos_class_cfg_t::filter</definition>
+        <argsstring></argsstring>
+        <name>filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Classifier filter fields structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="807" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="807" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__class__cfg__t_1a81b6665d9574605d4a350abf8f073dd2" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__action__t" kindref="compound">cl_action_t</ref></type>
+        <definition>cl_action_t qos_class_cfg_t::action</definition>
+        <argsstring></argsstring>
+        <name>action</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Classifier action fields structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="808" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="808" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__class__cfg__t_1a11bf1df252c41444ac62c6f3317bf8b6" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t qos_class_cfg_t::intermediate_filter</definition>
+        <argsstring></argsstring>
+        <name>intermediate_filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used as an aditional criteria in conjunction with class cfg filter crieria in case of partial classification </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="809" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="809" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqos__class__cfg__t_1a3b386c0054684059ff75ab6a61627d25" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t qos_class_cfg_t::intermediate_result</definition>
+        <argsstring></argsstring>
+        <name>intermediate_result</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to pass intermediate information to next engine as an output of partial classification </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="810" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="810" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classifier structure with action and filter combined. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="164">
+        <label>cl_ip_5tuple_match_t</label>
+        <link refid="structcl__ip__5tuple__match__t"/>
+        <childnode refid="160" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+        <childnode refid="165" relation="usage">
+          <edgelabel>dst_ip</edgelabel>
+          <edgelabel>src_ip</edgelabel>
+        </childnode>
+        <childnode refid="166" relation="usage">
+          <edgelabel>src_port</edgelabel>
+          <edgelabel>dst_port</edgelabel>
+        </childnode>
+      </node>
+      <node id="157">
+        <label>cl_action_policy_rt_t</label>
+        <link refid="structcl__action__policy__rt__t"/>
+      </node>
+      <node id="162">
+        <label>cl_tcp_match_t</label>
+        <link refid="structcl__tcp__match__t"/>
+        <childnode refid="160" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+      <node id="160">
+        <label>cl_param_in_ex_t</label>
+        <link refid="structcl__param__in__ex__t"/>
+      </node>
+      <node id="153">
+        <label>cl_action_t</label>
+        <link refid="structcl__action__t"/>
+        <childnode refid="154" relation="usage">
+          <edgelabel>policer</edgelabel>
+        </childnode>
+        <childnode refid="156" relation="usage">
+          <edgelabel>vlan</edgelabel>
+        </childnode>
+        <childnode refid="157" relation="usage">
+          <edgelabel>policy_rt</edgelabel>
+        </childnode>
+      </node>
+      <node id="158">
+        <label>cl_match_filter_t</label>
+        <link refid="structcl__match__filter__t"/>
+        <childnode refid="159" relation="usage">
+          <edgelabel>app</edgelabel>
+        </childnode>
+        <childnode refid="160" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+        <childnode refid="161" relation="usage">
+          <edgelabel>ethhdr</edgelabel>
+        </childnode>
+        <childnode refid="162" relation="usage">
+          <edgelabel>tcphdr</edgelabel>
+        </childnode>
+        <childnode refid="163" relation="usage">
+          <edgelabel>dst_dhcp</edgelabel>
+          <edgelabel>src_dhcp</edgelabel>
+        </childnode>
+        <childnode refid="164" relation="usage">
+          <edgelabel>outer_ip</edgelabel>
+          <edgelabel>inner_ip</edgelabel>
+        </childnode>
+        <childnode refid="167" relation="usage">
+          <edgelabel>dst_mac</edgelabel>
+          <edgelabel>src_mac</edgelabel>
+        </childnode>
+        <childnode refid="168" relation="usage">
+          <edgelabel>iphdr</edgelabel>
+        </childnode>
+      </node>
+      <node id="168">
+        <label>cl_ip_match_t</label>
+        <link refid="structcl__ip__match__t"/>
+        <childnode refid="160" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+      <node id="165">
+        <label>cl_ipaddr_match_t</label>
+        <link refid="structcl__ipaddr__match__t"/>
+      </node>
+      <node id="167">
+        <label>cl_macaddr_match_t</label>
+        <link refid="structcl__macaddr__match__t"/>
+        <childnode refid="160" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+      <node id="159">
+        <label>cl_app_match_t</label>
+        <link refid="structcl__app__match__t"/>
+        <childnode refid="160" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+      <node id="156">
+        <label>cl_action_vlan_t</label>
+        <link refid="structcl__action__vlan__t"/>
+      </node>
+      <node id="163">
+        <label>cl_dhcp_match_t</label>
+        <link refid="structcl__dhcp__match__t"/>
+        <childnode refid="160" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+      <node id="161">
+        <label>cl_eth_match_t</label>
+        <link refid="structcl__eth__match__t"/>
+        <childnode refid="160" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+      <node id="166">
+        <label>cl_port_match_t</label>
+        <link refid="structcl__port__match__t"/>
+        <childnode refid="160" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+      <node id="155">
+        <label>policer_action_t</label>
+        <link refid="structpolicer__action__t"/>
+      </node>
+      <node id="154">
+        <label>cl_action_policer_t</label>
+        <link refid="structcl__action__policer__t"/>
+        <childnode refid="155" relation="usage">
+          <edgelabel>partial_confg</edgelabel>
+          <edgelabel>non_confg</edgelabel>
+          <edgelabel>confg</edgelabel>
+        </childnode>
+      </node>
+      <node id="152">
+        <label>qos_class_cfg_t</label>
+        <link refid="structqos__class__cfg__t"/>
+        <childnode refid="153" relation="usage">
+          <edgelabel>action</edgelabel>
+        </childnode>
+        <childnode refid="158" relation="usage">
+          <edgelabel>filter</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="806" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="806" bodyend="811"/>
+    <listofallmembers>
+      <member refid="structqos__class__cfg__t_1a81b6665d9574605d4a350abf8f073dd2" prot="public" virt="non-virtual"><scope>qos_class_cfg_t</scope><name>action</name></member>
+      <member refid="structqos__class__cfg__t_1a50dc761ffcaa6824d69e2be6d451b711" prot="public" virt="non-virtual"><scope>qos_class_cfg_t</scope><name>filter</name></member>
+      <member refid="structqos__class__cfg__t_1a11bf1df252c41444ac62c6f3317bf8b6" prot="public" virt="non-virtual"><scope>qos_class_cfg_t</scope><name>intermediate_filter</name></member>
+      <member refid="structqos__class__cfg__t_1a3b386c0054684059ff75ab6a61627d25" prot="public" virt="non-virtual"><scope>qos_class_cfg_t</scope><name>intermediate_result</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

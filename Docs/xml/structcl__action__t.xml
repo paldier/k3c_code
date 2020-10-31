@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structcl__action__t" kind="struct" prot="public">
+    <compoundname>cl_action_t</compoundname>
+    <includes refid="qosal__cl__api_8h" local="no">qosal_cl_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcl__action__t_1a0ef7b8638843204cfa3dd74c26ab20a0" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_action_t::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Following actions can be specified, and if the action is modified CL_ACTION_TC CL_ACTION_DROP CL_ACTION_DSCP CL_ACTION_VLAN CL_ACTION_POLICER CL_ACTION_POLICYRT CL_ACTION_MODIFIED : Modified after being originally added CL_ACTION_MODIFIED_OTHER : Modified by an entity other than the owner </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="554" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="554" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__t_1ad988ca7593a7db02a0336ca43823e713" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_action_t::tc</definition>
+        <argsstring></argsstring>
+        <name>tc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mark Traffic Class action </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="563" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="563" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__t_1a38aa686bf4ea526cd44a6956b95391ff" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_action_t::drop</definition>
+        <argsstring></argsstring>
+        <name>drop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Drop packet action for firewall </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="564" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="564" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__t_1ad1d7d787f8308358001d3e7a7a38e569" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_action_t::dscp</definition>
+        <argsstring></argsstring>
+        <name>dscp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>New DSCP value to remark </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="565" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="565" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__t_1a0be5ab503978c3b1df4db2e0bb6cfa3e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_action_t::accl</definition>
+        <argsstring></argsstring>
+        <name>accl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For Acceleration action support </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="566" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="566" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__t_1a68aff443f2f8b721c811659a53ab81a2" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__action__vlan__t" kindref="compound">cl_action_vlan_t</ref></type>
+        <definition>cl_action_vlan_t cl_action_t::vlan</definition>
+        <argsstring></argsstring>
+        <name>vlan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>VLAN PCP value and/or VLAN Id remark </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="567" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="567" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__t_1a9a133ee1bbff2b44eb4cf39b5fd47950" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__action__policer__t" kindref="compound">cl_action_policer_t</ref></type>
+        <definition>cl_action_policer_t cl_action_t::policer</definition>
+        <argsstring></argsstring>
+        <name>policer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Policer action </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="568" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="568" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__action__t_1a99f7a05dd6c2ea8da703b93d501c8808" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__action__policy__rt__t" kindref="compound">cl_action_policy_rt_t</ref></type>
+        <definition>cl_action_policy_rt_t cl_action_t::policy_rt</definition>
+        <argsstring></argsstring>
+        <name>policy_rt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Policy routing/forwarding action on the packet </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="569" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="569" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classifier Action Data structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="22">
+        <label>cl_action_policy_rt_t</label>
+        <link refid="structcl__action__policy__rt__t"/>
+      </node>
+      <node id="18">
+        <label>cl_action_t</label>
+        <link refid="structcl__action__t"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>policer</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>vlan</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>policy_rt</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>cl_action_vlan_t</label>
+        <link refid="structcl__action__vlan__t"/>
+      </node>
+      <node id="20">
+        <label>policer_action_t</label>
+        <link refid="structpolicer__action__t"/>
+      </node>
+      <node id="19">
+        <label>cl_action_policer_t</label>
+        <link refid="structcl__action__policer__t"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>partial_confg</edgelabel>
+          <edgelabel>non_confg</edgelabel>
+          <edgelabel>confg</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="553" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="553" bodyend="570"/>
+    <listofallmembers>
+      <member refid="structcl__action__t_1a0be5ab503978c3b1df4db2e0bb6cfa3e" prot="public" virt="non-virtual"><scope>cl_action_t</scope><name>accl</name></member>
+      <member refid="structcl__action__t_1a38aa686bf4ea526cd44a6956b95391ff" prot="public" virt="non-virtual"><scope>cl_action_t</scope><name>drop</name></member>
+      <member refid="structcl__action__t_1ad1d7d787f8308358001d3e7a7a38e569" prot="public" virt="non-virtual"><scope>cl_action_t</scope><name>dscp</name></member>
+      <member refid="structcl__action__t_1a0ef7b8638843204cfa3dd74c26ab20a0" prot="public" virt="non-virtual"><scope>cl_action_t</scope><name>flags</name></member>
+      <member refid="structcl__action__t_1a9a133ee1bbff2b44eb4cf39b5fd47950" prot="public" virt="non-virtual"><scope>cl_action_t</scope><name>policer</name></member>
+      <member refid="structcl__action__t_1a99f7a05dd6c2ea8da703b93d501c8808" prot="public" virt="non-virtual"><scope>cl_action_t</scope><name>policy_rt</name></member>
+      <member refid="structcl__action__t_1ad988ca7593a7db02a0336ca43823e713" prot="public" virt="non-virtual"><scope>cl_action_t</scope><name>tc</name></member>
+      <member refid="structcl__action__t_1a68aff443f2f8b721c811659a53ab81a2" prot="public" virt="non-virtual"><scope>cl_action_t</scope><name>vlan</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

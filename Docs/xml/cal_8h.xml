@@ -1,0 +1,418 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="cal_8h" kind="file">
+    <compoundname>cal.h</compoundname>
+    <includes local="no">ugw_objmsg.h</includes>
+    <includes refid="ugw__proto_8h" local="no">ugw_proto.h</includes>
+    <includes local="no">capi.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>help_defs.h</label>
+        <link refid="help__defs_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>stdarg.h</label>
+      </node>
+      <node id="11">
+        <label>list.h</label>
+      </node>
+      <node id="10">
+        <label>help_structs.h</label>
+        <link refid="help__structs_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>help_proto.h</label>
+        <link refid="help__proto_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+      <node id="18">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2">
+        <label>ugw_proto.h</label>
+        <link refid="ugw__proto_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>help_objlist.h</label>
+        <link refid="help__objlist_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ugw_enums.h</label>
+        <link refid="ugw__enums_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ugw_structs.h</label>
+        <link refid="ugw__structs_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ugw_defs.h</label>
+        <link refid="ugw__defs_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>syslog.h</label>
+      </node>
+      <node id="27">
+        <label>capi.h</label>
+      </node>
+      <node id="17">
+        <label>help_debug.h</label>
+        <link refid="help__debug_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>string.h</label>
+      </node>
+      <node id="1">
+        <label>ugw_objmsg.h</label>
+      </node>
+      <node id="23">
+        <label>help_error.h</label>
+        <link refid="help__error_8h"/>
+      </node>
+      <node id="25">
+        <label>libubox/blobmsg_json.h</label>
+      </node>
+      <node id="7">
+        <label>help_enums.h</label>
+        <link refid="help__enums_8h"/>
+      </node>
+      <node id="22">
+        <label>time.h</label>
+      </node>
+      <node id="0">
+        <label>cal.h</label>
+        <link refid="cal.h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>sys/time.h</label>
+      </node>
+      <node id="26">
+        <label>libubox/blobmsg.h</label>
+      </node>
+      <node id="13">
+        <label>stdio.h</label>
+      </node>
+      <node id="19">
+        <label>help_logging.h</label>
+        <link refid="help__logging_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>inttypes.h</label>
+      </node>
+      <node id="24">
+        <label>libubus.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__LIBCAL_1gae3a199f14f16bdc4294dc90a98d26389" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cal_getValue</definition>
+        <argsstring>(INOUT MsgHeader *pxObj)</argsstring>
+        <name>cal_getValue</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxObj</declname>
+        </param>
+        <briefdescription>
+<para>API to get the values of parameters in the given object, their SID and OID from the DB and real time statistics from the system. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">pxObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Get the parameter values </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Parameter Value: To get the values, fill the MsgHeader-&gt;unSubOper=SOPT_OBJVALUE, MsgHeader-&gt;pObjType as type <ref refid="structObjList" kindref="compound">ObjList</ref> and fill the expected value names as Input <linebreak/>
+ The Output value returned is the <ref refid="structObjList" kindref="compound">ObjList</ref> with values filled for the requested parameters </para><simplesectsep/><para>Parameter Attributes: To get the values, fill the MsgHeader-&gt;unSubOper=SOPT_OBJATTR, MsgHeader-&gt;pObjType as type <ref refid="structObjAttrList" kindref="compound">ObjAttrList</ref> and fill the expected value names as Input <linebreak/>
+ The Output value is <ref refid="structObjAttrList" kindref="compound">ObjAttrList</ref> with validation attribute values filled for the requested parameters </para></simplesect>
+<simplesect kind="return"><para>UGW_SUCCESS on success / ERROR Code on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/cal.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBCAL_1ga886e5f6e932794f73ee4b9c985ad609d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cal_setValue</definition>
+        <argsstring>(INOUT MsgHeader *pxObjList)</argsstring>
+        <name>cal_setValue</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxObjList</declname>
+        </param>
+        <briefdescription>
+<para>API to set the value(s) for parameter(s) in one or multiple objects in the System. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">pxObjList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sets the Name, Id and values for the list of objects and parameters to be set </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>For Input, fill the MsgHeader-&gt;unSubOper=SOPT_OBJVALUE, MsgHeader-&gt;pObjType as type <ref refid="structObjList" kindref="compound">ObjList</ref> and fill in the name value pairs to be set. <linebreak/>
+ The Output <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> is filled only if the SET operation fails. The <ref refid="structObjList" kindref="compound">ObjList</ref> contains the list of failed object/parameter and eror string in the parameter name and value fields respectively. </para></simplesect>
+<simplesect kind="return"><para>UGW_SUCCESS on success / ERROR Code on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/cal.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBCAL_1ga2490637f30536869ccdf1694639a011a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cal_getValueFromDb</definition>
+        <argsstring>(INOUT MsgHeader *pxObj)</argsstring>
+        <name>cal_getValueFromDb</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxObj</declname>
+        </param>
+        <briefdescription>
+<para>API to get the values of parameters in an object, their OID, SID and dynamic attribute information from the DB only. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">pxObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gets the list of objects and parameters with name of values that need to be fetched </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>UGW_SUCCESS on success / ERROR Code on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/cal.h" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBCAL_1ga95a08176db1a7c26f079e822b3c00f6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cal_setValueToDb</definition>
+        <argsstring>(IN MsgHeader *pxObjList)</argsstring>
+        <name>cal_setValueToDb</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxObjList</declname>
+        </param>
+        <briefdescription>
+<para>API to set the value(s) for parameter(s) in one or multiple objects to the DB. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObjList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sets the Name, Id and values for the desired list of objects and parameters </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>UGW_SUCCESS on success / ERROR Code on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/cal.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBCAL_1ga1d47677aa96d141afef95e4ba948d235" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cal_updatePeriodicValues</definition>
+        <argsstring>(INOUT MsgHeader *pxMsg)</argsstring>
+        <name>cal_updatePeriodicValues</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxMsg</declname>
+        </param>
+        <briefdescription>
+<para>API to fetch the values of parameters from SL and set it to DB. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>If the object contains no parameters, then all the parameters of that object will be fetched </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">pxMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fetches parameter values and sets it to DB. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>For Input, fill the MsgHeader-&gt;unSubOper=SOPT_OBJVALUE, MsgHeader-&gt;pObjType as type <ref refid="structObjList" kindref="compound">ObjList</ref> and fill the expected value names <linebreak/>
+ The Output <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> is filled only if the SET to DB fails. The <ref refid="structObjList" kindref="compound">ObjList</ref> contains the list of failed object/parameter and eror string in the parameter name and value fields respectively. </para></simplesect>
+<simplesect kind="return"><para>UGW_SUCCESS on success / UGW_FAILURE on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/cal.h" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBCAL_1gad84cebd364884a0d3e3447065174a191" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cal_sendMsgToPolld</definition>
+        <argsstring>(IN MsgHeader *pxMsg, IN PolldTimeInfo *pPolldTime)</argsstring>
+        <name>cal_sendMsgToPolld</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxMsg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__SYSFRAMEWORK__POLLD_1gaac3d35d6a6150660580f1c201baf5ca9" kindref="member">PolldTimeInfo</ref> *</type>
+          <declname>pPolldTime</declname>
+        </param>
+        <briefdescription>
+<para>API to send the object(s) and timer(s) to polld. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message header contains objList and <ref refid="structParamList" kindref="compound">ParamList</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pPolldTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contains polld timer info </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>UGW_SUCCESS on success / UGW_FAILURE on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/cal.h" line="84" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>File contains structure and function definitions for CAL functionalities. CAL provides a set of APIs that allow the get/set of data from the database for different modules across the system. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/>Copyright<sp/>(c)<sp/>2015</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/>Lantiq<sp/>Beteiligungs-GmbH<sp/>&amp;<sp/>Co.<sp/>KG</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>Lilienthalstrasse<sp/>15,<sp/>85579<sp/>Neubiberg,<sp/>Germany<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>For<sp/>licensing<sp/>information,<sp/>see<sp/>the<sp/>file<sp/>&apos;LICENSE&apos;<sp/>in<sp/>the<sp/>root<sp/>folder<sp/>of</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>this<sp/>software<sp/>module.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************<sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>File<sp/>Name<sp/><sp/>:<sp/>cal.h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>Description:<sp/>cal<sp/>-<sp/>common<sp/>adaptation<sp/>layer<sp/>exposes<sp/>APIs<sp/>that<sp/>can<sp/>be<sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>used<sp/>to<sp/>get<sp/>or<sp/>set<sp/>values<sp/>in<sp/>the<sp/>database.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CAL<sp/>APIs<sp/>are<sp/>called<sp/>from<sp/>various<sp/>management<sp/>entities<sp/>and<sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>or<sp/>service<sp/>libraries<sp/>to<sp/>interface<sp/>with<sp/>the<sp/>system<sp/>and<sp/><sp/><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>the<sp/>database.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="comment">/*<sp/>@{<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_CAL_H</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_CAL_H</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ugw_objmsg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="ugw__proto_8h" kindref="compound">ugw_proto.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;capi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBCAL_1gae3a199f14f16bdc4294dc90a98d26389" kindref="member">cal_getValue</ref>(<ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*<sp/>pxObj);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBCAL_1ga886e5f6e932794f73ee4b9c985ad609d" kindref="member">cal_setValue</ref>(<ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*<sp/>pxObjList);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBCAL_1ga2490637f30536869ccdf1694639a011a" kindref="member">cal_getValueFromDb</ref>(<ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*<sp/>pxObj);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBCAL_1ga95a08176db1a7c26f079e822b3c00f6d" kindref="member">cal_setValueToDb</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*<sp/>pxObjList);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBCAL_1ga1d47677aa96d141afef95e4ba948d235" kindref="member">cal_updatePeriodicValues</ref>(<ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*<sp/>pxMsg);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBCAL_1gad84cebd364884a0d3e3447065174a191" kindref="member">cal_sendMsgToPolld</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*<sp/>pxMsg,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structpolldInfo" kindref="compound">PolldTimeInfo</ref><sp/>*<sp/>pPolldTime);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*_CAL_H*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>@}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/cal.h"/>
+  </compounddef>
+</doxygen>

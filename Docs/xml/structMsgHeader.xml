@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structMsgHeader" kind="struct" prot="public">
+    <compoundname>MsgHeader</compoundname>
+    <includes refid="ugw__structs_8h" local="no">ugw_structs.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structMsgHeader_1a669c6f42a4b2f1b5ceb28e5e8ecb689d" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t MsgHeader::unMainOper</definition>
+        <argsstring></argsstring>
+        <name>unMainOper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>GET | SET | ROLLBACK | FACTORY RESET | BACKUP | RESTORE | REBOOT | FW_UPGRADE </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" line="39" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMsgHeader_1a23764d626c84a4f847c356e9a0c154ed" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t MsgHeader::unSubOper</definition>
+        <argsstring></argsstring>
+        <name>unSubOper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ID_ONLY | SUB_TREE | ATTR_ONLY | ATTR_ACS | OTHER </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" line="40" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMsgHeader_1a10f7c7b6792d6280e8efca09dd9bdcbf" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t MsgHeader::unOwner</definition>
+        <argsstring></argsstring>
+        <name>unOwner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WEB | TR069 | UPnP | CLI | OTHER </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" line="41" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMsgHeader_1a6b8c97c2b81c02938508b180a4af8360" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t MsgHeader::nFlag</definition>
+        <argsstring></argsstring>
+        <name>nFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" line="42" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMsgHeader_1a9012032bb9a4daaa98536c941394da2c" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t MsgHeader::unMsgSize</definition>
+        <argsstring></argsstring>
+        <name>unMsgSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MsgSize </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" line="43" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMsgHeader_1a72b10e80b8417cde7c83d543b0cfed71" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* MsgHeader::pObjType</definition>
+        <argsstring></argsstring>
+        <name>pObjType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List ptr refers Objlist | <ref refid="structObjAttrList" kindref="compound">ObjAttrList</ref> | ObjAcsList </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" line="44" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains the header part of the msg with objlist. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" line="38" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_structs.h" bodystart="37" bodyend="45"/>
+    <listofallmembers>
+      <member refid="structMsgHeader_1a6b8c97c2b81c02938508b180a4af8360" prot="public" virt="non-virtual"><scope>MsgHeader</scope><name>nFlag</name></member>
+      <member refid="structMsgHeader_1a72b10e80b8417cde7c83d543b0cfed71" prot="public" virt="non-virtual"><scope>MsgHeader</scope><name>pObjType</name></member>
+      <member refid="structMsgHeader_1a669c6f42a4b2f1b5ceb28e5e8ecb689d" prot="public" virt="non-virtual"><scope>MsgHeader</scope><name>unMainOper</name></member>
+      <member refid="structMsgHeader_1a9012032bb9a4daaa98536c941394da2c" prot="public" virt="non-virtual"><scope>MsgHeader</scope><name>unMsgSize</name></member>
+      <member refid="structMsgHeader_1a10f7c7b6792d6280e8efca09dd9bdcbf" prot="public" virt="non-virtual"><scope>MsgHeader</scope><name>unOwner</name></member>
+      <member refid="structMsgHeader_1a23764d626c84a4f847c356e9a0c154ed" prot="public" virt="non-virtual"><scope>MsgHeader</scope><name>unSubOper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,58 @@
+\hypertarget{fapi__mcast_8h}{\section{fapi\-\_\-mcast.\-h File Reference}
+\label{fapi__mcast_8h}\index{fapi\-\_\-mcast.\-h@{fapi\-\_\-mcast.\-h}}
+}
+
+
+This File contains the constants, enumerations, related data structures and A\-P\-I for using the functionality provided by Multicast F\-A\-P\-I.  
+
+
+{\ttfamily \#include $<$linux/if\-\_\-ether.\-h$>$}\\*
+{\ttfamily \#include $<$linux/ioctl.\-h$>$}\\*
+{\ttfamily \#include $<$netinet/in.\-h$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include $<$sys/types.\-h$>$}\\*
+{\ttfamily \#include $<$sys/stat.\-h$>$}\\*
+{\ttfamily \#include $<$fcntl.\-h$>$}\\*
+{\ttfamily \#include $<$sys/ioctl.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structipaddr__t}{ipaddr\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Structure describing I\-P Address type. \end{DoxyCompactList}\item 
+struct \hyperlink{structMCAST__MEMBER__t}{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t}
+\begin{DoxyCompactList}\small\item\em Structure describing multicast membership configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__FAPI__MCAST_gaa55207000cd9168578be60cca21141e6}{\#define \hyperlink{group__FAPI__MCAST_gaa55207000cd9168578be60cca21141e6}{I\-F\-S\-I\-Z\-E}~20}\label{group__FAPI__MCAST_gaa55207000cd9168578be60cca21141e6}
+
+\begin{DoxyCompactList}\small\item\em Maximum interface name size. \end{DoxyCompactList}\item 
+\hypertarget{group__FAPI__MCAST_gaeafdc97c74222a08b365112551cffbf6}{\#define \hyperlink{group__FAPI__MCAST_gaeafdc97c74222a08b365112551cffbf6}{F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S}~0x0}\label{group__FAPI__MCAST_gaeafdc97c74222a08b365112551cffbf6}
+
+\begin{DoxyCompactList}\small\item\em F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S return value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__FAPI__MCAST_ga723256dea8a6fd9c487829bc1ed6f911}{ptype\-\_\-t} \{ \hyperlink{group__FAPI__MCAST_gga723256dea8a6fd9c487829bc1ed6f911acfc4c1053c60b6cc2a7776c60969f31f}{I\-P\-V4} = 0, 
+\hyperlink{group__FAPI__MCAST_gga723256dea8a6fd9c487829bc1ed6f911aff712168361fe68b2bb6193df4977d3c}{I\-P\-V6} = 1, 
+\hyperlink{group__FAPI__MCAST_gga723256dea8a6fd9c487829bc1ed6f911aef2863a469df3ea6871d640e3669a2f2}{I\-N\-V\-A\-L\-I\-D}
+ \}
+\begin{DoxyCompactList}\small\item\em enumerations for protocol types \-: I\-P\-V4,I\-P\-V6 and I\-N\-V\-A\-L\-I\-D \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__FAPI__MCAST_gafbac858165d5e50aa73d570f1126d239}{fapi\-\_\-mch\-\_\-add\-\_\-entry} (\hyperlink{structMCAST__MEMBER__t}{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t} $\ast$mch\-\_\-mem)
+\begin{DoxyCompactList}\small\item\em This F\-A\-P\-I perform A\-D\-D i.\-e it informs M\-C-\/\-Helper module about new Join request received by mcastd . \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__MCAST_ga6286c923439cc8e19147947793d93b5f}{fapi\-\_\-mch\-\_\-update\-\_\-entry} (\hyperlink{structMCAST__MEMBER__t}{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t} $\ast$mch\-\_\-mem)
+\begin{DoxyCompactList}\small\item\em This F\-A\-P\-I perform Update i.\-e it informs M\-C-\/\-Helper module about Join request for already playing group is received by mcastd . \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__MCAST_ga5bcc01589f050c9a2ab598448541409e}{fapi\-\_\-mch\-\_\-del\-\_\-entry} (\hyperlink{structMCAST__MEMBER__t}{M\-C\-A\-S\-T\-\_\-\-M\-E\-M\-B\-E\-R\-\_\-t} $\ast$mch\-\_\-mem)
+\begin{DoxyCompactList}\small\item\em This F\-A\-P\-I perform D\-E\-L\-E\-T\-E i.\-e it informs M\-C-\/\-Helper module about Leave request received by mcastd . \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__MCAST_ga273dfc7cf664728003a52ec6956baf58}{fapi\-\_\-mch\-\_\-init} (void)
+\begin{DoxyCompactList}\small\item\em This F\-A\-P\-I perform initilization i.\-e it insmod mcast\-\_\-helper and create /dev/mcast device . \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__MCAST_ga2bbfa1785e9b2b44cdcc3ed12497aa45}{fapi\-\_\-mch\-\_\-uninit} (void)
+\begin{DoxyCompactList}\small\item\em This F\-A\-P\-I perform uninitilization i.\-e it rmmod mcast\-\_\-helper . \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This File contains the constants, enumerations, related data structures and A\-P\-I for using the functionality provided by Multicast F\-A\-P\-I. 

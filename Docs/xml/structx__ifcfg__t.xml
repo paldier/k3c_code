@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structx__ifcfg__t" kind="struct" prot="public">
+    <compoundname>x_ifcfg_t</compoundname>
+    <includes refid="qosal__queue__api_8h" local="no">qosal_queue_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structx__ifcfg__t_1a8fd8c601b8624f82b34eb96673726d48" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t x_ifcfg_t::uiFlags</definition>
+        <argsstring></argsstring>
+        <name>uiFlags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operational flags </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="362" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="362" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx__ifcfg__t_1aac5a55bd377922f0fd0f56f6b0b4ab43" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char x_ifcfg_t::ifnames[20][MAX_IF_NAME_LEN]</definition>
+        <argsstring>[20][MAX_IF_NAME_LEN]</argsstring>
+        <name>ifnames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List of interface names </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="363" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="363" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx__ifcfg__t_1accff1ffe5db8d5f6d96b007b8bff2157" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char x_ifcfg_t::base_ifnames[20][MAX_IF_NAME_LEN]</definition>
+        <argsstring>[20][MAX_IF_NAME_LEN]</argsstring>
+        <name>base_ifnames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List of base interface names </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="364" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="364" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx__ifcfg__t_1a09e6a73488b8c4dd93a4202fe11f954e" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char x_ifcfg_t::logical_base[20][MAX_IF_NAME_LEN]</definition>
+        <argsstring>[20][MAX_IF_NAME_LEN]</argsstring>
+        <name>logical_base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List of logical base interface names </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="365" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx__ifcfg__t_1a465fac74e7e1a3c4a255e7ad550c7fd2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__FAPI__QOS__GENERAL_1ga23c1893cfe6a7875c1a418338c6f09ad" kindref="member">iftype_t</ref></type>
+        <definition>iftype_t x_ifcfg_t::ifgroup</definition>
+        <argsstring></argsstring>
+        <name>ifgroup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Interface category </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="366" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structx__ifcfg__t_1ad6a9705c42a0090aa7ed0d4a6b9b1a55" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref></type>
+        <definition>int32_t x_ifcfg_t::num_entries</definition>
+        <argsstring></argsstring>
+        <name>num_entries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of interfaces under given interface category </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="367" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="367" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>QoS interface mapping structure for interface process communication. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" line="361" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_queue_api.h" bodystart="361" bodyend="368"/>
+    <listofallmembers>
+      <member refid="structx__ifcfg__t_1accff1ffe5db8d5f6d96b007b8bff2157" prot="public" virt="non-virtual"><scope>x_ifcfg_t</scope><name>base_ifnames</name></member>
+      <member refid="structx__ifcfg__t_1a465fac74e7e1a3c4a255e7ad550c7fd2" prot="public" virt="non-virtual"><scope>x_ifcfg_t</scope><name>ifgroup</name></member>
+      <member refid="structx__ifcfg__t_1aac5a55bd377922f0fd0f56f6b0b4ab43" prot="public" virt="non-virtual"><scope>x_ifcfg_t</scope><name>ifnames</name></member>
+      <member refid="structx__ifcfg__t_1a09e6a73488b8c4dd93a4202fe11f954e" prot="public" virt="non-virtual"><scope>x_ifcfg_t</scope><name>logical_base</name></member>
+      <member refid="structx__ifcfg__t_1ad6a9705c42a0090aa7ed0d4a6b9b1a55" prot="public" virt="non-virtual"><scope>x_ifcfg_t</scope><name>num_entries</name></member>
+      <member refid="structx__ifcfg__t_1a8fd8c601b8624f82b34eb96673726d48" prot="public" virt="non-virtual"><scope>x_ifcfg_t</scope><name>uiFlags</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

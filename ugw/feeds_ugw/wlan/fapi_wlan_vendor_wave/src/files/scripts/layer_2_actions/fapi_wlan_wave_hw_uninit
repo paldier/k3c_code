@@ -1,0 +1,56 @@
+#!/bin/sh
+
+# Uninit Wave driver and clean the environment
+# Needed object: None
+
+# Source library script
+[ ! "$FAPI_WLAN_WAVE_INIT_PLATFORM" ] && . /tmp/wlan_wave/fapi_wlan_wave_init_platform.sh
+
+print2log DBG "start fapi_wlan_wave_hw_uninit"
+
+# Check if hostapd is up and if so, bring all interfaces down
+hostapd_instances=`ps | grep hostapd -c`
+if [ $hostapd_instances -gt 0 ]; then
+	ifconfig | grep wlan > ${WAVE_TMP}/ifconfig_res
+	running_interfaces=`get_interfaces_from_ifconfig ${WAVE_TMP}/ifconfig_res`
+	for current_interface in $running_interfaces; do
+		(. $ETC_PATH/fapi_wlan_wave_down $current_interface)
+	done
+fi
+
+# Remove status file
+[ -e $wave_start_failure ] && rm $wave_start_failure
+[ -e $wave_init_failure ] && rm $wave_init_failure
+[ -e $wave_init_success ] && rm $wave_init_success
+
+# Rmmod other drivers
+[ -e $ETC_PATH/wave_wifi_parp_ctrl.sh ] && (. $ETC_PATH/wave_wifi_parp_ctrl.sh stop)
+[ -e $ETC_PATH/wave_wifi_l2f_ctrl.sh ] && (. $ETC_PATH/wave_wifi_l2f_ctrl.sh stop)
+[ -e $ETC_PATH/wmdctrl.sh ] && (. $ETC_PATH/wmdctrl.sh stop)
+
+# Rmmod the Wave driver
+(. $ETC_PATH/fapi_wlan_wave_init_driver.sh stop)
+
+# Remove Wave related symbolic links
+(. $ETC_PATH/fapi_wlan_wave_init_links.sh stop)
+
+# Rmmod the RTLogger
+(. $ETC_PATH/fapi_wlan_wave_init_rtlogger.sh stop)
+# Call fapi_wlan_wave_drvhlpr.sh to validate that drvhlpr exit on rmmod (can call also if interface not exist)
+# fapi_wlan_wave_drvhlpr.sh will kill drvhlpr if exist.
+(. $ETC_PATH/fapi_wlan_wave_init_drvhlpr.sh stop wlan0)
+(. $ETC_PATH/fapi_wlan_wave_init_drvhlpr.sh stop wlan1)
+
+# Delete files created during scripts execution
+rm -f ${WAVE_TMP}/*.ini ${WAVE_TMP}/driver_api* ${WAVE_TMP}/*.tcl ${WAVE_TMP}/set_driver_params_* ${WAVE_TMP}/fapi_wlan_wave_init_platform.sh ${RECOVERY_CONF}* ${COC_CONF}* ${CHANNEL_CONF}* ${STA_LIMITS_CONF}* ${WAVE_TMP}/wlan*mac ${WAVE_TMP}/ifconfig_res
+
+# Create the output configuration file
+cat /dev/null > ${OUT_CONF}
+
+# Configuration is completed successfully
+update_conf_out "wlan_configuration_status" "success"
+
+# DEBUG: TODO: REMOVE
+#cp ${OUT_CONF} ${WAVE_TMP}/out_conf_uninit
+
+print2log DBG "fapi_wlan_wave_hw_uninit done"

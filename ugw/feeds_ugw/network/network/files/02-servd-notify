@@ -1,0 +1,259 @@
+#!/bin/sh
+#
+# Iface hotplug script to notify servd for interface and proto events.
+#
+
+. /usr/share/libubox/jshn.sh
+. /etc/ugw_notify_defs.sh
+
+PUMA_BOARD_TYPE="UNKNOWN"
+get_puma_board_id()
+{
+	local boardid="`awk -F'[= ]' '{for(i=1;i<NF;i++) { if ($i == "BoardID") {i++; print $i; break;}}; }' /proc/cmdline`"
+	if [ "$boardid" = "0xE6" ]; then
+		## HVP_BOARD
+		PUMA_BOARD_TYPE="HVP_BOARD"
+	elif [ "$boardid" = "0xE9" ]; then
+		## CGP_BOARD
+		PUMA_BOARD_TYPE="CGP_BOARD"
+	elif [ "$boardid" = "0xE5" ]; then
+		## EASY750
+		PUMA_BOARD_TYPE="EASY750_BOARD"
+	else
+		echo "Invalid Puma BoardID"
+		return 1
+	fi
+	return 0
+}
+
+eth_get_iface_data_rate()
+{
+	local ndev ntmp sw_cmd_prefix;
+	(grep -q xRX200 /proc/cpuinfo || grep -q GRX200 /proc/cpuinfo || 
+		grep -q xRX330 /proc/cpuinfo || grep -q GRX330 /proc/cpuinfo ) && {
+		sw_cmd_prefix=IFX_ETHSW
+		ndev=0
+	} || {
+		sw_cmd_prefix=GSW
+		[ "$1" = "lan" ] && ndev=0 || ndev=1
+	}
+	if [ -r /etc/rc.d/config.sh ]; then
+		. /etc/rc.d/config.sh 2> /dev/null
+		plat_form=${CONFIG_BUILD_SUFFIX%%_*}
+		platform=`echo $plat_form |tr '[:lower:]' '[:upper:]'`
+	fi
+	if [ "$platform" = "HAVEN" -a $ndev = 1 ]; then
+		## In puma, we have rgmii ETH WAN port & it's managing by synopsys driver
+		get_puma_board_id
+		if [ "$PUMA_BOARD_TYPE" = "HVP_BOARD" ]; then
+			nrate=`cat /proc/net/synopsys/showInterfaceStatus | awk -F'|' '/nsgmii0/{print $6}'`
+		else
+			nrate=`cat /proc/net/synopsys/showInterfaceStatus | awk -F'|' '/nrgmii2/{print $6}'`
+		fi
+	else
+		nrate=$(switch_cli ${sw_cmd_prefix}_PORT_LINK_CFG_GET dev=$ndev nPortId=$2)
+	fi
+	ntmp=${nrate##*eSpeed:}
+	nrate=`echo ${ntmp// (*/}|sed 's/[\t ]//'`
+}
+
+eth_switch_port_status()
+{
+	. /etc/switchports.conf
+	local lan_ports=$switch_lan_ports
+	local wan_ports=$switch_mii1_port
+	local ncount;
+	if [ "${1::4}" = "eth0" ]; then
+		ncount=1;
+		for _swport in $lan_ports; do
+			if [ "${1:5}" = "$ncount" ]; then
+				eth_get_iface_data_rate lan $_swport
+				break;
+			fi
+			ncount=$((ncount+1))
+		done
+	elif [ "${1::4}" = "eth1" ]; then
+		ncount=1;
+		for _swport in $wan_ports; do
+			if [ "${1:3}" = "$ncount" ]; then
+				eth_get_iface_data_rate wan $_swport
+				break;
+			fi
+			ncount=$((ncount+1))
+		done
+	fi
+}
+
+servd_notify_iface_up()
+{
+        if [ "${connname::5}" = "ipoa_" ]; then
+                ifconfig $conn_ifname $ipaddr netmask 255.255.255.0 pointopoint $nexthop up
+		route add default gw $nexthop dev $conn_ifname metric $(uci get network.${connname}.metric)
+        fi
+
+	if [ "${connname::6}" = "iface_" ]; then
+		eth_switch_port_status "$device"
+		ubus call servd notify '{
+			"notify_id" : '$NOTIFY_INTERFACE_UP',
+			"type" : false,
+			"pn1" : "device", "pv1" : "'$device'",
+			"pn2" : "rate",   "pv2" : "'$nrate'"
+		}'
+	else
+		if [ "$MWAN" != "1" ]; then
+			[ -f /etc/init.d/host_update ] && HOTPLUG=1 ipaddr="$ipaddr" /etc/init.d/host_update reload
+			ubus call servd notify '{
+				"notify_id" : '$NOTIFY_NETIFD_IPADDRESS_ADD',
+				"type" : false,
+				"pn1" : "connname",    "pv1" : "'$connname'",
+				"pn2" : "conn_ifname", "pv2" : "'$conn_ifname'",
+				"pn3" : "device",      "pv3" : "'$device'",
+				"pn4" : "ipaddr",      "pv4" : "'$ipaddr'",
+				"pn5" : "prefix",      "pv5" : "'$prefix'",
+				"pn6" : "ip6addr",     "pv6" : "'$ip6addr'",
+				"pn7" : "ip6mask",     "pv7" : "'$ip6mask'",
+				"pn8" : "nexthop",     "pv8" : "'$nexthop'",
+				"pn9" : "dns1",        "pv9" : "'$dns1'",
+				"pn10" : "dns2",       "pv10" : "'$dns2'",
+			}'
+		fi
+
+		[ -f /etc/config/mwan3 ] && {
+			local temp
+			temp=`cat /etc/config/mwan3 |grep "config interface"| grep "'$connname'"`
+			[ ! -z "$temp" ] && {
+				echo "Multiwan up event ($connname).." > /dev/console
+				ubus call servd notify '{
+					"notify_id" : '$NOTIFY_MWAN_UP',
+					"type" : false,
+					"pn1" : "connname",    "pv1" : "'$connname'",
+				}'
+			}
+		}
+	fi
+
+	. /opt/lantiq/etc/uci_to_ipsec_config.sh wanstatus $conn_ifname 2>/dev/null
+}
+
+servd_notify_iface_down()
+{
+	if [ "${connname::6}" = "iface_" ]; then
+		ubus call servd notify '{
+			"notify_id" : '$NOTIFY_INTERFACE_DOWN',
+			"type" : false,
+			"pn1" : "device", "pv1" : "'$device'"
+		}'
+	else
+		if [ "$MWAN" != "1" ]; then
+			ubus call servd notify '{
+				"notify_id" : '$NOTIFY_NETIFD_IPADDRESS_REM',
+				"type" : false,
+				"pn1" : "connname",    "pv1" : "'$connname'",
+				"pn2" : "conn_ifname", "pv2" : "'$conn_ifname'",
+				"pn3" : "device",      "pv3" : "'$device'"
+			}'
+		fi
+
+		[ -f /etc/config/mwan3 ] && {
+			local temp
+			temp=`cat /etc/config/mwan3 |grep "config interface"| grep "'$connname'"`
+			[ ! -z "$temp" ] && {
+				echo "Multiwan down event ($connname).." > /dev/console
+				ubus call servd notify '{
+					"notify_id" : '$NOTIFY_MWAN_DOWN',
+					"type" : false,
+					"pn1" : "connname",    "pv1" : "'$connname'",
+				}'
+			}
+		}
+	fi
+	
+	. /opt/lantiq/etc/uci_to_ipsec_config.sh wanstatus $conn_ifname 2>/dev/null
+}
+
+json_init
+json_load "$(ifstatus $INTERFACE)"
+
+local connname="$INTERFACE"
+json_get_var device "device"
+
+if [ "$ACTION" = "ifup" ] || [ "$ACTION" = "ifupdate" ]; then
+	json_get_var conn_ifname "l3_device"
+	json_get_keys _ipv4_address_entries "ipv4-address"
+	if [ -n "$_ipv4_address_entries" ]; then
+		json_select "ipv4-address"
+		json_select 1
+		json_get_var ipaddr "address"
+		json_get_var prefix "mask"
+		json_select ".."
+		json_select ".."
+	fi
+
+	json_get_keys _ipv6_address_entries "ipv6-address"
+	if [ -n "$_ipv6_address_entries" ]; then
+		json_select "ipv6-address"
+		for _i in $_ipv6_address_entries; do
+		  json_select $_i
+		  json_get_var t_ip6addr "address"
+		  [ -n "$ip6addr" ] && ip6addr="$ip6addr,$t_ip6addr" || ip6addr="$t_ip6addr"
+		  json_get_var t_ip6mask "mask"
+		  [ -n "$ip6mask" ] && ip6mask="$ip6mask,$t_ip6mask" || ip6mask="$t_ip6mask"
+		  json_select ".."
+		  if [ $_i -eq 3 ]; then break; fi;
+		done
+		json_select ".."
+	fi
+
+	json_get_keys _route_entries "route"
+	if [ -n "$_route_entries" ]; then
+		json_select "route"
+		json_select 1
+		json_get_var route_target "target"
+		json_get_var nexthop "nexthop"
+		json_select ".."
+		json_select ".."
+	else
+		json_select "inactive"
+		json_get_keys _route_entries "route"
+		if [ -n "$_route_entries" ]; then
+			json_select "route"
+			json_select 1	
+			json_get_var route_target "target"
+			json_get_var nexthop "nexthop"
+			json_select ".."
+			json_select ".."
+			json_select ".."
+		fi
+	fi
+	[ "${nexthop:-0.0.0.0}" = "0.0.0.0" ] && nexthop="$route_target"
+
+	json_select "dns-server"
+	local Index="1"
+	while json_get_type Status $Index && [ "$Status" = string ]; do
+		json_get_var dns$Index "$((Index++))"
+	done
+	json_select ".."
+
+	servd_notify_iface_up;
+else
+	local conn_ifname _tmp;
+	json_get_var proto "proto"
+	if [ -z "$device" ]; then
+		_tmp=$(uci get network.${connname}.ifname 2>/dev/null)
+		if [ "${_tmp::1}" = "@" ]; then
+			device=$(uci get network.${_tmp:1}.ifname 2>/dev/null)
+		else
+			device=$_tmp;
+		fi
+	fi
+	if [ -n "$proto" ]; then
+		if [ "$proto" = "pppoe" -o "$proto" = "pppoa" ]; then
+			conn_ifname="${proto}-${connname}";
+		else
+			conn_ifname="$device";
+		fi
+	else
+		conn_ifname="$device";
+	fi
+	servd_notify_iface_down;
+fi

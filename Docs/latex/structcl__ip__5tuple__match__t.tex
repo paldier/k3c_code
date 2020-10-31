@@ -1,0 +1,61 @@
+\hypertarget{structcl__ip__5tuple__match__t}{\section{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t Struct Reference}
+\label{structcl__ip__5tuple__match__t}\index{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t@{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t}}
+}
+
+
+5-\/tuple I\-P Match fields structure  
+
+
+
+
+{\ttfamily \#include $<$qosal\-\_\-cl\-\_\-api.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structcl__ipaddr__match__t}{cl\-\_\-ipaddr\-\_\-match\-\_\-t} \hyperlink{structcl__ip__5tuple__match__t_aeb63c3c0bd893819a2257c47c4d1f1c8}{src\-\_\-ip}
+\item 
+\hyperlink{structcl__ipaddr__match__t}{cl\-\_\-ipaddr\-\_\-match\-\_\-t} \hyperlink{structcl__ip__5tuple__match__t_ae64911318dd2c0b8bd78a66cee70e6ee}{dst\-\_\-ip}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{structcl__ip__5tuple__match__t_a5447664eb7486da5424d6022f31a6212}{ip\-\_\-p}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{structcl__ip__5tuple__match__t_aa22d6ac44d06a368be8a3d6aebea9380}{ip\-\_\-p\-\_\-exclude}
+\item 
+\hyperlink{structcl__port__match__t}{cl\-\_\-port\-\_\-match\-\_\-t} \hyperlink{structcl__ip__5tuple__match__t_ae35e648a631112c8bf6e7473e2f5f8e8}{src\-\_\-port}
+\item 
+\hyperlink{structcl__port__match__t}{cl\-\_\-port\-\_\-match\-\_\-t} \hyperlink{structcl__ip__5tuple__match__t_a0fe61ca8c96e29c5da6add2108fc4762}{dst\-\_\-port}
+\item 
+\hyperlink{structcl__param__in__ex__t}{cl\-\_\-param\-\_\-in\-\_\-ex\-\_\-t} \hyperlink{structcl__ip__5tuple__match__t_af95e2941e57be656c6fd1490345bd7a3}{param\-\_\-in\-\_\-ex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+5-\/tuple I\-P Match fields structure 
+
+\subsection{Member Data Documentation}
+\hypertarget{structcl__ip__5tuple__match__t_ae64911318dd2c0b8bd78a66cee70e6ee}{\index{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t@{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t}!dst\-\_\-ip@{dst\-\_\-ip}}
+\index{dst\-\_\-ip@{dst\-\_\-ip}!cl_ip_5tuple_match_t@{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t}}
+\subsubsection[{dst\-\_\-ip}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-ipaddr\-\_\-match\-\_\-t} cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t\-::dst\-\_\-ip}}\label{structcl__ip__5tuple__match__t_ae64911318dd2c0b8bd78a66cee70e6ee}
+Destination I\-P address (I\-Pv4 or I\-Pv6) match of packet \hypertarget{structcl__ip__5tuple__match__t_a0fe61ca8c96e29c5da6add2108fc4762}{\index{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t@{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t}!dst\-\_\-port@{dst\-\_\-port}}
+\index{dst\-\_\-port@{dst\-\_\-port}!cl_ip_5tuple_match_t@{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t}}
+\subsubsection[{dst\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-port\-\_\-match\-\_\-t} cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t\-::dst\-\_\-port}}\label{structcl__ip__5tuple__match__t_a0fe61ca8c96e29c5da6add2108fc4762}
+Source T\-C\-P/\-U\-D\-P port match \hypertarget{structcl__ip__5tuple__match__t_a5447664eb7486da5424d6022f31a6212}{\index{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t@{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t}!ip\-\_\-p@{ip\-\_\-p}}
+\index{ip\-\_\-p@{ip\-\_\-p}!cl_ip_5tuple_match_t@{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t}}
+\subsubsection[{ip\-\_\-p}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t\-::ip\-\_\-p}}\label{structcl__ip__5tuple__match__t_a5447664eb7486da5424d6022f31a6212}
+I\-P Protocol of packet. -\/1 means not specified \hypertarget{structcl__ip__5tuple__match__t_aa22d6ac44d06a368be8a3d6aebea9380}{\index{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t@{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t}!ip\-\_\-p\-\_\-exclude@{ip\-\_\-p\-\_\-exclude}}
+\index{ip\-\_\-p\-\_\-exclude@{ip\-\_\-p\-\_\-exclude}!cl_ip_5tuple_match_t@{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t}}
+\subsubsection[{ip\-\_\-p\-\_\-exclude}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t\-::ip\-\_\-p\-\_\-exclude}}\label{structcl__ip__5tuple__match__t_aa22d6ac44d06a368be8a3d6aebea9380}
+Exclude flag for I\-P Protocol \hypertarget{structcl__ip__5tuple__match__t_af95e2941e57be656c6fd1490345bd7a3}{\index{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t@{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t}!param\-\_\-in\-\_\-ex@{param\-\_\-in\-\_\-ex}}
+\index{param\-\_\-in\-\_\-ex@{param\-\_\-in\-\_\-ex}!cl_ip_5tuple_match_t@{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t}}
+\subsubsection[{param\-\_\-in\-\_\-ex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-param\-\_\-in\-\_\-ex\-\_\-t} cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t\-::param\-\_\-in\-\_\-ex}}\label{structcl__ip__5tuple__match__t_af95e2941e57be656c6fd1490345bd7a3}
+Bit-\/map to indicate included and excluded parameters of 5-\/tuple I\-P \hypertarget{structcl__ip__5tuple__match__t_aeb63c3c0bd893819a2257c47c4d1f1c8}{\index{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t@{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t}!src\-\_\-ip@{src\-\_\-ip}}
+\index{src\-\_\-ip@{src\-\_\-ip}!cl_ip_5tuple_match_t@{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t}}
+\subsubsection[{src\-\_\-ip}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-ipaddr\-\_\-match\-\_\-t} cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t\-::src\-\_\-ip}}\label{structcl__ip__5tuple__match__t_aeb63c3c0bd893819a2257c47c4d1f1c8}
+Source I\-P address (I\-Pv4 or I\-Pv6) match of packet \hypertarget{structcl__ip__5tuple__match__t_ae35e648a631112c8bf6e7473e2f5f8e8}{\index{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t@{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t}!src\-\_\-port@{src\-\_\-port}}
+\index{src\-\_\-port@{src\-\_\-port}!cl_ip_5tuple_match_t@{cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t}}
+\subsubsection[{src\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-port\-\_\-match\-\_\-t} cl\-\_\-ip\-\_\-5tuple\-\_\-match\-\_\-t\-::src\-\_\-port}}\label{structcl__ip__5tuple__match__t_ae35e648a631112c8bf6e7473e2f5f8e8}
+Destination T\-C\-P/\-U\-D\-P port match 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qosal__cl__api_8h}{qosal\-\_\-cl\-\_\-api.\-h}\end{DoxyCompactItemize}

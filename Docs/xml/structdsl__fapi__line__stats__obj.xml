@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structdsl__fapi__line__stats__obj" kind="struct" prot="public">
+    <compoundname>dsl_fapi_line_stats_obj</compoundname>
+    <includes refid="dsl__fapi_8h" local="no">dsl_fapi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdsl__fapi__line__stats__obj_1abf7d09535ce7e6ac6b380bdb52b10558" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_stats_obj::total_start</definition>
+        <argsstring></argsstring>
+        <name>total_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of seconds since the beginning of the period used for collection of Total statistics. Statistics SHOULD continue to be accumulated across CPE reboots, though this might not always be possible. <simplesect kind="note"><para>total_start SHOULD NOT be reset when the interface statistics are reset via an interface disable / enable cycle. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="340" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__stats__obj_1a92c60819d5677949b2e35c3a81dbf3a5" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_stats_obj::showtime_start</definition>
+        <argsstring></argsstring>
+        <name>showtime_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of seconds since the most recent DSL Showtime - the beginning of the period used for collection of Showtime statistics. Showtime is defined as successful completion of the DSL link establishment process. The Showtime statistics are those collected since the most recent establishment of the DSL link. <simplesect kind="note"><para>showtime_start SHOULD NOT be reset when the interface statistics are reset via an interface disable / enable cycle. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="347" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__stats__obj_1a4716069edab0bee87955a7db1836f951" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_stats_obj::last_showtime_start</definition>
+        <argsstring></argsstring>
+        <name>last_showtime_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of seconds since the second most recent DSL Showtime-the beginning of the period used for collection of LastShowtime statistics. If the CPE has not retained information about the second most recent Showtime (e.g., on reboot), the start of LastShowtime statistics MAY temporarily coincide with the start of Showtime statistics. <simplesect kind="note"><para>last_showtime_start SHOULD NOT be reset when the interface statistics are reset via an interface disable / enable cycle. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="354" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="354" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__stats__obj_1a49cd48f81418660fca1de5040e0c92b3" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_stats_obj::current_day_start</definition>
+        <argsstring></argsstring>
+        <name>current_day_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of seconds since the beginning of the period used for collection of CurrentDay statistics. The CPE MAY align the beginning of each CurrentDay interval with days in the UTC time zone, but is not required to do so. Statistics SHOULD continue to be accumulated across CPE reboots, though this might not always be possible. <simplesect kind="note"><para>current_day_start SHOULD NOT be reset when the interface statistics are reset via an interface disable / enable cycle. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="361" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="361" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdsl__fapi__line__stats__obj_1af8e8fdd806dfee26ef66bad4c127003f" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int dsl_fapi_line_stats_obj::quarter_hour_start</definition>
+        <argsstring></argsstring>
+        <name>quarter_hour_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of seconds since the beginning of the period used for collection of QuarterHour statistics. The CPE MAY align the beginning of each QuarterHour interval with real-time quarter-hour intervals, but is not required to do so. Statistics SHOULD continue to be accumulated across CPE reboots, though this might not always be possible. <simplesect kind="note"><para>quarter_hour_start SHOULD NOT be reset when the interface statistics are reset via an interface disable / enable cycle. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="368" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="368" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>DSL Line Stats object declaration, based on TR-181 definitions. </para>    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="334" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="334" bodyend="369"/>
+    <listofallmembers>
+      <member refid="structdsl__fapi__line__stats__obj_1a49cd48f81418660fca1de5040e0c92b3" prot="public" virt="non-virtual"><scope>dsl_fapi_line_stats_obj</scope><name>current_day_start</name></member>
+      <member refid="structdsl__fapi__line__stats__obj_1a4716069edab0bee87955a7db1836f951" prot="public" virt="non-virtual"><scope>dsl_fapi_line_stats_obj</scope><name>last_showtime_start</name></member>
+      <member refid="structdsl__fapi__line__stats__obj_1af8e8fdd806dfee26ef66bad4c127003f" prot="public" virt="non-virtual"><scope>dsl_fapi_line_stats_obj</scope><name>quarter_hour_start</name></member>
+      <member refid="structdsl__fapi__line__stats__obj_1a92c60819d5677949b2e35c3a81dbf3a5" prot="public" virt="non-virtual"><scope>dsl_fapi_line_stats_obj</scope><name>showtime_start</name></member>
+      <member refid="structdsl__fapi__line__stats__obj_1abf7d09535ce7e6ac6b380bdb52b10558" prot="public" virt="non-virtual"><scope>dsl_fapi_line_stats_obj</scope><name>total_start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

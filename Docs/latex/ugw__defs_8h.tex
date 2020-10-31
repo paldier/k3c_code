@@ -1,0 +1,182 @@
+\hypertarget{ugw__defs_8h}{\section{ugw\-\_\-defs.\-h File Reference}
+\label{ugw__defs_8h}\index{ugw\-\_\-defs.\-h@{ugw\-\_\-defs.\-h}}
+}
+
+
+File contains the common definitions, macros and data structures common across all the modules in the software.  
+
+
+{\ttfamily \#include $<$stdint.\-h$>$}\\*
+{\ttfamily \#include $<$syslog.\-h$>$}\\*
+{\ttfamily \#include $<$help\-\_\-defs.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__LIBHELP_ga2356c4c79efdae03bcd85e11d9178a32}{B\-A\-C\-K\-U\-P\-\_\-\-R\-E\-S\-T\-O\-R\-E\-\_\-\-D\-A\-T\-A\-\_\-\-F\-I\-L\-E}~\char`\"{}/tmp/run-\/data.\-xml\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_ga0e77cc7711c428b607377d7c5fd22eb3}{B\-A\-C\-K\-U\-P\-\_\-\-R\-E\-S\-T\-O\-R\-E\-\_\-\-C\-O\-N\-T\-R\-O\-L\-\_\-\-F\-I\-L\-E}~\char`\"{}/tmp/run-\/control.\-xml\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_ga3ded1cb037978951bed86d0abbef95ac}{A\-L\-I\-A\-S\-\_\-\-N\-A\-M\-E}~\char`\"{}cpe-\/\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_gab8a772dc3a953e57a76d6616c0dbe0ef}{A\-L\-I\-A\-S\-\_\-\-N\-A\-M\-E\-\_\-\-C}~\char`\"{}C\-P\-E-\/\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_gae9e4a4b60dbba4c7d6872b208b02da0a}{I\-N\-S\-T\-A\-N\-C\-E\-\_\-\-N\-O}~\char`\"{}$\ast$\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_ga9615e001b781d55752b3d44f9bfd5162}{D\-B\-G\-\_\-\-I\-N\-F\-O}~fprintf(stderr, \char`\"{}\#\#\#\#\#\#\#\#\#\#\%s\-:\%d\#\#\#\#\#\#\#\#\#\#\textbackslash{}n\char`\"{},\-\_\-\-\_\-func\-\_\-\-\_\-,\-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-);
+\item 
+\#define \hyperlink{group__LIBHELP_ga7e8ff82fbeb5ab553867da272db7f59e}{N\-O\-\_\-\-P\-A\-R\-A\-M\-\_\-\-V\-A\-L\-U\-E}~\char`\"{}\-\_\-\-\_\-st\-\_\-\-\_\-\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_gaa4779e6716ca8a3d99dd1f16579dccc3}{U\-B\-U\-S\-\_\-\-M\-S\-G\-\_\-\-L\-E\-N\-G\-T\-H}~24576
+\item 
+\#define \hyperlink{group__LIBHELP_gaf80cdd55bad5558a63bbfc6fadd3c665}{M\-A\-X\-\_\-\-U\-B\-U\-S\-\_\-\-M\-S\-G\-\_\-\-L\-E\-N\-G\-T\-H}~32768
+\item 
+\#define \hyperlink{group__LIBHELP_gab0602f28920b31b2015535b1a8c159e3}{O\-I\-D}~\char`\"{}Id\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_ga986e1b45ade6c34d0d399c08b933da6b}{M\-U\-L\-T\-I\-I\-N\-S\-T}~\char`\"{}multi\-Inst\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_ga7b7a6526ee4fc05f1bdd0f05079754d9}{S\-I\-D}~\char`\"{}Sid\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_gafcd28ee5da68f58dfda7b7d033fb9cfc}{W\-E\-B\-N\-A\-M\-E}~\char`\"{}Web\-Name\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_ga321a20f839f3d9ccd0db1dc865850dc7}{A\-C\-C\-E\-S\-S}~\char`\"{}access\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_ga84122cc8fb20a83dda3ef92cf3286740}{P\-R\-O\-F\-I\-L\-E}~\char`\"{}profile\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_ga7dd186f2b30361953627365015ba5120}{M\-A\-X\-E\-N\-T\-R\-Y}~\char`\"{}max\-Entries\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_gac1e659c7aee7cd9099fc5d464169537c}{M\-I\-N\-E\-N\-T\-R\-Y}~\char`\"{}min\-Entries\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_gaea5b29a8b32c473873eec73a683aeae0}{E\-N\-U\-M\-S}~\char`\"{}enum\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_ga80b22c555ddadb47cc6ca338a9c49126}{M\-I\-N\-V\-A\-L}~\char`\"{}min\-Inclusive\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_gac7129ccaa762fa4c6b07733faa0a16e0}{M\-A\-X\-V\-A\-L}~\char`\"{}max\-Inclusive\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_ga0074b0744e9b1a16324c1e3a04b2d234}{M\-I\-N\-L\-E\-N}~\char`\"{}min\-Length\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_gae6648cd71a8bd49d58ae8ed33ba910d1}{M\-A\-X\-L\-E\-N}~\char`\"{}max\-Length\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_gafd1cbca7b088074f9c04a5d08f3b4ee2}{N\-U\-M\-E\-N\-T\-R\-I\-E\-S}~\char`\"{}num\-Entries\-Parameter\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_gaf8bfae90c5d6853fcfb487e05b9f50c8}{F\-L\-A\-G}~\char`\"{}Flag\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_ga449d3babf595d8210dbb578ac66aa0f4}{A\-C\-C\-E\-S\-S\-L\-I\-S\-T}~\char`\"{}A\-C\-L\char`\"{}
+\item 
+\#define \hyperlink{group__LIBHELP_ga6e3ff99394385544686d23c7e6f52922}{I\-S\-\_\-\-O\-B\-J\-L\-I\-S\-T}(x)~\hyperlink{group__LIBHELP_ga62f1164f5252ae6639d85d5dea956f7d}{O\-B\-J\-L\-I\-S\-T}(x)
+\item 
+\#define \hyperlink{group__LIBHELP_gabf3a0a06fd326265c81d121ce46bfa03}{I\-S\-\_\-\-C\-H\-A\-N\-G\-E\-\_\-\-F\-L\-A\-G\-\_\-\-S\-E\-T}(bit)~(bit \& \hyperlink{group__LIBHELP_gga394c61369f4e995f18b58c77d1a3cccba45fd68ac3d5bebe5d404f59979f37f77}{A\-T\-T\-R\-\_\-\-C\-H\-A\-N\-G\-E\-F\-L\-A\-G})
+\item 
+\#define \hyperlink{group__LIBHELP_ga6e742b603e7e29b084576318b0a020b0}{I\-S\-\_\-\-R\-E\-S\-E\-T\-\_\-\-C\-H\-A\-N\-G\-E\-\_\-\-F\-L\-A\-G\-\_\-\-S\-E\-T}(bit)~(bit \& \hyperlink{group__LIBHELP_gga269cc0b81be50f8be29bcdbc1706fd64a661789419acf60aeefd2833e82a4f7d3}{R\-E\-S\-E\-T\-\_\-\-C\-H\-A\-N\-G\-E\-F\-L\-A\-G})
+\item 
+\#define \hyperlink{group__LIBHELP_ga174cd2a0aa09bd0719d10363c77a7945}{I\-S\-\_\-\-G\-E\-T\-\_\-\-N\-O\-T\-I\-F\-Y\-\_\-\-S\-E\-T}(bit)~(bit \& \hyperlink{group__LIBHELP_gga269cc0b81be50f8be29bcdbc1706fd64ab8845fa48ccfd17f5be8ada997a0d859}{G\-E\-T\-\_\-\-N\-O\-T\-I\-F\-Y\-\_\-\-S\-E\-T})
+\item 
+\#define \hyperlink{group__LIBHELP_gaadf4b1ce4c6607378f43026cda70db48}{I\-S\-\_\-\-N\-X\-T\-\_\-\-L\-V\-L\-\_\-\-S\-E\-T}(bit)~(bit \& \hyperlink{group__LIBHELP_gga269cc0b81be50f8be29bcdbc1706fd64a179ba6308a0a84adff2b27c5b0716fc0}{N\-X\-T\-\_\-\-L\-V\-L\-\_\-\-T\-R\-U\-E})
+\item 
+\#define \hyperlink{group__LIBHELP_ga6c17740b104fd0c96770bc3a361af7d2}{I\-S\-\_\-\-S\-A\-V\-E\-T\-O\-F\-L\-A\-S\-H\-\_\-\-N\-O\-T\-\_\-\-S\-E\-T}(bit)~(bit \& \hyperlink{group__LIBHELP_gga394c61369f4e995f18b58c77d1a3cccba93fb968d56ea0dc63666d8372b8e35cb}{A\-T\-T\-R\-\_\-\-N\-O\-T\-S\-A\-V\-E\-T\-O\-F\-L\-A\-S\-H})
+\item 
+\#define \hyperlink{group__LIBHELP_gae96ab4238bdf72184e563254c5da0e23}{I\-S\-\_\-\-M\-O\-P\-T\-\_\-\-G\-E\-T}(bit)~(bit \& \hyperlink{group__LIBHELP_gga0cdba030aaa0bd18b24dbf19b06877a0aa2e0913dec5e220b92f791525e132735}{M\-O\-P\-T\-\_\-\-G\-E\-T})
+\item 
+\#define \hyperlink{group__LIBHELP_ga4e056b9d4e57e37e0c9af6cd5b8ef7f4}{I\-S\-\_\-\-M\-O\-P\-T\-\_\-\-S\-E\-T}(bit)~(bit \& \hyperlink{group__LIBHELP_gga0cdba030aaa0bd18b24dbf19b06877a0ac23667be630f90a58d53d02b11d7340f}{M\-O\-P\-T\-\_\-\-S\-E\-T})
+\item 
+\#define \hyperlink{group__LIBHELP_ga33ddb5513bb08deea13a031c64b2ba1f}{I\-S\-\_\-\-M\-O\-P\-T\-\_\-\-M\-O\-D\-I\-F\-Y}(bit)~(bit \& \hyperlink{group__LIBHELP_gga0cdba030aaa0bd18b24dbf19b06877a0ac23667be630f90a58d53d02b11d7340f}{M\-O\-P\-T\-\_\-\-S\-E\-T})
+\item 
+\#define \hyperlink{group__LIBHELP_gad6844975ea1c331ee03702cda99468e7}{I\-S\-\_\-\-M\-O\-P\-T\-\_\-\-A\-C\-T\-I\-V\-A\-T\-E}(bit)~(bit \& \hyperlink{group__LIBHELP_gga0cdba030aaa0bd18b24dbf19b06877a0a1310223d0caa84cc2bd6fc6711d05a87}{M\-O\-P\-T\-\_\-\-A\-C\-T\-I\-V\-A\-T\-E})
+\item 
+\#define \hyperlink{group__LIBHELP_ga41641fbb71e18b1edd23d5d6c3739517}{I\-S\-\_\-\-M\-O\-P\-T\-\_\-\-I\-N\-I\-T}(bit)~(bit \& \hyperlink{group__LIBHELP_gga0cdba030aaa0bd18b24dbf19b06877a0a2c480dff14f2d427e0918620ecc2b99f}{M\-O\-P\-T\-\_\-\-I\-N\-I\-T})
+\item 
+\#define \hyperlink{group__LIBHELP_ga119a020663142f27fc8b666d48d498d1}{I\-S\-\_\-\-M\-O\-P\-T\-\_\-\-U\-N\-I\-N\-I\-T}(bit)~(bit \& \hyperlink{group__LIBHELP_gga0cdba030aaa0bd18b24dbf19b06877a0a220bedd4cacc0c78b51f080bef0913a0}{M\-O\-P\-T\-\_\-\-U\-N\-I\-N\-I\-T})
+\item 
+\#define \hyperlink{group__LIBHELP_ga8f24724f4910a20f2b1189b10322e279}{I\-S\-\_\-\-M\-O\-P\-T\-\_\-\-N\-O\-T\-I\-F\-Y}(bit)~(bit \& \hyperlink{group__LIBHELP_gga0cdba030aaa0bd18b24dbf19b06877a0aa6d912b46389d3190f3e45de07d6a19d}{M\-O\-P\-T\-\_\-\-N\-O\-T\-I\-F\-Y})
+\item 
+\#define \hyperlink{group__LIBHELP_ga327ea9257c87d922d4cf34cdb8a38d69}{I\-S\-\_\-\-M\-O\-P\-T\-\_\-\-T\-I\-M\-E\-R\-A\-C\-T\-I\-O\-N}(bit)~(bit \& \hyperlink{group__LIBHELP_gga0cdba030aaa0bd18b24dbf19b06877a0aaea85a0ce98f63642f33097354e2b975}{M\-O\-P\-T\-\_\-\-T\-I\-M\-E\-R\-A\-C\-T\-I\-O\-N})
+\item 
+\#define \hyperlink{group__LIBHELP_ga6e92593fbe6e2134b813ad8e6abd7096}{I\-S\-\_\-\-M\-O\-P\-T\-\_\-\-F\-A\-C\-T\-O\-R\-Y\-R\-E\-S\-E\-T}(bit)~(bit \& \hyperlink{group__LIBHELP_gga0cdba030aaa0bd18b24dbf19b06877a0acab2d045536f6f87639d9ddc92a15bfb}{M\-O\-P\-T\-\_\-\-F\-A\-C\-T\-O\-R\-Y\-R\-E\-S\-E\-T})
+\item 
+\#define \hyperlink{group__LIBHELP_ga9de8ee4c98ad993b22628874da930ab7}{I\-S\-\_\-\-M\-O\-P\-T\-\_\-\-B\-A\-C\-K\-U\-P}(bit)~(bit \& \hyperlink{group__LIBHELP_gga0cdba030aaa0bd18b24dbf19b06877a0a79fba642447da8df763572c75b2d5e30}{M\-O\-P\-T\-\_\-\-B\-A\-C\-K\-U\-P})
+\item 
+\#define \hyperlink{group__LIBHELP_gaf364d042ef26289927756c22b081cc51}{I\-S\-\_\-\-M\-O\-P\-T\-\_\-\-R\-E\-B\-O\-O\-T}(bit)~(bit \& \hyperlink{group__LIBHELP_gga0cdba030aaa0bd18b24dbf19b06877a0a6e7aba6cee631c9f873d54db477c7cd1}{M\-O\-P\-T\-\_\-\-R\-E\-B\-O\-O\-T})
+\item 
+\#define \hyperlink{group__LIBHELP_ga387ce232cf98493a8872cdfd92238327}{I\-S\-\_\-\-M\-O\-P\-T\-\_\-\-F\-W\-U\-P\-G\-R\-A\-D\-E}(bit)~(bit \& \hyperlink{group__LIBHELP_gga0cdba030aaa0bd18b24dbf19b06877a0abfc1a2664f39c1e872fad1d1d98230b8}{M\-O\-P\-T\-\_\-\-F\-W\-U\-P\-G\-R\-A\-D\-E})
+\item 
+\#define \hyperlink{group__LIBHELP_gae8f3761c6d539c9a01ed6d3d2ad62986}{I\-S\-\_\-\-M\-O\-P\-T\-\_\-\-R\-O\-L\-L\-B\-A\-C\-K}(bit)~(bit \& \hyperlink{group__LIBHELP_gga0cdba030aaa0bd18b24dbf19b06877a0ae4dd8f29bf2fe0dacabf9801d36cfc0f}{M\-O\-P\-T\-\_\-\-R\-O\-L\-L\-B\-A\-C\-K})
+\item 
+\#define \hyperlink{group__LIBHELP_gacd3e14e1fd731b23524e4cd7428ef1bb}{I\-S\-\_\-\-M\-O\-P\-T\-\_\-\-N\-O\-O\-P\-E\-R}(bit)~(bit \& \hyperlink{group__LIBHELP_gga0cdba030aaa0bd18b24dbf19b06877a0a3a04bfea3e66c08402950cc34095d6c7}{M\-O\-P\-T\-\_\-\-N\-O\-O\-P\-E\-R})
+\item 
+\#define \hyperlink{group__LIBHELP_ga58558fc449acb4f61e13a60120cf8aa2}{I\-S\-\_\-\-M\-O\-P\-T\-\_\-\-L\-O\-G\-S\-E\-T}(bit)~(bit \& \hyperlink{group__LIBHELP_gga0cdba030aaa0bd18b24dbf19b06877a0af808ed4b6160490c7d10ed88c9265303}{M\-O\-P\-T\-\_\-\-L\-O\-G\-S\-E\-T})
+\item 
+\#define \hyperlink{group__LIBHELP_gace0e914d4ef2ed9112831b50ec6380e9}{I\-S\-\_\-\-S\-O\-P\-T\-\_\-\-V\-A\-L\-I\-D\-A\-T\-I\-O\-N}(bit)~(bit \& \hyperlink{group__LIBHELP_gga26a2d765c9669d7cf62818f31a306f76abf85e6bbd86f9dff9fafb8b704f94dee}{S\-O\-P\-T\-\_\-\-V\-A\-L\-I\-D\-A\-T\-I\-O\-N})
+\item 
+\#define \hyperlink{group__LIBHELP_ga3609995a256464cd078bdf34bc4bc609}{I\-S\-\_\-\-S\-O\-P\-T\-\_\-\-N\-O\-S\-U\-B\-O\-P\-E\-R}(bit)~(bit \& \hyperlink{group__LIBHELP_gga26a2d765c9669d7cf62818f31a306f76ad8a3297ca7cf6f201aeebbe7a1786d44}{S\-O\-P\-T\-\_\-\-N\-O\-S\-U\-B\-O\-P\-E\-R})
+\item 
+\#define \hyperlink{group__LIBHELP_gabe168af9d6aead8e80b7f5c251075e04}{I\-S\-\_\-\-O\-B\-J\-O\-P\-T\-\_\-\-A\-D\-D}(bit)~(bit \& \hyperlink{group__LIBHELP_gga63865642181d8ac749852d657efc4bd8aaabb1855853c165aaee5ce4f600db21d}{O\-B\-J\-O\-P\-T\-\_\-\-A\-D\-D})
+\item 
+\#define \hyperlink{group__LIBHELP_ga37236721a9851ce31dc6de2f4ab0e8ef}{I\-S\-\_\-\-O\-B\-J\-O\-P\-T\-\_\-\-D\-E\-L}(bit)~(bit \& \hyperlink{group__LIBHELP_gga63865642181d8ac749852d657efc4bd8a53957d1b2b91ebb970527d1d7c86bbba}{O\-B\-J\-O\-P\-T\-\_\-\-D\-E\-L})
+\item 
+\#define \hyperlink{group__LIBHELP_ga83cbd4d0e7619f1d0a70b01eee616ec9}{I\-S\-\_\-\-O\-B\-J\-O\-P\-T\-\_\-\-M\-O\-D\-I\-F\-Y}(bit)~(bit \& \hyperlink{group__LIBHELP_gga63865642181d8ac749852d657efc4bd8a946d7d6d203768b5ccb9fb64d66009f0}{O\-B\-J\-O\-P\-T\-\_\-\-M\-O\-D\-I\-F\-Y})
+\item 
+\#define \hyperlink{group__LIBHELP_ga135df626a9dbb769fa0413047b3fc0f5}{I\-S\-\_\-\-O\-B\-J\-O\-P\-T\-\_\-\-N\-O\-S\-U\-B\-O\-P\-E\-R}(bit)~(bit \& \hyperlink{group__LIBHELP_gga63865642181d8ac749852d657efc4bd8abadd23813b0d7abf14f8ecc76f381140}{O\-B\-J\-O\-P\-T\-\_\-\-N\-O\-O\-B\-J\-O\-P\-E\-R})
+\item 
+\#define \hyperlink{group__LIBHELP_ga5630a9cae5c944f69472900c13936ae8}{I\-S\-\_\-\-G\-E\-T\-O\-P\-T\-\_\-\-L\-O\-C\-A\-L}(bit)~(bit \& \hyperlink{group__LIBHELP_ggabbfae400f613b8339e81ef9427321b84a928525dbc0377081b284b65e05f0d847}{G\-E\-T\-O\-P\-T\-\_\-\-L\-O\-C\-A\-L})
+\item 
+\#define \hyperlink{group__LIBHELP_ga231eb259963c50b176d806aa1979eb83}{I\-S\-\_\-\-G\-E\-T\-O\-P\-T\-\_\-\-L\-O\-C\-A\-L\-D\-B}(bit)~(bit \& \hyperlink{group__LIBHELP_ggabbfae400f613b8339e81ef9427321b84a20f7a4e52b4d0ab8b1ba48fb5bf5171d}{G\-E\-T\-O\-P\-T\-\_\-\-L\-O\-C\-A\-L\-D\-B})
+\item 
+\#define \hyperlink{group__LIBHELP_gac2291126c4312e2496246b6e57e33dad}{I\-S\-\_\-\-G\-E\-T\-O\-P\-T\-\_\-\-D\-B\-L\-O\-C\-A\-L}(bit)~(bit \& \hyperlink{group__LIBHELP_ggabbfae400f613b8339e81ef9427321b84adce980e4fb9feed0b4747e8b3a75f122}{G\-E\-T\-O\-P\-T\-\_\-\-D\-B\-L\-O\-C\-A\-L})
+\item 
+\#define \hyperlink{group__LIBHELP_gaacb992147fd19097d983bd744f64a3b4}{I\-S\-\_\-\-D\-T\-Y\-P\-\_\-\-I\-N\-T}(bit)~(bit \& \hyperlink{group__LIBHELP_ggad9971b6ef33e02ba2c75d19c1d2518a1a5e2046a67c43b44453d1345083ddb0a8}{D\-T\-Y\-P\-\_\-\-I\-N\-T})
+\item 
+\#define \hyperlink{group__LIBHELP_ga61221cc53522daf0a70139eee879a6ff}{I\-S\-\_\-\-D\-T\-Y\-P\-\_\-\-U\-N\-S\-I\-G\-N\-E\-D\-I\-N\-T}(bit)~(bit \& \hyperlink{group__LIBHELP_ggad9971b6ef33e02ba2c75d19c1d2518a1a83acad6b2208aba94e443817f260a97d}{D\-T\-Y\-P\-\_\-\-U\-N\-S\-I\-G\-N\-E\-D\-I\-N\-T})
+\item 
+\#define \hyperlink{group__LIBHELP_ga0a3ed9e807a9a17ccba554e9b5e30842}{I\-S\-\_\-\-D\-T\-Y\-P\-\_\-\-S\-T\-R\-I\-N\-G}(bit)~(bit \& \hyperlink{group__LIBHELP_ggad9971b6ef33e02ba2c75d19c1d2518a1ae7f1c03f67e4477bca8c3e0b36b7022c}{D\-T\-Y\-P\-\_\-\-S\-T\-R\-I\-N\-G})
+\item 
+\#define \hyperlink{group__LIBHELP_ga46d6ec5838128f28e404031b6c5b81dd}{I\-S\-\_\-\-D\-T\-Y\-P\-\_\-\-D\-A\-T\-E\-T\-I\-M\-E}(bit)~(bit \& \hyperlink{group__LIBHELP_ggad9971b6ef33e02ba2c75d19c1d2518a1a2271764ae7fc34b395cc47fd4aacfbf8}{D\-T\-Y\-P\-\_\-\-D\-A\-T\-E\-T\-I\-M\-E})
+\item 
+\#define \hyperlink{group__LIBHELP_gaf808e5d9a8ebcbac5fc2f2cdea42b97e}{I\-S\-\_\-\-D\-T\-Y\-P\-\_\-\-B\-O\-O\-L\-E\-A\-N}(bit)~(bit \& \hyperlink{group__LIBHELP_ggad9971b6ef33e02ba2c75d19c1d2518a1af076808b8b426548ec7e421c8ba2d84c}{D\-T\-Y\-P\-\_\-\-B\-O\-O\-L\-E\-A\-N})
+\item 
+\#define \hyperlink{group__LIBHELP_ga88cc42098bf9839eee8487256fb03b6f}{I\-S\-\_\-\-D\-T\-Y\-P\-\_\-\-H\-E\-X\-B\-I\-N\-A\-R\-Y}(bit)~(bit \& \hyperlink{group__LIBHELP_ggad9971b6ef33e02ba2c75d19c1d2518a1a9ae015b94ea618a36598f920e6c52bb9}{D\-T\-Y\-P\-\_\-\-H\-E\-X\-B\-I\-N\-A\-R\-Y})
+\item 
+\#define \hyperlink{group__LIBHELP_ga8aa8438fb1184d5542ccf6af452e85bc}{I\-S\-\_\-\-D\-T\-Y\-P\-\_\-\-L\-O\-N\-G}(bit)~(bit \& \hyperlink{group__LIBHELP_ggad9971b6ef33e02ba2c75d19c1d2518a1a3b20b853e79af4d4cca0e90dc964c49b}{D\-T\-Y\-P\-\_\-\-L\-O\-N\-G})
+\item 
+\#define \hyperlink{group__LIBHELP_ga56688137464eb65d6baa796bb8872cc4}{I\-S\-\_\-\-D\-T\-Y\-P\-\_\-\-U\-N\-L\-O\-N\-G}(bit)~(bit \& \hyperlink{group__LIBHELP_ggad9971b6ef33e02ba2c75d19c1d2518a1aa20a92678dab5062d123c3c5329c2fe8}{D\-T\-Y\-P\-\_\-\-U\-N\-L\-O\-N\-G})
+\item 
+\#define \hyperlink{group__LIBHELP_gaa27960f05b9cf62b3f164d7b9e63f0d1}{I\-S\-\_\-\-D\-T\-Y\-P\-\_\-\-B\-A\-S\-E64}(bit)~(bit \& \hyperlink{group__LIBHELP_ggad9971b6ef33e02ba2c75d19c1d2518a1a15076a00e5cb73882f567c75ad3cf047}{D\-T\-Y\-P\-\_\-\-B\-A\-S\-E64})
+\item 
+\#define \hyperlink{group__LIBHELP_gaf98bb58e2c980b68277c7ec03ce20ef0}{I\-S\-\_\-\-D\-T\-Y\-P\-\_\-\-N\-O\-N\-E}(bit)~(bit \& \hyperlink{group__LIBHELP_ggad9971b6ef33e02ba2c75d19c1d2518a1a5099efee987d5775c2690287dadc2eb8}{D\-T\-Y\-P\-\_\-\-N\-O\-N\-E})
+\item 
+\#define \hyperlink{group__LIBHELP_ga88635b2ca475fa1e9fbf2bd1e151f920}{I\-S\-\_\-\-D\-Y\-N\-A\-M\-I\-C\-\_\-\-S\-E\-T}(bit)~(bit \& M\-I\-S\-C\-\_\-\-D\-Y\-N\-A\-M\-I\-C)
+\item 
+\#define \hyperlink{group__LIBHELP_ga36d2d4812ed8182cf464f0af365f9155}{I\-S\-\_\-\-A\-C\-T\-I\-V\-A\-T\-E\-\_\-\-S\-E\-T}(bit)~(bit \& \hyperlink{group__LIBHELP_gga63865642181d8ac749852d657efc4bd8ac8d0d094247d75b15be20de57af72617}{O\-B\-J\-O\-P\-T\-\_\-\-A\-C\-T\-I\-V\-A\-T\-E})
+\item 
+\#define \hyperlink{group__LIBHELP_gace0dbce830b493e8d28c9f0fa521fcfa}{I\-S\-\_\-\-W\-R\-I\-T\-E}(bit)~(bit \& \hyperlink{group__LIBHELP_gga3329d9d369a4ae5cfa5d8eac33a0c0c6ad9e91523aade4ed4de08b0c3e6572d90}{M\-I\-S\-C\-\_\-\-W\-R\-I\-T\-E})
+\item 
+\#define \hyperlink{group__LIBHELP_ga3b4eeb13c5583808221824d770a6afc8}{I\-S\-\_\-\-R\-E\-A\-D}(bit)~(bit \& \hyperlink{group__LIBHELP_gga3329d9d369a4ae5cfa5d8eac33a0c0c6a466a6336da6be62cf6f7fe57c6379597}{M\-I\-S\-C\-\_\-\-R\-E\-A\-D})
+\item 
+\#define \hyperlink{group__LIBHELP_ga6ffa31aea95d58b70b0a0ec441ffb642}{I\-S\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D}(bit)~(bit \& \hyperlink{group__LIBHELP_gga3329d9d369a4ae5cfa5d8eac33a0c0c6a99826fb8db4c7fce0a1678c6d8afc054}{M\-I\-S\-C\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D})
+\item 
+\#define \hyperlink{group__LIBHELP_ga4bdee20520c06be0cb37b99ee6a92ff4}{I\-S\-\_\-\-P\-A\-S\-S\-W\-D\-\_\-\-S\-E\-T}(bit)~(bit \& \hyperlink{group__LIBHELP_gga3329d9d369a4ae5cfa5d8eac33a0c0c6adcdd0a2c3bc54078987616b846b01896}{M\-I\-S\-C\-\_\-\-P\-A\-S\-S\-W\-D})
+\item 
+\#define \hyperlink{group__LIBHELP_ga8613fffcfa3adcdeb1188e187d767733}{I\-S\-\_\-\-P\-A\-S\-S\-W\-D\-\_\-\-G\-E\-T\-\_\-\-V\-A\-L}(bit)~(bit \& \hyperlink{group__LIBHELP_gga269cc0b81be50f8be29bcdbc1706fd64abbf52986e1d6e58b4e7d941dac80650a}{G\-E\-T\-\_\-\-P\-W\-D\-\_\-\-V\-A\-L})
+\item 
+\#define \hyperlink{group__LIBHELP_gafc0eef637f1016e8786e45e106a4881e}{T\-O\-P}~1
+\item 
+\#define \hyperlink{group__LIBHELP_gafc0eef637f1016e8786e45e106a4881e}{T\-O\-P}~1
+\item 
+\#define \hyperlink{group__LIBHELP_gaf7bf88a525ba310c5ceffd0b94b3ed09}{D\-E\-V\-\_\-\-L\-V\-L}~2
+\item 
+\#define \hyperlink{group__LIBHELP_ga9197bc708bae07bccd3f01550a7da13c}{L\-E\-V\-E\-L\-\_\-\-O\-B\-J}~4
+\item 
+\#define \hyperlink{group__LIBHELP_ga4f0cc609593ce12e46d48dc14e2e3720}{L\-E\-V\-E\-L\-\_\-\-O\-B\-J\-\_\-\-P\-A\-R\-A\-M}~6
+\item 
+\#define \hyperlink{group__LIBHELP_ga1f7722a29a324ee4440c52218bffebef}{L\-E\-V\-E\-L\-\_\-\-O\-B\-J\-\_\-\-P\-A\-R\-A\-M\-\_\-\-V\-A\-L}~8
+\item 
+\#define \hyperlink{group__LIBHELP_gac3f999a1a3235673b7babbfa1294afee}{L\-E\-V\-E\-L\-\_\-\-P\-A\-R\-A\-M\-\_\-\-T\-O\-P}~10
+\item 
+\#define \hyperlink{group__LIBHELP_ga8fabc94f5bafb2197057a88deee01926}{L\-E\-V\-E\-L\-\_\-\-P\-A\-R\-A\-M}~12
+\item 
+\#define \hyperlink{group__LIBHELP_gaae4f330d3207e58934ca25df51265f98}{L\-E\-V\-E\-L\-\_\-\-P\-A\-R\-A\-M\-\_\-\-V\-A\-L}~14
+\item 
+\#define \hyperlink{group__LIBHELP_ga29c1b676d6c99dcaad0edc4bf19cce8d}{S\-E\-S\-S\-I\-O\-N\-\_\-\-I\-D\-\_\-\-S\-I\-Z\-E}~128
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File contains the common definitions, macros and data structures common across all the modules in the software. 

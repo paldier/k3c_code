@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structcl__tcp__match__t" kind="struct" prot="public">
+    <compoundname>cl_tcp_match_t</compoundname>
+    <includes refid="qosal__cl__api_8h" local="no">qosal_cl_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcl__tcp__match__t_1a4c8d0d419dbc541bbb925b49d2a18af8" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t cl_tcp_match_t::tcp_ack</definition>
+        <argsstring></argsstring>
+        <name>tcp_ack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Match TCP ACK : 1- match TCP ACK </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="724" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="724" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__tcp__match__t_1aef633562984ce156cc0377eccf39fd58" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t cl_tcp_match_t::tcp_ack_exclude</definition>
+        <argsstring></argsstring>
+        <name>tcp_ack_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Packet does not contain TCP ACK flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="725" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="725" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__tcp__match__t_1a3054b277d565dff3f68fb560ee17b2c8" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t cl_tcp_match_t::tcp_syn</definition>
+        <argsstring></argsstring>
+        <name>tcp_syn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Match TCP SYN : 1- match TCP SYN </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="727" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="727" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__tcp__match__t_1ae799dfae675d3c763eeead36f7215cf4" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t cl_tcp_match_t::tcp_syn_exclude</definition>
+        <argsstring></argsstring>
+        <name>tcp_syn_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Packet does not contain TCP SYN flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="728" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="728" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__tcp__match__t_1ae1800016c2f4bb66c33b88cb972bbae5" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t cl_tcp_match_t::tcp_fin</definition>
+        <argsstring></argsstring>
+        <name>tcp_fin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Match TCP FIN : 1- match TCP FIN </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="731" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="731" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__tcp__match__t_1a37d15354a737db5db242fc78d9bf8437" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t cl_tcp_match_t::tcp_fin_exclude</definition>
+        <argsstring></argsstring>
+        <name>tcp_fin_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Packet does not contain TCP FIN flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="732" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="732" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__tcp__match__t_1ae970db5f46617f16e947d5109f46de8b" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t cl_tcp_match_t::tcp_rst</definition>
+        <argsstring></argsstring>
+        <name>tcp_rst</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Match TCP FIN : 1- match TCP FIN </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="734" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="734" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__tcp__match__t_1aa9138e76adc06cc449ab22ceb00606de" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t cl_tcp_match_t::tcp_rst_exclude</definition>
+        <argsstring></argsstring>
+        <name>tcp_rst_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Packet does not contain TCP RST flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="735" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="735" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__tcp__match__t_1a9c84cc54073afb4eafad6c8ff7ede7d4" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t cl_tcp_match_t::tcp_urg</definition>
+        <argsstring></argsstring>
+        <name>tcp_urg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Match TCP URG : 1- match TCP URG i.e. OOB data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="738" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="738" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__tcp__match__t_1aea720fc510ee2144778ae66e34f8e3be" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t cl_tcp_match_t::tcp_urg_exclude</definition>
+        <argsstring></argsstring>
+        <name>tcp_urg_exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Packet does not contain TCP URG flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="740" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="740" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__tcp__match__t_1a56a6917691204e3902a9dee782faf4fc" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__param__in__ex__t" kindref="compound">cl_param_in_ex_t</ref></type>
+        <definition>cl_param_in_ex_t cl_tcp_match_t::param_in_ex</definition>
+        <argsstring></argsstring>
+        <name>param_in_ex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bit-map to indicate included and excluded parameters of TCP flags </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="743" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="743" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Other TCP header Classifer Match fields structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="65">
+        <label>cl_tcp_match_t</label>
+        <link refid="structcl__tcp__match__t"/>
+        <childnode refid="66" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+      <node id="66">
+        <label>cl_param_in_ex_t</label>
+        <link refid="structcl__param__in__ex__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="723" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="723" bodyend="744"/>
+    <listofallmembers>
+      <member refid="structcl__tcp__match__t_1a56a6917691204e3902a9dee782faf4fc" prot="public" virt="non-virtual"><scope>cl_tcp_match_t</scope><name>param_in_ex</name></member>
+      <member refid="structcl__tcp__match__t_1a4c8d0d419dbc541bbb925b49d2a18af8" prot="public" virt="non-virtual"><scope>cl_tcp_match_t</scope><name>tcp_ack</name></member>
+      <member refid="structcl__tcp__match__t_1aef633562984ce156cc0377eccf39fd58" prot="public" virt="non-virtual"><scope>cl_tcp_match_t</scope><name>tcp_ack_exclude</name></member>
+      <member refid="structcl__tcp__match__t_1ae1800016c2f4bb66c33b88cb972bbae5" prot="public" virt="non-virtual"><scope>cl_tcp_match_t</scope><name>tcp_fin</name></member>
+      <member refid="structcl__tcp__match__t_1a37d15354a737db5db242fc78d9bf8437" prot="public" virt="non-virtual"><scope>cl_tcp_match_t</scope><name>tcp_fin_exclude</name></member>
+      <member refid="structcl__tcp__match__t_1ae970db5f46617f16e947d5109f46de8b" prot="public" virt="non-virtual"><scope>cl_tcp_match_t</scope><name>tcp_rst</name></member>
+      <member refid="structcl__tcp__match__t_1aa9138e76adc06cc449ab22ceb00606de" prot="public" virt="non-virtual"><scope>cl_tcp_match_t</scope><name>tcp_rst_exclude</name></member>
+      <member refid="structcl__tcp__match__t_1a3054b277d565dff3f68fb560ee17b2c8" prot="public" virt="non-virtual"><scope>cl_tcp_match_t</scope><name>tcp_syn</name></member>
+      <member refid="structcl__tcp__match__t_1ae799dfae675d3c763eeead36f7215cf4" prot="public" virt="non-virtual"><scope>cl_tcp_match_t</scope><name>tcp_syn_exclude</name></member>
+      <member refid="structcl__tcp__match__t_1a9c84cc54073afb4eafad6c8ff7ede7d4" prot="public" virt="non-virtual"><scope>cl_tcp_match_t</scope><name>tcp_urg</name></member>
+      <member refid="structcl__tcp__match__t_1aea720fc510ee2144778ae66e34f8e3be" prot="public" virt="non-virtual"><scope>cl_tcp_match_t</scope><name>tcp_urg_exclude</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

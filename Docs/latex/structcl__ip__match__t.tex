@@ -1,0 +1,56 @@
+\hypertarget{structcl__ip__match__t}{\section{cl\-\_\-ip\-\_\-match\-\_\-t Struct Reference}
+\label{structcl__ip__match__t}\index{cl\-\_\-ip\-\_\-match\-\_\-t@{cl\-\_\-ip\-\_\-match\-\_\-t}}
+}
+
+
+Other I\-P header Classifer Match fields structure.  
+
+
+
+
+{\ttfamily \#include $<$qosal\-\_\-cl\-\_\-api.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{structcl__ip__match__t_ac792bdfd358aa3ecab74480f1450c1de}{ip\-\_\-len\-\_\-min}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{structcl__ip__match__t_a9e6b353f8e7197418b45fc8919274fd1}{ip\-\_\-len\-\_\-max}
+\item 
+\hyperlink{commondefs_8h_a32f2e37ee053cf2ce8ca28d1f74630e5}{int32\-\_\-t} \hyperlink{structcl__ip__match__t_af364a011fad74c921876d09c9a90ab0e}{ip\-\_\-len\-\_\-exclude}
+\item 
+\hyperlink{commondefs_8h_a66634143db08bebe9b46ab4cb1fc6fd3}{int16\-\_\-t} \hyperlink{structcl__ip__match__t_a247b29f7d57aa14541706a62956b59bd}{dscp}
+\item 
+\hyperlink{commondefs_8h_a66634143db08bebe9b46ab4cb1fc6fd3}{int16\-\_\-t} \hyperlink{structcl__ip__match__t_a6b4e31b2beef845d8b44101df073c41b}{dscp\-\_\-exclude}
+\item 
+\hyperlink{structcl__param__in__ex__t}{cl\-\_\-param\-\_\-in\-\_\-ex\-\_\-t} \hyperlink{structcl__ip__match__t_a1d1364036356ddfe8731f777c02f186d}{param\-\_\-in\-\_\-ex}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Other I\-P header Classifer Match fields structure. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structcl__ip__match__t_a247b29f7d57aa14541706a62956b59bd}{\index{cl\-\_\-ip\-\_\-match\-\_\-t@{cl\-\_\-ip\-\_\-match\-\_\-t}!dscp@{dscp}}
+\index{dscp@{dscp}!cl_ip_match_t@{cl\-\_\-ip\-\_\-match\-\_\-t}}
+\subsubsection[{dscp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int16\-\_\-t} cl\-\_\-ip\-\_\-match\-\_\-t\-::dscp}}\label{structcl__ip__match__t_a247b29f7d57aa14541706a62956b59bd}
+D\-S\-C\-P value of packet to match against. -\/1 means ignore for match purpose \hypertarget{structcl__ip__match__t_a6b4e31b2beef845d8b44101df073c41b}{\index{cl\-\_\-ip\-\_\-match\-\_\-t@{cl\-\_\-ip\-\_\-match\-\_\-t}!dscp\-\_\-exclude@{dscp\-\_\-exclude}}
+\index{dscp\-\_\-exclude@{dscp\-\_\-exclude}!cl_ip_match_t@{cl\-\_\-ip\-\_\-match\-\_\-t}}
+\subsubsection[{dscp\-\_\-exclude}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int16\-\_\-t} cl\-\_\-ip\-\_\-match\-\_\-t\-::dscp\-\_\-exclude}}\label{structcl__ip__match__t_a6b4e31b2beef845d8b44101df073c41b}
+Exclude flag/\-Invert D\-S\-C\-P match \hypertarget{structcl__ip__match__t_af364a011fad74c921876d09c9a90ab0e}{\index{cl\-\_\-ip\-\_\-match\-\_\-t@{cl\-\_\-ip\-\_\-match\-\_\-t}!ip\-\_\-len\-\_\-exclude@{ip\-\_\-len\-\_\-exclude}}
+\index{ip\-\_\-len\-\_\-exclude@{ip\-\_\-len\-\_\-exclude}!cl_ip_match_t@{cl\-\_\-ip\-\_\-match\-\_\-t}}
+\subsubsection[{ip\-\_\-len\-\_\-exclude}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} cl\-\_\-ip\-\_\-match\-\_\-t\-::ip\-\_\-len\-\_\-exclude}}\label{structcl__ip__match__t_af364a011fad74c921876d09c9a90ab0e}
+Exclude flag/ Invert Length match \hypertarget{structcl__ip__match__t_a9e6b353f8e7197418b45fc8919274fd1}{\index{cl\-\_\-ip\-\_\-match\-\_\-t@{cl\-\_\-ip\-\_\-match\-\_\-t}!ip\-\_\-len\-\_\-max@{ip\-\_\-len\-\_\-max}}
+\index{ip\-\_\-len\-\_\-max@{ip\-\_\-len\-\_\-max}!cl_ip_match_t@{cl\-\_\-ip\-\_\-match\-\_\-t}}
+\subsubsection[{ip\-\_\-len\-\_\-max}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} cl\-\_\-ip\-\_\-match\-\_\-t\-::ip\-\_\-len\-\_\-max}}\label{structcl__ip__match__t_a9e6b353f8e7197418b45fc8919274fd1}
+Max Length of I\-P packet. -\/1 means ignore for match purpose \hypertarget{structcl__ip__match__t_ac792bdfd358aa3ecab74480f1450c1de}{\index{cl\-\_\-ip\-\_\-match\-\_\-t@{cl\-\_\-ip\-\_\-match\-\_\-t}!ip\-\_\-len\-\_\-min@{ip\-\_\-len\-\_\-min}}
+\index{ip\-\_\-len\-\_\-min@{ip\-\_\-len\-\_\-min}!cl_ip_match_t@{cl\-\_\-ip\-\_\-match\-\_\-t}}
+\subsubsection[{ip\-\_\-len\-\_\-min}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int32\-\_\-t} cl\-\_\-ip\-\_\-match\-\_\-t\-::ip\-\_\-len\-\_\-min}}\label{structcl__ip__match__t_ac792bdfd358aa3ecab74480f1450c1de}
+Min Length of I\-P packet. -\/1 means ignore for match purpose \hypertarget{structcl__ip__match__t_a1d1364036356ddfe8731f777c02f186d}{\index{cl\-\_\-ip\-\_\-match\-\_\-t@{cl\-\_\-ip\-\_\-match\-\_\-t}!param\-\_\-in\-\_\-ex@{param\-\_\-in\-\_\-ex}}
+\index{param\-\_\-in\-\_\-ex@{param\-\_\-in\-\_\-ex}!cl_ip_match_t@{cl\-\_\-ip\-\_\-match\-\_\-t}}
+\subsubsection[{param\-\_\-in\-\_\-ex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-param\-\_\-in\-\_\-ex\-\_\-t} cl\-\_\-ip\-\_\-match\-\_\-t\-::param\-\_\-in\-\_\-ex}}\label{structcl__ip__match__t_a1d1364036356ddfe8731f777c02f186d}
+Bit-\/map to indicate included and excluded parameters of I\-P header 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qosal__cl__api_8h}{qosal\-\_\-cl\-\_\-api.\-h}\end{DoxyCompactItemize}

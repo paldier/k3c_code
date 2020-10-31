@@ -1,0 +1,122 @@
+#!/bin/sh
+# This script is an API between drvhlpr and scripts.
+
+# Source library script
+[ ! "$FAPI_WLAN_WAVE_INIT_PLATFORM" ] && . /tmp/wlan_wave/fapi_wlan_wave_init_platform.sh
+
+# Source to get version information:
+. /opt/lantiq/etc/wave_components.ver
+
+interface_name=$1
+type=$2
+TID=$$
+
+# If interface name is not supplied, exit script
+check_input_param "fapi_wlan_wave_fw_recovery_notify" "interface_name" "$interface_name"
+
+tmp_folder=/tmp
+mtlk_folder=/opt/lantiq/wave
+create_order=t
+reversed_create_order=tr
+
+# Source the FW recovery conf file
+current_recovery_conf=${RECOVERY_CONF}_${interface_name}
+. $current_recovery_conf
+
+echo "running fapi_wlan_wave_fw_recovery_notify (TID=$TID) with: $*"  > /dev/console
+
+# Minimum free memory required to save dumps
+min_free_mem_kb=`cat /proc/sys/vm/min_free_kbytes`
+min_free_mem_kb=$((min_free_mem_kb+2000))
+
+# At the moment nothing to do at fw_recovery_end:
+[ "$type" != "fw_crash" ] && return 0
+
+log_2_console() {
+	echo "fapi_wlan_wave_fw_recovery_notify: $*" > /dev/console
+}
+
+# Get free mem, including memory freeable from buffers
+get_total_freemem() {
+	sync
+	cat /proc/meminfo | awk 'BEGIN {total=0} { \
+	if ($1 == "MemFree:") { total += $2}; if ($1 == "Buffers:") {total += $2}  } \
+	END {print total}'
+}
+
+validate_memory() {
+	# Make sure to save dump only if space available
+	ret=0
+	free_mem=`cat /proc/meminfo | grep MemFree | awk '{print $2}'`
+	if [ $free_mem -lt $min_free_mem_kb ]; then
+		# Validate also after sync:
+		free_mem_sync=`get_total_freemem`
+		print2log NOTIFY "memory after sync = $free_mem_sync (before=$free_mem)"
+		[ $free_mem_sync -lt $min_free_mem_kb ] && ret=1
+	fi
+	echo $ret
+}
+
+# validate_max_dumps:
+# $1 = folder (/tmp or /opt/lantiq/wave)
+# $2 = max dumps to save
+# $3 = t/tr, input to 'ls' command, select the dump to be deleted (newest/oldest accordingly)
+# Description: file always created in /tmp. When rootfs is writeable some are copied to /opt/lantiq/wave
+#   In /tmp folder last created dump is deleted
+#   In /opt/lantiq/wave folder older dump is deleted
+# Limitation - if max dump configured to 1 (FwRecovery) - also in mtlk folder will be only one dump
+validate_max_dumps() {
+	folder=$1
+	max_dumps=$2
+	ls_input=$3
+	
+	exist_num_dumps=`ls $folder/ | grep $wave_release_minor | grep -c dump`
+	if [ $exist_num_dumps -ge $max_dumps ]; then
+		# Max dump files already saved, in tmp overwrite last dump if max_dumps > 1
+		if [ $max_dumps -gt 1 ]; then
+			last_file=`ls -$ls_input $folder/${wave_release_minor}* | sed -n '1 p'`
+			rm $last_file
+		else
+			echo 1
+			return
+		fi
+	fi
+	echo 0
+}
+
+#increment numFwFails in the FW recovery conf file and source the conf again
+numFwFails=$((numFwFails+1))
+sed -i '/numFwFails/ s/=.*/='$numFwFails'/' $current_recovery_conf
+. $current_recovery_conf
+
+cd $tmp_folder
+
+memory_available=`validate_memory`
+[ "$memory_available" = "1" ] && log_2_console "no memory to save dump - exit" && return
+
+# Save first dumps. If already have max dumps allowed, replace previous with current dump (but never delete first dump)
+# Call validate_max_dumps with 'cretaed order' to overwrite last dump if exceeded max dumps
+max_dumps_limit=`validate_max_dumps $tmp_folder $fwDumpsToSave $create_order`
+[ "$max_dumps_limit" = "1" ] && log_2_console "over Max dump - exit" && return
+
+dump_dir=${wave_release_minor}_`date +%Y%m%dT%H%M%S`_${wlan}_${TID}_dump
+mkdir $tmp_folder/$dump_dir
+for f in shram um lm; do
+	gzip -c /proc/net/mtlk/$interface_name/$f  > $tmp_folder/$dump_dir/$f.gz
+done
+
+# Zip it all:
+tar cf ${dump_dir}.tar $dump_dir
+rm -rf $tmp_folder/$dump_dir
+
+# If overlay: save copy in non-volotile folder:
+fs_overlay=`mount | grep overlay`
+if [ -n "$fs_overlay" ]; then
+	#call validate_max_dumps with 'reverse cretaed order' to save 8 last dumps
+	validate_max_dumps $mtlk_folder 8 $reversed_create_order
+	log_2_console DBG "copy dump to $mtlk_folder"
+	cp ${dump_dir}.tar $mtlk_folder/
+fi
+
+time_sec=`awk  '{print $1}' < /proc/uptime`
+echo  "fapi_wlan_wave_fw_recovery_notify: Done (TID=$TID); created: ${dump_dir}.tar ($time_sec)" > /dev/console

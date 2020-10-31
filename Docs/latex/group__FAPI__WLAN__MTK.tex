@@ -1,0 +1,629 @@
+\hypertarget{group__FAPI__WLAN__MTK}{\section{M\-T\-K}
+\label{group__FAPI__WLAN__MTK}\index{M\-T\-K@{M\-T\-K}}
+}
+
+
+It provides a set of M\-T\-K speciffic A\-P\-I for W\-L\-A\-N configuration.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga855acd474011bfafa43fcd60f19677f7}{fapi\-\_\-wlan\-\_\-mtk\-\_\-hw\-\_\-init} (\hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to initialize W\-L\-A\-N Radios. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga2263cdf663761a72e9ef34b0737fed5a}{fapi\-\_\-wlan\-\_\-mtk\-\_\-hw\-\_\-uninit} (\hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to Uninitialize W\-L\-A\-N Radios. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga072e397577e8156a5d657f5ba0f188ef}{fapi\-\_\-wlan\-\_\-mtk\-\_\-capability\-\_\-query} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to query W\-L\-A\-N capability of underlying W\-L\-A\-N Radio. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_gaa410cf97e2163b3db5bbc0e26b601ed0}{fapi\-\_\-wlan\-\_\-mtk\-\_\-radio\-\_\-set} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to set W\-L\-A\-N Radio Info. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_gaa345bef0cb71602644034ff5c749b9c2}{fapi\-\_\-wlan\-\_\-mtk\-\_\-radio\-\_\-stats\-\_\-query} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to get W\-L\-A\-N Radio Statistics. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga4786caff1c55d1d5b100ce774c00c1a2}{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-add} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to add a W\-L\-A\-N S\-S\-I\-D interface, i.\-e. to create a V\-A\-P. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_gae7220c3b8286cca502ea1b49cee1be89}{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-delete} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to remove a W\-L\-A\-N S\-S\-I\-D interface, i.\-e. to delete a V\-A\-P. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga71e67cab797b2c5a7c5e9d086fe17d60}{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-set} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to set S\-S\-I\-D in W\-L\-A\-N S\-S\-I\-D Object. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga363651e024fe759b03f0e4a5ac303061}{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-get} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to get W\-L\-A\-N S\-S\-I\-D Info, e.\-g. current configuration. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_gaefaafba9a63bf363c844f1b456529f9b}{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-stats\-\_\-query} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to get W\-L\-A\-N S\-S\-I\-D Statistics. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga5bdf8123e40ea7b9ba2fd55b389b9c21}{fapi\-\_\-wlan\-\_\-mtk\-\_\-ap\-\_\-set} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to set W\-L\-A\-N Access\-Point Object. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga1f8ce919749a5229575658b633824197}{fapi\-\_\-wlan\-\_\-mtk\-\_\-ap\-\_\-get} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to get W\-L\-A\-N Access\-Point Info, e.\-g. current configuration. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga5415fb361f93510ba11c63c22052a8a0}{fapi\-\_\-wlan\-\_\-mtk\-\_\-security\-\_\-set} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to set W\-L\-A\-N Security Object (Device.\-Wifi.\-Access\-Point.\-Security). \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga3a4145145bf426f0b94c37ab1593efb8}{fapi\-\_\-wlan\-\_\-mtk\-\_\-security\-\_\-get} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to get W\-L\-A\-N Security Info. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga4a9587395749e39648a991f1390a30a2}{fapi\-\_\-wlan\-\_\-mtk\-\_\-wps\-\_\-set} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to set W\-L\-A\-N W\-P\-S Object (Device.\-Wifi.\-Access\-Point.\-W\-P\-S). \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_gab8668d80972efa350233ceb8488d8646}{fapi\-\_\-wlan\-\_\-mtk\-\_\-wps\-\_\-get} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to get W\-L\-A\-N W\-P\-S Info. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga4090a67332a33634f88ce8ee4c82196e}{fapi\-\_\-wlan\-\_\-mtk\-\_\-assoc\-\_\-devices\-\_\-query} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, unsigned int flags)
+\begin{DoxyCompactList}\small\item\em This function is used to get all associated stations information. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_ga8f6373889d77d98b133e979536b1b537}{execute\-\_\-config\-\_\-in} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, const char $\ast$script\-Name, bool $\ast$obj\-Array)
+\begin{DoxyCompactList}\small\item\em This function is used to create a config.\-in file for the F\-A\-P\-I scripts layer and call the appropriate script. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_gac0e3dab1382570b830571575cdfab26a}{parse\-\_\-config\-\_\-out} (\hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, bool $\ast$obj\-Array)
+\begin{DoxyCompactList}\small\item\em This function is used for parsing the output configuration file that was created by the script layer. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_gaddcf86d264b43cf438190c97fe1afc52}{ltq\-\_\-mtk\-\_\-sh\-\_\-helper} (const char $\ast$iface, \hyperlink{structObjList}{Obj\-List} $\ast$wl\-Obj, const char $\ast$script\-Name)
+\begin{DoxyCompactList}\small\item\em ltq\-\_\-mtk\-\_\-sh\-\_\-helper is the main function of this module, mostly responsible to intermediate between the F\-A\-P\-I wlan layer and the scripts layer. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_gad7f8b0c392ec8cca25a3595449ba177f}{index\-Handler} (char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Helper function that removes the index suffix from the string and returns it as integer. \end{DoxyCompactList}\item 
+int \hyperlink{group__FAPI__WLAN__MTK_gaf0c15e2098bea9b34e939dde2e025657}{convert\-\_\-str\-\_\-to\-\_\-hex} (char $\ast$hex\-\_\-value, const char $\ast$value)
+\begin{DoxyCompactList}\small\item\em convert\-\_\-str\-\_\-to\-\_\-hex helper function that converts string to A\-S\-C\-I\-I hex string. \end{DoxyCompactList}\item 
+void \hyperlink{group__FAPI__WLAN__MTK_ga1bcf6721352838d23bd13ac5e99368a2}{remove\-\_\-new\-\_\-line} (char $\ast$s)
+\begin{DoxyCompactList}\small\item\em remove\-\_\-new\-\_\-line remove new line from string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It provides a set of M\-T\-K speciffic A\-P\-I for W\-L\-A\-N configuration. 
+
+\subsection{Function Documentation}
+\hypertarget{group__FAPI__WLAN__MTK_gaf0c15e2098bea9b34e939dde2e025657}{\index{M\-T\-K@{M\-T\-K}!convert\-\_\-str\-\_\-to\-\_\-hex@{convert\-\_\-str\-\_\-to\-\_\-hex}}
+\index{convert\-\_\-str\-\_\-to\-\_\-hex@{convert\-\_\-str\-\_\-to\-\_\-hex}!MTK@{M\-T\-K}}
+\subsubsection[{convert\-\_\-str\-\_\-to\-\_\-hex}]{\setlength{\rightskip}{0pt plus 5cm}int convert\-\_\-str\-\_\-to\-\_\-hex (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{hex\-\_\-value, }
+\item[{const char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_gaf0c15e2098bea9b34e939dde2e025657}
+
+
+convert\-\_\-str\-\_\-to\-\_\-hex helper function that converts string to A\-S\-C\-I\-I hex string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hex\-\_\-value} & a pointer to temp string that used for returning the output of the function. \\
+\hline
+{\em value} & the source string that should be converted to A\-S\-C\-I\-I hex value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_ga8f6373889d77d98b133e979536b1b537}{\index{M\-T\-K@{M\-T\-K}!execute\-\_\-config\-\_\-in@{execute\-\_\-config\-\_\-in}}
+\index{execute\-\_\-config\-\_\-in@{execute\-\_\-config\-\_\-in}!MTK@{M\-T\-K}}
+\subsubsection[{execute\-\_\-config\-\_\-in}]{\setlength{\rightskip}{0pt plus 5cm}int execute\-\_\-config\-\_\-in (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iface, }
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{const char $\ast$}]{script\-Name, }
+\item[{bool $\ast$}]{obj\-Array}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_ga8f6373889d77d98b133e979536b1b537}
+
+
+This function is used to create a config.\-in file for the F\-A\-P\-I scripts layer and call the appropriate script. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & -\/ W\-L\-A\-N A\-P/\-V\-A\-P interface name \\
+\hline
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ block of objects required by the script \\
+\hline
+\mbox{\tt in}  & {\em script\-Name} & -\/ L2 script that is executed for the A\-P\-I \\
+\hline
+\mbox{\tt in,out}  & {\em Obj\-Array} & -\/ Helper array to hold object index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_ga1f8ce919749a5229575658b633824197}{\index{M\-T\-K@{M\-T\-K}!fapi\-\_\-wlan\-\_\-mtk\-\_\-ap\-\_\-get@{fapi\-\_\-wlan\-\_\-mtk\-\_\-ap\-\_\-get}}
+\index{fapi\-\_\-wlan\-\_\-mtk\-\_\-ap\-\_\-get@{fapi\-\_\-wlan\-\_\-mtk\-\_\-ap\-\_\-get}!MTK@{M\-T\-K}}
+\subsubsection[{fapi\-\_\-wlan\-\_\-mtk\-\_\-ap\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}int fapi\-\_\-wlan\-\_\-mtk\-\_\-ap\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iface, }
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_ga1f8ce919749a5229575658b633824197}
+
+
+This function is used to get W\-L\-A\-N Access\-Point Info, e.\-g. current configuration. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & -\/ W\-L\-A\-N A\-P/\-V\-A\-P interface name \\
+\hline
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ Device.\-Wifi.\-Access\-Point Object Info. The Object name and parameter names to read are passed as input, values are returned as output. \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Flags are placeholder for any future usage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_ga5bdf8123e40ea7b9ba2fd55b389b9c21}{\index{M\-T\-K@{M\-T\-K}!fapi\-\_\-wlan\-\_\-mtk\-\_\-ap\-\_\-set@{fapi\-\_\-wlan\-\_\-mtk\-\_\-ap\-\_\-set}}
+\index{fapi\-\_\-wlan\-\_\-mtk\-\_\-ap\-\_\-set@{fapi\-\_\-wlan\-\_\-mtk\-\_\-ap\-\_\-set}!MTK@{M\-T\-K}}
+\subsubsection[{fapi\-\_\-wlan\-\_\-mtk\-\_\-ap\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}int fapi\-\_\-wlan\-\_\-mtk\-\_\-ap\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iface, }
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_ga5bdf8123e40ea7b9ba2fd55b389b9c21}
+
+
+This function is used to set W\-L\-A\-N Access\-Point Object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & -\/ W\-L\-A\-N A\-P/\-V\-A\-P interface name \\
+\hline
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ List of 1 or 2 objects\-: Device.\-Wifi.\-Access\-Point and/or Device.\-Wifi.\-Access\-Point.\-Vendor \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Flags are placeholder for any future usage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_ga4090a67332a33634f88ce8ee4c82196e}{\index{M\-T\-K@{M\-T\-K}!fapi\-\_\-wlan\-\_\-mtk\-\_\-assoc\-\_\-devices\-\_\-query@{fapi\-\_\-wlan\-\_\-mtk\-\_\-assoc\-\_\-devices\-\_\-query}}
+\index{fapi\-\_\-wlan\-\_\-mtk\-\_\-assoc\-\_\-devices\-\_\-query@{fapi\-\_\-wlan\-\_\-mtk\-\_\-assoc\-\_\-devices\-\_\-query}!MTK@{M\-T\-K}}
+\subsubsection[{fapi\-\_\-wlan\-\_\-mtk\-\_\-assoc\-\_\-devices\-\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}int fapi\-\_\-wlan\-\_\-mtk\-\_\-assoc\-\_\-devices\-\_\-query (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iface, }
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_ga4090a67332a33634f88ce8ee4c82196e}
+
+
+This function is used to get all associated stations information. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & -\/ W\-L\-A\-N A\-P/\-V\-A\-P Interface name. \\
+\hline
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ Device.\-Wifi.\-Access\-Point.\-Associated\-Device object. Returns list of associated devices and their statistics. \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Flags for any future use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000011}{Todo}]Do we want to separate to A\-P\-I for getting a list of Associated devices and a different A\-P\-I for statistics?\end{DoxyRefDesc}
+\begin{DoxyVerb}    Returns list of objects, for each STA return a pair of objects: 
+    Device.WiFi.AccessPoint.AssociatedDevice and Device.WiFi.AccessPoint.AssociatedDevice.Stats\end{DoxyVerb}
+ \hypertarget{group__FAPI__WLAN__MTK_ga072e397577e8156a5d657f5ba0f188ef}{\index{M\-T\-K@{M\-T\-K}!fapi\-\_\-wlan\-\_\-mtk\-\_\-capability\-\_\-query@{fapi\-\_\-wlan\-\_\-mtk\-\_\-capability\-\_\-query}}
+\index{fapi\-\_\-wlan\-\_\-mtk\-\_\-capability\-\_\-query@{fapi\-\_\-wlan\-\_\-mtk\-\_\-capability\-\_\-query}!MTK@{M\-T\-K}}
+\subsubsection[{fapi\-\_\-wlan\-\_\-mtk\-\_\-capability\-\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}int fapi\-\_\-wlan\-\_\-mtk\-\_\-capability\-\_\-query (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iface, }
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_ga072e397577e8156a5d657f5ba0f188ef}
+
+
+This function is used to query W\-L\-A\-N capability of underlying W\-L\-A\-N Radio. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & -\/ W\-L\-A\-N radio interface name. \\
+\hline
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ Object\-: Device.\-Wifi.\-Radio -\/ empty object, out\-: object will be filled with capabilities as parameters \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Flags are placeholder for any future usage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_ga855acd474011bfafa43fcd60f19677f7}{\index{M\-T\-K@{M\-T\-K}!fapi\-\_\-wlan\-\_\-mtk\-\_\-hw\-\_\-init@{fapi\-\_\-wlan\-\_\-mtk\-\_\-hw\-\_\-init}}
+\index{fapi\-\_\-wlan\-\_\-mtk\-\_\-hw\-\_\-init@{fapi\-\_\-wlan\-\_\-mtk\-\_\-hw\-\_\-init}!MTK@{M\-T\-K}}
+\subsubsection[{fapi\-\_\-wlan\-\_\-mtk\-\_\-hw\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}int fapi\-\_\-wlan\-\_\-mtk\-\_\-hw\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_ga855acd474011bfafa43fcd60f19677f7}
+
+
+This function is used to initialize W\-L\-A\-N Radios. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ in\-: Object\-: Device.\-Wifi.\-Radio.\-Vendor -\/ all parameters from this object out\-: List of objects\-:
+\begin{DoxyEnumerate}
+\item Device.\-Wifi, Param\-: Radio\-Number\-Of\-Entries -\/ number of radio interfaces that were created
+\item Device.\-Wifi.\-Radio, Param\-: Name -\/ Name of interface (This object $\ast$ number of interfaces created) 
+\end{DoxyEnumerate}\\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Flags are placeholder for any future usage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_ga2263cdf663761a72e9ef34b0737fed5a}{\index{M\-T\-K@{M\-T\-K}!fapi\-\_\-wlan\-\_\-mtk\-\_\-hw\-\_\-uninit@{fapi\-\_\-wlan\-\_\-mtk\-\_\-hw\-\_\-uninit}}
+\index{fapi\-\_\-wlan\-\_\-mtk\-\_\-hw\-\_\-uninit@{fapi\-\_\-wlan\-\_\-mtk\-\_\-hw\-\_\-uninit}!MTK@{M\-T\-K}}
+\subsubsection[{fapi\-\_\-wlan\-\_\-mtk\-\_\-hw\-\_\-uninit}]{\setlength{\rightskip}{0pt plus 5cm}int fapi\-\_\-wlan\-\_\-mtk\-\_\-hw\-\_\-uninit (
+\begin{DoxyParamCaption}
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_ga2263cdf663761a72e9ef34b0737fed5a}
+
+
+This function is used to Uninitialize W\-L\-A\-N Radios. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ should be N\-U\-L\-L, unused object, placeholder for any future usage. \\
+\hline
+\mbox{\tt in}  & {\em flags} & Flags are placeholder for any future usage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E \begin{DoxyVerb}    Uninitializes the WLAN radios, removes the WLAN drivers, and cleans the internal SW structures for the WLAN vendor implementations\end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_gaa410cf97e2163b3db5bbc0e26b601ed0}{\index{M\-T\-K@{M\-T\-K}!fapi\-\_\-wlan\-\_\-mtk\-\_\-radio\-\_\-set@{fapi\-\_\-wlan\-\_\-mtk\-\_\-radio\-\_\-set}}
+\index{fapi\-\_\-wlan\-\_\-mtk\-\_\-radio\-\_\-set@{fapi\-\_\-wlan\-\_\-mtk\-\_\-radio\-\_\-set}!MTK@{M\-T\-K}}
+\subsubsection[{fapi\-\_\-wlan\-\_\-mtk\-\_\-radio\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}int fapi\-\_\-wlan\-\_\-mtk\-\_\-radio\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iface, }
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_gaa410cf97e2163b3db5bbc0e26b601ed0}
+
+
+This function is used to set W\-L\-A\-N Radio Info. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & -\/ W\-L\-A\-N radio interface name. \\
+\hline
+\mbox{\tt in}  & {\em wl\-Obj} & -\/ List of 1 or 2 objects\-: Device.\-Wifi.\-Radio and/or Device.\-Wifi.\-Radio.\-Vendor \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Flags are placeholder for any future usage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_gaa345bef0cb71602644034ff5c749b9c2}{\index{M\-T\-K@{M\-T\-K}!fapi\-\_\-wlan\-\_\-mtk\-\_\-radio\-\_\-stats\-\_\-query@{fapi\-\_\-wlan\-\_\-mtk\-\_\-radio\-\_\-stats\-\_\-query}}
+\index{fapi\-\_\-wlan\-\_\-mtk\-\_\-radio\-\_\-stats\-\_\-query@{fapi\-\_\-wlan\-\_\-mtk\-\_\-radio\-\_\-stats\-\_\-query}!MTK@{M\-T\-K}}
+\subsubsection[{fapi\-\_\-wlan\-\_\-mtk\-\_\-radio\-\_\-stats\-\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}int fapi\-\_\-wlan\-\_\-mtk\-\_\-radio\-\_\-stats\-\_\-query (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iface, }
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_gaa345bef0cb71602644034ff5c749b9c2}
+
+
+This function is used to get W\-L\-A\-N Radio Statistics. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & -\/ W\-L\-A\-N radio interface name. \\
+\hline
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ Object\-: Device.\-Wifi.\-Radio.\-Stats. \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Flags are placeholder for any future usage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E \begin{DoxyVerb}    Pass an object containing object name with no parameters, to get all statistics in the object.
+    Pass an object with name and parameters that should be read if you want a subset of statistics.\end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_ga3a4145145bf426f0b94c37ab1593efb8}{\index{M\-T\-K@{M\-T\-K}!fapi\-\_\-wlan\-\_\-mtk\-\_\-security\-\_\-get@{fapi\-\_\-wlan\-\_\-mtk\-\_\-security\-\_\-get}}
+\index{fapi\-\_\-wlan\-\_\-mtk\-\_\-security\-\_\-get@{fapi\-\_\-wlan\-\_\-mtk\-\_\-security\-\_\-get}!MTK@{M\-T\-K}}
+\subsubsection[{fapi\-\_\-wlan\-\_\-mtk\-\_\-security\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}int fapi\-\_\-wlan\-\_\-mtk\-\_\-security\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iface, }
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_ga3a4145145bf426f0b94c37ab1593efb8}
+
+
+This function is used to get W\-L\-A\-N Security Info. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & -\/ W\-L\-A\-N A\-P/\-V\-A\-P interface name \\
+\hline
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ Device.\-Wifi.\-Access\-Point.\-Security Object Info. The Object name and parameter names to read are passed as input, values are returned as output. \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Flags are placeholder for any future usage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_ga5415fb361f93510ba11c63c22052a8a0}{\index{M\-T\-K@{M\-T\-K}!fapi\-\_\-wlan\-\_\-mtk\-\_\-security\-\_\-set@{fapi\-\_\-wlan\-\_\-mtk\-\_\-security\-\_\-set}}
+\index{fapi\-\_\-wlan\-\_\-mtk\-\_\-security\-\_\-set@{fapi\-\_\-wlan\-\_\-mtk\-\_\-security\-\_\-set}!MTK@{M\-T\-K}}
+\subsubsection[{fapi\-\_\-wlan\-\_\-mtk\-\_\-security\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}int fapi\-\_\-wlan\-\_\-mtk\-\_\-security\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iface, }
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_ga5415fb361f93510ba11c63c22052a8a0}
+
+
+This function is used to set W\-L\-A\-N Security Object (Device.\-Wifi.\-Access\-Point.\-Security). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & -\/ W\-L\-A\-N A\-P/\-V\-A\-P interface name \\
+\hline
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ Device.\-Wifi.\-Access\-Point.\-Security Object Config for Setting. \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Flags are placeholder for any future usage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_ga4786caff1c55d1d5b100ce774c00c1a2}{\index{M\-T\-K@{M\-T\-K}!fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-add@{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-add}}
+\index{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-add@{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-add}!MTK@{M\-T\-K}}
+\subsubsection[{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}int fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-add (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iface, }
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_ga4786caff1c55d1d5b100ce774c00c1a2}
+
+
+This function is used to add a W\-L\-A\-N S\-S\-I\-D interface, i.\-e. to create a V\-A\-P. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & -\/ W\-L\-A\-N {\itshape R\-A\-D\-I\-O} interface name, parent of V\-A\-P \\
+\hline
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ in (optional)\-: Device.\-Wifi.\-S\-S\-I\-D Object containing the V\-A\-P interface name and its M\-A\-C address, out\-: the created V\-A\-P interface name and its M\-A\-C address \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Flags are placeholder for any future usage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E \begin{DoxyVerb}    Create a virtual access point (AKA VAP or MBSSID), transmitting on the passed radio interface.
+    For some vendors the radio interface will be the name of the main AP, for others there is a unique name for radio configuration.\end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_gae7220c3b8286cca502ea1b49cee1be89}{\index{M\-T\-K@{M\-T\-K}!fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-delete@{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-delete}}
+\index{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-delete@{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-delete}!MTK@{M\-T\-K}}
+\subsubsection[{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}int fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-delete (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iface, }
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_gae7220c3b8286cca502ea1b49cee1be89}
+
+
+This function is used to remove a W\-L\-A\-N S\-S\-I\-D interface, i.\-e. to delete a V\-A\-P. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & -\/ W\-L\-A\-N {\itshape V\-A\-P} interface name \\
+\hline
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ should be N\-U\-L\-L, unused object, placeholder for any future usage. \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Flags are placeholder for any future usage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_ga363651e024fe759b03f0e4a5ac303061}{\index{M\-T\-K@{M\-T\-K}!fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-get@{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-get}}
+\index{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-get@{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-get}!MTK@{M\-T\-K}}
+\subsubsection[{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}int fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iface, }
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_ga363651e024fe759b03f0e4a5ac303061}
+
+
+This function is used to get W\-L\-A\-N S\-S\-I\-D Info, e.\-g. current configuration. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & -\/ W\-L\-A\-N A\-P/\-V\-A\-P interface name \\
+\hline
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ W\-L\-A\-N Device.\-Wifi.\-S\-S\-I\-D Object Info. The Object name and (optionally) parameter names to read are passed as input, values are returned as output. \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Flags are placeholder for any future usage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_ga71e67cab797b2c5a7c5e9d086fe17d60}{\index{M\-T\-K@{M\-T\-K}!fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-set@{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-set}}
+\index{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-set@{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-set}!MTK@{M\-T\-K}}
+\subsubsection[{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}int fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iface, }
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_ga71e67cab797b2c5a7c5e9d086fe17d60}
+
+
+This function is used to set S\-S\-I\-D in W\-L\-A\-N S\-S\-I\-D Object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & -\/ W\-L\-A\-N A\-P/\-V\-A\-P interface name \\
+\hline
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ Device.\-Wifi.\-S\-S\-I\-D Object Config for Setting. \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Flags are placeholder for any future usage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_gaefaafba9a63bf363c844f1b456529f9b}{\index{M\-T\-K@{M\-T\-K}!fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-stats\-\_\-query@{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-stats\-\_\-query}}
+\index{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-stats\-\_\-query@{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-stats\-\_\-query}!MTK@{M\-T\-K}}
+\subsubsection[{fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-stats\-\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}int fapi\-\_\-wlan\-\_\-mtk\-\_\-ssid\-\_\-stats\-\_\-query (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iface, }
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_gaefaafba9a63bf363c844f1b456529f9b}
+
+
+This function is used to get W\-L\-A\-N S\-S\-I\-D Statistics. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & -\/ W\-L\-A\-N A\-P/\-V\-A\-P interface name \\
+\hline
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ Device.\-Wifi.\-S\-S\-I\-D.\-Stats Object. The Object name is passed as input. \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Flags are placeholder for any future usage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_gab8668d80972efa350233ceb8488d8646}{\index{M\-T\-K@{M\-T\-K}!fapi\-\_\-wlan\-\_\-mtk\-\_\-wps\-\_\-get@{fapi\-\_\-wlan\-\_\-mtk\-\_\-wps\-\_\-get}}
+\index{fapi\-\_\-wlan\-\_\-mtk\-\_\-wps\-\_\-get@{fapi\-\_\-wlan\-\_\-mtk\-\_\-wps\-\_\-get}!MTK@{M\-T\-K}}
+\subsubsection[{fapi\-\_\-wlan\-\_\-mtk\-\_\-wps\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}int fapi\-\_\-wlan\-\_\-mtk\-\_\-wps\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iface, }
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_gab8668d80972efa350233ceb8488d8646}
+
+
+This function is used to get W\-L\-A\-N W\-P\-S Info. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & -\/ W\-L\-A\-N A\-P/\-V\-A\-P interface name \\
+\hline
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ Device.\-Wifi.\-Access\-Point.\-W\-P\-S Object Info. The Object name and parameter names to read are passed as input, values are returned as output. \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Flags are placeholder for any future usage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_ga4a9587395749e39648a991f1390a30a2}{\index{M\-T\-K@{M\-T\-K}!fapi\-\_\-wlan\-\_\-mtk\-\_\-wps\-\_\-set@{fapi\-\_\-wlan\-\_\-mtk\-\_\-wps\-\_\-set}}
+\index{fapi\-\_\-wlan\-\_\-mtk\-\_\-wps\-\_\-set@{fapi\-\_\-wlan\-\_\-mtk\-\_\-wps\-\_\-set}!MTK@{M\-T\-K}}
+\subsubsection[{fapi\-\_\-wlan\-\_\-mtk\-\_\-wps\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}int fapi\-\_\-wlan\-\_\-mtk\-\_\-wps\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iface, }
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{unsigned int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_ga4a9587395749e39648a991f1390a30a2}
+
+
+This function is used to set W\-L\-A\-N W\-P\-S Object (Device.\-Wifi.\-Access\-Point.\-W\-P\-S). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & -\/ W\-L\-A\-N A\-P/\-V\-A\-P interface name \\
+\hline
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ Device.\-Wifi.\-Access\-Point.\-W\-P\-S Object Config for Setting. \\
+\hline
+\mbox{\tt in}  & {\em flags} & -\/ Flags are placeholder for any future usage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000010}{Todo}]Accept a list to include the W\-P\-S vendor parameters (which object?) \end{DoxyRefDesc}
+\hypertarget{group__FAPI__WLAN__MTK_gad7f8b0c392ec8cca25a3595449ba177f}{\index{M\-T\-K@{M\-T\-K}!index\-Handler@{index\-Handler}}
+\index{index\-Handler@{index\-Handler}!MTK@{M\-T\-K}}
+\subsubsection[{index\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}int index\-Handler (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_gad7f8b0c392ec8cca25a3595449ba177f}
+
+
+Helper function that removes the index suffix from the string and returns it as integer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em s} & -\/ string with index suffix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+for legal value returned the index number, for E\-R\-R\-O\-R cases returned -\/1 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_gaddcf86d264b43cf438190c97fe1afc52}{\index{M\-T\-K@{M\-T\-K}!ltq\-\_\-mtk\-\_\-sh\-\_\-helper@{ltq\-\_\-mtk\-\_\-sh\-\_\-helper}}
+\index{ltq\-\_\-mtk\-\_\-sh\-\_\-helper@{ltq\-\_\-mtk\-\_\-sh\-\_\-helper}!MTK@{M\-T\-K}}
+\subsubsection[{ltq\-\_\-mtk\-\_\-sh\-\_\-helper}]{\setlength{\rightskip}{0pt plus 5cm}int ltq\-\_\-mtk\-\_\-sh\-\_\-helper (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{iface, }
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{const char $\ast$}]{script\-Name}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_gaddcf86d264b43cf438190c97fe1afc52}
+
+
+ltq\-\_\-mtk\-\_\-sh\-\_\-helper is the main function of this module, mostly responsible to intermediate between the F\-A\-P\-I wlan layer and the scripts layer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iface} & -\/ W\-L\-A\-N A\-P/\-V\-A\-P interface name \\
+\hline
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ block of objects required by the script \\
+\hline
+\mbox{\tt in}  & {\em script\-Name} & -\/ L2 script that is executed for the A\-P\-I \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_gac0e3dab1382570b830571575cdfab26a}{\index{M\-T\-K@{M\-T\-K}!parse\-\_\-config\-\_\-out@{parse\-\_\-config\-\_\-out}}
+\index{parse\-\_\-config\-\_\-out@{parse\-\_\-config\-\_\-out}!MTK@{M\-T\-K}}
+\subsubsection[{parse\-\_\-config\-\_\-out}]{\setlength{\rightskip}{0pt plus 5cm}int parse\-\_\-config\-\_\-out (
+\begin{DoxyParamCaption}
+\item[{{\bf Obj\-List} $\ast$}]{wl\-Obj, }
+\item[{bool $\ast$}]{obj\-Array}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_gac0e3dab1382570b830571575cdfab26a}
+
+
+This function is used for parsing the output configuration file that was created by the script layer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em wl\-Obj} & -\/ block of objects required by the script \\
+\hline
+\mbox{\tt in,out}  & {\em obj\-Array} & -\/ Helper array to hold object index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\-A\-P\-I\-\_\-\-S\-U\-C\-C\-E\-S\-S / F\-A\-P\-I\-\_\-\-F\-A\-I\-L\-U\-R\-E 
+\end{DoxyReturn}
+\hypertarget{group__FAPI__WLAN__MTK_ga1bcf6721352838d23bd13ac5e99368a2}{\index{M\-T\-K@{M\-T\-K}!remove\-\_\-new\-\_\-line@{remove\-\_\-new\-\_\-line}}
+\index{remove\-\_\-new\-\_\-line@{remove\-\_\-new\-\_\-line}!MTK@{M\-T\-K}}
+\subsubsection[{remove\-\_\-new\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}void remove\-\_\-new\-\_\-line (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{group__FAPI__WLAN__MTK_ga1bcf6721352838d23bd13ac5e99368a2}
+
+
+remove\-\_\-new\-\_\-line remove new line from string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em s} & pointer to string \\
+\hline
+\end{DoxyParams}

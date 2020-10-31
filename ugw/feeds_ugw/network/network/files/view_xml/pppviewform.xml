@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view>
+    <name>Device PPP</name>
+    <object name="Device.PPP.Interface.*" viewtype="form" >
+        <parameter name="Username" type="string" writable="true" webname="User name" maxlen="64"></parameter>
+        <parameter name="Password" type="string" writable="true" webname="Password" maxlen="64"></parameter>
+        <parameter name="LowerLayers" type="string" writable="true" webname="Lower layer" maxlen="64"></parameter>
+         <parameter  name="Add"  action="post" routeurl="Apply($event,'pppview')" type="button" webname="Apply" maxlen="64"></parameter>
+    </object>              
+</view>
+

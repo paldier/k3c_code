@@ -1,0 +1,380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="help__debug_8h" kind="file">
+    <compoundname>help_debug.h</compoundname>
+    <includes local="no">string.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="help__defs_8h" local="yes">help_defs.h</includes>
+    <includedby refid="help__objlist_8h" local="yes">help_objlist.h</includedby>
+    <incdepgraph>
+      <node id="88">
+        <label>help_defs.h</label>
+        <link refid="help__defs_8h"/>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>stdint.h</label>
+      </node>
+      <node id="87">
+        <label>stdlib.h</label>
+      </node>
+      <node id="90">
+        <label>syslog.h</label>
+      </node>
+      <node id="85">
+        <label>help_debug.h</label>
+        <link refid="help_debug.h"/>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>string.h</label>
+      </node>
+      <node id="91">
+        <label>help_enums.h</label>
+        <link refid="help__enums_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="94">
+        <label>ugw_proto.h</label>
+        <link refid="ugw__proto_8h"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>help_objlist.h</label>
+        <link refid="help__objlist_8h_source"/>
+        <childnode refid="94" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>help_debug.h</label>
+        <link refid="help_debug.h"/>
+        <childnode refid="93" relation="include">
+        </childnode>
+      </node>
+      <node id="96">
+        <label>ugw_common.h</label>
+        <link refid="ugw__common_8h"/>
+      </node>
+      <node id="95">
+        <label>cal.h</label>
+        <link refid="cal_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structDEBUG" prot="public">DEBUG</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__LIBHELP_1ga43233afd4834731532bc5411f87448a9" prot="public" static="no">
+        <type>struct <ref refid="structDEBUG" kindref="compound">DEBUG</ref></type>
+        <definition>typedef struct DEBUG MemDbgUtil</definition>
+        <argsstring></argsstring>
+        <name>MemDbgUtil</name>
+        <briefdescription>
+<para>Keeps track of allocated and freed memory details. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h" line="40" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__LIBHELP_1ga5023cc64b68b2569abc5b0a576839963" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void help_memInfo</definition>
+        <argsstring>(void)</argsstring>
+        <name>help_memInfo</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Function to dump allocated and freed memory details. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Dumps memory information in table format on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gad69e4cc1b0997b751beff9531e3b858b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> void *</type>
+        <definition>OUT void * help_calloc</definition>
+        <argsstring>(IN uint32_t unNum, IN uint32_t unSize, IN char *pcFile, IN uint32_t unLine)</argsstring>
+        <name>help_calloc</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unNum</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unSize</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcFile</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unLine</declname>
+        </param>
+        <briefdescription>
+<para>Function to allocate the memory with calloc. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">unNum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of memory blocks to be allocated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to be allocated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><bold>File</bold> info keep track mem info </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unLine</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><bold>LINE</bold> info keep track mem info </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Allocated memory as requested on success, else failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga042b2a9f517209fe6c474f02456cab20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> void *</type>
+        <definition>OUT void * help_malloc</definition>
+        <argsstring>(IN uint32_t unSize, IN char *pcFile, IN uint32_t unLine)</argsstring>
+        <name>help_malloc</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unSize</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcFile</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unLine</declname>
+        </param>
+        <briefdescription>
+<para>Function to allocate the memory with malloc. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">unSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to be allocated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><bold>File</bold> info keep track mem info </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unLine</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><bold>LINE</bold> info keep track mem info </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Allocated memory as requested on success, else failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga31a678674884400ad5f6b17eda22ee74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> void *</type>
+        <definition>OUT void * help_realloc</definition>
+        <argsstring>(IN void *ptr, IN uint32_t unSize, IN char *pcFile, IN uint32_t unLine)</argsstring>
+        <name>help_realloc</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> void *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unSize</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcFile</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unLine</declname>
+        </param>
+        <briefdescription>
+<para>Function is used to allocate the memory with realloc. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Previously allocated ptr to be realloced </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to be allocated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><bold>File</bold> info keep track mem info </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unLine</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><bold>LINE</bold> info keep track mem info </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Allocated memory as requested on success, else failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga119da297e15f5e43ef6d6ed4aabddd41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_free</definition>
+        <argsstring>(IN void *ptr, IN char *pcFile, IN uint32_t unLine)</argsstring>
+        <name>help_free</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> void *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcFile</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unLine</declname>
+        </param>
+        <briefdescription>
+<para>Function to free the memory with free. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to free </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><bold>file</bold> info keep track mem info </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unLine</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><bold>LINE</bold> info keep track mem info </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h" line="80" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>File contains structs, defines, macros related to memory debugging utility. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2015</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lantiq<sp/>Beteiligungs-GmbH<sp/>&amp;<sp/>Co.<sp/>KG</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lilienthalstrasse<sp/>15,<sp/>85579<sp/>Neubiberg,<sp/>Germany<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>For<sp/>licensing<sp/>information,<sp/>see<sp/>the<sp/>file<sp/>&apos;LICENSE&apos;<sp/>in<sp/>the<sp/>root<sp/>folder<sp/>of</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>software<sp/>module.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>*****************************************************************************<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>File<sp/>Name<sp/><sp/><sp/><sp/>:<sp/>help_debug.h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Description<sp/><sp/>:<sp/>Memory<sp/>debugging<sp/>utility<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__HELP_DEBUG_API_H<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__HELP_DEBUG_API_H</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="help__defs_8h" kindref="compound">help_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="comment">/*<sp/>@{<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="structDEBUG" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structDEBUG" kindref="compound">DEBUG</ref><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35" refid="structDEBUG_1ae273fbad6ce7ff3df56041bdbc98d119" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structDEBUG_1ae273fbad6ce7ff3df56041bdbc98d119" kindref="member">vId</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="structDEBUG_1a8a4025e8fccfbbf95c3568789d3690a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structDEBUG_1a8a4025e8fccfbbf95c3568789d3690a6" kindref="member">iSize</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="structDEBUG_1a398250c97a7a65717049ce5dd515eba2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structDEBUG_1a398250c97a7a65717049ce5dd515eba2" kindref="member">acFile</ref>[100];<sp/></highlight></codeline>
+<codeline lineno="38" refid="structDEBUG_1a50c914ade034df26663794c6a54b6a58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structDEBUG_1a50c914ade034df26663794c6a54b6a58" kindref="member">iLine</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="structDEBUG_1a8e59a4facf10cd60c28bf77bc2ab9e1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Dbg<sp/>*<ref refid="structDEBUG_1a8e59a4facf10cd60c28bf77bc2ab9e1e" kindref="member">pxNext</ref>;<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}<ref refid="group__LIBHELP_1ga43233afd4834731532bc5411f87448a9" kindref="member">MemDbgUtil</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga5023cc64b68b2569abc5b0a576839963" kindref="member">help_memInfo</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="group__LIBHELP_1gad69e4cc1b0997b751beff9531e3b858b" kindref="member">help_calloc</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unNum,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unSize,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcFile,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unLine);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="group__LIBHELP_1ga042b2a9f517209fe6c474f02456cab20" kindref="member">help_malloc</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unSize,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcFile,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unLine);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="group__LIBHELP_1ga31a678674884400ad5f6b17eda22ee74" kindref="member">help_realloc</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ptr,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unSize,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcFile,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unLine);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga119da297e15f5e43ef6d6ed4aabddd41" kindref="member">help_free</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ptr,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcFile,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unLine);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">/*<sp/>__HELP_DEBUG_API_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structfapi__shmem" kind="struct" prot="public">
+    <compoundname>fapi_shmem</compoundname>
+    <includes refid="dsl__fapi_8h" local="no">dsl_fapi.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfapi__shmem_1af7ee2d7aa3f9a4097e53353ee942f372" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structfapi__global__vars" kindref="compound">fapi_global_vars</ref></type>
+        <definition>struct fapi_global_vars fapi_shmem::global_vars</definition>
+        <argsstring></argsstring>
+        <name>global_vars</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Global variables </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="898" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="914" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfapi__shmem_1a5732da0ec59d14cecd04eb88c4b48816" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int fapi_shmem::open_cnt</definition>
+        <argsstring></argsstring>
+        <name>open_cnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Counter of DSL FAPI contexts stored Max amount is DSL_FAPI_SHMEM_CTX_CNT </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="919" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="919" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfapi__shmem_1a790da050e59940c76878a18af361e72c" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structfapi__shmem__data" kindref="compound">fapi_shmem_data</ref></type>
+        <definition>struct fapi_shmem_data fapi_shmem::data[DSL_FAPI_SHMEM_CTX_CNT]</definition>
+        <argsstring>[DSL_FAPI_SHMEM_CTX_CNT]</argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DSL FAPI contexts stored </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="919" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="923" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>DSL FAPI shared memory </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="100">
+        <label>fapi_shmem_data</label>
+        <link refid="structfapi__shmem__data"/>
+        <childnode refid="101" relation="usage">
+          <edgelabel>ctx</edgelabel>
+          <edgelabel>ctx_ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="102">
+        <label>fapi_global_vars</label>
+        <link refid="structfapi__global__vars"/>
+      </node>
+      <node id="99">
+        <label>fapi_shmem</label>
+        <link refid="structfapi__shmem"/>
+        <childnode refid="100" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="102" relation="usage">
+          <edgelabel>global_vars</edgelabel>
+        </childnode>
+      </node>
+      <node id="101">
+        <label>fapi_dsl_ctx</label>
+        <link refid="structfapi__dsl__ctx"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" line="910" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/dsl_fapi.h" bodystart="910" bodyend="924"/>
+    <listofallmembers>
+      <member refid="structfapi__shmem_1a790da050e59940c76878a18af361e72c" prot="public" virt="non-virtual"><scope>fapi_shmem</scope><name>data</name></member>
+      <member refid="structfapi__shmem_1af7ee2d7aa3f9a4097e53353ee942f372" prot="public" virt="non-virtual"><scope>fapi_shmem</scope><name>global_vars</name></member>
+      <member refid="structfapi__shmem_1a5732da0ec59d14cecd04eb88c4b48816" prot="public" virt="non-virtual"><scope>fapi_shmem</scope><name>open_cnt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

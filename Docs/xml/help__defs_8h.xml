@@ -1,0 +1,651 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="help__defs_8h" kind="file">
+    <compoundname>help_defs.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">syslog.h</includes>
+    <includes refid="help__enums_8h" local="yes">help_enums.h</includes>
+    <includedby refid="help__structs_8h" local="yes">help_structs.h</includedby>
+    <includedby refid="help__debug_8h" local="yes">help_debug.h</includedby>
+    <includedby refid="help__objlist_8h" local="yes">help_objlist.h</includedby>
+    <includedby refid="ugw__defs_8h" local="no">ugw_defs.h</includedby>
+    <incdepgraph>
+      <node id="97">
+        <label>help_defs.h</label>
+        <link refid="help_defs.h"/>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+      </node>
+      <node id="98">
+        <label>stdint.h</label>
+      </node>
+      <node id="99">
+        <label>syslog.h</label>
+      </node>
+      <node id="100">
+        <label>help_enums.h</label>
+        <link refid="help__enums_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="101">
+        <label>help_defs.h</label>
+        <link refid="help_defs.h"/>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="111" relation="include">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>help_structs.h</label>
+        <link refid="help__structs_8h"/>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>help_proto.h</label>
+        <link refid="help__proto_8h"/>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>ugw_proto.h</label>
+        <link refid="ugw__proto_8h"/>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>help_objlist.h</label>
+        <link refid="help__objlist_8h_source"/>
+        <childnode refid="106" relation="include">
+        </childnode>
+      </node>
+      <node id="109">
+        <label>ugw_structs.h</label>
+        <link refid="ugw__structs_8h"/>
+        <childnode refid="106" relation="include">
+        </childnode>
+      </node>
+      <node id="103">
+        <label>fapi_wlan.h</label>
+        <link refid="fapi__wlan_8h"/>
+      </node>
+      <node id="111">
+        <label>ugw_defs.h</label>
+        <link refid="ugw__defs_8h"/>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>help_debug.h</label>
+        <link refid="help__debug_8h"/>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="108">
+        <label>ugw_common.h</label>
+        <link refid="ugw__common_8h"/>
+      </node>
+      <node id="107">
+        <label>cal.h</label>
+        <link refid="cal_8h"/>
+      </node>
+      <node id="112">
+        <label>ugw_debug.h</label>
+        <link refid="ugw__debug_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" prot="public" static="no">
+        <name>OUT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for OUT null </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="38" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" prot="public" static="no">
+        <name>INOUT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro INOUT null </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="45" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" prot="public" static="no">
+        <name>IN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for IN null </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="52" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga9b6231674e83b660e4d79f8c8fe91dd1" prot="public" static="no">
+        <name>UNUSED_VAR</name>
+        <param><defname>arg</defname></param>
+        <initializer>(void)(arg)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define variable unused in the function </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="55" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga21ef1846034259a6ce19cfa0a7983a0a" prot="public" static="no">
+        <name>UNUSED_ARG</name>
+        <initializer>__attribute__ ((unused))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define function argument unused in the function </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="57" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga62f1164f5252ae6639d85d5dea956f7d" prot="public" static="no">
+        <name>OBJLIST</name>
+        <param><defname>x</defname></param>
+        <initializer>(<ref refid="group__LIBHELP_1ga12be59195dfbbad949d91d77335670f7" kindref="member">IS_SOPT_ID</ref>(x) ||  <ref refid="group__LIBHELP_1ga5132c687406cf7f84b7219781c9b4cfc" kindref="member">IS_SOPT_OBJVALUE</ref>(x) || \
+			 <ref refid="group__LIBHELP_1ga5e45de634eacadfc2cc46c8422330c13" kindref="member">IS_SOPT_LEAFNODE</ref>(x) || <ref refid="group__LIBHELP_1ga9fc2a89a60f05f4a29597359e224fcba" kindref="member">IS_SOPT_OBJNAME</ref>(x) || <ref refid="group__LIBHELP_1gac7ace9f231770f115c71ae45278b6896" kindref="member">IS_SOPT_DEFVAL</ref>(x))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro find objlist type check </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="59" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga709d9444754a18c2483a4ee1a3db8b2d" prot="public" static="no">
+        <name>OBJATTRLIST</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="group__LIBHELP_1ga11f6b708dad9417466bd2bfab197af82" kindref="member">IS_SOPT_OBJATTR</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to find objattrlist type check </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="63" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga47bd262145705428c9123dc1adcce691" prot="public" static="no">
+        <name>OWNER_MGMT</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="group__LIBHELP_1ga1fc700d6ed6c0212ca1f376c31d52e7b" kindref="member">IS_OWN_WEB</ref>(x) ||  <ref refid="group__LIBHELP_1ga15e8b7e7c3992695f60e90ec7f5cb0da" kindref="member">IS_OWN_TR69</ref>(x) || <ref refid="group__LIBHELP_1gab08c7a3f1f53bb297b8898c362247c5c" kindref="member">IS_OWN_CLI</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check owner </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="65" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gabc5880b36bb8129ff37591ca058537af" prot="public" static="no">
+        <name>IS_SOPT_ORGOWN</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a611b573ef4cad192232654b47c4e1ea0" kindref="member">SOPT_ORGOWN</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check orginal owner bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="70" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga12be59195dfbbad949d91d77335670f7" prot="public" static="no">
+        <name>IS_SOPT_ID</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a86ca54869a37d6b2ee9f1ef03f18d7bd" kindref="member">SOPT_ID</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check suboper id bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="76" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga9fc2a89a60f05f4a29597359e224fcba" prot="public" static="no">
+        <name>IS_SOPT_OBJNAME</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a590689005d14f4443e685b735a0fb598" kindref="member">SOPT_OBJNAME</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check suboper subtree bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="81" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga5132c687406cf7f84b7219781c9b4cfc" prot="public" static="no">
+        <name>IS_SOPT_OBJVALUE</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a509d34676cdc189cd6db36c8f31df9c0" kindref="member">SOPT_OBJVALUE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check suboper complete bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="86" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga11f6b708dad9417466bd2bfab197af82" prot="public" static="no">
+        <name>IS_SOPT_OBJATTR</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a08d5b1a74d6081b7c8fcf583dab97752" kindref="member">SOPT_OBJATTR</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check suboper attrval bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="91" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga5e45de634eacadfc2cc46c8422330c13" prot="public" static="no">
+        <name>IS_SOPT_LEAFNODE</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a34f27eaeec6a02cf39bc5f9ccd625e84" kindref="member">SOPT_LEAFNODE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check suboper leaf node bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="96" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gac7ace9f231770f115c71ae45278b6896" prot="public" static="no">
+        <name>IS_SOPT_DEFVAL</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a43d345af96a636bddcae661c50020347" kindref="member">SOPT_DEFVAL</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check suboper defult val bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="101" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gaac90c97c5208e7ecfdb6609aa47c4f1a" prot="public" static="no">
+        <name>IS_SOPT_OBJACSATTR</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga26a2d765c9669d7cf62818f31a306f76a9830de59cb01d6e64813002b2dffe92c" kindref="member">SOPT_OBJACSATTR</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check suboper ACS attrval bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="106" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gaea736e9adc5faa41adc84af9793776fa" prot="public" static="no">
+        <name>IS_ATTR_ACTIVE_NOTIFY_SET</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccba660b640063fbc5ee2d289a3fa58d0d93" kindref="member">ATTR_ACTIVENOTI</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for access control attribute </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="111" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga15e8b7e7c3992695f60e90ec7f5cb0da" prot="public" static="no">
+        <name>IS_OWN_TR69</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507afd4ab478568086323ad31db39ff42c55" kindref="member">OWN_TR69</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check tr69 owner bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="117" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga1fc700d6ed6c0212ca1f376c31d52e7b" prot="public" static="no">
+        <name>IS_OWN_WEB</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507a6d24bd2ee1e2fe7ec7b1453c835221f6" kindref="member">OWN_WEB</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check web owner bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="122" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga7e5fcef52a724ff4bd291a4d0d42910e" prot="public" static="no">
+        <name>IS_OWN_SERVD</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507aa456b29529a8625118c2e5002ddde02a" kindref="member">OWN_SERVD</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check servd owner bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="127" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gab08c7a3f1f53bb297b8898c362247c5c" prot="public" static="no">
+        <name>IS_OWN_CLI</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507a835c8e2f1c1761f7b6a96741727d034d" kindref="member">OWN_CLI</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check cli owner bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="132" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga9dee7b669107a8535d6450b924da3dd5" prot="public" static="no">
+        <name>IS_OWN_OTHER</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507af9c8e0f2e72366671c2313c42146c31c" kindref="member">OWN_OTHER</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check other owner bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="137" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga52f319651f13bfc0bf8af07d3ef34066" prot="public" static="no">
+        <name>IS_OWN_POLLD</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga3b5e9e55eb7b08d5702a101e529e5507abdc4cf6227f600ff8519e594e91f3b68" kindref="member">OWN_POLLD</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check polld owner bit set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="142" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga635a84c0e3ae6e922f824064a006500d" prot="public" static="no">
+        <name>MAX_LEN_OBJNAME</name>
+        <initializer>256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Object Name string length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="148" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga6f475315cf5d5278cdae2af64471ab80" prot="public" static="no">
+        <name>MAX_LEN_ID</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Object ID string length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="153" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gaac5d922b6e3eb48b7ba829979fd73ae2" prot="public" static="no">
+        <name>MAX_LEN_PARAM_NAME</name>
+        <initializer>256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parameter Name string length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="158" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga1b79b737d896845c1c07d942ffbfe3fa" prot="public" static="no">
+        <name>MAX_LEN_PARAM_VALUE</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parameter Value string length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="163" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga121f77f1d2f8588180ca5a258fe36765" prot="public" static="no">
+        <name>MAX_LEN_VALID_VALUE</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parameter valid value string length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="168" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga7f24a1abca37046fc42297fdefe88335" prot="public" static="no">
+        <name>NO_ARG_VALUE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for NO_ARG_VALUE null </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="173" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga7b87580b87e217a2cc87a362a19c91e5" prot="public" static="no">
+        <name>MAX_LEN_PROFILENAME</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Profile name string length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="178" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gad283ffd6255aeb7b05ce1ed512a81102" prot="public" static="no">
+        <name>MAX_LEN_WEBNAME</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Webname string length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="183" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1gac3bbb0c7282c84f7f5fd606f95c22278" prot="public" static="no">
+        <name>MAX_LEN_PARAM_TYPE</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parameter Type string length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="188" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga054e39e306fb3948d07aadf394da2fbf" prot="public" static="no">
+        <name>char8_t</name>
+        <initializer>int8_t</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Character typedef </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="198" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga6e3ff99394385544686d23c7e6f52922" prot="public" static="no">
+        <name>IS_OBJLIST</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="group__LIBHELP_1ga62f1164f5252ae6639d85d5dea956f7d" kindref="member">OBJLIST</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to check objlist structure used </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="203" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga06ed2f6c3b32cc225f54bbce3318da0d" prot="public" static="no">
+        <name>IS_ATTR_PASSIVE_NOTIFY_SET</name>
+        <param><defname>bit</defname></param>
+        <initializer>(bit &amp; <ref refid="group__LIBHELP_1gga394c61369f4e995f18b58c77d1a3cccbaeb39c01e580d65085d016537cae56d77" kindref="member">ATTR_PASSIVENOTI</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro for access control attribute </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="208" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga53228be549fb0aa91100133f3d83846d" prot="public" static="no">
+        <name>NOT_SET</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag Not Set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="213" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__LIBHELP_1ga59da1d65e87a723efe808dbabb4fc205" prot="public" static="no">
+        <name>SET</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag Set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="218" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__LIBHELP_1ga73f73d414f252ff46652f16495641187" prot="public" static="no">
+        <type>struct list_head</type>
+        <definition>typedef struct list_head ListHead</definition>
+        <argsstring></argsstring>
+        <name>ListHead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List head structure typedef </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" line="39" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>File contains the common definitions, macros and data structures common across all the modules in the software. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2015</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lantiq<sp/>Beteiligungs-GmbH<sp/>&amp;<sp/>Co.<sp/>KG</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lilienthalstrasse<sp/>15,<sp/>85579<sp/>Neubiberg,<sp/>Germany<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>For<sp/>licensing<sp/>information,<sp/>see<sp/>the<sp/>file<sp/>&apos;LICENSE&apos;<sp/>in<sp/>the<sp/>root<sp/>folder<sp/>of</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>software<sp/>module.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>*****************************************************************************<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>File<sp/>Name<sp/><sp/><sp/><sp/>:<sp/>help_defs.h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Description<sp/><sp/>:<sp/>Common<sp/>Library<sp/>contains<sp/>functions,<sp/>defines,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>structs,<sp/>enums<sp/>used<sp/>across<sp/>modules<sp/>like<sp/>CAL,<sp/>CAPI,<sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CSD,<sp/>Servd,<sp/>and<sp/>Management<sp/>Entities<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">/*<sp/>@{<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_HELP_DEFS_H</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_HELP_DEFS_H</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;syslog.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="help__enums_8h" kindref="compound">help_enums.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OUT</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="38" refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" refkind="member"><highlight class="preprocessor">#define<sp/>OUT<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor">#endif<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INOUT</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="45" refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" refkind="member"><highlight class="preprocessor">#define<sp/>INOUT<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor">#endif<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>IN<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="52" refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" refkind="member"><highlight class="preprocessor">#define<sp/>IN<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="group__LIBHELP_1ga9b6231674e83b660e4d79f8c8fe91dd1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UNUSED_VAR(arg)<sp/><sp/><sp/><sp/><sp/>(void)(arg)<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="group__LIBHELP_1ga21ef1846034259a6ce19cfa0a7983a0a" refkind="member"><highlight class="preprocessor">#define<sp/>UNUSED_ARG<sp/><sp/><sp/><sp/><sp/><sp/>__attribute__<sp/>((unused))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="group__LIBHELP_1ga62f1164f5252ae6639d85d5dea956f7d" refkind="member"><highlight class="preprocessor">#define<sp/>OBJLIST(x)<sp/><sp/><sp/><sp/><sp/>(IS_SOPT_ID(x)<sp/>||<sp/><sp/>IS_SOPT_OBJVALUE(x)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IS_SOPT_LEAFNODE(x)<sp/>||<sp/>IS_SOPT_OBJNAME(x)<sp/>||<sp/>IS_SOPT_DEFVAL(x))<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor">#define<sp/>OBJATTRLIST(x)<sp/>IS_SOPT_OBJATTR(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor">#define<sp/>OWNER_MGMT(x)<sp/>IS_OWN_WEB(x)<sp/>||<sp/><sp/>IS_OWN_TR69(x)<sp/>||<sp/>IS_OWN_CLI(x)<sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor">#define<sp/>IS_SOPT_ORGOWN(bit)<sp/>(bit<sp/>&amp;<sp/>SOPT_ORGOWN)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor">#define<sp/>IS_SOPT_ID(bit)<sp/>(bit<sp/>&amp;<sp/>SOPT_ID)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor">#define<sp/>IS_SOPT_OBJNAME(bit)<sp/>(bit<sp/>&amp;<sp/>SOPT_OBJNAME)<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="preprocessor">#define<sp/>IS_SOPT_OBJVALUE(bit)<sp/>(bit<sp/>&amp;<sp/>SOPT_OBJVALUE)<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="preprocessor">#define<sp/>IS_SOPT_OBJATTR(bit)<sp/>(bit<sp/>&amp;<sp/>SOPT_OBJATTR)<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="preprocessor">#define<sp/>IS_SOPT_LEAFNODE(bit)<sp/>(bit<sp/>&amp;<sp/>SOPT_LEAFNODE)<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="preprocessor">#define<sp/>IS_SOPT_DEFVAL(bit)<sp/>(bit<sp/>&amp;<sp/>SOPT_DEFVAL)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor">#define<sp/>IS_SOPT_OBJACSATTR(bit)<sp/>(bit<sp/>&amp;<sp/>SOPT_OBJACSATTR)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="preprocessor">#define<sp/>IS_ATTR_ACTIVE_NOTIFY_SET(bit)<sp/>(bit<sp/>&amp;<sp/>ATTR_ACTIVENOTI)<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="preprocessor">#define<sp/>IS_OWN_TR69(bit)<sp/>(bit<sp/>&amp;<sp/>OWN_TR69)<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="preprocessor">#define<sp/>IS_OWN_WEB(bit)<sp/>(bit<sp/>&amp;<sp/>OWN_WEB)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="preprocessor">#define<sp/>IS_OWN_SERVD(bit)<sp/>(bit<sp/>&amp;<sp/>OWN_SERVD)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="preprocessor">#define<sp/>IS_OWN_CLI(bit)<sp/>(bit<sp/>&amp;<sp/>OWN_CLI)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137"><highlight class="preprocessor">#define<sp/>IS_OWN_OTHER(bit)<sp/>(bit<sp/>&amp;<sp/>OWN_OTHER)<sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="preprocessor">#define<sp/>IS_OWN_POLLD(bit)<sp/>(bit<sp/>&amp;<sp/>OWN_POLLD)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="preprocessor">#define<sp/>MAX_LEN_OBJNAME<sp/>256<sp/></highlight></codeline>
+<codeline lineno="153"><highlight class="preprocessor">#define<sp/>MAX_LEN_ID<sp/>6<sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="preprocessor">#define<sp/>MAX_LEN_PARAM_NAME<sp/>256<sp/></highlight></codeline>
+<codeline lineno="163"><highlight class="preprocessor">#define<sp/>MAX_LEN_PARAM_VALUE<sp/>128<sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="preprocessor">#define<sp/>MAX_LEN_VALID_VALUE<sp/>1024<sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="preprocessor">#define<sp/>NO_ARG_VALUE<sp/><sp/>0<sp/></highlight></codeline>
+<codeline lineno="178"><highlight class="preprocessor">#define<sp/>MAX_LEN_PROFILENAME<sp/>64<sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="preprocessor">#define<sp/>MAX_LEN_WEBNAME<sp/>128<sp/></highlight></codeline>
+<codeline lineno="188"><highlight class="preprocessor">#define<sp/>MAX_LEN_PARAM_TYPE<sp/>20<sp/><sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="preprocessor">typedef<sp/>struct<sp/>list_head<sp/>ListHead;<sp/><sp/></highlight></codeline>
+<codeline lineno="198"><highlight class="preprocessor">#define<sp/>char8_t<sp/>int8_t<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="203"><highlight class="preprocessor">#define<sp/>IS_OBJLIST(x)<sp/>OBJLIST(x)<sp/><sp/></highlight></codeline>
+<codeline lineno="208"><highlight class="preprocessor">#define<sp/>IS_ATTR_PASSIVE_NOTIFY_SET(bit)<sp/>(bit<sp/>&amp;<sp/>ATTR_PASSIVENOTI)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="213"><highlight class="preprocessor">#define<sp/>NOT_SET<sp/>2<sp/></highlight></codeline>
+<codeline lineno="218"><highlight class="preprocessor">#define<sp/>SET<sp/>3<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="222"><highlight class="preprocessor">#endif<sp/><sp/>//#ifndef<sp/>_HELP_DEFS_H</highlight></codeline>
+<codeline lineno="223"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_defs.h"/>
+  </compounddef>
+</doxygen>

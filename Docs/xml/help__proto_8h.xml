@@ -1,0 +1,1914 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="help__proto_8h" kind="file">
+    <compoundname>help_proto.h</compoundname>
+    <includes refid="help__structs_8h" local="yes">help_structs.h</includes>
+    <includedby refid="help__objlist_8h" local="yes">help_objlist.h</includedby>
+    <incdepgraph>
+      <node id="178">
+        <label>help_defs.h</label>
+        <link refid="help__defs_8h"/>
+        <childnode refid="179" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+        <childnode refid="177" relation="include">
+        </childnode>
+      </node>
+      <node id="181">
+        <label>list.h</label>
+      </node>
+      <node id="176">
+        <label>help_structs.h</label>
+        <link refid="help__structs_8h"/>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="181" relation="include">
+        </childnode>
+      </node>
+      <node id="175">
+        <label>help_proto.h</label>
+        <link refid="help_proto.h"/>
+        <childnode refid="176" relation="include">
+        </childnode>
+      </node>
+      <node id="179">
+        <label>stdint.h</label>
+      </node>
+      <node id="180">
+        <label>syslog.h</label>
+      </node>
+      <node id="177">
+        <label>help_enums.h</label>
+        <link refid="help__enums_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="182">
+        <label>help_proto.h</label>
+        <link refid="help_proto.h"/>
+        <childnode refid="183" relation="include">
+        </childnode>
+      </node>
+      <node id="184">
+        <label>ugw_proto.h</label>
+        <link refid="ugw__proto_8h"/>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="186" relation="include">
+        </childnode>
+      </node>
+      <node id="183">
+        <label>help_objlist.h</label>
+        <link refid="help__objlist_8h_source"/>
+        <childnode refid="184" relation="include">
+        </childnode>
+      </node>
+      <node id="186">
+        <label>ugw_common.h</label>
+        <link refid="ugw__common_8h"/>
+      </node>
+      <node id="185">
+        <label>cal.h</label>
+        <link refid="cal_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__LIBHELP_1ga6bb6513ba70c6cfc1333820665b274e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_storeLocalDB</definition>
+        <argsstring>(IN ObjList *pxObj, IN const char *pcPath)</argsstring>
+        <name>help_storeLocalDB</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxObj</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcPath</declname>
+        </param>
+        <briefdescription>
+<para>API to store objlist value to tmp file for later use. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objlist ptr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path where to create a tmp file </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>UGW_SUCCESS on successful / UGW_FAILURE on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga24fe0e9dca60ba43295e2d270a76769e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_loadLocalDB</definition>
+        <argsstring>(OUT ObjList *pxObj, IN const char *pcPath)</argsstring>
+        <name>help_loadLocalDB</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxObj</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcPath</declname>
+        </param>
+        <briefdescription>
+<para>API to construct objlist from tmp file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">pxObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objlist ptr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path where to fetch the values from </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structObjList" kindref="compound">ObjList</ref> on successful / UGW_FAILURE on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gaff5235d94dc4e88725e95abeaf5b77f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+        <definition>ObjList* help_addObjList</definition>
+        <argsstring>(IN ObjList *pxObjList, IN const char *pcObjName, IN uint16_t unSid, IN uint16_t unOid, IN uint32_t unSubOper, IN uint32_t unObjFlag)</argsstring>
+        <name>help_addObjList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxObjList</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcObjName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref></type>
+          <declname>unSid</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref></type>
+          <declname>unOid</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unSubOper</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unObjFlag</declname>
+        </param>
+        <briefdescription>
+<para>API to add an add object node to the head node. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObjList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the List head object node </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcObjName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the Object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unSid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Service Id corresponding to the Object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unOid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter Id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unSubOper</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Suboperation at object level(add, del, modify) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unObjFlag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identify access, dynamic, etc </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gac142687a39a89012a10c29f9e1955169" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structParamList" kindref="compound">ParamList</ref> *</type>
+        <definition>ParamList* help_addParamList</definition>
+        <argsstring>(IN ObjList *pxObjList, IN const char *pcParamName, IN uint16_t unParamId, IN const char *pcParamValue, IN uint32_t unFlag)</argsstring>
+        <name>help_addParamList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxObjList</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcParamName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref></type>
+          <declname>unParamId</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcParamValue</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unFlag</declname>
+        </param>
+        <briefdescription>
+<para>API to add a add param node to Objlist node. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObjList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the List head object node </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcParamName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the Parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unParamId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter Id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcParamValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter Value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unFlag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Holds masks type, dynamic, modified information in bit </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Values in paramList on successful / Proper code on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="75" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gadc95c1908c5d73d1eff54c4223736427" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void help_printObj</definition>
+        <argsstring>(IN void *pxObj, IN uint32_t unSubOper)</argsstring>
+        <name>help_printObj</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> void *</type>
+          <declname>pxObj</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unSubOper</declname>
+        </param>
+        <briefdescription>
+<para>API to dump/print the Object Info from the provided Object List. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Void ptr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unSubOper</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Suboperation to print objects(objlist, attrlist, acslist) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga38541ee26cfdda5a69f955fb9ebb1e1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void help_printParamList</definition>
+        <argsstring>(IN ParamList *pxParamList)</argsstring>
+        <name>help_printParamList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structParamList" kindref="compound">ParamList</ref> *</type>
+          <declname>pxParamList</declname>
+        </param>
+        <briefdescription>
+<para>API to print paramlist information. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxParamList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structParamList" kindref="compound">ParamList</ref> node ptr </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gad71c865fd4e0cd7693c46eb1f299be3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void help_delObj</definition>
+        <argsstring>(IN void *pObj, IN uint32_t unSubOper, IN uint32_t unFlag)</argsstring>
+        <name>help_delObj</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> void *</type>
+          <declname>pObj</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unSubOper</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unFlag</declname>
+        </param>
+        <briefdescription>
+<para>API to free the object info from the Object List structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the List head object node </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unSubOper</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Suboperation to identify object type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unFlag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>EMPTY_OBJLIST - empty objlist for reuse, FREE_OBJLIST - free objlist completely </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="101" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga44eabeb9342dfc93a4f4de134d43e8ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_delCurObj</definition>
+        <argsstring>(IN void *pObj, IN const char *pcObjName, IN uint32_t unFlag)</argsstring>
+        <name>help_delCurObj</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> void *</type>
+          <declname>pObj</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcObjName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unFlag</declname>
+        </param>
+        <briefdescription>
+<para>API to free the object info from the Object List structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the List head object node </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcObjName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unFlag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag to identify object type </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="111" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga6e97d803078dec87657f1a4558206d14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void help_delParam</definition>
+        <argsstring>(IN void *pParam, IN uint32_t unFlag)</argsstring>
+        <name>help_delParam</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> void *</type>
+          <declname>pParam</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unFlag</declname>
+        </param>
+        <briefdescription>
+<para>API to free the paramlist. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pParam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer paramlist ptr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unFlag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag to identify paramlist type type </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="119" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gafd93b1fc0a079d3dda8a3b55ec333644" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void help_getObjListCnt</definition>
+        <argsstring>(IN ObjList *pxObjList, OUT int32_t *pnObjCnt)</argsstring>
+        <name>help_getObjListCnt</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxObjList</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref> *</type>
+          <declname>pnObjCnt</declname>
+        </param>
+        <briefdescription>
+<para>API to get object count. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObjList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the objlist </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pnObjCnt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total number of object node count in given list </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="127" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga0a5ee1490de2047bd9b7fbb32c8ef583" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void help_getParamListCnt</definition>
+        <argsstring>(IN ObjList *pxObjList, IN char8_t *pcObjName, OUT int32_t *pParamCnt)</argsstring>
+        <name>help_getParamListCnt</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxObjList</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="group__LIBHELP_1ga054e39e306fb3948d07aadf394da2fbf" kindref="member">char8_t</ref> *</type>
+          <declname>pcObjName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref> *</type>
+          <declname>pParamCnt</declname>
+        </param>
+        <briefdescription>
+<para>API to get parameter count. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObjList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the objlist </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcObjName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object name under which parmater node count to get </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pParamCnt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total number of parameter count </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="137" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gad717c26644b76d1891c4993611da13e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void help_copyObjList</definition>
+        <argsstring>(OUT void *pDstObj, IN uint32_t unFlag, IN void *pSrcObj)</argsstring>
+        <name>help_copyObjList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> void *</type>
+          <declname>pDstObj</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unFlag</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> void *</type>
+          <declname>pSrcObj</declname>
+        </param>
+        <briefdescription>
+<para>Function to copy src object &quot;as is&quot; to dst object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pSrcObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Void ptr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unFlag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag to define object type(objlist, attrobjlist, acsobjlist) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pDstObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Void ptr </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="147" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga83db2d4c1600b34e94db55083f5b1017" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void help_copyCompleteObjList</definition>
+        <argsstring>(OUT void *pDst, IN uint32_t unFlag, IN void *pSrc)</argsstring>
+        <name>help_copyCompleteObjList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> void *</type>
+          <declname>pDst</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unFlag</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> void *</type>
+          <declname>pSrc</declname>
+        </param>
+        <briefdescription>
+<para>API to copy src object complete objlist &quot;as is&quot; to dst object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pDst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Void ptr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unFlag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag to define object type(objlist, attrobjlist, acsobjlist) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pSrc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Void ptr </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="157" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gaf0d77d8d7790407c0115675a2c562c39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="structParamList" kindref="compound">ParamList</ref> *</type>
+        <definition>OUT ParamList* help_paramListOnly</definition>
+        <argsstring>(IN ParamList *pxSrcParam, IN const char *pcParamName, IN uint16_t unParamId, IN const char *pcParamValue, IN uint32_t unFlag)</argsstring>
+        <name>help_paramListOnly</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structParamList" kindref="compound">ParamList</ref> *</type>
+          <declname>pxSrcParam</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcParamName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref></type>
+          <declname>unParamId</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcParamValue</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unFlag</declname>
+        </param>
+        <briefdescription>
+<para>API to add and traverse paramlist alone, used for notification. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxSrcParam</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Void ptr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcParamName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unParamId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter Id </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcParamValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter Value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unFlag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Holds masks type, dynamic, modified information in bit </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="168" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga204faa57d7e26b64539efa41793e243a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structObjAttrList" kindref="compound">ObjAttrList</ref> *</type>
+        <definition>ObjAttrList* help_addObjAttrList</definition>
+        <argsstring>(IN ObjAttrList *pxObjAttrList, IN const char *pcObjName, IN const char *pcWebName, IN uint32_t unObjAttrFlag)</argsstring>
+        <name>help_addObjAttrList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structObjAttrList" kindref="compound">ObjAttrList</ref> *</type>
+          <declname>pxObjAttrList</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcObjName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcWebName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unObjAttrFlag</declname>
+        </param>
+        <briefdescription>
+<para>API to construct attrlist for object with requested attribute values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObjAttrList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attrobj head node ptr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcObjName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcWebName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Webname for requested object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unObjAttrFlag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Holds access, multiinst information in bits </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="182" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gaa179c3f390f7087bee64eeac354dfb3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="structParamAttrList" kindref="compound">ParamAttrList</ref> *</type>
+        <definition>OUT ParamAttrList* help_addParamAttrList</definition>
+        <argsstring>(IN ObjAttrList *pxObjAttrList, IN const char *pcParamName, IN const char *pcParamProfile, IN const char *pcParamWebName, IN const char *pcParamValidVal, IN const char *pcParamDefaultVal, IN uint32_t unMinVal, IN uint32_t unMaxVal, IN uint32_t unMinLen, IN uint32_t unMaxLen, IN uint32_t unParamFlag)</argsstring>
+        <name>help_addParamAttrList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structObjAttrList" kindref="compound">ObjAttrList</ref> *</type>
+          <declname>pxObjAttrList</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcParamName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcParamProfile</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcParamWebName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcParamValidVal</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcParamDefaultVal</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unMinVal</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unMaxVal</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unMinLen</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unMaxLen</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unParamFlag</declname>
+        </param>
+        <briefdescription>
+<para>API to construct attrlist for parameter with requested attribute values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObjAttrList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attrobj head node ptr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcParamName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcParamProfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter profile </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcParamWebName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter webname </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcParamValidVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Validation values with comma separated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcParamDefaultVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default value of the parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unMinVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum value if the parameter type is int </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unMaxVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum value if the parameter type is int </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unMinLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum length if the parameter type is string </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unMaxLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum length if the parameter type is string </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unParamFlag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Holds access, syntax, permit information in bits </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="202" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gad48fc3ed404fdd0a11893f5eba682951" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="structObjACSList" kindref="compound">ObjACSList</ref> *</type>
+        <definition>OUT ObjACSList* help_addAcsObjList</definition>
+        <argsstring>(IN ObjACSList *pxObjACSList, IN const char sObjName[MAX_LEN_OBJNAME], IN uint32_t unObjOper, IN uint32_t unObjFlag)</argsstring>
+        <name>help_addAcsObjList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structObjACSList" kindref="compound">ObjACSList</ref> *</type>
+          <declname>pxObjACSList</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char</type>
+          <declname>sObjName</declname>
+          <array>[MAX_LEN_OBJNAME]</array>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unObjOper</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unObjFlag</declname>
+        </param>
+        <briefdescription>
+<para>API to construct ACS attrlist for object with requested attribute values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObjACSList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object list with ACS attribute supported </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">sObjName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unObjOper</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Suboperation for the given object MODIFY </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unObjFlag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="221" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gaeb06943c87068f172cd2c56bf85f3c2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="structParamACSList" kindref="compound">ParamACSList</ref> *</type>
+        <definition>OUT ParamACSList* help_addAcsParamList</definition>
+        <argsstring>(IN ObjACSList *pxObjACSList, IN const char sParamName[MAX_LEN_PARAM_NAME], IN const char sParamValue[MAX_LEN_PARAM_VALUE], IN uint32_t nParamFlag)</argsstring>
+        <name>help_addAcsParamList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structObjACSList" kindref="compound">ObjACSList</ref> *</type>
+          <declname>pxObjACSList</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char</type>
+          <declname>sParamName</declname>
+          <array>[MAX_LEN_PARAM_NAME]</array>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char</type>
+          <declname>sParamValue</declname>
+          <array>[MAX_LEN_PARAM_VALUE]</array>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>nParamFlag</declname>
+        </param>
+        <briefdescription>
+<para>API to construct ACS attrlist for parameter with requested attribute values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObjACSList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object list with ACS attribute supported </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">sParamName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">sParamValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">nParamFlag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Holds syntax, InformToAcs, SaveToFlash, Notification, AccessControl, ChangeFlag information in bits </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="233" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga2973b4371e98489b03fbe021546cb9e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t help_editNode</definition>
+        <argsstring>(INOUT ObjList *pxDstObjList, IN char *pcObjname, IN char *pcParamName, IN char *pcParamValue, IN uint32_t unParamId, IN uint32_t unParamFlag)</argsstring>
+        <name>help_editNode</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxDstObjList</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcObjname</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcParamName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcParamValue</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unParamId</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unParamFlag</declname>
+        </param>
+        <briefdescription>
+<para>API to update particular parameter node in given objlist. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxDstObjList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objlist list ptr where parameter values needed to update </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcObjname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcParamName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcParamValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter value to update </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unParamId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter id to update </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unParamFlag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter flag to update </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Destination objlist parameter value updated on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="247" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga134e2111b03b78aada0209065e953475" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t help_editSelfNode</definition>
+        <argsstring>(INOUT ObjList *pxDstObjList, IN char *pcObjname, IN char *pcParamName, IN char *pcParamValue, IN uint32_t unParamId, IN uint32_t unParamFlag)</argsstring>
+        <name>help_editSelfNode</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxDstObjList</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcObjname</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcParamName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcParamValue</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unParamId</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unParamFlag</declname>
+        </param>
+        <briefdescription>
+<para>API to update particular parameter node in given objlist ptr. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxDstObjList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objlist list ptr where parameter values need to be updated </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcObjname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcParamName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcParamValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter value to update </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unParamId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter id to update </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unParamFlag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter flag to update </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Destination objlist parameter value updated on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="263" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga247c33f35cdf5ddd5cdd3a24311faa55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t help_mergeObjList</definition>
+        <argsstring>(INOUT ObjList *pxObjDst, IN ObjList *pxObjSrc)</argsstring>
+        <name>help_mergeObjList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxObjDst</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxObjSrc</declname>
+        </param>
+        <briefdescription>
+<para>API to update particular parameter node in given objlist. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObjDst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objlist list ptr where parameter values needed to update </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObjSrc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source objlist ptr </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Source objlist is merged with destination objlist on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="276" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gafa30a46dc07c618ae6c00e9f0322e89c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void help_copyParamList</definition>
+        <argsstring>(OUT ParamList *pxDst, OUT ParamList *pxSrc)</argsstring>
+        <name>help_copyParamList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="structParamList" kindref="compound">ParamList</ref> *</type>
+          <declname>pxDst</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="structParamList" kindref="compound">ParamList</ref> *</type>
+          <declname>pxSrc</declname>
+        </param>
+        <briefdescription>
+<para>API to copy paramlist from one list to another. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxSrc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source paramlist ptr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxDst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination objlist ptr </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Paramlist with values is copied to pxdst on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="284" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gabf01f33632a265d5bb43ca9b31a87a2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_getValue</definition>
+        <argsstring>(IN ObjList *pxObj, IN uint32_t unOid, IN uint32_t unInstance, IN uint32_t unParamId, OUT char *pcVal)</argsstring>
+        <name>help_getValue</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxObj</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unOid</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unInstance</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unParamId</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> char *</type>
+          <declname>pcVal</declname>
+        </param>
+        <briefdescription>
+<para>API to get the values from the given objlist structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objlist ptr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unOid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ObjectId </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unInstance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Instance number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unParamId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter ID </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pcval Value of the parameter on successful / failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="297" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gad312c66b9e182705fa46f4b11f244fb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_getValueNameBased</definition>
+        <argsstring>(IN ObjList *pxObj, IN char *pcObjName, IN uint32_t unInstance, IN char *pcParamName, OUT char *pcVal)</argsstring>
+        <name>help_getValueNameBased</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxObj</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcObjName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unInstance</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcParamName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> char *</type>
+          <declname>pcVal</declname>
+        </param>
+        <briefdescription>
+<para>API to get value of specfic parameter from the given objlist structure through object/parameter name match. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objlist ptr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcObjName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unInstance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Instance number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcParamname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pcVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>value of the parameter when successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="308" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gadb4425c29e4125e82f952b0ead1fedd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_setValue</definition>
+        <argsstring>(INOUT ObjList *pxObj, IN uint32_t unOid, IN uint32_t unInstance, IN uint32_t unParamId, IN char *pcVal)</argsstring>
+        <name>help_setValue</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxObj</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unOid</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unInstance</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unParamId</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcVal</declname>
+        </param>
+        <briefdescription>
+<para>Macro to set the values in the given objlist structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objlist ptr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unOid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ObjectId </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unInstance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Instance number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unParamId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter ID </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Updated objlist on successful / failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="319" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga8e229b377f3ac19e8d9ac4bd70a92345" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_setValueNameBased</definition>
+        <argsstring>(IN ObjList *pxObj, IN char *pcObjName, IN uint32_t unInstance, IN char *pcParamName, OUT char *pcVal)</argsstring>
+        <name>help_setValueNameBased</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxObj</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcObjName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unInstance</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> char *</type>
+          <declname>pcParamName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> char *</type>
+          <declname>pcVal</declname>
+        </param>
+        <briefdescription>
+<para>API to set value of specfic parameter to the given objlist structure through object/parameter name match. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objlist ptr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unOid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ObjectId </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unInstance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Instance number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unParamId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter ID </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Updated objlist on successful / failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="330" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga97b4dc4de4d57f731e4dfa5547147d77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+        <definition>OUT ObjList* help_getObjPtr</definition>
+        <argsstring>(IN ObjList *pxObj, IN const char *paramName, IN const char *paramValue)</argsstring>
+        <name>help_getObjPtr</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxObj</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>paramName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>paramValue</declname>
+        </param>
+        <briefdescription>
+<para>API to traverse objlist and get objlist ptr based on the defined condition. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objlist ptr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">paramName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name to match </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">paramValue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter value to match </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structObjList" kindref="compound">ObjList</ref> on successful / UGW_FAILURE on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="339" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga4bd0e4017326296d0c6bf88e46f2e41a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> int</type>
+        <definition>OUT int help_delObjPtr</definition>
+        <argsstring>(INOUT ObjList *pxHeadObj, IN ObjList *pxObj)</argsstring>
+        <name>help_delObjPtr</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxHeadObj</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxObj</declname>
+        </param>
+        <briefdescription>
+<para>API to objlist to get the objlist ptr based on the condition. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxHeadObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Head Objlist ptr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Object to be deleted from the list </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structObjList" kindref="compound">ObjList</ref> on successful / UGW_FAILURE on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="348" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga3eeafa6790f449ab016121ea94074581" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> int</type>
+        <definition>OUT int help_moveObjList</definition>
+        <argsstring>(INOUT ObjList *pxDstObj, IN ObjList *pxSrcObj, IN const char *pcObjName, IN uint32_t unFlag)</argsstring>
+        <name>help_moveObjList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxDstObj</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxSrcObj</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcObjName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> uint32_t</type>
+          <declname>unFlag</declname>
+        </param>
+        <briefdescription>
+<para>API to move object from one list to another and remove from the original list. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxDstObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination(dst) Objlist ptr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxSrcObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source(src) Objlist ptr </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcObjName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name to move objlist from src to dst </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">unFlag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag to identify objlist </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structObjList" kindref="compound">ObjList</ref> on successful / UGW_FAILURE on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="358" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga418f69e510dd850553cc3bb618dcd23c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> int</type>
+        <definition>OUT int help_isEmptyObj</definition>
+        <argsstring>(IN ObjList *pxObj)</argsstring>
+        <name>help_isEmptyObj</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structObjList" kindref="compound">ObjList</ref> *</type>
+          <declname>pxObj</declname>
+        </param>
+        <briefdescription>
+<para>API to check if obj list ptr is empty or not. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxObj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Obj ptr </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>UGW_SUCCESS on successful / UGW_FAILURE on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h" line="367" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>File contains common API prototypes used across all modules the software. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2015</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lantiq<sp/>Beteiligungs-GmbH<sp/>&amp;<sp/>Co.<sp/>KG</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lilienthalstrasse<sp/>15,<sp/>85579<sp/>Neubiberg,<sp/>Germany<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>For<sp/>licensing<sp/>information,<sp/>see<sp/>the<sp/>file<sp/>&apos;LICENSE&apos;<sp/>in<sp/>the<sp/>root<sp/>folder<sp/>of</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>software<sp/>module.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>*****************************************************************************<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>File<sp/>Name<sp/><sp/><sp/><sp/>:<sp/>help_proto.h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Description<sp/><sp/>:<sp/>Helper<sp/>Library<sp/>contains<sp/>list<sp/>manipulation<sp/>function<sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prototypes<sp/>used<sp/>across<sp/>the<sp/>system.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="comment">/*<sp/>@{<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_HELP_PROTO_H</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_HELP_PROTO_H</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="help__structs_8h" kindref="compound">help_structs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga6bb6513ba70c6cfc1333820665b274e0" kindref="member">help_storeLocalDB</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxObj,<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcPath);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga24fe0e9dca60ba43295e2d270a76769e" kindref="member">help_loadLocalDB</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxObj,<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcPath);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*<sp/><sp/><ref refid="group__LIBHELP_1gaff5235d94dc4e88725e95abeaf5b77f4" kindref="member">help_addObjList</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxObjList,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcObjName,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref><sp/>unSid,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref><sp/>unOid,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unSubOper,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unObjFlag);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><ref refid="structParamList" kindref="compound">ParamList</ref><sp/>*<sp/><ref refid="group__LIBHELP_1gac142687a39a89012a10c29f9e1955169" kindref="member">help_addParamList</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxObjList,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcParamName,<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref><sp/>unParamId,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcParamValue,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unFlag);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1gadc95c1908c5d73d1eff54c4223736427" kindref="member">help_printObj</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pxObj,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unSubOper);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga38541ee26cfdda5a69f955fb9ebb1e1e" kindref="member">help_printParamList</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structParamList" kindref="compound">ParamList</ref><sp/>*pxParamList);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1gad71c865fd4e0cd7693c46eb1f299be3e" kindref="member">help_delObj</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pObj,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unSubOper,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unFlag);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga44eabeb9342dfc93a4f4de134d43e8ea" kindref="member">help_delCurObj</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pObj,<sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcObjName,<sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unFlag);</highlight></codeline>
+<codeline lineno="119"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga6e97d803078dec87657f1a4558206d14" kindref="member">help_delParam</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pParam,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unFlag);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1gafd93b1fc0a079d3dda8a3b55ec333644" kindref="member">help_getObjListCnt</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxObjList,<sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/>*pnObjCnt);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga0a5ee1490de2047bd9b7fbb32c8ef583" kindref="member">help_getParamListCnt</ref>(<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxObjList,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="group__LIBHELP_1ga054e39e306fb3948d07aadf394da2fbf" kindref="member">char8_t</ref><sp/>*pcObjName,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="commondefs_8h_1a32f2e37ee053cf2ce8ca28d1f74630e5" kindref="member">int32_t</ref><sp/>*pParamCnt);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1gad717c26644b76d1891c4993611da13e4" kindref="member">help_copyObjList</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pDstObj<sp/>,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unFlag,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pSrcObj);<sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga83db2d4c1600b34e94db55083f5b1017" kindref="member">help_copyCompleteObjList</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pDst<sp/>,<sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unFlag<sp/>,<sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pSrc);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="structParamList" kindref="compound">ParamList</ref><sp/>*<sp/><ref refid="group__LIBHELP_1gaf0d77d8d7790407c0115675a2c562c39" kindref="member">help_paramListOnly</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structParamList" kindref="compound">ParamList</ref><sp/>*pxSrcParam<sp/>,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcParamName,<sp/></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref><sp/>unParamId,</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcParamValue,</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unFlag);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><ref refid="structObjAttrList" kindref="compound">ObjAttrList</ref><sp/>*<sp/><ref refid="group__LIBHELP_1ga204faa57d7e26b64539efa41793e243a" kindref="member">help_addObjAttrList</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structObjAttrList" kindref="compound">ObjAttrList</ref><sp/>*pxObjAttrList,</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcObjName,</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcWebName,</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unObjAttrFlag);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="structParamAttrList" kindref="compound">ParamAttrList</ref><sp/>*<sp/><ref refid="group__LIBHELP_1gaa179c3f390f7087bee64eeac354dfb3d" kindref="member">help_addParamAttrList</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structObjAttrList" kindref="compound">ObjAttrList</ref><sp/>*pxObjAttrList,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcParamName,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcParamProfile,</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcParamWebName,</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcParamValidVal,</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcParamDefaultVal,</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unMinVal,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unMaxVal,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unMinLen,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unMaxLen,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unParamFlag);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="structObjACSList" kindref="compound">ObjACSList</ref>*<sp/><sp/><ref refid="group__LIBHELP_1gad48fc3ed404fdd0a11893f5eba682951" kindref="member">help_addAcsObjList</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structObjACSList" kindref="compound">ObjACSList</ref><sp/>*pxObjACSList,</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sObjName[<ref refid="group__LIBHELP_1ga635a84c0e3ae6e922f824064a006500d" kindref="member">MAX_LEN_OBJNAME</ref>],<sp/></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unObjOper,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unObjFlag);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="structParamACSList" kindref="compound">ParamACSList</ref><sp/>*<sp/><ref refid="group__LIBHELP_1gaeb06943c87068f172cd2c56bf85f3c2d" kindref="member">help_addAcsParamList</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structObjACSList" kindref="compound">ObjACSList</ref><sp/>*pxObjACSList,</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sParamName[<ref refid="group__LIBHELP_1gaac5d922b6e3eb48b7ba829979fd73ae2" kindref="member">MAX_LEN_PARAM_NAME</ref>],</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sParamValue[<ref refid="group__LIBHELP_1ga1b79b737d896845c1c07d942ffbfe3fa" kindref="member">MAX_LEN_PARAM_VALUE</ref>],</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>nParamFlag);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal">uint32_t<sp/><ref refid="group__LIBHELP_1ga2973b4371e98489b03fbe021546cb9e1" kindref="member">help_editNode</ref><sp/>(<ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxDstObjList,<sp/></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcObjname,<sp/></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcParamName,<sp/></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcParamValue,</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unParamId,</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unParamFlag);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal">uint32_t<sp/><ref refid="group__LIBHELP_1ga134e2111b03b78aada0209065e953475" kindref="member">help_editSelfNode</ref><sp/>(<ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxDstObjList,<sp/></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcObjname,<sp/></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcParamName,<sp/></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcParamValue,</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unParamId,</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unParamFlag);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal">uint32_t<sp/><ref refid="group__LIBHELP_1ga247c33f35cdf5ddd5cdd3a24311faa55" kindref="member">help_mergeObjList</ref>(<ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxObjDst,</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxObjSrc);</highlight></codeline>
+<codeline lineno="284"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1gafa30a46dc07c618ae6c00e9f0322e89c" kindref="member">help_copyParamList</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="structParamList" kindref="compound">ParamList</ref><sp/>*pxDst,</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="structParamList" kindref="compound">ParamList</ref><sp/>*pxSrc);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1gabf01f33632a265d5bb43ca9b31a87a2e" kindref="member">help_getValue</ref><sp/>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxObj,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unOid,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unInstance,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unParamId,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcVal);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1gad312c66b9e182705fa46f4b11f244fb2" kindref="member">help_getValueNameBased</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxObj,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcObjName,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unInstance,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcParamName,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcVal);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1gadb4425c29e4125e82f952b0ead1fedd5" kindref="member">help_setValue</ref><sp/>(<ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxObj,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unOid,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unInstance,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unParamId,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcVal);<sp/></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga8e229b377f3ac19e8d9ac4bd70a92345" kindref="member">help_setValueNameBased</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxObj,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcObjName,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unInstance,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcParamName,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcVal);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref>*<sp/><ref refid="group__LIBHELP_1ga97b4dc4de4d57f731e4dfa5547147d77" kindref="member">help_getObjPtr</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxObj,<sp/></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*paramName,<sp/></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*paramValue);</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga4bd0e4017326296d0c6bf88e46f2e41a" kindref="member">help_delObjPtr</ref>(<ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxHeadObj,<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxObj);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga3eeafa6790f449ab016121ea94074581" kindref="member">help_moveObjList</ref>(<ref refid="group__LIBHELP_1ga62766f3ea8784d1db62df989f8f33d2d" kindref="member">INOUT</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxDstObj,<sp/></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxSrcObj,<sp/></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>pcObjName,<sp/></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>uint32_t<sp/>unFlag);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga418f69e510dd850553cc3bb618dcd23c" kindref="member">help_isEmptyObj</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structObjList" kindref="compound">ObjList</ref><sp/>*pxObj);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//#ifndef<sp/>_HELP_PROTO_H</highlight></codeline>
+<codeline lineno="370"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>@}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_proto.h"/>
+  </compounddef>
+</doxygen>

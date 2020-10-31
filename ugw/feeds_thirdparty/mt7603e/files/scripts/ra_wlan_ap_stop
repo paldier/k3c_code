@@ -1,0 +1,40 @@
+#!/bin/sh
+
+
+if [ ! "$ENVLOADED" ]; then
+   if [ -r /etc/rc.conf ]; then
+       . /etc/rc.conf 2> /dev/null
+      ENVLOADED="1"
+   fi
+fi
+
+if [ ! "$CONFIGLOADED" ]; then
+   if [ -r /etc/rc.d/config.sh ]; then
+      . /etc/rc.d/config.sh 2>/dev/null
+      CONFIGLOADED="1"
+   fi
+fi
+
+RA_IF=""
+find_ra_if_from_index() {
+   eval CPEID='$'wlmn_${1}'_cpeId'
+   ra_dev=`/usr/sbin/status_oper GET "RA_MAP" "$CPEID"`
+   RA_IF=${ra_dev:2}
+}
+
+find_ra_if_from_index $1
+	eval radioEnable='$'wlphy_${1}_radioEnable
+	if [ "$radioEnable" = "0" ]; then
+                iwpriv ra${RA_IF} set RadioOn=0
+	fi
+        if [ "$RA_IF" = "0" ]; then
+            iwpriv ra${RA_IF} set INF_AMAZON_SE_PPA=0
+            ppacmd dellan -i ra${RA_IF}
+            ppacmd delwan -i ra${RA_IF}
+        fi
+        /usr/sbin/brctl delif br0 ra${RA_IF} >/dev/null 2>&1
+	/sbin/ifconfig ra${RA_IF} down
+	WscdPid=`cat  /var/run/wscd.pid.ra${RA_IF}` >/dev/null 2>&1
+	if [ "$WscdPid" != "" ]; then
+		kill -9 $WscdPid
+	fi

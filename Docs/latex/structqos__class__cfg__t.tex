@@ -1,0 +1,46 @@
+\hypertarget{structqos__class__cfg__t}{\section{qos\-\_\-class\-\_\-cfg\-\_\-t Struct Reference}
+\label{structqos__class__cfg__t}\index{qos\-\_\-class\-\_\-cfg\-\_\-t@{qos\-\_\-class\-\_\-cfg\-\_\-t}}
+}
+
+
+Classifier structure with action and filter combined.  
+
+
+
+
+{\ttfamily \#include $<$qosal\-\_\-cl\-\_\-api.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structcl__match__filter__t}{cl\-\_\-match\-\_\-filter\-\_\-t} \hyperlink{structqos__class__cfg__t_a50dc761ffcaa6824d69e2be6d451b711}{filter}
+\item 
+\hyperlink{structcl__action__t}{cl\-\_\-action\-\_\-t} \hyperlink{structqos__class__cfg__t_a81b6665d9574605d4a350abf8f073dd2}{action}
+\item 
+uint32\-\_\-t \hyperlink{structqos__class__cfg__t_a11bf1df252c41444ac62c6f3317bf8b6}{intermediate\-\_\-filter}
+\item 
+uint32\-\_\-t \hyperlink{structqos__class__cfg__t_a3b386c0054684059ff75ab6a61627d25}{intermediate\-\_\-result}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classifier structure with action and filter combined. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structqos__class__cfg__t_a81b6665d9574605d4a350abf8f073dd2}{\index{qos\-\_\-class\-\_\-cfg\-\_\-t@{qos\-\_\-class\-\_\-cfg\-\_\-t}!action@{action}}
+\index{action@{action}!qos_class_cfg_t@{qos\-\_\-class\-\_\-cfg\-\_\-t}}
+\subsubsection[{action}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-action\-\_\-t} qos\-\_\-class\-\_\-cfg\-\_\-t\-::action}}\label{structqos__class__cfg__t_a81b6665d9574605d4a350abf8f073dd2}
+Classifier action fields structure \hypertarget{structqos__class__cfg__t_a50dc761ffcaa6824d69e2be6d451b711}{\index{qos\-\_\-class\-\_\-cfg\-\_\-t@{qos\-\_\-class\-\_\-cfg\-\_\-t}!filter@{filter}}
+\index{filter@{filter}!qos_class_cfg_t@{qos\-\_\-class\-\_\-cfg\-\_\-t}}
+\subsubsection[{filter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cl\-\_\-match\-\_\-filter\-\_\-t} qos\-\_\-class\-\_\-cfg\-\_\-t\-::filter}}\label{structqos__class__cfg__t_a50dc761ffcaa6824d69e2be6d451b711}
+Classifier filter fields structure \hypertarget{structqos__class__cfg__t_a11bf1df252c41444ac62c6f3317bf8b6}{\index{qos\-\_\-class\-\_\-cfg\-\_\-t@{qos\-\_\-class\-\_\-cfg\-\_\-t}!intermediate\-\_\-filter@{intermediate\-\_\-filter}}
+\index{intermediate\-\_\-filter@{intermediate\-\_\-filter}!qos_class_cfg_t@{qos\-\_\-class\-\_\-cfg\-\_\-t}}
+\subsubsection[{intermediate\-\_\-filter}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-class\-\_\-cfg\-\_\-t\-::intermediate\-\_\-filter}}\label{structqos__class__cfg__t_a11bf1df252c41444ac62c6f3317bf8b6}
+Used as an aditional criteria in conjunction with class cfg filter crieria in case of partial classification \hypertarget{structqos__class__cfg__t_a3b386c0054684059ff75ab6a61627d25}{\index{qos\-\_\-class\-\_\-cfg\-\_\-t@{qos\-\_\-class\-\_\-cfg\-\_\-t}!intermediate\-\_\-result@{intermediate\-\_\-result}}
+\index{intermediate\-\_\-result@{intermediate\-\_\-result}!qos_class_cfg_t@{qos\-\_\-class\-\_\-cfg\-\_\-t}}
+\subsubsection[{intermediate\-\_\-result}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t qos\-\_\-class\-\_\-cfg\-\_\-t\-::intermediate\-\_\-result}}\label{structqos__class__cfg__t_a3b386c0054684059ff75ab6a61627d25}
+Used to pass intermediate information to next engine as an output of partial classification 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{qosal__cl__api_8h}{qosal\-\_\-cl\-\_\-api.\-h}\end{DoxyCompactItemize}

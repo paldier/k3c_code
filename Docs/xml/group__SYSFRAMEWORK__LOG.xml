@@ -1,0 +1,644 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__SYSFRAMEWORK__LOG" kind="group">
+    <compoundname>SYSFRAMEWORK_LOG</compoundname>
+    <title>Logging</title>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__SYSFRAMEWORK__LOG_1ga0b33a34b9be13e952b773f8004335033" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t LOGLEVEL</definition>
+        <argsstring></argsstring>
+        <name>LOGLEVEL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" prot="public" static="no" mutable="no">
+        <type><ref refid="commondefs_8h_1adf4d876453337156dde61095e1f20223" kindref="member">uint16_t</ref></type>
+        <definition>uint16_t LOGTYPE</definition>
+        <argsstring></argsstring>
+        <name>LOGTYPE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>log type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="77" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__SYSFRAMEWORK__LOG_1gae3685d7d888bfcbde21dd061b703fd7e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void static void LOGF_LOG_PRINT</definition>
+        <argsstring>(const char *color_code, const char *logtype, const char *fmt,...) __attribute__((format(printf</argsstring>
+        <name>LOGF_LOG_PRINT</name>
+        <param>
+          <type>const char *</type>
+          <declname>color_code</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>logtype</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="78" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="80" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SYSFRAMEWORK__LOG_1ga489780099e0daaec20ccdb518ec87eed" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void LOGF_MASK</definition>
+        <argsstring>(int log_level)</argsstring>
+        <name>LOGF_MASK</name>
+        <param>
+          <type>int</type>
+          <declname>log_level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="112" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="112" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="group__SYSFRAMEWORK__LOG_1ga05ae7de46e6b10f8c4a267695118819f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void LOGF_TYPE</definition>
+        <argsstring>(int log_type)</argsstring>
+        <name>LOGF_TYPE</name>
+        <param>
+          <type>int</type>
+          <declname>log_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="123" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="123" bodyend="125"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga0fc3c4b6b33474c081d5b7ebaf22eb5a" prot="public" static="no">
+        <name>AFTERX_TYPE</name>
+        <param><defname>x</defname></param>
+        <initializer>un ## x ## LogType</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>x type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="37" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gab1d033b94f76cefe0ba0de1f1da3727c" prot="public" static="no">
+        <name>XAFTERX_TYPE</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1ga0fc3c4b6b33474c081d5b7ebaf22eb5a" kindref="member">AFTERX_TYPE</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>x after type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="38" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga171078632f644bf6db8c72da116d0901" prot="public" static="no">
+        <name>AFTERX_LEVEL</name>
+        <param><defname>x</defname></param>
+        <initializer>un ## x ## LogLevel</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>x level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="39" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga3f7bea0fb97f2e4ac1218aa0252200a5" prot="public" static="no">
+        <name>XAFTERX_LEVEL</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1ga171078632f644bf6db8c72da116d0901" kindref="member">AFTERX_LEVEL</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>x after level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="40" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gac128c680f6759a02825861c81929a394" prot="public" static="no">
+        <name>log_level</name>
+        <param><defname>NAME</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1ga3f7bea0fb97f2e4ac1218aa0252200a5" kindref="member">XAFTERX_LEVEL</ref>(NAME)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="42" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga6ba7163d1bf56b982e26207fd19c6423" prot="public" static="no">
+        <name>log_type</name>
+        <param><defname>NAME</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1gab1d033b94f76cefe0ba0de1f1da3727c" kindref="member">XAFTERX_TYPE</ref>(NAME)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>log type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="43" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga082e12cb1904cc2f0ac5f368f048c279" prot="public" static="no">
+        <name>COLOR_NRM</name>
+        <initializer>&quot;\x1B[0m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="52" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gad86358bf19927183dd7b4ae215a29731" prot="public" static="no">
+        <name>COLOR_RED</name>
+        <initializer>&quot;\x1B[31m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="53" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gab99b152ac35d8b4e06767a7e5e285814" prot="public" static="no">
+        <name>COLOR_GRN</name>
+        <initializer>&quot;\x1B[32m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="54" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga23b3319f98dd6b2d72fa93d086901440" prot="public" static="no">
+        <name>COLOR_YEL</name>
+        <initializer>&quot;\x1B[33m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="55" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga2ed4ccec69fff4103cd109ed22e56dd9" prot="public" static="no">
+        <name>COLOR_BLU</name>
+        <initializer>&quot;\x1B[34m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="56" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga6d7fb639a4f49c9119fddee3efb937fe" prot="public" static="no">
+        <name>COLOR_MAG</name>
+        <initializer>&quot;\x1B[35m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="57" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga0ccbe1461afc9b8722f479efcf51d721" prot="public" static="no">
+        <name>COLOR_CYN</name>
+        <initializer>&quot;\x1B[36m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="58" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga7dc383234801587a18cf5e2680963752" prot="public" static="no">
+        <name>COLOR_WHT</name>
+        <initializer>&quot;\x1B[37m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="59" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gabf6360d575e7e78fcabf8c7f5be709db" prot="public" static="no">
+        <name>COLOR_ORA</name>
+        <initializer>&quot;\x1B[38;5;214m&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="60" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga3f5ab355c6ed1320ff2619abddadc680" prot="public" static="no">
+        <name>SYS_LOG_CRIT</name>
+        <initializer>LOG_CRIT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>critical level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="64" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gad121fa92bbdb74efb0c5e827ff4a03e1" prot="public" static="no">
+        <name>SYS_LOG_ERR</name>
+        <initializer>LOG_ERR</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>error level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="65" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gab96b18160146a1bf7d07bdafc4275ff8" prot="public" static="no">
+        <name>SYS_LOG_INFO</name>
+        <initializer>LOG_INFO</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>info level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="68" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gace24df414cb5e54d71982cf045dc63ea" prot="public" static="no">
+        <name>SYS_LOG_DEBUG</name>
+        <initializer>LOG_DEBUG</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>debug level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="69" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga6bacf514b7f368dde78753e6056954a0" prot="public" static="no">
+        <name>SYS_LOG_TYPE_NONE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>log type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="71" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gab97c9812f1de694e33186d9e0e0bccba" prot="public" static="no">
+        <name>SYS_LOG_TYPE_FILE</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>log type file </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="72" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gaa275fbedba156a3cddd59aae2ba0a24b" prot="public" static="no">
+        <name>SYS_LOG_TYPE_CONSOLE</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>log type console </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="73" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gabcbc27505187c3c650b51ab0c4e85e7e" prot="public" static="no">
+        <name>SYS_LOG_TYPE_FILE_AND_CONSOLE</name>
+        <initializer>(<ref refid="group__SYSFRAMEWORK__LOG_1gab97c9812f1de694e33186d9e0e0bccba" kindref="member">SYS_LOG_TYPE_FILE</ref> | <ref refid="group__SYSFRAMEWORK__LOG_1gaa275fbedba156a3cddd59aae2ba0a24b" kindref="member">SYS_LOG_TYPE_CONSOLE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>log type both console and file </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="74" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga87f9c71c9333acfac7395c713bc278aa" prot="public" static="no">
+        <name>LOGF_OPEN</name>
+        <param><defname>sl_name</defname></param>
+        <initializer>openlog(sl_name, LOG_CONS | LOG_PID | LOG_NDELAY, LOG_USER)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LOG OPEN </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="109" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga157cea171e54321ab6f9c649437fe237" prot="public" static="no">
+        <name>LOGF_CLOSE</name>
+        <param></param>
+        <initializer>closelog()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>LOG CLOSE </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="110" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga7e21957264df2949a8ca0081ca66e1ad" prot="public" static="no">
+        <name>LOGF_LOG_ERROR</name>
+        <param><defname>args...</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" kindref="member">PRINTF</ref>(ERR, ##args);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define error level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="128" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gaf3a266bb9623edc69c4867d0ce8958fb" prot="public" static="no">
+        <name>LOGF_LOG_EMERG</name>
+        <param><defname>args...</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" kindref="member">PRINTF</ref>(EMERG, ##args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define emergency level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="129" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga5c99a255cabecdad258745297d5678d8" prot="public" static="no">
+        <name>LOGF_LOG_ALERT</name>
+        <param><defname>args...</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" kindref="member">PRINTF</ref>(ALERT, ##args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define alert level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="130" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gaef161c193f8dcd83349eb0c0515861a8" prot="public" static="no">
+        <name>LOGF_LOG_CRITICAL</name>
+        <param><defname>args...</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" kindref="member">PRINTF</ref>(CRIT, ##args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define critical level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="131" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga23b166efe08815e9d97f2a30a2ff97f7" prot="public" static="no">
+        <name>LOGF_LOG_WARNING</name>
+        <param><defname>args...</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" kindref="member">PRINTF</ref>(WARNING, ##args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define warnning level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="132" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga6629207f9928999a6e540422f48f1418" prot="public" static="no">
+        <name>LOGF_LOG_NOTICE</name>
+        <param><defname>args...</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" kindref="member">PRINTF</ref>(NOTICE, ##args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define notice level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="133" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga8ce0b241ee6ed787655fc6c683610cfa" prot="public" static="no">
+        <name>LOGF_LOG_INFO</name>
+        <param><defname>args...</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" kindref="member">PRINTF</ref>(INFO, ##args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define info level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="134" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga0f75fa476eefdbfae8ed503bd116ccbd" prot="public" static="no">
+        <name>LOGF_LOG_DEBUG</name>
+        <param><defname>args...</defname></param>
+        <initializer><ref refid="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" kindref="member">PRINTF</ref>(<ref refid="structDEBUG" kindref="compound">DEBUG</ref>, ##args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Macro to define debug level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="135" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga1e820f025f360fdd6c8248849cb3fa92" prot="public" static="no">
+        <name>LOGF_LOG</name>
+        <param><defname>LEVEL</defname></param>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>SYSLOG_##LEVEL(PACKAGE_ID&quot;{%s, %d}:&quot;fmt, __func__, __LINE__, ##args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>PRINTF Macro </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="136" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gad38f8471f267bf2d5b61bff49d3f8f7f" prot="public" static="no">
+        <name>PRINTF</name>
+        <param><defname>LEVEL</defname></param>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>SYSLOG_##LEVEL(PACKAGE_ID&quot;{%s, %d}:&quot;fmt, __func__, __LINE__, ##args)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>PRINTF Macro </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="138" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga78f938c353e4ad64de5bf4346aab5948" prot="public" static="no">
+        <name>SYSLOG_EMERG</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>{ }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Emergency log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="151" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga2cb90a08bfc5f5721340b91e9a9d438b" prot="public" static="no">
+        <name>SYSLOG_ALERT</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>{ }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Alert log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="165" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gaf70f5cecdbb327e462afc993f60603e6" prot="public" static="no">
+        <name>SYSLOG_CRIT</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>do{					\
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1ga3f5ab355c6ed1320ff2619abddadc680" kindref="member">SYS_LOG_CRIT</ref> &gt; <ref refid="group__SYSFRAMEWORK__LOG_1ga0b33a34b9be13e952b773f8004335033" kindref="member">LOGLEVEL</ref>) \
+				break;  \
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" kindref="member">LOGTYPE</ref> &amp; <ref refid="group__SYSFRAMEWORK__LOG_1gab97c9812f1de694e33186d9e0e0bccba" kindref="member">SYS_LOG_TYPE_FILE</ref>) \
+				syslog(LOG_CRIT, fmt, ##args); \
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" kindref="member">LOGTYPE</ref> &amp; <ref refid="group__SYSFRAMEWORK__LOG_1gaa275fbedba156a3cddd59aae2ba0a24b" kindref="member">SYS_LOG_TYPE_CONSOLE</ref>) \
+				LOGF_LOG_PRINT(COLOR_RED, &quot;CRITICAL&quot;, fmt, ##args); \
+		}while(0);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Critical log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="169" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gac9b68a403677aee2f663dd09f97773cf" prot="public" static="no">
+        <name>SYSLOG_ERR</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>do{					\
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1gad121fa92bbdb74efb0c5e827ff4a03e1" kindref="member">SYS_LOG_ERR</ref> &gt; <ref refid="group__SYSFRAMEWORK__LOG_1ga0b33a34b9be13e952b773f8004335033" kindref="member">LOGLEVEL</ref>) \
+				break;  \
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" kindref="member">LOGTYPE</ref> &amp; <ref refid="group__SYSFRAMEWORK__LOG_1gab97c9812f1de694e33186d9e0e0bccba" kindref="member">SYS_LOG_TYPE_FILE</ref>) \
+				syslog(LOG_ERR, fmt, ##args); \
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" kindref="member">LOGTYPE</ref> &amp; <ref refid="group__SYSFRAMEWORK__LOG_1gaa275fbedba156a3cddd59aae2ba0a24b" kindref="member">SYS_LOG_TYPE_CONSOLE</ref>) \
+				LOGF_LOG_PRINT(COLOR_ORA, &quot;ERROR&quot; , fmt, ##args); \
+		}while(0);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Error log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="183" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gadcfe639dbc1ac3f40090fada95624fb1" prot="public" static="no">
+        <name>SYSLOG_WARNING</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>{ }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Warning log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="207" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga2993334cae7892a7c110d8b2b88fc201" prot="public" static="no">
+        <name>SYSLOG_NOTICE</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>{ }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Notice log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="221" column="10" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1ga63dc622c071f44545ca9372d6b1b7958" prot="public" static="no">
+        <name>SYSLOG_INFO</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>do{					\
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1gab96b18160146a1bf7d07bdafc4275ff8" kindref="member">SYS_LOG_INFO</ref> &gt; <ref refid="group__SYSFRAMEWORK__LOG_1ga0b33a34b9be13e952b773f8004335033" kindref="member">LOGLEVEL</ref>) \
+				break;  \
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" kindref="member">LOGTYPE</ref> &amp; <ref refid="group__SYSFRAMEWORK__LOG_1gab97c9812f1de694e33186d9e0e0bccba" kindref="member">SYS_LOG_TYPE_FILE</ref>) \
+				syslog(LOG_INFO, fmt, ##args); \
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" kindref="member">LOGTYPE</ref> &amp; <ref refid="group__SYSFRAMEWORK__LOG_1gaa275fbedba156a3cddd59aae2ba0a24b" kindref="member">SYS_LOG_TYPE_CONSOLE</ref>) \
+				LOGF_LOG_PRINT(COLOR_NRM, &quot;INFO&quot;, fmt, ##args); \
+		}while(0);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Information log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="225" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__SYSFRAMEWORK__LOG_1gacb7620367e96b45dfaa648535904d5e1" prot="public" static="no">
+        <name>SYSLOG_DEBUG</name>
+        <param><defname>fmt</defname></param>
+        <param><defname>args...</defname></param>
+        <initializer>do{					\
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1gace24df414cb5e54d71982cf045dc63ea" kindref="member">SYS_LOG_DEBUG</ref> &gt; <ref refid="group__SYSFRAMEWORK__LOG_1ga0b33a34b9be13e952b773f8004335033" kindref="member">LOGLEVEL</ref>) \
+				break;  \
+				if(<ref refid="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" kindref="member">LOGTYPE</ref> &amp; <ref refid="group__SYSFRAMEWORK__LOG_1gab97c9812f1de694e33186d9e0e0bccba" kindref="member">SYS_LOG_TYPE_FILE</ref>) \
+				syslog(LOG_DEBUG, fmt, ##args); \
+				if( <ref refid="group__SYSFRAMEWORK__LOG_1ga4fddbe43555720b1f547acde296315e6" kindref="member">LOGTYPE</ref> &amp; <ref refid="group__SYSFRAMEWORK__LOG_1gaa275fbedba156a3cddd59aae2ba0a24b" kindref="member">SYS_LOG_TYPE_CONSOLE</ref>) \
+				LOGF_LOG_PRINT(COLOR_NRM, &quot;DEBUG&quot;, fmt, ##args); \
+		}while(0);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Debug log level </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" line="239" column="9" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_logging.h" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Provides the logger framework. It offers User Space Logging API and Kernel Space Logging API. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

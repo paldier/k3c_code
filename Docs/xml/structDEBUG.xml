@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structDEBUG" kind="struct" prot="public">
+    <compoundname>DEBUG</compoundname>
+    <includes refid="help__debug_8h" local="no">help_debug.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structDEBUG_1ae273fbad6ce7ff3df56041bdbc98d119" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void * DEBUG::vId</definition>
+        <argsstring></argsstring>
+        <name>vId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Id </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h" line="35" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structDEBUG_1a8a4025e8fccfbbf95c3568789d3690a6" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t DEBUG::iSize</definition>
+        <argsstring></argsstring>
+        <name>iSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Size in bytes </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h" line="36" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structDEBUG_1a398250c97a7a65717049ce5dd515eba2" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char DEBUG::acFile</definition>
+        <argsstring>[100]</argsstring>
+        <name>acFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>File name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h" line="37" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structDEBUG_1a50c914ade034df26663794c6a54b6a58" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t DEBUG::iLine</definition>
+        <argsstring></argsstring>
+        <name>iLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Line number </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h" line="38" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structDEBUG_1a8e59a4facf10cd60c28bf77bc2ab9e1e" prot="public" static="no" mutable="no">
+        <type>struct Dbg *</type>
+        <definition>struct Dbg * DEBUG::pxNext</definition>
+        <argsstring></argsstring>
+        <name>pxNext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Next node </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h" line="39" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Keeps track of allocated and freed memory details. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h" line="34" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/help_debug.h" bodystart="33" bodyend="40"/>
+    <listofallmembers>
+      <member refid="structDEBUG_1a398250c97a7a65717049ce5dd515eba2" prot="public" virt="non-virtual"><scope>DEBUG</scope><name>acFile</name></member>
+      <member refid="structDEBUG_1a50c914ade034df26663794c6a54b6a58" prot="public" virt="non-virtual"><scope>DEBUG</scope><name>iLine</name></member>
+      <member refid="structDEBUG_1a8a4025e8fccfbbf95c3568789d3690a6" prot="public" virt="non-virtual"><scope>DEBUG</scope><name>iSize</name></member>
+      <member refid="structDEBUG_1a8e59a4facf10cd60c28bf77bc2ab9e1e" prot="public" virt="non-virtual"><scope>DEBUG</scope><name>pxNext</name></member>
+      <member refid="structDEBUG_1ae273fbad6ce7ff3df56041bdbc98d119" prot="public" virt="non-virtual"><scope>DEBUG</scope><name>vId</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

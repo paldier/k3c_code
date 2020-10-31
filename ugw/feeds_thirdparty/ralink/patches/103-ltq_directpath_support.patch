@@ -1,0 +1,305 @@
+diff -Naur ../RT5592AP_wifi_v2715_DPA_20121207/RT2860AP.dat RT5592AP_wifi_v2715_DPA_20121207/RT2860AP.dat
+--- ../RT5592AP_wifi_v2715_DPA_20121207/RT2860AP.dat	2012-12-07 15:17:15.000000000 +0530
++++ RT5592AP_wifi_v2715_DPA_20121207/RT2860AP.dat	2013-11-22 18:32:06.000000000 +0530
+@@ -3,7 +3,7 @@
+ CountryRegion=5
+ CountryRegionABand=7
+ CountryCode=TW
+-BssidNum=1
++BssidNum=8
+ E2pAccessMode=0
+ SSID1=RT2860AP1
+ SSID2=
+diff -Naur ../RT5592AP_wifi_v2715_DPA_20121207/common/cmm_info.c RT5592AP_wifi_v2715_DPA_20121207/common/cmm_info.c
+--- ../RT5592AP_wifi_v2715_DPA_20121207/common/cmm_info.c	2012-12-07 15:17:16.000000000 +0530
++++ RT5592AP_wifi_v2715_DPA_20121207/common/cmm_info.c	2013-12-05 11:01:02.000000000 +0530
+@@ -954,12 +954,20 @@
+ {
+ 	ULONG aggre;
+ 	UINT status;
++        UCHAR bssid = 0;
++	POS_COOKIE pObj = (POS_COOKIE) pAd->OS_Cookie;
+ 	
+ 	aggre = simple_strtol(arg, 0, 10);
++        
++
++        printk("PPA datapath Register for I/F(ra%d) (Len=%d,Ssid=%s)\n", pObj->ioctl_if,
++		pAd->ApCfg.MBSSID[pObj->ioctl_if].SsidLen, pAd->ApCfg.MBSSID[pObj->ioctl_if].Ssid);
++
++        bssid = pObj->ioctl_if;
+ 
+ 	if (aggre == 1)
+ 	{
+-		if(pAd->PPAEnable==TRUE)
++		if(pAd->PPAEnable[bssid]==TRUE)
+ 		{
+ 			DBGPRINT(RT_DEBUG_TRACE, ("INF_AMAZON_SE_PPA already enabled \n"));
+ 		}
+@@ -980,14 +988,24 @@
+ 				pAd->pDirectpathCb->rx_fn = ifx_ra_start_xmit;
+ 				pAd->pDirectpathCb->stop_tx_fn = NULL;
+ 				pAd->pDirectpathCb->start_tx_fn = NULL;
+-
+-				status = ppa_hook_directpath_register_dev_fn(&g_if_id, pAd->net_dev, pAd->pDirectpathCb, PPA_F_DIRECTPATH_REGISTER|PPA_F_DIRECTPATH_ETH_IF);
++                                if(bssid == 0) {
++			                DBGPRINT(RT_DEBUG_TRACE, ("Registering for main AP \n"));
++				        status = ppa_hook_directpath_register_dev_fn(&g_if_id, pAd->net_dev, pAd->pDirectpathCb, 
++                                               PPA_F_DIRECTPATH_REGISTER|PPA_F_DIRECTPATH_ETH_IF);
++                                } else {
++			                DBGPRINT(RT_DEBUG_TRACE, ("Registering for MBSSID \n"));
++                                        if(pAd->ApCfg.MBSSID[pObj->ioctl_if].MSSIDDev != NULL)
++				               status = ppa_hook_directpath_register_dev_fn(&g_if_id, pAd->ApCfg.MBSSID[pObj->ioctl_if].MSSIDDev, 
++                                                            pAd->pDirectpathCb, PPA_F_DIRECTPATH_REGISTER|PPA_F_DIRECTPATH_ETH_IF);
++                                }
+ 
+ 				if(status==IFX_SUCCESS)
+ 				{
+-					pAd->g_if_id=g_if_id;
++					pAd->g_if_id[bssid]=g_if_id;
+ 					DBGPRINT(RT_DEBUG_TRACE, ("register INF_AMAZON_SE_PPA success :ret:%d id:%d:%d\n",status,pAd->g_if_id,g_if_id));
+-					pAd->PPAEnable=TRUE;
++					pAd->PPAEnable[bssid]=TRUE;
++					DBGPRINT(RT_DEBUG_TRACE, ("register INF_AMAZON_SE_PPA success :ret:%d ap_index:%d id:%d:%d\n",
++                                                                           status,bssid, pAd->g_if_id[bssid],g_if_id));
+ 				}
+ 				else
+ 				{
+@@ -1005,7 +1023,7 @@
+ 	}
+ 	else if (aggre == 0)
+ 	{
+-		if(pAd->PPAEnable==FALSE)
++		if(pAd->PPAEnable[bssid]==FALSE)
+ 		{
+ 			DBGPRINT(RT_DEBUG_TRACE, ("INF_AMAZON_SE_PPA already disable \n"));
+ 		}
+@@ -1014,16 +1032,22 @@
+ 			if (ppa_hook_directpath_register_dev_fn) 
+ 			{
+ 				UINT32 g_if_id;
+-				g_if_id=pAd->g_if_id;
++				g_if_id=pAd->g_if_id[bssid];
+ 
+ 				DBGPRINT(RT_DEBUG_TRACE, ("g_if_id=%d \n",pAd->g_if_id));
+-				status=ppa_hook_directpath_register_dev_fn(&g_if_id, pAd->net_dev, NULL, 0/*PPA_F_DIRECTPATH_REGISTER*/);
++                                if(bssid == 0)
++				        status=ppa_hook_directpath_register_dev_fn(&g_if_id, pAd->net_dev, NULL, 0/*PPA_F_DIRECTPATH_REGISTER*/);
++                                else {
++                                        if(pAd->ApCfg.MBSSID[pObj->ioctl_if].MSSIDDev != NULL)
++				               status = ppa_hook_directpath_register_dev_fn(&g_if_id, pAd->ApCfg.MBSSID[pObj->ioctl_if].MSSIDDev, 
++                                                            NULL, 0);
++                                }
+ 
+-				if(status==1)
++				if(status==0)
+ 				{
+-					pAd->g_if_id=0;
++					pAd->g_if_id[bssid]=0;
+ 					DBGPRINT(RT_DEBUG_TRACE, ("unregister INF_AMAZON_SE_PPA success :ret:%d\n",status));
+-					pAd->PPAEnable=FALSE;
++					pAd->PPAEnable[bssid]=FALSE;
+ 				}
+ 				else
+ 				{
+diff -Naur ../RT5592AP_wifi_v2715_DPA_20121207/include/os/rt_linux.h RT5592AP_wifi_v2715_DPA_20121207/include/os/rt_linux.h
+--- ../RT5592AP_wifi_v2715_DPA_20121207/include/os/rt_linux.h	2012-12-07 15:17:19.000000000 +0530
++++ RT5592AP_wifi_v2715_DPA_20121207/include/os/rt_linux.h	2013-12-05 15:19:42.000000000 +0530
+@@ -122,7 +122,7 @@
+ #ifdef RT_SOC_SUPPORT
+ #define AP_PROFILE_PATH			"/etc/Wireless/RT2860/RT2860.dat"
+ #else
+-#define AP_PROFILE_PATH			"/etc/Wireless/RT2860AP/RT2860AP.dat"
++#define AP_PROFILE_PATH			"/ramdisk/etc/Wireless/RT2860AP/RT2860AP.dat"
+ #endif /* RT_SOC_SUPPORT */
+ #define AP_RTMP_FIRMWARE_FILE_NAME "/etc/Wireless/RT2860AP/RT2860AP.bin"
+ #define AP_NIC_DEVICE_NAME			"RT2860AP"
+diff -Naur ../RT5592AP_wifi_v2715_DPA_20121207/include/rt_os_util.h RT5592AP_wifi_v2715_DPA_20121207/include/rt_os_util.h
+--- ../RT5592AP_wifi_v2715_DPA_20121207/include/rt_os_util.h	2012-12-07 15:17:19.000000000 +0530
++++ RT5592AP_wifi_v2715_DPA_20121207/include/rt_os_util.h	2013-11-22 12:31:08.000000000 +0530
+@@ -263,6 +263,7 @@
+ 	IN	PNDIS_PACKET			pNetPkt);
+ 
+ VOID RtmpOsPktInfPpaSend(
++        IN      UINT32 g_if_id,
+ 	IN	PNDIS_PACKET			pNetPkt);
+ 
+ VOID RtmpOsPktRcvHandle(
+diff -Naur ../RT5592AP_wifi_v2715_DPA_20121207/include/rtmp.h RT5592AP_wifi_v2715_DPA_20121207/include/rtmp.h
+--- ../RT5592AP_wifi_v2715_DPA_20121207/include/rtmp.h	2012-12-07 15:17:20.000000000 +0530
++++ RT5592AP_wifi_v2715_DPA_20121207/include/rtmp.h	2013-11-29 10:02:45.000000000 +0530
+@@ -2854,8 +2854,9 @@
+ 	UINT32 IoctlIF;
+ #endif /* HOSTAPD_SUPPORT */
+ #ifdef INF_PPA_SUPPORT
+-	UINT32 g_if_id;
+-	BOOLEAN PPAEnable;
++#define MAX_VAP 8
++	UINT32 g_if_id[MAX_VAP];
++	BOOLEAN PPAEnable[MAX_VAP];
+ 	PPA_DIRECTPATH_CB *pDirectpathCb;
+ #endif /* INF_PPA_SUPPORT */
+ 
+diff -Naur ../RT5592AP_wifi_v2715_DPA_20121207/os/linux/Makefile.6 RT5592AP_wifi_v2715_DPA_20121207/os/linux/Makefile.6
+--- ../RT5592AP_wifi_v2715_DPA_20121207/os/linux/Makefile.6	2012-12-07 15:17:19.000000000 +0530
++++ RT5592AP_wifi_v2715_DPA_20121207/os/linux/Makefile.6	2013-11-22 12:47:30.000000000 +0530
+@@ -464,7 +464,8 @@
+ $(MOD_NAME)-objs += \
+ 		../../os/linux/rt_pci_rbus.o\
+ 		../../os/linux/rt_rbus_pci_util.o\
+-		../../os/linux/pci_main_dev.o
++		../../os/linux/pci_main_dev.o\
++		../../os/linux/inf_ppa.o
+ endif
+ 
+ ifneq ($(findstring $(RT28xx_MODE),STA),)
+diff -Naur ../RT5592AP_wifi_v2715_DPA_20121207/os/linux/config.mk RT5592AP_wifi_v2715_DPA_20121207/os/linux/config.mk
+--- ../RT5592AP_wifi_v2715_DPA_20121207/os/linux/config.mk	2013-11-22 11:54:23.000000000 +0530
++++ RT5592AP_wifi_v2715_DPA_20121207/os/linux/config.mk	2013-11-22 12:00:48.000000000 +0530
+@@ -762,6 +762,8 @@
+ 
+ ifeq ($(PLATFORM),INF_VR9)
+ WFLAGS += -DRT_BIG_ENDIAN -DINF_AR9 -DINF_VR9
++WFLAGS += -DAR9_MAPI_SUPPORT
++WFLAGS += -DINF_PPA_SUPPORT
+ endif
+ 
+ ifeq ($(PLATFORM),CAVM_OCTEON)
+diff -Naur ../RT5592AP_wifi_v2715_DPA_20121207/os/linux/rt_linux.c RT5592AP_wifi_v2715_DPA_20121207/os/linux/rt_linux.c
+--- ../RT5592AP_wifi_v2715_DPA_20121207/os/linux/rt_linux.c	2012-12-07 15:17:19.000000000 +0530
++++ RT5592AP_wifi_v2715_DPA_20121207/os/linux/rt_linux.c	2013-11-22 15:51:44.000000000 +0530
+@@ -81,6 +81,29 @@
+ BOOLEAN RTMP_OS_Remove_Rsc(IN LIST_HEADER *pRscList,
+ 						IN VOID *pRscSrc);
+ 
++#ifdef INF_PPA_SUPPORT
++VOID RtmpOsPktInfPpaSend(IN UINT32 g_if_id, IN PNDIS_PACKET pNetPkt) {
++	struct sk_buff *pRxPkt = RTPKT_TO_OSPKT(pNetPkt);
++	int ret = 0;
++	unsigned int ppa_flags = 0;	/* reserved for now */
++
++	pRxPkt->protocol = eth_type_trans(pRxPkt, pRxPkt->dev);
++        /* At this point skb->data is pointing to the network header but for PPA 
++           handling we need to push it to the MAC header*/
++        skb_push(pRxPkt,ETH_HLEN);
++
++	memset(pRxPkt->head, 0, pRxPkt->data - pRxPkt->head - 14);
++	DBGPRINT(RT_DEBUG_TRACE,
++		 ("ppa_hook_directpath_send_fn rx :ret:%d headroom:%d dev:%s pktlen:%d<===\n",
++		  ret, skb_headroom(pRxPkt)
++		  , pRxPkt->dev->name, pRxPkt->len));
++	hex_dump("rx packet", pRxPkt->data, 32);
++	ret =
++	    ppa_hook_directpath_send_fn(g_if_id, pRxPkt, pRxPkt->len,
++					ppa_flags);
++}
++#endif /* INF_PPA_SUPPORT */
++
+ /*
+ ========================================================================
+ Routine Description:
+@@ -4790,7 +4813,7 @@
+ 			      IN UINT Len) {
+ 	return OS_PKT_HEAD_BUF_EXTEND(pNetPkt, Len);
+ }
+-
++#if 0
+ /*
+ ========================================================================
+ Routine Description:
+@@ -4805,7 +4828,7 @@
+ Note:
+ ========================================================================
+ */
+-VOID RtmpOsPktInfPpaSend(IN PNDIS_PACKET pNetPkt) {
++VOID RtmpOsPktInfPpaSend(IN UINT32 g_if_id, IN PNDIS_PACKET pNetPkt) {
+ #ifdef INF_PPA_SUPPORT
+ 	struct sk_buff *pRxPkt = RTPKT_TO_OSPKT(pNetPkt);
+ 	int ret = 0;
+@@ -4824,6 +4847,7 @@
+ 					ppa_flags);
+ #endif /* INF_PPA_SUPPORT */
+ }
++#endif
+ 
+ INT32 RtmpThreadPidKill(IN RTMP_OS_PID PID) {
+ 	return KILL_THREAD_PID(PID, SIGTERM, 1);
+diff -Naur ../RT5592AP_wifi_v2715_DPA_20121207/os/linux/rt_main_dev.c RT5592AP_wifi_v2715_DPA_20121207/os/linux/rt_main_dev.c
+--- ../RT5592AP_wifi_v2715_DPA_20121207/os/linux/rt_main_dev.c	2012-12-07 15:17:19.000000000 +0530
++++ RT5592AP_wifi_v2715_DPA_20121207/os/linux/rt_main_dev.c	2013-11-22 13:19:02.000000000 +0530
+@@ -73,7 +73,8 @@
+ int rt28xx_open(VOID *net_dev);
+ 
+ /* private function prototype */
+-static INT rt28xx_send_packets(IN struct sk_buff *skb_p, IN struct net_device *net_dev);
++//static INT rt28xx_send_packets(IN struct sk_buff *skb_p, IN struct net_device *net_dev);
++INT rt28xx_send_packets(IN struct sk_buff *skb_p, IN struct net_device *net_dev);
+ 
+ 
+ 
+@@ -520,7 +521,8 @@
+ Note:
+ ========================================================================
+ */
+-static int rt28xx_send_packets(
++//static int rt28xx_send_packets(
++int rt28xx_send_packets(
+ 	IN struct sk_buff 		*skb_p, 
+ 	IN struct net_device 	*net_dev)
+ {
+diff -Naur ../RT5592AP_wifi_v2715_DPA_20121207/os/linux/rt_profile.c RT5592AP_wifi_v2715_DPA_20121207/os/linux/rt_profile.c
+--- ../RT5592AP_wifi_v2715_DPA_20121207/os/linux/rt_profile.c	2012-12-07 15:17:19.000000000 +0530
++++ RT5592AP_wifi_v2715_DPA_20121207/os/linux/rt_profile.c	2013-12-05 15:09:53.000000000 +0530
+@@ -466,6 +466,29 @@
+ #endif /* CONFIG_AP_SUPPORT */
+ }
+ 
++#ifdef INF_PPA_SUPPORT
++static INT32 RT28xx_AP_IdxGet(
++        IN PRTMP_ADAPTER        pAd,
++        IN PNET_DEV                     pDev)
++{
++        INT32 BssId = -1;
++        INT32 IdBss;
++
++
++        for(IdBss=0; IdBss<pAd->ApCfg.BssidNum; IdBss++)
++        {
++                if (pAd->ApCfg.MBSSID[IdBss].MSSIDDev == pDev)
++                {
++                        BssId = IdBss;
++                        break;
++                }
++        }
++        if(pAd->net_dev == pDev)
++               BssId=0;
++
++        return BssId;
++}
++#endif
+ 
+ void announce_802_3_packet(
+ 	IN	VOID			*pAdSrc,
+@@ -478,6 +501,7 @@
+ #ifdef INF_PPA_SUPPORT
+         int             ret = 0;
+         unsigned int ppa_flags = 0; /* reserved for now */
++        UCHAR bssid =0 ;
+ #endif /* INF_PPA_SUPPORT */
+ 
+ 	pAd = pAd; /* avoid compile warning */
+@@ -526,9 +550,13 @@
+ 	/* pRxPkt->protocol = eth_type_trans(pRxPkt, pRxPkt->dev); */
+ 
+ #ifdef INF_PPA_SUPPORT
+-	if (ppa_hook_directpath_send_fn && pAd->PPAEnable==TRUE ) 
++
++        struct sk_buff *pPkt = RTPKT_TO_OSPKT(pRxPkt);
++        bssid = RT28xx_AP_IdxGet(pAd, pPkt->dev);
++	if (ppa_hook_directpath_send_fn && pAd->PPAEnable[bssid]==TRUE ) 
+ 	{
+-		RtmpOsPktInfPpaSend(pRxPkt);
++
++		RtmpOsPktInfPpaSend((UINT32)pAd->g_if_id[bssid],pRxPkt);
+ 
+ 		pRxPkt=NULL;
+ 		return;

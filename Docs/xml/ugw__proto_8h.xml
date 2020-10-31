@@ -1,0 +1,839 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="ugw__proto_8h" kind="file">
+    <compoundname>ugw_proto.h</compoundname>
+    <includes refid="ugw__defs_8h" local="yes">ugw_defs.h</includes>
+    <includes refid="ugw__enums_8h" local="yes">ugw_enums.h</includes>
+    <includes refid="ugw__structs_8h" local="yes">ugw_structs.h</includes>
+    <includes refid="help__objlist_8h" local="no">help_objlist.h</includes>
+    <includes local="no">libubus.h</includes>
+    <includes local="no">libubox/blobmsg_json.h</includes>
+    <includes local="no">libubox/blobmsg.h</includes>
+    <includedby refid="cal_8h" local="no">cal.h</includedby>
+    <includedby refid="ugw__common_8h" local="yes">ugw_common.h</includedby>
+    <incdepgraph>
+      <node id="296">
+        <label>help_defs.h</label>
+        <link refid="help__defs_8h"/>
+        <childnode refid="294" relation="include">
+        </childnode>
+        <childnode refid="295" relation="include">
+        </childnode>
+        <childnode refid="297" relation="include">
+        </childnode>
+      </node>
+      <node id="310">
+        <label>stdarg.h</label>
+      </node>
+      <node id="301">
+        <label>list.h</label>
+      </node>
+      <node id="300">
+        <label>help_structs.h</label>
+        <link refid="help__structs_8h"/>
+        <childnode refid="297" relation="include">
+        </childnode>
+        <childnode refid="296" relation="include">
+        </childnode>
+        <childnode refid="301" relation="include">
+        </childnode>
+      </node>
+      <node id="306">
+        <label>help_proto.h</label>
+        <link refid="help__proto_8h"/>
+        <childnode refid="300" relation="include">
+        </childnode>
+      </node>
+      <node id="294">
+        <label>stdint.h</label>
+      </node>
+      <node id="308">
+        <label>stdlib.h</label>
+      </node>
+      <node id="292">
+        <label>ugw_proto.h</label>
+        <link refid="ugw_proto.h"/>
+        <childnode refid="293" relation="include">
+        </childnode>
+        <childnode refid="298" relation="include">
+        </childnode>
+        <childnode refid="299" relation="include">
+        </childnode>
+        <childnode refid="302" relation="include">
+        </childnode>
+        <childnode refid="314" relation="include">
+        </childnode>
+        <childnode refid="315" relation="include">
+        </childnode>
+        <childnode refid="316" relation="include">
+        </childnode>
+      </node>
+      <node id="302">
+        <label>help_objlist.h</label>
+        <link refid="help__objlist_8h_source"/>
+        <childnode refid="303" relation="include">
+        </childnode>
+        <childnode refid="304" relation="include">
+        </childnode>
+        <childnode refid="305" relation="include">
+        </childnode>
+        <childnode refid="306" relation="include">
+        </childnode>
+        <childnode refid="307" relation="include">
+        </childnode>
+        <childnode refid="309" relation="include">
+        </childnode>
+        <childnode refid="296" relation="include">
+        </childnode>
+        <childnode refid="313" relation="include">
+        </childnode>
+      </node>
+      <node id="298">
+        <label>ugw_enums.h</label>
+        <link refid="ugw__enums_8h"/>
+        <childnode refid="297" relation="include">
+        </childnode>
+      </node>
+      <node id="299">
+        <label>ugw_structs.h</label>
+        <link refid="ugw__structs_8h"/>
+        <childnode refid="300" relation="include">
+        </childnode>
+        <childnode refid="298" relation="include">
+        </childnode>
+        <childnode refid="293" relation="include">
+        </childnode>
+      </node>
+      <node id="293">
+        <label>ugw_defs.h</label>
+        <link refid="ugw__defs_8h"/>
+        <childnode refid="294" relation="include">
+        </childnode>
+        <childnode refid="295" relation="include">
+        </childnode>
+        <childnode refid="296" relation="include">
+        </childnode>
+      </node>
+      <node id="295">
+        <label>syslog.h</label>
+      </node>
+      <node id="307">
+        <label>help_debug.h</label>
+        <link refid="help__debug_8h"/>
+        <childnode refid="304" relation="include">
+        </childnode>
+        <childnode refid="308" relation="include">
+        </childnode>
+        <childnode refid="296" relation="include">
+        </childnode>
+      </node>
+      <node id="304">
+        <label>string.h</label>
+      </node>
+      <node id="313">
+        <label>help_error.h</label>
+        <link refid="help__error_8h"/>
+      </node>
+      <node id="315">
+        <label>libubox/blobmsg_json.h</label>
+      </node>
+      <node id="297">
+        <label>help_enums.h</label>
+        <link refid="help__enums_8h"/>
+      </node>
+      <node id="312">
+        <label>time.h</label>
+      </node>
+      <node id="311">
+        <label>sys/time.h</label>
+      </node>
+      <node id="316">
+        <label>libubox/blobmsg.h</label>
+      </node>
+      <node id="303">
+        <label>stdio.h</label>
+      </node>
+      <node id="309">
+        <label>help_logging.h</label>
+        <link refid="help__logging_8h"/>
+        <childnode refid="303" relation="include">
+        </childnode>
+        <childnode refid="294" relation="include">
+        </childnode>
+        <childnode refid="310" relation="include">
+        </childnode>
+        <childnode refid="295" relation="include">
+        </childnode>
+        <childnode refid="311" relation="include">
+        </childnode>
+        <childnode refid="312" relation="include">
+        </childnode>
+      </node>
+      <node id="305">
+        <label>inttypes.h</label>
+      </node>
+      <node id="314">
+        <label>libubus.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="317">
+        <label>ugw_proto.h</label>
+        <link refid="ugw_proto.h"/>
+        <childnode refid="318" relation="include">
+        </childnode>
+        <childnode refid="319" relation="include">
+        </childnode>
+      </node>
+      <node id="319">
+        <label>ugw_common.h</label>
+        <link refid="ugw__common_8h"/>
+      </node>
+      <node id="318">
+        <label>cal.h</label>
+        <link refid="cal_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__LIBHELP_1ga81ac150329a4e82ad30558b867ad0828" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct ubus_context *</type>
+        <definition>struct ubus_context* help_ubusConnect</definition>
+        <argsstring>(void)</argsstring>
+        <name>help_ubusConnect</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>API to create a ubus context. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Ubus context on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_proto.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga6c839b6d873e24028182e5387eca83c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void help_ubusDisconnect</definition>
+        <argsstring>(IN struct ubus_context *ctx)</argsstring>
+        <name>help_ubusDisconnect</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct ubus_context *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>API to disconnect/close an ubus context. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the ubus context </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_proto.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gabb0748732cfccc4fb74ddd3cee171572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_blobToObjList</definition>
+        <argsstring>(IN struct blob_attr *msg, OUT MsgHeader *pxMsgObject)</argsstring>
+        <name>help_blobToObjList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct blob_attr *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxMsgObject</declname>
+        </param>
+        <briefdescription>
+<para>API to extract the ubus blob message and fill the <ref refid="structObjList" kindref="compound">ObjList</ref> data structure. This function is invoked upon receipt of a message over the ubus. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ubus blob msg </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pxMsgObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to Msg header and <ref refid="structObjList" kindref="compound">ObjList</ref> structure </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_proto.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga5da4d9d671463059f4ce4cd30c8fd90b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_objListToBlob</definition>
+        <argsstring>(OUT struct blob_buf *buf, IN MsgHeader *pxMsgObject, IN struct ubus_context *ctx, IN struct ubus_request_data *req)</argsstring>
+        <name>help_objListToBlob</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> struct blob_buf *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxMsgObject</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct ubus_context *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct ubus_request_data *</type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+<para>API to prepare the ubus blob message from the <ref refid="structObjList" kindref="compound">ObjList</ref> data structure. This function is invoked before a message is sent over the ubus. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ubus blob message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxMsgObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to Msg header and <ref refid="structObjList" kindref="compound">ObjList</ref> structure </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>In case of retransmission, required context details, else NO_VALUE_ARG can be passed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">req</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ptr Access data information recieved msg over ubus </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_proto.h" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga885540becf5f14940ae69d4073a113d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_sendMsgToServer</definition>
+        <argsstring>(IN MsgHeader *pxReqMsg, IN ubus_data_handler_t fnCallBak, IN const char *pcServerName, IN const char *pcOper, OUT MsgHeader *pxResMsgHeader)</argsstring>
+        <name>help_sendMsgToServer</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxReqMsg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> ubus_data_handler_t</type>
+          <declname>fnCallBak</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcServerName</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> const char *</type>
+          <declname>pcOper</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxResMsgHeader</declname>
+        </param>
+        <briefdescription>
+<para>API to send msg to server, which is registered with UBUSD. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxReqMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Request msg to set/get </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fnCallBak</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback function on return </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcServerName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Server name registered with the ubusd, for ex-csd, servd, etc </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pcOper</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operation supported operation by any server </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">pxResMsgHeader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Response msg for the requested msg </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>UGW_SUCCESS on successful / UGW_FAILURE on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_proto.h" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga00b927a438c136375f70a2e062eab555" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void help_printMsg</definition>
+        <argsstring>(IN MsgHeader *pxMsg)</argsstring>
+        <name>help_printMsg</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxMsg</declname>
+        </param>
+        <briefdescription>
+<para>API to dump/print the Object Info from the provided Object List. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the Msg header and objlist </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_proto.h" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga8ab66f60c643be4c0de6ad9e7287b43a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_getJsonFormat</definition>
+        <argsstring>(IN MsgHeader *pxMsg, OUT char **ppcBuf)</argsstring>
+        <name>help_getJsonFormat</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxMsg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> char **</type>
+          <declname>ppcBuf</declname>
+        </param>
+        <briefdescription>
+<para>API to dump/print the Object Info from the provided Object List in json format. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the Msg header and objlist </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">ppcBuf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buf with json format string </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_proto.h" line="96" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga3b684ce7a446cc28018661076c8e94a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void help_delMsg</definition>
+        <argsstring>(IN MsgHeader *pxMsg, bool nFlag)</argsstring>
+        <name>help_delMsg</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxMsg</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>nFlag</declname>
+        </param>
+        <briefdescription>
+<para>API to free the object info from the Object List structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the List head object node </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">nFlag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag to remove complete msg </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_proto.h" line="104" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gae81adde4b1a780815aae81ca185cc266" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void help_RetStBlobMsg</definition>
+        <argsstring>(OUT struct blob_buf *buf, IN int nStatus)</argsstring>
+        <name>help_RetStBlobMsg</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> struct blob_buf *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> int</type>
+          <declname>nStatus</declname>
+        </param>
+        <briefdescription>
+<para>API to send a response message to the CAL module if the received request was for addition or deletion of an object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">blob_buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ubus blob message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">nStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Status, based on which the blob message will be constructed. Else need to provide instance number or key string to identify the object or parameter </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_proto.h" line="111" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gaeae18a7c6d97384f30fd7ddbfc6c37d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long help_getDiffTime</definition>
+        <argsstring>(IN struct timeval *starttime, IN struct timeval *finishtime)</argsstring>
+        <name>help_getDiffTime</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct timeval *</type>
+          <declname>starttime</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct timeval *</type>
+          <declname>finishtime</declname>
+        </param>
+        <briefdescription>
+<para>API to measure time taken in milliseconds of any exection. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">starttime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start time </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">finishtime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End time </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Time diff on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_proto.h" line="119" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga586354ddaf797ab49619492959d24970" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_blobToNotifyList</definition>
+        <argsstring>(IN struct blob_attr *msg, OUT NotifyObjData *pxNotify)</argsstring>
+        <name>help_blobToNotifyList</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct blob_attr *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> <ref refid="structNotifyObjData" kindref="compound">NotifyObjData</ref> *</type>
+          <declname>pxNotify</declname>
+        </param>
+        <briefdescription>
+<para>API to covert blob msg to notify list. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blob msg </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxNotify</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Notification list </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Notify structure gets filled on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_proto.h" line="127" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gab966addd9ba1b125401c02a4c29cdf7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_notifyListToBlob</definition>
+        <argsstring>(OUT struct blob_buf *buf, IN NotifyObjData *pxNotify)</argsstring>
+        <name>help_notifyListToBlob</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> struct blob_buf *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structNotifyObjData" kindref="compound">NotifyObjData</ref> *</type>
+          <declname>pxNotify</declname>
+        </param>
+        <briefdescription>
+<para>API to covert notify list to blobmsg. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to fill notify struct </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pxNotify</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Notification list </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Buf filled with notify struct on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_proto.h" line="135" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1gaaad2bd9ad957d8d3c4a28932f377ec1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int help_getMsgType</definition>
+        <argsstring>(IN struct blob_attr *head, OUT unsigned int len)</argsstring>
+        <name>help_getMsgType</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> struct blob_attr *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type><ref refid="group__LIBHELP_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref> unsigned int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>API to get msg type. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message head </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message length </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Type of the msg on successful </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_proto.h" line="143" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga1499667e07d94d62eef18dca4f335ba6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HELP_PRINT_MSG</definition>
+        <argsstring>(IN MsgHeader *pxMsg)</argsstring>
+        <name>HELP_PRINT_MSG</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxMsg</declname>
+        </param>
+        <briefdescription>
+<para>Prints recieved or constructed msg. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Msg header ptr </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_proto.h" line="151" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_proto.h" bodystart="151" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="group__LIBHELP_1ga949f0af2b6fc8b3cf4afeab2b5f48304" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HELP_DELETE_MSG</definition>
+        <argsstring>(IN MsgHeader *pxMsg)</argsstring>
+        <name>HELP_DELETE_MSG</name>
+        <param>
+          <type><ref refid="group__LIBHELP_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref> <ref refid="structMsgHeader" kindref="compound">MsgHeader</ref> *</type>
+          <declname>pxMsg</declname>
+        </param>
+        <briefdescription>
+<para>Macro to delete msg header. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pxMsg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Msg head ptr </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_proto.h" line="161" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_proto.h" bodystart="161" bodyend="164"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>File contains common API prototypes used across all modules the software. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2015</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lantiq<sp/>Beteiligungs-GmbH<sp/>&amp;<sp/>Co.<sp/>KG</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Lilienthalstrasse<sp/>15,<sp/>85579<sp/>Neubiberg,<sp/>Germany<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>For<sp/>licensing<sp/>information,<sp/>see<sp/>the<sp/>file<sp/>&apos;LICENSE&apos;<sp/>in<sp/>the<sp/>root<sp/>folder<sp/>of</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>software<sp/>module.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>*****************************************************************************<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>File<sp/>Name<sp/><sp/><sp/><sp/>:<sp/>ugw_proto.h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Description<sp/><sp/>:<sp/>Common<sp/>Library<sp/>contains<sp/>functions,<sp/>defines,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>structs,<sp/>enums<sp/>used<sp/>across<sp/>the<sp/>modules<sp/>like<sp/>CAL,<sp/>CAPI,*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CSD,<sp/>Servd,<sp/>and<sp/>Management<sp/>Entities<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="comment">/*<sp/>@{<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_UGW_PROTO_H</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_UGW_PROTO_H</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ugw__defs_8h" kindref="compound">ugw_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ugw__enums_8h" kindref="compound">ugw_enums.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ugw__structs_8h" kindref="compound">ugw_structs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;help_objlist.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libubus.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libubox/blobmsg_json.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libubox/blobmsg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ubus_context<sp/>*<sp/><ref refid="group__LIBHELP_1ga81ac150329a4e82ad30558b867ad0828" kindref="member">help_ubusConnect</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga6c839b6d873e24028182e5387eca83c4" kindref="member">help_ubusDisconnect</ref>(<sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>ubus_context<sp/>*ctx);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1gabb0748732cfccc4fb74ddd3cee171572" kindref="member">help_blobToObjList</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>blob_attr<sp/>*msg,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*pxMsgObject);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga5da4d9d671463059f4ce4cd30c8fd90b" kindref="member">help_objListToBlob</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>blob_buf<sp/>*buf,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*pxMsgObject,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>ubus_context<sp/>*ctx,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>ubus_request_data<sp/>*req);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga885540becf5f14940ae69d4073a113d7" kindref="member">help_sendMsgToServer</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*pxReqMsg,<sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/>ubus_data_handler_t<sp/>fnCallBak,<sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcServerName,<sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pcOper,<sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*pxResMsgHeader);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga00b927a438c136375f70a2e062eab555" kindref="member">help_printMsg</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*pxMsg);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga8ab66f60c643be4c0de6ad9e7287b43a" kindref="member">help_getJsonFormat</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*pxMsg,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**ppcBuf);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga3b684ce7a446cc28018661076c8e94a6" kindref="member">help_delMsg</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*pxMsg,</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>nFlag);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1gae81adde4b1a780815aae81ca185cc266" kindref="member">help_RetStBlobMsg</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>blob_buf<sp/>*buf,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nStatus);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1gaeae18a7c6d97384f30fd7ddbfc6c37d9" kindref="member">help_getDiffTime</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timeval<sp/>*starttime,<sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>timeval<sp/>*finishtime);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1ga586354ddaf797ab49619492959d24970" kindref="member">help_blobToNotifyList</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>blob_attr<sp/>*msg,<sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/><ref refid="structNotifyObjData" kindref="compound">NotifyObjData</ref><sp/>*pxNotify);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1gab966addd9ba1b125401c02a4c29cdf7b" kindref="member">help_notifyListToBlob</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>blob_buf<sp/>*buf,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structNotifyObjData" kindref="compound">NotifyObjData</ref><sp/>*pxNotify);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__LIBHELP_1gaaad2bd9ad957d8d3c4a28932f377ec1e" kindref="member">help_getMsgType</ref>(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>blob_attr<sp/>*head,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__FAPI__QOS__GENERAL_1gaec78e7a9e90a406a56f859ee456e8eae" kindref="member">OUT</ref><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/>HELP_PRINT_MSG(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*pxMsg)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ga00b927a438c136375f70a2e062eab555" kindref="member">help_printMsg</ref>(pxMsg);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>HELP_DELETE_MSG(<ref refid="group__FAPI__QOS__GENERAL_1gac2bbd6d630a06a980d9a92ddb9a49928" kindref="member">IN</ref><sp/><ref refid="structMsgHeader" kindref="compound">MsgHeader</ref><sp/>*pxMsg)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__LIBHELP_1ga3b684ce7a446cc28018661076c8e94a6" kindref="member">help_delMsg</ref>(pxMsg,1);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//#ifndef<sp/>_UGW_PROTO_H</highlight></codeline>
+<codeline lineno="167"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>@}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/ugw_proto.h"/>
+  </compounddef>
+</doxygen>

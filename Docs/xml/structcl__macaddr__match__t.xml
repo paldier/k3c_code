@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structcl__macaddr__match__t" kind="struct" prot="public">
+    <compoundname>cl_macaddr_match_t</compoundname>
+    <includes refid="qosal__cl__api_8h" local="no">qosal_cl_api.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcl__macaddr__match__t_1a9ba77bbd538c732284e04b1ea1dc0a47" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char cl_macaddr_match_t::mac_addr[MAX_MACADDR_LEN]</definition>
+        <argsstring>[MAX_MACADDR_LEN]</argsstring>
+        <name>mac_addr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MAC address to match. Null string means ignore </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="649" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="649" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__macaddr__match__t_1aa661f14e7e8588a53e6b25f5e64f24d6" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char cl_macaddr_match_t::mac_addr_mask[MAX_MACADDR_LEN]</definition>
+        <argsstring>[MAX_MACADDR_LEN]</argsstring>
+        <name>mac_addr_mask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MAC address mask. A mask of FF:FF:FF:FF:FF means mask is ignored. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="651" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="651" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__macaddr__match__t_1abfcdb9a9949a2ba700c4eb5e2d334e30" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t cl_macaddr_match_t::exclude</definition>
+        <argsstring></argsstring>
+        <name>exclude</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Exclude Flag or Invert match </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="652" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="652" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcl__macaddr__match__t_1a8defd30e648caeb188f39a722ae47cdd" prot="public" static="no" mutable="no">
+        <type><ref refid="structcl__param__in__ex__t" kindref="compound">cl_param_in_ex_t</ref></type>
+        <definition>cl_param_in_ex_t cl_macaddr_match_t::param_in_ex</definition>
+        <argsstring></argsstring>
+        <name>param_in_ex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bit-map to indicate included and excluded parameters of MAC address </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="653" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="653" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>MAC Address Match fields structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="46">
+        <label>cl_param_in_ex_t</label>
+        <link refid="structcl__param__in__ex__t"/>
+      </node>
+      <node id="45">
+        <label>cl_macaddr_match_t</label>
+        <link refid="structcl__macaddr__match__t"/>
+        <childnode refid="46" relation="usage">
+          <edgelabel>param_in_ex</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" line="648" column="1" bodyfile="/home/ramesh/t/UGW-7.1.1-SW-CD/UGW-7.1.1-SW-CD/Sources/UGW-7.1.1/staging_dir/target-mips_mips32_uClibc-0.9.33.2_vrx220_el_vdsl_gw_711/usr/docs/qosal_cl_api.h" bodystart="648" bodyend="654"/>
+    <listofallmembers>
+      <member refid="structcl__macaddr__match__t_1abfcdb9a9949a2ba700c4eb5e2d334e30" prot="public" virt="non-virtual"><scope>cl_macaddr_match_t</scope><name>exclude</name></member>
+      <member refid="structcl__macaddr__match__t_1a9ba77bbd538c732284e04b1ea1dc0a47" prot="public" virt="non-virtual"><scope>cl_macaddr_match_t</scope><name>mac_addr</name></member>
+      <member refid="structcl__macaddr__match__t_1aa661f14e7e8588a53e6b25f5e64f24d6" prot="public" virt="non-virtual"><scope>cl_macaddr_match_t</scope><name>mac_addr_mask</name></member>
+      <member refid="structcl__macaddr__match__t_1a8defd30e648caeb188f39a722ae47cdd" prot="public" virt="non-virtual"><scope>cl_macaddr_match_t</scope><name>param_in_ex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__FAPI" kind="group">
+    <compoundname>FAPI</compoundname>
+    <title>Functional API (FAPI)</title>
+    <innergroup refid="group__FAPI__SYSTEM">System</innergroup>
+    <innergroup refid="group__FAPI__DSL">DSL FAPI</innergroup>
+    <innergroup refid="group__FAPI__WLAN">WiFi</innergroup>
+    <innergroup refid="group__FAPI__LTE">LTE</innergroup>
+    <innergroup refid="group__FAPI__MCAST">Multicast</innergroup>
+    <innergroup refid="group__FAPI__QOS">Quality of Service</innergroup>
+    <innergroup refid="group__TAPI">Voice (TAPI)</innergroup>
+    <briefdescription>
+<para>FAPI provides an interface to manage platform specific system configure. Each module is offered in the form of C libraries and can be integrated with any framework. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>
